@@ -4,13 +4,28 @@
  *  ogapee@aqua.dti2.ne.jp
  */
 
-a { text-decoration: none; }
-a:link { color: #000080; }
-a:visited { color: #800000; }
-a:active{ color: #FF0000; text-decoration: underline; }
-a:hover{ background-color: #ccffcc; }
+a {
+    text-decoration: none;
+}
 
-html{
+a:link {
+    color: #000080;
+}
+
+a:visited {
+    color: #800000;
+}
+
+a:active {
+    color: #FF0000;
+    text-decoration: underline;
+}
+
+a:hover {
+    background-color: #ccffcc;
+}
+
+html {
     left: 0px;
     margin: 0px;
     padding: 0px;
@@ -19,24 +34,26 @@ html{
     font-family: sans-serif;
 }
 
-h1{
+h1 {
     font-size: 32px;
     text-align: center;
 }
 
-h2{
+h2 {
     font-size: 24px;
 }
 
-h3{
+h3 {
     font-size: 20px;
 }
 
-h4, h5, h6{
+h4,
+h5,
+h6 {
     font-size: 16px;
 }
 
-body{
+body {
     left: 0px;
     margin: 0px;
     padding: 0px;
@@ -45,12 +62,12 @@ body{
     background-color: gray;
 }
 
-p{
+p {
     margin: 10px;
     text-indent: 1em;
 }
 
-p.noindent{
+p.noindent {
     margin: 10px;
     text-indent: 0em;
 }
@@ -62,7 +79,7 @@ img {
 /* -------------------- */
 /* general page */
 
-#body{
+#body {
     left: 0px;
     margin: 0px;
     padding: 0px;
@@ -70,15 +87,15 @@ img {
     background-color: white;
 }
 
-@media screen and (min-width: 800px){
-    #body{
+@media screen and (min-width: 800px) {
+    #body {
         left: 50%;
         width: 800px;
         margin-left: -400px;
     }
 }
 
-#header{
+#header {
     text-align: left;
     margin: 5px;
     padding: 5px;
@@ -95,25 +112,37 @@ img {
 
 
 /*#header a {background-color: #ddffdd; }*/
-#header a:link{ color: #4444ff; }
-#header a:visited{ color: #ff4444; }
-#header a:active{ color: #cc8888; text-decoration: underline; }
-#header a:hover{ background-color: #ff8844; }
+#header a:link {
+    color: #4444ff;
+}
+
+#header a:visited {
+    color: #ff4444;
+}
+
+#header a:active {
+    color: #cc8888;
+    text-decoration: underline;
+}
+
+#header a:hover {
+    background-color: #ff8844;
+}
 
 /* -------------------- */
 /* toc */
-#toc-container{
+#toc-container {
     float: left;
     width: 180px;
 }
 
-#toc{
+#toc {
     padding: 5px;
     text-align: left;
     background-color: white;
 }
 
-#toc-container h3{
+#toc-container h3 {
     margin: 5px;
     padding: 0px;
     text-align: center;
@@ -122,7 +151,7 @@ img {
     border-radius: 10px;
 }
 
-#toc ul{
+#toc ul {
     margin: 0px;
     margin-bottom: 15px;
     padding: 5px;
@@ -130,25 +159,25 @@ img {
     list-style: none;
 }
 
-#toc ul li{ 
+#toc ul li {
     margin: 0px;
-    padding-bottom:15px;
+    padding-bottom: 15px;
 }
 
-#toc ul li a{
+#toc ul li a {
     display: block;
     border-bottom: dotted 1px #888;
     padding: 0px;
 }
 
-#toc ul li ul{
+#toc ul li ul {
     margin: 0px;
     margin-left: 1em;
     margin-bottom: 1em;
     padding: 0px;
 }
 
-#toc ul li ul li{
+#toc ul li ul li {
     display: list-item;
     margin: 0px;
     padding: 0px;
@@ -156,41 +185,41 @@ img {
     border-bottom: solid 1px #ffffff;
 }
 
-#toc ul li ul li a{
+#toc ul li ul li a {
     border: none;
 }
 
 /* -------------------- */
 /* main page */
-#main-container{
+#main-container {
     margin-left: 180px;
     position: static;
     background-color: white;
 }
 
-#main{
+#main {
     text-align: left;
 }
 
-#main h2{
+#main h2 {
     margin: 0px;
     padding: 5px;
     /*border: solid 1px #0000ff;*/
     font-family: sans-serif;
 }
 
-#main .content{
+#main .content {
     margin: 0px 0px 20px;
     padding: 0px;
     /*border-bottom: solid 1px black;*/
 }
 
-#main .content p{
+#main .content p {
     margin: 0px;
     padding: 5px;
 }
 
-#main .content h2{
+#main .content h2 {
     margin: 5px;
     padding: 15px 30px;
     font-weight: bold;
@@ -200,7 +229,7 @@ img {
     background-color: #f5f5ff;
 }
 
-#main .content h3{
+#main .content h3 {
     margin: 5px;
     padding: 0px;
     padding-left: 10px;
@@ -208,17 +237,17 @@ img {
     border-bottom: dotted 1px gray;
 }
 
-#main .content h4{
+#main .content h4 {
     margin: 5px;
     text-decoration: underline;
 }
 
-.content dl{ 
+.content dl {
     margin: 0px;
     padding: 0px 5px 0px 10px;
 }
 
-.sub-content{
+.sub-content {
     margin: 5pt;
     padding: 0px;
     /*border-top: dashed 1px gray;*/
@@ -226,29 +255,29 @@ img {
 
 /* -------------------- */
 /* diary page */
-#diary-container{
+#diary-container {
     margin-left: 180px;
 }
 
-#diary{
+#diary {
     text-align: left;
 }
 
-#diary h2{
+#diary h2 {
     margin: 0px;
     padding: 5px;
     text-align: center;
     /*border: solid 1px #0000ff;*/
 }
 
-#diary .diary-day{
+#diary .diary-day {
     margin: 5px;
     margin-bottom: 25px;
     padding: 0px;
     /*border-top: dashed 1px gray;*/
 }
 
-#diary .diary-day h3{
+#diary .diary-day h3 {
     display: block;
     margin: 5px;
     padding: 0px;
@@ -257,7 +286,7 @@ img {
     border-bottom: dashed 1px gray;
 }
 
-#diary .diary-day h4{
+#diary .diary-day h4 {
     margin: 5px;
     text-decoration: underline;
 }
@@ -303,16 +332,21 @@ hr {
 }
 
 pre {
-    white-space: -moz-pre-wrap; /* Mozilla */
-    white-space: -pre-wrap;     /* Opera 4-6 */
-    white-space: -o-pre-wrap;   /* Opera 7 */
-    white-space: pre-wrap;      /* CSS3 */
-    word-wrap: break-word;      /* IE 5.5+ */
+    white-space: -moz-pre-wrap;
+    /* Mozilla */
+    white-space: -pre-wrap;
+    /* Opera 4-6 */
+    white-space: -o-pre-wrap;
+    /* Opera 7 */
+    white-space: pre-wrap;
+    /* CSS3 */
+    word-wrap: break-word;
+    /* IE 5.5+ */
     margin: 0.5em;
     padding: 0.5em;
     color: black;
     background: #f5f5f5;
-    text-indent: 0; 
+    text-indent: 0;
     border-width: 1pt 1pt 1pt 1pt;
     border-color: #888888;
     border-style: solid;
@@ -322,7 +356,7 @@ pre {
 /* -------------------- */
 /* footer */
 
-#footer{
+#footer {
     clear: both;
     text-align: center;
     margin: 5px;
@@ -330,7 +364,7 @@ pre {
     border-top: solid 1px #888;
 }
 
-div.figure{ 
+div.figure {
     /*float: right;*/
     width: 80%;
     border: thin silver solid;
@@ -338,33 +372,35 @@ div.figure{
     padding: 0.2em;
 }
 
-div.figure p{ 
+div.figure p {
     text-align: center;
     text-indent: 0;
 }
 
 @media screen and (max-width: 767px) {
-    #header{
+    #header {
         background-size: 32px;
     }
-    
-    h1{
+
+    h1 {
         font-size: 24px;
     }
-    
-    h2{
+
+    h2 {
         font-size: 20px;
     }
-    
-    h3{
+
+    h3 {
         font-size: 18px;
     }
 
-    h4, h5, h6{
+    h4,
+    h5,
+    h6 {
         font-size: 16px;
     }
-    
-    #toc-container{
+
+    #toc-container {
         float: none;
     }
 
@@ -373,26 +409,26 @@ div.figure p{
         position: absolute;
     }
 
-    #toc-container:hover #toc{
+    #toc-container:hover #toc {
         display: block;
         position: absolute;
         z-index: 1;
         border: solid 1px #888;
     }
-    
+
     #main-container {
         margin-left: 0;
     }
-    
+
     #diary-container {
         margin-left: 0;
     }
-    
-    #body{
+
+    #body {
         left: 0;
         margin-left: 0;
         width: 100%;
-	word-wrap: break-word;
-	overflow-wrap: break-word;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 }

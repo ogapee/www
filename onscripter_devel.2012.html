@@ -1,518 +1,535 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <HTML lang="ja">
+
 <HEAD>
-<META http-equiv="Content-Type" content="text/html; charset=EUC-JP">
-<META http-equiv="Content-Style-Type" content="text/css">
-<META name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-<TITLE> ONScripter ��ȯ���� </TITLE>
-<LINK rel="stylesheet" type="text/css" href="/ogapee.css">
+  <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <META http-equiv="Content-Style-Type" content="text/css">
+  <META name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <TITLE> ONScripter 開発日誌 </TITLE>
+  <LINK rel="stylesheet" type="text/css" href="/ogapee.css">
 </HEAD>
 
 <body>
 
-<div id="body">
+  <div id="body">
 
-<div id="header">
-<H1>ONScripter ��ȯ����</H1>
+    <div id="header">
+      <H1>ONScripter 開発日誌</H1>
 
-Since: Feb. 6, 2002<br>
-Last updated: Dec. 23, 2012
-</div> <!-- header -->
+      Since: Feb. 6, 2002<br>
+      Last updated: Dec. 23, 2012
+    </div> <!-- header -->
 
-<div id="toc-container">
+    <div id="toc-container">
 
-<h3>���γ�ȯ����</h3>
+      <h3>過去の開発日誌</h3>
 
-<div id="toc">
+      <div id="toc">
 
-<ul>
-  <li> <A HREF="onscripter_devel.2011_1.html"> 2011ǯ</A>
-  <li> <A HREF="onscripter_devel.2010_1.html"> 2010ǯ</A>
-  <li> <A HREF="onscripter_devel.2009_1.html"> 2009ǯ</A>
-  <li> <A HREF="onscripter_devel.2008_1.html"> 2008ǯ</A>
-  <li> <A HREF="onscripter_devel.2007_1.html"> 2007ǯ</A>
-  <li> <A HREF="onscripter_devel.2006_1.html"> 2006ǯ</A>
-  <li> <A HREF="onscripter_devel.2005_1.html"> 2005ǯ</A>
-  <li> <A HREF="onscripter_devel.2004_1.html"> 2004ǯ</A>
-  <li> 2003ǯ
-    <ul>
-      <li> <A HREF="onscripter_devel.2003_4.html">10���12��</A>
-      <li> <A HREF="onscripter_devel.2003_3.html"> 7��� 9��</A>
-      <li> <A HREF="onscripter_devel.2003_2.html"> 4��� 6��</A>
-      <li> <A HREF="onscripter_devel.2003_1.html"> 1��� 3��</A>
-    </ul>
-  <li> 2002ǯ
-    <ul>
-      <li> <A HREF="onscripter_devel.2002_4.html">10���12��</A>
-      <li> <A HREF="onscripter_devel.2002_3.html"> 7��� 9��</A>
-      <li> <A HREF="onscripter_devel.2002_2.html"> 4��� 6��</A>
-      <li> <A HREF="onscripter_devel.2002_1.html"> 1��� 3��</A>
-    </ul>
-  <li> 2001ǯ
-    <ul>
-      <li> <A HREF="onscripter_devel.2001.html">12��</A>
-    </ul>
-</ul>
-</div> <!-- toc -->
-</div> <!-- toc-container -->
+        <ul>
+          <li> <A HREF="onscripter_devel.2011_1.html"> 2011年</A>
+          <li> <A HREF="onscripter_devel.2010_1.html"> 2010年</A>
+          <li> <A HREF="onscripter_devel.2009_1.html"> 2009年</A>
+          <li> <A HREF="onscripter_devel.2008_1.html"> 2008年</A>
+          <li> <A HREF="onscripter_devel.2007_1.html"> 2007年</A>
+          <li> <A HREF="onscripter_devel.2006_1.html"> 2006年</A>
+          <li> <A HREF="onscripter_devel.2005_1.html"> 2005年</A>
+          <li> <A HREF="onscripter_devel.2004_1.html"> 2004年</A>
+          <li> 2003年
+            <ul>
+              <li> <A HREF="onscripter_devel.2003_4.html">10月～12月</A>
+              <li> <A HREF="onscripter_devel.2003_3.html"> 7月～ 9月</A>
+              <li> <A HREF="onscripter_devel.2003_2.html"> 4月～ 6月</A>
+              <li> <A HREF="onscripter_devel.2003_1.html"> 1月～ 3月</A>
+            </ul>
+          <li> 2002年
+            <ul>
+              <li> <A HREF="onscripter_devel.2002_4.html">10月～12月</A>
+              <li> <A HREF="onscripter_devel.2002_3.html"> 7月～ 9月</A>
+              <li> <A HREF="onscripter_devel.2002_2.html"> 4月～ 6月</A>
+              <li> <A HREF="onscripter_devel.2002_1.html"> 1月～ 3月</A>
+            </ul>
+          <li> 2001年
+            <ul>
+              <li> <A HREF="onscripter_devel.2001.html">12月</A>
+            </ul>
+        </ul>
+      </div> <!-- toc -->
+    </div> <!-- toc-container -->
 
 
-<div id="diary-container">
-<div id="diary">
+    <div id="diary-container">
+      <div id="diary">
 
-<h2>2012ǯ</h2>
+        <h2>2012年</h2>
 
-<div class="diary-day">
-<h3>12��23��</h3>
+        <div class="diary-day">
+          <h3>12月23日</h3>
 
-<p>�ɲõ�ǽ��<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=283">PSP�Ǥ˽�̾</a>�פ򸵤ˡ�PSP �Ǥǥӥ�ɥ��顼��ȯ����������������ޤ������ޤ���<a href="/onscripter.html#package-binary">��̾�դ� PSP ���ѥХ��ʥ�</a>��������Ƥ��������ޤ���������ν����� PSP �ǰʳ��Υץ�åȥե�����ˤϱƶ�����ޤ���</p>
+          <p>追加機能「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=283">PSP版に署名</a>」を元に、PSP 版でビルドエラーが発生する問題を修正しました。また、<a href="/onscripter.html#package-binary">署名付の PSP 版用バイナリ</a>を公開していただきました。今回の修正は PSP 版以外のプラットフォームには影響ありません。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>12��15��</h3>
+        <div class="diary-day">
+          <h3>12月15日</h3>
 
-<p>�Х�����<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=280">iOS �Ǥˤƥ����ȥ⡼�ɡ������åפ�ư��ʤ�</a>�פ򸵤ˡ�iOS �ǤǤ� SDL �Υ��祤���ƥ��å���ͭ���ˤ��ʤ��褦�˽������ޤ�����SDL �ǥ��祤���ƥ��å���ͭ���ˤ���ȡ�iOS �Ǥ� SDL �Ǥϥ��٥�ȥ롼�פ���� SDL_JOYAXISMOTION ���٥�Ȥ������Ƥ��ޤ������ΤȤ�ü���򷹤���ȡ�iOS �Ǥ� SDL �Ǥϥ��祤���ƥ��å��򷹤�����Ƚ�Ǥ������������� ONScripter �ǤϷ����������˱����� SDLK_LEFT, SDLK_RIGHT, SDLK_UP, SDLK_DOWN �����������줿�Ȳ�ᤷ�ƽ������Ƥ��ޤ��������Τ��ᡢü���򷹤���ȥ������Ϥ�ȯ�����������ȥ⡼�ɤ䥹���åפ����Ǥ���Ƥ��ޤ�������������iOS �ǤǤ� SDL_WarpMouse() ����������ǽ���Ƥ��ʤ��褦�ǡ�SDLK_LEFT, SDLK_RIGHT ����������������Ƥ��ʤ��褦�Ǥ�������iOS �ǤǤ� SDL �ǥ��祤���ƥ��å���ͭ���ˤ��ʤ��褦�ˤ���SDL_JOYAXISMOTION ���٥�Ȥ������Ƥ��ʤ��褦�ˤ��ޤ���������ǡ�ü���򷹤��Ƥ⥪���ȥ⡼�ɤ䥹���åפ����Ǥ���뤳�ȤϤʤ��ʤä��Ȼפ��ޤ���</p>
+          <p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=280">iOS 版にてオートモード・スキップが動作しない</a>」を元に、iOS 版では SDL のジョイスティックを有効にしないように修正しました。SDL でジョイスティックを有効にすると、iOS 版の SDL ではイベントループで毎回 SDL_JOYAXISMOTION イベントが送られてきます。このとき端末を傾けると、iOS 版の SDL ではジョイスティックを傾けたと判断し、それを受けて ONScripter では傾けた方向に応じて SDLK_LEFT, SDLK_RIGHT, SDLK_UP, SDLK_DOWN キーが押されたと解釈して処理していました。そのため、端末を傾けるとキー入力が発生し、オートモードやスキップが中断されていました。ただし、iOS 版では SDL_WarpMouse() が正しく機能していないようで、SDLK_LEFT, SDLK_RIGHT は正しく処理されていないようです。今回、iOS 版では SDL でジョイスティックを有効にしないようにし、SDL_JOYAXISMOTION イベントが送られてこないようにしました。これで、端末を傾けてもオートモードやスキップが中断されることはなくなったと思います。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>12��1��</h3>
+        <div class="diary-day">
+          <h3>12月1日</h3>
 
-<p>Android �Ǥ� iOS �ǤǤ��ޤ�����뤳�Ȥ����ä��Τǡ�PC ��� valgrind ��Ĵ�٤Ƥߤ��Ȥ������ʲ��Τ褦�˴��˲�����������˽񤭹����礬���ä��Τǽ������ޤ���������Ĵ�٤��Ȥ��ˤϡ����Ϥΰ�̣�����������򤷤Ƥ��餺����˵��Ť��Ƥ��ޤ���Ǥ��������Υġ���Ϥ����ؤ������Ǥ���</p>
+          <p>Android 版や iOS 版でたまに落ちることがあったので、PC 上の valgrind で調べてみたところ、以下のように既に解放したメモリに書き込む場合があったので修正しました。前回調べたときには、出力の意味を正しく理解しておらず問題に気づいていませんでした。このツールはたいへん便利です。</p>
 
-<pre>
+          <pre>
 ==28097== Invalid write of size 4
 ==28097==    at 0x8060201: ONScripter::mouseOverCheck(int, int) (ONScripter.cpp:734)
 ==28097==    by 0x807385C: ONScripter::mouseMoveEvent(SDL_MouseMotionEvent*) (ONScripter_event.cpp:468)
 </pre>
 
-<p>--render-font-outline ����ꤷ�����֤ǡ��سԲ����������̾��ʸ�����������κ�������ˤʤ���ˡ����ݤ���������ϰϳ��˰����񤭹��ߤ�ԤäƤ����Х��������ޤ�����</p>
+          <p>--render-font-outline を指定した状態で、輪郭画像の幅と通常の文字画像の幅の差が奇数になる場合に、確保したメモリの範囲外に一部書き込みを行っていたバグを修正しました。</p>
 
-<p>Android �Ǥ� SDK �򹹿����ơ���ư���Υ�����������̤� Render Font Outline �Υ����å��ܥå������ɲä��ޤ�����������������˥ե���Ȥ��سԤ����褹�뤫���ʤ���������Ǥ��ޤ���</p>
+          <p>Android 版の SDK を更新して、起動時のゲーム選択画面に Render Font Outline のチェックボックスを追加しました。ゲーム選択時にフォントの輪郭を描画するかしないかを選択できます。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>11��17��</h3>
+        <div class="diary-day">
+          <h3>11月17日</h3>
 
-<p><a href="ios/">iOS ��</a>�� SDK �򹹿�����Preprocessor Macros �� UTF8_FILESYSTEM ���ɲä��ơ����������֤γ��ˤ���ե�����̾�����ܸ�Υե�������ɤ߹����褦�ˤ��ޤ�����iPad2 ��˿�������¹Ԥ�������̲��������Ĥ�ʤ��ä��Τǵ����դ��ޤ������ޤ���Xcode 4.5 ����ϡ�ARMv7 �ʹߡ��Ĥޤ� iOS 4.3 �ʹߤ������ݡ��Ȥ���ʤ��ʤä����ᡢDeployment Target �� 4.3 �ˤ��ޤ�����</p>
+          <p><a href="ios/">iOS 版</a>の SDK を更新し、Preprocessor Macros に UTF8_FILESYSTEM を追加して、アーカイブの外にあるファイル名が日本語のファイルを読み込めるようにしました。iPad2 で某ゲームを実行したら効果音が全く鳴らなかったので気が付きました。また、Xcode 4.5 からは、ARMv7 以降、つまり iOS 4.3 以降しかサポートされなくなったため、Deployment Target を 4.3 にしました。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>11��16��</h3>
+        <div class="diary-day">
+          <h3>11月16日</h3>
 
-<p><a href="ios/">iOS ��</a>�� SDK �򹹿�����Ǥ�դξ��� SDK ��Ÿ�����ƥӥ�ɤǤ���褦�ˤ��ޤ��������ޤǤ� SDK ���õ���ѥ��� /Users/$USER/src/... �Τ褦�����Хѥ��ǻ��ꤷ�Ƥ��ޤ����������Хѥ����ѹ����ޤ�����</p>
+          <p><a href="ios/">iOS 版</a>の SDK を更新し、任意の場所に SDK を展開してビルドできるようにしました。今までは SDK 内の探索パスを /Users/$USER/src/... のように絶対パスで指定していましたが、相対パスに変更しました。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>10��31��</h3>
+        <div class="diary-day">
+          <h3>10月31日</h3>
 
-<p><a href="ios/">iOS ��</a>�� SDK �򹹿������������ݤ��ä��饤�֥��Υɥ�å���Ȥ�ʤ����ƥ��ץ�κ����������˴�ά�����ޤ���������ޤǤϡ����ߥ�졼���Ѥȼµ��Ѥ�ξ����ӥ�ɤ�����ˤϡ��饤�֥��������ɥ�å���ľ���ƥӥ�ɤ��뤫���ץ��������ȥե�����򥷥ߥ�졼���Ѥȼµ��Ѥˣ����Ѱդ���ɬ�פ�����ޤ��������󤫤�ϡ�Xcode ������ɥ��κ����ɽ��������ONScripter�פα�¦�� iOS Device (ü������³����Ƥ������ü��̾) �� iPad 6.0 Simulator �ʤ⤷���� iPhone 6.0 Simulator�ˤ��ڤ��ؤ��ƥӥ�ɤ��������ξ���ӥ�ɤǤ��ޤ���</p>
+          <p><a href="ios/">iOS 版</a>の SDK を更新し、一番面倒だったライブラリのドラッグ作業をなくしてアプリの作成を大幅に簡略化しました。これまでは、シミュレータ用と実機用の両方をビルドする場合には、ライブラリを削除しドラッグし直してビルドするか、プロジェクトファイルをシミュレータ用と実機用に２つ用意する必要がありました。今回からは、Xcode ウィンドウの左上に表示される「ONScripter」の右側を iOS Device (端末が接続されている場合は端末名) か iPad 6.0 Simulator （もしくは iPhone 6.0 Simulator）に切り替えてビルドするだけで両方ビルドできます。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>10��29��</h3>
+        <div class="diary-day">
+          <h3>10月29日</h3>
 
-<p><a href="ios/">iOS ��</a>�� SDK �򹹿�����Xcode 4.5.1 �δĶ��� iOS 6.0 �ѤΥ��ץ������Ǥ���褦�ˤ��ޤ������Ť� SDK �Ǥϡ�Xcode 4.5.1 ��ǡʾ����������ơ˥ӥ�ɤϤǤ���ΤǤ�����iOS 6.0 �Υ��ߥ�졼������Ӽµ��Ǥϲ��̤������ٲ�ž���Ƥ��ޤ�������ɽ������ޤ���Ǥ�������������iOS 5.1 �Υ��ߥ�졼���Ǥ�������ɽ������ޤ�����������ݥ��ȥ��κǿ��� SDL �ˤ� iOS 6.0 ���б����뽤�������äƤ������ᡢ�Ť� SDK �� SDL/src/video/uikit/ �ʲ�����ʬ������ݥ��ȥ�Τ�ΤȺ����ؤ��Ʋ�褷�ޤ�����</p>
+          <p><a href="ios/">iOS 版</a>の SDK を更新し、Xcode 4.5.1 の環境で iOS 6.0 用のアプリを作成できるようにしました。古い SDK では、Xcode 4.5.1 上で（少し修正して）ビルドはできるのですが、iOS 6.0 のシミュレータおよび実機では画面が９０度回転してしまい正しく表示されませんでした。ただし、iOS 5.1 のシミュレータでは正しく表示されます。幸い、リポジトリ上の最新の SDL には iOS 6.0 に対応する修正が入っていたため、古い SDK の SDL/src/video/uikit/ 以下の部分だけリポジトリのものと差し替えて解決しました。</p>
 
-<p>ONScripter ���Τ⡢iOS �Ѥǥ���ѥ��륨�顼��ȯ������Х��������ޤ�����</p>
+          <p>ONScripter 本体も、iOS 用でコンパイルエラーが発生するバグを修正しました。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>10��20��</h3>
+        <div class="diary-day">
+          <h3>10月20日</h3>
 
-<p>10��19���˸��ڤ��� Android �Ǥǥ�������̤������븽�ݤ�褯Ĵ�٤�ȡ��ʥ�������̤��ǧ���뤿��ˡ˥ۡ���ܥ���򲡤��ƽ�����Хå����饦��ɤ˰ܤ��Ƥ���ե������饦��ɤ���������Ȥ��˻��ѥ����̤��� 5MB ���������Ƥ��ޤ��������äȥե������饦��ɤǽ������Ƥ���ʬ�ˤ������ʤ��褦�ʤΤǡ����Ѿ�Ϥ��ΤޤޤǤ�����ʤ������Ǥ����ե������饦��ɤ���������Ȥ��˰ʲ��Υ��顼�������˽��Ϥ����Τǡ����Τ����꤬���������Ǥ��������ѥ����̤������뤳�Ȱʳ����ä�����Ϥʤ������ʤΤǤȤꤢ������α�ˤ��ޤ���</p>
+          <p>10月19日に言及した Android 版でメモリ使用量が増える現象をよく調べると、（メモリ使用量を確認するために）ホームボタンを押して処理をバックグラウンドに移してからフォアグラウンドに復帰するときに使用メモリ量が約 5MB ずつ増えていました。ずっとフォアグラウンドで処理している分には増えないようなので、実用上はこのままでも問題なさそうです。フォアグラウンドに復帰するときに以下のエラーがログに出力されるので、このあたりが怪しそうですが、使用メモリ量が増えること以外に特に問題はなさそうなのでとりあえず保留にします。</p>
 
-<pre>
+          <pre>
 Adreno200-ES20 &lt;qgl2DrvAPI_glTexSubImage2D:502&gt;: GL_INVALID_VALUE
 Adreno200-ES11 &lt;qglDrvAPI_glTexSubImage2D:2055&gt;: GL_INVALID_VALUE
 </pre>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>10��19��<span style="color:red">����ʥХ�����</span></h3>
+        <div class="diary-day">
+          <h3>10月19日<span style="color:red">重大なバグ修正</span></h3>
 
-<p>Android �Ǥ�˿�������ͷ��Ǥ����Ȥ�������ư���Υ�������̤� 50MB ���٤ʤΤ���Ĺ���֥����åפ����Ф��Ƥ����� 250MB ���٤ޤ������Ƥ��������Τޤޥϥ󥰥��åפ��Ƥ��ޤ��ޤ�����-g ���ץ������դ��ƥ���ѥ��뤷ľ�����ʲ��Τ褦�� PC �� Linux ��� valgrind �ʥץ��ե�����ˤ�Ȥä�Ĵ�٤Ƥߤ��Ȥ�����ʸ�������褹��ݤ� TTF_RenderGlyph_Shaded() �ǳ��ݤ��������������Ƥ��ʤ��ä����Ȥ�ʬ���ä����ὤ�����ޤ�����</p>
+          <p>Android 版で某ゲームを遊んでいたところ、起動時のメモリ使用量は 50MB 程度なのが、長時間スキップで飛ばしていくと 250MB 程度まで増えていき、そのままハングアップしてしまいました。-g オプションを付けてコンパイルし直し、以下のように PC の Linux 上で valgrind （プロファイラ）を使って調べてみたところ、文字を描画する際に TTF_RenderGlyph_Shaded() で確保したメモリを解放していなかったことが分かったため修正しました。</p>
 
-<pre>
+          <pre>
 &gt; valgrind --leak-check=yes onscripter -r ...
 </pre>
 
-<p style="text-indent:0">�Ĥޤꡢ��ʸ�����Ȥ˥���꡼����ȯ�����Ƥ��ޤ��������Υ������򸫤�ȡ�20050819 �ʹߤ�ȯ�����Ƥ����褦�Ǥ���</p>
+          <p style="text-indent:0">つまり、１文字ごとにメモリリークが発生していました。過去のソースを見ると、20050819 以降で発生していたようです。</p>
 
-<p>������������� Linux �� Windows �Ǥϥ�������̤��ۤܰ���ˤʤ�ޤ�������Android �Ǥϡ��������ϤϤ뤫�ˤ褯�ʤä���ΤΡ��ʤ����ޤ��������ĥ�������̤������Ƥ����ޤ���</p>
+          <p>しかし、これで Linux と Windows ではメモリ使用量がほぼ一定になりましたが、Android では、以前よりははるかによくなったものの、なぜかまだ少しずつメモリ使用量が増えていきます。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>10��16��</h3>
+        <div class="diary-day">
+          <h3>10月16日</h3>
 
-<p>yesnobox ̿��������ľ������������������֤Ϥ��פȡ֤������פ�����Ǥ���褦�ˤ��ޤ������ޤ���okcancelbox ̿���������ޤ�����</p>
+          <p>yesnobox 命令を実装し直し、ダイアログから「はい」と「いいえ」を選択できるようにしました。また、okcancelbox 命令を実装しました。</p>
 
-<p>yesnobox, okcancelbox ̿��Υ����������Υܥ���򾯤��礭�������ޤ�������å��ǡ֤������פ⤷���ϡ֥���󥻥�פ�����Ǥ���褦�ˤ��ޤ������ե�����̾���Ѥ�äƤ��ޤ��󤬡��������� Android �ǤΥ��ץ�򹹿����ޤ���������ʸ�Ϥ��ܤ����˥���������ɤ��줿���ϡ����٥���������ɤ��Ƥ���������</p>
+          <p>yesnobox, okcancelbox 命令のダイアログのボタンを少し大きくし、また右クリックで「いいえ」もしくは「キャンセル」を選択できるようにしました。ファイル名は変わっていませんが、ソースと Android 版のアプリを更新しました。この文章が載る前にダウンロードされた方は、再度ダウンロードしてください。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>9��26��</h3>
+        <div class="diary-day">
+          <h3>9月26日</h3>
 
-<p>�Х�����<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=273">Android�ǤǤε�ǽ��ĥ�ˤĤ���</a>�פ򸵤ˡ�textgosub ����Ѥ������ĥ���å��Ԥ� @ �θ��³����̿�᤬���Ҥ��줿���ˡ�̿�᤬�ƥ����ȤȤ���ɽ������Ƥ��ޤ��Х��������ޤ�����</p>
+          <p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=273">Android版での機能拡張について</a>」を元に、textgosub を使用し、かつクリック待ち @ の後に続けて命令が記述された場合に、命令がテキストとして表示されてしまうバグを修正しました。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>9��22��</h3>
+        <div class="diary-day">
+          <h3>9月22日</h3>
 
-<p><a href="../onscripter.html#option">��ư���ץ����</a>�� --render-font-outline ���ץ�������ꤹ��ȡ��ޤ�ʸ�����سԲ����ʦ��աˤ��������Ƥ����������褷�����θ���̾��ʸ�������ʦ��աˤ��������ƾ�����褷�ޤ������ΤȤ���ʸ���ˤ�äƤ��سԤ�Ⱦ���Ǥ�������褵��뤳�Ȥ�����ޤ���������Ū�ˤϡ��سԲ����������̾��ʸ�����������κ�������ˤʤ���ˤ���Ƥ��ޤ���������Ⱦ���Ǥ������ˤϡ��������줿�سԲ�����Ⱦ���Ǥ��餷�Ƥ������褹��褦�ˤ��ޤ���������Ǥɤ�ʸ�����������褵���褦�ˤʤä��Ȼפ��ޤ����ʤ�����ī�ʤɤκ٤�ʸ�����⥴���å��ʤɤ�����ʸ����Ȥä�������ʸ���θ��ɤ����褯�ʤ�ޤ���</p>
+          <p><a href="../onscripter.html#option">起動オプション</a>に --render-font-outline オプションを指定すると、まず文字の輪郭画像（α付）を生成してそれを黒で描画し、その後に通常の文字画像（α付）を生成して上書き描画します。このとき、文字によっては輪郭が半画素ずれて描画されることがありました。具体的には、輪郭画像の幅と通常の文字画像の幅の差が奇数になる場合にずれていました。今回、半画素ずれる場合には、生成された輪郭画像を半画素ずらしてから描画するようにしました。これでどの文字も綺麗に描画されるようになったと思います。なお、明朝などの細い文字よりもゴシックなどの太い文字を使った方が袋文字の見栄えがよくなります。</p>
 
-<p>Android �Ǥξ��ϡ����Υ����Ȥ����ۤ��Ƥ��륢�ץ�Ǥ���ʸ��ɽ����ͭ���ˤʤäƤ��ޤ��������ץ������������<a href="android/#customize">�������ޥ���</a>�Ρ�ʸ������ʸ������פι��ͭ����̵��������Ǥ���褦�ˤ��ޤ��������ץ������������ SDK (onscripter_android.tar.gz) �⹹�����Ƥ���������</p>
+          <p>Android 版の場合は、このサイトで配布しているアプリでは袋文字表示が有効になっていますが、アプリを作成する場合は<a href="android/#customize">カスタマイズ</a>の「文字の袋文字描画」の項で有効・無効を設定できるようにしました。アプリを作成する場合は SDK (onscripter_android.tar.gz) も更新してください。</p>
 
-<p>iOS �Ǥξ��ϡ�<a href="ios/index.html#config">�ץ��������Ȥ�����</a>�� RENDER_FONT_OUTLINE ��������뤳�Ȥˤ��ͭ���ˤʤ�褦�ˤ��ޤ�����������ʤ�����̵���ˤʤ�ޤ���SDK (onscripter_ios.tar.gz) �򹹿�����ɬ�פϤ���ޤ���</p>
+          <p>iOS 版の場合は、<a href="ios/index.html#config">プロジェクトの設定</a>で RENDER_FONT_OUTLINE を定義することにより有効になるようにしました。定義しない場合は無効になります。SDK (onscripter_ios.tar.gz) を更新する必要はありません。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>9��1��</h3>
+        <div class="diary-day">
+          <h3>9月1日</h3>
 
-<p><a href="../onscripter.html#option">��ư���ץ����</a>�� --render-font-outline ���ץ�������ꤹ�뤳�Ȥǡ�SDL_ttf 2.0.10 �ʹߤǥ��ݡ��Ȥ��줿�ե���ȤΥ����ȥ饤�����赡ǽ��Ȥ������դ�ʸ��������سԤ���ʸ���Ȥ���ɽ������褦�ˤ��ޤ�����ʸ�������ä��ꤷ�Ƹ��䤹���ʤ�Ȼפ��ޤ���Android ��(��ȯ��������� SDK ����)�� iOS �ǤǤϤ��Υ��ץ���󤬥ǥե���Ȥ�ͭ���ˤʤ�ޤ����ޤ������ξ�� shadedistance ̿���̵�뤵��ޤ����ʤ�������ѥ������ SDL_ttf �ΥС�����������å�����2.0.10 ���Ť����ˤϤ��ε�ǽ��̵���ˤʤ�ޤ���</p>
+          <p><a href="../onscripter.html#option">起動オプション</a>に --render-font-outline オプションを指定することで、SDL_ttf 2.0.10 以降でサポートされたフォントのアウトライン描画機能を使い、影付き文字を黒い輪郭の袋文字として表示するようにしました。文字がくっきりして見やすくなると思います。Android 版(開発する場合は要 SDK 更新)と iOS 版ではこのオプションがデフォルトで有効になります。また、その場合 shadedistance 命令は無視されます。なお、コンパイル時に SDL_ttf のバージョンをチェックし、2.0.10 より古い場合にはこの機能は無効になります。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>8��31��</h3>
+        <div class="diary-day">
+          <h3>8月31日</h3>
 
-<p>Dev13 ���󤫤�ΥХ����˴�Ť���Android �Ǥ� iOS �ǰʳ��� PDA_WIDTH �⤷���� PDA_AUTOSIZE ��������ƥ���ѥ��뤷�����γ���̾���Ԥä����ˡ�ʸ�����֤������ʸ������ʬŪ��ɽ������ʤ����Ȥ�����Х��ȡ����ץ饤�Ȳ����β�ü���������äƤ��ޤ����Ȥ�����Х��������ޤ����������������������10ǯ�᤯�����鵤�Ť��Ƥ����ΤǤ������褦�䤯���Ǥ���resizeImage �ؿ��γ���̾������ˤ����� resampling �ΥХ��Ǥ�����</p>
+          <p>Dev13 さんからのバグ報告に基づき、Android 版と iOS 版以外で PDA_WIDTH もしくは PDA_AUTOSIZE を定義してコンパイルし画像の拡大縮小を行った場合に、文字位置がずれて文字が部分的に表示されないことがあるバグと、スプライト画像の下端に線が入ってしまうことがあるバグを修正しました。この線が入る問題は10年近く前から気づいていたのですが、ようやく解決です。resizeImage 関数の拡大縮小処理における resampling のバグでした。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>8��26��</h3>
+        <div class="diary-day">
+          <h3>8月26日</h3>
 
-<p>�Х�����<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=264">bgm�ΥΥ�����strsp�ε�ư��autosaveoff</a>�פ򸵤ˡ�strsp ̿��θ�� getcursorpos2 ̿���¹Ԥ���� strsp ̿���ɽ�������Ǹ��ʸ�����֤���������Ƥ��ޤ��Х��ȡ�pretextgosub �����ꤵ��Ƥ��餺���� saveoff ���֤ΤȤ��˲��ڡ�����κǽ��ɽ��ʸ����Ƭ�ǥ����֤���ʤ��Х��������ޤ�����</p>
+          <p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=264">bgmのノイズ、strspの挙動、autosaveoff</a>」を元に、strsp 命令の後に getcursorpos2 命令を実行すると strsp 命令で表示した最後の文字位置が取得されてしまうバグと、pretextgosub が設定されておらずかつ saveoff 状態のときに改ページ後の最初の表示文の先頭でセーブされないバグを修正しました。</p>
 
-<p>pretextgosub ̿��ǻ��ꤵ�줿��٥��������Ȥ��� saveoff ���֤ˤ���褦�ˤ��ޤ�����</p>
+          <p>pretextgosub 命令で指定されたラベルに飛んだときに saveoff 状態にするようにしました。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>8��4��</h3>
+        <div class="diary-day">
+          <h3>8月4日</h3>
 
-<p>��ơ�<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=265">Android�ǤǤΥѥå���������������ɡ�Ÿ���ˤĤ��Ƥ�����</a>�פ򸵤ˡ�������ǡ����Υ���������ɡ�Ÿ���ǥץ����쥹�С���ɽ������Ƥ���ݤˡ��ץ����쥹�С��ʳ�����ʬ�򥿥å�����ȥС����ä��Ƥ��ޤ�������н褷�ޤ��������� Android 2.2 �ǻ�Ƥ������ˤϤ���ʤ��ȤϤʤ��ä��ΤǤ�����<a href="http://y-anz-m.blogspot.jp/2012/07/androidhoneycomb.html">Y.A.M �λ���Ģ</a>�ˤ��ȡ�Android��Honeycomb �ʹߤǤϥ����������γ������å����Ĥ��뤬�ǥե���ȤˤʤäƤ��뤽���Ǥ��������ǡ�<a href="android/#sdk">SDK</a>�򹹿����ơ����Υ����Ȥ˽񤤤Ƥ���褦�˥ץ����쥹�С����������ݤ�</p>
-<pre>
+          <p>提案「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=265">Android版でのパッケージダウンロード／展開についてご質問</a>」を元に、ゲームデータのダウンロード／展開でプログレスバーが表示されている際に、プログレスバー以外の部分をタッチするとバーが消えてしまう問題に対処しました。以前 Android 2.2 で試していた時にはそんなことはなかったのですが、<a href="http://y-anz-m.blogspot.jp/2012/07/androidhoneycomb.html">Y.A.M の雑記帳</a>によると、Android　Honeycomb 以降ではダイアログの外部タッチで閉じるがデフォルトになっているそうです。そこで、<a href="android/#sdk">SDK</a>を更新して、このサイトに書いてあるようにプログレスバーを作成する際に</p>
+          <pre>
 setCanceledOnTouchOutside(false)
 </pre>
-<p style="text-indent:0">��Ƥ֤褦�ˤ��ޤ�������������ư���̤��ǧ�Ǥ���</p>
+          <p style="text-indent:0">を呼ぶようにしました。ただし、動作は未確認です。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>7��12��</h3>
+        <div class="diary-day">
+          <h3>7月12日</h3>
 
-<p>getmouseover ̿���������ޤ�����</p>
+          <p>getmouseover 命令を実装しました。</p>
 
-<p>Android �Ǥ򥳥�ѥ��뤷�褦�Ȥ����顢�ǥХå�������ͭ�����¤��ڤ�Ƥ��ޤ�����Android �Ǥγ�ȯ��Ϥ�Ƥ��飲ǯ���вᤷ�����Ȥˤʤ�ޤ���~/.android/debug.keystore �������ƺƥ���ѥ��뤷���Ȥ�������ưŪ�˿������ǥХå���������������ޤ������ǥХå��������Ѥ�ä����ᡢ�ѥå������Υ��åץǡ��ȤϤǤ��ޤ��󡣸Ť� ONScripter �Ϥ��ä��󥢥󥤥󥹥ȡ��뤷�Ƥ��顢������ ONScripter �򥤥󥹥ȡ��뤷�Ƥ���������</p>
+          <p>Android 版をコンパイルしようとしたら、デバッグキーの有効期限が切れていました。Android 版の開発を始めてから２年が経過したことになります。~/.android/debug.keystore を削除して再コンパイルしたところ、自動的に新しいデバッグキーが作成されました。デバッグキーが変わったため、パッケージのアップデートはできません。古い ONScripter はいったんアンインストールしてから、新しい ONScripter をインストールしてください。</p>
 
-<p>Android �Ǥε�ư���Υ�����������̤��� disable rescale �Υ����å��ܥå����������ޤ�����</p>
+          <p>Android 版の起動時のゲーム選択画面から disable rescale のチェックボックスを削除しました。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>6��23��</h3>
+        <div class="diary-day">
+          <h3>6月23日</h3>
 
-<p>�Х�����<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=254">android�Ǥ�disable rescale ��ư���ʤ�</a>�פ򤤤������Ƥ��ޤ�������Android �Ǥ� 20120414 �ʹߤǲ����μ�갷����ˡ���Ѥ�ä����Ȥ�ȼ����Android �Ǥˤ����� disable rescale �ε�ǽ��̵�����ޤ����������ۤ��Ƥ��륢�ץ�Ǥϵ�ǽ���ʤ��ޤޥ����å��ܥå����������ĤäƤ��ޤ���������Υ�꡼���Ǻ�����ޤ���</p>
+          <p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=254">android版でdisable rescale が動かない</a>」をいただいていましたが、Android 版の 20120414 以降で画像の取り扱い方法が変わったことに伴い、Android 版における disable rescale の機能は無くします。現在配布しているアプリでは機能しないままチェックボックスだけが残っていますが、次回のリリースで削除します。</p>
 
-<p>�������ε�ǽ�ϡ� <a href="http://ezaurus.com/lineup/sl/">Zaurus SL ���꡼��</a>�� ONScripter ����Ѥ���ݤˡ�<a href="/zaurus/">SDL on Zaurus �Υڡ���</a>���ȡˡ����̤ξ��ʤ�������ʣ���Υ�����ǡ�����Ͽ���뤿��˼������ޤ�����������ͭ���Ƥ��� SL-5500 �ϥǥХ��������٤� QVGA(320x240) ���ä��Τǡ�VGA(640x480) �ѤΥ�����ǡ����ξ��ϲ�����������ʬ�Σ��ˤ��뤳�Ȥ��Ǥ��ޤ���������������ǯ���䤵��Ƥ���¿���� Android ü���ǤϥǥХ��������٤ȥ������̤������礭���ʤꤳ�ε�ǽ��ɬ������̵���ʤäƤ������Ȥȡ����ε�ǽ��ͭ���ˤ��뤿���������Υ����ɤ�ʣ�����������ʤ����ᡢAndroid �ǤǤϺ�����뤳�Ȥˤ��ޤ������������餺��λ����������</p>
+          <p>元々この機能は、 <a href="http://ezaurus.com/lineup/sl/">Zaurus SL シリーズ</a>で ONScripter を使用する際に（<a href="/zaurus/">SDL on Zaurus のページ</a>参照）、容量の少ないメモリ上に複数のゲームデータを記録するために実装しました。当時保有していた SL-5500 はデバイス解像度が QVGA(320x240) だったので、VGA(640x480) 用のゲームデータの場合は画像サイズを４分の１にすることができました。しかし、近年販売されている多くの Android 端末ではデバイス解像度とメモリ容量が共に大きくなりこの機能の必要性が無くなってきたことと、この機能を有効にするために描画回りのコードを複雑化したくないため、Android 版では削除することにしました。悪しからずご了承下さい。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>5��31��</h3>
+        <div class="diary-day">
+          <h3>5月31日</h3>
 
-<p>�ʻ�Ȭˡ�����<a href="http://d.hatena.ne.jp/eiji8pou/20120531/1338395186">bgm�Υƥ�������Ʊ���ե����ɥ����ȼ¸�</a>�ˡ��֤�������NSLua��Ȥ��ط��塢ONScripter���֤��Ƥ��ܤꡣ���åХ����פȽ񤫤�Ƥ��ޤ����������� ONScripter �ϰʳ��Ȥ��ФǤ���ҤǤ���NSLua �Υ��ݡ��Ȥ��Խ�ʬ�ʤ���Ǥ��ʤ����Ȥ⤢��ޤ�����Makefile �� Lua ��ͭ���ˤ���Ф��� Lua �Υ���ץ��ư���ޤ���ONScripter ¦�� Lua �ν������ʬ�˥Х�������쥫��ľ���ޤ������ġ�</p>
+          <p>永字八法さんの<a href="http://d.hatena.ne.jp/eiji8pou/20120531/1338395186">bgmのテキスト非同期フェードアウト実験</a>に、「ただし、NSLuaを使う関係上、ONScripterは置いてきぼり。グッバイ。」と書かれていました。しかし ONScripter は以外とやればできる子です。NSLua のサポートが不十分なためできないこともありますが、Makefile で Lua を有効にすればこの Lua のサンプルは動きます。ONScripter 側の Lua の初期化部分にバグがあり一カ所直しましたが…。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>5��27��</h3>
+        <div class="diary-day">
+          <h3>5月27日</h3>
 
-<p>��ơ�<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=255">Makefile.Linux �������ʬ��</a>�פ򸵤ˡ�Makefile.Linux �� DEFS, INCS, LIBS ���������ǽ�̤�ʬ���ޤ�����</p>
+          <p>提案「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=255">Makefile.Linux の定義の分割</a>」を元に、Makefile.Linux の DEFS, INCS, LIBS 等の定義を機能別に分けました。</p>
 
-<p>textbtnwait ̿���¹Ԥ���ȥƥ����Ȥ��ä��Ƥ��ޤ��Х��������ޤ��������Τ�����Ͻ��������٤Ȥ��Ƥ���Τǡ�¾�ǥ���Х����Ƥ��뤫�⤷��ޤ���</p>
+          <p>textbtnwait 命令を実行するとテキストが消えてしまうバグを修正しました。このあたりは処理が混沌としているので、他でエンバグしているかもしれません。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>5��20��</h3>
+        <div class="diary-day">
+          <h3>5月20日</h3>
 
-<p>�Х�����<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=253">Makefile ��� $(LD) ����ν���</a>�פ򸵤ˡ�Makefile.onscripter �Υ�󥫤λ����ʲ��Τ褦���ѹ����ޤ�����</p>
-<pre>
+          <p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=253">Makefile 中の $(LD) 定義の修正</a>」を元に、Makefile.onscripter のリンカの指定を以下のように変更しました。</p>
+          <pre>
 $(LD) $(LDOUT)$@
 </pre>
-<p style="text-indent:0">Makefile.Win �ǤΤ� LDOUT ��ʲ��Τ褦��������Ƥ��ޤ���</p>
-<pre>
+          <p style="text-indent:0">Makefile.Win でのみ LDOUT を以下のように定義しています。</p>
+          <pre>
 LDOUT = /out:
 </pre>
-<p style="text-indent:0">Windows �ǥ���ѥ��뤹����ˤϰʲ��Τ褦�� $@ �����˥��ڡ��������äƤϤ����ʤ����ᡢ����ޤǤ� Windows �� Unix �Ϥ� Makefile ��¸�����뤿��ˤ��������Х����Τ褦�ˤ��Ƥ��ޤ�����</p>
-<pre>
+          <p style="text-indent:0">Windows でコンパイルする場合には以下のように $@ の前にスペースが入ってはいけないため、これまでは Windows と Unix 系の Makefile を共存させるためにやむを得ずバグ報告のようにしていました。</p>
+          <pre>
 link /out:$@
 </pre>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>5��19��</h3>
+        <div class="diary-day">
+          <h3>5月19日</h3>
 
-<p>�Х�����<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=244">�֥���������������ƥ�������ư���Բ�</a>�פ򸵤ˡ�useescspc ̿�᤬���Ѥ���Ƥ��餺���� ESC �����������줿���ˡ�bexec ��ʸ�����ѿ��� RCLICK �����ꤹ��褦�ˤ��ޤ�����Android �Ǥǥ��եȥ������ܥ���α�����å��������줿���ˤ� RCLICK �����ꤵ��ޤ���</p>
+          <p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=244">「オーシャンランチアンティーク」動作不可</a>」を元に、useescspc 命令が使用されておらずかつ ESC キーが押された場合に、bexec の文字列変数に RCLICK を設定するようにしました。Android 版でソフトウェアボタンの右クリックが押された場合にも RCLICK が設定されます。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>5��13��</h3>
+        <div class="diary-day">
+          <h3>5月13日</h3>
 
-<p>&lt;��&gt;�ǰϤޤ줿�ƥ����ȥܥ������ʬŪ���б����ޤ�������᤹������ǥܥ���Ȥ��Ƥϵ�ǽ���ޤ���</p>
+          <p>&lt;と&gt;で囲まれたテキストボタンに部分的に対応しました。解釈するだけでボタンとしては機能しません。</p>
 
-<p>�Х�����<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=244">�֥���������������ƥ�������ư���Բ�</a>�פ򸵤ˡ����ʤ��Ȥ� Android 4.0.3 �ˤ����ơ�ONScripter::flushDirect() �ǹ����ΰ�����Ѥ����ξ��������Х��������ޤ�����</p>
+          <p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=244">「オーシャンランチアンティーク」動作不可</a>」を元に、少なくとも Android 4.0.3 において、ONScripter::flushDirect() で更新領域の面積が０の場合に落ちるバグを修正しました。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>4��25��</h3>
+        <div class="diary-day">
+          <h3>4月25日</h3>
 
-<p><a href="android/">Android ��</a>�Υ��ץ�� SDK �򹹿����ޤ���������ޤǤϡ��ۡ���ܥ�����Ÿ��ܥ���򲡤��ƥ��ץ�����Ǥ��Ƥ⡢���ں�������åɤ���ߤ������̤Τߣ��ˤ��Ƥ��ޤ��������󤫤顢AudioThread::fillBuffer() ���ƤФ줿�Ȥ��ˡ�������� 500ms �Υ��꡼�פ򷫤��֤��褦�ˤ��ޤ���������ˤ�äơ��긵��ü���Ǥ����ǻ��� CPU ����Ψ�� 95% ���٤��ä��Τ���5% ���٤ˤʤ�ޤ��������Ǥ��Ƥ���Ȥ������Ӥλ������褯�ʤ�Ȼפ��ޤ���</p>
+          <p><a href="android/">Android 版</a>のアプリと SDK を更新しました。これまでは、ホームボタンや電源ボタンを押してアプリを中断しても、音楽再生スレッドは停止せず音量のみ０にしていました。今回から、AudioThread::fillBuffer() が呼ばれたときに、中断中は 500ms のスリープを繰り返すようにしました。これによって、手元の端末では中断時の CPU 使用率が 95% 程度だったのが、5% 程度になりました。中断しているときの電池の持ちがよくなると思います。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>4��14��</h3>
+        <div class="diary-day">
+          <h3>4月14日</h3>
 
-<p>�ɲõ�ǽ��˾��<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=230">android�ǤΥۥ����륢�åס�������</a>�פ򸵤ˡ�Android �ǤΥܥ���ˡ־�ۥ�����פȡֲ��ۥ�����פ��ɲä��ޤ��������ۥ⡼�ɤ�����䤹���ʤ�Ȼפ��ޤ����ޤ���������פΡ֥ܥ������ɽ���פȡֲ��̤������ɽ���פ����礷���֥ܥ������ɽ���פˤ����Ȥ���Ʊ���˲��̤������ɽ�������褦�ˤ��ޤ�����</p>
+          <p>追加機能要望「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=230">androidでのホイールアップ／ダウン</a>」を元に、Android 版のボタンに「上ホイール」と「下ホイール」を追加しました。回想モードに入りやすくなると思います。また、「設定」の「ボタンを非表示」と「画面を中央に表示」は統合し、「ボタンを非表示」にしたときに同時に画面も中央に表示されるようにしました。</p>
 
-<p>Android �Ǥο����٤� 16bit (RGB565) ���� 32bit (ABGR8888) ���ѹ������ޤ����Ѥ��� SDL_Surface �� SDL_BLENDMODE_NONE ����ꤷ�� SDL ¦�Ǥ������ž���ˤι�®����ޤ�ޤ�����<a href="android/#sdk">SDK</a> �򹹿����Ƥ�����������������ONScripter �����ǲ������ݻ����뤿���ɬ�פʥ����̤����ܤ������ޤ���</p>
+          <p>Android 版の色深度を 16bit (RGB565) から 32bit (ABGR8888) に変更し、また使用する SDL_Surface に SDL_BLENDMODE_NONE を指定して SDL 側での描画（転送）の高速化を図りました。<a href="android/#sdk">SDK</a> を更新してください。ただし、ONScripter 内部で画像を保持するために必要なメモリ量が２倍に増えます。</p>
 
-<p>Android �Ǥ� iOS �Ǥˤ����ơ�����ޤǤ� ONScripter �������ݻ���������β����٤�ǥХ������̤β����٤�Ʊ���ˤ��Ƥ��ޤ����������󤫤鸵�β����ե�����β����٤�Ʊ���ˤ��ޤ������Ǹ��ɽ�����ʳ��ǡ�OpenGL ES ��������ֳ���̾���ǽ��ȤäƥǥХ������̤β����٤˹�碌�ޤ�������ˤ�äơ�����������ꤷ�Ƥ�����̲����٤��ǥХ������̤β����٤��⾮�������ˤϲ����ݻ���ɬ�פʥ����̤�����ޤǤ��⸺�ꡢ�դξ��ˤ������ޤ����ޤ��������ǲ������Ѵ��򤷤ʤ�ʬ®���ʤ�ޤ������ǥХ������̤β����٤��������������ˤϲ��������ˤ�������֤������ޤ����ʤʤ�������� iOS �ǤǤϡ��ǥХ������̤β����٤������礭�����ˤΤ߾嵭�Τ褦��ɽ�����ʳ��ǳ���̾����Ƥ��ޤ�����</p>
+          <p>Android 版と iOS 版において、これまでは ONScripter 内部で保持する画像の解像度をデバイス画面の解像度と同じにしていましたが、今回から元の画像ファイルの解像度と同じにしました。最後の表示の段階で、OpenGL ES の線形補間拡大縮小機能を使ってデバイス画面の解像度に合わせます。これによって、ゲームで想定している画面解像度がデバイス画面の解像度よりも小さい場合には画像保持に必要なメモリ量がこれまでよりも減り、逆の場合には増えます。また、内部で解像度変換をしない分速くなりますが、デバイス画面の解像度の方が小さい場合には画像合成にかかる時間が増えます。（なお、従来の iOS 版では、デバイス画面の解像度の方が大きい場合にのみ上記のように表示の段階で拡大縮小していました）</p>
 
-<p>�����ܡ��ɥ��硼�ȥ��åȤ⤷���� Android �ǤΥ��եȥ������ܥ���ʡּ��Υܥ���ס����Υܥ���סˤ�Ȥäƥܥ�������򤹤�Ȥ��ˡ��μ¤�����Υܥ���˰�ư�Ǥ���褦�ˤ��ޤ�����</p>
+          <p>キーボードショートカットもしくは Android 版のソフトウェアボタン（「次のボタン」「前のボタン」）を使ってボタンを選択するときに、確実に前後のボタンに移動できるようにしました。</p>
 
-<p>iOS �Ǥˤ����ơ�iPhone ���ư�������Ȥ��� ofscpy �� getscreenshot ̿��ǲ�������������������ʤ��Х��������ޤ�����</p>
+          <p>iOS 版において、iPhone 上で動かしたときに ofscpy や getscreenshot 命令で画像が正しく取得されないバグを修正しました。</p>
 
-<p>iOS �Ǥˤ����ơ����åװ��֤μ����˴ؤ���Х��������ޤ�����</p>
+          <p>iOS 版において、タップ位置の取得に関するバグを修正しました。</p>
 
-<p>Android �Ǥˤ����ƺǿ��� SDK r18 �� NDK r7c ��ư���ǧ�򤷤ޤ�����</p>
+          <p>Android 版において最新の SDK r18 と NDK r7c で動作確認をしました。</p>
 
-<h4>20110414a</h4>
+          <h4>20110414a</h4>
 
-<p>�Х�����<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=248">˺��ʪ</a>�פ򸵤ˡ�Android �Ǥǿ������ɲä����ܥ�������ȹ⤵�����ꤷ˺��Ƥ��ơ������ܤȣ����ܤΥܥ��󤬾������ʤäƤ����Х��������ޤ������ե�����̾���Ѥ�äƤ��ޤ��󤬡��������ƥ��ץ�� <a href="android/#sdk">SDK</a> �򹹿����ޤ���������ʸ�Ϥ��ܤ����˥���������ɤ��줿���ϡ����٥���������ɤ��Ƥ���������</p>
+          <p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=248">忘れ物</a>」を元に、Android 版で新規に追加したボタンの幅と高さを設定し忘れていて、５番目と６番目のボタンが小さくなっていたバグを修正しました。ファイル名は変わっていませんが、修正してアプリと <a href="android/#sdk">SDK</a> を更新しました。この文章が載る前にダウンロードされた方は、再度ダウンロードしてください。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>4��5��</h3>
+        <div class="diary-day">
+          <h3>4月5日</h3>
 
-<p>�Х�����<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=246">�����ȼ���̾õ�夬ư��ʤ�</a>�פ򸵤ˡ�shadedistance ̿�᤬�¹ԥ֥��å��ˤ��äƤ�¹Ԥ����褦�ˤ��ޤ�����</p>
+          <p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=246">ウソと手紙と名探偵が動作しない</a>」を元に、shadedistance 命令が実行ブロックにあっても実行されるようにしました。</p>
 
-<p>Android �Ǥˤ����ƺǿ��� SDK r17 �� NDK r7b ��ư���ǧ�򤷤ޤ�����</p>
+          <p>Android 版において最新の SDK r17 と NDK r7b で動作確認をしました。</p>
 
-<p>BTS ��<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=top">�ȥåײ���</a>�˥����������褦�Ȥ���ȡ��ǡ����١����˥�����������Ȥ����ǥ��顼����������̤�ɽ������ʤ��ʤäƤ��ޤ��������̤ΥХ�����ɽ���Ǥ��ޤ����ʲ��Υե��������������ľ��ޤ�����</p>
+          <p>BTS の<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=top">トップ画面</a>にアクセスしようとすると、データベースにアクセスするところでエラーが起こり画面が表示されなくなっていました。個別のバグ報告は表示できます。以下のファイルを削除したら直りました。</p>
 
-<pre>
+          <pre>
 kagemai/project/onscripter/cache/cache.pstore
 </pre>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>3��20��</h3>
+        <div class="diary-day">
+          <h3>3月20日</h3>
 
-<p>�Х�����<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=240">android�Ǥ�disable rescale��Ȥä����Υ����ɤκݥƥ����ȥ�����ɥ�������</a>�פ򸵤ˡ�setwindow ̿��ǲ����ե�����̾����ꤷ�Ƥ�����֤ǥ����֥ե��������¸�������ˡ����Υ����֥ե�������ɤ߹���Ȥ��� AnimationInfo �������˥���å��夵��Ƥ��ޤ������ե����뤬������ɽ������ʤ����Ȥ�����Х��������ޤ�����</p>
+          <p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=240">android版でdisable rescaleを使った場合のロードの際テキストウィンドウが乱れる</a>」を元に、setwindow 命令で画像ファイル名を指定している状態でセーブファイルを保存した場合に、そのセーブファイルを読み込むときに AnimationInfo が不正にキャッシュされてしまい画像ファイルが正しく表示されないことがあるバグを修正しました。</p>
 
-<p>�Х�����<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=243">BGM���롼�פ��ʤ�</a>�פ򸵤ˡ���Ƭ�� _ ���դ���̿���¹Ԥ���Ȥ���������̿�᤬��ᤵ��ʤ����Ȥ�����Х��������ޤ�����</p>
+          <p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=243">BGMがループしない</a>」を元に、先頭に _ が付いた命令を実行するときに正しく命令が解釈されないことがあるバグを修正しました。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>3��18��</h3>
+        <div class="diary-day">
+          <h3>3月18日</h3>
 
-<p>�Х�����<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=241">�ϡ��С����ɤǤĤ��ޤ���</a>�פ򸵤ˡ�setwindow ̿��ǲ����ե�����̾���꤫��Ʃ���ٻ�����ѹ���������������Ʊ�������ե�����̾������ѹ��������ˡ�����Ƥ��ޤ����Ȥ�����Х��������ޤ�����</p>
+          <p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=241">ハーバーランドでつかまえて</a>」を元に、setwindow 命令で画像ファイル名指定から透過度指定に変更し、さらに前回と同じ画像ファイル名指定に変更した場合に、落ちてしまうことがあるバグを修正しました。</p>
 
-<p>�Х�����<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=242">�����������������ܥ���򲡤������ٵ�ư������Զ�硩��Android��</a>�פ򸵤ˡ�<a href="android/">Android ��</a>�� SDK �򹹿����ơ�������ǡ���������������椪��ӥ�����ǡ������ԡ���Υץ����쥹�С���ɽ������Ƥ���Ȥ��ˤϡ��ϡ��ɥ����� BACK �� SEARCH ������դ��ʤ��褦�ˤ��ޤ�������������������鵤�ˤϤʤäƤ����ΤǤ�������𤬤����Τ򵡤�ľ���ޤ�����</p>
+          <p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=242">ダウンロード中に戻るボタンを押し、再度起動すると不具合？（Android）</a>」を元に、<a href="android/">Android 版</a>の SDK を更新して、ゲームデータダウンロード中およびゲームデータコピー中のプログレスバーが表示されているときには、ハードキーの BACK と SEARCH を受け付けないようにしました。この問題は前から気にはなっていたのですが、報告がきたのを機に直しました。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>3��17��</h3>
+        <div class="diary-day">
+          <h3>3月17日</h3>
 
-<p>�Х�����<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=239">gettag�����������Ǥ��ʤ�</a>�פ򸵤ˡ�gettag ̿��¹Ը�Υ�����ץȰ��֤� gettag ̿��������ͼ����˴ؤ���Х��������ޤ�����</p>
+          <p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=239">gettagで負数を取得できない</a>」を元に、gettag 命令実行後のスクリプト位置や gettag 命令の整数値取得に関するバグを修正しました。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>3��16��</h3>
+        <div class="diary-day">
+          <h3>3月16日</h3>
 
-<p>������ǡ�������¢���� <a href="ios/">iOS ��</a>�� <a href="http://itunes.apple.com/jp/app/id504897191?mt=8">NOeSIS -�����Ǥ���������ʪ��-</a> �� App Store �Ǹ������줿�Τǡ����åץǡ��Ȥ��Ƥߤޤ����������������åץǡ��ȼ��Τ�����ʤ��Ǥ�����ΤΡ������֥ե����뤬�ä��Ƥ��ޤ��ޤ����ʵ�ˡ�MAGIC_FILE �򹹿������ /Library/Caches/ONS ��ե�������Ⱦõ�ơ�������������ǡ����򥳥ԡ�������ͤˤʤäƤ������ᡢ�����֥ե��������˾õ��Ƥ��ޤ������õ��������ǡ����Τ߾�񤭤��������褫�ä��Ǥ��͡�����������ޤ���ġ��õ�ǤϤʤ���񤭤���褦�� SDK ���ѹ����ޤ�����</p>
+          <p>ゲームデータを内蔵した <a href="ios/">iOS 版</a>の <a href="http://itunes.apple.com/jp/app/id504897191?mt=8">NOeSIS -嘘を吐いた記憶の物語-</a> が App Store で公開されたので、アップデートしてみました。しかし、アップデート自体は問題なくできたものの、セーブファイルが消えてしまいました（泣）。MAGIC_FILE を更新すると /Library/Caches/ONS をフォルダごと消去して、新しくゲームデータをコピーする仕様になっていたため、セーブファイルも一緒に消去されていました。消去せずゲームデータのみ上書きする方がよかったですね、申し訳ありません…。消去ではなく上書きするように SDK を変更しました。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>3��12��</h3>
+        <div class="diary-day">
+          <h3>3月12日</h3>
 
-<p><a href="android/">Android ��</a>�ˤ����Ƴ�ĥ�ե���������������ɤ�����ˡ��ºݤˤϳ�ĥ�ե�����ϳ������ȥ졼��(SD�����ɤʤ�)�˥���������ɤ����ˤ�ؤ�餺�����ץ�ȳ�ĥ�ե�����ι�ץ�����ʬ�ζ������������ȥ졼���ˤʤ��� Android �ޡ����åȤǥ��󥹥ȡ���Ǥ��ʤ���Ƚ�Ǥ���Ƥ��ޤ��褦�Ǥ��������ǡ�SDK ������ե������ʲ���<span style="color:red">�ֻ�</span>�Τ褦�˽�������Android 2.2 �ʾ�ǤΥǥե���ȤΥ��󥹥ȡ�����������ȥ졼��ͥ����ѹ����ޤ�����</p>
+          <p><a href="android/">Android 版</a>において拡張ファイルをダウンロードする場合に、実際には拡張ファイルは外部ストレージ(SDカードなど)にダウンロードされるにも関わらず、アプリと拡張ファイルの合計サイズ分の空きが内部ストレージにないと Android マーケットでインストールできないと判断されてしまうようです。そこで、SDK の設定ファイルを以下の<span style="color:red">赤字</span>のように修正し、Android 2.2 以上でのデフォルトのインストール先を外部ストレージ優先に変更しました。</p>
 
-onscripter_android/AndroidManifest.xml:
-<pre>
+          onscripter_android/AndroidManifest.xml:
+          <pre>
       android:versionCode=&quot;20120310&quot;
       android:versionName=&quot;20120310&quot;
       <span style="color:red">android:installLocation=&quot;preferExternal&quot;</span>&gt;
 </pre>
 
-onscripter_android/project.properties:
-<pre>
+          onscripter_android/project.properties:
+          <pre>
 target=android-<span style="color:red">8</span>
 </pre>
 
-<p style="text-indent:0"><s>�����餯����ǡ�Android 2.2 �ʾ�Ǥ��������ȥ졼�������ʤ��Ƥ⥤�󥹥ȡ���Ǥ��褦�ˤʤ�Ȼפ��ޤ���</s>�������Ƥ�Ǥ��ޤ���Ǥ����ʵ�ˡ�
+          <p style="text-indent:0"><s>おそらくこれで、Android 2.2 以上では内部ストレージが少なくてもインストールできようになると思います。</s>こうしてもできませんでした（泣）。
 
-<p>�ʤ����������Ǥ⡢���ץ�Ͻ���ɤ��� Android 1.6 �ʾ��ư��ޤ����ޤ���Android SDK �� Android 4.0.3 (API 15) �� Android 2.2 (API 8) �� SDK Platform �򥤥󥹥ȡ��뤷�Ƥ���������Android 1.6 (API 4) �� SDK Platform �����פǤ���</p>
+          <p>なお、上の設定でも、アプリは従来どおり Android 1.6 以上で動作します。また、Android SDK は Android 4.0.3 (API 15) と Android 2.2 (API 8) の SDK Platform をインストールしてください。Android 1.6 (API 4) の SDK Platform は不要です。</p>
 
-<p>����ޤ�������ĥ�ե�����Υ������� 100MB Ķ�ʤ������̤ˤʤ�ȡ�ü���ˤ�äƤ��������ȥ졼���ζ��������ʤ����˥��󥹥ȡ���Ǥ��ʤ��Ȥ������Ȥˤʤꤽ���Ǥ����긵�� HTC Desire ���������ȥ졼���ζ����� 20MB ���٤ʤΤǸ������Ǥ���ONScripter �ξ�硢��ĥ�ե�����ϼ����Υ������������ SD �����ɤ�ľ�ܥ���������ɤ����Τǡ�Android �ޡ����åȥ��ץ�Υ����å���������Ǥ���Ф褤�ΤǤ����ġ�</p>
+          <p>困りました。拡張ファイルのサイズが 100MB 超など大容量になると、端末によっては内部ストレージの空きが少ない場合にインストールできないということになりそうです。手元の HTC Desire は内部ストレージの空きが 20MB 程度なので厳しいです。ONScripter の場合、拡張ファイルは自前のダウンローダで SD カードに直接ダウンロードされるので、Android マーケットアプリのチェックさえ回避できればよいのですが…。</p>
 
-<p>���󥹥ȡ��뼺��ľ��Υ����˰ʲ��Υ�å����������Ϥ���Ƥ��ޤ��������ץ�ܳ�ĥ�ե�����(����=35584490)ʬ�Υ���å�����������ȥ졼��(����=23707648)�˳��ݤ��褦�Ȥ��Ƽ��Ԥ���褦�Ǥ����Ƕ��ü�����������ȥ졼����;͵������Ȼפ��Τǡ������������ͤǤ�������ʤ��Τ��⤷��ޤ���</p>
+          <p>インストール失敗直後のログに以下のメッセージが出力されていました。アプリ＋拡張ファイル(容量=35584490)分のキャッシュを内部ストレージ(空き=23707648)に確保しようとして失敗するようです。最近の端末は内部ストレージに余裕があると思うので、こういう仕様でも仕方がないのかもしれません。</p>
 
-<pre>
+          <pre>
 I/installd(   75): free_cache(35584490) avail 23707648
 E/installd(   75): cannot open /data/secure/data/: No such file or directory
 E/installd(   75): Couldn't openat cache: No such file or directory
 </pre>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>3��11��</h3>
+        <div class="diary-day">
+          <h3>3月11日</h3>
 
-<p><a href="android/">Android ��</a>�ˤ����ơ�������ǡ����� Android �ޡ����åȤγ�ĥ�ե�����Ȥ��ƥ���������ɤǤ���褦�ˤ��ޤ������ǿ��� SDK ����Ѥ��ơ�<a href="android/#distribution">������ǡ�����������ˡ</a>�Υѥ����󣱤򻲹ͤ˥��ץ��������Ƥ�����������������ӥ����Ф��Ѱդ��ƥ�����ǡ��������������ɤ���ɬ�פϤʤ��ʤ�Ϥ��Ǥ�������μ�ʬ�ǥ����Ф��Ѱդ��Ƥ����������������ɤ�����ˡ�����ѤǤ��ޤ��ʥѥ����󣳡ˡ��ޤ������γ�ĥ��ȼ���Ź沽 zip �Υ��ݡ��Ȥ���ߤ��ޤ�����<s>����������ĥ�ե�����Υ���������ɤˤĤ��Ƥ�ư���ǧ�򤷤Ƥ��ʤ����ᡢ�ɤʤ�����Ƥ���������𤷤Ƥ���������й����Ǥ������ޤ������ʤ����ϡ�ľ��� aLogcat �Υ��������äƤ���������</s>��<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=238">Android���ץ���������´��¡�50MB��4GB�ˤ�ȼ����˾</a>�פˤ�����ư���ǧ�򤷤Ƥ��������ޤ�����</p>
+          <p><a href="android/">Android 版</a>において、ゲームデータを Android マーケットの拡張ファイルとしてダウンロードできるようにしました。最新の SDK を使用して、<a href="android/#distribution">ゲームデータの配布方法</a>のパターン１を参考にアプリを作成してください。これで別途サーバを用意してゲームデータをダウンロードする必要はなくなるはずです。従来の自分でサーバを用意してそこからダウンロードする方法も利用できます（パターン３）。また、この拡張に伴い暗号化 zip のサポートを中止しました。<s>ただし、拡張ファイルのダウンロードについては動作確認をしていないため、どなたか試していただき報告していただければ幸いです。うまくいかない場合は、直後の aLogcat のログを送ってください。</s>「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=238">Androidアプリの容量制限緩和（50MB→4GB）に伴う要望</a>」において動作確認をしていただきました。</p>
 
-<p>��ĥ�ե�����Υ���������ɤˤĤ��Ƥϻ��������ޤ�ʤ����ޤ��긵�Ǥ�ư���ǧ���Ǥ��ʤ����ᡢURL �����������ʬ�����󶡤��줿�饤�֥�����Ѥ�������������ɤ� zip �β���ˤĤ��Ƥϼ��ӤΤ��뼫���Υץ������򤽤Τޤ�ή�Ѥ��Ƥ��ޤ���</p>
+          <p>拡張ファイルのダウンロードについては資料があまりなく、また手元では動作確認ができないため、URL を取得する部分だけ提供されたライブラリを使用し、ダウンロードと zip の解凍については実績のある自前のプログラムをそのまま流用しています。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>3��10��</h3>
+        <div class="diary-day">
+          <h3>3月10日</h3>
 
-<p><a href="ios/">iOS ��</a>�� <a href="http://itunes.apple.com/jp/app/id504897191?mt=8">NOeSIS -�����Ǥ���������ʪ��-</a> ��̵�� App Store �Ǹ�������ޤ������긵�� iPad2 �˥��ץ�򥤥󥹥ȡ��뤷���Ȥ���������ʤ�ư��Ƥ��ޤ���1024x768 �β��̤��äѤ���ɽ�������������Ǥ���</p>
+          <p><a href="ios/">iOS 版</a>の <a href="http://itunes.apple.com/jp/app/id504897191?mt=8">NOeSIS -嘘を吐いた記憶の物語-</a> が無事 App Store で公開されました。手元の iPad2 にアプリをインストールしたところ、問題なく動作しています。1024x768 の画面いっぱいに表示され非常に綺麗です。</p>
 
-<p>iPad2 ��¾�ΥΥ٥륲�����ͷ��Ǥߤ褦�Ȼפ� App Store �򸫤Ƥ����顢���� 100MB Ķ�Υ��ץ꤬�����Ĥ⤢��ޤ����������줢��ʤΡ��ɤ���顢3G ������Ȥ�ʤ��ΤǤ���С����̤��礭���Ƥ�(2GB �ޤǡ�)����פʤ褦�Ǥ����Ȥ����櫓�ǡ�<a href="ios/">iOS ��</a>��<a href="ios/#contents">������ǡ�����¢��ǽ</a>���ɲä��ޤ�����20120310 �ʹߤ� ONScripter �Υ���������Ѥ���HAVE_CONTENTS �� MAGIC_FILE ��������ƥ��ץ��������Ƥ�����������������ӥ����Ф��Ѱդ��ƥ�����ǡ��������������ɤ���ɬ�פϤʤ��ʤ�Ϥ��Ǥ���</p>
+          <p>iPad2 で他のノベルゲームを遊んでみようと思い App Store を見ていたら、容量 100MB 超のアプリがいくつもあります。え？これありなの？どうやら、3G 回線を使わないのであれば、容量が大きくても(2GB まで？)大丈夫なようです。というわけで、<a href="ios/">iOS 版</a>に<a href="ios/#contents">ゲームデータ内蔵機能</a>を追加しました。20120310 以降の ONScripter のソースを使用し、HAVE_CONTENTS と MAGIC_FILE を定義してアプリを作成してください。これで別途サーバを用意してゲームデータをダウンロードする必要はなくなるはずです。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>3��3��</h3>
+        <div class="diary-day">
+          <h3>3月3日</h3>
 
-<p><s>Android �Ǥˤ����ơ���<a href="android/#distribution">������ǡ�����������ˡ</a>�פΡ֥ѥ����󣲡����ץ����¢������ˡ�פˡ�SD �����ɤ˥��󥹥ȡ����ǽ�ʥ��ץ�κ���ˡ�פ��ɲä��ޤ�����</s>�ǥե���ȤǤ�<s>���ץ���������ȥ졼���˥��󥹥ȡ��뤵��ޤ�������������ˡ�Ǻ�������</s>���ץ�� SD �����ɤ�ͥ��Ū�˥��󥹥ȡ��뤵���褦�ˤʤ뤿�ᡢ�ä˥�����ǡ�������¢��������������ȥ졼���������ʤ��Ǥ���褦�ˤʤ�ޤ�����������������ˡ�� SD �����ɤ˥��󥹥ȡ���Ǥ���Τ� Android 2.2 �ʹߤǤ���Android 2.2 ̤���ξ��ϡ����Τ褦�����ꤷ�Ƥ��������ȥ졼���˥��󥹥ȡ��뤵��ޤ���</p>
+          <p><s>Android 版において、「<a href="android/#distribution">ゲームデータの配布方法</a>」の「パターン２：アプリに内蔵する方法」に「SD カードにインストール可能なアプリの作成法」を追加しました。</s>デフォルトでは<s>アプリは内部ストレージにインストールされますが、新しい方法で作成した</s>アプリは SD カードに優先的にインストールされるようになるため、特にゲームデータを内蔵する場合に内部ストレージを圧迫しないですむようになります。ただし、この方法で SD カードにインストールできるのは Android 2.2 以降です。Android 2.2 未満の場合は、このように設定しても内部ストレージにインストールされます。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>3��2��</h3>
+        <div class="diary-day">
+          <h3>3月2日</h3>
 
-<p>iOS Data Storage Guidelines �ˤ��ȡ�����������ɤ��륲����ǡ����� /Documents �ǤϤʤ� /Library/Caches ����¸���ʤ��Ȥ����ʤ��褦�Ǥ���ONScripter �Υ������� <a href="ios/">iOS ��</a>�� SDK �򤽤Τ褦�˽������ޤ�����</p>
+          <p>iOS Data Storage Guidelines によると、ダウンロードするゲームデータは /Documents ではなく /Library/Caches に保存しないといけないようです。ONScripter のソースと <a href="ios/">iOS 版</a>の SDK をそのように修正しました。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>2��27��</h3>
+        <div class="diary-day">
+          <h3>2月27日</h3>
 
-<p>�Х�����<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=236">Double Free when quitting the game</a>�פ򸵤ˡ�end ̿���¹Ԥ������ʤɤ� ONScriper::quit() �� �ǥ��󥹥ȥ饯������Ť˥��꤬���������Х��������ޤ�����</p>
+          <p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=236">Double Free when quitting the game</a>」を元に、end 命令を実行した場合などに ONScriper::quit() と デコンストラクタで二重にメモリが解放されるバグを修正しました。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>2��25��</h3>
+        <div class="diary-day">
+          <h3>2月25日</h3>
 
-<p>Feng ���󤫤�ΥХ����򸵤ˡ�cell ̿��ʤɤθ�� print ̿���¹Ԥ��Ƥ���̤�����ʤ��Х��������ޤ�����</p>
+          <p>Feng さんからのバグ報告を元に、cell 命令などの後に print 命令を実行しても効果が現れないバグを修正しました。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>2��22��</h3>
+        <div class="diary-day">
+          <h3>2月22日</h3>
 
-<p>iOS �Ǥˤ����ơ���������̤��ǥХ������̤������ɽ�������褦�ˤ��ޤ�����</p>
+          <p>iOS 版において、ゲーム画面がデバイス画面の中央に表示されるようにしました。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>2��19��</h3>
+        <div class="diary-day">
+          <h3>2月19日</h3>
 
-<p>Retina display ���б����뤿��ˡ���<a href="http://bugzilla.libsdl.org/show_bug.cgi?id=1394">Bug 1394 - Fixes for SDL's handling of "Retina" display on iOS devices</a>�פΥѥå��򤢤Ƥ� <a href="ios/">iOS ��</a>�� SDK (onscripter_ios.tar.gz) �򹹿����ޤ���������� iPhone 4S �Ǥ������ɽ�������Ȼפ��ޤ������ߥ�졼����� Retina display ���ˤϡ�iOS ���ߥ�졼����Ω���夬�ä���ˡ�iOS ���ߥ�졼���Υ�˥塼�Ρ֥ϡ��ɥ�������-&gt;�֥ǥХ����פ��� iPhone(Retina) �����򤷤Ƥ���������</p>
+          <p>Retina display に対応するために、「<a href="http://bugzilla.libsdl.org/show_bug.cgi?id=1394">Bug 1394 - Fixes for SDL's handling of "Retina" display on iOS devices</a>」のパッチをあてて <a href="ios/">iOS 版</a>の SDK (onscripter_ios.tar.gz) を更新しました。これで iPhone 4S でも正常に表示されると思います。シミュレータ上で Retina display を試すには、iOS シミュレータが立ち上がった後に、iOS シミュレータのメニューの「ハードウェア」-&gt;「デバイス」から iPhone(Retina) を選択してください。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>2��11��</h3>
+        <div class="diary-day">
+          <h3>2月11日</h3>
 
-<p>�Х�����<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=229">Ĺ������Ԥ��������ư��</a>�פ򸵤ˡ�SDL-1.3 �� SDL_UpdateRect() �Ǥ������ϰϤΥ����å��򤷤Ƥ��ʤ��褦�ʤΤǡ�ONScripter::flushDirect() �ǻ����������ϰϤ���̥������ǥ���åԥ󥰤���褦�ˤ��ޤ�����</p>
+          <p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=229">長すぎる行がある場合の動作</a>」を元に、SDL-1.3 の SDL_UpdateRect() では描画範囲のチェックをしていないようなので、ONScripter::flushDirect() で事前に描画範囲を画面サイズでクリッピングするようにしました。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>2��9��</h3>
+        <div class="diary-day">
+          <h3>2月9日</h3>
 
-<p>���ۥڡ����ǥ�Ӥ�ɽ������ʤ��Х��������ޤ�����</p>
+          <p>回想ページでルビが表示されないバグを修正しました。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>2��5��</h3>
+        <div class="diary-day">
+          <h3>2月5日</h3>
 
-<p>20120204 �ν���ϳ��ǡ�USE_SDL_RENDERER �����������������˴ؤ�������ʥХ��������ޤ�����</p>
+          <p>20120204 の修正漏れで、USE_SDL_RENDERER を定義した場合の描画に関する軽微なバグを修正しました。</p>
 
-<p>���ʤߤˡ�ONScripter �� Linux (Debian Squeeze), <a href="android/">Android</a> (HTC Desire (2.3)), <a href="ios/">iOS</a> (iPad2), ���� Windows ��ư���ǧ�򤷤Ƥ����꡼�����Ƥ��ޤ���</p>
+          <p>ちなみに、ONScripter は Linux (Debian Squeeze), <a href="android/">Android</a> (HTC Desire (2.3)), <a href="ios/">iOS</a> (iPad2), 時々 Windows で動作確認をしてからリリースしています。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>2��4��</h3>
+        <div class="diary-day">
+          <h3>2月4日</h3>
 
-<p>�Х�����<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=228">PC���USE_SDL_RENDERER��ͭ���ˤ����ݤ�����</a>�פ򸵤ˡ����������Υե����ޥåȤ�ʲ��Τ褦���ѹ����ޤ����������顼�� 32bit ������16bit ������ USE_SDL_RENDERER ��̵���ˤ�����硢����ʳ��� USE_SDL_RENDERER ��ͭ���ˤ�������ؤ��ޤ���</p>
-<table>
-<tr><th>�ե����ޥå�</th><th>�����顼</th><th>�о� OS ����</th></tr>
-<tr><td>ABGR8888</td><td>OpenGL ES 1.x, OpenGL ES 2.x</td><td>iOS</td></tr>
-<tr><td>ARGB8888</td><td>OpenGL, Direct3D, 32bit ����</td><td>Windows, Linux, MacOSX</td></tr>
-<tr><td>RGB565</td><td>16bit ���� (BPP16 �����)</td><td>Android, Zaurus</td></tr>
-</table>
+          <p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=228">PC上でUSE_SDL_RENDERERを有効にした際の問題</a>」を元に、内部画像のフォーマットを以下のように変更しました。レンダラーの 32bit 画像・16bit 画像は USE_SDL_RENDERER を無効にした場合、それ以外は USE_SDL_RENDERER を有効にした場合を指します。</p>
+          <table>
+            <tr>
+              <th>フォーマット</th>
+              <th>レンダラー</th>
+              <th>対象 OS の例</th>
+            </tr>
+            <tr>
+              <td>ABGR8888</td>
+              <td>OpenGL ES 1.x, OpenGL ES 2.x</td>
+              <td>iOS</td>
+            </tr>
+            <tr>
+              <td>ARGB8888</td>
+              <td>OpenGL, Direct3D, 32bit 画像</td>
+              <td>Windows, Linux, MacOSX</td>
+            </tr>
+            <tr>
+              <td>RGB565</td>
+              <td>16bit 画像 (BPP16 を定義)</td>
+              <td>Android, Zaurus</td>
+            </tr>
+          </table>
 
-<p>ư���ǧ�򤷤Ƥ��ޤ��󤬡���ǯ�֤�� Zaurus �ǤΥѥå������⹹�����ޤ�����</p>
+          <p>動作確認をしていませんが、１年ぶりに Zaurus 版のパッケージも更新しました。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>1��29��</h3>
+        <div class="diary-day">
+          <h3>1月29日</h3>
 
-<p><a href="ios/">iOS ��</a>�ˤ����ơ�USE_SELECTOR ��������ƥ���ѥ��뤹��ȡ���ư���˥����������Ǥ���褦�ˤ��ޤ�����������ǡ����ϡ�<a href="http://www.macroplant.com/iexplorer">iExplorer</a> �ʤɤ���Ѥ���Documents ľ����Ǥ�դ�̾���Υե������������Ƥ�������֤��Ƥ�����������������������ǡ���������ե������ Documents ľ���ˣ��Ĥ����ʤ����ϡ�̵���ˤ��Υե�����ˤ��륲���ब�¹Ԥ���ޤ���</p>
+          <p><a href="ios/">iOS 版</a>において、USE_SELECTOR を定義してコンパイルすると、起動時にゲームを選択できるようにしました。ゲームデータは、<a href="http://www.macroplant.com/iexplorer">iExplorer</a> などを使用し、Documents 直下に任意の名前のフォルダを作成してその中に置いてください。ただし、ゲームデータがあるフォルダが Documents 直下に１つしかない場合は、無条件にそのフォルダにあるゲームが実行されます。</p>
 
-<p>ZIP_URL �� USE_SELECTOR ��ʻ�Ѥ��뤳�Ȥ�Ǥ��ޤ���ZIP_URL �ǻ��ꤵ�줿������ǡ����� Documents/ONS �ե������Ÿ������ޤ���ʻ�Ѥ�����硢�⤷ Documents ľ����¾�˥ե�������ʤ���С�����������ɤ��������ब̵���˼¹Ԥ���ޤ����桼�����ե�������ɲä������ϡ���ư���˥�����������̤�ɽ������ޤ���</p>
+          <p>ZIP_URL と USE_SELECTOR を併用することもできます。ZIP_URL で指定されたゲームデータは Documents/ONS フォルダに展開されます。併用した場合、もし Documents 直下に他にフォルダがなければ、ダウンロードしたゲームが無条件に実行されます。ユーザがフォルダを追加した場合は、起動時にゲーム選択画面が表示されます。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>1��28��</h3>
+        <div class="diary-day">
+          <h3>1月28日</h3>
 
-<p><a href="ios/">iOS ��</a>�ˤ����ơ�������å�����������б����ޤ������أ��ܥ��åפǱ�����å����أ��ܥ��åפ��������ctrl �����ˤˤʤ�ޤ���</p>
+          <p><a href="ios/">iOS 版</a>において、右クリックと早送りに対応しました。指２本タップで右クリック、指３本タップで早送り（ctrl キー）になります。</p>
 
-<p><a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=top">BTS</a> ����ʸ�����������Ĥδ֤ˤ��ʲ��Υ��顼���ФƻȤ��ʤ��ʤäƤ��ޤ�����</p>
+          <p><a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=top">BTS</a> の全文検索が、いつの間にやら以下のエラーが出て使えなくなっていました。</p>
 
-<pre>
+          <pre>
 undefined method `quote' for #&lt;DBI::DBD::Mysql::Database:0xb6f89308&gt; (NoMethodError)
 </pre>
 
-<p style="text-indent:0"><a href="http://blog.mogya.com/2009/08/rubydbimysqlquote.html">[ruby]DBI��ͳMysql��quote�᥽�å�</a>�򸵤ˡ�dbistore3.rb �κǽ�����˰ʲ��Υ����ɤ��ɲä��Ʋ�褷�ޤ�����</p>
+          <p style="text-indent:0"><a href="http://blog.mogya.com/2009/08/rubydbimysqlquote.html">[ruby]DBI経由Mysqlのquoteメソッド</a>を元に、dbistore3.rb の最初の方に以下のコードを追加して解決しました。</p>
 
-dbistore3.rb:
-<pre>
+          dbistore3.rb:
+          <pre>
 module DBI::DBD::Mysql
 	class Database &lt; DBI::BaseDatabase
 	 def quote(value)
@@ -533,87 +550,88 @@ module DBI::DBD::Mysql
 end
 </pre>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>1��22��</h3>
+        <div class="diary-day">
+          <h3>1月22日</h3>
 
-<p>ONScripter �ϼ�� Linux ��ǳ�ȯ���Ƥ��ޤ���������ޤ� Android �Ǥ�ȯ���뤿��� SDK r10, NDK r5b ��ȤäƤ��ޤ������Ȥ��������ǿ��� SDK r16, NDK r7 �ˤ����Ȥ������ʲ��Υ��顼���Фƥ���ѥ���Ǥ��ʤ��ʤäƤ��ޤ�����</p>
+          <p>ONScripter は主に Linux 上で開発していますが、これまで Android 版を開発するために SDK r10, NDK r5b を使っていました。ところが、最新の SDK r16, NDK r7 にしたところ、以下のエラーが出てコンパイルできなくなっていました。</p>
 
-<pre>
-    [javac] onscripter_android/src/org/bouncycastle/crypto/tls/test/AllTests.java:11: �ѥå����� junit.textui ��¸�ߤ��ޤ���
+          <pre>
+    [javac] onscripter_android/src/org/bouncycastle/crypto/tls/test/AllTests.java:11: パッケージ junit.textui は存在しません。
     [javac]         junit.textui.TestRunner.run(suite());
     ...
 </pre>
 
-<p style="text-indent:0">�Х�����<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=224">Android�ѤΥ���ѥ���Ǥ��ޤ���</a>�פ�Ʊ�����ݤǤ���Windows �ξ��� SDK �� r15 �ˤ����Ȥ�����ä��ޤ�������Linux �Ǥ� r13��r16 �ǥ��顼��ȯ�����ޤ���r10 �Ǥ�����פǤ��� ��������ʬ����ޤ��󤬡�junit �˴�Ϣ������ʬ�ϻȤ��Ƥ��ʤ��褦�ʤΤǡ�junit �˴�Ϣ���륽���������ƺ������ onscripter_android.tar.gz �򹹿����ޤ��������ߤϡ�junit ��ɬ�פʤ���Windows �Ǥ� Linux �Ǥ� SDK r16 �ǳ�ȯ�Ǥ��ޤ���</p>
+          <p style="text-indent:0">バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=224">Android用のコンパイルできません</a>」と同じ現象です。Windows の場合は SDK を r15 にしたところ解消しましたが、Linux では r13～r16 でエラーが発生します（r10 では大丈夫です） 。原因は分かりませんが、junit に関連する部分は使われていないようなので、junit に関連するソースを全て削除して onscripter_android.tar.gz を更新しました。現在は、junit は必要なく、Windows でも Linux でも SDK r16 で開発できます。</p>
 
-<p><a href="ios/">ONScripter on iOS</a> �Υ��ץ�κ���ˡ���ά�����ޤ�����</p>
+          <p><a href="ios/">ONScripter on iOS</a> のアプリの作成法を簡略化しました。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>1��15��</h3>
+        <div class="diary-day">
+          <h3>1月15日</h3>
 
-<p><a href="ios/">iOS ��</a>�˽�����������ɵ�ǽ���դ��ޤ���������Ǹ����Ǥ��륢�ץ��������뤳�Ȥ��Ǥ���褦�ˤʤä��Ȼפ��ޤ������������ץ������¦������ǿ������̤�ʤ���ǽ��������Τǡ��ɤʤ�����Ƥ���������Ȥ��꤬�����Ǥ���</p>
+          <p><a href="ios/">iOS 版</a>に初回ダウンロード機能を付けました。これで公開できるアプリを作成することができるようになったと思います。ただし、プログラム側の問題で審査に通らない可能性があるので、どなたか試していただけるとありがたいです。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>1��12��</h3>
+        <div class="diary-day">
+          <h3>1月12日</h3>
 
-<p>�Х�����<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=227">�С������20120111�Ǥ�®���㲼</a>�פ򸵤ˡ������ο����¤Ӥ�USE_SDL_RENDERER ���������Ƥ���� (A)BGR �ˡ�����ʳ��Ǥ� (A)RGB �ˤʤ�褦���ѹ����ޤ�����</p>
+          <p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=227">バージョン20120111での速度低下</a>」を元に、画像の色の並びを、USE_SDL_RENDERER が定義されていれば (A)BGR に、それ以外では (A)RGB になるように変更しました。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>1��11��</h3>
+        <div class="diary-day">
+          <h3>1月11日</h3>
 
-<p><a href="ios/">ONScripter on iOS</a> ��Ϥ�ޤ�������ȯ�� MacOS X Snow Leopard �ʹߤ� XCode 4.2 �ǹԤ��ޤ�����������ˡ�ǥ��󥹥ȡ��뤷�� iPad2 �μµ�������� XCode 4.2 �� iOS ���ߥ�졼��(iPhone, iPad)�ǡ�ư���������������ư��뤳�Ȥ��ǧ���Ƥ��ޤ�����������App Store �ο������̤뤫�ɤ����ϻ�Ƥ��ʤ��Τ�ʬ����ޤ��󡣿������̤ä����Ϥ���𤤤�������Ȥ��꤬�����Ǥ����ʤ������ǤˤĤ�����������ɵ�ǽ�Ϥޤ�̤�����Ǥ���</p>
+          <p><a href="ios/">ONScripter on iOS</a> を始めました。開発は MacOS X Snow Leopard 以降の XCode 4.2 で行います。正規の方法でインストールした iPad2 の実機、および XCode 4.2 の iOS シミュレータ(iPhone, iPad)で、動画再生を除き正常に動作することを確認しています。ただし、App Store の審査に通るかどうかは試していないので分かりません。審査に通った方はご報告いただけるとありがたいです。なお、α版につきダウンロード機能はまだ未実装です。</p>
 
-<p>�����٤� 800x600 �ޤǤΥ�����Ǥ�����Ƥ��ޤ��󤬡�iPad2 �µ��� 1024x768 �β����٤�ե�˻Ȥäơ�OpenGL ES �ˤ���˥���֥�������󥰡�������狼�Ĳ�Ŭ��ư��Ƥ��ޤ���HTC Desire (800x480) ����ư��ϲ�Ŭ�Ǥ������������������Ǥϱ�����å����������뵡ǽ���ʤ����ᡢ������ˤ�äƤϿʹԤ˻پ�򤭤�����礬����ޤ�������μ����ⵡǽ���Ƥ��ޤ���Ǥ�����</p>
+          <p>解像度が 800x600 までのゲームでしか試していませんが、iPad2 実機の 1024x768 の解像度をフルに使って（OpenGL ES によるリニア補間スケーリング）非常に綺麗かつ快適に動作しています。HTC Desire (800x480) よりも動作は快適です。ただし、現時点では右クリックに相当する機能がないため、ゲームによっては進行に支障をきたす場合があります。時刻の取得も機能していませんでした。</p>
 
-<p>������ 16bit ����� 32bit �����ο����¤Ӥ� (A)RGB ���� (A)BGR ���ѹ����ޤ�����</p>
+          <p>内部の 16bit および 32bit 画像の色の並びを (A)RGB から (A)BGR に変更しました。</p>
 
-<p>�����ϥ���������ɵ�ǽ�ޤ��դ���ͽ��Ǥ�������Objective-C ��Ȥä����Ȥ��ʤ����ᡢ���Ĥ�������ץ뤬��������Ǥ������⤦���������ꤽ���Ǥ���</p>
+          <p>本当はダウンロード機能まで付ける予定でしたが、Objective-C を使ったことがないため、見つけたサンプルが全く理解できず、もう少しかかりそうです。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>1��8��</h3>
+        <div class="diary-day">
+          <h3>1月8日</h3>
 
-<p>�Х�����<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=225">getcursorpos2��android�ˤĤ���</a>�פ򸵤ˡ�ʸ���ν�������������֤�Ĵ�����ޤ�����</p>
+          <p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=225">getcursorpos2とandroidについて</a>」を元に、文字の縦方向の描画位置を調整しました。</p>
 
-<p>USE_SDL_RENDERER ��������ƥ���ѥ��뤹��ȡ�SDL-1.3 �ʹߤΣ�������롼����(SDL_render.h)����Ѥ������褹��褦�ˤʤ�ޤ��������̾�� USE_SDL_WINDOW �����ѹ����ƥ������ѥå�������Ʊ��̾���Ǻ��ľ���ޤ�����</p>
+          <p>USE_SDL_RENDERER を定義してコンパイルすると、SDL-1.3 以降の２Ｄ描画ルーチン(SDL_render.h)を使用して描画するようになります。（定数名を USE_SDL_WINDOW から変更してソースパッケージを同じ名前で作り直しました）</p>
 
-<p>USE_CDROM ��������ƥ���ѥ��뤷���Ȥ��Τ� CD-ROM ��������ѤǤ���褦�ˤ��ޤ����������ȼ����Android �Ǥ� SDL �饤�֥�꤫�� CD-ROM ��Ϣ�Υ������������ޤ�����</p>
+          <p>USE_CDROM を定義してコンパイルしたときのみ CD-ROM 音源を使用できるようにしました。これに伴い、Android 版の SDL ライブラリから CD-ROM 関連のソースを削除しました。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>1��5��</h3>
+        <div class="diary-day">
+          <h3>1月5日</h3>
 
-<p>�ᤤ��Τǡ�ONScripter �γ�ȯ��Ϥ�Ƥ���10ǯ���Ф��ޤ������ǽ�ϸĿ�Ū�˳ڤ��ि��˺�ä��ץ������Ǥ������������˰��­�餺���������Ȥ��������⳰��¿����������Х�����ѥå���Ȥ����Ƴ�ȯ��ٱ礷�Ƥ��������褦�ˤʤꡢ������������Ϲͤ��⤷�ʤ��ä�¿���Υץ�åȥۡ����ư���褦�ˤʤ�ޤ����������ץ󥽡������ɤ���´����Ƥ��ޤ���</p>
+          <p>早いもので、ONScripter の開発を始めてから10年が経ちました。最初は個人的に楽しむために作ったプログラムでしたが、それに飽き足らず公開したところ、国内外の多くの方からバグ報告やパッチをとおして開発を支援していただくようになり、おかげで当初は考えもしなかった多くのプラットホームで動作するようになりました。オープンソースの良さを実感しています。</p>
 
-<p>���Σ�ǯȾ�� Android �Ǥ��Ϥ�����Ƥ��ޤ����������ꤷ��ư���褦�ˤʤꡢ�ޤ� ONScripter ��ȤäƤ���������<a href="https://market.android.com/details?id=jp.cutlass.noesis01">NOeSIS -�����Ǥ���������ʪ��-</a>�����˹⤤ɾ�������Ƥ���褦�Ǥ����ؤ󤦤줷���Ǥ���</p>
+          <p>この１年半は Android 版に力を入れていましたが、安定して動作するようになり、また ONScripter を使っていただいた<a href="https://market.android.com/details?id=jp.cutlass.noesis01">NOeSIS -嘘を吐いた記憶の物語-</a>が非常に高い評価を得ているようでたいへんうれしいです。</p>
 
-<p>Android �Ǥϰ�����Ĥ����Τǡ������̤Υץ�åȥۡ�������˻�Ժ����򤷤Ƥ��ޤ���</p>
+          <p>Android 版は一段落ついたので、今は別のプラットホーム向けに試行錯誤をしています。</p>
 
-<p>�Х�����<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=223">������ץȤ��ɤޤ��˽�λ�����bus error��ȯ������</a>�פ򸵤ˡ����顼��ȯ�����ʤ��褦�˽������ޤ�����</p>
+          <p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=223">スクリプトを読まずに終了するとbus errorが発生する</a>」を元に、エラーが発生しないように修正しました。</p>
 
-<p>�Х�����<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=224">Android�ѤΥ���ѥ���Ǥ��ޤ���</a>�פ򸵤�Ĵ�٤Ƥߤ��Ȥ������ɤ����ǿ��� android-sdk-r16 ��Ȥäƥ���ѥ��뤹��ȡ������ѥ�����֤��� junit-4.*.jar ���ʤ������Ĥ��餺�˼��Ԥ���褦�Ǥ���<a href="http://dl.google.com/android/installer_r15-windows.exe">android-sdk-r15</a> �Ǥ���������ΤǤ�����򤪻Ȥ���������</p>
+          <p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=224">Android用のコンパイルできません</a>」を元に調べてみたところ、どうやら最新の android-sdk-r16 を使ってコンパイルすると、検索パス上に置いた junit-4.*.jar がなぜか見つからずに失敗するようです。<a href="http://dl.google.com/android/installer_r15-windows.exe">android-sdk-r15</a> では成功するのでこちらをお使い下さい。</p>
 
-</div>
+        </div>
 
-</div> <!-- diary -->
-</div> <!-- diary-container -->
+      </div> <!-- diary -->
+    </div> <!-- diary-container -->
 
 
-<div id="footer">
-Copyright (c) 1998-2012 Studio O.G.A. All rights reserved.
-</div> <!-- footer -->
+    <div id="footer">
+      Copyright (c) 1998-2012 Studio O.G.A. All rights reserved.
+    </div> <!-- footer -->
 
-</div> <!-- body -->
+  </div> <!-- body -->
 
 </body>
+
 </html>

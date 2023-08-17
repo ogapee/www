@@ -1,426 +1,428 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <HTML lang="ja">
+
 <HEAD>
-<META http-equiv="Content-Type" content="text/html; charset=EUC-JP">
-<META http-equiv="Content-Style-Type" content="text/css">
-<META name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-<TITLE> ONScripter ��ȯ���� </TITLE>
-<LINK rel="stylesheet" type="text/css" href="/ogapee.css">
+  <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <META http-equiv="Content-Style-Type" content="text/css">
+  <META name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <TITLE> ONScripter 開発日誌 </TITLE>
+  <LINK rel="stylesheet" type="text/css" href="/ogapee.css">
 </HEAD>
 
 <body>
 
-<div id="body">
+  <div id="body">
 
-<div id="header">
-<H1>ONScripter ��ȯ����</H1>
+    <div id="header">
+      <H1>ONScripter 開発日誌</H1>
 
-Since: Feb. 6, 2002<br>
-Last updated: Sep. 22, 2002
-</div> <!-- header -->
+      Since: Feb. 6, 2002<br>
+      Last updated: Sep. 22, 2002
+    </div> <!-- header -->
 
-<div id="toc-container">
+    <div id="toc-container">
 
-<h3>���γ�ȯ����</h3>
+      <h3>過去の開発日誌</h3>
 
-<div id="toc">
+      <div id="toc">
 
-<ul>
-  <li> 2002ǯ
-    <ul>
-      <li> <A HREF="onscripter_devel.2002_2.html"> 4��� 6��</A>
-      <li> <A HREF="onscripter_devel.2002_1.html"> 1��� 3��</A>
-    </ul>
-  <li> 2001ǯ
-    <ul>
-      <li> <A HREF="onscripter_devel.2001.html">12��</A>
-    </ul>
-</ul>
-</div> <!-- toc -->
-</div> <!-- toc-container -->
+        <ul>
+          <li> 2002年
+            <ul>
+              <li> <A HREF="onscripter_devel.2002_2.html"> 4月～ 6月</A>
+              <li> <A HREF="onscripter_devel.2002_1.html"> 1月～ 3月</A>
+            </ul>
+          <li> 2001年
+            <ul>
+              <li> <A HREF="onscripter_devel.2001.html">12月</A>
+            </ul>
+        </ul>
+      </div> <!-- toc -->
+    </div> <!-- toc-container -->
 
 
-<div id="diary-container">
-<div id="diary">
+    <div id="diary-container">
+      <div id="diary">
 
-<h2>2002ǯ7���9��</h2>
+        <h2>2002年7月～9月</h2>
 
-<div class="diary-day">
-<h3>9��22��</h3>
+        <div class="diary-day">
+          <h3>9月22日</h3>
 
-<P>���¦Ť���� patch �������� bgm, bgmonce ̿���������ޤ�����</P>
+          <P>αβεさんの patch を取り入れ bgm, bgmonce 命令を実装しました。</P>
 
-<P>���¦Ť���� patch �򻲹ͤˡ�selnum ̿���¹Ԥ�����˼���̿�������˿ʤ�ʤ��ä��Х���Ȥ�ޤ�����</P>
+          <P>αβεさんの patch を参考に、selnum 命令を実行した後に次の命令に正常に進めなかったバグをとりました。</P>
 
-<P>selectgosub �� selnum ̿���ľ��ˡ�: �Ǽ���̿���³�����ʤ��Х���Ȥ�ޤ�����</p>
+          <P>selectgosub や selnum 命令の直後に、: で次の命令を続けられないバグをとりました。</p>
 
-<P>���¦Ť���� patch �������졢savegame ̿��ǥ����ְ��֤� 1 token ����savegame �ΰ����ˤˤ���Ƥ����Х���ľ���ޤ�����</P>
+          <P>αβεさんの patch を取り入れ、savegame 命令でセーブ位置が 1 token 前（savegame の引数）にずれていたバグを直しました。</P>
 
-<P>�ʤ�ȡ�MAD �˼��ȿ���Ⱦʬ�ˤ��ƥǥ����ɤ��륪�ץ���󤬤���ޤ�����MP3 �� 44.1KHz ���Ѱդ����ǥХ����� 22.05 KHz �ǳ����Ƥ��Υ��ץ�����Ȥ��С����ڤ줬��ä�����ǽ����Ǥ����Ȥ����櫓�ǡ�Zaurus �Ķ��Ǥ� 22.05KHz ��ǥե���ȤȤ��ޤ����ѥå������򹹿����ޤ������ʤ���bitrate �� 64Kbps ������Ȥ��Ƥ⹽���ޤ���</P>
+          <P>なんと、MAD に周波数を半分にしてデコードするオプションがありました。MP3 は 44.1KHz で用意し、デバイスを 22.05 KHz で開いてこのオプションを使えば、音切れが解消される可能性大です。というわけで、Zaurus 環境では 22.05KHz をデフォルトとします。パッケージを更新しました。なお、bitrate は 64Kbps 等に落としても構いません。</P>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>9��19��</h3>
+        <div class="diary-day">
+          <h3>9月19日</h3>
 
-<P>SL-A300 �� MP3 �����ڤ��Ȥ����ɾ�����Ͱʾ�ǽФƤ���褦�ʤΤǡ��ɤ���� arm-linux-gcc �� libmad ����ݤˡ�StrongARM (SL-5500) �ˤϺ�Ŭ������Ƥ��뤬��XScale (SL-A300)�ˤϺ�Ŭ������Ƥ��ʤ������ɤ��Ǥ��Ƥ���褦�Ǥ������̤�����Τ��ɤ���ʬ����ޤ��󤬡�libmad ����ݤˤ����ؤκ�Ŭ���򤹤�褦�ˤ��ƥ���ѥ��뤷�ޤ����������륹�Υѥå������Τ߹������ޤ�����</P>
+          <P>SL-A300 で MP3 が途切れるという症状が二人以上で出ているようなので、どうやら arm-linux-gcc で libmad を作る際に、StrongARM (SL-5500) には最適化されているが、XScale (SL-A300)には最適化されていないコードを吐いているようです。効果があるのかどうか分かりませんが、libmad を作る際により一層の最適化をするようにしてコンパイルしました。ザウルスのパッケージのみ更新しました。</P>
 
-<P><A HREF="http://www.google.com/">Google</A>�� onscripter �򸡺������Ȥ��Υҥåȿ�����������ۤ��ޤ�����</P>
+          <P><A HREF="http://www.google.com/">Google</A>で onscripter を検索したときのヒット数が１００を越えました。</P>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>9��15��</h3>
+        <div class="diary-day">
+          <h3>9月15日</h3>
 
-<P>���¦Ť���� patch �������졢SDL_DEBUG=1 �ǥƥ��Ȥ��Ƥ���Ȥ��˥��顼��å�������Ф��ʤ��褦�ˡ�SDL_BlitSurface �����ˡ�ButtonLink::no_selected_surface �� NULL �����å��򤤤�ޤ�����</P>
+          <P>αβεさんの patch を取り入れ、SDL_DEBUG=1 でテストしているときにエラーメッセージを出さないように、SDL_BlitSurface の前に、ButtonLink::no_selected_surface の NULL チェックをいれました。</P>
 
-<P>���¦Ť���� patch �򻲹ͤˡ�"csp-1" �� "gosub*label" �Τ褦�ʥ�����ץȤ���Ǥ���褦�˽������ޤ�����'-' �ϡ�������򤷤Ƥ���¤�Ǥ� token ����Ƭ�ˤ����ФƤ��ʤ����ᡢ���Τ褦�˽������ޤ���</P>
+          <P>αβεさんの patch を参考に、"csp-1" や "gosub*label" のようなスクリプトを解釈できるように修正しました。'-' は、私の理解している限りでは token の先頭にしか出てこないため、このように処理します。</P>
 
-<P>1byte ʸ��ɽ���˴ؤ���Х��������ޤ�����</P>
+          <P>1byte 文字表示に関するバグを修正しました。</P>
 
-<P>NSA �ѤΥ��������֥���С����ǡ�-e ���ץ����� bmp �ڤ� wav �ե������ nbz ���̤���褦�˲��ɤ��ޤ����������Ԥ��ȡ����������֤ΰ��̤μ���򼨤��ե饰�� ONScripter �ȼ����ͤ����ꤷ�ޤ��������ȼ���ĥ�ˤĤ��Ƥϡ��ܲȤ����襢�������֤λ��ͤ��ĥ�����Ȥ��˥Хåƥ��󥰤����ǽ��������ޤ��������λ��Ϥ������򤹤�褦�˥���С������������ƥ���С��Ȥ��뤳�Ȥǲ��Ǥ��ޤ������ξ��Ǥ⡢�����֥ե��������ˤϰ��ڱƶ��Ϥ���ޤ��󡣤��Τ��ᡢZaurus �ǻ��Ѥ�������Ϥ��Υ��ץ������դ��ƥ���С��Ȥ��뤳�Ȥ򤪴��ᤷ�ޤ���wav �� bzip2 �ǰ��̤���Τǡ�wav ��¿�Ѥ��륲����ǤϤ��ʤꥢ�������Ф��������ʤ�ޤ����ǥ��åȤȤ��Ƥϡ�bzip2 �������Ԥ�����㴳�٤��ʤ�ޤ����������Ĥ��ʤ����٤Ǥ���</P>
+          <P>NSA 用のアーカイブコンバータで、-e オプションで bmp 及び wav ファイルを nbz 圧縮するように改良しました。これを行うと、アーカイブの圧縮の種類を示すフラグに ONScripter 独自の値を設定します。この独自拡張については、本家が将来アーカイブの仕様を拡張したときにバッティングする可能性がありますが、その時はそれを回避するようにコンバータを修正し、再コンバートすることで解決できます。その場合でも、セーブファイル等には一切影響はありません。そのため、Zaurus で使用される方はこのオプションを付けてコンバートすることをお勧めします。wav を bzip2 で圧縮するので、wav を多用するゲームではかなりアーカイバが小さくなります。デメリットとしては、bzip2 の復号を行うため若干遅くなりますが、気がつかない程度です。</P>
 
-<P>���������֥���С����ǡ��Ѵ�����ɬ�פΤʤ��ե������̵��̣��Ÿ�����Ƥ����Τ��������ޤ�����</P>
+          <P>アーカイブコンバータで、変換する必要のないファイルを無意味に展開していたのを抑制しました。</P>
 
-<P>���������֥���С����ǡ������٤�Х���˥��Ѵ����ѹ�����褦�˽������ޤ�����800x600 ��̤��Ȥ��ˤޤ��ˤʤ�ޤ���</P>
+          <P>アーカイブコンバータで、解像度をバイリニア変換で変更するように修正しました。800x600 を縮めるときにましになります。</P>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>9��14��</h3>
+        <div class="diary-day">
+          <h3>9月14日</h3>
 
-<P>SMPEG �Ǥϱ��դǤ��뤬 MAD �Ǥϱ��դǤ��ʤ� MP3 �ե����뤬����ޤ�������MP3 �� frame header �λ����� MAD �Υ��������դ���碌������������ޤ�����Emphasis �� 2(resereved) �����ꤵ��Ƥ���ȡ�MAD ��̵���� frame �Ȥ����Ƥ��Ƥ��ޤ��Τ������Ǥ�����0(none) �Ȥ��ƽ�����³�Ԥ���褦���ѹ����뤳�Ȥ�ľ��ޤ����������ϥ����륹�Υѥå������ΤߤǤ�������ǡ�BGM �� MP3������ �� WAV �ʥ�����Ǥⲻ�ڤ�ʤ��ڤ���ޤ���SL-5500 �ǳ�ǧ�ˡ�</P>
+          <P>SMPEG では演奏できるが MAD では演奏できない MP3 ファイルがありましたが、MP3 の frame header の資料と MAD のソースを付き合わせ原因を究明しました。Emphasis が 2(resereved) に設定されていると、MAD は無効な frame として弾いてしまうのが原因でした。0(none) として処理を続行するように変更することで直りました。更新はザウルスのパッケージのみです。これで、BGM が MP3、音声 が WAV なゲームでも音切れなく楽しめます（SL-5500 で確認）。</P>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>9��12��</h3>
+        <div class="diary-day">
+          <h3>9月12日</h3>
 
-<P>tateyoko ̿���������ޤ�����</P>
+          <P>tateyoko 命令を実装しました。</P>
 
-<P>getversion ̿������ͤ� 200 ���ѹ����ޤ�����</P>
+          <P>getversion 命令の戻値を 200 に変更しました。</P>
 
-<P>�����ɤ� clean up ���ޤ�����</P>
+          <P>コードを clean up しました。</P>
 
-<P>Intel(R) C++ Compiler 6.0 on Linux �ǥ���ѥ��뤷������ư��뤳�Ȥ��ǧ���ޤ�����</P>
+          <P>Intel(R) C++ Compiler 6.0 on Linux でコンパイルし、正常動作することを確認しました。</P>
 
-<P>SMPEG �Ǥϱ��դǤ��뤬 MAD �Ǥϱ��դǤ��ʤ� MP3 �ե����뤬����ޤ����ɤ�������ΤǤ��礦����</P>
+          <P>SMPEG では演奏できるが MAD では演奏できない MP3 ファイルがあります。どうしたものでしょうか。</P>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>9��11��</h3>
+        <div class="diary-day">
+          <h3>9月11日</h3>
 
-<P>���������֥���С��ȴ�Ϣ�ǿ����Զ�礬���ä��Τǽ������ޤ�����</P>
+          <P>アーカイブコンバート関連で色々不具合があったので修正しました。</P>
 
-<P>����˴�Ϣ���ơ�SPB ���̤β����ǡ�������ह��Ȥ��ˡ�PPM �ǤϤʤ������ BMP ���᤹�褦�ˤ��ޤ�����</P>
+          <P>それに関連して、SPB 圧縮の画像データを解凍するときに、PPM ではなく本来の BMP で戻すようにしました。</P>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>9��10��</h3>
+        <div class="diary-day">
+          <h3>9月10日</h3>
 
-<P>Zaurus �� 512M �� CF ��Ǽ�ޤ�ʤ�������򤹤뤿��ˡ�archive ��� jpeg �� bmp ���礭����Ⱦʬ�ˤ��륳��С�����񤭤ޤ�����������Υ�����ǳ�ǧ���Ƥ��ޤ�������С����λȤ����ϡ�<A HREF="onscripter.html#archive-compression">���������ְ��̤ˤĤ���</A>�򻲾Ȥ��Ƥ���������</P>
+          <P>Zaurus の 512M の CF に納まらないゲームをするために、archive 中の jpeg と bmp の大きさを半分にするコンバータを書きました。数種類のゲームで確認しています。コンバータの使い方は、<A HREF="onscripter.html#archive-compression">アーカイブ圧縮について</A>を参照してください。</P>
 
-<P>PDA �����ꤷ�ƥ���ѥ��뤷������С��Ⱥѥ��������֤���Ѥ�����Τ���ˡ�--disable-rescale ���ץ������ɲä��ޤ�����</P>
+          <P>PDA を設定してコンパイルし、コンバート済アーカイブを使用する場合のために、--disable-rescale オプションを追加しました。</P>
 
-<P>�����������������֤���ǲ����ե��������Ťι⤤������ϸ������Ǥ��ġġ�</P>
+          <P>しかし、アーカイブの中で音声ファイルの比重の高いゲームは厳しいです……。</P>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>9��9��</h3>
+        <div class="diary-day">
+          <h3>9月9日</h3>
 
-<P>kni ���󤫤� SL-A300 �Ǥ�ư�����򤤤������ޤ����������Υѥå������Ǥϡ�����ɽ���������ٲ�ž����Ȥ����Զ�礬���ꡢ������н褹�뽤����Ԥ�������������ư���Ƥ���褦�Ǥ����� SL-5500 ���㤦ľ����Ƴ������SL-5500 �Ǥ��פ�ʤ����Ȥ�ʬ���ä�®���ǥ�꡼���Ǥ���ä��Ƥ��ޤä���ɽ�������Ϸϣ����ٲ�ž��ǽ�פ�ۤܤ��Τޤ����褵���ޤ�����</P>
+          <P>kni さんから SL-A300 での動作報告をいただきました。以前のパッケージでは、画面表示が９０度回転するという不具合があり、それに対処する修正を行いこちらは正常に動いているようです。昔 SL-5500 を買う直前に導入し、SL-5500 では要らないことが分かって速攻でリリース版から消してしまった「表示・入力系９０度回転機能」をほぼそのまま復活させました。</P>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>9��6��</h3>
+        <div class="diary-day">
+          <h3>9月6日</h3>
 
-<P>effectcut ̿���������ޤ�����</P>
+          <P>effectcut 命令を実装しました。</P>
 
-<P>���¦Ť���� patch �������졢getcursor, getenter, useescspc ̿���������ޤ�����</P>
+          <P>αβεさんの patch を取り入れ、getcursor, getenter, useescspc 命令を実装しました。</P>
 
-<P>getenter �� useescspc ̿���̵���ˤ��� --force-button-shortcut ���ץ������ɲä��ޤ�����ONScripter �Ǥϡ��ޥ�������å��� return, space, esc �����˳���դ��Ƥ��뤿�ᡢgetenter �� useescspc ̿�᤬������ץȤ����ꤷ�Ƥ����硢���Ƥ����򥭡��ܡ��ɤΤߤ���Ԥ��ʤ��ʤ��ǽ��������ޤ�����Τ褦�����ʶ��ϥޥ�����Ȥ������ʤ��ʥ����ܡ��ɤȥޥ�����Ԥä����褿�ꤷ�����ʤ��˿ͤϡ����Υ��ץ�����ȤäƤ���������������������ʤ��ȤϤޤ��ʤ��Ȼפ��ޤ�����������ץ�¦�������Υ����򥲡���ʹԾ�ɬ�ܤ��ü����Ӥ˳���դ��Ƥ�����ϡ����Υ��ץ����򳰤��Ƥ���������</P>
+          <P>getenter と useescspc 命令を無効にする --force-button-shortcut オプションを追加しました。ONScripter では、マウスクリックを return, space, esc キーに割り付けているため、getenter と useescspc 命令がスクリプトで設定してある場合、全ての操作をキーボードのみから行えなくなる可能性があります。私のように普段極力マウスを使いたくない（キーボードとマウスを行ったり来たりしたくない）人は、このオプションを使ってください。ただし、そんなことはまずないと思いますが、スクリプト側で前記のキーをゲーム進行上必須の特殊用途に割り付けている場合は、このオプションを外してください。</P>
 
-<P>���¦Ť���� patch �򻲹ͤˡ���٥�˥����פ���ľ���ʸ�����ѿ��Υƥ�����ɽ��������Ȳ��˼��Ԥ���Х��������ޤ�����</P>
+          <P>αβεさんの patch を参考に、ラベルにジャンプした直後に文字列変数のテキスト表示があると解釈に失敗するバグを修正しました。</P>
 
-<P>setwindow ̿��ǥե���ȥ��������ѹ���ȿ�Ǥ���ʤ����Ȥ�����Х���Ȥ�ޤ�����</P>
+          <P>setwindow 命令でフォントサイズの変更が反映されないことがあるバグをとりました。</P>
 
-<P>exbtn ̿��ǥ��ץ饤�Ȥ�̵���λ��˻Ĥ�ΰ�����������Ƥ��ʤ��ä��Х���Ȥ�ޤ�����</P>
+          <P>exbtn 命令でスプライトが無効の時に残りの引数を処理していなかったバグをとりました。</P>
 
-<P>ONScripter �������������Ȥ��ˤ� save??.dat �� global.sav ����¾�Ȥ�Ʊ�����Ȥ��褦�ˡ�save??.dat ����¸����Ȥ������ global.sav ����¾����¸����褦�ˤ��ޤ�����</P>
+          <P>ONScripter が途中で落ちたときにも save??.dat と global.sav その他との同期がとれるように、save??.dat を保存するときに毎回 global.sav その他を保存するようにしました。</P>
 
-<P>�����ɤ� clean up ���ޤ�����</P>
+          <P>コードを clean up しました。</P>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>8��24��</h3>
+        <div class="diary-day">
+          <h3>8月24日</h3>
 
-<P>mayfifth ���󤫤�ΥХ����򸵤ˡ��ƥ�����������̤ǥ����֤򤹤�������Х���Ȥ�ޤ������Ƕᳺ�����륲����򤷤Ƥ��ʤ��ä��Τǡ��������Ť��ޤ���Ǥ�����</P>
+          <P>mayfifth さんからのバグ報告を元に、テキスト選択画面でセーブをすると落ちるバグをとりました。最近該当するゲームをしていなかったので、全然気づきませんでした。</P>
 
-<P>yamagu ���󤫤�ΥХ����򸵤ˡ�������ץ����̿��⤷���Ϥ��ΰ�������³�Υƥ����Ȥȥ��ڡ���̵����Ϣ³���Ƥ�����ˡ���³�Υƥ����Ȥ����Ԥΰ����Ȥ��Ʋ�ᤵ���Х���Ȥ�ޤ�����</P>
+          <P>yamagu さんからのバグ報告を元に、スクリプト中で命令もしくはその引数が後続のテキストとスペース無しで連続している場合に、後続のテキストが前者の一部として解釈されるバグをとりました。</P>
 
-<P>lsp, lsph ̿��Υ����������դ�ʸ��������˲�ᤵ��Ƥ��ʤ��Х���Ȥ�ޤ�����</P>
+          <P>lsp, lsph 命令のサイズ指定付き文字列が正常に解釈されていないバグをとりました。</P>
 
-<P>gettext ̿���������ޤ�����</P>
+          <P>gettext 命令を実装しました。</P>
 
-<P>gettab, getfunction ̿���������ޤ�����</P>
+          <P>gettab, getfunction 命令を実装しました。</P>
 
-<P>btntime2 ̿���Ȥꤢ���� btntime ̿���Ʊ����ư��Ȥ�褦�˼������ޤ������׽����Ǥ���</P>
+          <P>btntime2 命令をとりあえず btntime 命令と同じ挙動をとるように実装しました。要修正です。</P>
 
-<H4>20020824a</H4>
+          <H4>20020824a</H4>
 
-<P>���¦Ť���� patch �������졢TTF_RenderGlyph_Blended() ���֤��ͤ� NULL �ξ��������Х����н褷�ޤ�����</P>
+          <P>αβεさんの patch を取り入れ、TTF_RenderGlyph_Blended() の返り値が NULL の場合に落ちるバグに対処しました。</P>
 
-<P>�ѡ�������������bg black,1mov $1,"����������"�ס�bg black,1�����������פ��н褷�ޤ�����</P>
+          <P>パーサを修正し、「bg black,1mov $1,"あいうえお"」「bg black,1あいうえお」に対処しました。</P>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>8��21��</h3>
+        <div class="diary-day">
+          <h3>8月21日</h3>
 
-<P><A HREF="http://pc3.2ch.net/test/read.cgi/mobile/1020324591/899">��LINUX�ۥ����륹����Ϥ��ġ���SL5000��</A>�ˤ��ȡ�SL-A300 �Ǥ� SL-5500 ��Ʊ�� swap ���Ȥ���褦�Ǥ���</P>
+          <P><A HREF="http://pc3.2ch.net/test/read.cgi/mobile/1020324591/899">【LINUX】ザウルス国内はいつ？【SL5000】</A>によると、SL-A300 でも SL-5500 と同様 swap が使えるようです。</P>
 
-<P>���������륹�� swap 16MB �ˤ���˿�������ͷ��Ǥ����Ȥ����������ְ̤�����������ޤ�����������ˤ��Ȼפ��ޤ�����32MB ���餤��äƤ������ۤ����¿����⤷��ޤ���</P>
+          <P>昨日ザウルスで swap 16MB にして某ゲームを遊んでいたところ、１時間位して途中で凍りました。ゲームによると思いますが、32MB くらい取っておいたほうが安心かもしれません。</P>
 
-<P>���󤹤������ Solaris9 on SPARC �Ǥ�ư�����򤤤������ޤ�����</P>
+          <P>うんすいさんに Solaris9 on SPARC での動作報告をいただきました。</P>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>8��19��</h3>
+        <div class="diary-day">
+          <h3>8月19日</h3>
 
-<P>Zaurus (SL-5500) �� swap memory ���뤳�Ȥǥ�����­����ä���뤳�Ȥ�ȯ�����ޤ���������� Qtopia ��ǸǤޤ뤳�Ȥ��ʤ��ʤ�ޤ������Ȥ����櫓�ǡ����ͤΤʤ��ʤä� FB console �ѤΥѥå������ϸ�������ߤ��ޤ�������������<A HREF="http://more.sbc.co.jp/sl_j/faq/a300_faq.htm">SL-A300�˴ؤ���FAQ�Υڡ���</A>�ˤϡ�<BR>
-Q. SD�����ɤʤɳ��������SWAP�ΰ�Ȥ������Ѥ��뤳�Ȥϲ�ǽ�Ǥ��礦��?<BR>
-A. SWAP�ϥ��ݡ��Ȥ��Ƥ��ޤ���<BR>
-�Ȥ��뤿�ᡢSL-A300 �Ǥ����ܤʤΤ��⤷��ޤ���</P>
+          <P>Zaurus (SL-5500) で swap memory を作ることでメモリ不足が解消されることを発見しました。これで Qtopia 上で固まることがなくなりました。というわけで、価値のなくなった FB console 用のパッケージは公開を中止しました。しかし、<A HREF="http://more.sbc.co.jp/sl_j/faq/a300_faq.htm">SL-A300に関するFAQのページ</A>には、<BR>
+            Q. SDカードなど外部メモリをSWAP領域として利用することは可能でしょうか?<BR>
+            A. SWAPはサポートしていません。<BR>
+            とあるため、SL-A300 では駄目なのかもしれません。</P>
 
-<P>Zaurus �������ʤ褦�ˡ����硼�ȥ��åȥ����Ȥ��ơ��褯�Ȥ� s �� o ����������ȱ�����˳���դ��ޤ�����</P>
+          <P>Zaurus で便利なように、ショートカットキーとして、よく使う s と o キーを左矢印と右矢印に割り付けました。</P>
 
-<P>�ե���Ȥμ�갷����㴳�ѹ����ޤ�����</P>
+          <P>フォントの取り扱いを若干変更しました。</P>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>8��18��</h3>
+        <div class="diary-day">
+          <h3>8月18日</h3>
 
-<P>SMPEG �Ǥϡ������� MP3 �ե��������դǤ��������ξ����ճ��ϻ��˥ϥ󥰤��ޤ���48KHz �Ϥ����ܡ�MAD �ʤ�����ʤ��Τǡ�SMPEG �Ϥ��� MAD ��ɸ����Ѥ���٤��Ǥ��礦�������������ʤ��ޤ��뵤�Ϥ���ޤ��󤬡˾���Ū�ˤ� SMPEG ��Ȥä� MPEG ��ư�����������������Ȥ����ʤΤǡ��ɤ�������ΤǤ��礦����</P>
+          <P>SMPEG では、一部の MP3 ファイルを演奏できず、その場合演奏開始時にハングします。48KHz 系が駄目？MAD なら問題ないので、SMPEG はやめて MAD を標準採用するべきでしょうか。しかし、（あまりやる気はありませんが）将来的には SMPEG を使って MPEG の動画再生も実装したいところなので、どうしたものでしょうか。</P>
 
-<P>FB console on SL-5500 ��ư�����ȡ�Qtopia �Ķ���ư�����Τ���٤�ɬ�ץ����̤� 10MB �⾯�ʤ��ƺѤߤޤ���</P>
+          <P>FB console on SL-5500 で動かすと、Qtopia 環境で動かすのに比べて必要メモリ量が 10MB も少なくて済みます。</P>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>8��17��</h3>
+        <div class="diary-day">
+          <h3>8月17日</h3>
 
-<P>Zaurus (SL-5500) �Ѥ� FB ���󥽡����ư���Х��ʥ�ѥå�������������ޤ����������������ʤ�ư��ޤ�����Zaurus ��ư���˥��󥽡���˹ߤ��ɬ�פ����뤿�ᡢ�����餯�����ܡ��ɤΤʤ� SL-A300 �Ǥ�ư�������Ȥ��Ǥ��ʤ��Ȼפ��ޤ���</P>
+          <P>Zaurus (SL-5500) 用の FB コンソールで動作するバイナリパッケージを公開しました。こちらは問題なく動作しますが、Zaurus 起動時にコンソールに降りる必要があるため、おそらくキーボードのない SL-A300 では動かすことができないと思います。</P>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>8��16��</h3>
+        <div class="diary-day">
+          <h3>8月16日</h3>
 
-<P>SL-5500 �� Qtopia �夫��¹Ԥ��褦�Ȼ�Ժ������Ƥ��ޤ���������ޤǤϼ¹ԤǤ����ΤΡ����꤬���ʤ��ݤηٹ𥦥���ɥ����Ф褦�Ȥ���� ONScripter ���ϥ󥰤��Ƥ��ޤ��ޤ������ѥ����̤��礭���ʤ�ȥ���Ǥ���-qws ���ץ������դ��� Qtopia ������˼¹Ԥ���С�Qtopia �Υ�����­�ηٹ𥦥���ɥ����ФƤ�̵�뤷��³�ԤǤ���Τǡ������­��Ƥ��뤬�ٹ𥦥���ɥ��ȥǥåɥ��å����֤ˤʤäƥϥ󥰤��Ƥ���褦�Ǥ�������������ä��к���פ��Ĥ��ޤ��󡣥ϥ󥰤������⡼�ȥ������󤷤� kill ���뤷���ʤ��ΤǸ����Ǥϼ��Ѥˤʤ�ޤ��󡣤��ʤߤˡ�Qtopia ��Ω���夲�ʤ����֤� console ����Ω���夲�������ʤ�ư��ޤ���</P>
+          <P>SL-5500 で Qtopia 上から実行しようと試行錯誤していますが、途中までは実行できるものの、メモリが少ない旨の警告ウィンドウが出ようとすると ONScripter がハングしてしまいます。使用メモリ量が大きくなるとダメです。-qws オプションを付けて Qtopia と並列に実行すれば、Qtopia のメモリ不足の警告ウィンドウが出ても無視して続行できるので、メモリは足りているが警告ウィンドウとデッドロック状態になってハングしているようです。しかしちょっと対策を思いつきません。ハングしたらリモートログインして kill するしかないので現状では実用になりません。ちなみに、Qtopia を立ち上げない状態で console から立ち上げれば問題なく動作します。</P>
 
-<P>�Ȥꤢ������ONScripter ��ɬ�ץ���򾯤ʤ��������Ϥ�Ϥ�ޤ���</P>
+          <P>とりあえず、ONScripter の必要メモリを少なくする努力を始めます。</P>
 
-<P>̵�̤� select_surface ���ѻߤ��ޤ���������ˡ�ButtonLink �ˤ⤿����褦�ˤ��ޤ�����</P>
+          <P>無駄な select_surface を廃止しました。代わりに、ButtonLink にもたせるようにしました。</P>
 
-<P>SL-5500 �Ѥǡ�̵��̣�� smpeg �˥�󥯤��Ƥ����ΤǤ�ᡢ̵�̤�ʤ��� SDL_mixer ����ľ���ޤ�����</P>
+          <P>SL-5500 用で、無意味に smpeg にリンクしていたのでやめ、無駄を省いて SDL_mixer を作り直しました。</P>
 
-<P>Zaurus (SL-5500, SL-A300) �� Qtopia �Ķ���ư���Х��ʥ�ѥå�������������ޤ��������������嵭���̤긽���Ǥϥ�����­�Ǥ����ϥ󥰤���Τǡ��Ū�ʥ�꡼�����ȻפäƤ���������<A HREF="zaurus/index.html">SDL on Zaurus (SL-5500) �Υڡ���</A>�������������ɤǤ��ޤ�����������SL-A300 �Ǥ�̤���ڤʤΤǡ���Ƥߤ�����ư�����򤪴ꤤ���ޤ���</P>
+          <P>Zaurus (SL-5500, SL-A300) の Qtopia 環境で動作するバイナリパッケージを公開しました。ただし、上記の通り現状ではメモリ不足ですぐハングするので、試験的なリリースだと思ってください。<A HREF="zaurus/index.html">SDL on Zaurus (SL-5500) のページ</A>からダウンロードできます。ただし、SL-A300 では未検証なので、試してみた方は動作報告をお願いします。</P>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>8��2��</h3>
+        <div class="diary-day">
+          <h3>8月2日</h3>
 
-<P>vortex ���󤫤�ΥХ����򸵤ˡ�puttext ̿��ΰ������ parse �����ɽ�������������ʤ뤳�Ȥ�����Х��䡢puttext ̿�᤬���԰����ˤʤ�ʤ��Х��������ޤ�������������puttext ̿��ޤ��Ϥޤ��ޤ����������Ǥ�����갷��������Ū���Ѥ��ʤ��Ȥ��ᤫ�⤷��ޤ���</P>
+          <P>vortex さんからのバグ報告を元に、puttext 命令の引数を再 parse すると表示がおかしくなることがあるバグや、puttext 命令が改行扱いにならないバグを修正しました。しかし、puttext 命令まわりはまだまだおかしいです。取り扱い方を根本的に変えないとだめかもしれません。</P>
 
-<P>�����ɤ� clean up ���ޤ�����</P>
+          <P>コードを clean up しました。</P>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>7��28��</h3>
+        <div class="diary-day">
+          <h3>7月28日</h3>
 
-<P>blackbrd ���󤫤�ΥХ����򸵤ˡ������֥ե������ gosub ̿�������ҹ�¤����������Ǽ���Ƥ��ʤ��ä��Х���Ȥ�ޤ�����</P>
+          <P>blackbrd さんからのバグ報告を元に、セーブファイルに gosub 命令の入れ子構造を正しく格納していなかったバグをとりました。</P>
 
-<P>kidokuskip, kidokumode ̿���������ޤ�����</P>
+          <P>kidokuskip, kidokumode 命令を実装しました。</P>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>7��27��</h3>
+        <div class="diary-day">
+          <h3>7月27日</h3>
 
-<P>20020723 ���������ɤκݤˡ�ͽ�۰ʾ�˥���Х����Ƥ��ޤ�����experimental �����ս��񤤤Ƥ����٤��Ǥ������Ǥ����������������ꤷ�Ƥ����Ȼפ��ޤ���</P>
+          <P>20020723 の大幅改良の際に、予想以上にエンバグしていました。experimental と注意書を書いておくべきでした。ですが、そろそろ安定してきたと思います。</P>
 
-<P>vortex ���󤫤�ΥХ����򸵤ˡ�selgosub ̿�᤬��������ǽ���Ƥ��ʤ��Х��������ޤ�����</P>
+          <P>vortex さんからのバグ報告を元に、selgosub 命令が正しく機能していないバグを修正しました。</P>
 
-<P>readToken �򶯲����ޤ����������� &quot; ���⤤�Ƥ�����Ĥ����Ƥ��ʤ��˹Ե��ΰ������֤��б����ޤ�����</P>
+          <P>readToken を強化しました。行末で &quot; が浮いている（閉じられていない）行儀の悪い状態に対応しました。</P>
 
-<P>mp3 &quot;&quot; ���б����ޤ�����</P>
+          <P>mp3 &quot;&quot; に対応しました。</P>
 
-<P>select ̿��Σ����ܰʹߤǡ�ʸ���ѿ���ƥ�����ʸ�Ȥ��Ʋ�᤹��Х���ľ���ޤ�����</P>
+          <P>select 命令の２行目以降で、文字変数をテキスト文として解釈するバグを直しました。</P>
 
-<P>���Ԥ�ƥ����ȹԤȤ��ư���ʤ��褦�ˤ��ޤ�����</P>
+          <P>空行をテキスト行として扱わないようにしました。</P>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>7��26��</h3>
+        <div class="diary-day">
+          <h3>7月26日</h3>
 
-<P>���¦Ť���� patch �������졢autoclick ̿����˥������뤬�ä��ʤ��Х��������ޤ�����</P>
+          <P>αβεさんの patch を取り入れ、autoclick 命令時にカーソルが消えないバグを修正しました。</P>
 
-<P>autoclick ̿��ΰ�����������礭�����ˡ�����å��Ԥ��λ��Υ���å���̵���ˤʤ�褦�ˤ��ޤ�����</P>
+          <P>autoclick 命令の引数が０より大きい時に、クリック待ちの時のクリックが無効になるようにしました。</P>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>7��25��</h3>
+        <div class="diary-day">
+          <h3>7月25日</h3>
 
-<P>���¦Ť���� patch �򻲹ͤ� sentence_font �ƽ�������ν����ߥ���ľ���ޤ�����</P>
+          <P>αβεさんの patch を参考に sentence_font 再初期化時の修正ミスを直しました。</P>
 
-<P>Vusual C++ ��°�Υ���ѥ�����̤�褦�˼㴳�������ޤ�����</P>
+          <P>Vusual C++ 付属のコンパイラで通るように若干修正しました。</P>
 
-<P>puttext ���ü�ʸ��(�㤨�� _,/,@,\ �ʤ�)������Ǥ���褦�ˤ��ޤ�����</P>
+          <P>puttext で特殊文字(例えば _,/,@,\ など)を処理できるようにしました。</P>
 
-<P>textgosub ̿����ˡ�Ʊ���ԤǺǽ���ѿ������ꤷ���θ�ƥ����ȤȤ��ƻ��Ѥ���ȡ����꤬�ƥ����Ȥ����Τ�ȿ�Ǥ���ʤ��Х���Ȥ�ޤ�����20020723 ���ʳ��Ǽ��Ƥ��ޤ��������㡧mov $1,"����"@ mov $1,"�褤" ��$1��</P>
+          <P>textgosub 命令時に、同じ行で最初に変数を設定しその後テキストとして使用すると、設定がテキストに正確に反映されないバグをとりました。20020723 の段階で取れていました。（例：mov $1,"だめ"@ mov $1,"よい" は$1）</P>
 
-<P>readToken ���ޤ��ޤ�����Ƥ��ʤ����ᡢ�������٤ξ��ʤ���ʸ�ѥ�����ǤϿ�����ư���ۤʤ�ޤ���</P>
+          <P>readToken がまだまだ練れていないため、使用頻度の少ない構文パターンでは色々挙動が異なります。</P>
 
-<h4>20020725a</h4>
+          <h4>20020725a</h4>
 
-<P>puttext ̿��Ǿ嵭�ü�ʸ������Ѥ��Ƥ���ݤ˥ǡ�������¸�������ˡ���������¸���������Ԥ���褦�ˤ��ޤ�����</P>
+          <P>puttext 命令で上記特殊文字を使用している際にデータを保存した場合に、正しく保存と復元が行えるようにしました。</P>
 
-<h4>20020725b</h4>
+          <h4>20020725b</h4>
 
-<P>�����֥ե������ɤ߹��߸�ε�ư������Ǥʤ���ʬ��Ĵ�����ޤ�����</P>
+          <P>セーブファイル読み込み後の挙動が正常でない部分を調整しました。</P>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>7��24��</h3>
+        <div class="diary-day">
+          <h3>7月24日</h3>
 
-<P>�ޥ��������ɤ߹��ߤ˴ؤ���Х��������ޤ�����</P>
+          <P>マスク画像読み込みに関するバグ修正しました。</P>
 
-<P>ñ���ڤ�Ф��ΥХ��������ޤ�����</P>
+          <P>単語切り出しのバグ修正しました。</P>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>7��23��</h3>
+        <div class="diary-day">
+          <h3>7月23日</h3>
 
-<P>���¦Ť���� patch �������졢Ω�������ä��륿���ߥ󥰤�Ʃ���٤� 255 ���᤹�������ɲä��ޤ�����</P>
+          <P>αβεさんの patch を取り入れ、立ち絵が消えるタイミングで透過度を 255 に戻す処理を追加しました。</P>
 
-<P>���¦Ť���� patch �������� nsadir ̿���������ޤ�����</P>
+          <P>αβεさんの patch を取り入れ nsadir 命令を実装しました。</P>
 
-<P>���¦Ť���� patch �������� ofscpy ̿���������ޤ�����</P>
+          <P>αβεさんの patch を取り入れ ofscpy 命令を実装しました。</P>
 
-<P>���¦Ť���� patch �������졢ʸ���󥹥ץ饤���������ʸ����������ȿ�Ǥ���褦�˽������ޤ�����</P>
+          <P>αβεさんの patch を取り入れ、文字列スプライト定義時に文字サイズを反映するように修正しました。</P>
 
-<P>���¦Ť���� patch �򻲹ͤˡ�reset ̿����� sentence_font ����������褦�ˤ��ޤ�����</P>
+          <P>αβεさんの patch を参考に、reset 命令時に sentence_font を初期化するようにしました。</P>
 
-<P>���¦Ť���� patch �������졢bar, prnum ̿���ɽ�����֤˴ؤ��뽤�����ޤ�����</P>
+          <P>αβεさんの patch を取り入れ、bar, prnum 命令の表示位置に関する修正しました。</P>
 
-<P>�����������˽�ľ���ޤ��������ޤޤǤ���Ӥ��ơ�������򤹤��Ǥθ��ݤ��ΰ㤤�Ϥ���ޤ��󡣤�����̤������ʬ�򥪥ꥸ�ʥ��ź�ä����Ǽ������䤹���褦�ˡ�������ץ��ɤ߹��ߤ�ñ���ڤ�Ф�(parse)��ʬ�ν������Ѥ����������Ω�����Ƥ��ޤ����礭�ʰ㤤�ϡ�������ץ���� 2byte ������ԥ����ɤ� 1byte �Ȥ����ɤߤ��ࡦ��ñ�̤ǤϤʤ�ñ��ñ�̤��ɤ߹��ߵڤӲ���Ԥ������Ԥ�ñ��Ȥ��Ʋ�᤹�롦̵�̤ʺ��ɤ߹��򸺤餹����Ĺ��ʬ���롢�Ȥ��ä���̣�����ƤǤ���������Ƿ��Ƥ� textgosub ̿�����Ʊ���Ԥ��ѿ����꤬ɽ����ȿ�Ǥ���ʤ������, kidokuskip, puttext ̿��μ������ϲ��Ǥ������Ǥ���</P>
+          <P>コアを大幅に書き直しました。いままでと比較して、ゲームをする上での見掛けの違いはありません。ただ、未実装部分をオリジナルに添った形で実装しやすいように、スクリプト読み込みと単語切り出し(parse)部分の処理を変え、さらに独立させています。大きな違いは、スクリプト中で 2byte ある改行コードは 1byte として読みこむ・行単位ではなく単語単位で読み込み及び解釈を行う・改行を単語として解釈する・無駄な再読み込を減らす・冗長部分を削る、といった地味な内容ですが、これで懸案の textgosub 命令時の同じ行の変数設定が表示に反映されない問題と, kidokuskip, puttext 命令の実装等は解決できそうです。</P>
 
-<P>kidokuskip ̿��������Ǥ���</P>
+          <P>kidokuskip 命令を実装中です。</P>
 
-<h4>20020723a</h4>
+          <h4>20020723a</h4>
 
-<P>getreg ̿��κƼ����ߥ��������ޤ�����¾�ˤ⿧������Х����Ƥ��뤫�⤷��ޤ���</P>
+          <P>getreg 命令の再実装ミスを修正しました。他にも色々エンバグしているかもしれません。</P>
 
-<P>ñ���ڤ�Ф��ΥХ���Ȥ�ޤ�����</P>
+          <P>単語切り出しのバグをとりました。</P>
 
-<P>���ʤߤ��� beta �ǰʹߤǡ������θŤ������֥ե�������ɤ߹�����Ȥ��ˡ����������ȼ㴳���֤��줹�뤳�Ȥ�����ޤ�������ϡ���¸������꤬ɽ��ʸ�ιԤǤ��Ĥ�������ѿ�����Ѥ��Ƥ�����˵�����ޤ���������ʬ�θߴ�����̩���ݤĤΤ����ѤʤΤǡ��⤦���櫓�ʤ��ΤǤ��������ʤä��鱿�������ä��פäƤ������Ƥ���������������οʹԤ˱ƶ����뤳�ȤϤޤ��ʤ��Ȼפ��ޤ����� beta �ǰʹߤ���¸������ΤˤĤ��Ƥ�����פǤ���</P>
+          <P>ちなみに本 beta 版以降で、以前の古いセーブファイルを読み込んだときに、運が悪いと若干位置ずれすることがあります。これは、保存した場所が表示文の行でかつその中で変数を使用している場合に起こります。この部分の互換性を厳密に保つのは大変なので、もうしわけないのですがそうなったら運が悪かった思ってあきらめてください。ゲームの進行に影響することはまずないと思います。本 beta 版以降で保存したものについては大丈夫です。</P>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>7��21��</h3>
+        <div class="diary-day">
+          <h3>7月21日</h3>
 
-<P>���¦Ť���� patch �������졢tal ̿���Ƽ������ޤ�����20020712 �Ǥϸ��ڤ��դä����ᡢ���������� patch ��������Ƽ�����Ǥ��ޤ��ޤ��������餷�ޤ�����</P>
+          <P>αβεさんの patch を取り入れ、tal 命令を再実装しました。20020712 では検証を怠ったため、いただいた patch を改悪して取り込んでしまいました。失礼しました。</P>
 
-<P>������ץȤ��ɤ߹��ߡ������ʬ�������˽�ľ����Ǥ�����Ľ���䤯�餤�Ǥ����褦�䤯��˿������ϰ��̤�ͷ�٤����Ǥ�����������save �� load �Ϥޤ��Ǥ����Ȥ������������֥ե���������Ƥ��ѹ���ȼ���ߴ��������������ʬ�����դ����Ǥ���</P>
+          <P>スクリプトの読み込み＆解釈部分を大幅に書き直し中です。進捗８割くらいです。ようやく、某ゲームは一通り遊べそうです。ただし、save と load はまだです。というか、セーブファイルの内容の変更に伴い互換性を持たせる部分が手付かずです。</P>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>7��20��</h3>
+        <div class="diary-day">
+          <h3>7月20日</h3>
 
-<P>������ץȤ��ɤ߹��ߡ������ʬ�������˽�ľ����Ǥ�����Ľ���䤯�餤�Ǥ����褦�䤯��˿������Υ����ȥ���̤ޤǤϤ����褦�ˤʤ�ޤ�����</P>
+          <P>スクリプトの読み込み＆解釈部分を大幅に書き直し中です。進捗５割くらいです。ようやく、某ゲームのタイトル画面まではいくようになりました。</P>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>7��12��</h3>
+        <div class="diary-day">
+          <h3>7月12日</h3>
 
-<P>���ܤ��󤫤�ΥХ����򸵤ˡ�nsa ������������� nbz ���̤��줿�ե����뤬���ä��Ȥ������椵��ʤ��Х���Ȥ�ޤ��������ܤ��󡢤��������Ⱦ����󶡤��꤬�Ȥ��������ޤ�����</P>
+          <P>島本さんからのバグ報告を元に、nsa アーカイブ中に nbz 圧縮されたファイルがあったときに復号されないバグをとりました。島本さん、いろいろと情報提供ありがとうございました。</P>
 
-<P>���¦Ť���� patch �򻲹ͤ� tal ̿���������ޤ��������ͽ�(msp �ι�)�ˤ��ȡ�tal ̿����������֤��ѹ���������ǡ����ξ�Ǥϸ��̤ϸ���ʤ��褦�Ǥ���������̤���ڤǤ���</P>
+          <P>αβεさんの patch を参考に tal 命令を実装しました。仕様書(msp の項)によると、tal 命令は内部状態を変更するだけで、その場では効果は現れないようです。ただし未検証です。</P>
 
-<P>���¦Ť���� patch �������� setwindow2 ̿���������ޤ�����������̤���ڤǤ���</P>
+          <P>αβεさんの patch を取り入れ setwindow2 命令を実装しました。ただし未検証です。</P>
 
-<P>���¦Ť���� patch �򻲹ͤ� savefileexit ̿���������ޤ�����������̤���ڤǤ���</P>
+          <P>αβεさんの patch を参考に savefileexit 命令を実装しました。ただし未検証です。</P>
 
-<P>�Ƕ�Ϥ��ޤ긡�ڤ����֥��륿���Ȳ����Ƥ���Τǡ��������ʤȤ����Ϥɤ�ɤ��ͤù���Ǥ���������</P>
+          <P>最近はあまり検証せずブィルターと化しているので、おかしなところはどんどん突っ込んでください。</P>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>7��7��</h3>
+        <div class="diary-day">
+          <h3>7月7日</h3>
 
-<P>���¦Ť���� patch �������� (not)if ̿��ξ�Ｐ��ʸ������Ӥ��б����ޤ�����</P>
+          <P>αβεさんの patch を取り入れ (not)if 命令の条件式を文字列比較に対応しました。</P>
 
-<P>���¦Ť���� patch �������� reset ̿��˥��ץ饤�Ⱦõ�������ɲä��ޤ�����</P>
+          <P>αβεさんの patch を取り入れ reset 命令にスプライト消去処理を追加しました。</P>
 
-<P>���¦Ť���� patch �򻲹ͤˡ�ʸ�����ץ饤�Ȼ�������ο����� ":s/&lt;��&gt;,&lt;�⤵&gt;,&lt;�ֳ�&gt;;#&lt;��1&gt;...&lt;ʸ����&gt;" ���б����ޤ�����</P>
+          <P>αβεさんの patch を参考に、文字スプライト指定形式の新形式 ":s/&lt;幅&gt;,&lt;高さ&gt;,&lt;間隔&gt;;#&lt;色1&gt;...&lt;文字列&gt;" に対応しました。</P>
 
-<P>���¦Ť���� patch �������졢dwave, dwaveloop ̿�����̵���� DEFAULT_WAVE_CHANNEL(ch=1) �β�����ߤ��Ƥ����Х��������ޤ�����</P>
+          <P>αβεさんの patch を取り入れ、dwave, dwaveloop 命令時に無条件で DEFAULT_WAVE_CHANNEL(ch=1) の音を停止していたバグを修正しました。</P>
 
-<P>���¦Ť���� patch �������졢filelog ̿�᤬ sar, nsa ̿��������ˤ��������� filelog ��ݻ��Ǥ��ʤ��ä��Х��������ޤ����� </P>
+          <P>αβεさんの patch を取り入れ、filelog 命令が sar, nsa 命令よりも前にあると前回の filelog を維持できなかったバグを修正しました。 </P>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>7��6��</h3>
+        <div class="diary-day">
+          <h3>7月6日</h3>
 
-<P>���¦Ť���� patch �������� nega ̿���������ޤ�����</P>
+          <P>αβεさんの patch を取り入れ nega 命令を実装しました。</P>
 
-<P>���¦Ť���� patch �������졢�����֥ե�����ΥС�������ֹ�η׻�ˡ�����äƤ����Х���Ȥ�ޤ����������ܤ��Ǥ���</P>
+          <P>αβεさんの patch を取り入れ、セーブファイルのバージョン番号の計算法が誤っていたバグをとりました。おおぼけです。</P>
 
-<P>������ʸ���� A ���� F ��Ȥäƻ��ꤵ��Ƥ���������������ᤵ��ʤ��Х���Ȥ�ޤ�����</P>
+          <P>色が大文字の A から F を使って指定されていた場合に正しく解釈されないバグをとりました。</P>
 
-<P>ʸ������Υ���åԥ󥰤˴ؤ���Х���Ȥ�ޤ�����ʸ����ɽ������ʤ����Ȥ�����ޤ�����</P>
+          <P>文字描画のクリッピングに関するバグをとりました。文字が表示されないことがありました。</P>
 
-<P>exbtn ̿��� cell ���ֹ����ꤷ���Ȥ���ɽ������ʤ����Ȥ�����Х���Ȥ�ޤ�����</P>
+          <P>exbtn 命令で cell の番号を指定したときに表示されないことがあるバグをとりました。</P>
 
-<P>repaint ̿�ᡢ�⤷���� mouse �����ץ饤�ȥܥ���ξ���ư�����Ȥ��ˡ��ƥ����ȥ⡼�ɤǤʤ��Ȥ�ƥ����ȥ�����ɥ������褷�Ƥ����Х���Ȥ�ޤ������ҤȤ�����˿������β��ڴվ޲��̤ǵ�ư�����������ä��Τ�ľ�äƤ��ޤ���</P>
+          <P>repaint 命令、もしくは mouse がスプライトボタンの上を移動したときに、テキストモードでなくともテキストウィンドウを描画していたバグをとりました。ひとかたや某ゲームの音楽鑑賞画面で挙動がおかしかったのが直っています。</P>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>7��2��</h3>
+        <div class="diary-day">
+          <h3>7月2日</h3>
 
-<P>���¦Ť���� patch �������� clickvoice, selectvoice, menuselectvoice ̿���������ޤ��������¦Ť�����⥪�ꥸ�ʥ�μ������ǧ���Ƥ��ʤ����ᡢ����Τ�Τ�ư��ۤʤ뤫�⤷��ޤ���menuselectvoice ̿��� 5 ���ܤβ�(�Ǥ��ʤ����򤷤��Ȥ��ηٹ�)�ϡ�̤����ˡ�������ʤΤ���α�ȤʤäƤ��ޤ���</P>
+          <P>αβεさんの patch を取り入れ clickvoice, selectvoice, menuselectvoice 命令を実装しました。αβεさんも私もオリジナルの実装を確認していないため、本来のものと動作が異なるかもしれません。menuselectvoice 命令の 5 番目の音(できない操作をしたときの警告)は、未だ用法が不明なので保留となっています。</P>
 
-<P>�����ɤ� clean up ���ޤ�����</P>
+          <P>コードを clean up しました。</P>
 
-</div>
+        </div>
 
-</div> <!-- diary -->
-</div> <!-- diary-container -->
+      </div> <!-- diary -->
+    </div> <!-- diary-container -->
 
 
-<div id="footer">
-Copyright (c) 1998-2006 Studio O.G.A. All rights reserved.
-</div> <!-- footer -->
+    <div id="footer">
+      Copyright (c) 1998-2006 Studio O.G.A. All rights reserved.
+    </div> <!-- footer -->
 
-</div> <!-- body -->
+  </div> <!-- body -->
 
 </BODY>
+
 </HTML>

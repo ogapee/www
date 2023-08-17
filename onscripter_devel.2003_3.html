@@ -1,260 +1,262 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <HTML lang="ja">
+
 <HEAD>
-<META http-equiv="Content-Type" content="text/html; charset=EUC-JP">
-<META http-equiv="Content-Style-Type" content="text/css">
-<META name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-<TITLE> ONScripter ��ȯ���� </TITLE>
-<LINK rel="stylesheet" type="text/css" href="/ogapee.css">
+  <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <META http-equiv="Content-Style-Type" content="text/css">
+  <META name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <TITLE> ONScripter 開発日誌 </TITLE>
+  <LINK rel="stylesheet" type="text/css" href="/ogapee.css">
 </HEAD>
 
 <body>
 
-<div id="body">
+  <div id="body">
 
-<div id="header">
-<H1>ONScripter ��ȯ����</H1>
+    <div id="header">
+      <H1>ONScripter 開発日誌</H1>
 
-Since: Feb. 6, 2002<br>
-Last updated: Sep. 28, 2003
-</div> <!-- header -->
+      Since: Feb. 6, 2002<br>
+      Last updated: Sep. 28, 2003
+    </div> <!-- header -->
 
-<div id="toc-container">
+    <div id="toc-container">
 
-<h3>���γ�ȯ����</h3>
+      <h3>過去の開発日誌</h3>
 
-<div id="toc">
+      <div id="toc">
 
-<ul>
-  <li> 2003ǯ
-    <ul>
-      <li> <A HREF="onscripter_devel.2003_2.html"> 4��� 6��</A>
-      <li> <A HREF="onscripter_devel.2003_1.html"> 1��� 3��</A>
-    </ul>
-  <li> 2002ǯ
-    <ul>
-      <li> <A HREF="onscripter_devel.2002_4.html">10���12��</A>
-      <li> <A HREF="onscripter_devel.2002_3.html"> 7��� 9��</A>
-      <li> <A HREF="onscripter_devel.2002_2.html"> 4��� 6��</A>
-      <li> <A HREF="onscripter_devel.2002_1.html"> 1��� 3��</A>
-    </ul>
-  <li> 2001ǯ
-    <ul>
-      <li> <A HREF="onscripter_devel.2001.html">12��</A>
-    </ul>
-</ul>
-</div> <!-- toc -->
-</div> <!-- toc-container -->
+        <ul>
+          <li> 2003年
+            <ul>
+              <li> <A HREF="onscripter_devel.2003_2.html"> 4月～ 6月</A>
+              <li> <A HREF="onscripter_devel.2003_1.html"> 1月～ 3月</A>
+            </ul>
+          <li> 2002年
+            <ul>
+              <li> <A HREF="onscripter_devel.2002_4.html">10月～12月</A>
+              <li> <A HREF="onscripter_devel.2002_3.html"> 7月～ 9月</A>
+              <li> <A HREF="onscripter_devel.2002_2.html"> 4月～ 6月</A>
+              <li> <A HREF="onscripter_devel.2002_1.html"> 1月～ 3月</A>
+            </ul>
+          <li> 2001年
+            <ul>
+              <li> <A HREF="onscripter_devel.2001.html">12月</A>
+            </ul>
+        </ul>
+      </div> <!-- toc -->
+    </div> <!-- toc-container -->
 
 
-<div id="diary-container">
-<div id="diary">
+    <div id="diary-container">
+      <div id="diary">
 
-<h2>2003ǯ7���9��</h2>
+        <h2>2003年7月～9月</h2>
 
-<div class="diary-day">
-<h3>9��28��</h3>
+        <div class="diary-day">
+          <h3>9月28日</h3>
 
-<P> ns3 ��������ޤ�����nsaconv, nsadec �ˤ� -ns3 ���ץ������ɲä��ޤ�����</P>
+          <P> ns3 を実装しました。nsaconv, nsadec にも -ns3 オプションを追加しました。</P>
 
-<P>exbtn �ΰ�ư����(M)�ˤ����ơ���ư���ξ�������褷�Ƥ��ʤ��ä��Х��������ޤ�����</P>
+          <P>exbtn の移動指定(M)において、移動前の場所を再描画していなかったバグを修正しました。</P>
 
-<P>�������Ѵ��롼�����ʿ�경�����򰵽���ˤ�äƲ��Ѥˤ���ñ��ʿ�Ѥ��뤳�Ȥˤ��ޤ�����</P>
+          <P>解像度変換ルーチンの平滑化の幅を圧縮比によって可変にし、単純平均を取ることにしました。</P>
 
-<P> Ogg Vorbis ����Ѥ��ʤ����˥���ѥ��뤬�̤�ʤ��Х��������ޤ�����</P>
+          <P> Ogg Vorbis を使用しない場合にコンパイルが通らないバグを修正しました。</P>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>9��2��</h3>
+        <div class="diary-day">
+          <h3>9月2日</h3>
 
-<P><A HREF="http://www.tripod.co.jp/">tripod</A>��<A HREF="http://isweb.www.infoseek.co.jp/">isweb</A>�ȤΥ����ӥ������ȼ�����ᥤ��ڡ����� URL ��<A HREF="http://ogapee.at.infoseek.co.jp/onscripter.html">http://ogapee.at.infoseek.co.jp/onscripter.html</A>���ѹ��ˤʤ�ޤ�����ڡ����⣱����ޤǤϿ��ڡ����˥ե���ɤ���뤽���Ǥ�������󥯤�ĥ���Ƥ��������ѹ��򤪴ꤤ���ޤ���</P>
+          <P><A HREF="http://www.tripod.co.jp/">tripod</A>と<A HREF="http://isweb.www.infoseek.co.jp/">isweb</A>とのサービス統合に伴い、メインページの URL が<A HREF="http://ogapee.at.infoseek.co.jp/onscripter.html">http://ogapee.at.infoseek.co.jp/onscripter.html</A>に変更になります。旧ページも１２月までは新ページにフォワードされるそうですが、リンクを張られている方は変更をお願いします。</P>
 
-<P> wave �Ϥ�̿��ˤ����� Ogg Vorbis �����α��դ��б����ޤ������ǽ�������ǥ����ɤ��Ƥ�����դ��ޤ���SDL_mixer �Ǥ� Ogg Vorbis �������б����Ƥ��ޤ�����������Ȥ褯 BGM �˻��Ѥ���� MP3 ������Ʊ���˱��դǤ��ޤ��󡣤��Τ��ᡢSDL_mixer ��Ȥ鷺�����ǥǥ����ɤ���wave �������Ѵ����Ƥ��� SDL_mixer �� channel ���Ϥ��褦�ˤ��ޤ�����</P>
+          <P> wave 系の命令における Ogg Vorbis 形式の演奏に対応しました。最初に全部デコードしてから演奏します。SDL_mixer でも Ogg Vorbis 形式に対応していますが、これだとよく BGM に使用される MP3 形式と同時に演奏できません。そのため、SDL_mixer を使わず自前でデコードし、wave 形式に変換してから SDL_mixer の channel に渡すようにしました。</P>
 
-<P> nsaconv, sarconv �ˤ����ơ�jpeg �κư��̻��ˡ����β������������Ⱥư��̤˼��Ԥ��뤳�Ȥ���������н褷�ޤ������ư��̸�Υ��������Τ���ˡ��ʬ����ʤ��Τǡ�0x400 bytes ;�פ˥Хåե�����ݤ���褦�ˤ��ޤ�����</P>
+          <P> nsaconv, sarconv において、jpeg の再圧縮時に、元の画像が小さいと再圧縮に失敗することがある場合に対処しました。再圧縮後のサイズを知る方法が分からないので、0x400 bytes 余計にバッファを確保するようにしました。</P>
 
-<P> �����黻�������Ѥ��ʤ� Ogg Vorbis Codec <A HREF="http://xiph.org/ogg/vorbis/download/tremor_cvs_snapshot.tgz">tremor_cvs_snapshot.tgz</A> �����ä��Τǡ������륹�ǤϤ��������Ѥ��뤳�Ȥˤ��ޤ����������륹�ʳ��Ǥ⡢����򥤥󥹥ȡ��뤷�� Makefile ������ѹ�����Ф��������ѤǤ��ޤ����ޤ���onscripter-lib �ˤ�����ɲä��ޤ�����</P>
+          <P> 整数演算しか使用しない Ogg Vorbis Codec <A HREF="http://xiph.org/ogg/vorbis/download/tremor_cvs_snapshot.tgz">tremor_cvs_snapshot.tgz</A> があったので、ザウルスではこちらを使用することにしました。ザウルス以外でも、これをインストールして Makefile を一部変更すればこちらを使用できます。また、onscripter-lib にこれを追加しました。</P>
 
-<P> savescreenshot, savescreenshot2 ��������ޤ�������������ξ�Ԥΰ㤤��ʬ����ʤ��ä����������Ʊ���Ǥ����ʤ������߽�Ф��� BMP �ե����ޥåȤΤߤ��б����Ƥ��ޤ��������ȼ�������̥��������֤�Ȥ� --disable-rescale ����ꤷ�Ƥ��Ƥ⡢�ե����뤬�������������̵�����ˤϡ������ե�������ɤ߹��߻��˲������Ѵ�������ͤˤ��ޤ�����</P>
+          <P> savescreenshot, savescreenshot2 を実装しました。ただし、両者の違いが分からなかったため実装は同じです。なお、現在書出しは BMP フォーマットのみに対応しています。これに伴い、圧縮アーカイブを使い --disable-rescale を指定していても、ファイルがアーカイブ内に無い場合には、画像ファイルを読み込み時に解像度変換する仕様にしました。</P>
 
-<P>exbtn �ΰ�ư����(M)���б����ޤ�����</P>
+          <P>exbtn の移動指定(M)に対応しました。</P>
 
-<P>�����륹�ѥå������ǡ�VGA ɽ���ǰ��̥��������֤�Ȥ����Υ���������ɲä��ޤ������ܤ�����<A HREF="zaurus/index.html#Qtopia">ONScripter �� Qtopia �Ķ���ư����뤿��κ��</A>�򻲾Ȥ��Ƥ���������</P>
+          <P>ザウルスパッケージで、VGA 表示で圧縮アーカイブを使う場合のアイコンを追加しました。詳しくは<A HREF="zaurus/index.html#Qtopia">ONScripter を Qtopia 環境で動作させるための作業</A>を参照してください。</P>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>8��30��</h3>
+        <div class="diary-day">
+          <h3>8月30日</h3>
 
-<P>�����������������륹�� library �ѥå����� onscripter-lib_20030816_arm.ipk, onscripter-lib_20030829_arm.ipk �Ȥ�ˡ�20030704 ������ SDL ��ѥå������󥰤��Ƥ��ޤ���������ˡ�T-nagi ���󤫤�����Τ��ä� A300 �Ǥ��Զ����Ф��뽤����ְ�äƤ��ޤ���������� onscripter-lib_20030830_arm.ipk �ǡ�T-nagi ���󤫤��Զ�礬�������줿�Ȥ���������ĺ���Ƥ���Τǡ����٤���ľ�äƤ���Ϥ��Ǥ���</P>
+          <P>以前公開したザウルス用 library パッケージ onscripter-lib_20030816_arm.ipk, onscripter-lib_20030829_arm.ipk ともに、20030704 時点の SDL をパッケージングしていました。さらに、T-nagi さんから御報告のあった A300 での不具合に対する修正も間違っていました。今回の onscripter-lib_20030830_arm.ipk で、T-nagi さんから不具合が修正されたという御報告を頂いているので、今度こそ直っているはずです。</P>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>8��29��</h3>
+        <div class="diary-day">
+          <h3>8月29日</h3>
 
-<P>���ץ饤�Ȥ�����κݤˡ����ꤵ�줿�����ֹ椬���祻�����˼��ޤ�褦�˥���åפ���Ƥ��ʤ��ä��Х��������ޤ�����</P>
+          <P>スプライトの描画の際に、指定されたセル番号が最大セル数内に収まるようにクリップされていなかったバグを修正しました。</P>
 
-<P>exbtn �β�����(S)���б����ޤ�����</P>
+          <P>exbtn の音指定(S)に対応しました。</P>
 
-<P>blt �β������������Ѥ������Ѵ��롼����ΥХ��������ޤ������������ơ������ե���Ȥ�������礬����ޤ�����</P>
+          <P>blt の画像サイズが変わる場合の変換ルーチンのバグを修正しました。セグメンテーションフォルトで落ちる場合がありました。</P>
 
-<P>getinsert, getzxc ��������ޤ�����</P>
+          <P>getinsert, getzxc を実装しました。</P>
 
-<P>ʸ���󥹥ץ饤�Ȥǡ�����������ꥢ���˴ؤ��������б����ޤ��������������Τߤ�ȿ�Ǥ���ޤ���</P>
+          <P>文字列スプライトで、アンチエイリアスに関する指定に対応しました。ただし解釈のみで反映されません。</P>
 
-<P>getscreenshot ��������ޤ�����</P>
+          <P>getscreenshot を実装しました。</P>
 
-<P>gettext �ǲ��Ԥ�ޤ�ʤ��褦�˽������ޤ�����</P>
+          <P>gettext で改行を含めないように修正しました。</P>
 
-<P>�����륹�ѥ饤�֥��� onscripter-lib_20030816_arm.ipk �� SL-A300 ���Զ����н褷���Ĥ��Ǥ����ΤǤ������ɤ�����������Ƥ��ʤ��ä��褦�Ǥ����Ȥ����櫓�ǹ������ޤ�����������̤���ڤǤ���</P>
+          <P>ザウルス用ライブラリの onscripter-lib_20030816_arm.ipk で SL-A300 の不具合に対処したつもりでいたのですが、どうやら改善されていなかったようです。というわけで更新しました。ただし未検証です。</P>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>8��24��</h3>
+        <div class="diary-day">
+          <h3>8月24日</h3>
 
-<P>mousePressEvent �� keyPressEvent ���褿�Ȥ��ˡ�automode ��ʤ� automode ��λ����褦���ѹ����ޤ�����</P>
+          <P>mousePressEvent か keyPressEvent が来たときに、automode 中なら automode を終了するように変更しました。</P>
 
-<P>�ܥ���̿��˴ؤ��ơ��ܥ��󤬽ŤʤäƤ�����˸夫��������줿�ܥ��󤬾岼Ƚ��Ǿ�����褦�˽������ޤ�����</P>
+          <P>ボタン命令に関して、ボタンが重なっている場合に後から定義されたボタンが上下判定で上に来るように修正しました。</P>
 
-<h4>20030824a</h4>
+          <h4>20030824a</h4>
 
-<P>�ܥ���¤�ΤΥ�󥯥ꥹ�Ȥν����ȿž�������ᡢ���硼�ȥ��åȥ����ǤΥܥ����ư���ȿž���Ƥ��ޤä��Х��������ޤ�����</P>
+          <P>ボタン構造体のリンクリストの順序を反転したため、ショートカットキーでのボタン移動順も反転してしまったバグを修正しました。</P>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>8��23��</h3>
+        <div class="diary-day">
+          <h3>8月23日</h3>
 
-<P>���¦Ť��󤫤�ΥХ����򸵤ˡ�movl �������ѿ���������ͤ��Ǽ�Ǥ��ʤ��Х��������ޤ�����</P>
+          <P>αβεさんからのバグ報告を元に、movl で配列変数に正常に値を格納できないバグを修正しました。</P>
 
-<P>���ۥ⡼�ɻ��ˡ��طʤ�Ŭ�ڤ����褵��ʤ��Х��������ޤ�����</P>
+          <P>回想モード時に、背景が適切に描画されないバグを修正しました。</P>
 
-<P>getpage ��������ޤ�����</P>
+          <P>getpage を実装しました。</P>
 
-<P>mode_ext, automode, automode_time, menu_automode, isskip ��������ޤ�����</P>
+          <P>mode_ext, automode, automode_time, menu_automode, isskip を実装しました。</P>
 
-<P>btntime2 �������˼������ޤ�����</P>
+          <P>btntime2 を正規に実装しました。</P>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>8��19��</h3>
+        <div class="diary-day">
+          <h3>8月19日</h3>
 
-<P>AVIWrapper �����ޤ�ˤ�Ҥɤ��ä��Τǽ������ޤ����������ֺ������ޤ��ˤʤ�ޤ����������ޤ� Segmentation fault ������뤳�Ȥ�����ޤ����ä� MPEG1 �κ����ˡ�</P>
+          <P>AVIWrapper があまりにもひどかったので修正しました。だいぶ再生がましになりましたが、たまに Segmentation fault で落ちることがあります（特に MPEG1 の再生）。</P>
 
-<P>bar �β������������˴ؤ���Х��������ޤ�����</P>
+          <P>bar の画像生成処理に関するバグを修正しました。</P>
 
-<P>isfull ��������ޤ�����</P>
+          <P>isfull を実装しました。</P>
 
-<P>value ������б����ޤ�����value ����դ��Υ����ॹ����ץȤ˴ؤ��ơ����������ΥС������� ONScripter ����¸�����ե�����ϡ�����ʸ�� ONScripter �Ǥ�������ɤ߹���ޤ���ΤǤ����ղ����������ξ��ϡ�ONScripter ���񤭽Ф����ե�����������õ�Ƥ�����������äȤ⡢�������Ǥ� value ����դ��Υ�����ϤۤȤ�ɤʤ��Ȼפ��ޤ���</P>
+          <P>value 宣言に対応しました。value 宣言付きのゲームスクリプトに関して、これより前のバージョンの ONScripter で保存したファイルは、これ以後の ONScripter では正常に読み込めませんのでご注意下さい。その場合は、ONScripter が書き出したファイルを全部消去してください。もっとも、現時点では value 宣言付きのゲームはほとんどないと思います。</P>
 
-<P>define ����������˥�٥�ե�������ɤ߹���褦�˽������ޤ�����</P>
+          <P>define 節に飛ぶ前にラベルファイルを読み込むように修正しました。</P>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>8��16��</h3>
+        <div class="diary-day">
+          <h3>8月16日</h3>
 
-<P> T-nagi �����ꡢSL-A300 �ˤ����ƥ������륭���Ȳ��̾�ǤΥ��������ư����ȿ�Ф��Ȥ������򤤤������ޤ����Τǡ�<A HREF="zaurus/index.html#Package">Zaurus �Ѥ� SDL library </A>��<A HREF="zaurus/sl-devel.html#devel-20030816">����</A>���ޤ�����</P>
+          <P> T-nagi さんより、SL-A300 においてカーソルキーと画面上でのカーソルの動きが反対だという報告をいただきましたので、<A HREF="zaurus/index.html#Package">Zaurus 用の SDL library </A>を<A HREF="zaurus/sl-devel.html#devel-20030816">修正</A>しました。</P>
 
-<P> �嵭�Υ饤�֥��ѥå��������������뤿��Υ�����ץȤ�褯�����顢�ʤ�ȸŤ� SDL_mixer, SDL_image, SDL_ttf ��ѥå������󥰤���褦�ˤʤäƤ��ޤ������Ȥ����櫓�ǡ��ǿ��Υ饤�֥��������褦�˽������ޤ�����</P>
+          <P> 上記のライブラリパッケージを生成するためのスクリプトをよく見たら、なんと古い SDL_mixer, SDL_image, SDL_ttf をパッケージングするようになっていました。というわけで、最新のライブラリを入れるように修正しました。</P>
 
-<P> <S>Avifile for Linux on ARM ��ʤ�Ȥ�����������ѥ��뤷��<A HREF="http://wind.prohosting.com/ogapee/zaurus/libavifile-0.7_0.7-0.7.38_arm.ipk">libavifile-0.7_0.7-0.7.38_arm.ipk</A> ��������ޤ������ǡ�ONScripter �����Ȼפä��顢AVIWrapper �� YUV Overlay ����Ѥ���褦�˺�ä��Τǡ�Zaurus ��Ǥ�ɽ������ޤ���Ǥ����ġġ�YUV Overlay ���Ȥ��ʤ����ϡ����̤����褹��褦�ˤ��Τ����������뤫�⤷��ޤ��󡣷�ɡ���Υѥå�������ư���ǧ���Ƥ��ʤ��Τǡ����⤽��ư���Τ����ɤ����٤���ǽ���Ф�Τ������������Ǥ���</S>YUV Overlay �ϡ�hardware acceleration ���б����Ƥ��ʤ����Ǥ�ư���褦�Ǥ���ɽ������ʤ��Τϡ�ARM �Ѥ� Codec �������ʤ��Τ������Τ褦�Ǥ����Ȥ����櫓�ǡ�avifile ��Ȥä� Zaurus ��Ǻ�������ΤϤ������ޤ�����¾����ˡ�Ȥ���ñ��˻פ��Ĥ��Τϡ�MPlayer ��ҥץ������ǵ�ư���ƺ������뤳�ȤǤ���������ǤϤɤ������򤯤ʤ��ΤǤɤ�������Τ��װ���Ǥ���</P>
+          <P> <S>Avifile for Linux on ARM をなんとかクロスコンパイルし、<A HREF="http://wind.prohosting.com/ogapee/zaurus/libavifile-0.7_0.7-0.7.38_arm.ipk">libavifile-0.7_0.7-0.7.38_arm.ipk</A> を作成しました。で、ONScripter を試そうと思ったら、AVIWrapper は YUV Overlay を使用するように作ったので、Zaurus 上では表示されませんでした……。YUV Overlay が使えない場合は、普通に描画するようにそのうち修正するかもしれません。結局、上のパッケージは動作確認していないので、そもそも動くのか、どの程度の性能が出るのかは全く不明です。</S>YUV Overlay は、hardware acceleration が対応していない場合でも動作するようです。表示されないのは、ARM 用の Codec が全くないのが原因のようです。というわけで、avifile を使って Zaurus 上で再生するのはあきらめました。他の方法として単純に思いつくのは、MPlayer を子プロセスで起動して再生することですが、これではどうも面白くないのでどうしたものか思案中です。</P>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>8��15��</h3>
+        <div class="diary-day">
+          <h3>8月15日</h3>
 
-<P> ���ץ饤�ȤΥ���������Ĥξ��Ǥ⡢spbtn, exbtn �ˤ����ƥޥ������ܥ���ȽŤʤä��Ȥ��ˣ����ܤΥ��������˽����򤷤Ƥ����Х��������ޤ�����exbtn �ˤ��������褬���������ʤ��礬����ޤ�����</P>
+          <P> スプライトのセル数が１個の場合でも、spbtn, exbtn においてマウスがボタンと重なったときに２個目のセルを前提に処理をしていたバグを修正しました。exbtn において描画がおかしくなる場合がありました。</P>
 
-<P> ���ڤΥ롼�ױ��դ��Ǥ��ʤ��ʤäƤ����Х��������ޤ�����</P>
+          <P> 音楽のループ演奏ができなくなっていたバグを修正しました。</P>
 
-<P> lookbackbutton �������ʤ��ʤäƤ����Х��������ޤ�����</P>
+          <P> lookbackbutton が効かなくなっていたバグを修正しました。</P>
 
-<P> <A HREF="http://avifile.sourceforge.net/">avifile</A> library �����Ѥ��� avi ��������ޤ�����avifile-0.7-0.7.38 ��ư���ǧ���Ƥ���ޤ���avifile library �����ѤǤ��ʤ��Ķ��ˤ������ϡ�Makefile.Linux �򸫤ơ�USE_AVIFILE ��������������� AVIWrapper.o ���󥯤��ʤ��褦�ˤ��ƥ���ѥ��뤷�Ƥ���������avifile �˴ؤ��Ƥϡ�Web ��õ���Ƥ⥵��ץ�ץ�����ब���Ĥ��餺��SDL ����ư�褬ή����褦�ˤʤ�ޤǼ�ּ��ޤ�����ñ��� wrapper class �Ǥ��� AVIWrapper ���ꡢONScripter �������Ѥ���ȤȤ�ˡ������Ȥä�ñ��� player (simple_aviplay)��Ʊ�����ޤ�����SDL ������˴�ñ�� avi ������Ǥ���Τǡ����ͤˤ��Ƥ���������zaurus �Ǥ�ư�����Ȼפ��ޤ����������⤽�� avifile �� configure �� cross compile �Ķ����Ȥ���ʤ��̤�ʤ��Τǡ�������ϤȤꤢ������α���ޤ���Linux with X ��Ǥϡ������Ȳ���Ʊ�����������ɽ��������ΤΡ�avifile ������ aviplay ����Ӥ��Ƽ㴳������������Τǡ�AVIWrapper �ˤϤޤ���Ŭ����;�Ϥ����ꤽ���Ǥ���
-</P>
+          <P> <A HREF="http://avifile.sourceforge.net/">avifile</A> library を利用して avi を実装しました。avifile-0.7-0.7.38 で動作確認しております。avifile library が利用できない環境にいる方は、Makefile.Linux を見て、USE_AVIFILE を定義せず、かつ AVIWrapper.o をリンクしないようにしてコンパイルしてください。avifile に関しては、Web を探してもサンプルプログラムが見つからず、SDL から動画が流せるようになるまで手間取りました。単純な wrapper class である AVIWrapper を作り、ONScripter から利用するとともに、これを使った単純な player (simple_aviplay)を同梱しました。SDL 上で非常に簡単に avi を再生できるので、参考にしてください。zaurus でも動くかと思いましたが、そもそも avifile の configure が cross compile 環境だとすんなり通らないので、こちらはとりあえず保留します。Linux with X 上では、画像と音が同期して正常に表示されるものの、avifile 謹製の aviplay と比較して若干カクカクするので、AVIWrapper にはまだ最適化の余地がありそうです。
+          </P>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>8��11��</h3>
+        <div class="diary-day">
+          <h3>8月11日</h3>
 
-<P> exec_dll, getret, splitstring �����������ޤ�����dll ��¹Ԥ���櫓�ǤϤʤ����Ѱդ��� dll.txt �˵��Ҥ��Ƥ�������ͤ��ɤ߹��ߥ��åȤ��ޤ���registry.txt ��Ʊ�����ΤǤ���������� <A HREF="onscripter.html#dll">����</A>�򻲾Ȥ��Ƥ���������</P>
+          <P> exec_dll, getret, splitstring を暫定実装しました。dll を実行するわけではなく、用意した dll.txt に記述してある固定値を読み込みセットします。registry.txt と同じ要領です。使用例は <A HREF="onscripter.html#dll">ここ</A>を参照してください。</P>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>8��10��</h3>
+        <div class="diary-day">
+          <h3>8月10日</h3>
 
-<P>��٥��Ʊ���Ԥ�̿��⤷���ϥ����Ȥ����ä����ˡ����Υ�٥뤬�ؤ���֤β���������ܤȣ����ܤιԤ���ᤵ��ʤ��Х��������ޤ�����</P>
+          <P>ラベルと同じ行に命令もしくはコメントがあった場合に、そのラベルが指す区間の下から一番目と２番目の行が解釈されないバグを修正しました。</P>
 
-<P>exbtn �ˤ����ơ����ꥹ�ץ饤�Ȥ�����ʸ������Ǥ���Ѥ���Ƥ������ɽ�������������ʤ�Х��������ޤ�����</P>
+          <P>exbtn において、指定スプライトが制御文字列内でも使用されている場合に表示がおかしくなるバグを修正しました。</P>
 
-<P>maxkaisoupage ��������ޤ�����</P>
+          <P>maxkaisoupage を実装しました。</P>
 
-<P>�����ѥХåե��Ѥ˳��ݤ����ΰ賰�˥����������Ƥ��ޤ�����뤳�Ȥ�����Х��������ޤ�����</P>
+          <P>回想用バッファ用に確保した領域外にアクセスしてしまい落ちることがあるバグを修正しました。</P>
 
-<h4>20030810a</h4>
+          <h4>20030810a</h4>
 
-<P>Filelog �μ�갷���˴ؤ��ơ����������־���˴ޤ���Τ���������Ω�� ScirptHandler �˻������븽�ߤ������Ȥ����ä���ˤʤäƤ����ư�����������ä��Х��������ޤ�����</P>
+          <P>Filelog の取り扱いに関して、アーカイブ情報に含める昔の方式と独立に ScirptHandler に持たせる現在の方式とがごっちゃになっており挙動がおかしかったバグを修正しました。</P>
 
-<P>btnwait �ν�����֤Ǵ��˥������뤬�ܥ����ˤ���Ȥ��ˡ��ܥ���������ɽ������ʤ��Х��������ޤ�����</P>
+          <P>btnwait の初期状態で既にカーソルがボタン上にあるときに、ボタンが正しく表示されないバグを修正しました。</P>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>8��7��<span style="color:red">�����֥ե�����ΥС�����󥢥å�</span></h3>
+        <div class="diary-day">
+          <h3>8月7日<span style="color:red">セーブファイルのバージョンアップ</span></h3>
 
-<P>�����֥ե�����ΥС�������夲�ޤ��������� ONScripter ���������������֥ե�����ϰ����ΥС������� ONScripter �Ǥ��ɤ߹���ޤ��󡣵դϤǤ��ޤ���</P>
+          <P>セーブファイルのバージョンを上げました。この ONScripter で生成したセーブファイルは以前のバージョンの ONScripter では読み込めません。逆はできます。</P>
 
-<P>envdata �ե�������ɤ߽񤭤��б����ޤ�����</P>
+          <P>envdata ファイルの読み書きに対応しました。</P>
 
-<P>ɸ��� global variables ���ɤ߽񤭤���ե�����̾�� gloval.sav ���ѹ����ޤ��������줬��������ʤ����ϡ�global.sav ��õ���˹Ԥ��ޤ���</P>
+          <P>標準で global variables を読み書きするファイル名を gloval.sav に変更しました。これが見当たらない場合は、global.sav を探しに行きます。</P>
 
-<P>s1100089 ����� patch �򻲹ͤˡ�-v ���ץ���������˥С�������ɽ������褦�˽������ޤ�����</P>
+          <P>s1100089 さんの patch を参考に、-v オプション指定時にバージョンを表示するように修正しました。</P>
 
-<P>���ܤ����󤫤�ΥХ����򸵤ˡ�jpeg library �ѤΥ�����Хå��ؿ������ͤ������ޤ�����</P>
+          <P>えぼしさんからのバグ報告を元に、jpeg library 用のコールバック関数の戻値を修正しました。</P>
 
-<P>NScrflog.dat �ˤ����ơ�������������ν���˴ط��ʤ��������Τ߸��줿��˵�Ͽ����褦�ˤ����ޤ� filelog ���ɤ߹��ߤ�Ԥ��褦���ѹ����ޤ�����</P>
+          <P>NScrflog.dat において、アーカイブ内の順序に関係なく、画像のみ現れた順に記録するようにし、また filelog で読み込みを行うように変更しました。</P>
 
-<P>setwindow ���طʤ˲��������ꤵ�줿���ˡ����������ȹ⤵�����������äƤ��ʤ��ä��Х��������ޤ�����</P>
+          <P>setwindow で背景に画像が指定された場合に、画像の幅と高さを正しく扱っていなかったバグを修正しました。</P>
 
-<P>defaultfont �򲾼������ޤ������ºݤΥե���Ȥˤ�ȿ�Ǥ���ޤ���</P>
+          <P>defaultfont を仮実装しました。実際のフォントには反映されません。</P>
 
-<P>�ޥ�������ư�����٤˸��ߤΥޥ�����ɸ���Ǽ�����ѿ��򹹿�����褦�˽������ޤ������ޤ���btndown �ǥޥ��������������������Ƥ��ʤ��ä��Х��������ޤ�����</P>
+          <P>マウスが移動する度に現在のマウス座標を格納する変数を更新するように修正しました。また、btndown でマウス押下が正しく扱われていなかったバグを修正しました。</P>
 
-<P>��Ļ���֤Υ��ץ饤�ȥܥ��� btnwait ����ɽ������ʤ��Х��������ޤ�����</p>
+          <P>非可視状態のスプライトボタンが btnwait 時に表示されないバグを修正しました。</p>
 
-<P>s1100089 ���󤫤�ΥХ����򸵤ˡ�������������̤������ɽ������ʤ��Х��������ޤ�����</P>
+          <P>s1100089 さんからのバグ報告を元に、スクロール効果が正常に表示されないバグを修正しました。</P>
 
-<P>���ۻ��Υޥ����ۥ����������б����ޤ�����</P>
+          <P>回想時のマウスホイール操作に対応しました。</P>
 
-<P>����¾�������֤˴ؤ��뽤����¿������ޤ���</P>
+          <P>その他内部状態に関する修正が多数あります。</P>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>7��4��</h3>
+        <div class="diary-day">
+          <h3>7月4日</h3>
 
-<P>sarconv, nsaconv �ǡ��̾����줿�����λͶ��Υԥ������ͤ����̾����λͶ����ͤ��ݤĤ褦�˽������ޤ�����Ʃ����꤬���ޤ�ȿ�Ǥ���ʤ���礬����ޤ�����</P>
+          <P>sarconv, nsaconv で、縮小された画像の四隅のピクセル値が、縮小前の四隅の値を保つように修正しました。透過指定がうまく反映されない場合がありました。</P>
 
-<P>�����ˤ����ꤷ���ѥå�����������ξ������Ǥ����������Τǡ�����˴�Ť���<A HREF="zaurus/sl-devel.html#devel-20030704"> zaurus �ǤΥ饤�֥��ѥå������򹹿�</A>���ޤ��������ν����˹�碌�ơ�zaurus �Ǥ� ONScripter ��ư����Ȥ��ˡ�SDL_DSP_NFRAGMENTS �� 18 �����ꤹ��褦�˽������ޤ�����</P>
+          <P>阿川さんにお送りしたパッチを一部修正の上取り込んでいただいたので、それに基づいて<A HREF="zaurus/sl-devel.html#devel-20030704"> zaurus 版のライブラリパッケージを更新</A>しました。その修正に合わせて、zaurus 版の ONScripter を起動するときに、SDL_DSP_NFRAGMENTS を 18 に設定するように修正しました。</P>
 
-</div>
+        </div>
 
-</div> <!-- diary -->
-</div> <!-- diary-container -->
+      </div> <!-- diary -->
+    </div> <!-- diary-container -->
 
 
-<div id="footer">
-Copyright (c) 1998-2006 Studio O.G.A. All rights reserved.
-</div> <!-- footer -->
+    <div id="footer">
+      Copyright (c) 1998-2006 Studio O.G.A. All rights reserved.
+    </div> <!-- footer -->
 
-</div> <!-- body -->
+  </div> <!-- body -->
 
 </BODY>
+
 </HTML>

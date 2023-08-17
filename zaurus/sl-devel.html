@@ -1,72 +1,73 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html lang="ja">
+
 <HEAD>
-<META http-equiv="Content-Type" content="text/html; charset=EUC-JP">
-<META http-equiv="Content-Style-Type" content="text/css">
-<META name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-<TITLE> SDL on Zaurus ��ȯ�Ķ� </TITLE>
-<LINK rel="stylesheet" type="text/css" href="/ogapee.css">
+  <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <META http-equiv="Content-Style-Type" content="text/css">
+  <META name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <TITLE> SDL on Zaurus 開発環境 </TITLE>
+  <LINK rel="stylesheet" type="text/css" href="/ogapee.css">
 </HEAD>
 
 <body>
 
-<div id="body">
+  <div id="body">
 
-<div id="header">
-<H1> SDL on Zaurus ��ȯ�Ķ� </H1>
+    <div id="header">
+      <H1> SDL on Zaurus 開発環境 </H1>
 
-Since: Dec. 14, 2002<br>
-Last updated: Jan. 6, 2011 (SDL_image-1.2.10, SDL_mixer-1.2.11, libpng-1.4.5 �˹���)<br>
-</div> <!-- header -->
+      Since: Dec. 14, 2002<br>
+      Last updated: Jan. 6, 2011 (SDL_image-1.2.10, SDL_mixer-1.2.11, libpng-1.4.5 に更新)<br>
+    </div> <!-- header -->
 
-<div id="toc-container">
+    <div id="toc-container">
 
-<h3>�ܼ�</h3>
+      <h3>目次</h3>
 
-<div id="toc">
+      <div id="toc">
 
-<ul>
-  <li> <A HREF="#environment">��ȯ�Ķ���Ƴ��</A>
-  <li> <A HREF="#SDL">SDL��Ƴ��</A>
-    <ul>
-      <li> <A HREF="#SDL-1.2.5">SDL-1.2.5</A>
-      <li> <A HREF="#libjpeg-6b">libjpeg 6b</A>
-      <li> <A HREF="#zlib-1.2.3">zlib-1.2.3</A>
-      <li> <A HREF="#libpng-1.4.5">libpng-1.4.5</A>
-      <li> <A HREF="#SDL_image-1.2.10">SDL_image-1.2.10</A>
-      <li> <A HREF="#SDL_mixer-1.2.11">SDL_mixer-1.2.11</A>
-      <li> <A HREF="#bzip2-1.0.4">bzip2-1.0.4</A>
-      <li> <A HREF="#freetype-2.1.10">freetype-2.1.10</A>
-      <li> <A HREF="#SDL_ttf-2.0.9">SDL_ttf-2.0.9</A>
-      <li> <A HREF="#mad-0.14.2b">mad-0.14.2b</A>
-      <li> <A HREF="#ivorbis">Tremor Vorbis I Stream 20020517: 1.0.2</A><font color=red>(updated in Sep. 2, 2003)</font>
-    </ul>
-  <li> <A HREF="index.html">���</A>
-</ul>
+        <ul>
+          <li> <A HREF="#environment">開発環境の導入</A>
+          <li> <A HREF="#SDL">SDLの導入</A>
+            <ul>
+              <li> <A HREF="#SDL-1.2.5">SDL-1.2.5</A>
+              <li> <A HREF="#libjpeg-6b">libjpeg 6b</A>
+              <li> <A HREF="#zlib-1.2.3">zlib-1.2.3</A>
+              <li> <A HREF="#libpng-1.4.5">libpng-1.4.5</A>
+              <li> <A HREF="#SDL_image-1.2.10">SDL_image-1.2.10</A>
+              <li> <A HREF="#SDL_mixer-1.2.11">SDL_mixer-1.2.11</A>
+              <li> <A HREF="#bzip2-1.0.4">bzip2-1.0.4</A>
+              <li> <A HREF="#freetype-2.1.10">freetype-2.1.10</A>
+              <li> <A HREF="#SDL_ttf-2.0.9">SDL_ttf-2.0.9</A>
+              <li> <A HREF="#mad-0.14.2b">mad-0.14.2b</A>
+              <li> <A HREF="#ivorbis">Tremor Vorbis I Stream 20020517: 1.0.2</A>
+                <font color=red>(updated in Sep. 2, 2003)</font>
+            </ul>
+          <li> <A HREF="index.html">戻る</A>
+        </ul>
 
-</div> <!-- toc -->
-</div> <!-- toc-container -->
+      </div> <!-- toc -->
+    </div> <!-- toc-container -->
 
 
-<div id="main-container">
-<div id="main">
+    <div id="main-container">
+      <div id="main">
 
-<div class="content">
-<h2 id="environment">��ȯ�Ķ���Ƴ��</h2>
+        <div class="content">
+          <h2 id="environment">開発環境の導入</h2>
 
-<p>Linux (Debian/sid)�ޥ���ˡ�<A
-HREF="http://more.sbc.co.jp/sl_j/sl_top.asp">�����륹��ȢPro</A>��ꡢ
-�����Υѥå����������������ɤ���alien�򤫤��Ƥǥ��󥹥ȡ��롣</p>
+          <p>Linux (Debian/sid)マシンに、<A HREF="http://more.sbc.co.jp/sl_j/sl_top.asp">ザウルス宝箱Pro</A>より、
+            下記のパッケージをダウンロードし、alienをかけてでインストール。</p>
 
-<ul>
-  <li> gcc-cross-sa1100-2.95.2-0.i386.rpm
-  <li> linux-headers-arm-sa1100-2.4.6-3.i386.rpm
-  <li> glibc-arm-2.2.2-0.i386.rpm
-  <li> qtopia-free-1.5.0-1.i386.rpm
-  <li> binutils-cross-arm-2.11.2-0.i386.rpm
-</ul>
+          <ul>
+            <li> gcc-cross-sa1100-2.95.2-0.i386.rpm
+            <li> linux-headers-arm-sa1100-2.4.6-3.i386.rpm
+            <li> glibc-arm-2.2.2-0.i386.rpm
+            <li> qtopia-free-1.5.0-1.i386.rpm
+            <li> binutils-cross-arm-2.11.2-0.i386.rpm
+          </ul>
 
-<pre>
+          <pre>
 dev-arm-qpe.sh:
 setenv CROSSCOMPILE /opt/Embedix/tools
 setenv QPEDIR /opt/Qtopia/sharp
@@ -78,168 +79,160 @@ setenv CC arm-linux-gcc
 setenv CXX arm-linux-g++
 echo "Altered environment for Sharp Zaurus SL-5000D Development ARM"
 </pre>
-</div> <!-- content -->
+        </div> <!-- content -->
 
 
-<div class="content">
-<h2 id="SDL">SDL��Ƴ��</h2>
+        <div class="content">
+          <h2 id="SDL">SDLの導入</h2>
 
-<div class="sub-content">
-<h3 id="SDL-1.2.5">SDL-1.2.5</h3>
+          <div class="sub-content">
+            <h3 id="SDL-1.2.5">SDL-1.2.5</h3>
 
-<p><A HREF="http://www.libsdl.org/">SDL�ܲ�</A>��ꡢSDL-1.2.5.tar.gz�����������ɡ�</p>
+            <p><A HREF="http://www.libsdl.org/">SDL本家</A>より、SDL-1.2.5.tar.gzをダウンロード。</p>
 
-<h4 id="devel-20031201">20031201</h4>
-<h4 id="devel-20030830">20030830</h4>
-<h4 id="devel-20030816">20030816</h4>
+            <h4 id="devel-20031201">20031201</h4>
+            <h4 id="devel-20030830">20030830</h4>
+            <h4 id="devel-20030816">20030816</h4>
 
-<P>T-nagi �����ꡢSL-A300 �ˤ����ƥ������륭���Ȳ��̾�ǤΥ��������
-ư����ȿ�Ф��Ȥ������򤤤������ޤ����Τǡ�������ܤ��ޤ�����<s>�ѥ�
-����<A href="SDL-1.2.5-k5.diff">SDL-1.2.5-k5.diff</A>�Ǥ���</s>�ѥå�
-���ְ�äƤ��ޤ������ѥå���<A
-href="SDL-1.2.5-k5.diff">SDL-1.2.5-k6.diff</A>�Ǥ��������Υѥ�
-��<s><A
-href="http://www.self-core.org/~kaoru-k/pub/libsdl_1.2.5-slzaurus20030704_arm.diff">libsdl_1.2.5-slzaurus20030704_arm.diff</A></s><A
-href="libsdl_1.2.5-slzaurus20031201_arm.diff">libsdl_1.2.5-slzaurus20031201_arm.diff</A>
-�򤢤Ƥ� SDL-1.2.5 ���Ф��Ƥ��Ƥޤ������Ƥϰʲ���1���Ǥ���
-(2003.08.16)(2003.08.30 ����)(2003.12.1 �����ο������ѥå����ɽ�)</P>
+            <P>T-nagi さんより、SL-A300 においてカーソルキーと画面上でのカーソルの
+              動きが反対だという報告をいただきましたので、修正を施しました。<s>パッ
+                チは<A href="SDL-1.2.5-k5.diff">SDL-1.2.5-k5.diff</A>です。</s>パッチ
+              が間違っていました。パッチは<A href="SDL-1.2.5-k5.diff">SDL-1.2.5-k6.diff</A>です。阿川さんのパッ
+              チ<s><A href="http://www.self-core.org/~kaoru-k/pub/libsdl_1.2.5-slzaurus20030704_arm.diff">libsdl_1.2.5-slzaurus20030704_arm.diff</A></s><A href="libsdl_1.2.5-slzaurus20031201_arm.diff">libsdl_1.2.5-slzaurus20031201_arm.diff</A>
+              をあてた SDL-1.2.5 に対してあてます。内容は以下の1点です。
+              (2003.08.16)(2003.08.30 修正)(2003.12.1 阿川さんの新しいパッチに追従)</P>
 
-<ul>
+            <ul>
 
-<li>���郎 SL-A300 �ξ��ˡ�sdlRotation = 3 �����ꤹ�롣
+              <li>機種が SL-A300 の場合に、sdlRotation = 3 を設定する。
 
-</ul>
+            </ul>
 
 
-<h4 id="devel-20030704">20030704</h4>
+            <h4 id="devel-20030704">20030704</h4>
 
-<P>�����ˤ����ꤷ���ѥå�<A
-href="SDL-1.2.5-k4.diff">SDL-1.2.5-k4.diff</A>�Τ��������ڤ��äΤ���
-�˥Хåե��Υ����������䤹�����ˤĤ��Ƥϡ��ꥢ�륿�������ι⤤�������
-���ٱ䤬�����礭���ʤ�ʣ������ˤȤΤ��Ȥǡ��Ķ��ѿ� 
-SDL_DSP_NFRAGMENTS �����ꤵ�줤�����ˡ����ο���Хåե����Ȥ���Ȥ�
-�����ǰ��������ǽ������Ƥ��������ޤ�����ONScripter �ʳ��� SDL ���
-�Ѥ��Ƥ��ʤ��ä��ΤǤ����ޤ��ٱ䤬�礭���ȤϻפäƤ���ޤ���Ǥ�������
-�Τ��ˤ��η��ν������ɤ��Ȼפ��ޤ���</p>
+            <P>阿川さんにお送りしたパッチ<A href="SDL-1.2.5-k4.diff">SDL-1.2.5-k4.diff</A>のうち、音切れ解消のため
+              にバッファのサイズを増やす修正については、リアルタイム性の高いゲームで
+              は遅延が非常に大きくなる（１秒程）とのことで、環境変数
+              SDL_DSP_NFRAGMENTS が設定されいた場合に、その数をバッファ数とするとい
+              う形で阿川さんの方で修正していただきました。ONScripter 以外に SDL を使
+              用していなかったのでそこまで遅延が大きいとは思っておりませんでしたが、
+              確かにこの形の修正が良いと思います。</p>
 
-<p>�⤦�����ν����Ϥ��Τޤ޼�����Ǥ����������Τǡ����ΰ����Υѥå�
-<A
-href="http://www.self-core.org/~kaoru-k/pub/libsdl_1.2.5-slzaurus20030704_arm.diff">libsdl_1.2.5-slzaurus20030704_arm.diff</A>
-�򤢤Ƥ���Τ˺�����������Τ򡢿����˥饤�֥��ѥå������Ȥ��Ƹ�����
-�ޤ�����libSDL �ˤĤ��Ƥϡ������θ�������Ƥ����Τ������ΤϤ���
-����</p>
-
-
-<h4>20030629</h4>
-
-<P>�ʲ��ϸŤ�����Ǥ���SDL-1.2.5 �˴ط�����ʲ��Υѥå��Ϥ��Ƥ�ɬ�פ�
-����ޤ���</P>
-
-<P>SL-C750�ˤ����ơ�VGA,QVGA������ˤ����Ƥ⥹�����饹�κ�ɸ�Ȳ��̤�ɽ
-����180�٤���롦MP3���դˤ����Ʋ��ڤ줬������Ȥ������򤤤���������
-�ᡢ�����ѥå�<A href="SDL-1.2.5-k4.diff">SDL-1.2.5-k4.diff</A>���
-�ޤ����������Υѥå�<A
-href="http://www.self-core.org/~kaoru-k/pub/libsdl_1.2.5-slzaurus20030623_arm.diff">libsdl_1.2.5-slzaurus20030623_arm.diff</A>
-�򤢤Ƥ� SDL-1.2.5 ���Ф��Ƥ��Ƥޤ������Ƥϰʲ���2���Ǥ���</P>
-
-<ul>
-
-<li>���郎SL-C750, SL-C760�Ǥ�����ˡ�VGA,QVGA�ǲ��̤ȥ������饹����
-��180�٤��������������ޤ�����(SDL_sysvideo.cc)
-
-<li>SL-C750 �Ǥⲻ�ڤ줬������Ȥ������ȤʤΤǡ�SL-A300 �ǤΤ�ͭ���ˤʤ�
-�Ƥ������ڤ��äΤ���ΥХåե��Υ����������䤹���������Ƥε���ˤ�
-���ƹԤ��褦�ˤ��ޤ�����(SDL_dspaudio.c)
-
-</ul>
+            <p>もう一点の修正はそのまま取り込んでいただいたので、この阿川さんのパッチ
+              <A href="http://www.self-core.org/~kaoru-k/pub/libsdl_1.2.5-slzaurus20030704_arm.diff">libsdl_1.2.5-slzaurus20030704_arm.diff</A>
+              をあてたものに差し換えたものを、新たにライブラリパッケージとして公開し
+              ました。libSDL については、阿川さんの公開されているものと等価のはずで
+              す。
+            </p>
 
 
-<h4>20030622</h4>
+            <h4>20030629</h4>
 
-<P>�ʲ�����ͳ�ˤ�ꡢ����ϰ����Υѥå���١����ˤ��ޤ���</P>
+            <P>以下は古い情報です。SDL-1.2.5 に関係する以下のパッチはあてる必要が
+              ありません。</P>
 
-<ul>
-<li> ���ܤ� Linux Zaurus �ˤ����Ƥϡ�<A
-href="http://www.self-core.org/~kaoru-k/wiki/LibSdlOnLinuxZaurus.html">
-����󤬥ѥå������ƤƸ�������Ƥ��� SDL �ѥå�����</A>����SDL �Ȥ�
-�Ƥۤ�ɸ��ȤʤäƤ��ꡢ����ȸߴ����Τʤ��̤� SDL �ѥå�������Ȥ���
-�桼�������ء�
+            <P>SL-C750において、VGA,QVGAいずれにおいてもスタイラスの座標と画面の表
+              示が180度ずれる・MP3演奏において音切れが生じるという報告をいただいたた
+              め、修正パッチ<A href="SDL-1.2.5-k4.diff">SDL-1.2.5-k4.diff</A>を書き
+              ました。阿川さんのパッチ<A href="http://www.self-core.org/~kaoru-k/pub/libsdl_1.2.5-slzaurus20030623_arm.diff">libsdl_1.2.5-slzaurus20030623_arm.diff</A>
+              をあてた SDL-1.2.5 に対してあてます。内容は以下の2点です。</P>
 
-<li> SL-C750, SL-C760 ���㤦ͽ�꤬�ʤ��Τǡ����ݡ��Ȥ���Τ������ؤ�
+            <ul>
 
-<li> ��ΰ����Υѥå��Ǥν��������Ƽ��������Ƥ��롣
-</ul>
+              <li>機種がSL-C750, SL-C760である場合に、VGA,QVGAで画面とスタイラス入力
+                が180度ずれる問題を修正しました。(SDL_sysvideo.cc)
 
-<P>�����ǡ������� <A
-href="http://www.self-core.org/~kaoru-k/pub/libsdl_1.2.5-slzaurus20030622_arm.diff">libsdl_1.2.5-slzaurus20030622_arm.diff</A>
-����äƤ������ libSDL-1.2.so.0.0.5 ��������ƻ�Ƥߤ��ΤǤ�����
-�������꤬ȯ�������Τǽ����ѥå�<A
-href="SDL-1.2.5-k3.diff">SDL-1.2.5-k3.diff</A>��񤭤ޤ�����������
-�ѥå��򤢤Ƥ� SDL-1.2.5 ���Ф��Ƥ��Ƥޤ����ѥå������Ƥϰʲ��Σ�����
-����</P>
+              <li>SL-C750 でも音切れが生じるということなので、SL-A300 でのみ有効になっ
+                ていた音切れ解消のためのバッファのサイズを増やす修正を、全ての機種にお
+                いて行うようにしました。(SDL_dspaudio.c)
 
-<ul>
-
-<li>SL-5500 ���б����Ƥ��ʤ������б������ޤ�����(SDL_sysvideo.cc)
-
-<li>rotation_ �� 2 �λ��β���ž���ˤ�����32bit aligned ���줿����
-��x,width �������ˤ��ꤷ�Ƥ��ꡢ�����ǤϤʤ��������褿�Ȥ��������ž
-������ʤ����ᡢ32bit ž������ʬ�Ϥ��ΤޤޤȤ���������ʬ�����ӽ�������
-���Ȥǡ�����ž�������褦�ˤ��ޤ�����(SDL_QWin.cc)
-
-<li>�ޥ������������ warp �������Ȥ���ȯ�Ԥ���� 
-SDL_PrivateMouseMotion ��Ϳ�����ɸ�򡢥��ץꥱ��������������ɸ�˽�
-�����ޤ�����(SDL_sysmouse.cc)
-
-<li>�ե졼��Хåե��ȥ��ץꥱ������󤬻��ꤹ������θ������ۤʤ�Ȥ�
-�ˡ��ޥ�����ɸ������˥ޡ�����μ�갷�������������ä����ὤ�����ޤ�����
-(SDL_QWin.cc)
-
-</ul>
+            </ul>
 
 
-<h4>�ʲ��ϸŤ��ѥå��Ǥ�</h4>
+            <h4>20030622</h4>
 
-<P>�嵭�ΰ����Υѥå��˼����ޤ�Ƥ��뤿�ᡢ���ߤ�ľ�����Ƥ�ɬ��
-�Ϥ���ޤ���</P>
+            <P>以下の理由により、今後は阿川さんのパッチをベースにします。</P>
 
-<ul>
-<li><A
-HREF="http://emmie.koka-in.org/~kensyu/zaurus/diary/20021110.html"> ��
-�ڤ���</A>�� patch �����Ƥޤ�����SL-A300 �ǲ��ڤ줬��ä����褦�Ǥ���
+            <ul>
+              <li> 日本の Linux Zaurus においては、<A href="http://www.self-core.org/~kaoru-k/wiki/LibSdlOnLinuxZaurus.html">
+                  阿川さんがパッチを当てて公開されている SDL パッケージ</A>が、SDL とし
+                てほぼ標準となっており、これと互換性のない別の SDL パッケージを使うと
+                ユーザが不便。
 
-<li>Qtopia ��ư������� OK �ܥ��󤬤ʤ���������Ƥ��Ƥ��ʤ��Τǡ�
-SDL-1.2.5/src/video/qtopia/SDL_QWin.cc �� patch �򤢤Ƥޤ�����
+              <li> SL-C750, SL-C760 を買う予定がないので、サポートするのがたいへん。
 
-<li> SDL_WarpMouse �� SDL_MouseMotionEvent ��ȯ�������ʤ��Τǡ�
-SDL-1.2.5/src/video/qtopia/SDL_sysmouse.cc �ˤ����ȯ�������� patch ��
-���Ƥޤ���������ǡ�������ܥ����Ԥ��λ��˽��������ξ岼�򲡤��ȡ�����
-���뤬��ư����褦�ˤʤ�ޤ���
+              <li> 私の以前のパッチでの修正が全て取り入れられている。
+            </ul>
 
-<li><font color=blue>(Jan. 2, 2003)</font>SDL on Qtopia�Ǥϡ�
-QDirectPainter����Ѥ���Frame Buffer Driver �Υ��å���Ԥ���frame
-buffer ��ľ�����褷�Ƥ��ޤ��������å���������Ȥ���
-(SDL_QWin::unlockScreen()) QDirectPainter::end() ��Ƥ�Ǥ��� delete ��
-��ȡ�����˥��å������Ǥ��ʤ��ʤ뤳�Ȥ�����褦�Ǥ�����ö�Դ����˥���
-����������ȡ�Frame Buffer Driver���饤�٥�Ȥ��館�ʤ��ʤꡢ
-QAapplication�˥��٥�Ȥ���ʤ��ʤ�ޤ���<br>
+            <P>そこで、阿川さんの <A href="http://www.self-core.org/~kaoru-k/pub/libsdl_1.2.5-slzaurus20030622_arm.diff">libsdl_1.2.5-slzaurus20030622_arm.diff</A>
+              をもらってこちらで libSDL-1.2.so.0.0.5 を作成して試してみたのですが、
+              色々問題が発生したので修正パッチ<A href="SDL-1.2.5-k3.diff">SDL-1.2.5-k3.diff</A>を書きました。阿川さんの
+              パッチをあてた SDL-1.2.5 に対してあてます。パッチの内容は以下の４点で
+              す。</P>
 
-���ΤȤ������٥�ȤϾä���ΤǤϤʤ�Frame Buffer Driver�Υ��塼�ˤ���
-��³����������λ����ʤɤ��ƥ��ץꥱ������󤬤��ʤ��ʤ�ȡ����å�����
-�����졢���٥�Ȥμ���ꥢ�ץꥱ��������Ѥ�ꡢ������˥��٥�Ȥ�ή
-�����ޤ�ޤ����������������ɤ򤭤���ȱ��ޤ��ɤäƤ��ʤ����ᡢ��ε���
-�θ�Ⱦ�Ͽ�¬�Ǥ���<br>
+            <ul>
 
-QDirectPainter��delete��������end()��Ƥ�ɬ�פϤʤ������ʤΤǡ������
-������ޤ�����
+              <li>SL-5500 に対応していないため対応させました。(SDL_sysvideo.cc)
 
-</ul>
+              <li>rotation_ が 2 の時の画像転送において32bit aligned された画像
+                （x,width が偶数）を仮定しており、そうではない画像が来たときに正常に転
+                送されないため、32bit 転送の部分はそのままとし、境界部分を別途処理する
+                ことで、正常転送されるようにしました。(SDL_QWin.cc)
 
-<del>
-<p>��Σ��Ĥ� patch ���碌����Τ�<A
-HREF="SDL-1.2.5-k2.diff">SDL-1.2.5-k2.diff</A>���֤��ޤ���</p></del>
+              <li>マウスカーソルを warp させたときに発行される
+                SDL_PrivateMouseMotion に与える座標を、アプリケーションの論理座標に修
+                正しました。(SDL_sysmouse.cc)
 
-<pre>
+              <li>フレームバッファとアプリケーションが指定する画像の向きが異なるとき
+                に、マウス座標設定時にマージンの取り扱いがおかしかったため修正しました。
+                (SDL_QWin.cc)
+
+            </ul>
+
+
+            <h4>以下は古いパッチです</h4>
+
+            <P>上記の阿川さんのパッチに取り込まれているため、現在は直接当てる必要
+              はありません。</P>
+
+            <ul>
+              <li><A HREF="http://emmie.koka-in.org/~kensyu/zaurus/diary/20021110.html"> 神
+                  木さん</A>の patch を当てました。SL-A300 で音切れが解消されるようです。
+
+              <li>Qtopia で動かす場合 OK ボタンがなぜか割り当てられていないので、
+                SDL-1.2.5/src/video/qtopia/SDL_QWin.cc に patch をあてました。
+
+              <li> SDL_WarpMouse が SDL_MouseMotionEvent を発生させないので、
+                SDL-1.2.5/src/video/qtopia/SDL_sysmouse.cc にこれを発生させる patch を
+                あてました。これで、選択肢やボタン待ちの時に十字キーの上下を押すと、カー
+                ソルが移動するようになります。
+
+              <li>
+                <font color=blue>(Jan. 2, 2003)</font>SDL on Qtopiaでは、
+                QDirectPainterを使用してFrame Buffer Driver のロックを行い、frame
+                buffer に直接描画していますが、ロックを解除するときに
+                (SDL_QWin::unlockScreen()) QDirectPainter::end() を呼んでから delete す
+                ると、正常にロックを解除できなくなることがあるようです。一旦不完全にロッ
+                クを解除すると、Frame Buffer Driverからイベントをもらえなくなり、
+                QAapplicationにイベントが来なくなります。<br>
+
+                このとき、イベントは消えるのではなくFrame Buffer Driverのキューにたま
+                り続け、強制終了するなどしてアプリケーションがいなくなると、ロックが解
+                放され、イベントの受取りアプリケーションが変わり、そちらにイベントが流
+                し込まれます。ただし、コードをきちんと奥まで追っていないため、上の記述
+                の後半は推測です。<br>
+
+                QDirectPainterをdeleteする前にend()を呼ぶ必要はなさそうなので、これを
+                削除しました。
+
+            </ul>
+
+            <del>
+              <p>上の４つの patch を合わせたものを、<A HREF="SDL-1.2.5-k2.diff">SDL-1.2.5-k2.diff</A>に置きます。</p>
+            </del>
+
+            <pre>
 &gt; cd SDL-1.2.5
 &gt; configure --host=i386-linux --target=strongarm-linux
     --prefix=/opt/Embedix/tools/arm-linux --enable-video-qtopia
@@ -251,17 +244,17 @@ HREF="SDL-1.2.5-k2.diff">SDL-1.2.5-k2.diff</A>���֤��ޤ���</p></del>
 &gt; su
 &gt; make install
 </pre>
-</div> <!-- sub-content -->
+          </div> <!-- sub-content -->
 
 
-<div class="sub-content">
-<h3 id="libjpeg-6b">libjpeg 6b</h3>
+          <div class="sub-content">
+            <h3 id="libjpeg-6b">libjpeg 6b</h3>
 
-<p><A HREF="http://www.ijg.org/">Independent JPEG Group</A>��ꡢjpegsrc.v6b.tar.gz�����������ɡ�</p>
+            <p><A HREF="http://www.ijg.org/">Independent JPEG Group</A>より、jpegsrc.v6b.tar.gzをダウンロード。</p>
 
-<p>libtool ���ʤ��ȼ��Ԥ���Τǡ�Debian �Τ�Τ���äƤ��ޤ�����</p>
-  
-<pre>
+            <p>libtool がないと失敗するので、Debian のものを持ってきました。</p>
+
+            <pre>
 &gt; configure --host=i386-linux --target=strongarm-linux
     --prefix=/opt/Embedix/tools/arm-linux --enable-shared
 &gt; cp /usr/bin/libtool .
@@ -269,80 +262,77 @@ HREF="SDL-1.2.5-k2.diff">SDL-1.2.5-k2.diff</A>���֤��ޤ���</p></del>
 &gt; su
 &gt; make install
 </pre>
-</div> <!-- sub-content -->
+          </div> <!-- sub-content -->
 
 
-<div class="sub-content">
-<h3 id="zlib-1.2.3">zlib-1.2.3</h3>
+          <div class="sub-content">
+            <h3 id="zlib-1.2.3">zlib-1.2.3</h3>
 
-<p><A HREF="http://www.zlib.net/">zlib</A>��ꡢzlib-1.2.3.tar.gz�����������ɡ�</p>
+            <p><A HREF="http://www.zlib.net/">zlib</A>より、zlib-1.2.3.tar.gzをダウンロード。</p>
 
-<pre>
+            <pre>
 &gt; setenv LDSHARED "arm-linux-gcc -shared -Wl,-soname,libz.so.1"
 &gt; configure --shared --prefix=/opt/Embedix/tools/arm-linux
 &gt; make
 &gt; su
 &gt; make install
 </pre>
-</div> <!-- sub-content -->
+          </div> <!-- sub-content -->
 
 
-<div class="sub-content">
-<h3 id="libpng-1.4.5">libpng-1.4.5</h3>
+          <div class="sub-content">
+            <h3 id="libpng-1.4.5">libpng-1.4.5</h3>
 
-<p><A HREF="http://www.libpng.org/pub/png/libpng.html">libpng</A>��ꡢlbipng-1.4.5.tar.gz�����������ɡ�</p>
+            <p><A HREF="http://www.libpng.org/pub/png/libpng.html">libpng</A>より、lbipng-1.4.5.tar.gzをダウンロード。</p>
 
-<pre>
+            <pre>
 &gt; configure --host=i386-linux --target=strongarm-linux
     --prefix=/opt/Embedix/tools/arm-linux
 &gt; make
 &gt; su
 &gt; make install
 </pre>
-</div> <!-- sub-content -->
+          </div> <!-- sub-content -->
 
 
-<div class="sub-content">
-<h3 id="SDL_image-1.2.10">SDL_image-1.2.10</h3>
+          <div class="sub-content">
+            <h3 id="SDL_image-1.2.10">SDL_image-1.2.10</h3>
 
-<p><A HREF="http://www.libsdl.org/">SDL�ܲ�</A>��ꡢSDL_image-1.2.10.tar.gz�����������ɡ�</p>
+            <p><A HREF="http://www.libsdl.org/">SDL本家</A>より、SDL_image-1.2.10.tar.gzをダウンロード。</p>
 
-<pre>
+            <pre>
 &gt; setenv PKG_CONFIG
 &gt; configure --host=i386-linux --target=strongarm-linux
     --prefix=/opt/Embedix/tools/arm-linux --disable-lbm
     --disable-pcx --disable-tga --disable-jpg-shared --disable-png-shared
 </pre>
 
-<p>SDL-1.2.5 ��١����ˤ��ƥ���ѥ���Ǥ���褦�� Makefile ��������ɲä��ޤ���</p>
+            <p>SDL-1.2.5 をベースにしてコンパイルできるように Makefile に定義を追加します。</p>
 
-<pre>
+            <pre>
 CFLAGS = -g -O2 -I/opt/Embedix/tools/arm-linux/include/SDL -D_REENTRANT -Dmain=SDL_main -D"RW_SEEK_SET=0" -D"RW_SEEK_CUR=1" -D"RW_SEEK_END=2" -D"SDL_strcmp=strcmp"
 </pre>
 
-<pre>
+            <pre>
 &gt; make
 &gt; su
 &gt; make install
 </pre>
-</div> <!-- sub-content -->
+          </div> <!-- sub-content -->
 
 
-<div class="sub-content">
-<h3 id="SDL_mixer-1.2.11">SDL_mixer-1.2.11</h3>
+          <div class="sub-content">
+            <h3 id="SDL_mixer-1.2.11">SDL_mixer-1.2.11</h3>
 
-<p><A HREF="http://www.libsdl.org/">SDL�ܲ�</A>��ꡢSDL_mixer-1.2.11.tar.gz�����������ɡ�</p>
+            <p><A HREF="http://www.libsdl.org/">SDL本家</A>より、SDL_mixer-1.2.11.tar.gzをダウンロード。</p>
 
-<p><A
-HREF="http://emmie.koka-in.org/~kensyu/zaurus/diary/20021110.html">��
-�ڤ���</A>�� patch �����Ƥޤ�����SL-5500 �Ǥϡ����եȥ����� MIDI �α�
-�դǡ�����Ū�˲��ڤ줷�ʤ��ʤ�ޤ�������ο��ڤ���Υڡ������饳�ԡ���
-����Τ�<A
-HREF="SDL_mixer-1.2.6-k1.diff">SDL_mixer-1.2.6-k1.diff</A>���֤��ޤ���
-�ʵ�ѥå���<A
-HREF="SDL_mixer-1.2.4-k1.diff">SDL_mixer-1.2.4-k1.diff</A>��</p>
+            <p><A HREF="http://emmie.koka-in.org/~kensyu/zaurus/diary/20021110.html">神
+                木さん</A>の patch を当てました。SL-5500 では、ソフトウェア MIDI の演
+              奏で、基本的に音切れしなくなりました。上の神木さんのページからコピーし
+              たものを、<A HREF="SDL_mixer-1.2.6-k1.diff">SDL_mixer-1.2.6-k1.diff</A>に置きます。
+              （旧パッチ：<A HREF="SDL_mixer-1.2.4-k1.diff">SDL_mixer-1.2.4-k1.diff</A>）</p>
 
-<pre>
+            <pre>
 &gt; setenv PKG_CONFIG
 &gt; configure --host=i386-linux --target=strongarm-linux
     --prefix=/opt/Embedix/tools/arm-linux
@@ -353,35 +343,35 @@ HREF="SDL_mixer-1.2.4-k1.diff">SDL_mixer-1.2.4-k1.diff</A>��</p>
     --disable-smpegtest --disable-music-midi
 </pre>
 
-<p>SDL-1.2.5 ��١����ˤ��ƥ���ѥ���Ǥ���褦�� Makefile ��������ɲá�������ޤ���</p>
+            <p>SDL-1.2.5 をベースにしてコンパイルできるように Makefile に定義を追加・削除します。</p>
 
-<pre>
+            <pre>
 CFLAGS  = -g -O2 -D"RW_SEEK_SET=0" -D"RW_SEEK_CUR=1" -D"RW_SEEK_END=2" -D"SDL_stack_alloc(type, count)=(type*)malloc(sizeof(type)*(count))" -D"SDL_stack_free(data)=free(data)" -D"SDL_abs=abs"
 EXTRA_LDFLAGS =  -L/opt/Embedix/tools/arm-linux/lib -Wl,-rpath,/opt/Embedix/tools/arm-linux/lib -lSDLmain -lSDL -L/opt/Qtopia/sharp/lib -L/opt/Qtopia/sharp/lib/ -lqpe -lqte -lpthread -lvorbisidec -lm -lmad
 </pre>
 
-<p>SDL-1.2.5 ��١����ˤ��ƥ���ѥ���Ǥ���褦�� dynamic_ogg.c ��ʲ��Τ褦���ѹ����ޤ���</p>
+            <p>SDL-1.2.5 をベースにしてコンパイルできるように dynamic_ogg.c を以下のように変更します。</p>
 
-<pre>
+            <pre>
 /*#include "SDL_loadso.h"*/
 extern void *SDL_LoadFunction(void *handle, const char *name);
 </pre>
 
-<pre>
+            <pre>
 &gt; make
 &gt; su
 &gt; make install
 </pre>
-</div> <!-- sub-content -->
+          </div> <!-- sub-content -->
 
 
-<div class="sub-content">
-<h3 id="bzip2-1.0.4">bzip2-1.0.4</h3>
+          <div class="sub-content">
+            <h3 id="bzip2-1.0.4">bzip2-1.0.4</h3>
 
-<p><A HREF="http://sources.redhat.com/bzip2/">The bzip2 and libbzip2 official home page</A>��ꡢbzip2-1.0.4-tar.gz�����������ɡ�</p>
+            <p><A HREF="http://sources.redhat.com/bzip2/">The bzip2 and libbzip2 official home page</A>より、bzip2-1.0.4-tar.gzをダウンロード。</p>
 
-<p>Makefile: �β����ιԤ��ѹ�</p>
-<pre>
+            <p>Makefile: の下記の行を変更</p>
+            <pre>
 CC=arm-linux-gcc
 AR=arm-linux-ar
 RANLIB=arm-linux-ranlib
@@ -391,28 +381,26 @@ PREFIX=/opt/Embedix/tools/arm-linux
 all: libbz2.a bzip2 bzip2recover
 </pre>
 
-<pre>
+            <pre>
 &gt; make
 &gt; su
 &gt; make install
 </pre>
-</div> <!-- sub-content -->
+          </div> <!-- sub-content -->
 
 
-<div class="sub-content">
-<h3 id="freetype-2.1.10">freetype-2.1.10</h3>
+          <div class="sub-content">
+            <h3 id="freetype-2.1.10">freetype-2.1.10</h3>
 
-<p><A HREF="http://www.freetype.org/">the Free Type Project</A>��ꡢfreetype-2.1.10.tar.gz�����������ɡ�</p>
+            <p><A HREF="http://www.freetype.org/">the Free Type Project</A>より、freetype-2.1.10.tar.gzをダウンロード。</p>
 
-<p><A
-HREF="http://emmie.koka-in.org/~kensyu/zaurus/diary/20021110.html">��
-�ڤ���</A>�� patch �����Ƥޤ�����Embedded bitmap ��Ȥä��ե���Ȥ��
-����Ȥ������ȤʤΤǤ����������ǤϤ���򤢤Ƥ� msgothic ��ȤäƤ����
-����ޤ���Ǥ���������ϰϤǤϡ�������Ʊ������ο��ڤ���Υѥå���Ʊ
-���Τ�Τ�<A
-HREF="freetype-2.1.3-k1.diff">freetype-2.1.3-k1.diff</A>���֤��ޤ���</p>
+            <p><A HREF="http://emmie.koka-in.org/~kensyu/zaurus/diary/20021110.html">神
+                木さん</A>の patch を当てました。Embedded bitmap を使ったフォントも使
+              えるということなのですが、当方ではこれをあてて msgothic を使っても改善
+              されませんでした。試した範囲では、以前と同じ。上の神木さんのパッチと同
+              等のものを、<A HREF="freetype-2.1.3-k1.diff">freetype-2.1.3-k1.diff</A>に置きます。</p>
 
-<pre>
+            <pre>
 &gt; configure --host=i386-linux --target=strongarm-linux
     --prefix=/opt/Embedix/tools/arm-linux
 &gt; make
@@ -420,66 +408,64 @@ HREF="freetype-2.1.3-k1.diff">freetype-2.1.3-k1.diff</A>���֤��ޤ���</p>
 &gt; make install
 </pre>
 
-<p>make ������ǡ�freetype-2.3.5/objs/apinames �� host compiler �Ǻ���
-����Ϥ��� target compiler �Ǻ������Ƥ��ޤ����Ԥ���Τǡ�����������ư
-�Ǻ������ޤ�����</p>
+            <p>make の途中で、freetype-2.3.5/objs/apinames を host compiler で作成
+              するはずが target compiler で作成してしまい失敗するので、ここだけ手動
+              で作成しました。</p>
 
-</div> <!-- sub-content -->
+          </div> <!-- sub-content -->
 
 
-<div class="sub-content">
-<h3 id="SDL_ttf-2.0.9">SDL_ttf-2.0.9</h3>
+          <div class="sub-content">
+            <h3 id="SDL_ttf-2.0.9">SDL_ttf-2.0.9</h3>
 
-<p><A HREF="http://www.libsdl.org/">SDL�ܲ�</A>��ꡢSDL_ttf-2.0.9.tar.gz�����������ɡ�</p>
+            <p><A HREF="http://www.libsdl.org/">SDL本家</A>より、SDL_ttf-2.0.9.tar.gzをダウンロード。</p>
 
-<pre>
+            <pre>
 &gt; configure --host=i686-linux --target=arm-linux
     --prefix=/opt/Embedix/tools/arm-linux --without-x
 &gt; make
 &gt; su
 &gt; make install
 </pre>
-</div> <!-- sub-content -->
+          </div> <!-- sub-content -->
 
 
-<div class="sub-content">
-<h3 id="mad-0.14.2b">mad-0.14.2b</h3>
+          <div class="sub-content">
+            <h3 id="mad-0.14.2b">mad-0.14.2b</h3>
 
-<p><A HREF="http://www.mars.org/home/rob/proj/mpeg/">MAD: MPEG Audio Decoder</A>��ꡢmad-0.14.2b.tar.gz�����������ɡ�</p>
+            <p><A HREF="http://www.mars.org/home/rob/proj/mpeg/">MAD: MPEG Audio Decoder</A>より、mad-0.14.2b.tar.gzをダウンロード。</p>
 
-<p>MAD�������׻��Τߤ�MP3��ǥ����ɤ���饤�֥��Ǥ���ARM�Ϥ�CPU�Ǥϡ�
-��ư�������׻��������٤����ᡢONScripter�Ǥϡ�SMPEG�˺����ؤ������
-MP3��ǥ����ɤ��ޤ���</p>
+            <p>MADは整数計算のみでMP3をデコードするライブラリです。ARM系のCPUでは、
+              浮動小数点計算が非常に遅いため、ONScripterでは、SMPEGに差し替えこれで
+              MP3をデコードします。</p>
 
-<p>������ MP3 �����դǤ��ʤ��Τǡ�MP3 �� frame header �λ����� MAD�Υ���
-�����դ���碌���ɤ������������Τ���Ĵ�٤ޤ�������̡�frame header �� 
-15,16bit �ܤ� Emphasis ��2�ξ�硢MAD �������ʥإå��Ȥ����Ƥ��Ƥ��ޤ���
-�䤬���ͤˤ��������ˤϡ�2 �� reserved �ȤʤäƤ��뤿�ᡢMAD Ū�ˤ�����
-�����Ȥ򤷤Ƥ���褦�Ǥ������ʤ������� MP3 �� 2 �ˤʤäƤ��뤿�ᡢ2 ��
-��� 0 (none) �������뤳�Ȥˤ���³�Ԥ���ѥå�<A
-HREF="mad-0.14.2b-k1.diff">mad-0.14.2b-k1.diff</A>�򤢤ơ����ղ�ǽ�ˤ�
-��ޤ�����</p>
+            <p>一部の MP3 が演奏できないので、MP3 の frame header の資料と MADのソー
+              スを付き合わせ、どこがおかしいのかを調べました。結果、frame header の
+              15,16bit 目の Emphasis が2の場合、MAD は不正なヘッダとして弾いています。
+              私が参考にした資料には、2 は reserved となっているため、MAD 的には正し
+              いことをしているようですが、なぜかこの MP3 は 2 になっているため、2 の
+              場合 0 (none) 扱いすることにして続行するパッチ<A HREF="mad-0.14.2b-k1.diff">mad-0.14.2b-k1.diff</A>をあて、演奏可能にな
+              りました。</p>
 
-<pre>
+            <pre>
 &gt; configure --host=armv4-linux --prefix=/opt/Embedix/tools/arm-linux
     --enable-fpm=arm --enable-speed --disable-debugging --enable-sso
 &gt; make
 &gt; su
 &gt; make install
 </pre>
-</div> <!-- sub-content -->
+          </div> <!-- sub-content -->
 
 
-<div class="sub-content">
-<h3 id="ivorbis">Tremor Vorbis I Stream 20020517: 1.0.2</h3>
+          <div class="sub-content">
+            <h3 id="ivorbis">Tremor Vorbis I Stream 20020517: 1.0.2</h3>
 
-<p>�����黻�ΤߤΥǥ������Ǥ���, <A
-HREF="http://svn.xiph.org/trunk/Tremor/">the Ogg Vorbis 'Tremor'
-integer playback codec</A>�����������ɡ�configure.in �ε��Ҥ�������
-�������Τǡ��ѥå�<A HREF="Tremor-K1.diff">Tremor-K1.diff</A>�򤢤Ƥ�
-����</p>
+            <p>整数演算のみのデコーダである, <A HREF="http://svn.xiph.org/trunk/Tremor/">the Ogg Vorbis 'Tremor'
+                integer playback codec</A>をダウンロード。configure.in の記述が一部お
+              かしいので、パッチ<A HREF="Tremor-K1.diff">Tremor-K1.diff</A>をあてま
+              す。</p>
 
-<pre>
+            <pre>
 &gt; wget -r -l1 http://svn.xiph.org/trunk/Tremor/
 &gt; cd svn.xiph.org/trunk/Tremor
 &gt; sh autogen.sh --build=i686-linux --host=arm-linux
@@ -488,19 +474,20 @@ integer playback codec</A>�����������ɡ�configure.in �ε��Ҥ�������
 &gt; su
 &gt; make install
 </pre>
-</div> <!-- sub-content -->
+          </div> <!-- sub-content -->
 
-</div> <!-- content -->
+        </div> <!-- content -->
 
-</div> <!-- main -->
-</div> <!-- main-container -->
+      </div> <!-- main -->
+    </div> <!-- main-container -->
 
 
-<div id="footer">
-Copyright (c) 1998-2011 Studio O.G.A. All rights reserved.
-</div> <!-- footer -->
+    <div id="footer">
+      Copyright (c) 1998-2011 Studio O.G.A. All rights reserved.
+    </div> <!-- footer -->
 
-</div> <!-- body -->
+  </div> <!-- body -->
 
 </body>
+
 </html>

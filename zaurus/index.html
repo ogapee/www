@@ -1,368 +1,365 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html lang="ja">
+
 <HEAD>
-<META http-equiv="Content-Type" content="text/html; charset=EUC-JP">
-<META http-equiv="Content-Style-Type" content="text/css">
-<META name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-<TITLE> SDL on Zaurus (SL-���꡼��)�Υڡ��� </TITLE>
-<LINK rel="stylesheet" type="text/css" href="/ogapee.css">
+  <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <META http-equiv="Content-Style-Type" content="text/css">
+  <META name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <TITLE> SDL on Zaurus (SL-シリーズ)のページ </TITLE>
+  <LINK rel="stylesheet" type="text/css" href="/ogapee.css">
 </HEAD>
 
 <body>
 
-<div id="body">
+  <div id="body">
 
-<div id="header">
-<H1>SDL on Zaurus �Υڡ���</H1>
+    <div id="header">
+      <H1>SDL on Zaurus のページ</H1>
 
-Since: May. 20, 2002<br>
-Last updated: Feb. 4, 2012 (�ѥå������������������Ƥ�<A HREF="../onscripter_devel.2012.html">ONScripter ��ȯ����</A>)<br>
-</div> <!-- header -->
+      Since: May. 20, 2002<br>
+      Last updated: Feb. 4, 2012 (パッケージ更新、更新内容は<A HREF="../onscripter_devel.2012.html">ONScripter 開発日誌</A>)<br>
+    </div> <!-- header -->
 
-<div id="toc-container">
+    <div id="toc-container">
 
-<h3>�ܼ�</h3>
+      <h3>目次</h3>
 
-<div id="toc">
+      <div id="toc">
 
-<ul>
-  <li> <A HREF="#introduction">�Ϥ����</A>
-  <li> <A HREF="#Package">ipk �ѥå�����</A>
-    <ul>
-      <li> <a href="#package-onscripter">ONScripter ����</a>
-      <li> <a href="#package-onscripter-lib">ONScripter ��Ϣ�饤�֥��</a>
-      <li> <a href="#package-timidity-patch">timidity patch</a>
-    </ul>
-  <li> <A HREF="#link">���</A>
-  <li> <A HREF="sl-devel.html">SL-5500, SL-C700 ��ȯ�Ķ��Υ��åȥ��å�</A>
-  <li> <A HREF="sl-first.html">����λ�Ժ����ε�Ͽ(SL-5500)</A>(obsolete)
-  <li> <A HREF="#Qtopia">ONScripter �� Qtopia �Ķ���ư����뤿��κ��</A>
-  <li> <A HREF="#impression">����</A>
-  <li> <a href="../index.html">���</a>
-</ul>
+        <ul>
+          <li> <A HREF="#introduction">はじめに</A>
+          <li> <A HREF="#Package">ipk パッケージ</A>
+            <ul>
+              <li> <a href="#package-onscripter">ONScripter 本体</a>
+              <li> <a href="#package-onscripter-lib">ONScripter 関連ライブラリ</a>
+              <li> <a href="#package-timidity-patch">timidity patch</a>
+            </ul>
+          <li> <A HREF="#link">リンク</A>
+          <li> <A HREF="sl-devel.html">SL-5500, SL-C700 開発環境のセットアップ</A>
+          <li> <A HREF="sl-first.html">初期の試行錯誤の記録(SL-5500)</A>(obsolete)
+          <li> <A HREF="#Qtopia">ONScripter を Qtopia 環境で動作させるための作業</A>
+          <li> <A HREF="#impression">感想</A>
+          <li> <a href="../index.html">戻る</a>
+        </ul>
 
-</div> <!-- toc -->
-</div> <!-- toc-container -->
-
-
-<div id="main-container">
-<div id="main">
-
-<div class="content">
-<h2 id="introduction">�Ϥ����</h2>
-
-<p> Linux �����äƤ���<A HREF="http://ezaurus.com/"> Zaurus
-(SL-5500, SL-A300, SL-B500, SL-C700, SL-C750, SL-C760)</a>���<A
-HREF="http://www.libsdl.org/">SDL</A>��Ȥ������ξ�� ONScripter ��ư
-����褦�Ȥ�����ߤǤ���ʸ�ԡʤ�����ˤ����<A
-HREF="http://www.ayati.com/KOMONO/a300.htm">Linux Zaurus ���ܸ��� 
-SL-A300</A>�ˡ�SL-A300 ��ư��Ƥ����ͻҤ��Ǻܤ���Ƥ��ޤ���</p>
-
-<p> ���ߡ�mpeg �ࡼ�ӡ�������CD-Audio ���հʳ���<A
-HREF="../onscripter.html">ONScripter</A>�����Ƥε�ǽ��ư��ޤ����ڥ�
-�ȥܥ���ʤ⤷���ϥ����ܡ��ɡˤ�ʻ�Ѥ��Ƥ����ϤȤʤ�ޤ�������Ū�ʵ�ǽ
-�ڤӼ¹���ˡ�ˤĤ��Ƥϡ�<A HREF="../onscripter.html">ONScripter �Υڡ�
-��</A>�򻲾Ȥ��Ƥ���������</p>
-
-</div> <!-- content -->
+      </div> <!-- toc -->
+    </div> <!-- toc-container -->
 
 
-<div class="content">
-<h2 id="Package">ipk �ѥå�����</h2>
+    <div id="main-container">
+      <div id="main">
 
-<p>������Υѥå�����������ޤ���</p>
+        <div class="content">
+          <h2 id="introduction">はじめに</h2>
 
-<div class="sub-content">
-<h3 id="package-onscripter">ONScripter ����</h3>
+          <p> Linux が走っている<A HREF="http://ezaurus.com/"> Zaurus
+              (SL-5500, SL-A300, SL-B500, SL-C700, SL-C750, SL-C760)</a>上で<A HREF="http://www.libsdl.org/">SDL</A>を使い、その上で ONScripter を動
+            作させようという試みです。文市（あやち）さんの<A HREF="http://www.ayati.com/KOMONO/a300.htm">Linux Zaurus 日本語版
+              SL-A300</A>に、SL-A300 で動作している様子が掲載されています。</p>
 
-<ul>
-  <li> <A HREF="http://onscripter.sourceforge.jp/zaurus/onscripter_20120204_arm.ipk">onscripter_20120204_arm.ipk</A>
-  <li> <A HREF="http://onscripter.sourceforge.jp/zaurus/onscripter_20110226_arm.ipk">onscripter_20110226_arm.ipk</A>
-    <ul>
-      <li> onscripter-lib_20110106�ʹߤ��Ȥ߹�碌�ƻȤäƲ�����
-    </ul>
-  <li> ��С������<A HREF="http://onscripter.sourceforge.jp/zaurus/onscripter_20100530a_arm.ipk">onscripter_20100530a_arm.ipk</A>
-    <ul>
-      <li> onscripter-lib_20070821�ʹߤ��Ȥ߹�碌�ƻȤäƲ�����
-    </ul>
-  <li>  ��С������<A HREF="http://onscripter.sourceforge.jp/zaurus/onscripter_20070206_arm.ipk">onscripter_20070206_arm.ipk</A>
-    <ul>
-      <li> onscripter-lib_20030629�ʹߤ��Ȥ߹�碌�ƻȤäƲ�����
-    </ul>
-  <li>  ��С������<A HREF="http://onscripter.sourceforge.jp/zaurus/onscripter_beta-20030616_arm.ipk">onscripter_beta-20030616_arm.ipk</A>
-    <ul>
-      <li> onscripter-lib_1.0.5���Ȥ߹�碌�ƻȤäƲ�����
-    </ul>
-</ul>
+          <p> 現在、mpeg ムービー再生、CD-Audio 演奏以外の<A HREF="../onscripter.html">ONScripter</A>の全ての機能が動作します。ペン
+            とボタン（もしくはキーボード）を併用しての入力となります。具体的な機能
+            及び実行方法については、<A HREF="../onscripter.html">ONScripter のペー
+              ジ</A>を参照してください。</p>
 
-<p>������ϡ�<A HREF="../onscripter_devel.2009_1.html">ONScripter �γ�
-ȯ</A>�˹�碌�ƹ�������Ƥ����ޤ���</p>
+        </div> <!-- content -->
 
-<p><font color=red>����</font>�����餯 swap memory ɬ�ܤǤ���<A
-HREF="#Qtopia">Qtopia �Ķ���ư��뤿��κ��</A>�ˤ�����ˤ�������
-�� swap ���äƤ��鵯ư���ʤ��ȡ��ޤ��ϥ󥰤��ޤ���Main memory ��;͵
-������ ROM ��ȤäƤ�����̤Ǥ������ޤ���SL-5500��SL-A300�Ǥϡ�FAT �ե�
-���륷���ƥ��� swap ����ȥϥ󥰤���Ȥ������ݤ�<A
-HREF="http://pcweb.mycom.co.jp/special/2002/linuxzaurus/06.html">���
-</A>����Ƥ��ޤ������ξ�硢�㤨�� SD ���������� swap ������ˤϡ�
-ext2 �ե����륷���ƥ�ǥե����ޥåȤ�ľ������� swap ���������Ƥ�����
-����</p>
 
-<p>ONScripter�¹����Home�ܥ����Qtopia�����ޤ������ξ��֤Ǥϡ�
-ONScripter�ϥХå����饦��ɤǼ¹Ԥ���Ƥ��ޤ���ONScripter �����ˤϡ�
-�������С��Υ�������򥯥�å����Ƥ���������<s>ONScripter-Resume�Υ���
-����򥯥�å����뤫���⤷����terminal����ʲ��Υ��ޥ�ɤ�¹Ԥ��Ƥ���
-������</s></p>
-<pre>
+        <div class="content">
+          <h2 id="Package">ipk パッケージ</h2>
+
+          <p>３種類のパッケージがあります。</p>
+
+          <div class="sub-content">
+            <h3 id="package-onscripter">ONScripter 本体</h3>
+
+            <ul>
+              <li> <A HREF="http://onscripter.sourceforge.jp/zaurus/onscripter_20120204_arm.ipk">onscripter_20120204_arm.ipk</A>
+              <li> <A HREF="http://onscripter.sourceforge.jp/zaurus/onscripter_20110226_arm.ipk">onscripter_20110226_arm.ipk</A>
+                <ul>
+                  <li> onscripter-lib_20110106以降と組み合わせて使って下さい
+                </ul>
+              <li> 旧バージョン：<A HREF="http://onscripter.sourceforge.jp/zaurus/onscripter_20100530a_arm.ipk">onscripter_20100530a_arm.ipk</A>
+                <ul>
+                  <li> onscripter-lib_20070821以降と組み合わせて使って下さい
+                </ul>
+              <li> 旧バージョン：<A HREF="http://onscripter.sourceforge.jp/zaurus/onscripter_20070206_arm.ipk">onscripter_20070206_arm.ipk</A>
+                <ul>
+                  <li> onscripter-lib_20030629以降と組み合わせて使って下さい
+                </ul>
+              <li> 旧バージョン：<A HREF="http://onscripter.sourceforge.jp/zaurus/onscripter_beta-20030616_arm.ipk">onscripter_beta-20030616_arm.ipk</A>
+                <ul>
+                  <li> onscripter-lib_1.0.5と組み合わせて使って下さい
+                </ul>
+            </ul>
+
+            <p>こちらは、<A HREF="../onscripter_devel.2009_1.html">ONScripter の開
+                発</A>に合わせて更新されていきます。</p>
+
+            <p>
+              <font color=red>注意</font>おそらく swap memory 必須です。<A HREF="#Qtopia">Qtopia 環境で動作するための作業</A>にある手順にしたがっ
+              て swap を作ってから起動しないと、まずハングします。Main memory に余裕
+              がある ROM を使っていれば別ですが。また、SL-5500やSL-A300では、FAT ファ
+              イルシステム上に swap を作るとハングするという現象が<A HREF="http://pcweb.mycom.co.jp/special/2002/linuxzaurus/06.html">報告
+              </A>されています。この場合、例えば SD カード等に swap を作る場合には、
+              ext2 ファイルシステムでフォーマットし直した上で swap を生成してくださ
+              い。
+            </p>
+
+            <p>ONScripter実行中にHomeボタンでQtopiaに戻れます。この状態では、
+              ONScripterはバックグラウンドで実行されています。ONScripter に戻るには、
+              タスクバーのアイコンをクリックしてください。<s>ONScripter-Resumeのアイ
+                コンをクリックするか、もしくはterminalから以下のコマンドを実行してくだ
+                さい。</s></p>
+            <pre>
 qcop QPE/Application/onscripter "raise()"
 </pre>
-<p><s>�ʤ�VGA�ǵ�ư���Ƥ�����ˤϡ����Τ褦�ˤ��Ƥ�������Ȥ��Ƥ⼺�Ԥ�
-�뤳�Ȥ�¿���Ǥ����ϥ󥰤������ˤϡ�Home�ܥ���Ǥ��ä����ᤷ�ƾ嵭��
-���򷫤��֤��Ƥ���������</s></p>
+            <p><s>なおVGAで起動している場合には、このようにしても戻ろうとしても失敗す
+                ることが多いです。ハングした場合には、Homeボタンでいったん戻して上記の
+                操作を繰り返してください。</s></p>
 
-<p>Ʊ������Ƥ��� sarconv, nsaconv �ǥ��������֤�̾����뤳�Ȥ��Ǥ�
-�ޤ����̾��������������֤�Ȥ����ϡ�-s �ΤĤ������������ȤäƤ���
-������</p>
+            <p>同梱されている sarconv, nsaconv でアーカイブを縮小することができ
+              ます。縮小したアーカイブを使う場合は、-s のついたアイコンを使ってくだ
+              さい。</p>
 
-<p>CD-Audio ������� MP3 �ե������Ȥ����ϡ�44.1KHz �⤷���� 
-22.05KHz �ǥ���ץ뤵�줿��Τ��Ѱդ��Ƥ���������</p>
+            <p>CD-Audio の代わりに MP3 ファイルを使う場合は、44.1KHz もしくは
+              22.05KHz でサンプルされたものを用意してください。</p>
 
-<p>�����Ǥ� SL-5500,SL-C700 ��ư���ǧ�򤷤Ƥ��ꡢ�ޤ� SL-A300,
-SL-B500 �Ǥ�ư�����⤤�������Ƥ���ޤ���</p>
+            <p>当方では SL-5500,SL-C700 で動作確認をしており、また SL-A300,
+              SL-B500 での動作報告もいただいております。</p>
 
-<p>SL-C700�ξ�硢-s�դΥ�������ϡ�3200x240�ΰ��̤��줿�����������Ѥ�
-����-s���դ��ʤ���������ϡ�640x480ɽ���Ѥˤʤ�ޤ���SL-5500,SL-A300��
-�Ĥ��ƤϽ����̤�Ǥ��������̤������180�ٲ�ž���Ƥ��ޤ��������SL-C700
-��320x240�⡼�ɤ����������뤿��Ǥ���SL-C700��320x240�⡼�ɤϡ�A300
-�ߴ��⡼�ɤȤʤ뤿�ᡢ�����ɽ��ˡ�ΤޤޤǤϲ��̤�180�ٵդ�ɽ�������
-���ޤ��ޤ���</p>
+            <p>SL-C700の場合、-s付のアイコンは、3200x240の圧縮されたアーカイブ用で
+              す。-sの付かないアイコンは、640x480表示用になります。SL-5500,SL-A300に
+              ついては従来通りですが、画面が従来と180度回転しています。これはSL-C700
+              の320x240モードと整合性を取るためです。SL-C700の320x240モードは、A300
+              互換モードとなるため、従来の表示法のままでは画面が180度逆に表示されて
+              しまいます。</p>
 
-</div> <!-- sub-content -->
-
-
-<div class="sub-content">
-<h3 id="package-onscripter-lib">ONScripter ��Ϣ�饤�֥��</h3>
-
-<ul>
-<li> <A HREF="http://onscripter.sourceforge.jp/zaurus/onscripter-lib_20110106_arm.ipk"> onscripter-lib_20110106_arm.ipk</A>
-<li> ��С������<A HREF="http://onscripter.sourceforge.jp/zaurus/onscripter-lib_20070821_arm.ipk"> onscripter-lib_20070821_arm.ipk</A>
-<li> ��С������<A HREF="http://onscripter.sourceforge.jp/zaurus/onscripter-lib_20031201_arm.ipk"> onscripter-lib_20031201_arm.ipk</A>
-<li> ��С������<A HREF="http://onscripter.sourceforge.jp/zaurus/onscripter-lib_1.0.5_arm.ipk"> onscripter-lib_1.0.5_arm.ipk</A>
-</ul>
-
-<p>ONScripter ��¹Ԥ�����ɬ�פ� SDL ��Ϣ�Υ饤�֥��Ǥ������ݤʤ�
-�ǡ�ɬ�פʥ饤�֥��ʲ����ˤ򣱤ĤˤޤȤ�ޤ���������ϸġ��Υ饤�֥�
-����˥ѥå���������٤��Ǥ��������Τ褦�˺��줿�ѥå������ȥХåƥ�
-�󥰤����ǽ��������ޤ����������ޤ�������ѥå������ʤΤ������ͤϤ�
-���դ�ʬ���ä��������Ƥ���������</p>
-
-<ul>
-  <li> libSDL-1.2.so(1.2.5)
-  <li> libSDL_image-1.2.so(1.2.10),
-  <li> libSDL_mixer-1.2.so(1.2.11)
-  <li> libSDL_ttf-2.0.so(2.0.9),
-  <li> libfreetype.so(2.1.10)
-  <li> libvorbisidec.so(1.0.2)
-  <li> libz.so(1.2.3)
-  <li> libpng.so(1.4.5)
-</ul>
-
-<p>�ޤ������ߤ����¤Ȥ������Υ��꤫ ext2 ���� symlink ������������
-��Ƥ����������ޤ�����ͤ����ˤ���Ƥ�ޤ�����ʤ��Ȼפ��ޤ���������«
-�Ȥ���̵�ݾڤǤ���������ϡ���ä��˹�������ʤ��Ϥ��Ǥ���</p>
-
-</div> <!-- sub-content -->
+          </div> <!-- sub-content -->
 
 
-<div class="sub-content">
-<h3 id="package-timidity-patch">timidity patch</h3>
+          <div class="sub-content">
+            <h3 id="package-onscripter-lib">ONScripter 関連ライブラリ</h3>
 
-<ul>
-<li> <A HREF="http://onscripter.sourceforge.jp/zaurus/timidity-patch_1.0.1-sd_arm.ipk">timidity-patch_1.0.1-sd_arm.ipk</A><br>
-</ul>
-     
-<p>�֤ҤȤ����פΤ褦�� MIDI ����Ѥ���������� MIDI ��ʹ����������
-����Ƥ���������MIDI�β����ǡ���<A
-HREF="http://www.libsdl.org/projects/SDL_mixer/timidity/timidity.tar.gz">timidity.tar.gz</A> 
-��ѥå�������������ΤǤ���15MB ������ޤ���</p>
+            <ul>
+              <li> <A HREF="http://onscripter.sourceforge.jp/zaurus/onscripter-lib_20110106_arm.ipk"> onscripter-lib_20110106_arm.ipk</A>
+              <li> 旧バージョン：<A HREF="http://onscripter.sourceforge.jp/zaurus/onscripter-lib_20070821_arm.ipk"> onscripter-lib_20070821_arm.ipk</A>
+              <li> 旧バージョン：<A HREF="http://onscripter.sourceforge.jp/zaurus/onscripter-lib_20031201_arm.ipk"> onscripter-lib_20031201_arm.ipk</A>
+              <li> 旧バージョン：<A HREF="http://onscripter.sourceforge.jp/zaurus/onscripter-lib_1.0.5_arm.ipk"> onscripter-lib_1.0.5_arm.ipk</A>
+            </ul>
 
-<p>�ʤ���GUI ���饤�󥹥ȡ��뤹��ѥå������ˤ��褦�Ȥ���ȡ�������
-­�Ǽ��Ԥ����ǽ������ʤΤǡ�SD �����ɤ�;͵������Ȥ������ޥ�ɥ饤
-�󤫤� SD �����ɤ˥��󥹥ȡ��뤹����ˤΤ��б��Ȥ����Ƥ��������ޤ���
-</p>
+            <p>ONScripter を実行する上で必要な SDL 関連のライブラリです。面倒なの
+              で、必要なライブラリ（下記）を１つにまとめました。本来は個々のライブラ
+              リ毎にパッケージを作るべきですし、そのように作られたパッケージとバッティ
+              ングする可能性がありますが、あくまで非公式パッケージなので入れる人はそ
+              の辺を分かった上で入れてください。</p>
 
-<p>���󥹥ȡ���</p>
-<pre>
+            <ul>
+              <li> libSDL-1.2.so(1.2.5)
+              <li> libSDL_image-1.2.so(1.2.10),
+              <li> libSDL_mixer-1.2.so(1.2.11)
+              <li> libSDL_ttf-2.0.so(2.0.9),
+              <li> libfreetype.so(2.1.10)
+              <li> libvorbisidec.so(1.0.2)
+              <li> libz.so(1.2.3)
+              <li> libpng.so(1.4.5)
+            </ul>
+
+            <p>また、現在の制限として本体メモリか ext2 等の symlink が効く場所に入
+              れてください。まあ何も考えずにいれてもまず問題ないと思いますが、お約束
+              として無保証です。こちらは、めったに更新されないはずです。</p>
+
+          </div> <!-- sub-content -->
+
+
+          <div class="sub-content">
+            <h3 id="package-timidity-patch">timidity patch</h3>
+
+            <ul>
+              <li> <A HREF="http://onscripter.sourceforge.jp/zaurus/timidity-patch_1.0.1-sd_arm.ipk">timidity-patch_1.0.1-sd_arm.ipk</A><br>
+            </ul>
+
+            <p>「ひとかた」のような MIDI を使用したゲームで MIDI を聞きたい場合に
+              入れてください。MIDIの音色データ<A HREF="http://www.libsdl.org/projects/SDL_mixer/timidity/timidity.tar.gz">timidity.tar.gz</A>
+              をパッケージ化したものです。15MB 程あります。</p>
+
+            <p>なお、GUI からインストールするパッケージにしようとすると、メモリ不
+              足で失敗する可能性が大なので、SD カードに余裕があるとし、コマンドライ
+              ンから SD カードにインストールする場合にのみ対応とさせていただきます。
+            </p>
+
+            <p>インストール</p>
+            <pre>
 &gt; ipkg -d /mnt/card install timidity-patch_1.0.1-sd_arm.ipk
 </pre>
-     
-<p>���󥤥󥹥ȡ���</p>
-<pre>
+
+            <p>アンインストール</p>
+            <pre>
 &gt; ipkg -d /mnt/card remove timidity-patch
 </pre>
 
-</div> <!-- sub-content -->
-</div> <!-- content -->
+          </div> <!-- sub-content -->
+        </div> <!-- content -->
 
 
-<div class="content">
-<h2 id="link">���</h2>
+        <div class="content">
+          <h2 id="link">リンク</h2>
 
-<p>�����äˤʤäƤ���ڡ������褯���Ѥ����Ƥ��������Ƥ���ڡ����ؤΥ�󥯤Ǥ���</p>
+          <p>お世話になっているページ、よく利用させていただいているページへのリンクです。</p>
 
-<DL>
-  <DT> ��<A HREF="http://www.areanine.gr.jp/~nyano/"> ��ʤ����ƥ��Υ� </A>
-  <DD> SL Zaurus �˴ؤ��륽�եȤΥС�����󥢥å׾��󡦵��Ѿ���ʤɤ�������������Ƥ��ꡢ�����ؤ����Ω���ޤ���
-  <DT> ��<A HREF="http://www.ayati.com/KOMONO/a300ons.htm"> ONScripter �Ǥ���٤� �ޤ�������Ҥ��� </A>
-  <DD> ʸ�ԡʤ�����ˤ���Υ����ȤǤ���SL-A300 �� ONScripter ��ư���Ƥ���Τ���Ƹ��ޤ���
-  <DT> ���Ǥ���ַ�ɱ��<A HREF="http://club.h14m.org/kenji/diary/?200309a#200309025">#1</A> <A HREF="http://club.h14m.org/kenji/diary/?200309a#200309033">#2</A> <A HREF="http://club.h14m.org/kenji/diary/?200309a#200309055">#3</A> <A HREF="http://club.h14m.org/kenji/diary/?200309a#200309062">#4</A>
-  <DD> Kenji ����Υ����� A Way Out �ˤơ�SL-C760 ��ɸ���������Ƴ���������κ�ȵ�Ͽ���Ǻܤ���Ƥ��ޤ���ONScripter �����Ƴ����������ϻ��ͤˤ��Ƥ���������
-  <DT> ��<A HREF="http://www.newbreedsoftware.com/zaurus-faq/">The Unofficial Zaurus FAQ </A>
-  <DD> SL-5500 �Ǥ� TIPS �� FAQ��Swap memory �䡢��⡼�Ȥǥ��ץꥱ��������¹Ԥ��� tips �� SL-A300 �Ǥ�ɬ�ܤǤ���
-  <DT> ��<A HREF="http://emmie.koka-in.org/~kensyu/zaurus/diary/20021110.html"> SDL �� ONScripter </A>
-  <DD> ���ڤ���������Ǥ���SDL �� kernel �δط��� hack ���졢ONScripter �κ�Ŭ�����ä��Ǻܤ���Ƥ��ޤ���
-  <DT> ��<A HREF="http://sourceforge.jp/projects/zaurus-ja/">zaurus-ja</A>
-  <DD> Linux ���Zaurus�����ܸ쥢�ץꥱ�����������Ѳ�ǽ�ʴĶ����������뤳�Ȥ���ɸ�Ȥ��Ƥ���ץ��������ȤǤ�������ʪ�����Ѥ����Ƥ��������Ƥ���ޤ��������Υ᡼��󥰥ꥹ�Ȥ���פʾ��󸻤Ǥ���
-  <DT> ��<A HREF="http://pc.2ch.net/test/read.cgi/linux/1059223604/l50">��Linux�ۥ����륹��ȯ�ϥ���å�-3��SL��</A>
-  <DD> ���󸻤Ǥ���
-  <DT> ��<A HREF="http://www3.cnet.ne.jp/poex"> ��ʤ����ޤˤ��ä��� </A>
-  <DD> Poex ����� LinuxZaurus �桼���������󥵥��ȤǤ���
-  <DT> ��<A HREF="http://support.ezaurus.com/"> �����륹���ݡ��ȥ��ơ������ </A>
-  <DD> Zaurus �θ����ʻ������ġ���Ϥ����餫��ɤ�����
-</DL>
+          <DL>
+            <DT> ○<A HREF="http://www.areanine.gr.jp/~nyano/"> りなざうテクノウ </A>
+            <DD> SL Zaurus に関するソフトのバージョンアップ情報・技術情報などが日々更新されており、たいへん役に立ちます。
+            <DT> ○<A HREF="http://www.ayati.com/KOMONO/a300ons.htm"> ONScripter でしゃべる まじかる☆ひよりん </A>
+            <DD> 文市（あやち）さんのサイトです。SL-A300 で ONScripter が動いているのを初めて見ました
+            <DT> ○できる「月姫」<A HREF="http://club.h14m.org/kenji/diary/?200309a#200309025">#1</A> <A HREF="http://club.h14m.org/kenji/diary/?200309a#200309033">#2</A> <A HREF="http://club.h14m.org/kenji/diary/?200309a#200309055">#3</A> <A HREF="http://club.h14m.org/kenji/diary/?200309a#200309062">#4</A>
+            <DD> Kenji さんのサイト A Way Out にて、SL-C760 に標記ゲームを導入した時の作業記録が掲載されています。ONScripter を初めて導入される方は参考にしてください。
+            <DT> ○<A HREF="http://www.newbreedsoftware.com/zaurus-faq/">The Unofficial Zaurus FAQ </A>
+            <DD> SL-5500 での TIPS や FAQ。Swap memory や、リモートでアプリケーションを実行する tips は SL-A300 でも必須です。
+            <DT> ○<A HREF="http://emmie.koka-in.org/~kensyu/zaurus/diary/20021110.html"> SDL と ONScripter </A>
+            <DD> 神木さんの日記です。SDL と kernel の関係を hack され、ONScripter の最適化の話が掲載されています。
+            <DT> ○<A HREF="http://sourceforge.jp/projects/zaurus-ja/">zaurus-ja</A>
+            <DD> Linux 塔載Zaurusで日本語アプリケーションの利用可能な環境を整備することを目標としているプロジェクトです。成果物を利用させていただいております。ここのメーリングリストも重要な情報源です。
+            <DT> ○<A HREF="http://pc.2ch.net/test/read.cgi/linux/1059223604/l50">【Linux】ザウルス開発系スレッド-3【SL】</A>
+            <DD> 情報源です。
+            <DT> ○<A HREF="http://www3.cnet.ne.jp/poex"> りなざうまにあっくす </A>
+            <DD> Poex さんの LinuxZaurus ユーザ向け情報サイトです。
+            <DT> ○<A HREF="http://support.ezaurus.com/"> ザウルスサポートステーション </A>
+            <DD> Zaurus の公式な資料・ツールはこちらからどうぞ。
+          </DL>
 
-</div> <!-- content -->
+        </div> <!-- content -->
 
 
-<div class="content">
-<h2 id="Qtopia">ONScripter �� Qtopia �Ķ���ư����뤿��κ��<font color=red>(Aug 15. 2002)</font></h2>
+        <div class="content">
+          <h2 id="Qtopia">ONScripter を Qtopia 環境で動作させるための作業<font color=red>(Aug 15. 2002)</font>
+          </h2>
 
-<p>���ˡ�ONScripter �� Qtopia ���ư���褦�ˤ��ޤ���<br>
+          <p>次に、ONScripter を Qtopia 上で動くようにします。<br>
 
-������Ժ������ޤ������������ϲ����̤�Ǥ���</p>
+            色々試行錯誤しましたが、要点は下の通りです。</p>
 
-<OL>
-  <LI> ������������ե������ [Desktop Entry] �� Exec �ˤư������Ϥ���
-���Τǡ��̤� shell script ��Ƥ֤褦�ˤ���������� --root ���ץ�����
-�դ��� onscripter ��Ƥ֡�
-  <LI> ONScripter ¦�� Qt �Ķ��ǤΥ���ѥ�����б������ޤ�̵���ʥ��ץ���
-���̵�뤹��褦�ˤ��롣
-</OL>
+          <OL>
+            <LI> アイコン設定ファイルの [Desktop Entry] の Exec にて引数が渡せな
+              いので、別の shell script を呼ぶようにし、その中で --root オプションを
+              付けて onscripter を呼ぶ。
+            <LI> ONScripter 側で Qt 環境でのコンパイルに対応し、また無効なオプショ
+              ンを無視するようにする。
+          </OL>
 
-<P>�������Ȥ��ơ��¹���˥��꤬­��ʤ��ʤ�ȡ��֥�����­�פȤ���
-�ٹ𥦥���ɥ����Ф褦�Ȥ��뤬���ɤ���餳��� ONScripter �Ȥǥǥåɥ���
-���򵯤����ƥϥ󥰤���褦�Ǥ���SDL on Qtopia �� Qtopia �������������
-���͡������Ǥϡ�����Υ�����Ϥ��Ф餯�ʤ�ȥϥ󥰤��ޤ���</P>
+          <P>問題点として、実行中にメモリが足りなくなると、「メモリ不足」という
+            警告ウィンドウが出ようとするが、どうやらこれと ONScripter とでデッドロッ
+            クを起こしてハングするようです。SDL on Qtopia と Qtopia の相性の問題で
+            すね。現状では、大抵のゲームはしばらく進むとハングします。</P>
 
-<P>�ڥ�ǥ���å����Ƥ⥯��å��������ʤ����ϥϥ󥰤��Ƥ��ޤ��Τǡ�
-��⡼�ȥ������󤷤ƥץ������򻦤������⤷���ϥ����륹��Ƶ�ư���Ƥ���
-������</P>
+          <P>ペンでクリックしてもクリック音がしない場合はハングしていますので、
+            リモートログインしてプロセスを殺すか、もしくはザウルスを再起動してくだ
+            さい。</P>
 
-<P>FB console ���鵯ư����褦�˥���ѥ��뤷�ơ����󥽡���������󤷤�
-���֤ǵ�ư���������ʤ�ư���ΤǤ����ġġ�</p>
+          <P>FB console から起動するようにコンパイルして、コンソールログインした
+            状態で起動すれば問題なく動くのですが……。</p>
 
-<h4>20020421</h4>
-<p>��<A
-HREF="http://www.newbreedsoftware.com/zaurus-faq/sections/expansion_slots_and_cards.php3">Unofficial
-Sharp Zaurus SL-5500 FAQ</A>�� 12. # Can I use a CF or SD card as memory, instead of file storage space?
-�ˤ���褦�� swapfile ����Ф褤���Ȥ�Ƚ�����ޤ�����<br>
+          <h4>20020421</h4>
+          <p>＊<A HREF="http://www.newbreedsoftware.com/zaurus-faq/sections/expansion_slots_and_cards.php3">Unofficial
+              Sharp Zaurus SL-5500 FAQ</A>の 12. # Can I use a CF or SD card as memory, instead of file storage space?
+            にあるように swapfile を作ればよいことが判明しました。<br>
 
-terminal �򳫤��ơ�</P>
-<pre>
+            terminal を開いて、</P>
+          <pre>
 &gt; dd if=/dev/zero of=/mnt/card/SwapFile bs=512 count=65536
 &gt; mkswap /mnt/card/SwapFile
 &gt; swapon /mnt/card/SwapFile
 </pre>
 
-�ǡ�32MB �Υ���åפ��Ǥ��ޤ���������ˤ���ޤ�����SL-5500 �ξ�� 
-16MB �ʾ�Ϥ��ä��ۤ����褤�Ǥ���32MB �����¿ʬ�¿��Ǥ�������ǥϥ�
-���뤳�Ȥ�̵���ʤ�ޤ�����<br>
+          で、32MB のスワップができます。ゲームにもよりますが、SL-5500 の場合
+          16MB 以上はあったほうがよいです。32MB あれば多分安心です。これでハング
+          することが無くなりました。<br>
 
-<p>
-<s>�ʤ������岼������ܥ��󤬸����ʤ�������ޤǤϤ����� scancode ��
-��Ƥ���Τ����ġġ��ܥ��������������ˤϥڥ��ȤäƤ���������
-</s>SDL�˥ѥå������ƤƲ�衣
-</p>
+          <p>
+            <s>なぜか、上下の矢印ボタンが効かない。途中まではちゃんと scancode が
+              来ているのだが……。ボタンや選択肢の選択にはペンを使ってください。
+            </s>SDLにパッチを当てて解決。
+          </p>
 
-<p>
-<s>
-�ϥ󥰤�̵�����ˤϡ�(1)����(*)���̤�ˤ���;�פʾ��󥢥ץꥱ��������
-�ä���(2)�ǽ餫������򣱡����Τ������������֤���Ѥ��롢(3)ONScripter 
-�λ��ѥ����̤򸺤餹��(4) ROM ����ľ�������̤����䤹���ʤɤ��к�
-���ͤ����ޤ���(1) �Ϥ������Ǥ������ִֺ�����®�����ͤ�ۤ���ȥ��
-����­�ٹ𤬽Ф�褦�Ǥ��Τ� (2)��빽ͭ�������Ǥ������Τ�������С���
-��񤭤ޤ��������� (3) ���ĥ��٤��Ǥ������빽�������Ǥ������ä����
-�Ǥ���
-</s>
-</p>
+          <p>
+            <s>
+              ハングを無くすには、(1)下記(*)の通りにして余計な常駐アプリケーションを
+              消す、(2)最初から画像を１／４のしたアーカイブを使用する、(3)ONScripter
+              の使用メモリ量を減らす、(4) ROM を作り直しメモリ量を増やす、などの対策
+              が考えられます。(1) はもちろんですが、瞬間最大風速が閾値を越えるとメモ
+              リ不足警告が出るようですので (2)も結構有効そうです。そのうちコンバータ
+              を書きます。本当は (3) を頑張るべきですが、結構厳しいです。困ったもの
+              です。
+            </s>
+          </p>
 
-<p>��<A
-HREF="http://www.newbreedsoftware.com/zaurus-faq/sections/system.php3">Unofficial
-Sharp Zaurus SL-5500 FAQ</A>�� 11. Why do I keep running out of
-memory? �ˤ���褦�ˡ�Applications �� 'Address Book', 'Calendar' �� 
-'Todo List' �Υ��������ڥ�ǥ��å������ޤޤ��Ф餯�Ԥ���ɽ��륪�ץ���
-����̤� "Fast load" ��̵���ˤ���ȡ����Τξ�����꤬���ä� 
-ONScripter ��ư��㴳��Ŭ�ˤʤ�ޤ���</p>
+          <p>＊<A HREF="http://www.newbreedsoftware.com/zaurus-faq/sections/system.php3">Unofficial
+              Sharp Zaurus SL-5500 FAQ</A>の 11. Why do I keep running out of
+            memory? にあるように、Applications の 'Address Book', 'Calendar' と
+            'Todo List' のアイコンをペンでタッチしたまましばらく待ち、表れるオプショ
+            ン画面で "Fast load" を無効にすると、全体の消費メモリが減って
+            ONScripter の動作が若干快適になります。</p>
 
-<p>�ޤ�����������򥯥�å����� ONScripter ��ư���뤿�ᡢ��ư���˥���
-��ե�����Τ��������ꤹ�뤳�Ȥ��Ǥ��ޤ��󡣾嵭�Υѥå������Ǥϡ�
-/mnt/card/nscr �⤷���� /mnt/cf/nscr �򥲡���ե�����Τ����������
-����������ץȤ򥤥󥹥ȡ��뤹��褦�ˤʤäƤ��ޤ���<br>
+          <p>また、アイコンをクリックして ONScripter 起動するため、起動時にゲー
+            ムファイルのある場所を指定することができません。上記のパッケージでは、
+            /mnt/card/nscr もしくは /mnt/cf/nscr をゲームファイルのある場所と設定
+            したスクリプトをインストールするようになっています。<br>
 
-/mnt/card/nscr �ϡ�SD �����ɤΥ롼�Ȥ� nscr �ǥ��쥯�ȥ��ؤ��ޤ���<br>
+            /mnt/card/nscr は、SD カードのルートの nscr ディレクトリを指します。<br>
 
-/mnt/cf/nscr �ϡ�CF �����ɤΥ롼�Ȥ� nscr �ǥ��쥯�ȥ��ؤ��ޤ���<br>
-</p>
+            /mnt/cf/nscr は、CF カードのルートの nscr ディレクトリを指します。<br>
+          </p>
 
-<p>
-ʣ���Υ������������־��ϡ�ʣ���Υ����ɤ��Ѱդ��Ƽ���ؤ��뤫����ʬ
-�ǥ�����ץȤ��ɲá��������Ƥ���������<br>
+          <p>
+            複数のゲームを持ち運ぶ場合は、複数のカードを用意して取り替えるか、自分
+            でスクリプトを追加・修正してください。<br>
 
-�ɲá�����������Υƥ�ץ졼�Ȥϡ����Υե�����Ǥ���<br>
-</p>
+            追加・修正する場合のテンプレートは、下のファイルです。<br>
+          </p>
 
-<p class="noindent">
-/opt/QtPalmtop/apps/Games/onscripter-sd.desktop<br>
-/opt/QtPalmtop/bin/onscripter-sd<br>
+          <p class="noindent">
+            /opt/QtPalmtop/apps/Games/onscripter-sd.desktop<br>
+            /opt/QtPalmtop/bin/onscripter-sd<br>
 
-/opt/QtPalmtop/apps/Games/onscripter-cf.desktop<br>
-/opt/QtPalmtop/bin/onscripter-cf<br>
+            /opt/QtPalmtop/apps/Games/onscripter-cf.desktop<br>
+            /opt/QtPalmtop/bin/onscripter-cf<br>
 
-QVGA �����륹���QVGAɽ����̵���̥��������֤�Ȥ���硣<br>
-VGA �����륹���VGAɽ����̵���̥��������֤�Ȥ���硣
-</p>
+            QVGA ザウルス上でQVGA表示で無圧縮アーカイブを使う場合。<br>
+            VGA ザウルス上でVGA表示で無圧縮アーカイブを使う場合。
+          </p>
 
-<p class="noindent">
-/opt/QtPalmtop/apps/Games/onscripter-sd-s.desktop<br>
-/opt/QtPalmtop/bin/onscripter-sd-s<br>
+          <p class="noindent">
+            /opt/QtPalmtop/apps/Games/onscripter-sd-s.desktop<br>
+            /opt/QtPalmtop/bin/onscripter-sd-s<br>
 
-/opt/QtPalmtop/apps/Games/onscripter-cf-s.desktop<br>
-/opt/QtPalmtop/bin/onscripter-cf-s<br>
+            /opt/QtPalmtop/apps/Games/onscripter-cf-s.desktop<br>
+            /opt/QtPalmtop/bin/onscripter-cf-s<br>
 
-QVGA �����륹���QVGAɽ���ǰ��̥��������֤�Ȥ���硣<br>
-VGA �����륹���QVGAɽ���ǰ��̥��������֤�Ȥ���硣�פ���ˡ�800x600 
-�⤷����640x480�Υ��������֤� 320x240 �ˤ��Ƥ����硣
-</p>
+            QVGA ザウルス上でQVGA表示で圧縮アーカイブを使う場合。<br>
+            VGA ザウルス上でQVGA表示で圧縮アーカイブを使う場合。要するに、800x600
+            もしくは640x480のアーカイブを 320x240 にしている場合。
+          </p>
 
-<p class="noindent">
-/opt/QtPalmtop/apps/Games/onscripter-sd-vga-s.desktop<br>
-/opt/QtPalmtop/bin/onscripter-sd-vga-s<br>
+          <p class="noindent">
+            /opt/QtPalmtop/apps/Games/onscripter-sd-vga-s.desktop<br>
+            /opt/QtPalmtop/bin/onscripter-sd-vga-s<br>
 
-/opt/QtPalmtop/apps/Games/onscripter-cf-vga-s.desktop<br>
-/opt/QtPalmtop/bin/onscripter-cf-vga-s<br>
+            /opt/QtPalmtop/apps/Games/onscripter-cf-vga-s.desktop<br>
+            /opt/QtPalmtop/bin/onscripter-cf-vga-s<br>
 
-VGA �����륹���VGAɽ���ǰ��̥��������֤�Ȥ���硣�פ���ˡ�800x600 
-�Υ��������֤� 640x480 �ˤ��Ƥ����硣
-</p>
+            VGA ザウルス上でVGA表示で圧縮アーカイブを使う場合。要するに、800x600
+            のアーカイブを 640x480 にしている場合。
+          </p>
 
-<p>
-�ɲá�������<br>
-�����ब Game2 �Ȥ���̾���ǡ�������Υǡ����� /mnt/card/game2 �ˤ����ΤȤ򤷤ޤ���<br>
-<br>
-/opt/QtPalmtop/apps/Games/game2-sd-s.desktop:<br>
-����¡�Exec ��򲼵��Υ����륹����ץ�̾�˽�����</P>
+          <p>
+            追加・修正例<br>
+            ゲームが Game2 という名前で、ゲームのデータが /mnt/card/game2 にあるものとをします。<br>
+            <br>
+            /opt/QtPalmtop/apps/Games/game2-sd-s.desktop:<br>
+            最低限、Exec 項を下記のシェルスクリプト名に修正。
+          </P>
 
-<pre>
+          <pre>
 [Desktop Entry]
 Comment=game2
 Exec=game2-sd-s
@@ -372,108 +369,106 @@ Name=Game2
 CanFastload=0
 </pre>
 
-<p class="noindent">
-/opt/QtPalmtop/bin/game2-sd-s:<br>
---root ���ץ����ǡ�������ǡ����Τ���������ꡣ<br>
-</p>
+          <p class="noindent">
+            /opt/QtPalmtop/bin/game2-sd-s:<br>
+            --root オプションで、ゲームデータのある場所を設定。<br>
+          </p>
 
-<pre>
+          <pre>
 #!/bin/sh
 
 onscripter --root /mnt/card/game2 --force-button-shortcut --disable-rescale $1
 </pre>
 
-<P>�¹ԥѡ��ߥå�����Ĥ��뤳�Ȥ�˺��ʤ���<br>
-Qtopia ��Ƶ�ư����ȡ������ॿ�֤˥��������ɲä���Ƥ��ޤ���</p>
+          <P>実行パーミッションをつけることをお忘れなく。<br>
+            Qtopia を再起動すると、ゲームタブにアイコンが追加されています。</p>
 
-<p>
-<s>�ʤ���SL-5500 �Ǥ�����ǧ���Ƥ��ޤ���Τǡ�SL-A300 ��ư�����ɤ�����ʬ��
-��ޤ���</s>
-</p>
+          <p>
+            <s>なお、SL-5500 でしか確認していませんので、SL-A300 で動くかどうかは分か
+              りません。</s>
+          </p>
 
 
-<h4>20021121</h4>
+          <h4>20021121</h4>
 
-<p><A
-HREF="http://digit.que.ne.jp/visit/index.cgi?UnofficialSharpZaurusSL%2D5500FAQ%2FNetworking#i35">
-�����륹�Υ��ץꥱ���������⡼�ȤǻȤ��ޤ�����</A>�ˤ��ȡ�</P>
-<pre>
-��⡼����³��telnet�ޤ���ssh��ͳ��)���Ƥ���֤ϡ������륹��Υץ�����
-���¹ԡʤ��������륹���ɽ���ˤǤ��ޤ�������˴Ķ��ѿ�"LOGNAME"����
-�ꤹ��ɬ�פ�����ޤ����ޤ��ʲ��Υ��ޥ�ɤ�¹Ԥ��ޤ���
+          <p><A HREF="http://digit.que.ne.jp/visit/index.cgi?UnofficialSharpZaurusSL%2D5500FAQ%2FNetworking#i35">
+              ザウルスのアプリケーションをリモートで使えますか？</A>によると、</P>
+          <pre>
+リモート接続（telnetまたはssh経由で)している間は、ザウルス上のプログラ
+ムを実行（し、ザウルス上で表示）できますが、先に環境変数"LOGNAME"を設
+定する必要があります。まず以下のコマンドを実行します。
 
  export LOGNAME=unknown
 </pre>
-<p class="noindent">
-�餷���Ǥ���</p>
+          <p class="noindent">
+            らしいです。</p>
 
-<P>�Τ�ޤ���Ǥ���������ǥǥХå��������֤�ڤˤʤ�ޤ���<br>
+          <P>知りませんでした。これでデバッグがずいぶん楽になります。<br>
 
-<A HREF="http://www.newbreedsoftware.com/zaurus-faq/">The Unofficial
-Zaurus FAQ </A>�ˤ��ä��ΤǤ��͡�����ϰ��������ɤޤʤ��Ȥ����ʤ��ʡ�
-</p>
+            <A HREF="http://www.newbreedsoftware.com/zaurus-faq/">The Unofficial
+              Zaurus FAQ </A>にあったのですね。これは一度全部読まないといけないな。
+          </p>
 
-</div> <!-- content -->
+        </div> <!-- content -->
 
 
-<div class="content">
-<h2 id="impression">����</h2>
+        <div class="content">
+          <h2 id="impression">感想</h2>
 
-<p>���˳�ȯ���䤹�� PDA �Ǥ������̤˥���������ѥ��뤹�����������Τ�Τ����äƤ��ޤ��ޤ���<A
-HREF="http://sourceforge.net/project/showfiles.php?group_id=39939">Project:
-Zaurus Open Source Development</A>�� x11zaurus �ʤ�ƤΤ⤢��ߤ����Ǥ�����</p>
+          <p>非常に開発しやすい PDA です。普通にクロスコンパイルするだけで大抵のものは入ってしまいます。<A HREF="http://sourceforge.net/project/showfiles.php?group_id=39939">Project:
+              Zaurus Open Source Development</A>に x11zaurus なんてのもあるみたいですし。</p>
 
-<p>�����������Ǥϡ����ܸ�ɽ���ϴ�ĥ��ФǤ����ΤΡ����ܸ����Ϥ��Ǥ�
-�ޤ��󡣥ץ�����ޤΤ������Ǥ��ꡢ���ܸ� PDA �Ȥ��Ƥ�����������Ǥ�
-�ʤ��Ȼפ��ޤ���������ͭ�֤ˤ��<A
-HREF="http://pc.2ch.net/test/read.cgi/mobile/1020324591/">���ܸ�IM�γ�
-ȯ</A>�����ʤ�ʤ�Ǥ���褦�Ǥ��������ץꥱ���������®�˽��¤��Ƥ�
-�������ʤΤǡ�Linux �Ķ��Ǵ�ñ�˳�ȯ����ǽ�����ܸ� PDA �Ȥ��ƶᤤ����
-�����餷�����ʤˤʤ뤳�Ȥ���Ԥ��Ƥ��ޤ���</p>
+          <p>ただし現状では、日本語表示は頑張ればできるものの、日本語入力ができ
+            ません。プログラマのおもちゃであり、日本語 PDA としては全くお勧めでき
+            ないと思います。ただ、有志により<A HREF="http://pc.2ch.net/test/read.cgi/mobile/1020324591/">日本語IMの開
+              発</A>がかなり進んでいるようですし、アプリケーションも急速に充実してい
+            きそうなので、Linux 環境で簡単に開発が可能な日本語 PDA として近い将来
+            素晴らしい製品になることを期待しています。</p>
 
-<p>��äȥ����ġġ�</p>
+          <p>もっとメモリを……。</p>
 
-<p>SL-5500 �ξ�硢BGM(MP3) �Ȳ��� (WAV) ��Ʊ�����դ��ä����ڤ�뤳�Ȥʤ��Ǥ��Ƥ��ޤ��������餷����</p>
+          <p>SL-5500 の場合、BGM(MP3) と音声 (WAV) の同時演奏も特に途切れることなくできています。素晴らしい。</p>
 
-<h3>2003ǯ1��2��</h3>
-<p>�糢���ˤʤäơ��褦�䤯���Ƥ�SL-C700�����Ϥ�����դ��ʤ��ʤ��Զ����äǤ��ޤ�����SDL�ؤΥѥå��Ȥ��������н褷�Ƥ��ޤ�������ǵ����ɤ�ǯ��ۤ��ޤ����Ȥ��������ۤ��ޤ����ʤ����񤤤Ƥ���Τϴ���2003ǯ�ˡ�</p>
+          <h3>2003年1月2日</h3>
+          <p>大晦日になって、ようやく懸案のSL-C700で入力を受け付けなくなる不具合を解消できました。SDLへのパッチという形で対処しています。これで気持良く年を越せます。というか、越せました（これを書いているのは既に2003年）。</p>
 
-<h3>2003ǯ1��26��</h3>
-<P>-e �դ� 640x480 �ˤ��ƥ��ꥮ��512MB��CF�˼��ޤ륲������äƤߤޤ�
-����swap �� 64MB �Ȥäơ��ʤ�Ȥ������ư���ޤ����������������꡼��
-­�Ȥ���������ɥ������ˤ˽Фޤ���̵��Ǥ��ޤ�����free �Ǹ���ȡ�used 
-���ִֺ�����® Mem: 29604, Swap: 57684, Total 87288 �ޤǤ����ޤ�������
-��������ä�Ʊ�����Ѳ����̤�¿���Ȼפ��ΤǤ��������̤�VGA ���ȥǡ�����
-��Ⱦü�ǤϤʤ��Τǡ��Ȥ��Ƥ��ʤ������ǡ�������Ū�˲������뵡�����
-�����ʤ��Ȥ��Ĥ����⡣���̤��������ʤ�Ǥ����ɤͤ���</P>
+          <h3>2003年1月26日</h3>
+          <P>-e 付き 640x480 にしてギリギリ512MBのCFに収まるゲームをやってみまし
+            た。swap を 64MB とって、なんとか正常に動きました。ただし、メモリー不
+            足というウィンドウが頻繁に出ます。無視できますが。free で見ると、used
+            が瞬間最大風速 Mem: 29604, Swap: 57684, Total 87288 までいきます。この
+            ゲームは特に同時使用画像量が多いと思うのですが、一般にVGA だとデータ量
+            も半端ではないので、使われていない画像データを一時的に解放する機構を実
+            装しないときついかも。画面は非常に綺麗なんですけどねぇ。</P>
 
-<P>640x480��640x480 �ξ��ϡ�onscripter-cf, onscripter-sd�Υ��������
-�ȤäƤ���������800x600��640x480�ξ��ϡ��б����륢��������äƤʤ�
-�Τǡ����󥽡��뤫�� onscripter --root /mnt/cf/nscr
---force-button-shortcut --disable-rescale �Ȥ�äƤ������������Τ����ˡ�
-launcher ����ޤ���</P>
+          <P>640x480→640x480 の場合は、onscripter-cf, onscripter-sdのアイコンを
+            使ってください。800x600→640x480の場合は、対応するアイコンを作ってない
+            ので、コンソールから onscripter --root /mnt/cf/nscr
+            --force-button-shortcut --disable-rescale とやってください。そのうちに、
+            launcher を作ります。</P>
 
-<h3>2003ǯ6��22��</h3>
+          <h3>2003年6月22日</h3>
 
-<P>SDL �饤�֥��򡢰����Τ�Τ�١����ˤ��뤳�Ȥˤ��ޤ������Ǥ�
-����ONScripter ��ư�����ȿ����Զ�礬�Ф��Τǡ������ѥå���񤭤ޤ�����
-�ޤ���SL-5500 �Ǹ��ڤ��뤿�ᡢ�ס����Ÿ������졢 ROM 3.1 ���ޤ�����
-�Τ��ˡ�SL-B500 ���ˤʤ�ޤ�����Ժ������ޤ��������ǽ�Ū�ˤ� 
-SL-5500(QVGA), SL-C700(QVGA, VGA)�ɤ���Ǥ� ONScripter ������ʤ�ư��
-�ޤ�����������SL-A300 ���ǤϤ��������ʤäƤ��뤫�⤷��ޤ��󡣤��ξ��
-�����򲼤�������������QVGA ���� SL-5500 ������ SL-C700 ���������
-</P>
+          <P>SDL ライブラリを、阿川さんのものをベースにすることにしました。です
+            が、ONScripter を動かすと色々不具合が出たので、修正パッチを書きました。
+            また、SL-5500 で検証するため、久々に電源を入れ、 ROM 3.1 を試しました。
+            確かに、SL-B500 風になります。試行錯誤しましたが、最終的には
+            SL-5500(QVGA), SL-C700(QVGA, VGA)どちらでも ONScripter が問題なく動き
+            ます。ただし、SL-A300 等ではおかしくなっているかもしれません。その場合
+            は報告を下さい。しかし、QVGA だと SL-5500 の方が SL-C700 より綺麗だ。
+          </P>
 
-</div> <!-- content -->
+        </div> <!-- content -->
 
-</div> <!-- main -->
-</div> <!-- main-container -->
+      </div> <!-- main -->
+    </div> <!-- main-container -->
 
-<div id="footer">
-Copyright (c) 1998-2012 Studio O.G.A. All rights reserved.
-</div> <!-- footer -->
+    <div id="footer">
+      Copyright (c) 1998-2012 Studio O.G.A. All rights reserved.
+    </div> <!-- footer -->
 
-</div> <!-- body -->
+  </div> <!-- body -->
 
 </body>
+
 </html>

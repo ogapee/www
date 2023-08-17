@@ -1,884 +1,886 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <HTML lang="ja">
+
 <HEAD>
-<META http-equiv="Content-Type" content="text/html; charset=EUC-JP">
-<META http-equiv="Content-Style-Type" content="text/css">
-<META name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-<TITLE> ONScripter ��ȯ���� </TITLE>
-<LINK rel="stylesheet" type="text/css" href="/ogapee.css">
+  <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <META http-equiv="Content-Style-Type" content="text/css">
+  <META name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <TITLE> ONScripter 開発日誌 </TITLE>
+  <LINK rel="stylesheet" type="text/css" href="/ogapee.css">
 </HEAD>
 
 <body>
 
-<div id="body">
+  <div id="body">
 
-<div id="header">
-<H1>ONScripter ��ȯ����</H1>
+    <div id="header">
+      <H1>ONScripter 開発日誌</H1>
 
-Since: Feb. 6, 2002<br>
-Last updated: Mar. 31, 2002
-</div> <!-- header -->
+      Since: Feb. 6, 2002<br>
+      Last updated: Mar. 31, 2002
+    </div> <!-- header -->
 
-<div id="toc-container">
+    <div id="toc-container">
 
-<h3>���γ�ȯ����</h3>
+      <h3>過去の開発日誌</h3>
 
-<div id="toc">
+      <div id="toc">
 
-<ul>
-  <li> 2001ǯ
-    <ul>
-      <li> <A HREF="onscripter_devel.2001.html">12��</A>
-    </ul>
-</ul>
-</div> <!-- toc -->
-</div> <!-- toc-container -->
-
-
-<div id="diary-container">
-<div id="diary">
-
-<h2>2002ǯ1���3��</h2>
-
-<div class="diary-day">
-<h3>3��31��</h3>
-
-<p>���¦Ť���θ��Ŧ�ˤ�ꡢmode800 �λ��� underline �ν���ͤ˴ؤ���
-�Х����롣</p>
-
-<p>���¦Ť���θ��Ŧ�ˤ�ꡢcmp �����ͤ����������Х����롣</p>
-
-<p>�����ɤ� clean up��</p>
+        <ul>
+          <li> 2001年
+            <ul>
+              <li> <A HREF="onscripter_devel.2001.html">12月</A>
+            </ul>
+        </ul>
+      </div> <!-- toc -->
+    </div> <!-- toc-container -->
 
 
-<h4>20020331a</h4>
+    <div id="diary-container">
+      <div id="diary">
 
-<p>���̤˥���꡼�����Ƥ����Τ������</p>
+        <h2>2002年1月～3月</h2>
 
-</div>
+        <div class="diary-day">
+          <h3>3月31日</h3>
+
+          <p>αβεさんの御指摘により、mode800 の時の underline の初期値に関する
+            バグを取る。</p>
+
+          <p>αβεさんの御指摘により、cmp の戻値がおかしいバグを取る。</p>
+
+          <p>コードの clean up。</p>
 
 
-<div class="diary-day">
-<h3>3��30�� <span style="color:red">�����֥ե�����θߴ�����̵���ʤ�ޤ���</span></h3>
+          <h4>20020331a</h4>
 
-<p>saveon, saveoff �������</p>
+          <p>大量にメモリリークしていたのを改善。</p>
 
-<p>forCommand, nextCommand �� clean up �� bufix��</p>
+        </div>
 
-<p>����¾ bug fix��</p>
 
-<p>���硼�ȥ��åȥ����� space �������줿��硢�ޥ�����������β��˥ܥ�
-�󤬤��äƤ�ܥ��󳰤򲡤������Ȥˤ��롣</p>
+        <div class="diary-day">
+          <h3>3月30日 <span style="color:red">セーブファイルの互換性が無くなりました</span></h3>
 
-<p>�����֥ե������ text ��ɽ������ɽ���򼨤��ե饰���Ǽ���롣�����Υ�����
-�ե�����ϼ��Τ褦�ˤ��ưܹԤ��Ƥ��������������� 1byte (0x01) �ɲä���
-�����Ǥ���</p>
+          <p>saveon, saveoff を実装。</p>
 
-<PRE>
+          <p>forCommand, nextCommand の clean up と bufix。</p>
+
+          <p>その他 bug fix。</p>
+
+          <p>ショートカットキーの space が押された場合、マウスカーソルの下にボタ
+            ンがあってもボタン外を押したことにする。</p>
+
+          <p>セーブファイルに text の表示／非表示を示すフラグを格納する。以前のセーブ
+            ファイルは次のようにして移行してください。末尾に 1byte (0x01) 追加する
+            だけです。</p>
+
+          <PRE>
 echo -n '\001' &gt;&gt; save1.dat
 </PRE>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>3��27��</h3>
+        <div class="diary-day">
+          <h3>3月27日</h3>
 
-<p>sdl-fan-jp �� Iguchi ����Υѥå��������졢MacOS X �� CD-ROM ���
-��ʤ��褦�ˤ��뤿��Υ����ɤ�����MacOS X ������˥���ѥ���Ǥ��뤫
-�ɤ���̤���ڤ�������������������ä���MacOS X �Ǥ�ư����𤪴ꤤ��
-�ޤ���</p>
+          <p>sdl-fan-jp の Iguchi さんのパッチを取り入れ、MacOS X で CD-ROM を使
+            わないようにするためのコードを修正。MacOS X で正常にコンパイルできるか
+            どうか未検証だが、こちらの方がずっと綺麗。MacOS X での動作報告お願いし
+            ます。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>3��26��</h3>
+        <div class="diary-day">
+          <h3>3月26日</h3>
 
-<p>Takano ���� adas ���󤫤� MacOS X ��Ǥν�ư�����򤤤������ޤ�����
-���������� Makefile.MacOSX ���ɲá�</p>
+          <p>Takano さん adas さんから MacOS X 上での初動作報告をいただきました。
+            いただいた Makefile.MacOSX を追加。</p>
 
-<p>adas ����θ��Ŧ�ˤ�ꡢSDL_image ��ȤäƲ������ɤ߹���ݡ�ɬ�ץ�
-���֥��(libjpeg ��)̤���󥹥ȡ���Τ�����ɤ߹��᤺����븽�ݤ��н衣
-</p>
+          <p>adas さんの御指摘により、SDL_image を使って画像を読み込む際、必要ラ
+            イブラリ(libjpeg 等)未インストールのために読み込めず落ちる現象に対処。
+          </p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>3��25��</h3>
+        <div class="diary-day">
+          <h3>3月25日</h3>
 
-<p>textgosub, textbtnwait, getcursor, texec, ispage �򲾼�����
-textgosub �ϰ츫����˵�ǽ���Ƥ���褦�˸����뤫�⤷��ޤ��󤬡�
-saveon, saveoff ��̤�����Ǥ��뤿�� textgosub �⤫��� save, load ����
-��ˤϹԤ��ޤ���ʰ�� save, load �ϤǤ��ޤ��ˡ�¾�ˤ⿧�����������Ȥ�
-��������Τǡ������ޤǻŪ�ʥ�꡼�����ȻפäƤ����������ʤ���
-textgosub ����Ѥ��ʤ�������ˤĤ��Ƥ� 20020321a Ʊ�ͤ�ư���Ϥ���
-����</p>
+          <p>textgosub, textbtnwait, getcursor, texec, ispage を仮実装。
+            textgosub は一見正常に機能しているように見えるかもしれませんが、
+            saveon, saveoff が未実装であるため textgosub 内からの save, load は正
+            常には行えません（一応 save, load はできます）。他にも色々おかしいとこ
+            ろがあるので、あくまで試験的なリリースだと思ってください。なお、
+            textgosub を使用しないゲームについては 20020321a 同様に動作するはずで
+            す。</p>
 
-<p>len �������</p>
+          <p>len を実装。</p>
 
-<H4>20020325a</H4>
+          <H4>20020325a</H4>
 
-<p>MacOS X ��ư���褦�ˡ�����ѥ������ CD Audio �����Ѥ�̿��� 
-#ifdef �ǥ����åפǤ���褦�ˤ��롣</p>
+          <p>MacOS X で動作するように、コンパイル時に CD Audio 制御用の命令を
+            #ifdef でスキップできるようにする。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>3��21��</h3>
+        <div class="diary-day">
+          <h3>3月21日</h3>
 
-<p>���¦Ť������𤵤줿��select ������褬ʸ�����ѿ��λ���������Х�
-�θ���������ľ�����Ĥ�꤬�����ڤ��Խ�ʬ���ä�����ľ������Ƥ��ޤ���
-�Ǥ��������¦Ť���� patch �򻲹ͤ˺��ٽ�����</p>
+          <p>αβεさんの報告された、select の選択肢が文字列変数の時に生じるバグ
+            の原因を一昨日直したつもりが、検証が不十分だったため直しきれていません
+            でした。αβεさんの patch を参考に再度修正。</p>
 
-<p>textoff, texton �������</p>
+          <p>textoff, texton を実装。</p>
 
-<p>���¦Ť���θ��Ŧ�ˤ�ꡢɽ��ʸ����ü�̿��ʳ���ASCIIʸ����ɽ����
-��褦�ˤ��롣</p>
+          <p>αβεさんの御指摘により、表示文中に特殊命令以外のASCII文字を表示す
+            るようにする。</p>
 
-<H4>20020321a</H4>
+          <H4>20020321a</H4>
 
-<p>���� 1 �� wait ��ʤ����顢busy loop �ˤʤä����Ϥ�����դ��ʤ�����
-��ȯ���������ᡢ���ϻ��� wait �������褦���᤹��</p>
+          <p>効果 1 で wait を省いたら、busy loop になって入力を受け付けない状況
+            が発生したため、開始時に wait を入れるように戻す。</p>
 
-<p>�Ĥ��Ǥ� textspeed �������</p>
+          <p>ついでに textspeed を実装。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>3��20��</h3>
+        <div class="diary-day">
+          <h3>3月20日</h3>
 
-<p>���Ĥ���� patch �򻲹ͤˡ�--edit ���ץ���������� z �����ǲ��̡�
-�ѿ��ѹ��⡼�ɤ�����뤪�ޤ���ǽ��Ĥ��롣���ε�ǽ�ϻ���Ū�ʤ�ΤǤ��ꡢ
-����ɤ��ʤ뤫�������Ǥ���</p>
+          <p>富田さんの patch を参考に、--edit オプション指定時に z キーで音量・
+            変数変更モードに入れるおまけ機能をつける。この機能は暫定的なものであり、
+            今後どうなるかは不明です。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>3��19��</h3>
+        <div class="diary-day">
+          <h3>3月19日</h3>
 
-<p>���¦Ť���θ��Ŧ��ҥ�Ȥˡ�̿��ʸ��� &quot;&quot; �ǰϤޤ줿 
-2bytes ʸ�������ä����ˡ��ʹߤ�ƥ�����ʸ�Ȥ��Ʋ�ᤷ�ѿ��� decode 
-���Ƥ����Х����롣</p>
+          <p>αβεさんの御指摘をヒントに、命令文中に &quot;&quot; で囲まれた
+            2bytes 文字があった場合に、以降をテキスト文として解釈し変数を decode
+            していたバグを取る。</p>
 
-<p>���Ĥ���� patch �������졢CD Audio �� BGM ���դ���ݤˡ������ȥ��
-���ֹ椬�����֤���ʤ��Х����롣</p>
+          <p>富田さんの patch を取り入れ、CD Audio で BGM 演奏する際に、再生トラッ
+            ク番号がセーブされないバグを取る。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>3��18��</h3>
+        <div class="diary-day">
+          <h3>3月18日</h3>
 
-<p>quakex, quakey, quake ��������Ƹ����˴ؤ�������罸��</p>
+          <p>quakex, quakey, quake を実装。再現性に関して報告募集。</p>
 
-<H4>20020318a</H4>
+          <H4>20020318a</H4>
 
-<p>select ��ʣ���Ԥˤޤ�����Ȥ��ˡ���Ƭ�� * �ǤϤ��ޤ뤳�Ȥϵ������
-���褦����TODO ��������</p>
+          <p>select が複数行にまたがるときに、先頭が * ではじまることは許されな
+            いようだ。TODO から削除。</p>
 
-<p>select �� &quot;&quot; ���갷����褦�ˤ��롣</p>
+          <p>select で &quot;&quot; を取り扱えるようにする。</p>
 
-<p>���Ĥ���� patch �򻲹ͤ� getreg �������</p>
+          <p>富田さんの patch を参考に getreg を実装。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>3��17��</h3>
+        <div class="diary-day">
+          <h3>3月17日</h3>
 
-<p>erasetextwindow ���������������select �� btnwait ����ʸ�Ϥ�������
-�ݤ��Ťʤ����������ɽ���Ǥ��ʤ���</p>
+          <p>erasetextwindow を実装。ただし、select や btnwait 時に文章と選択対
+            象が重なる場合に正しく表示できない。</p>
 
-<H4>20020317a</H4>
+          <H4>20020317a</H4>
 
-<p>���̤� 15, 18 ��������������٤���</p>
+          <p>効果の 15, 18 を実装。ただし遅い。</p>
 
-<p>̿��ľ���ɽ��ʸ������Ⱥǽ��ʸ�����礱��Х����롣</p>
+          <p>命令直後に表示文があると最初の文字が欠けるバグを取る。</p>
 
-<p>delayed effect �������Ƥ��ʤ��ä��Х����롣�Ȥ�������link ��¤��
-����ɬ�פ������ʤ��ä������ͤδ��㤤���Ȥۤۡ�</p>
+          <p>delayed effect が効いていなかったバグを取る。というか、link 構造に
+            する必要が全くなかった。仕様の勘違い。とほほ。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>3��13��</h3>
+        <div class="diary-day">
+          <h3>3月13日</h3>
 
-<p>��ư���ץ����� --font �� ttf �ե���Ȥ����Ǥ���褦�ˤ��롣</p>
+          <p>起動オプションの --font で ttf フォントを指定できるようにする。</p>
 
-<p>���������֤���ǥե���ȥ���������ɤ߹����褦�ˤ��롣</p>
+          <p>アーカイブからデフォルトカーソルを読み込めるようにする。</p>
 
-<p>�������ʤ���ʸ���󥹥ץ饤�Ȥ�ʸ�����ѿ���Ȥ���褦�ˤ��롣���Τ�
-��ˡ�readToken �Ϥ�string_buffer �ΤߤǤϤʤ�Ǥ�դ� char ���󤫤���
-���褦�ˤ��롣</p>
+          <p>美しくないが文字列スプライトで文字列変数を使えるようにする。そのた
+            めに、readToken 系を、string_buffer のみではなく任意の char 配列から読
+            めるようにする。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>3��12��</h3>
+        <div class="diary-day">
+          <h3>3月12日</h3>
 
-<p>��ư���˥��ޥ�ɥ饤�󥪥ץ��������褦�ˤ��롣</p>
+          <p>起動時にコマンドラインオプションを取れるようにする。</p>
 
-<p>���Ĥ���� patch �򻲹ͤ� CD audio �ˤ����դ�����Ǥ��뵡ǽ���ɲá�
-�ǥե���ȤǤ� mp3 �ե�������ա�--cdaudio ���ץ������դ��Ƶ�ư����
-���Ȥ� CD audio ���դˤʤ�ޤ���</p>
+          <p>富田さんの patch を参考に CD audio による演奏を選択できる機能を追加。
+            デフォルトでは mp3 ファイル演奏、--cdaudio オプションを付けて起動する
+            ことで CD audio 演奏になります。</p>
 
-<p>���¦Ť���� patch �򻲹ͤˡ�������� track ���Ф��� play ̿���̵
-�뤹��褦�ˤ��롣�����������줬������ư��ɤ�����̤���ڡ�</p>
+          <p>αβεさんの patch を参考に、再生中の track に対する play 命令を無
+            視するようにする。ただし、これが妥当な動作かどうかは未検証。</p>
 
-<p>���¦Ť���� patch �򻲹ͤˡ�
-(&quot;&quot;)&quot;true&quot;&quot;false&quot;��(&quot;&quot;)������
-�����Ȥ��ʤ��Х����롣</p>
+          <p>αβεさんの patch を参考に、
+            (&quot;&quot;)&quot;true&quot;&quot;false&quot;の(&quot;&quot;)部に変
+            数が使えないバグを取る。</p>
 
-<p>���ۻ��˥ܥ���ΰ��֤����������Х����롣</p>
+          <p>回想時にボタンの位置がおかしいバグを取る。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>3��10��</h3>
+        <div class="diary-day">
+          <h3>3月10日</h3>
 
-<p>�����ɤ� clean up �ȥХ���ꡣ</p>
+          <p>コードの clean up とバグ取り。</p>
 
-<p>�������ɤ߼��ǡ����˥����Σ����ޤλ��֤��᤹��Ľ��ְ㤨�Ƥ�
-���Х����롣</p>
+          <p>タグの読み取りで、アニメ指定の１コマの時間を解釈する個所を間違えてい
+            たバグを取る。</p>
 
-<p>s ���ޥ�ɤ�ʸ�����鳨����Ȥ��ˡ�������ǤϤʤ��������ˤ������ȹ�
-����������롣����� spbtn �ǻȤ���褦�ˤʤ롣</p>
+          <p>s コマンドで文字から絵を作るときに、描画時ではなく生成時にその幅と高
+            さを取得する。これで spbtn で使えるようになる。</p>
 
-<p>���ۻ��� select ʸ��ʸ����ɽ������ʤ��褦�ˤ��롣</p>
+          <p>回想時に select 文の文字が表示されないようにする。</p>
 
-<p>���¦Ť���� patch �������졢nbz ����ह��ݤ�̵�¥롼�פ˴٤��
-�礬����Х����н褹�롣</p>
+          <p>αβεさんの patch を取り入れ、nbz を解凍する際に無限ループに陥る場
+            合があるバグに対処する。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>3��9��</h3>
+        <div class="diary-day">
+          <h3>3月9日</h3>
 
-<p>���¦Ť���� patch �������졢select ���̤Ƕ�§�������Ԥ���褦��
-���롣</p>
+          <p>αβεさんの patch を取り入れ、select 画面で禁則処理が行われるように
+            する。</p>
 
-<p>select �Ԥ��λ��ˡ�������å���˥塼���� skip �⡼�ɤˤ���� 
-select ��������֤ˤʤ�Х����롣</p>
+          <p>select 待ちの時に、右クリックメニューから skip モードにすると
+            select が選択状態になるバグを取る。</p>
 
-<p>˿�������äȽ�λ������Ȥ����� quake ��̵�����Ȥ��餤��</p>
+          <p>某ゲームやっと終了。問題といえば quake が無いことくらい。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>3��8��</h3>
+        <div class="diary-day">
+          <h3>3月8日</h3>
 
-<p>(&quot;&quot;)&quot;true&quot;&quot;false&quot;�������</p>
+          <p>(&quot;&quot;)&quot;true&quot;&quot;false&quot;を実装。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>3��7��</h3>
+        <div class="diary-day">
+          <h3>3月7日</h3>
 
-<p>sar �äơ�ˢ���פǻȤ��Ƥ����������������ͽ�ˤϾ�äƤ��ʤ�����
-�ꤢ���� nsa ��Ʊ�������ˤ��롣�Ȥ����櫓�ǡ�sar ���衣</p>
+          <p>sar って「泡沫」で使われていた。しかし、仕様書には乗っていない。と
+            りあえず nsa と同じ扱いにする。というわけで、sar 復活。</p>
 
-<p>arc �ΰ������б�����ʣ�����������֤򰷤���褦�ˤ��롣</p>
+          <p>arc の引数に対応し、複数アーカイブを扱えるようにする。</p>
 
-<p>���¦Ť���� patch �������졢caption �������</p>
+          <p>αβεさんの patch を取り入れ、caption を実装。</p>
 
-<p>ONScripter ���֤��С������� 1.96 �ˤ��롣</p>
+          <p>ONScripter の返すバージョンを 1.96 にする。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>3��6��</h3>
+        <div class="diary-day">
+          <h3>3月6日</h3>
 
-<p>movl �������</p>
+          <p>movl を実装。</p>
 
-<p>����� 0 �ǽ��������褦�ˤ��롣</p>
+          <p>配列を 0 で初期化するようにする。</p>
 
-<p>���¦Ť���� patch �������졢setwindow �ǻ��ꤷ��������ɥ������� 
-���֥��ǥ��󥰤����������Х����롣</p>
+          <p>αβεさんの patch を取り入れ、setwindow で指定したウィンドウ画像の
+            αブレンディングがおかしいバグを取る。</p>
 
-<p>���¦Ť���θ��Ŧ�ˤ�ꡢrmode 0 �ˤ��Ƥ⡢������å���ȿ�����Ƥ�
-�ޤ��Х����롣roff �������</p>
+          <p>αβεさんの御指摘により、rmode 0 にしても、右クリックに反応してし
+            まうバグを取る。roff を実装。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>3��5��</h3>
+        <div class="diary-day">
+          <h3>3月5日</h3>
 
-<p>exbtn, exbtn_d, spstr �������</p>
+          <p>exbtn, exbtn_d, spstr を実装。</p>
 
-<p>���¦Ť���θ��Ŧ�ˤ�ꡢ������å���˥塼�������ʳ��򥯥�å�
-����Ƚ������ߤޤ�Х����롣</p>
+          <p>αβεさんの御指摘により、右クリックメニューで選択肢以外をクリック
+            すると処理が止まるバグを取る。</p>
 
-<p>sar �ʤ��̿��ʤ��󤸤�ʤ����ʤ�Ǥ��줿��������Ȥ����櫓�Ǻ����
-</p>
+          <p>sar なんて命令ないんじゃない？なんでいれたんだろ？というわけで削除。
+          </p>
 
-<p>btnwait �λ��ˡ�skip mode �� off �ˤ���褦�ˤ��롣</p>
+          <p>btnwait の時に、skip mode を off にするようにする。</p>
 
-<p>trap �������</p>
+          <p>trap を実装。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>3��4��</h3>
+        <div class="diary-day">
+          <h3>3月4日</h3>
 
-<p>spbtn �μ�갷���ι�®����</p>
+          <p>spbtn の取り扱いの高速化。</p>
 
-<p>��ά�ͤ��ɤ����򸡽Ф���ĤΥ��ޥ�ɤζ��ڤ�����Τ�Ƚ�Ǥ��뤳�Ȥǡ�
-���ޥ�ɤζ��ڤ꤬':'��̵�������갷����褦�ˤ��롣</p>
+          <p>省略値かどうかを検出し一つのコマンドの区切りを正確に判断することで、
+            コマンドの区切りが':'で無い場合も取り扱えるようにする。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>3��3��</h3>
+        <div class="diary-day">
+          <h3>3月3日</h3>
 
-<p>����ե��å��Υ��������Ʃ���������� r ���ɲáܲ�����갷�������
-�Х�������</p>
+          <p>グラフィックのタグ指定の透過形式指定に r を追加＋画像取り扱い周りの
+            バグ修正。</p>
 
-<p>btnwait �ǡ��ƥ����Ȥ�ä������Ѥ˲��̤�����ľ����</p>
+          <p>btnwait で、テキストを消し描画用に画面を描き直す。</p>
 
-<p>cell, spbtn �������</p>
+          <p>cell, spbtn を実装。</p>
 
-<p>defvoicevol, defsevol, defmp3vol �������</p>
+          <p>defvoicevol, defsevol, defmp3vol を実装。</p>
 
-<p>voicevol, sevol, mp3vol �������</p>
+          <p>voicevol, sevol, mp3vol を実装。</p>
 
-<p>wave ���դ� SDL_Mixer �� MIX_CHANNELS(=8) �����ͥ�ʬƱ�����Ĥ餻
-��褦�ˤ���wave ���ޥ�ɤ� 1 �֤ˡ�dwave �� 0-7 �Ϥ��Τޤޡ�8 �ʹߤ� 
-7 �֤˳���դ���褦�ˤ��롣</p>
+          <p>wave 演奏を SDL_Mixer の MIX_CHANNELS(=8) チャンネル分同時に鳴らせ
+            るようにし、wave コマンドは 1 番に、dwave の 0-7 はそのまま、8 以降は
+            7 番に割り付けるようにする。</p>
 
-<p>mp3 ����դ���Ȥ��ˡ����ޤǤ� SDL_sound ���ɤ߹��� SDL_mixer ��¾
-�β��ȥߥå������Ƥ����Τ�����������ȥܥ�塼����ѹ��Ǥ��ʤ��Ȥ�����
-�꤬���ä��������ǡ�SMPEG ��ľ���Ѥ����ɤ߹��� SDL_mixer �ǹ�������
-SMPEG_setvolume ��ľ�ܻȤäƥܥ�塼����Ѥ���褦�ˤ��롣��̤Ȥ��ơ�
-SDL_sound ����ɬ�פˤʤä���</p>
+          <p>mp3 を演奏するときに、今までは SDL_sound で読み込み SDL_mixer で他
+            の音とミックスしていたのだが、これだとボリュームを変更できないという問
+            題があった。そこで、SMPEG を直接用いて読み込み SDL_mixer で合成し、
+            SMPEG_setvolume を直接使ってボリュームを変えるようにする。結果として、
+            SDL_sound が不必要になった。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>3��1��</h3>
+        <div class="diary-day">
+          <h3>3月1日</h3>
 
-<p>���¦Ť���θ��Ŧ�ˤ�ꡢ/���ޥ�ɡ�ľ��β���̵��ˤΰ����ΥХ���
-��롣</p>
+          <p>αβεさんの御指摘により、/コマンド（直後の改行無視）の扱いのバグを
+            取る。</p>
 
-<p>���¦Ť���θ��Ŧ�ˤ�ꡢ&quot;��&quot;���§ʸ�����ɲá�</p>
+          <p>αβεさんの御指摘により、&quot;ー&quot;を禁則文字に追加。</p>
 
-<p>���¦Ť���θ���˾�ˤ�ꡢselnum �������</p>
+          <p>αβεさんの御要望により、selnum を実装。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>2��28��</h3>
+        <div class="diary-day">
+          <h3>2月28日</h3>
 
-<p>btndef clear ���б�����������ONScripter �Ǥ� &quot;&quot; �ǰϤޤ�
-��ʸ������Ǥ�ʸ�������̤��ʤ����ᡢ&quot;clear&quot; �Ȥ���̾���β�
-������ꤹ��ȡ�btndef clear �Ȥ���ǧ������Ƥ��ޤ������������ɤ���� 
-clear �Ȥ���̾���β��������ꤵ�줳�ȤϤʤ������ʤΤǡ��ޤ���������</p>
+          <p>btndef clear に対応。しかし、ONScripter では &quot;&quot; で囲まれ
+            た文字列と素の文字列を区別しないため、&quot;clear&quot; という名前の画
+            像を指定すると、btndef clear として認識されてしまう。しかし、どうやら
+            clear という名前の画像が指定されことはなさそうなので、まあいいか。</p>
 
-<p>skip �ǥ�٥��ޤ����Ȥ������������֤˹Ԥ��ʤ��Х����롣�褯����
-��ư���Ƥ�����Τ���</p>
+          <p>skip でラベルをまたぐときに正しい位置に行かないバグを取る。よく今ま
+            で動いていたものだ。</p>
 
-<p>Ϣ³�������򥹥��åפ��륳���ɤ����ǽ�ΰ�Ĥ��������åפ��ʤ���
-���ˤʤäƤ����Х����롣</p>
+          <p>連続する空白をスキップするコードが、最初の一つしかスキップしないよ
+            うになっていたバグを取る。</p>
 
-<H4>20020228a</H4>
+          <H4>20020228a</H4>
 
-<p>blt ����� surface ���ͳ���ʤ��褦�ˤ���®����</p>
+          <p>blt を中間 surface を経由しないようにし高速化。</p>
 
-<p>setwindow, menusetwindow �ο�̣�⡼�ɤȲ����ե�����⡼�ɤˤޤȤ��
-�б���</p>
+          <p>setwindow, menusetwindow の色味モードと画像ファイルモードにまともに
+            対応。</p>
 
-<p>mov3 - mov10 �������</p>
+          <p>mov3 - mov10 を実装。</p>
 
-<p>�ǥե���ȤΥƥ����ȥ��ԡ��ɤ򤽤줾�죲�ܤ��ѹ���</p>
+          <p>デフォルトのテキストスピードをそれぞれ２倍に変更。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>2��27��</h3>
+        <div class="diary-day">
+          <h3>2月27日</h3>
 
-<p>���¦Ť���� patch �������졢abssetcursor �������</p>
+          <p>αβεさんの patch を取り入れ、abssetcursor を実装。</p>
 
-<p>���¦Ť���θ��Ŧ�ˤ�ꡢreadInt �Ǿ�ά�ͤ��ɤ߹���ݤΥХ���ľ����</p>
+          <p>αβεさんの御指摘により、readInt で省略値を読み込む際のバグを直す。</p>
 
-<p>Nbz decode �����������ˤ�ꡢɬ�פʥ饤�֥��� bzip2 ���ä���
-������</p>
+          <p>Nbz decode を実装。これにより、必要なライブラリに bzip2 が加わりま
+            した。</p>
 
-<p>bg#000000, ... �Τ褦�ˡ�# ������ token �����ܤ��Ƥ�����ˤ���
-������褦�ˤ��롣</p>
+          <p>bg#000000, ... のように、# が前の token と隣接している場合にも取り
+            扱えるようにする。</p>
 
-<p>�����ե����뤬¸�ߤ��ʤ��Ȥ⥲�����³�Ԥ���褦�ˤ��롣</p>
+          <p>画像ファイルが存在しなくともゲームを続行するようにする。</p>
 
-<H4>20020227a</H4>
+          <H4>20020227a</H4>
 
-<p>skip mode �⤷���ϣ��ڡ���ɽ���� select �Ԥ��˹Ԥ��������Ǳ������
-����˥塼�˹ԤäƤޤ� select �Ԥ�����äƤ����Ȥ��ˡ��������뤬ɽ����
-��ޥ������Բ�ǽ�ˤʤ뤳�Ȥ�����Х���ľ����</p>
+          <p>skip mode もしくは１ページ表示で select 待ちに行き、そこで右クリッ
+            クメニューに行ってまた select 待ちに戻ってきたときに、カーソルが表示さ
+            れマウス操作が不可能になることがあるバグを直す。</p>
 
-<H4>20020227b</H4>
+          <H4>20020227b</H4>
 
-<p>���������ܤΥ��åס�����ѹ��ˤȤ�ʤ� skip mode �⤷���ϣ��ڡ���ɽ
-���ǥ��������Ԥ��ΰ��������������ʤä��Х����롣</p>
+          <p>本日３回目のアップ。上の変更にともない skip mode もしくは１ページ表
+            示でカーソル待ちの扱いがおかしくなったバグを取る。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>2��26�� <span style="color:red">�����֥ե�����θߴ�����̵���ʤ�ޤ���</span></h3>
+        <div class="diary-day">
+          <h3>2月26日 <span style="color:red">セーブファイルの互換性が無くなりました</span></h3>
 
-<p>ScriptParser �� Script ���᤹����ʬ���������ѹ�����������б���</p>
+          <p>ScriptParser の Script を解釈する部分を大幅に変更し、配列に対応。</p>
 
-<p>�������������ͽ�ˤϥ��ץ饤�Ȥ� 0-49 �Ȥ���Τˡ��ºݤˤ� 0-255 ��
-�������ޤ������֥ե������ѹ����衣���κݡ���������ϰϤ⥻���֥ե�����ˤ�
-�졢�ǥե�����ͤ��ѹ����Ѥ�����褦�ˤ��롣</p>
+          <p>げげげー。仕様書にはスプライトが 0-49 とあるのに、実際には 0-255 ら
+            しい。またセーブファイル変更だよ。この際、取り得る範囲もセーブファイルにい
+            れ、デフォルト値の変更に耐えられるようにする。</p>
 
-<p>���ȡ����ۤ�̵�¤ˤǤ���褦�ˤ������������褦���������Ͼ���ľ���Ȥ�
-�ơ��Ĥ��Ǥ�ɬ�פʥѥ�᡼���򥻡��֥ե�������ɲä��Ƥ�����</p>
+          <p>あと、回想も無限にできるようにした方がいいようだ。ここは将来直すとし
+            て、ついでに必要なパラメータをセーブファイルに追加しておく。</p>
 
-<p>btnwait2 �������</p>
+          <p>btnwait2 を実装。</p>
 
-<p>mid �������</p>
+          <p>mid を実装。</p>
 
-<p>800x600 �⡼�ɤ������</p>
+          <p>800x600 モードを実装。</p>
 
-<p>�Ȥ����櫓�ǡ����ä����Ф���ޤ������֥ե�����θߴ������ʤ��ʤ�ޤ�
-����2��24���С������Υ����֥ե����뤫��ܹԤ�����ϼ��Τ褦�ˤ��Ƥ���
-�������ޤ���2��26���С�������ONScripterLabel::loadSaveFile( int no )
-�򼡤Τ褦�˽񤭴����ޤ���<BR>
-��loadInt( fp, &amp;text_history_num ); �򥳥��ȥ�����</p>
+          <p>というわけで、言ったそばからまたセーブファイルの互換性がなくなりまし
+            た。2月24日バージョンのセーブファイルから移行する場合は次のようにしてくだ
+            さい。まず、2月26日バージョンのONScripterLabel::loadSaveFile( int no )
+            を次のように書き換えます。<BR>
+            ・loadInt( fp, &amp;text_history_num ); をコメントアウト</p>
 
-<PRE>
+          <PRE>
     /* ---------------------------------------- */
     /* Load text history */
     //loadInt( fp, &amp;text_history_num );
 
-��for ( i=0 ; i&lt;MAX_SPRITE_NUM ; i++ ){ �� MAX_SPRITE_NUM �� 50 ��
+・for ( i=0 ; i&lt;MAX_SPRITE_NUM ; i++ ){ の MAX_SPRITE_NUM を 50 に
     /* ---------------------------------------- */
     /* Load current sprites */
     //for ( i=0 ; i&lt;MAX_SPRITE_NUM ; i++ ){
     for ( i=0 ; i&lt;50 ; i++ ){
 </PRE>
 
-<p>���ξ��֤ǥ���ѥ��뤷�ƥ������ư�����ܹԤ��륻���֥ե�������ö��
-�߹��ߤ�������¸���ޤ��������֥ե�����ν񤭴���������ä���� 
-ONScripterLabel::loadSaveFile( int no ) �򸵤��ᤷ���ʸ�Ϥ����Ȥä�
-���̤�ͷ�٤�褦�ˤʤ�ޤ���</p>
+          <p>この状態でコンパイルしてゲームを起動し、移行するセーブファイルを一旦読
+            み込みすぐに保存します。セーブファイルの書き換えが終わった後に
+            ONScripterLabel::loadSaveFile( int no ) を元に戻し、以後はこれを使って
+            普通に遊べるようになります。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>2��24�� <span style="color:red">�����֥ե�����θߴ�����̵���ʤ�ޤ���</span></h3>
+        <div class="diary-day">
+          <h3>2月24日 <span style="color:red">セーブファイルの互換性が無くなりました</span></h3>
 
-<p>lookbackbutton, lookbackcolor, lookbackflush �������</p>
+          <p>lookbackbutton, lookbackcolor, lookbackflush を実装。</p>
 
-<p>���ۥ⡼�ɤ�����������ʸ�����򤬸����롣</p>
+          <p>回想モードを実装。これで文章履歴が見られる。</p>
 
-<p>�ޥ����������뤬�ǽ�˥ܥ���ξ�ˤ������������֤ˤʤ�ʤ��Х���
-ľ����</p>
+          <p>マウスカーソルが最初にボタンの上にある場合に選択状態にならないバグを
+            直す。</p>
 
-<p>selectcolor, menuselectcolor �������</p>
+          <p>selectcolor, menuselectcolor を実装。</p>
 
-<p>monocro �������ʤ������ȼ���������֥ե�����θߴ������ʤ��ʤäƤ��ޤ���
-</p>
+          <p>monocro 修正。なおこれに伴い、セーブファイルの互換性がなくなっています。
+          </p>
 
-<p>���¦Ť���θ��Ŧ�ˤ�ꡢsprite �νŤ͹�碌�ν�����դˤʤäƤ���
-�Х���ľ����</p>
+          <p>αβεさんの御指摘により、sprite の重ね合わせの順序が逆になっている
+            バグを直す。</p>
 
-<p>���¦Ť���θ���˾�ˤ�ꡢrmenu �ξ��֤򥻡��֥ե����������롣�����
-ȼ���������֥ե�����θߴ������ʤ��ʤäƤ��ޤ���</p>
+          <p>αβεさんの御要望により、rmenu の状態をセーブファイルに入れる。これに
+            伴い、セーブファイルの互換性がなくなっています。</p>
 
-<p>���¦Ť���θ���˾�ˤ�ꡢgettimer �������</p>
+          <p>αβεさんの御要望により、gettimer を実装。</p>
 
-<p>�����֥ե�����θߴ������ʤ��ʤ뤳�ȤϤʤ�٤��򤱤�褦�ˤ��Ƥ��ޤ�����
-����ϰ����ΥС�����󤬺������� save?.dat �����ƾä��Ƥ�������������
-�������ʤꥲ���ब�ʹԤ��Ƥ��ƥǡ������³���ƻȤ��������Τ���ˡ������֥ե������ܹԤ���΢��������ޤ�����С���������äƤ���ͤϡ����С�����
-��δؿ� ONScripterLabel::loadSaveFile( int no ) ���С������δؿ� 
-ONScripterLabel::loadSaveFile( int no ) �Ǻ�������������ѥ��뤷�ޤ���
-���ξ��֤ǥ������ư�����ܹԤ��륻���֥ե�������ö�ɤ߹��ߤ�������¸
-���ޤ������λ�����¸�Ͽ��С������η����Ǥʤ���ޤ��������֥ե�����ν�
-����������ä���� ONScripterLabel::loadSaveFile( int no ) �򺹤�����
-�ʤ����ÿ��ο��С������򥳥�ѥ��뤷�������Ȥä����̤�ͷ�٤�褦��
-�ʤ�ޤ���������������΢���Ϻ���ΥС�����󥢥åפǤϤ��ޤ������ޤ�����
-��ˤ��ޤ������ȤϤ�����ޤ���</p>
+          <p>セーブファイルの互換性がなくなることはなるべく避けるようにしていますが、
+            今回は以前のバージョンが作成した save?.dat は全て消してください。ただ
+            し、かなりゲームが進行していてデータを継続して使いたい方のために、セーブファイルを移行する裏技があります。旧バージョンを持っている人は、新バージョ
+            ンの関数 ONScripterLabel::loadSaveFile( int no ) を旧バージョンの関数
+            ONScripterLabel::loadSaveFile( int no ) で差し換え、コンパイルします。
+            この状態でゲームを起動し、移行するセーブファイルを一旦読み込みすぐに保存
+            します。この時、保存は新バージョンの形式でなされます。セーブファイルの書き
+            換えが終わった後に ONScripterLabel::loadSaveFile( int no ) を差し換え
+            ない真っ新の新バージョンをコンパイルし、これを使って普通に遊べるように
+            なります。ただし、この裏技は今回のバージョンアップではうまくいきますが、
+            常にうまくいくとはかぎりません。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>2��23��</h3>
+        <div class="diary-day">
+          <h3>2月23日</h3>
 
-<p>monocro ̿���������ޤ����������֥ե������ monocro ̿��ξ�����ɲä��ޤ�����</p>
+          <p>monocro 命令を実装しました。セーブファイルに monocro 命令の情報を追加しました。</p>
 
-<p>select ̿��ǥƥ����Ȥ����̤���λ��ˤϡ������ܡ��ɥ��硼�ȥ��åȤ����������֤Ȥ��ˡ��ޥ����������뤬�Ԥ��濴�ǤϤʤ��ƥ����Ȥ�����ˤ���褦�ˤ��ޤ�����</p>
+          <p>select 命令でテキストが一行未満の時には、キーボードショートカットで選択肢を選ぶときに、マウスカーソルが行の中心ではなくテキストの中央にくるようにしました。</p>
 
-<p>0.txt, 1.txt ��Ϣ�֥ե�����ǡ��ե���������������ʸ����̵������������ɤ߹���ʤ��ä��Х��������ޤ�����</p>
+          <p>0.txt, 1.txt の連番ファイルで、ファイル末尾が改行文字で無い場合に正常に読み込めなかったバグを修正しました。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>2��22��</h3>
+        <div class="diary-day">
+          <h3>2月22日</h3>
 
-<p>for, next, break ̿���������ޤ�����</p>
+          <p>for, next, break 命令を実装しました。</p>
 
-<p>intlimit, amsp ̿���������ޤ�����</p>
+          <p>intlimit, amsp 命令を実装しました。</p>
 
-<p>̿����֤��ͤ� RET_JUMP �λ��ˡ�timer event �� executeLabel ������Ǥ����Τ�goto �� executeLabel �κǽ�����褦�ˤ��ޤ����������;�פʻ����Ԥ�������ޤ���</p>
+          <p>命令の返り値が RET_JUMP の時に、timer event で executeLabel に飛んでいたのを、goto で executeLabel の最初に戻るようにしました。これで余計な時間待ちが減ります。</p>
 
-<p>�ʾ塢���ߤ餻�뤿������Ϥ򤷤Ƥߤޤ����������ࡼ���˹ߤ�ޤ��󡣰쥫�� timer event �Ԥ��򤷤Ƥ���Ȥ��������ꡢ�����ǰ��óݤ��äƤ���Τ��Ȼפ��ޤ����������˲�������פ��Ĥ��ޤ�����α�ˤ��ޤ���</p>
+          <p>以上、雪を降らせるために努力をしてみましたが、スムーズに降りません。一カ所 timer event 待ちをしているところがあり、そこで引っ掛かっているのだと思いますが、すぐに回避策が思いつきません。保留にします。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>2��18��</h3>
+        <div class="diary-day">
+          <h3>2月18日</h3>
 
-<p>select ̿���ʣ������˶���Ԥ������ư��ʤ��Х��������ޤ�����</p>
+          <p>select 命令で複数行中に空白行があると動作しないバグを修正しました。</p>
 
-<p>delay, transmode ̿���������ޤ�����</p>
+          <p>delay, transmode 命令を実装しました。</p>
 
-<p>�ޥ���ѥ�ˤ�äƲ��̸��̤η�³���֤��ۤʤäƤ����ᡢ���̸���̿�������줿������˽����褦�ˤ��ޤ�����CPU ������®�٤˱����ơ����̸��̤�����ֳ֤�Ĵ������褦�ˤ��ޤ�����</p>
+          <p>マシンパワーによって画面効果の継続時間が異なっていため、画面効果命令で定められた時間内に終わるようにしました。CPU や描画速度に応じて、画面効果の描画間隔を調整するようにしました。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>2��16��</h3>
+        <div class="diary-day">
+          <h3>2月16日</h3>
 
-<p>parseTaggedString �Υ롼�ײ���ɤ߼����ʬ�ΥХ��������ޤ�����</p>
+          <p>parseTaggedString のループ回数読み取り部分のバグを修正しました。</p>
 
-<p>���˥᡼����󥫡������������ޤ���������ǡ������Ԥ��ȥ������Ԥ�����̤Ǥ���褦�ˤʤ�ޤ�����</p>
+          <p>アニメーションカーソルを実装しました。これで、キー待ちとタイマ待ちを区別できるようになりました。</p>
 
-<p>˿������Τ���ˡ����������֤򸡺��������˸��ߤΥǥ��쥯�ȥ�򸡺�����褦�ˤ��ޤ�����</p>
+          <p>某ゲームのために、アーカイブを検索する前に現在のディレクトリを検索するようにしました。</p>
 
-<p>��¸�ե�������ɤ߹���Ȥ��ˡ��ե�����̾���񤤤Ƥ�����ʳ��򥯥�å�����ȸǤޤ�Х��������ޤ�����</p>
+          <p>保存ファイルを読み込むときに、ファイル名が書いてある場所以外をクリックすると固まるバグを修正しました。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>2��13��</h3>
+        <div class="diary-day">
+          <h3>2月13日</h3>
 
-<p>!d ̿���������ޤ�����</p>
+          <p>!d 命令を実装しました。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>2��12��</h3>
+        <div class="diary-day">
+          <h3>2月12日</h3>
 
-<p>���� Windows ��ư�����Ƥߤ��Ȥ�����������ץȤ��ɤ߹����ʳ��ǻߤޤäƤ��ޤ��ޤ�����Ĵ�٤��顢�ʤ�� Windows �� Linux �� fread ������ͤλ��ͤ��ۤʤ뤳�Ȥ�Ƚ�����ޤ��������ޤǤ褯 Windows ��ư���Ƥ����Ȼפ��ޤ��������������櫓�ǽ������ޤ�����</p>
+          <p>今日 Windows で動かしてみたところ、スクリプトを読み込む段階で止まってしまいました。調べたら、なんと Windows と Linux で fread の戻り値の仕様が異なることが判明しました。今までよく Windows で動いていたと思いました。そういうわけで修正しました。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>2��11��</h3>
+        <div class="diary-day">
+          <h3>2月11日</h3>
 
-<p>profiler �ǥ���꡼����Ĵ�٤ޤ��������Ľ�ǥ꡼�����Ƥ������ᡢ��������褦�ˤ��ޤ�����</p>
+          <p>profiler でメモリリークを調べました。２個所でリークしていたため、解放するようにしました。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>2��10��</h3>
+        <div class="diary-day">
+          <h3>2月10日</h3>
 
-<p>ɽ��ʸ���ü�ʸ�������ʤ����˲��Ԥ��ʤ��褦�ˤ��ޤ�����</p>
+          <p>表示文で特殊文字しかない場合に改行しないようにしました。</p>
 
-<p>stralias ̿������������椵��ʤ���礬����Х��������ޤ�����se1? ������ se1 �Ȥ��Ʋ�ᤵ��Ƥ��ޤ������ɤ���Ǹ��̲������̤˹�äƤ��ʤ��ȻפäƤ��ޤ�����</p>
+          <p>stralias 命令で正しく復号されない場合があるバグを修正しました。se1? が全て se1 として解釈されていました。どおりで効果音が場面に合っていないと思っていました。</p>
 
-<p>˿���֥��ʥꥪ��¹Ԥ��Ƥ����Ȥ��������̤Υ����������ɬ�פ��ä����� blt ̿���������ޤ�����������������̾��ˤ�̤�б��Ǥ���</p>
+          <p>某サブシナリオを実行していたところ、画面のスクロールに必要だったため blt 命令を実装しました。ただし、拡大縮小には未対応です。</p>
 
-<p>���������⤷������ savegame ̿��� loadgame ̿���������ʤ��ȥ����ब�ʤޤʤ��ΤǤϤʤ��Τ��Ȥ����������ˤ��Ƥ��ޤ������������櫓�ǡ�savegame, loadgame ̿���������ޤ��������ޤǤοʹԤϡġ�</p>
+          <p>げげげ、もしかして savegame 命令と loadgame 命令を実装しないとゲームが進まないのではないのかという気が非常にしています。そういうわけで、savegame, loadgame 命令を実装しました。今までの進行は…。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>2��8��</h3>
+        <div class="diary-day">
+          <h3>2月8日</h3>
 
-<p>�����֥ե����뤫���طʤ�Ω�������������������ʤ���礬����Х��������ޤ�����</p>
+          <p>セーブファイルから背景と立ち絵が正常に復元されない場合があるバグを修正しました。</p>
 
-<p>ʸ���ο��ѹ���������ޤ�����</p>
+          <p>文字の色変更を実装しました。</p>
 
-<p>������������̸��̤�������ޤ�����</p>
+          <p>スクロール画面効果を実装しました。</p>
 
-<p>date, time ̿���������ޤ�����</p>
+          <p>date, time 命令を実装しました。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>2��7��</h3>
+        <div class="diary-day">
+          <h3>2月7日</h3>
 
-<p>�֤ҤȤ����פǤ� define ������ gosub ̿���ȤäƤ��ꡢ������ timer ��ȤäƤ��ޤ����ᡢONScripter �Υ��󥹥ȥ饯���κǸ�� define ����ɤߡ�game ̿���������Ƥ����� start ������֤褦�ˤ��ޤ�����</p>
+          <p>「ひとかた」では define 節の中で gosub 命令を使っており、ここで timer を使ってしまうため、ONScripter のコンストラクタの最後で define 節を読み、game 命令を実装してここで start 節に飛ぶようにしました。</p>
 
-<p>�֤ҤȤ����פǡ��ʤ����ǥ��쥯�ȥ�Υ��ѥ졼���� arc.nsa �� nscripter.dat �ȤǰۤʤäƤ��뤿�ᡢ�ե�������ɤ߹��ߤ˼��Ԥ��Ƥ��ޤ���������ǡ��⤷�����ƤȻפ���ǧ�����Ȥ�����������ץȤβ��Ԥ� 0x0a �ˤʤäƤ��ޤ����ɤ���顢Unix ��Ǻ�äơ�Nsa �ΰ��̤��� Windows �Ǥ�äƤ���褦�Ǥ��������� Windows �ѤΥ��ѥ졼�����ִ����뤳�Ȥǲ��򤷤ޤ�����</p>
+          <p>「ひとかた」で、なぜかディレクトリのセパレータが arc.nsa と nscripter.dat とで異なっているため、ファイルの読み込みに失敗していました。それで、もしかしてと思い確認したところ、スクリプトの改行も 0x0a になっています。どうやら、Unix 上で作って、Nsa の圧縮だけ Windows でやっているようです。事前に Windows 用のセパレータに置換することで回避しました。</p>
 
-<p>���ͽ�ˤ��ȡ��������� s ��Ȥ����˰�����ǰϤޤ줿��֤ˤ��� stralias ��Ÿ������뤳�ȤˤʤäƤ��ޤ���������¾�ξ��Ǥϰ�����ǰϤޤ줿��֤Ǥ�Ÿ������ʤ��褦�ˤʤäƤ��ꡢ�夫��̵����̿����ɲä��ƻ��ͤ˰������̵���ʤäƤ���褦�˴����ޤ����Ȥ������⡢���ȤΥ����ɤΰ����������뤿���������������ޤ��󡣤��������櫓�ǡ�stralias ��Ÿ�����ʤ����ǲ������� s ��������ޤ�����</p>
+          <p>仕様書によると、画像タグ s を使う時に引用符で囲まれた区間にある stralias が展開されることになっていますが、その他の場合では引用符で囲まれた区間では展開されないようになっており、後から無理に命令を追加して仕様に一貫性が無くなっているように感じます。というよりも、自身のコードの一貫性が崩れるため実装したくありません。そういうわけで、stralias を展開しない形で画像タグ s を実装しました。</p>
 
-<p>�����ɤ��ѹ��ˤȤ�ʤ��������֥ե�������طʲ�����¸���򹹿����ޤ����������Υ����֥ե�����ȸߴ�����̵���ʤ�ޤ�����</p>
+          <p>コードの変更にともない、セーブファイルの背景画像保存回りを更新しました。以前のセーブファイルと互換性が無くなりました。</p>
 
-<p>vsp ̿���������ޤ���������ǡ֤ҤȤ����פ��ۤ�ư���褦�ˤʤ�ޤ�����</p>
+          <p>vsp 命令を実装しました。これで「ひとかた」がほぼ動くようになりました。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>2��6��</h3>
+        <div class="diary-day">
+          <h3>2月6日</h3>
 
-<p>jumpb ̿���������ޤ�����</p>
+          <p>jumpb 命令を実装しました。</p>
 
-<p>HG �����å��� HG �ݥ����å��ե���ȤǤϡ�embedded bitmap ���ʤ��������Ƥ� font size �������ɽ�������褦�Ǥ���</p>
+          <p>HG ゴシックと HG 丸ゴシックフォントでは、embedded bitmap がないため全ての font size で正常に表示されるようです。</p>
 
-<p>�����Τ���� Web page ���ꡢ�١����ǤȤ��Ƹ������ޤ�����</p>
+          <p>公開のために Web page を作り、ベータ版として公開しました。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>2��5��</h3>
+        <div class="diary-day">
+          <h3>2月5日</h3>
 
-<p>DelayedInfo ���ѿ�����Ȥ��Ѳ����뤳�Ȥ����뤿�ᡢ�����Υ��ޥ�ɥ饤���Ʋ�᤹��ΤǤϤʤ���Ÿ�����줿���ޥ�ɥ饤�����¸���Ƥ�����᤹��褦�ˤ��ޤ�����</p>
+          <p>DelayedInfo の変数の中身が変化することがあるため、元々のコマンドラインを再解釈するのではなく、展開されたコマンドラインを保存してそれを解釈するようにしました。</p>
 
-<p>dwave, dwaveloop, dwavestop ̿������ƥ����ͥ� 0 �˥ޥåԥ󥰤��뤳�Ȥˤ��Ƽ������ޤ�����˿������Ǥ���٤�褦�ˤʤ�ޤ�����������������ǥե�ܥ�����¸����Ƥ��ޤ���</p>
+          <p>dwave, dwaveloop, dwavestop 命令を全てチャンネル 0 にマッピングすることにして実装しました。某ゲームでしゃべるようになりました。すごい、これでフルボイスを実現しています。</p>
 
-<p>stop ̿���������ޤ�����</p>
+          <p>stop 命令を実装しました。</p>
 
-<p>mp3, mp3save, mp3loop ̿���������ޤ��������������������ߤ� MP3 ���դ��б����ޤ�����BGM �ȥܥ������������ʬ�㤤�ޤ���</p>
+          <p>mp3, mp3save, mp3loop 命令を実装しました。アーカイブ埋め込みの MP3 演奏に対応しました。BGM とボイスがあると大分違います。</p>
 
-<p>btnwait ̿��� select ̿��ȱ�����å���˥塼�򥭡��ܡ��ɤΤߤ����Ǥ���褦�ˤ��ޤ���������ǥ����ܡ��ɤΤߤ����Ƥ�����ǽ�ˤʤ�ޤ�����</p>
+          <p>btnwait 命令と select 命令と右クリックメニューをキーボードのみで操作できるようにしました。これでキーボードのみで全ての操作が可能になりました。</p>
 
-<p>btndef ̿����®�����ޤ�����</p>
+          <p>btndef 命令を高速化しました。</p>
 
-<p>click, mul, div, mod ̿���������ޤ�����</p>
+          <p>click, mul, div, mod 命令を実装しました。</p>
 
-<p>if ̿��򶯲����ޤ�����</p>
+          <p>if 命令を強化しました。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>2��4��</h3>
+        <div class="diary-day">
+          <h3>2月4日</h3>
 
-<p>itoa, atoi ̿���������ޤ�����</p>
+          <p>itoa, atoi 命令を実装しました。</p>
 
-<p>BaseReader �����������륯�饹���������ѹ�����arc1.nsa - arc9.nsa ��ʣ�����������֤��б������ޤ�����</p>
+          <p>BaseReader から派生するクラスを大幅に変更し、arc1.nsa - arc9.nsa の複数アーカイブに対応させました。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>2��3��</h3>
+        <div class="diary-day">
+          <h3>2月3日</h3>
 
-<p>�����˸�������ڤ˴ط��ʤ��٤������ͤμ�����Ϥ�ޤ�����</p>
+          <p>公開に向けて大筋に関係ない細かい仕様の実装を始めました。</p>
 
-<p>SMPEG �� news group �ʤɤ򸫤ơ�smpeg on Win32 �� global optimization �� off �ˤ����֤� MPEGaudio::layer3reorderandantialias �δؿ������ꤷ���Ȥ�����Win32 �Ķ��� MP3 ������˱��դ����褦�ˤʤ�ޤ����������餷���Ǥ�������� ���δؿ�����ƤФ�� inline �ؿ�����������줿���ᡢ̵�뤵��Ƥ���ΤǤϤȻפäƤ��ޤ��������ޤ��ˤ����̤�Ǥ�����</p>
+          <p>SMPEG の news group などを見て、smpeg on Win32 で global optimization を off にする区間を MPEGaudio::layer3reorderandantialias の関数に設定したところ、Win32 環境で MP3 が正常に演奏されるようになりました。素晴らしいです。前回は この関数から呼ばれる inline 関数の前後に入れたため、無視されているのではと思っていましたが、まさにその通りでした。</p>
 
-<p>Win32 �Ķ��ǤΥե���������ɤ߼���������ޤ�����</p>
+          <p>Win32 環境でのファイル時刻読み取りを実装しました。</p>
 
-<p>resettimer, waittimer, autoclick ̿���������ޤ�����</p>
+          <p>resettimer, waittimer, autoclick 命令を実装しました。</p>
 
-<p>clickstr ̿���������ޤ�������������å��Ԥ����Ǥ���褦�ˤʤ�ޤ�����</p>
+          <p>clickstr 命令を実装しました。強制クリック待ちができるようになりました。</p>
 
-<p>leaveTextDisplay �ǹԤäƤ��������� timerEvent ����Ƭ�˻��äƤ����ޤ��������줬�ڤǤ��������ƤΥХ�����Ƥ��ʤ����褬���ࡼ���ˤʤ�ޤ�����</p>
+          <p>leaveTextDisplay で行っていた処理を timerEvent の先頭に持っていきました。これが筋ですし、懸案のバグも取れてかなり描画がスムーズになりました。</p>
 
-<p>Ω�����ȥ��ץ饤�Ȥ�����ط����դ��ä��Τ�ľ���ޤ�����</p>
+          <p>立ち絵とスプライトの前後関係が逆だったのを直しました。</p>
 
-<p>�����ܡ��ɤ� 1, 2, 3 ��ʸ��®�٤��ڤ��ؤ�����褦�ˤ��ޤ�����</p>
+          <p>キーボードの 1, 2, 3 で文字速度を切り替えられるようにしました。</p>
 
-<p>������å���˥塼�Τ��� windowerase �� reset ��������ޤ�����</p>
+          <p>右クリックメニューのうち windowerase と reset を実装しました。</p>
 
-<p>�ʤ�� reset ̿��ǥ������Х��ѿ����������Ƥ����Х���ľ���ޤ�����</p>
+          <p>なんと reset 命令でグローバル変数を初期化していたバグを直しました。</p>
 
-<p>�����֥ե������ʸ������� setwindoweffect ̿��Υѥ�᡼���Ȥ���¾��ʸ�Ϥξ��֤ȥ��ץ饤�Ⱦ����ޤ��褦�ˤ��ޤ�����</p>
+          <p>セーブファイルに文章履歴と setwindoweffect 命令のパラメータとその他の文章の状態とスプライト情報を含めるようにしました。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>1��27��</h3>
+        <div class="diary-day">
+          <h3>1月27日</h3>
 
-<p>�����ʤ�˿�������ư�����Ƥߤ��Ȥ�����ư���Ϥ����ΤΡ�15pt ʸ����ɽ�������������Ǥ���26pt ���Ȥ��ޤ������ޤ����ɤ���顢SDL_ttf �⤷���� freetype2 �������ߥӥåȥޥåפ��б����Ƥ��ʤ����Ȥ������Τ褦�Ǥ�������ޤ����ġ�</p>
+          <p>いきなり某ゲームを動かしてみたところ、動きはするものの、15pt 文字の表示がめちゃめちゃです。26pt だとうまくいきます。どうやら、SDL_ttf もしくは freetype2 が埋め込みビットマップに対応していないことが原因のようです。困りました…。</p>
 
-<p>kochi �ե���Ȥ��� 17pt �ʲ�����MS �ե���Ȥ��� 22pt �ʲ�������Ǥ���setwindow ̿��Ƕ���Ū�� 18pt �ʾ�ˤ���ư�����ޤ���</p>
+          <p>kochi フォントだと 17pt 以下が、MS フォントだと 22pt 以下がだめです。setwindow 命令で強制的に 18pt 以上にして動かします。</p>
 
-<p>����Ÿ����꤬�٤��Ǥ�������å���ʤɤ�Ƴ����Ƥ���������������⤷��ޤ���</p>
+          <p>画像展開回りが遅いです。キャッシュなどの導入を検討した方がいいかもしれません。</p>
 
-<p>�����ץ˥������ segmentation fault ������ޤ������ޤ��ޤ��Ǥ���</p>
+          <p>オープニング途中で segmentation fault で落ちました。まだまだです。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>1��26��</h3>
+        <div class="diary-day">
+          <h3>1月26日</h3>
 
-<p>!w ̿���������ޤ�����</p>
+          <p>!w 命令を実装しました。</p>
 
-<p>windoweffect ̿��β��ΥХ���Ȥ�ޤ�����</p>
+          <p>windoweffect 命令の解釈のバグをとりました。</p>
 
-<p>windows �ǥӥ�ɤ���ȡ�����ѥ���Υ����å������������ᡢLinux �Ǥϵ��դ��ˤ����Х������Ĥ��뤳�Ȥ�¿���Ǥ��������Ĥ��Х�����ޤ�����</p>
+          <p>windows でビルドすると、コンパイラのチェックが厳しいため、Linux では気付きにくいバグが見つかることが多いです。いくつかバグを取りました。</p>
 
-<p>enterTextDisplay �ǡ�����ʸ�������ࡼ����ɽ���褦�ˤ��ޤ�����</p>
+          <p>enterTextDisplay で、既読文字がスムーズに表れるようにしました。</p>
 
-<p>��§������������ޤ�����</p>
+          <p>禁則処理を実装しました。</p>
 
-<p>���̤�����Τ����ޤ��������Ǥ����������ƥ�ʤɤβ��̸��̤� 16bit �ֳ֤ˤ��ޤ������ޤ������̸��̤ν������ֳִ֤� 20msec ���� 10msec �ˤ��ޤ������٤��ޥ�����ȤĤ餯�ʤ뤫�⤷��ޤ���</p>
+          <p>効果があるのかいまいち不明ですが、カーテンなどの画面効果を 16bit 間隔にしました。また、画面効果の処理時間間隔を 20msec から 10msec にしました。遅いマシンだとつらくなるかもしれません。</p>
 
-<p>SDL_mixer �����졢wave, waveloop, wavestop ̿���������ޤ�����mixer �ΤޤȤ�ʥޥ˥奢�뤬�ʤ��ΤǶ�ϫ���ޤ�������mp3 ��Ʊ���˱��դǤ��Ƥ��ޤ��������餷���Ǥ���</p>
+          <p>SDL_mixer を入れ、wave, waveloop, wavestop 命令を実装しました。mixer のまともなマニュアルがないので苦労しましたが、mp3 と同時に演奏できています。素晴らしいです。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>1��25��</h3>
+        <div class="diary-day">
+          <h3>1月25日</h3>
 
-<p>NScrflog.dat ����ʸ���ˤ��٤���SarReader �� NsaReader �������Ǥ���ʸ���ǰ������Ȥˤ��ޤ�����</p>
+          <p>NScrflog.dat を大文字にすべく、SarReader と NsaReader の内部では大文字で扱うことにしました。</p>
 
-<p>lchk �� labellog ̿���������ޤ�����NScrllog.dat ����Ȥ�Ʊ�ͤ���ʸ���Ǥ���</p>
+          <p>lchk と labellog 命令を実装しました。NScrllog.dat の中身は同様に大文字です。</p>
 
-<p>�����˿������ϰ��̤�ư���褦�ˤʤä����⤷��ޤ���</p>
+          <p>これで某ゲームは一通り動くようになったかもしれません？</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>1��23��</h3>
+        <div class="diary-day">
+          <h3>1月23日</h3>
 
-<p>humanz, lsp, lsph, csp ̿���������ޤ������褦�䤯���ץ饤�Ȥ���������ޤ�����</p>
+          <p>humanz, lsp, lsph, csp 命令を実装しました。ようやくスプライトが実装されました。</p>
 
-<p>Ω�����ȥ��ץ饤�ȤΥ����С���å׽�����ޤȤ�ˤ��ޤ�����</p>
+          <p>立ち絵とスプライトのオーバーラップ処理をまともにしました。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>1��24��</h3>
+        <div class="diary-day">
+          <h3>1月24日</h3>
 
-<p>filelog ̿���������ޤ�����BaseReader �˥����������֤���¸����ե饰������ޤ�����notif ̿��μ������ְ�äƤ����Τ��������ޤ���������ǡ�����ե��å������������ư���褦�ˤʤ�ޤ������������������ NScrflog.dat �˳�Ǽ�����ʸ������ʸ���Ǥ���Τ��Ф�������μ����Ǥϥ��������֤����ʸ���򤽤Τޤ޻ȤäƤ��ޤ���</p>
+          <p>filelog 命令を実装しました。BaseReader にアクセス状態を保存するフラグを入れました。notif 命令の実装が間違っていたのを訂正しました。これで、グラフィック一覧が正常に動くようになりました。ただし、本来は NScrflog.dat に格納される文字が大文字であるのに対し、今回の実装ではアーカイブの中の文字をそのまま使っています。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>1��22��</h3>
+        <div class="diary-day">
+          <h3>1月22日</h3>
 
-<p>readLine �λ����ǥƥ����ȹԤ��ݤ���Ƚ�ꤷ��Ʊ���ˣ��� parse �򤷡�readInt �� readStr �ǣ��� parse �򤹤�褦��ľ���ޤ�����</p>
+          <p>readLine の時点でテキスト行か否かを判定し、同時に１次 parse をし、readInt と readStr で２次 parse をするように直しました。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>1��19��</h3>
+        <div class="diary-day">
+          <h3>1月19日</h3>
 
-<p>NSA �� SPB ��������ޤ����������� BMP ���Ǥ��褦�ˤʤäƤ��ޤ������ڤʤΤ� PPM ���Ǥ��褦�ˤ��ޤ��������Τ��� BMP �ˤ��뤫�⤷��ޤ���BMP �Υإå��λ��ͤ�Ĵ�٤�У���ʬ���餤�� BMP �˽��褽���ʵ��⤷�ޤ����ġ�</p>
+          <p>NSA の SPB を実装しました。元々は BMP で吐くようになっていますが、楽なので PPM で吐くようにしました。そのうち BMP にするかもしれません。BMP のヘッダの仕様を調べれば１５分くらいで BMP に出来そうな気もしますが…。</p>
 
-<p>��ˢ���פΤ���ˡ�readToken �� quat �� 2bytes ʸ���ʳ���̿�����ʸ�����龮ʸ�����Ѵ�����褦�ˤ��ޤ�����</p>
+          <p>「泡沫」のために、readToken で quat と 2bytes 文字以外の命令を大文字から小文字に変換するようにしました。</p>
 
-<p>!sd ����������ޤ� sentence_font.wait_time �� 0 �ˤʤ뤳�Ȥ����ä��Х���ľ���ޤ�����</p>
+          <p>!sd を実装し、また sentence_font.wait_time が 0 になることがあったバグを直しました。</p>
 
-<p>��ˢ���פΤ���ˡ�Ω������Ʃ������κ���ȥ��ԡ���������ޤ�����</p>
+          <p>「泡沫」のために、立ち絵の透過形式の左上とコピーを実装しました。</p>
 
-<p>�����֥ե�����˸��߱������ CD track ���ֹ�������褦�ˤ��ޤ�����</p>
+          <p>セーブファイルに現在演奏中の CD track の番号を入れるようにしました。</p>
 
-<p>bg ̿���Ω����������ݤˡ������ѿ��򥯥ꥢ���Ƥ��ʤ��ä��Х�����ޤ�����</p>
+          <p>bg 命令で立ち絵を除去する際に、状態変数をクリアしていなかったバグを取りました。</p>
 
-<p>��ˢ���פΤ���ˡ��ǥե���ȥ��������֤� Direct ���� NSA ���ѹ�����arc.nsa �������ʤ��Ȥ��ˤ� Direct �Ǥ����褦�ˤ��ޤ�����</p>
+          <p>「泡沫」のために、デフォルトアーカイブを Direct から NSA に変更し、arc.nsa が開けないときには Direct でいくようにしました。</p>
 
-<p>select ̿��θ�� enterNewPage ��¹Ԥ���褦�ˤ��ޤ�����</p>
+          <p>select 命令の後に enterNewPage を実行するようにしました。</p>
 
-<p>˿������Τ���� getversion, jumpf, rnd, rnd2 ̿���������ޤ�����</p>
+          <p>某ゲームのために getversion, jumpf, rnd, rnd2 命令を実装しました。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>1��15��</h3>
+        <div class="diary-day">
+          <h3>1月15日</h3>
 
-<p>NSA �� lzss �򤵤��äȼ������ޤ�����</p>
+          <p>NSA の lzss をさくっと実装しました。</p>
 
-<p>����å��Ȥ���������å�����ʤ��Ȥ������ġ�SPB �� SPI �εե�����Ϥ᤿�Ȥ����ǡ����˼������ƥ�������������Ƥ���ͤ�ȯ�����ޤ�����Ʊ��������Ʊ�����Ȥ��äƤ���빽���֤äƤ��ޤ���</p>
+          <p>ショックというかショックじゃないというか…。SPB の SPI の逆アセを始めたところで、既に実装してソースを公開している人を発見しました。同じ時期に同じことをやっており結構かぶっています。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>1��14��</h3>
+        <div class="diary-day">
+          <h3>1月14日</h3>
 
-<p>play ̿��⤷���� playonce ̿�᤬ playstop ̿��򶴤ޤ�Ϣ³�������ˡ��������ơ������ե���Ȥ�����������Х���ľ���ޤ�����</p>
+          <p>play 命令もしくは playonce 命令が playstop 命令を挟まず連続した場合に、セグメンテーションフォルトを引き起こすバグを直しました。</p>
 
-<p>˿������ǥ��åɤȥȥ��롼�˹Ԥ��뤳�Ȥ��ǧ���ޤ�����</p>
+          <p>某ゲームでグッドとトゥルーに行けることを確認しました。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>1��13��</h3>
+        <div class="diary-day">
+          <h3>1月13日</h3>
 
-<p>�������������ä��Ȥ�����ľ������˥塼�С��ʳ��� Qt �ξ��֤��������ޤ�����</p>
+          <p>昨日おかしかったところを直し、メニューバー以外は Qt の状態に復帰しました。</p>
 
-<p>�ե�����ν��������ѥ��ζ��ڤ�ʸ���ʤɡ��ե����륢��������Ϣ�������¸�ˤʤäƤ��ޤ��������饤�֥��Ϥʤ���ΤǤ��礦����</p>
+          <p>ファイルの修正時刻やパスの区切り文字など、ファイルアクセス関連が機種依存になっています。いいライブラリはないものでしょうか？</p>
 
-<p>SDL_sound �����졢�����ä� MP3 ���դ�������ޤ�����play, playonce, playstop ̿���������ޤ�������������MIDI ��̵�뤷��CD ���դ��б����� MP3 ���դ˳���դ���褦�ˤ��ޤ�����BGM ������Ȥ����Ǥ���</p>
+          <p>SDL_sound を入れ、さくっと MP3 演奏を実装しました。play, playonce, playstop 命令を実装しました。ただし、MIDI は無視し、CD 演奏は対応する MP3 演奏に割り付けるようにしました。BGM があるといいです。</p>
 
-<p>Windows �Ѥ� Makefile ��񤭡�Windows �ǥ���ѥ��뤷�Ƥߤޤ������פä�����ɽ�����⤿�Ĥ��ޤ���������ʤ�����ѥ���Ǥ���ʸ�������ڡ����̤�ޤ�Ƽ¹ԤǤ��ޤ����������������¸�� searchSaveFiles() ��̤�����Ǥ���</p>
+          <p>Windows 用の Makefile を書き、Windows でコンパイルしてみました。思ったよりも表示がもたつきますが、問題なくコンパイルでき、文字・音楽・効果を含めて実行できました。ただ、機種依存の searchSaveFiles() は未実装です。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>1��12��</h3>
+        <div class="diary-day">
+          <h3>1月12日</h3>
 
-<p>���ں�����������褦�Ȥ��� Qt �θ³��򴶤��ޤ�����libmad �� libsmpeg �ʤɤλ��Ѥ�ͤ��ޤ������������ˤ��Ʒ�� Qt ���� SDL �˰ܹԤ��뤳�Ȥˤ��ޤ��������⤽�Ⳬȯ���� Qt �Ǥ����� SDL �Ǥ������¤ä��ΤǤ�����SDL ��褯Ĵ�٤ʤ��ä������⤢��Ȥ��ʤ�Ƥ��� Qt �ˤ��Ƥ��ޤä��аޤ�����ޤ���</p>
+          <p>音楽再生を実装しようとして Qt の限界を感じました。libmad や libsmpeg などの使用も考えましたが、ここにきて結局 Qt から SDL に移行することにしました。そもそも開発前に Qt でいくか SDL でいくか迷ったのですが、SDL をよく調べなかったせいもあり使いなれていた Qt にしてしまった経緯があります。</p>
 
-<p>JPEG �������ɤ߹��ߤ����ޤ� sjis2utf16 ��񤤤� TTF ��Ȥä����ܸ�������ޤ�����ʸ���Υ���������ꥢ���󥰤������餷���Ǥ����ե���ȥե������ľ�ܻ��ꤷ�ʤ���Ф����ʤ��Τ������Ǥ��������̤� bit ž���� Qt �Ȥ���٤�®�����Ǥ�����alpha blend ��̤���ڤǤ���®�����Ǥ��������ȸ����С���˥塼�С������Ǽ������ʤ���Ф����ʤ����Ȥ��餤�Ǥ��������ϥ�˥塼�С���ۤȤ�ɻȤäƤ��ʤ��Τǹ����ޤ��󡣼������Τ��ñ�����Ǥ���</p>
+          <p>JPEG 画像の読み込みを試し、また sjis2utf16 を書いて TTF を使った日本語描画を試しました。文字のアンチエイリアシングが素晴らしいです。フォントファイルを直接指定しなければいけないのが難点ですが。画面の bit 転送も Qt とくらべて速そうですし、alpha blend も未検証ですが速そうです。欠点と言えば、メニューバーを自前で実装しなければいけないことくらいですが、今はメニューバーをほとんど使っていないので構いません。実装自体も簡単そうです。</p>
 
-<p>�Ȥ����櫓�ǡ����������ưܿ����ޤ������������ܿ�����λ���ޤ�����GUI �򳰤��ơ�Blit ̿����ִ���������ǤۤܺѤߤޤ�����enterTextDisplay �� rmenu ���꤬�㴳�����������餤�Ǥ���</p>
+          <p>というわけで、一日かけて移植しました。８割方移植が終了しました。GUI を外して、Blit 命令を置換するだけでほぼ済みました。enterTextDisplay と rmenu 周りが若干おかしいくらいです。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>1��10��</h3>
+        <div class="diary-day">
+          <h3>1月10日</h3>
 
-<p>�ե�����̾�� QNScripter �Ϥ����줷��copyright �����졢�饤���󥹤� GPL �ˤ��ޤ�����</p>
+          <p>ファイル名を QNScripter 系に統一し、copyright を入れ、ライセンスを GPL にしました。</p>
 
-<p>Makefile �� Linux �Ѥ� Windows �Ѥ�ʬ���ޤ�����Windows �ѤϽ񤤤�������̤��ԤǤ���</p>
+          <p>Makefile を Linux 用と Windows 用に分けました。Windows 用は書いただけで未試行です。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>1��8��</h3>
+        <div class="diary-day">
+          <h3>1月8日</h3>
 
-<p>ʸ���������¸���������ɽ����ʬ�ϴ������ޤ���������Υ����֤Ϥޤ��Ǥ���</p>
+          <p>文章履歴の保存を実装し、表示部分は完成しました。履歴のセーブはまだです。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>1��7��</h3>
+        <div class="diary-day">
+          <h3>1月7日</h3>
 
-<p>�ƥ��ȼ¹���Υ롼�פǰ��óݤ�����˿ʤ�ʤ��ʤä��Τǡ�dec ̿���������ޤ�����
-</p>
+          <p>テスト実行中のループで引っ掛かり先に進めなくなったので、dec 命令を実装しました。
+          </p>
 
-<p>�ƥ����ȥ�����ɥ����ե����ɥ��󤹤�Ȥ��˲��̸��̤�Ŭ�Ѥ����褦�ˤ��ޤ�����</p>
+          <p>テキストウィンドウがフェードインするときに画面効果が適用されるようにしました。</p>
 
-<p>ʸ�������ѤΥ�󥰥Хåե�����ޤ�����</p>
+          <p>文章履歴用のリングバッファを作りました。</p>
 
-<p>�֥ϡ��С��פ�Ω�����ΰ��֤����������Τǡ�underline ̿����������Ω�����β��¤ΰ��֤� underline �˹�碌��褦�ˤ��ޤ�����</p>
+          <p>「ハーバー」で立ち絵の位置がおかしいので、underline 命令を実装し、立ち絵の下限の位置を underline に合わせるようにしました。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>1��6��</h3>
+        <div class="diary-day">
+          <h3>1月6日</h3>
 
-<p>locate ̿���������ޤ�����</p>
+          <p>locate 命令を実装しました。</p>
 
-<p>windoweffect ̿�����������ƥ����ȥ�����ɥ����ե����ɥ����Ȥ���Ȥ��˲��̸��̤�Ŭ�Ѥ����褦�ˤ��ޤ������ե����ɥ���ξ���̤�����Ǥ���skip �� one page �򤭤���ȼ������ޤ������ƥ�����ɽ����˲������ɲä������ˡ���ɽ���Υƥ����Ȥ��ä��Ƥ��ޤ��Х��򲿤Ȥ��������Ǥ���ʸ��������¸���ͤơ��Хåե���󥰤��Ƥ����ƺ����褹��Τ��褵�����Ǥ���</p>
+          <p>windoweffect 命令を実装し、テキストウィンドウがフェードアウトするときに画面効果が適用されるようにしました。フェードインの場合は未実装です。skip と one page をきちんと実装しました。テキスト表示中に画像が追加される場合に、既表示のテキストが消えてしまうバグを何とかしたいです。文章履歴保存を兼ねて、バッファリングしておいて最描画するのがよさそうです。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>1��5��</h3>
+        <div class="diary-day">
+          <h3>1月5日</h3>
 
-<p>save, load ̿���������ޤ���������Ҥ�ޤ฽�ߤξ��֤��ѿ����طʤ�Ω�����ξ�����¸���Ǥ��ޤ�����ϥƥ����Ȥȥ��ץ饤�Ȥȥ����������¸���Ǥ���Ф褤�ΤǤ��礦����
-</p>
+          <p>save, load 命令を実装しました。入れ子を含む現在の状態と変数と背景と立ち絵の情報が保存ができます。後はテキストとスプライトとカーソルの保存ができればよいのでしょうか？
+          </p>
 
-<p>curtain ���̤�������ޤ����������ʤ��٤��Ǥ���</p>
+          <p>curtain 効果を実装しましたが、かなり遅いです。</p>
 
-<p>�ƥ����ȤΥ���å��Ԥ��ΤȤ��ˡ�space ������ return ��������˿ʤ��褦�ˤ��ޤ�����</p>
+          <p>テキストのクリック待ちのときに、space キーと return キーで先に進めるようにしました。</p>
 
-<p>systemcall ̿���������ޤ�����</p>
+          <p>systemcall 命令を実装しました。</p>
 
-<p>selgosub ̿���������ޤ�����</p>
+          <p>selgosub 命令を実装しました。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>1��3��</h3>
+        <div class="diary-day">
+          <h3>1月3日</h3>
 
-<p>WAIT_BUTTON_MODE ���ɲä���btnwait ̿��Ǳ�����å���˥塼��̵���ˤʤ�褦�ˤ��ޤ�����</p>
+          <p>WAIT_BUTTON_MODE を追加し、btnwait 命令で右クリックメニューが無効になるようにしました。</p>
 
-<p>�֥ϡ��С����ɤǤĤ��ޤ��ơסʰʲ��֥ϡ��С��סˤ�ư�����ƥ��Ȥ򤷤Ƥ��ơ�bg ̿��Ǿ����ʲ������ɤ߹���Ȥ��������ľ���Ƥ�����ˡ���������ͭ���꤬�����Ƥ����Х��θ�����ȯ�����ޤ�����ñ�ʤ� delete �Τ�˺��Ǥ�������qnscripter �ǤϤʤ� XFree ¦�Υ��꤬�����Ƥ����Ȥ��������餷���Ǥ����������������꡼�����ʤ��ʤ�ޤ�����</p>
+          <p>「ハーバーランドでつかまえて」（以下「ハーバー」）を動かすテストをしていて、bg 命令で小さな画像を読み込むときの問題を直している時に、偶然、占有メモリが増えていくバグの原因を発見しました。単なる delete のし忘れでしたが、qnscripter ではなく XFree 側のメモリが増えていくところが嫌らしいです。これで全くメモリリークがなくなりました。</p>
 
-</div>
+        </div>
 
-</div> <!-- diary -->
-</div> <!-- diary-container -->
+      </div> <!-- diary -->
+    </div> <!-- diary-container -->
 
 
-<div id="footer">
-Copyright (c) 1998-2006 Studio O.G.A. All rights reserved.
-</div> <!-- footer -->
+    <div id="footer">
+      Copyright (c) 1998-2006 Studio O.G.A. All rights reserved.
+    </div> <!-- footer -->
 
-</div> <!-- body -->
+  </div> <!-- body -->
 
 </BODY>
+
 </HTML>

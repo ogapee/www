@@ -1,110 +1,119 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <HTML lang="ja">
+
 <HEAD>
-<META http-equiv="Content-Type" content="text/html; charset=EUC-JP">
-<META http-equiv="Content-Style-Type" content="text/css">
-<META name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-<TITLE> ONScripter ��ȯ���� </TITLE>
-<LINK rel="stylesheet" type="text/css" href="/ogapee.css">
+  <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <META http-equiv="Content-Style-Type" content="text/css">
+  <META name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <TITLE> ONScripter 開発日誌 </TITLE>
+  <LINK rel="stylesheet" type="text/css" href="/ogapee.css">
 </HEAD>
 
 <body>
 
-<div id="body">
+  <div id="body">
 
-<div id="header">
-<H1>ONScripter ��ȯ����</H1>
+    <div id="header">
+      <H1>ONScripter 開発日誌</H1>
 
-Since: Feb. 6, 2002<br>
-Last updated: Apr. 7, 2023
-</div> <!-- header -->
+      Since: Feb. 6, 2002<br>
+      Last updated: Aug. 18, 2023
+    </div> <!-- header -->
 
-<div id="toc-container">
+    <div id="toc-container">
 
-<h3>���γ�ȯ����</h3>
+      <h3>過去の開発日誌</h3>
 
-<div id="toc">
+      <div id="toc">
 
-<ul>
-  <li> <A HREF="onscripter_devel.2022.html"> 2022ǯ</A>
-  <li> <A HREF="onscripter_devel.2021.html"> 2021ǯ</A>
-  <li> <A HREF="onscripter_devel.2020.html"> 2020ǯ</A>
-  <li> <A HREF="onscripter_devel.2019.html"> 2019ǯ</A>
-  <li> <A HREF="onscripter_devel.2018.html"> 2018ǯ</A>
-  <li> <A HREF="onscripter_devel.2017.html"> 2017ǯ</A>
-  <li> <A HREF="onscripter_devel.2016.html"> 2016ǯ</A>
-  <li> <A HREF="onscripter_devel.2015.html"> 2015ǯ</A>
-  <li> <A HREF="onscripter_devel.2014.html"> 2014ǯ</A>
-  <li> <A HREF="onscripter_devel.2013.html"> 2013ǯ</A>
-  <li> <A HREF="onscripter_devel.2012.html"> 2012ǯ</A>
-  <li> <A HREF="onscripter_devel.2011_1.html"> 2011ǯ</A>
-  <li> <A HREF="onscripter_devel.2010_1.html"> 2010ǯ</A>
-  <li> <A HREF="onscripter_devel.2009_1.html"> 2009ǯ</A>
-  <li> <A HREF="onscripter_devel.2008_1.html"> 2008ǯ</A>
-  <li> <A HREF="onscripter_devel.2007_1.html"> 2007ǯ</A>
-  <li> <A HREF="onscripter_devel.2006_1.html"> 2006ǯ</A>
-  <li> <A HREF="onscripter_devel.2005_1.html"> 2005ǯ</A>
-  <li> <A HREF="onscripter_devel.2004_1.html"> 2004ǯ</A>
-  <li> 2003ǯ
-    <ul>
-      <li> <A HREF="onscripter_devel.2003_4.html">10���12��</A>
-      <li> <A HREF="onscripter_devel.2003_3.html"> 7��� 9��</A>
-      <li> <A HREF="onscripter_devel.2003_2.html"> 4��� 6��</A>
-      <li> <A HREF="onscripter_devel.2003_1.html"> 1��� 3��</A>
-    </ul>
-  <li> 2002ǯ
-    <ul>
-      <li> <A HREF="onscripter_devel.2002_4.html">10���12��</A>
-      <li> <A HREF="onscripter_devel.2002_3.html"> 7��� 9��</A>
-      <li> <A HREF="onscripter_devel.2002_2.html"> 4��� 6��</A>
-      <li> <A HREF="onscripter_devel.2002_1.html"> 1��� 3��</A>
-    </ul>
-  <li> 2001ǯ
-    <ul>
-      <li> <A HREF="onscripter_devel.2001.html">12��</A>
-    </ul>
-</ul>
-</div> <!-- toc -->
-</div> <!-- toc-container -->
-
-
-<div id="diary-container">
-<div id="diary">
-
-<h2>2023ǯ</h2>
-
-<div class="diary-day">
-<h3>4��7��</h3>
-
-<p><a href="ios/#sdk">iOS �� SDK</a>�򹹿�����Apple ���ꥳ�����ܤ��� Mac �� Ventura v13 �ǥӥ�ɤǤ���褦�ˤ��ޤ�����libmad-0.15.1b ��°�� config.sub �� config.guess ���Ť� Apple ���ꥳ����б����Ƥ��ʤ��ä����ᡢ�ǿ��� <a href="https://git.savannah.gnu.org/cgit/config.git/plain/config.sub">config.sub</a> �� <a href="https://git.savannah.gnu.org/cgit/config.git/plain/config.guess">config.guess</a> �˺����ؤ��ޤ�����USE_SELECTOR ����Ѥ��������������ϡ�XCode ���饢�ץ��¹Ԥ��ƥ��󥹥ȡ��뤷�����Ǥʤ��ȳ��ѤǤ��ʤ��褦�Ǥ���TestFlight �ˤ�ä������ƥ��ȤǤϡ�������ǡ����򥤥󥿡��ͥåȤ������������ɤ��뤳�ȤϤǤ��ޤ�����</p>
-  
-</div>
-
-<div class="diary-day">
-<h3>3��23��</h3>
-
-<p><a href="android/#sdk">Android �� SDK</a> �򹹿�����compileSdk �� targetSdk �� 33 �ˤ��ޤ�����Android 13 (API 33)�ʹߤǤϡ�ActivityCompat.requestPermissions �� WRITE_EXTERNAL_STORAGE ���׵᤹��Ⱦ�� false ���֤��褦�ˤʤä��褦�ʤΤǡ�Android 13 �ʹߤǤϤ��ν��������Ф��褦�ˤ��ޤ�����NDK �� 24.0.8215888��Android Gradle Plugin �� 7.2.2��Gradle �� 7.4 ����Ѥ��Ƥ��ޤ���</p>
-
-<p>Android �ǥ��ץ�ǵ�ư���˥���������򤷤Ƽ¹Ԥ����硢�ե�����򳫤��Ȥ��˥ǥ��쥯�ȥ��̵ͭ�򥭥�å��夷���ǥ��쥯�ȥ꤬¸�ߤ��ʤ����ˤ� ONScripter.java �� findFile �ؿ���ƤФʤ����Ȥˤ�äƥե�������ɤ߹��ߤ��®�����ޤ�����findFile �ǻ��Ѥ��Ƥ��� ContentResolver.query �ϡ��ե�����̾�Υե��륿����ꤹ����3,4������̵�뤵���褦�Ǥ������Τ��ᡢ����ޤǤϥ�����������ˤ���ե�������ɤ߹���ݤˡ����������ֳ��ˤϥե����뤬¸�ߤ��ʤ����Ȥ��ǧ���뤿��ˡ��ǥ��쥯�ȥ�������ե�������Ĥ��ľȹ礷�Ƥ������ᡢ���֤������äƤ��ޤ�����</p>
-
-</div>
-
-<div class="diary-day">
-<h3>1��3��</h3>
-
-<p>���Ф餯�����顢Android �ǥ��ץ�ǰ����Υե�������ɤ߹��ߤ˼��Ԥ������꤬����ޤ�������ONScripter.java �� findFile �ؿ�����ʸ���Ⱦ�ʸ������̤��ƥե�����̾��ȹ礷�Ƥ��ꡢ������ץ���Υե�����̾�ȥե����륷���ƥ�Υե�����̾����ʸ������ʸ���ΰ㤤��������˥ե����뤬¸�ߤ��ʤ���Ƚ�ꤵ��Ƥ������Ȥ������Ǥ�����<a href="android/#sdk">Android �� SDK</a> �򹹿�����String.equalsIgnoreCase ��Ȥä�Ƚ�ꤹ��褦�ˤ��Ʋ�褷�ޤ�������꡼�����ˤ����Ĥ��Υ������ư���ǧ�򤹤�ΤǤ����������Υ�����ǤϤ������꤬ȯ�����ʤ��ä����ᵤ�Ť��ޤ���Ǥ�����</p>
-  
-</div>
-
-</div> <!-- diary -->
-</div> <!-- diary-container -->
+        <ul>
+          <li> <A HREF="onscripter_devel.2022.html"> 2022年</A>
+          <li> <A HREF="onscripter_devel.2021.html"> 2021年</A>
+          <li> <A HREF="onscripter_devel.2020.html"> 2020年</A>
+          <li> <A HREF="onscripter_devel.2019.html"> 2019年</A>
+          <li> <A HREF="onscripter_devel.2018.html"> 2018年</A>
+          <li> <A HREF="onscripter_devel.2017.html"> 2017年</A>
+          <li> <A HREF="onscripter_devel.2016.html"> 2016年</A>
+          <li> <A HREF="onscripter_devel.2015.html"> 2015年</A>
+          <li> <A HREF="onscripter_devel.2014.html"> 2014年</A>
+          <li> <A HREF="onscripter_devel.2013.html"> 2013年</A>
+          <li> <A HREF="onscripter_devel.2012.html"> 2012年</A>
+          <li> <A HREF="onscripter_devel.2011_1.html"> 2011年</A>
+          <li> <A HREF="onscripter_devel.2010_1.html"> 2010年</A>
+          <li> <A HREF="onscripter_devel.2009_1.html"> 2009年</A>
+          <li> <A HREF="onscripter_devel.2008_1.html"> 2008年</A>
+          <li> <A HREF="onscripter_devel.2007_1.html"> 2007年</A>
+          <li> <A HREF="onscripter_devel.2006_1.html"> 2006年</A>
+          <li> <A HREF="onscripter_devel.2005_1.html"> 2005年</A>
+          <li> <A HREF="onscripter_devel.2004_1.html"> 2004年</A>
+          <li> 2003年
+            <ul>
+              <li> <A HREF="onscripter_devel.2003_4.html">10月～12月</A>
+              <li> <A HREF="onscripter_devel.2003_3.html"> 7月～ 9月</A>
+              <li> <A HREF="onscripter_devel.2003_2.html"> 4月～ 6月</A>
+              <li> <A HREF="onscripter_devel.2003_1.html"> 1月～ 3月</A>
+            </ul>
+          <li> 2002年
+            <ul>
+              <li> <A HREF="onscripter_devel.2002_4.html">10月～12月</A>
+              <li> <A HREF="onscripter_devel.2002_3.html"> 7月～ 9月</A>
+              <li> <A HREF="onscripter_devel.2002_2.html"> 4月～ 6月</A>
+              <li> <A HREF="onscripter_devel.2002_1.html"> 1月～ 3月</A>
+            </ul>
+          <li> 2001年
+            <ul>
+              <li> <A HREF="onscripter_devel.2001.html">12月</A>
+            </ul>
+        </ul>
+      </div> <!-- toc -->
+    </div> <!-- toc-container -->
 
 
-<div id="footer">
-Copyright (c) 1998-2023 Studio O.G.A. All rights reserved.
-</div> <!-- footer -->
+    <div id="diary-container">
+      <div id="diary">
 
-</div> <!-- body -->
+        <h2>2023年</h2>
+
+        <div class="diary-day">
+          <h3>8月18日</h3>
+
+          <p>HTMLの文字コードをEUC-JPからUTF-8に変更しました。</p>
+
+        </div>
+
+        <div class="diary-day">
+          <h3>4月7日</h3>
+
+          <p><a href="ios/#sdk">iOS 版 SDK</a>を更新し、Apple シリコンを搭載した Mac の Ventura v13 でビルドできるようにしました。libmad-0.15.1b 付属の config.sub と config.guess が古く Apple シリコンに対応していなかったため、最新の <a href="https://git.savannah.gnu.org/cgit/config.git/plain/config.sub">config.sub</a> と <a href="https://git.savannah.gnu.org/cgit/config.git/plain/config.guess">config.guess</a> に差し替えました。USE_SELECTOR を使用したゲームの選択は、XCode からアプリを実行してインストールした場合でないと活用できないようです。TestFlight によって内部テストでは、ゲームデータをインターネットからダウンロードすることはできました。</p>
+
+        </div>
+
+        <div class="diary-day">
+          <h3>3月23日</h3>
+
+          <p><a href="android/#sdk">Android 版 SDK</a> を更新し、compileSdk と targetSdk を 33 にしました。Android 13 (API 33)以降では、ActivityCompat.requestPermissions で WRITE_EXTERNAL_STORAGE を要求すると常に false を返すようになったようなので、Android 13 以降ではこの処理を飛ばすようにしました。NDK は 24.0.8215888、Android Gradle Plugin は 7.2.2、Gradle は 7.4 を使用しています。</p>
+
+          <p>Android 版アプリで起動時にゲームを選択して実行する場合、ファイルを開くときにディレクトリの有無をキャッシュし、ディレクトリが存在しない場合には ONScripter.java の findFile 関数を呼ばないことによってファイルの読み込みを高速化しました。findFile で使用している ContentResolver.query は、ファイル名のフィルタを指定する第3,4引数が無視されるようです。そのため、これまではアーカイブ内にあるファイルを読み込む際に、アーカイブ外にはファイルが存在しないことを確認するために、ディレクトリ内の全ファイルを一つずつ照合していたため、時間がかかっていました。</p>
+
+        </div>
+
+        <div class="diary-day">
+          <h3>1月3日</h3>
+
+          <p>しばらく前から、Android 版アプリで一部のファイルの読み込みに失敗する問題がありましたが、ONScripter.java の findFile 関数で大文字と小文字を区別してファイル名を照合しており、スクリプト内のファイル名とファイルシステムのファイル名に大文字・小文字の違いがある場合にファイルが存在しないと判定されていたことが原因でした。<a href="android/#sdk">Android 版 SDK</a> を更新し、String.equalsIgnoreCase を使って判定するようにして解決しました。リリース前にいくつかのゲームで動作確認をするのですが、それらのゲームではこの問題が発生しなかったため気づきませんでした。</p>
+
+        </div>
+
+      </div> <!-- diary -->
+    </div> <!-- diary-container -->
+
+
+    <div id="footer">
+      Copyright (c) 1998-2023 Studio O.G.A. All rights reserved.
+    </div> <!-- footer -->
+
+  </div> <!-- body -->
 
 </body>
+
 </html>

@@ -1,154 +1,156 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <HTML lang="ja">
+
 <HEAD>
-<META http-equiv="Content-Type" content="text/html; charset=EUC-JP">
-<META http-equiv="Content-Style-Type" content="text/css">
-<META name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-<TITLE> ONScripter ��ȯ���� </TITLE>
-<LINK rel="stylesheet" type="text/css" href="/ogapee.css">
+  <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <META http-equiv="Content-Style-Type" content="text/css">
+  <META name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <TITLE> ONScripter 開発日誌 </TITLE>
+  <LINK rel="stylesheet" type="text/css" href="/ogapee.css">
 </HEAD>
 
 <body>
 
-<div id="body">
+  <div id="body">
 
-<div id="header">
-<H1>ONScripter ��ȯ����</H1>
+    <div id="header">
+      <H1>ONScripter 開発日誌</H1>
 
-Since: Feb. 6, 2002<br>
-Last updated: Dec. 31, 2003
-</div> <!-- header -->
+      Since: Feb. 6, 2002<br>
+      Last updated: Dec. 31, 2003
+    </div> <!-- header -->
 
-<div id="toc-container">
+    <div id="toc-container">
 
-<h3>���γ�ȯ����</h3>
+      <h3>過去の開発日誌</h3>
 
-<div id="toc">
+      <div id="toc">
 
-<ul>
-  <li> 2003ǯ
-    <ul>
-      <li> <A HREF="onscripter_devel.2003_3.html"> 7��� 9��</A>
-      <li> <A HREF="onscripter_devel.2003_2.html"> 4��� 6��</A>
-      <li> <A HREF="onscripter_devel.2003_1.html"> 1��� 3��</A>
-    </ul>
-  <li> 2002ǯ
-    <ul>
-      <li> <A HREF="onscripter_devel.2002_4.html">10���12��</A>
-      <li> <A HREF="onscripter_devel.2002_3.html"> 7��� 9��</A>
-      <li> <A HREF="onscripter_devel.2002_2.html"> 4��� 6��</A>
-      <li> <A HREF="onscripter_devel.2002_1.html"> 1��� 3��</A>
-    </ul>
-  <li> 2001ǯ
-    <ul>
-      <li> <A HREF="onscripter_devel.2001.html">12��</A>
-    </ul>
-</ul>
-</div> <!-- toc -->
-</div> <!-- toc-container -->
-
-
-<div id="diary-container">
-<div id="diary">
-
-<h2>2003ǯ10���12��</h2>
-
-<div class="diary-day">
-<h3>12��31��</h3>
-
-<P>����ɽ������Ƥ���ƥ�����ʸ���򥢥�ե��դ������Ȥ�����¸�������̤θ�κ�����ˤ����Ȥ��褦�ˤ��ޤ���������ǡ�ʸ�������Ӥ���������������褦�ˤʤ�ޤ�����</P>
-
-<P>̾����ʶ��路���Τǡ������Τߤ� picture_surface �ˡ�����ե��Ĥ�ʸ�����̤� text_surface �ˡ�ξ�Ԥ���������ǽ����̤� accumultation_surface ���ѹ����ޤ�����</P>
-
-</div>
-
-<div class="diary-day">
-<h3>12��1��</h3>
-
-<P> SL-C860 ���б����������Υѥå����ɽ�����<A HREF="zaurus/index.html#Package">Zaurus �Ѥ� SDL library </A>��<A HREF="zaurus/sl-devel.html#devel-20031201">����</A>���ޤ�����</P>
-
-</div>
-
-<div class="diary-day">
-<h3>11��29��<span style="color:red">�����֥ե�����ΥС�����󥢥å�</span></h3>
-
-<P>rubyon, rubyoff ��������ޤ����������������̤κ����褬������ȡ���Ӥ��ä��Ƥ��ޤ��ޤ�������ϡ��������餢�롢��ʬŪ��ʸ���ο����ѹ�������˲��̤κ����褬�������ʸ���ο�������Ʊ���ˤʤäƤ��ޤ������Ʊ�������Ǥ���������ʬ���äƤ��ޤ���������äȤɤ�������褤���װ���Ǥ���</P>
-
-<P>�����ȼ���������֥ե�����ΥС�������夲�ޤ��������� ONScripter ���������������֥ե�����ϡ������ΥС������� ONScripter �Ǥ��ɤ߹���ޤ��󡣵դϤǤ��ޤ����ޤ���NScripter �ȥ����֥ե������ͭ���Ƥ�����ˤϡ������֥ե������ܹԤ������ NScripter ��ǿ��Τ�Τ��ѹ�����ɬ�פ�����ޤ���ONScripter �����Ȥ�ʤ����ˤ��ä˰ܹԺ�Ȥ򤹤�ɬ�פϤ���ޤ���ˡ������֥ե������ܹԤ���ˤϡ��ʲ��Τɤ��餫��¹Ԥ��Ƥ���������</p>
-
-<OL>
-<LI>NScripter ����¸���������֥ե�����ϡ���ö�Ť� ONScripter ���ɤ߹�����¸��ľ����
-
-<LI>�Ť� ONScripter ����¸���Ƥ��륻���֥ե������1�ǽ��������ե������ޤ�ˤϡ��ǿ��� ONScripter ���ɤ߹�����¸��ľ����
-</OL>
-
-<p style="text-indent:0">���줬���ݤʿͤϡ���¸�Υ�����˴ؤ��ƤϸŤ� ONScripter �򤽤Τޤޤ��Ȥ���������</p>
-
-<P>�Ȼפ����䡢20031103 �����Ǥϡ������ɤ���ľ��˥����֤���ȥ����ɥǡ����������֥ե������ȿ�Ǥ���ʤ���礬����Х�������ޤ�����20031103 �����ǥ����֤�ľ�����ˤϡ������� ONScripter ��Ω���夲ľ�������⤷�����ɤ߹��߸�˥ƥ����Ȥ��Ŀʤ�Ƥ�����¸����ʤɤ������������Ǥ���</P>
-
-<P>˿��ˤ��ä� MacOS9 �ѤΥѥå�������������ޤ�����</P>
-
-<P>MACOSX �⤷���� MACOS9 ���������Ƥ������ ctrl ����������̵�뤹����ͤ��ѻߤ��Ƹ����ᤷ�ޤ����������դ�ε�ư�ϸ��ڤǤ��ʤ��Τǡ����������ä��餴��𲼤�����</P>
-
-<P>SL-7x0 ��� onscripter-cf-s, onscripter-sd-s �� ��<A HREF="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=41">qvga �⡼�ɤ��ڤ��ؤ��ʤ�</A>�פ������ޤ������ɤ���顢ʣ���Υ�������Ʊ���¹ԥե������ͭ���Ƥ�����ˡ������پ���� /home/zaurus/Settings/display.conf �Ǽ¹ԥե�������˴������Ƥ��뤿�ᡢQVGA,VGA ��Ȥ�ʬ���뤳�Ȥ��Ǥ��ʤ��褦�Ǥ�������������˸�ͭ�μ¹ԥե�����ʥ�����ץȡˤ��Ѱդ��뤳�Ȥǲ�褷�ޤ�����
-</P>
-
-</div>
-
-<div class="diary-day">
-<h3>11��3��</h3>
-
-<P>�����ɻ��ˡ�gosub �Υͥ��Ⱦ���ΰ������������Ƥ��ʤ��Х��������ޤ������ƥ�����ʸ����Ԥ���뤳�Ȥ�����ޤ�����</P>
-
-<P>if ʸ�Ǿ���᤬���ˤ⤫����餺�¹�ʸ�����ξ��ʤɡ�RET_CONTINUE_NOREAD ���֤��ʤ��鸽�߰��֤����ԥ����ɤλ��ˡ����ֹ椬�����Х��������ޤ���������������§Ū�ʥ�����ץȤϤۤȤ�ɤ���ޤ��󤬡��⤷��������ȥ����ֻ��ˤۤ�ɬ���������̿Ū�ʥХ��Ǥ�����</P>
-
-<P>ONScripter �Ǥϡ�ctrl �����������˶��������å׾��֤ˤʤ�ޤ�����Mac �Ǥ� ctrl + �ޥ�������å��ǥޥ���������å������ˤʤ�褦�ʤΤǡ�MACOSX �⤷���� MACOS9 ���������Ƥ�����ˤ� ctrl ����������̵�뤹��褦�ˤ��ޤ�����</P>
-
-<P>˿��ˤ��ä� MacOS9 �ѤΥѥå�������������ޤ�����</P>
-
-</div>
-
-<div class="diary-day">
-<h3>10��5��</h3>
-
-<P>textgosub ���ѻ��ˤϡ������åץ⡼�ɤˤ����Ƥ� textgosub �ǻ��ꤵ�줿��٥�����֤褦�ˤ��ޤ�����</P>
-
-<P>humanorder ��������ޤ�����</P>
-
-</div>
-
-<div class="diary-day">
-<h3>10��3��</h3>
-
-<P> shadowTextDisplay ��Ǥ� dirty_rect ���ɲä��ʤ��褦�ˤ��ޤ�����refreshSurface �κǸ�� dirty_rect ���ɲä��ޤ��������˥᡼��������������褵��ʤ��Х��������ޤ�����</P>
-
-<P> �������Ѵ��롼����ǡ��̾��椬�礭���Ȥ��ˤ��ޤ���٤��Τǡ��������ά�����ޤ������������׻��̼��Τ��Ѥ��ʤ��Τǡ����������δ����ܤ��餤�Ǥ���</P>
-
-<P> ���ɥ����åפ������ʤ��ʤäƤ����Τ������ޤ�����</P>
-
-<P> btntime2 �ڤ� automode �ε�ư�ν�����������֤ȥܥ������ջ��֤Τ���Ĺ���������ԤĤ褦�ˤ��ޤ�����</P>
-
-<P> skip �⡼�ɤ� textbtnwait �����ä����ˡ�skip ���³�Ǥ���褦�˽������ޤ�����</P>
-
-<P> automode_time ����ξ�硢�����ʸ��(@,\\)���鸽�ߤΰ��֤ޤǤ�ʸ������ -automode_time ���Ѥ����ԤĤ褦�˽������ޤ�����</P>
-
-<P> ���˥᡼����󥹥ץ饤�Ȥǡ������ɽ�����֤����ξ�����������갷����褦�˽������ޤ�����</P>
-
-<P> btnwait ���ˡ�������ǲ��Υܥ��������õ�Ƥ��ʤ��ä��Х��������ޤ�����</P>
-
-<P> Makefile.Win �ǡ�nsaconv, sarconv ����������褦�ˤ����ޤ� OggVorbis ��ɸ��ǻȤ��褦�ˤ��ޤ�����</P>
-
-</div>
-
-</div> <!-- diary -->
-</div> <!-- diary-container -->
+        <ul>
+          <li> 2003年
+            <ul>
+              <li> <A HREF="onscripter_devel.2003_3.html"> 7月～ 9月</A>
+              <li> <A HREF="onscripter_devel.2003_2.html"> 4月～ 6月</A>
+              <li> <A HREF="onscripter_devel.2003_1.html"> 1月～ 3月</A>
+            </ul>
+          <li> 2002年
+            <ul>
+              <li> <A HREF="onscripter_devel.2002_4.html">10月～12月</A>
+              <li> <A HREF="onscripter_devel.2002_3.html"> 7月～ 9月</A>
+              <li> <A HREF="onscripter_devel.2002_2.html"> 4月～ 6月</A>
+              <li> <A HREF="onscripter_devel.2002_1.html"> 1月～ 3月</A>
+            </ul>
+          <li> 2001年
+            <ul>
+              <li> <A HREF="onscripter_devel.2001.html">12月</A>
+            </ul>
+        </ul>
+      </div> <!-- toc -->
+    </div> <!-- toc-container -->
 
 
-<div id="footer">
-Copyright (c) 1998-2006 Studio O.G.A. All rights reserved.
-</div> <!-- footer -->
+    <div id="diary-container">
+      <div id="diary">
 
-</div> <!-- body -->
+        <h2>2003年10月～12月</h2>
+
+        <div class="diary-day">
+          <h3>12月31日</h3>
+
+          <P>現在表示されているテキスト文字をアルファ付き画像として保存し、効果の後の再描画にそれを使うようにしました。これで、文字色やルビが正しく復帰するようになりました。</P>
+
+          <P>名前が紛らわしいので、画像のみを picture_surface に、アルファつき文字画面を text_surface に、両者を合成した最終画面を accumultation_surface に変更しました。</P>
+
+        </div>
+
+        <div class="diary-day">
+          <h3>12月1日</h3>
+
+          <P> SL-C860 に対応した阿川さんのパッチに追従し、<A HREF="zaurus/index.html#Package">Zaurus 用の SDL library </A>を<A HREF="zaurus/sl-devel.html#devel-20031201">更新</A>しました。</P>
+
+        </div>
+
+        <div class="diary-day">
+          <h3>11月29日<span style="color:red">セーブファイルのバージョンアップ</span></h3>
+
+          <P>rubyon, rubyoff を実装しました。ただし、画面の再描画が生じると、ルビが消えてしまいます。これは、以前からある、部分的に文字の色を変更した後に画面の再描画が生じると文字の色が全部同じになってしまう問題と同じ原因です。原因は分かっていますが、ちょっとどうしたらよいか思案中です。</P>
+
+          <P>これに伴い、セーブファイルのバージョンを上げました。この ONScripter で生成したセーブファイルは、以前のバージョンの ONScripter では読み込めません。逆はできます。また、NScripter とセーブファイルを共有している場合には、セーブファイルを移行した上で NScripter を最新のものに変更する必要があります（ONScripter しか使わない場合には特に移行作業をする必要はありません）。セーブファイルを移行するには、以下のどちらかを実行してください。</p>
+
+          <OL>
+            <LI>NScripter で保存したセーブファイルは、一旦古い ONScripter で読み込み保存し直す。
+
+            <LI>古い ONScripter で保存してあるセーブファイル（1で処理したファイルを含む）は、最新の ONScripter で読み込み保存し直す。
+          </OL>
+
+          <p style="text-indent:0">これが面倒な人は、既存のゲームに関しては古い ONScripter をそのままお使い下さい。</p>
+
+          <P>と思いきや、20031103 以前では、ロードした直後にセーブするとロードデータがセーブファイルに反映されない場合があるバグがありました。20031103 以前でセーブし直す場合には、一回毎に ONScripter を立ち上げ直すか、もしくは読み込み後にテキストを一つ進めてから保存するなどした方が安全です。</P>
+
+          <P>某所にあった MacOS9 用のパッチを一部取り入れました。</P>
+
+          <P>MACOSX もしくは MACOS9 が定義されている場合に ctrl キー押下を無視する仕様を廃止して元に戻しました。この辺りの挙動は検証できないので、おかしかったらご報告下さい。</P>
+
+          <P>SL-7x0 上の onscripter-cf-s, onscripter-sd-s で 「<A HREF="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=41">qvga モードに切り替わらない</A>」を修正しました。どうやら、複数のアイコンが同じ実行ファイルを共有している場合に、解像度情報を /home/zaurus/Settings/display.conf で実行ファイル毎に管理しているため、QVGA,VGA を使い分けることができないようです。アイコン毎に固有の実行ファイル（スクリプト）を用意することで解決しました。
+          </P>
+
+        </div>
+
+        <div class="diary-day">
+          <h3>11月3日</h3>
+
+          <P>ロード時に、gosub のネスト情報の一部を初期化していないバグを修正しました。テキスト文が一行ずれることがありました。</P>
+
+          <P>if 文で条件節が真にもかかわらず実行文が空の場合など、RET_CONTINUE_NOREAD を返しながら現在位置が改行コードの時に、行番号がずれるバグを修正しました。こういう変則的なスクリプトはほとんどありませんが、もし遭遇するとセーブ時にほぼ必ず落ちる致命的なバグでした。</P>
+
+          <P>ONScripter では、ctrl キー押下時に強制スキップ状態になりますが、Mac では ctrl + マウスクリックでマウス右クリック相当になるようなので、MACOSX もしくは MACOS9 が定義されている場合には ctrl キー押下を無視するようにしました。</P>
+
+          <P>某所にあった MacOS9 用のパッチを一部取り入れました。</P>
+
+        </div>
+
+        <div class="diary-day">
+          <h3>10月5日</h3>
+
+          <P>textgosub 使用時には、スキップモードにおいても textgosub で指定されたラベルに飛ぶようにしました。</P>
+
+          <P>humanorder を実装しました。</P>
+
+        </div>
+
+        <div class="diary-day">
+          <h3>10月3日</h3>
+
+          <P> shadowTextDisplay 内では dirty_rect に追加しないようにしました。refreshSurface の最後で dirty_rect に追加しました。アニメーションが正しく描画されないバグを修正しました。</P>
+
+          <P> 解像度変換ルーチンで、縮小比が大きいときにあまりに遅いので、処理を簡略化しました。ただし計算量自体は変わらないので、せいぜい体感で倍くらいです。</P>
+
+          <P> 既読スキップが効かなくなっていたのを修正しました。</P>
+
+          <P> btntime2 及び automode の挙動の修正。指定時間とボイス演奏時間のうち長い方だけ待つようにしました。</P>
+
+          <P> skip モードで textbtnwait に入った場合に、skip を継続できるように修正しました。</P>
+
+          <P> automode_time が負の場合、前回の文末(@,\\)から現在の位置までの文字数と -automode_time の積だけ待つように修正しました。</P>
+
+          <P> アニメーションスプライトで、セルの表示時間が０の場合も正しく取り扱えるように修正しました。</P>
+
+          <P> btnwait 時に、ある条件で過去のボタン定義を消去していなかったバグを修正しました。</P>
+
+          <P> Makefile.Win で、nsaconv, sarconv を生成するようにし、また OggVorbis を標準で使うようにしました。</P>
+
+        </div>
+
+      </div> <!-- diary -->
+    </div> <!-- diary-container -->
+
+
+    <div id="footer">
+      Copyright (c) 1998-2006 Studio O.G.A. All rights reserved.
+    </div> <!-- footer -->
+
+  </div> <!-- body -->
 
 </BODY>
+
 </HTML>

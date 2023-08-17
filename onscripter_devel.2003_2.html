@@ -1,249 +1,251 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <HTML lang="ja">
+
 <HEAD>
-<META http-equiv="Content-Type" content="text/html; charset=EUC-JP">
-<META http-equiv="Content-Style-Type" content="text/css">
-<META name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-<TITLE> ONScripter ��ȯ���� </TITLE>
-<LINK rel="stylesheet" type="text/css" href="/ogapee.css">
+  <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <META http-equiv="Content-Style-Type" content="text/css">
+  <META name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <TITLE> ONScripter 開発日誌 </TITLE>
+  <LINK rel="stylesheet" type="text/css" href="/ogapee.css">
 </HEAD>
 
 <body>
 
-<div id="body">
+  <div id="body">
 
-<div id="header">
-<H1>ONScripter ��ȯ����</H1>
+    <div id="header">
+      <H1>ONScripter 開発日誌</H1>
 
-Since: Feb. 6, 2002<br>
-Last updated: Jun. 30, 2003
-</div> <!-- header -->
+      Since: Feb. 6, 2002<br>
+      Last updated: Jun. 30, 2003
+    </div> <!-- header -->
 
-<div id="toc-container">
+    <div id="toc-container">
 
-<h3>���γ�ȯ����</h3>
+      <h3>過去の開発日誌</h3>
 
-<div id="toc">
+      <div id="toc">
 
-<ul>
-  <li> 2003ǯ
-    <ul>
-      <li> <A HREF="onscripter_devel.2003_1.html"> 1��� 3��</A>
-    </ul>
-  <li> 2002ǯ
-    <ul>
-      <li> <A HREF="onscripter_devel.2002_4.html">10���12��</A>
-      <li> <A HREF="onscripter_devel.2002_3.html"> 7��� 9��</A>
-      <li> <A HREF="onscripter_devel.2002_2.html"> 4��� 6��</A>
-      <li> <A HREF="onscripter_devel.2002_1.html"> 1��� 3��</A>
-    </ul>
-  <li> 2001ǯ
-    <ul>
-      <li> <A HREF="onscripter_devel.2001.html">12��</A>
-    </ul>
-</ul>
-</div> <!-- toc -->
-</div> <!-- toc-container -->
+        <ul>
+          <li> 2003年
+            <ul>
+              <li> <A HREF="onscripter_devel.2003_1.html"> 1月～ 3月</A>
+            </ul>
+          <li> 2002年
+            <ul>
+              <li> <A HREF="onscripter_devel.2002_4.html">10月～12月</A>
+              <li> <A HREF="onscripter_devel.2002_3.html"> 7月～ 9月</A>
+              <li> <A HREF="onscripter_devel.2002_2.html"> 4月～ 6月</A>
+              <li> <A HREF="onscripter_devel.2002_1.html"> 1月～ 3月</A>
+            </ul>
+          <li> 2001年
+            <ul>
+              <li> <A HREF="onscripter_devel.2001.html">12月</A>
+            </ul>
+        </ul>
+      </div> <!-- toc -->
+    </div> <!-- toc-container -->
 
 
-<div id="diary-container">
-<div id="diary">
+    <div id="diary-container">
+      <div id="diary">
 
-<h2>2003ǯ4���6��</h2>
+        <h2>2003年4月～6月</h2>
 
-<div class="diary-day">
-<h3>6��30��</h3>
+        <div class="diary-day">
+          <h3>6月30日</h3>
 
-<P>sarconv, nsaconv �ǡ��̾����줿�����λͶ��Υԥ������ͤ��̾����λͶ����ͤ��ݤĤ褦�˽������ޤ�����Ʃ����꤬���ޤ�ȿ�Ǥ���ʤ���礬���ä�����Ǥ���</P>
+          <P>sarconv, nsaconv で、縮小された画像の四隅のピクセル値が縮小前の四隅の値を保つように修正しました。透過指定がうまく反映されない場合があったためです。</P>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>6��29��</h3>
+        <div class="diary-day">
+          <h3>6月29日</h3>
 
-<P>���¦Ť���� patch �������졢date ���֤�ǯ���η���������ޤ��������񣴷夫�����񲼣���ˡˡ�</P>
+          <P>αβεさんの patch を取り入れ、date が返す年数の桁数を修正しました（西暦４桁から西暦下２桁に）。</P>
 
-<P>zaurus �Ǥˤ����ơ�������å���˥塼�κݤˡ���֥�˥塼��ɽ�����줿�夹������äƤ��ޤ�������н褷�ޤ�������®�Уäˤ����Ƥ������Ƥ����Ȼפ��ޤ���</P>
+          <P>zaurus 版において、右クリックメニューの際に、一瞬メニューが表示された後すぐに戻ってしまう問題に対処しました。低速ＰＣにおいても生じていたと思われます。</P>
 
-<P>SL-C750 ��ǡ����̤ȥ������饹�ΰ��ִط���180�٤���롦MP3 ���դˤ����Ʋ��ڤ줬������Ȥ��Զ�����򤤤��������Τǡ������륹�Ǥ�SDL�饤�֥��ˤ������н褷���ѥå������򹹿����ޤ�����</P>
+          <P>SL-C750 上で、画面とスタイラスの位置関係が180度ずれる・MP3 演奏において音切れが生じるとの不具合報告をいただいたので、ザウルス版のSDLライブラリにおいて対処し、パッケージを更新しました。</P>
 
-<h4>20030629a</h4>
+          <h4>20030629a</h4>
 
-<P>�������व�󤫤�ΥХ����򸵤ˡ�sarconv, nsaconv �� big endian �Υޥ���Ǽ¹Ԥ����Ȥ��ˡ�short, long ���ͤ��������񤭹���Ǥ��ʤ��ä��Х��������ޤ�����</P>
+          <P>そ～かむさんからのバグ報告を元に、sarconv, nsaconv を big endian のマシンで実行したときに、short, long の値を正しく書き込んでいなかったバグを修正しました。</P>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>6��22��</h3>
+        <div class="diary-day">
+          <h3>6月22日</h3>
 
-<P>��������ͳ���顢ONScripter �� Zaurus �Ǥ����� SDL �ؤΥѥå���١����ˤ��� SDL ���ư���褦�ˤ��ޤ������䤬�����˸������Ƥ����饤�֥��Ǥ������ư���ʤ��ʤ�ޤ���</P>
+          <P>下記の理由から、ONScripter の Zaurus 版を阿川さんの SDL へのパッチをベースにした SDL 上で動くようにしました。私が以前に公開していたライブラリでは正常に動かなくなります。</P>
 
-<ul>
-<li> ���ܤ� Linux Zaurus �ˤ����Ƥϡ�<A href="http://www.self-core.org/~kaoru-k/wiki/LibSdlOnLinuxZaurus.html">����󤬥ѥå������ƤƸ�������Ƥ��� SDL �ѥå�����</A>�� SDL �Ȥ��Ƥۤ�ɸ��ȤʤäƤ��ꡢ����ȸߴ����Τʤ��̤� SDL �ѥå�������Ȥ��ȥ桼��������
-<li> SL-C750, SL-C760 ���㤦ͽ�꤬�ʤ��Τǥ��ݡ��Ȥ���Τ������ؤ�
-<li> �����Υѥå��ˤϡ���ΰ����Υѥå��ˤ����뽤�������Ƽ��������Ƥ���
-</ul>
+          <ul>
+            <li> 日本の Linux Zaurus においては、<A href="http://www.self-core.org/~kaoru-k/wiki/LibSdlOnLinuxZaurus.html">阿川さんがパッチを当てて公開されている SDL パッケージ</A>が SDL としてほぼ標準となっており、これと互換性のない別の SDL パッケージを使うとユーザが不便
+            <li> SL-C750, SL-C760 を買う予定がないのでサポートするのがたいへん
+            <li> 阿川さんのパッチには、私の以前のパッチにおける修正が全て取り入れられている
+          </ul>
 
-<P>�����ǡ�������<A href="http://www.self-core.org/~kaoru-k/pub/libsdl_1.2.5-slzaurus20030622_arm.diff">libsdl_1.2.5-slzaurus20030622_arm.diff</A>�Υѥå�����äƤ������ libSDL-1.2.so.0.0.5 ��������ƻ���ΤǤ������������꤬����Τǡ����ӥѥå��򤢤Ƥޤ�������ʲ������ϰʲ��Σ����Ǥ���</p>
+          <P>そこで、阿川さんの<A href="http://www.self-core.org/~kaoru-k/pub/libsdl_1.2.5-slzaurus20030622_arm.diff">libsdl_1.2.5-slzaurus20030622_arm.diff</A>のパッチをもらってこちらで libSDL-1.2.so.0.0.5 を作成して試したのですが、色々問題があるので、別途パッチをあてました。主な改良点は以下の４点です。</p>
 
-<ol>
-<li> SL-5500 �ؤ��б�
-<li> 32bit aligned �ǤϤʤ�����ž���ؤ��б��ʰ�����
-<li> �ޥ������������ warp �������Ȥ���ȯ�Ԥ����SDL_PrivateMouseMotion �κ�ɸ���ѹ�
-<li> �ե졼��Хåե��ȥ��ץꥱ������󤬻��ꤹ������θ������ۤʤ�Ȥ��Υޥ�����ɸ������Υޡ�����μ�갷���ν���
-</ol>
+          <ol>
+            <li> SL-5500 への対応
+            <li> 32bit aligned ではない画像転送への対応（一部）
+            <li> マウスカーソルを warp させたときに発行されるSDL_PrivateMouseMotion の座標の変更
+            <li> フレームバッファとアプリケーションが指定する画像の向きが異なるときのマウス座標設定時のマージンの取り扱いの修正
+          </ol>
 
-<P>�긵�� SL-5500(ROM 3.1)(QVGA) �� SL-C700(VGA,QVGA) �Ǥ� ONScripter �������ư���Ƥ���ޤ�����¾�Υ��ߥ�졼���⤪���餯���Τޤ�ư���Ȼפ��ޤ�����������¾�Υ��ߥ�졼���ˤĤ��Ƥ�̤��ǧ�Ǥ����ܤ����� <a href="zaurus/sl-devel.html">SDL on Zaurus (SL-5500, SL-A300, SL-C700) ��ȯ�Ķ� </a>�Υڡ����򻲾Ȥ��Ƥ���������</P>
+          <P>手元の SL-5500(ROM 3.1)(QVGA) と SL-C700(VGA,QVGA) では ONScripter は正常に動いておりますし、他のエミュレータもおそらくそのまま動くと思います。ただし、他のエミュレータについては未確認です。詳しくは <a href="zaurus/sl-devel.html">SDL on Zaurus (SL-5500, SL-A300, SL-C700) 開発環境 </a>のページを参照してください。</P>
 
-<P>�ʤ������ν�����ȼ�� ONScripter ���Τ˻ܤ��������ϰʲ��ΰ����ΤߤǤ��뤿�ᡢ����ϥ������Ϲ������ޤ���</P>
+          <P>なお、この修正に伴い ONScripter 本体に施した修正は以下の一点のみであるため、今回はソースは更新しません。</P>
 
-<pre>
-Makefile.ARMLinux ���� -DSCREEN_ROTATION ��õ�
-ONScripterLabel.cpp: 236���ܤ�
+          <pre>
+Makefile.ARMLinux から -DSCREEN_ROTATION を消去
+ONScripterLabel.cpp: 236行目に
     mouse_rotation_mode = MOUSE_ROTATION_NONE;
-���ɲ�
+を追加
 </pre>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>6��16��</h3>
+        <div class="diary-day">
+          <h3>6月16日</h3>
 
-<P>���դ�ʸ��������κݤˡ���Ť� flush ���Ƥ����Х��������ޤ�����</P>
+          <P>影付き文字の描画の際に、二重に flush していたバグを修正しました。</P>
 
-<P>�������Ť��ƻ��֤��֤˹�äƤ��ʤ����Ǥ⡢���ޤǤ�¾�Υ��٥�ȡʲ��ڱ������ˤ�������뤿����ٱ䤬ɬ�פ�̿��֤˺��� 10msec �� wait ������Ƥ��ޤ�������ľ�� timerEvent �� eventLoop �Υ��塼�κǸ������뤳�Ȥˤ�ä��ٱ�򸺾�������褦�ˤ��ޤ��������٥�Ȥ��ꤳ�ܤ����Ȥ��ʤ��ʤ�ޤ�����</P>
+          <P>処理が重くて時間が間に合っていない場合でも、今までは他のイベント（音楽演奏等）を処理するために遅延が必要な命令間に最低 10msec の wait を入れていましたが、直に timerEvent を eventLoop のキューの最後に入れることによって遅延を減少させるようにしました。イベントを取りこぼすことがなくなりました。</P>
 
-<P>���ץ饤�ȥܥ����������ˡ�ButtonLink �� surface ���Ǽ�����ˡ����Τ� sprite_info �˻�������褦�ˤ��ޤ�����Ʊ���ܥ�������������ˤ˹Ԥ�������Ǥϡ�������������˺Ѥ�Τǹ�®�ˤʤ�ޤ���</P>
+          <P>スプライトボタン生成時に、ButtonLink に surface を格納せずに、実体を sprite_info に持たせるようにしました。同じボタンの生成を頻繁に行うゲームでは、毎回生成せずに済むので高速になります。</P>
 
-<P>����¾��effect ������������®�����ޤ�����</P>
+          <P>その他、effect の前後処理を高速化しました。</P>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>6��14��</h3>
+        <div class="diary-day">
+          <h3>6月14日</h3>
 
-<P>exbtn �Ǵ��˲������줿���ץ饤�Ȥ����褷�褦�Ȥ���������礬����Х��������ޤ�����</P>
+          <P>exbtn で既に解放されたスプライトを描画しようとして落ちる場合があるバグを修正しました。</P>
 
-<P>���˥᡼�����οʹԤ����ե졼�ऺ��Ƥ����Х��������ޤ�����</P>
+          <P>アニメーションの進行が１フレームずれていたバグを修正しました。</P>
 
-<P>ʸ�����ץ饤�ȥܥ����������®�����ޤ�����</P>
+          <P>文字スプライトボタンの描画を高速化しました。</P>
 
-<P>����¾����Ĺ�� flush ���Ƥ����ս���Ŭ�����ޤ�����</P>
+          <P>その他、冗長に flush していた箇所を最適化しました。</P>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>6��1��<span style="color:red">20030528��20030531 ��ȤäƤ���ͤ��׺�������</span></h3>
+        <div class="diary-day">
+          <h3>6月1日<span style="color:red">20030528～20030531 を使っている人は要差し換え</span></h3>
 
-<P>�ե�����̾����ʸ������Ǽ�����ѿ����Ф������ؿ��˴ؤ��ơ�20030528 �ʹߤǥ���Х����Ƥ������ὤ�����ޤ������빽����ʥХ��Ǥ�����</P>
+          <P>ファイル名等の文字列を格納する変数に対する操作関数に関して、20030528 以降でエンバグしていたため修正しました。結構重大なバグでした。</P>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>5��31��</h3>
+        <div class="diary-day">
+          <h3>5月31日</h3>
 
-<P>�������鵤�ˤʤäƤ��� windowback �� text ���ظ��ɽ������ʤ��Х��������ޤ���������Ū���̤Ȥ��ơ����˥᡼����󥫡����뤬�ƥ����ȤȽŤʤäƤ������ˡ��ƥ����Ȥ�����åפ���Ƥ�����Ʃ��ɽ���ˤʤ�ʤ��˥Х��⽤������ޤ�����
-</P>
+          <P>以前から気になっていた windowback で text が背後に表示されないバグを修正しました。副次的効果として、アニメーションカーソルがテキストと重なっていた場合に、テキストがクリップされていた（透過表示にならない）バグも修正されました。
+          </P>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>5��28��</h3>
+        <div class="diary-day">
+          <h3>5月28日</h3>
 
-<P>alphaBlend ������ˡ����ݤ����ΰ賰�˽񤭹����ǽ��������Х��������ޤ�����</P>
+          <P>alphaBlend 処理中に、確保した領域外に書き込む可能性があるバグを修正しました。</P>
 
-<P>NULL �����ꤵ�줿ʸ���ѿ��ˤ�� segmentation fault ��������������뤳�Ȥ�����Х��������ޤ�����</P>
+          <P>NULL が設定された文字変数により segmentation fault が引き起こされることがあるバグを修正しました。</P>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>5��27��</h3>
+        <div class="diary-day">
+          <h3>5月27日</h3>
 
-<P>SDL_ttf �� TTF ��Ȥ����ˤϡ��ۤʤ�ʸ�����������Ȥ� TTF_OpenFont ��¹Ԥ���ɬ�פ�����ޤ������� Open ���줿 font ����������ơ�ʸ��ɽ���� font ��ʸ���󥹥ץ饤�����Ƕ�ͭ����褦�˽������ޤ�����</P>
+          <P>SDL_ttf で TTF を使う場合には、異なる文字サイズごとに TTF_OpenFont を実行する必要があります。この Open された font を一括管理して、文章表示用 font や文字列スプライト等で共有するように修正しました。</P>
 
-<P>cell ��ͭ���������ۤ��ƥ����ֹ����ꤷ�����ˡ�ͭ���ʺ��祻���ֹ�����ꤹ��褦�˽������ޤ�����</P>
+          <P>cell で有効セル数を越えてセル番号を指定した場合に、有効な最大セル番号を設定するように修正しました。</P>
 
-<P>SDL_ACTIVEEVENT ȯ������ flush �ǡ�dirty_rect �ξ��󤬾ä���Ƥ����Х��������ޤ�����</P>
+          <P>SDL_ACTIVEEVENT 発生時の flush で、dirty_rect の情報が消されていたバグを修正しました。</P>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>5��25��</h3>
+        <div class="diary-day">
+          <h3>5月25日</h3>
 
-<P>cell �ǻ��ꤷ�������ֹ椬ͭ���Ǥ���Τ��ɤ���������å�����褦�ˤ��ޤ�����</P>
+          <P>cell で指定したセル番号が有効であるのかどうかをチェックするようにしました。</P>
 
-<P>fileexist, spclclk ��������ޤ�����</P>
+          <P>fileexist, spclclk を実装しました。</P>
 
-<P>�����֥ե����������Ū�ʼ�갷���������ޤ����������֥ե�������ξ�¤�ű�Ѥ��ޤ�����</P>
+          <P>セーブファイルの内部的な取り扱いを修正しました。セーブファイル数の上限を撤廃しました。</P>
 
-<P>�ܥ���������Υ��ץ饤�ȥܥ����ɽ�����®�����ޤ�����</P>
+          <P>ボタン選択時のスプライトボタンの表示を高速化しました。</P>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>5��19��</h3>
+        <div class="diary-day">
+          <h3>5月19日</h3>
 
-<P>�����褹��ɬ�פΤ���ս�Τ� frame buffer �˽񤭹���(flush)�褦�ˤ��ơ�ɽ���ι�®����ޤ�ޤ������ޤ���ofscpy ��� effect �ˤ������ư������ˤʤä��Ϥ��Ǥ����������빽�����ä����ᡢ�Ȥꤢ���� experimental �ǤȤ����֤��Ƥ����ޤ�����Ƥ����������ϡ������ȵ�ư���ۤʤ���ˤϤ���𲼤�����</P>
+          <P>再描画する必要のある箇所のみ frame buffer に書き込む(flush)ようにして、表示の高速化を図りました。また、ofscpy 後の effect における挙動も正常になったはずです。描画回りを結構いじったため、とりあえず experimental 版として置いておきます。試してくださる方は、以前と挙動が異なる場合にはご報告下さい。</P>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>5��10��</h3>
+        <div class="diary-day">
+          <h3>5月10日</h3>
 
-<P>Blackbrd ���󤫤�ΥХ����򸵤ˡ������β������ѹ������ˤ����ơ����ݤ��������ΰ褬�Խ�ʬ�� segmentation fault �򵯤��������н褷�ޤ�����</P>
+          <P>Blackbrd さんからのバグ報告を元に、画像の解像度変更処理において、確保したメモリ領域が不十分で segmentation fault を起こす場合に対処しました。</P>
 
-<P>���¦Ť���� patch �������졢���ץ饤�Ȥ�Ʃ��⡼�ɻ��꤬�����ʾ��β���������ɲä��ޤ�����</P>
+          <P>αβεさんの patch を取り入れ、スプライトの透過モード指定が不正な場合の回避処理を追加しました。</P>
 
-<P>���¦Ť���� patch �������졢goto* label �� goto * label ��ɽ�����᤹�뤿��� readToken �������ޤ�����</P>
+          <P>αβεさんの patch を取り入れ、goto* label や goto * label の表記を解釈するために readToken を修正しました。</P>
 
-<P>ONScripterLabel_rmenu.cpp ��ONScripterLabel_rmenu.cpp �� ONScripterLabel_file.cpp ��ʬ�䤷�ޤ�����</P>
+          <P>ONScripterLabel_rmenu.cpp を、ONScripterLabel_rmenu.cpp と ONScripterLabel_file.cpp に分割しました。</P>
 
-<P>bg �ǲ��̥���������طʲ����Υ����������������ϡ��ظ������ɤ��٤��褦�˽������ޤ�����</P>
+          <P>bg で画面サイズより背景画像のサイズが小さい場合は、背後を黒で塗り潰すように修正しました。</P>
 
-<P>�ƥ�����ʸ���' '��'\t'���ɤ����Ф��褦�˽������ޤ�����</P>
+          <P>テキスト文中の' 'と'\t'を読み飛ばすように修正しました。</P>
 
-<P>ɬ�ץ����̤�︺���뤿��ˡ�background_surface ���ѻߤ��ޤ�����</P>
+          <P>必要メモリ量を削減するために、background_surface を廃止しました。</P>
 
-<P>¾�ˤ⿧�������äƤ����ΤǤ��������֤������ꤽ���ʤΤǰ�ö������Хå����ƥ�꡼�����ޤ�����</P>
+          <P>他にも色々いじっていたのですが、時間がかかりそうなので一旦ロールバックしてリリースしました。</P>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>4��9��</h3>
+        <div class="diary-day">
+          <h3>4月9日</h3>
 
-<P>���¦Ť���� patch �������졢input �򲾼������ޤ�������˥ǥե�����ͤ�����ޤ���</P>
+          <P>αβεさんの patch を取り入れ、input を仮実装しました。常にデフォルト値を入れます。</P>
 
-<P>���¦Ť���� patch �������졢dwaveplay, dwaveplayloop �ΥХ��������ޤ�����</P>
+          <P>αβεさんの patch を取り入れ、dwaveplay, dwaveplayloop のバグを修正しました。</P>
 
-<P>���¦Ť���� patch �������졢EXTERNAL_MUSIC_PLAYER �� define ����Ƥ������mp3*, bgm* ��Ķ��ѿ� PLAYER_CMD �ǻ��ꤵ�줿�����ץ���������Ѥ��ƺ�������褦�ˤ��ޤ��������ξ�硢�ܥ�塼�������̵���ˤʤ�ޤ���PLAYER_CMD �����ꤵ��Ƥ��ʤ����ϡ������̤��ư��ˤʤ�ޤ���(�� �¸�Ū�����Ǥ���.wma �ե������ BGM �˻ȤäƤ����Τ����ä�����)</P>
+          <P>αβεさんの patch を取り入れ、EXTERNAL_MUSIC_PLAYER が define されている時、mp3*, bgm* を環境変数 PLAYER_CMD で指定された外部プログラムを使用して再生するようにしました。その場合、ボリューム設定は無効になります。PLAYER_CMD が設定されていない場合は、従来通りの動作になります。(※ 実験的実装です。.wma ファイルを BGM に使っているものがあったため)</P>
 
-<P>���¦Ť���� patch �������졢menusetwindow ���طʿ�����ά����Ƥ�����ʤ�������","(�����)�Ϥ���ˤ��б��������ޤ������������������Ƥ��� patch ����������ΤǤ�����</P>
+          <P>αβεさんの patch を取り入れ、menusetwindow で背景色が省略されている場合（ただし、","(コンマ)はある）の対応を修正しました。元々いただいていた patch が正しいものでした。</P>
 
-<P>���¦Ť���� patch �������졢readStr() �� "" �� stralias �򸡺����ʤ��褦�˽������ޤ����������Ȥˡ�(�� ¾�˾嵭���Ф��������ˡ������С����ν���������ʤ������ɤ������Τ�ޤ���)�Ȥ���ޤ�����������ϲ��ǤǤ��礦��ľ��Ū�ˤϤ��ν���������ʤ��褦�˻פ���ΤǤ�����</P>
+          <P>αβεさんの patch を取り入れ、readStr() で "" の stralias を検索しないように修正しました。コメントに、(※ 他に上記に対する回避方法があれば、この修正は入れない方が良いかも知れません。)とありましたが、これは何ででしょう？直感的にはこの修正で問題ないように思えるのですが。</P>
 
-<P>���¦Ť���� patch �������졢";mode400",";mode320" ���б����ޤ�����</P>
+          <P>αβεさんの patch を取り入れ、";mode400",";mode320" に対応しました。</P>
 
-<P>���¦Ť���� patch �������졢̿���ľ��˶���̵����"-"��"/"�����ä����ˡ����ڤ��ʤ��ä��Х����㤨�С�"csp-1"��"skipoff/"�ˤ������ޤ�����</P>
+          <P>αβεさんの patch を取り入れ、命令の直後に空白無しで"-"や"/"があった場合に、区切られなかったバグ（例えば、"csp-1"や"skipoff/"）を修正しました。</P>
 
-<P>���¦Ť���� patch �򻲹ͤˡ���§�黻�Ǳ黻�Ҥα�¦�˿������ʤ�����̿�����κǸ夬����+'/'�ξ��ʤɡˤϡ����α黻�Ҥ�̵�뤹��褦�˽������ޤ���������ǡ�����Υ�������б��Ǥ���Ȼפ��ޤ���</P>
+          <P>αβεさんの patch を参考に、四則演算で演算子の右側に数字がない場合（命令の列の最後が数字+'/'の場合など）は、その演算子を無視するように修正しました。これで、新旧のゲームに対応できると思います。</P>
 
-<P>���¦Ť���� patch �������졢̿�����ä� mod �黻�ҤȤ��Ʋ�ᤷ�Ƥ��ޤ���礬�����Զ��������ޤ�����</P>
+          <P>αβεさんの patch を取り入れ、命令を誤って mod 演算子として解釈してしまう場合がある不具合を修正しました。</P>
 
-<h4>20030409a</h4>
-  
-<P>���¦Ť���� patch �������졢sarconv, nsaconv �ǡ�width=1 ���뤤�� height=1 �β������Ѵ����褦�Ȥ���� SEGV ��ȯ�����뤳�Ȥ���������������ޤ�����</P>
+          <h4>20030409a</h4>
 
-</div>
+          <P>αβεさんの patch を取り入れ、sarconv, nsaconv で、width=1 あるいは height=1 の画像を変換しようとすると SEGV が発生することがある問題を修正しました。</P>
 
-</div> <!-- diary -->
-</div> <!-- diary-container -->
+        </div>
+
+      </div> <!-- diary -->
+    </div> <!-- diary-container -->
 
 
-<div id="footer">
-Copyright (c) 1998-2006 Studio O.G.A. All rights reserved.
-</div> <!-- footer -->
+    <div id="footer">
+      Copyright (c) 1998-2006 Studio O.G.A. All rights reserved.
+    </div> <!-- footer -->
 
-</div> <!-- body -->
+  </div> <!-- body -->
 
 </BODY>
+
 </HTML>

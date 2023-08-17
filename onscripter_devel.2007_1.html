@@ -1,278 +1,265 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <HTML lang="ja">
+
 <HEAD>
-<META http-equiv="Content-Type" content="text/html; charset=EUC-JP">
-<META http-equiv="Content-Style-Type" content="text/css">
-<META name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-<TITLE> ONScripter ��ȯ���� </TITLE>
-<LINK rel="stylesheet" type="text/css" href="/ogapee.css">
+  <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <META http-equiv="Content-Style-Type" content="text/css">
+  <META name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <TITLE> ONScripter 開発日誌 </TITLE>
+  <LINK rel="stylesheet" type="text/css" href="/ogapee.css">
 </HEAD>
 
 <body>
 
-<div id="body">
+  <div id="body">
 
-<div id="header">
-<H1>ONScripter ��ȯ����</H1>
+    <div id="header">
+      <H1>ONScripter 開発日誌</H1>
 
-Since: Feb. 6, 2002<br>
-Last updated: Aug. 26, 2007
-</div> <!-- header -->
+      Since: Feb. 6, 2002<br>
+      Last updated: Aug. 26, 2007
+    </div> <!-- header -->
 
-<div id="toc-container">
+    <div id="toc-container">
 
-<h3>���γ�ȯ����</h3>
+      <h3>過去の開発日誌</h3>
 
-<div id="toc">
+      <div id="toc">
 
-<ul>
-  <li> <A HREF="onscripter_devel.2006_1.html"> 2006ǯ</A>
-  <li> <A HREF="onscripter_devel.2005_1.html"> 2005ǯ</A>
-  <li> <A HREF="onscripter_devel.2004_1.html"> 2004ǯ</A>
-  <li> 2003ǯ
-    <ul>
-      <li> <A HREF="onscripter_devel.2003_4.html">10���12��</A>
-      <li> <A HREF="onscripter_devel.2003_3.html"> 7��� 9��</A>
-      <li> <A HREF="onscripter_devel.2003_2.html"> 4��� 6��</A>
-      <li> <A HREF="onscripter_devel.2003_1.html"> 1��� 3��</A>
-    </ul>
-  <li> 2002ǯ
-    <ul>
-      <li> <A HREF="onscripter_devel.2002_4.html">10���12��</A>
-      <li> <A HREF="onscripter_devel.2002_3.html"> 7��� 9��</A>
-      <li> <A HREF="onscripter_devel.2002_2.html"> 4��� 6��</A>
-      <li> <A HREF="onscripter_devel.2002_1.html"> 1��� 3��</A>
-    </ul>
-  <li> 2001ǯ
-    <ul>
-      <li> <A HREF="onscripter_devel.2001.html">12��</A>
-    </ul>
-</ul>
-</div> <!-- toc -->
-</div> <!-- toc-container -->
-
-
-<div id="diary-container">
-<div id="diary">
-
-<h2>2007ǯ</h2>
-
-<div class="diary-day">
-<h3>8��26��</h3>
-
-<p>���ȡ��व�󤫤�ΥХ�����<a
-href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=116">reset
-load ̿��</a>�פ��ɵ��򸵤ˡ�CD audio �ο����ؤ����դ� OGG �ե������
-���Ѥ���ݤˡ��롼�ױ��դ��Ǥ��ʤ��ʤä��Х���20070823 ��ȯ���ˤ���
-���ޤ�����</p>
-
-<p>���ȡ��व�󤫤�ΥХ�����<a
-href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=118">
-�����꡼�󥷥�å�</a>�פ򸵤ˡ�PDA ��������ƥ���ѥ��뤷������ 
---disable-rescale ����ꤷ�� ONScripter ��¹Ԥ������ˡ������٤��Ѵ�
-���줺�˥����꡼�󥷥�åȤβ����ե����뤬��¸�����Х��������ޤ�����
-</p>
-
-<p>lsp2, lsph2, csp2, msp2, amsp2, allsp2resume, allsp2hide ̿������
-���ޤ�����</p>
-
-<h4>20070826a</h4>
-
-<p>��ĥ���ץ饤�Ȥ�ɽ���礬�ְ�äƤ����Х��������ޤ�����</p>
-
-</div>
-
-<div class="diary-day">
-<h3>8��23��</h3>
-
-<p>���ȡ��व�󤫤�ΥХ�����<a
-href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=116">reset
-load ̿��</a>�פ򸵤ˡ�systemcall reset, systemcall load, reset,
-definereset, loadgame, definereset ̿��κݤˡ�dwave �Ǻ�����β��ڤ�
-��ߤ��ʤ��Х��������ޤ����������ΥС��������ܲȤǤ���ߤ��ʤ��褦
-�ˤʤäƤ����Ϥ��ǡ�ONScripter �Ǥ�虜�Ȥ������Ƥ����ΤǤ��������Ĥ�
-�ޤˤ��ܲȤǤ���ߤ���褦�ˤʤä��褦�Ǥ���</p>
-
-<p>20070822 �ǡ�textgosub ������ˣ��ڡ���ɽ����o �����ˤ���ǽ���ʤ��ʤ�
-�Ƥ������ᡢ�������ޤ�����</p>
-
-<p>�������뤵��Υѥå��������졢streaming OGG �� MP3 �Υ롼�׺�����
-�����ơ������֤����٤˥ե�������ɤ߹���ΤǤϤʤ���������Υǡ�����
-�����Ѥ���褦�ˤ��ޤ�����</p>
-
-</div>
-
-<div class="diary-day">
-<h3>8��22��</h3>
-
-<p>tmkk���󤫤�ΥХ�����<a
-href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=114">
-textgosub����Ѥ��Ƥ�����Υ�����ץȲ�����</a>�פ򻲹ͤˡ�textgosub 
-�����ꤵ��Ƥ���Ȥ��ˡ�ɽ��ʸ����������ᤵ��ʤ����Ȥ�����Х�����
-���ޤ�����textgosub �Υ�٥�����ֺݤˤϡ�clickstr_state �����ꤷ�ʤ�
-�褦�ˤ��ޤ������������Ѥ����뤫����ޤ���</p>
-
-<p>sa_chi_ho ���󤫤�ΥХ�����<a
-href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=115">
-��drawbg2�٤��Զ�硩</a>�פ򸵤ˡ�AnimationInfo::blendOnSurface2() ��
-�����ơ����ե����Ѵ�����εչ���������黻�ǵ���ݤ˥����С��ե�����
-���������������׻��Ǥ��ʤ���礬����Х��������ޤ��������٤�㴳����
-�ˤ��Ƥ��ޤ���</p>
-
-<p>return ̿��ǡ�������ץȤν����ˤ�äƤϵ�ǽ���ʤ����Ȥ�����Х�
-�������ޤ�����</p>
-
-</div>
-
-<div class="diary-day">
-<h3>8��21��</h3>
-
-<p>����˳�ȯ�ޥ���ΣȣģĤ�����Ǥ��ޤ����������˻�������Ȥ⤢�ä� 
-ONScripter ����󤶤��äƤ����ΤǤ����������ѥå���ί�ޤäƤ���褦��
-���Τǵס��˹������ޤ�����</p>
-
-<p>�ޤ���zaurus �Ѥγ�ȯ�Ķ�����ľ���ޤ��������ݤ��ʤȻפäƤ����Τ�
-������<a href="zaurus/sl-devel.html">SDL on Zaurus (SL-5500, SL-A300,
-SL-C700) ��ȯ�Ķ� </a>����ʤ������ˤޤȤޤäƤ��ꡢ��ȤϤ��ʤ�ڤ�
-�������Ĥ��Ǥ˥饤�֥��Υޥ��ʡ��С�����󥢥åץǡ��ȡܰ����ѥå���
-���ľ����SDL_image �� PNG �ؤ��б��ʤɤ�Ԥ��ޤ�����libqte-2.3.2 �� 
-static link ����Ƥ��� PNG library �� SDL_image ����Ȥ���ˡ��ʬ���餺��
-��� libz.so �� libpng12.so �� onscripter-lib �˴ޤ�Ƥ��ޤ��ޤ�����
-</p>
-
-<p>tmkk���󤫤�Υѥå��򻲹ͤˡ�dwavestop �� chvol ̿��ˤ����ơ�54 
-�ʾ�Υ����ͥ��ֹ椬���ꤵ�줿�Ȥ�������뤳�Ȥ�����Х��������ޤ�
-����</p>
-
-<p>tmkk���󤫤�Υѥå��������졢MacOSX �Ķ��ˤ����ơ�
-CoreFoundation(iconv) ���Ѵ��Ǥ��ʤ� ShiftJIS ʸ����Υե�����̾�����
-�����Ȥ������������������ޤ�����</p>
-
-<p>rerofumi����Υѥå��������졢Playstation3 �Υѥåɤ��б����ޤ�����
-�������������Ǥ�ư��̤��ǧ�Ǥ���</p>
-
-<p>haeleth ����Υѥå��������졢�᥸�㡼�С�����󤬣��θŤ�������
-�����֥ե�������ɤ߹���ݤˡ��Ľ񤭥⡼�ɤǥƥ����ȥХåե���ʸ������
-�׻����ְ�äƤ����Х��������ޤ�����</p>
-
-<p>haeleth ����Υѥå��������졢getparam ���ޥ�ɤˤ����ơ��ƤӽФ�
-����ʸ���ѿ����ѿ��ֹ��������� s% ɽ�������������Ǥ��ʤ��Х�����
-���ޤ�����ñ��ߥ��� f% �����ꤷ�Ƥ��ޤ�����</p>
-
-<p>haeleth ����Υѥå��������졢--help �ν��ϤΥ��ڥ�ߥ���������
-������</p>
-
-<p>������ץȺǾ��ʤ� ;value ���ޥ�ɤǡ�;value �ȿ����δ֤˶��򤬤���
-���˥��ޥ�ɤ�̵�뤵���������褷�ޤ�����</p>
-
-<h4>20070821a</h4>
-
-<p>���������֤Υ���ǥå��������κݤˡ����ե����뤢���� 272 bytes ����
-���Ƥ����ΤǤ��������������֤���Υե��������¿���ȥ�������̤��Ф�
-�ˤʤ�ʤ��褦�Ǥ����ե�����̾�˸���� 256 bytes ������ƤƤ������Ȥ�
-���װ����ä��Τǡ�����ǥå����򣲲󥹥���󤷤ơ������ܤǥե�����̾��
-ɬ�פ��������̤�׻����������ޤȤ�Ƴ��ݤ�����ˡ������ܤǥե���
-��̾���Ǽ�����������ѹ����ޤ�������ܥ����̤ξ��ʤ� Zaurus �� PSP 
-�Ǥϡ�������ˤ�äƤ��礭�ʸ��̤����뤫�⤷��ޤ���</p>
-
-</div>
-
-<div class="diary-day">
-<h3>2��6��</h3>
-
-<p>���ȡ��व�󤫤�ΥХ�����<a
-href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=107">for
-ʸ�ΥХ�</a>�פ򸵤ˡ�for %0=1 to 0 �ʤ�����롼�פ���򣱲��¹Ԥ���
-�����Ǥ⡢ɬ������ϥ롼�פ����¹Ԥ��Ƥ����Х��������ޤ�����</p>
-
-</div>
-
-<div class="diary-day">
-<h3>2��5��</h3>
-
-<p>���ףţ¥ڡ������ߤ��Ƥ����ᣵǯ���᤮�ޤ����������û���֤θ���
-ƨ��ץ��������Ȥ��ä��ΤǤ��������������ޤ�ͽ�۳��˿����ʴĶ��ǻȤä�
-�������������꤬�������Ȥ˺��Ǥ�¿�������˻��Ѥ��Ƥ��������Ƥ���ޤ���
-�Ƕ�ǤϤ��ޤ�ONScripter�˻��֤�䤯���Ȥ��Ǥ������ä��ܲȤο����ޥ��
-���ɽ��Ǥ��Ƥ��ޤ��󤬡��ܤ��ܤ�³���ƹԤ����ȤϻפäƤ��ޤ���</p>
-
-<p>���ȡ��व�󤫤�Υѥå���<a
-href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=104">
-for PSP �Υѥå�</a>�פǤ�����������Ǽ�����줿��ʬ�ˤޤ�ñ��ʸ��꤬
-���ꡢ�������ޤ�����������ʬ�ˤĤ��Ƥϡ������Ǥϥ���ѥ��뤷�ƥ����å�
-���뤳�Ȥ��񤷤����ᡢ����Ĥ��ƤϤ���ΤǤ������ޤˤ������ä��ߥ���
-�Ƥ��ޤ��ޤ������ƼϤ���������</p>
-
-<p>���ȡ��व�󤫤�Τ���˾��<a
-href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=106">
-Ʃ��УΣ�</a>�פؤ��б��Ȥ��ơ�20070203�Ǥϥ�����Ʃ������� c (���ԡ�)
-�Ȥ����ΤǤ��������θ夹�ȡ��व����<a
-href="http://www.geocities.jp/v_2357/program">nscrpng.spi</a>�Ȥθߴ�
-��������⤢��Ʃ������� a(����ե��֥���)�ˤ��Ƥۤ����ȤΤ���˾������
-�����ᡢ���Τ褦���ѹ����ޤ�����Ʃ������� a �ˤ���ȡ�Ʃ��УΣǤΤ�
-���˥���ե������ͥ����äƤ�����ˤϤ����Ȥ������äƤ��ʤ����
-�ˤϲ����α�Ⱦʬ�򥢥�ե��ͤȤ��ƻ��Ѥ��ޤ����������ˤ����������ʬ��
-��䤹���������ޤ����������뤵��θ����Υѥå���¤Ϥ����ʤäƤ��ޤ�����
-</p>
-
-</div>
-
-<div class="diary-day">
-<h3>2��3��</h3>
-
-<p>���ȡ��व�󤫤�Υѥå���<a
-href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=104">
-for PSP �Υѥå�</a>�פ˼�����줿���ȿ�Ǥ��� 20070202 ���꡼������
-��������������Ǽ�����줿��ʬ�˴ְ㤤������ޤ���������������ޤ���
-���ȡ��व�󤫤�Τ���Ŧ�򸵤ˡ����θĽ�Ϥ��������������Υѥå���ۤ�
-���Τޤ޼�����줵���Ƥ��������ޤ�����</p>
-
-<p>���ȡ��व�󤫤�Τ���˾��<a
-href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=106">
-Ʃ��УΣ�</a>�פ򸵤ˡ������������뤵�󤬺������줿Ʃ��УΣǥѥå���
-���ͤˤ��ơ��ե륫�顼��Ʃ��УΣǤ��б����ޤ��������������ѥ�åȥ��顼
-�ΣУΣǤ�Ʃ�ῧ�ˤ�̤�б��Ǥ����ޤ���������Ʃ������� c(���ԡ�)�����
-���Ƥ���������a(����ե��֥���)�ϲ����α�Ⱦʬ������ǥ���ե��ͤ��
-�ꤹ�뤳�ȤˤʤäƤ���Τǡ�Ʃ��УΣǤξ��Ǥ⥢��ե������ͥ��̵
-�뤷�Ʊ�Ⱦʬ�β����򥢥�ե��ͤ˻��Ѥ��ޤ���</p>
-
-</div>
-
-<div class="diary-day">
-<h3>2��2��</h3>
-
-<p>���ȡ��व�󤫤�ΥХ�����<a
-href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=101">
-̿��ʸ�ΥХ����</a>�פ򻲹ͤˡ���٥��������ɤ߹���ʤ��Х�����
-���ޤ���������Ū�ˤϡ���٥�� ScriptHandler::readStr() ���ɤ�褦����
-�����ޤ�����</p>
-
-<p>���ȡ��व�󤫤�ΥХ�����<a
-href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=101">
-̿��ʸ�ΥХ����</a>�פ򻲹ͤˡ�print ���ޥ�ɤǥޥ�����������ꤹ����ˡ������ܰʹߤ˥ޥ���������ȿ�Ǥ���ʤ��Х��������ޤ�����</p>
-
-<p>���ȡ��व�󤫤�Υѥå���<a
-href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=104">
-for PSP �Υѥå�</a>�פ򻲹ͤˡ�PSP �ǥ��꡼�ץ⡼�ɤ�����������Ȥ���
-�ƥ����Ȥ��ä��Ƥ��ޤ��Х��������ޤ���������¾�ˤ� HOME �ܥ���ǥ���
-���λ����Ȥ���ɬ�פʴؿ���­��ʤ��Х��������ޤ�����������������
-�Ǥ�̤��ǧ�Ǥ���</p>
-
-<p>hiyuh���󤫤�Υѥå���<a
-href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=105">
-mixing size_t and ogg_int64_t</a>�פ������졢64bit Linux �Ķ��ǥ���ѥ������ݤ� warning ���Ф�������н褷�ޤ�����</p>
-
-</div>
-
-</div> <!-- diary -->
-</div> <!-- diary-container -->
+        <ul>
+          <li> <A HREF="onscripter_devel.2006_1.html"> 2006年</A>
+          <li> <A HREF="onscripter_devel.2005_1.html"> 2005年</A>
+          <li> <A HREF="onscripter_devel.2004_1.html"> 2004年</A>
+          <li> 2003年
+            <ul>
+              <li> <A HREF="onscripter_devel.2003_4.html">10月～12月</A>
+              <li> <A HREF="onscripter_devel.2003_3.html"> 7月～ 9月</A>
+              <li> <A HREF="onscripter_devel.2003_2.html"> 4月～ 6月</A>
+              <li> <A HREF="onscripter_devel.2003_1.html"> 1月～ 3月</A>
+            </ul>
+          <li> 2002年
+            <ul>
+              <li> <A HREF="onscripter_devel.2002_4.html">10月～12月</A>
+              <li> <A HREF="onscripter_devel.2002_3.html"> 7月～ 9月</A>
+              <li> <A HREF="onscripter_devel.2002_2.html"> 4月～ 6月</A>
+              <li> <A HREF="onscripter_devel.2002_1.html"> 1月～ 3月</A>
+            </ul>
+          <li> 2001年
+            <ul>
+              <li> <A HREF="onscripter_devel.2001.html">12月</A>
+            </ul>
+        </ul>
+      </div> <!-- toc -->
+    </div> <!-- toc-container -->
 
 
-<div id="footer">
-Copyright (c) 1998-2007 Studio O.G.A. All rights reserved.
-</div> <!-- footer -->
+    <div id="diary-container">
+      <div id="diary">
 
-</div> <!-- body -->
+        <h2>2007年</h2>
+
+        <div class="diary-day">
+          <h3>8月26日</h3>
+
+          <p>すとーむさんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=116">reset
+              load 命令</a>」の追記を元に、CD audio の振り替え演奏で OGG ファイルを
+            使用する際に、ループ演奏ができなくなったバグ（20070823 で発生）を修正
+            しました。</p>
+
+          <p>すとーむさんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=118">
+              スクリーンショット</a>」を元に、PDA を定義してコンパイルし、かつ
+            --disable-rescale を指定して ONScripter を実行した場合に、解像度が変換
+            されずにスクリーンショットの画像ファイルが保存されるバグを修正しました。
+          </p>
+
+          <p>lsp2, lsph2, csp2, msp2, amsp2, allsp2resume, allsp2hide 命令を実装
+            しました。</p>
+
+          <h4>20070826a</h4>
+
+          <p>拡張スプライトの表示順が間違っていたバグを修正しました。</p>
+
+        </div>
+
+        <div class="diary-day">
+          <h3>8月23日</h3>
+
+          <p>すとーむさんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=116">reset
+              load 命令</a>」を元に、systemcall reset, systemcall load, reset,
+            definereset, loadgame, definereset 命令の際に、dwave で再生中の音楽が
+            停止しないバグを修正しました。以前のバージョンの本家では停止しないよう
+            になっていたはずで、ONScripter でもわざとそうしていたのですが、いつの
+            まにか本家では停止するようになったようです。</p>
+
+          <p>20070822 で、textgosub 使用中に１ページ表示（o キー）が機能しなくなっ
+            ていたため、修正しました。</p>
+
+          <p>し～くるさんのパッチを取り入れ、streaming OGG と MP3 のループ再生に
+            おいて、繰り返しの度にファイルを読み込むのではなく、メモリ中のデータを
+            再利用するようにしました。</p>
+
+        </div>
+
+        <div class="diary-day">
+          <h3>8月22日</h3>
+
+          <p>tmkkさんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=114">
+              textgosubを使用している時のスクリプト解釈誤り</a>」を参考に、textgosub
+            が指定されているときに、表示文を正しく解釈されないことがあるバグを修正
+            しました。textgosub のラベルに飛ぶ際には、clickstr_state を設定しない
+            ようにしましたが、副作用があるかしれません。</p>
+
+          <p>sa_chi_ho さんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=115">
+              『drawbg2』の不具合？</a>」を元に、AnimationInfo::blendOnSurface2() に
+            おいて、アフィン変換行列の逆行列を整数演算で求める際にオーバーフローを
+            起こして正しく計算できない場合があるバグを修正しました。精度を若干犠牲
+            にしています。</p>
+
+          <p>return 命令で、スクリプトの書き方によっては機能しないことがあるバグ
+            を修正しました。</p>
+
+        </div>
+
+        <div class="diary-day">
+          <h3>8月21日</h3>
+
+          <p>３月に開発マシンのＨＤＤが飛んでしまい、それ以来忙しいこともあって
+            ONScripter から遠ざかっていたのですが、色々パッチも溜まっているようで
+            すので久々に更新しました。</p>
+
+          <p>まず、zaurus 用の開発環境を作り直しました。面倒かなと思っていたので
+            すが、<a href="zaurus/sl-devel.html">SDL on Zaurus (SL-5500, SL-A300,
+              SL-C700) 開発環境 </a>が我ながら非常にまとまっており、作業はかなり楽で
+            した。ついでにライブラリのマイナーバージョンアップデート＋一部パッチの
+            作り直し＋SDL_image の PNG への対応などを行いました。libqte-2.3.2 に
+            static link されている PNG library を SDL_image から使う方法が分からず、
+            結局 libz.so と libpng12.so を onscripter-lib に含めてしまいました。
+          </p>
+
+          <p>tmkkさんからのパッチを参考に、dwavestop と chvol 命令において、54
+            以上のチャンネル番号が指定されたときに落ちることがあるバグを修正しまし
+            た。</p>
+
+          <p>tmkkさんからのパッチを取り入れ、MacOSX 環境において、
+            CoreFoundation(iconv) で変換できない ShiftJIS 文字列のファイル名を指定
+            したときに落ちる問題を修正しました。</p>
+
+          <p>rerofumiさんのパッチを取り入れ、Playstation3 のパッドに対応しました。
+            ただし、当方では動作未確認です。</p>
+
+          <p>haeleth さんのパッチを取り入れ、メジャーバージョンが１の古い形式の
+            セーブファイルを読み込む際に、縦書きモードでテキストバッファの文字数の
+            計算が間違っていたバグを修正しました。</p>
+
+          <p>haeleth さんのパッチを取り入れ、getparam コマンドにおいて、呼び出し
+            元の文字変数の変数番号を取得する s% 表記を正しく解釈できないバグを修正
+            しました。単純ミスで f% を想定していました。</p>
+
+          <p>haeleth さんのパッチを取り入れ、--help の出力のスペルミスを修正しま
+            した。</p>
+
+          <p>スクリプト最上段の ;value コマンドで、;value と数字の間に空白がある
+            場合にコマンドが無視される問題を解決しました。</p>
+
+          <h4>20070821a</h4>
+
+          <p>アーカイブのインデックス作成の際に、１ファイルあたり 272 bytes 使用
+            していたのですが、アーカイブの中のファイル数が多いとメモリ使用量がばか
+            にならないようです。ファイル名に固定で 256 bytes 割り当てていたことが
+            主要因だったので、インデックスを２回スキャンして、１回目でファイル名に
+            必要な総メモリ量を計算し、メモリをまとめて確保した後に、２回目でファイ
+            ル名を格納する方式に変更しました。搭載メモリ量の少ない Zaurus や PSP
+            では、ゲームによっては大きな効果があるかもしれません。</p>
+
+        </div>
+
+        <div class="diary-day">
+          <h3>2月6日</h3>
+
+          <p>すとーむさんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=107">for
+              文のバグ</a>」を元に、for %0=1 to 0 など本来ループの中を１回も実行しな
+            い場合でも、必ず１回はループの中を実行していたバグを修正しました。</p>
+
+        </div>
+
+        <div class="diary-day">
+          <h3>2月5日</h3>
+
+          <p>当ＷＥＢページを開設してから早５年が過ぎました。当初は短期間の現実
+            逃避プロジェクトだったのですが、おかげさまで予想外に色々な環境で使って
+            いただき、ありがたいことに今でも多くの方に使用していただいております。
+            最近ではあまりONScripterに時間を割くことができず、特に本家の新コマンド
+            に追従できていませんが、ぼちぼち続けて行こうとは思っています。</p>
+
+          <p>すとーむさんからのパッチ「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=104">
+              for PSP のパッチ</a>」ですが、こちらで手を入れた部分にまだ単純な誤りが
+            あり、修正しました。この部分については、当方ではコンパイルしてチェック
+            することが難しいため、気をつけてはいるのですがたまにこういったミスをし
+            てしまいます。ご容赦ください。</p>
+
+          <p>すとーむさんからのご要望「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=106">
+              透過ＰＮＧ</a>」への対応として、20070203ではタグの透過形式を c (コピー)
+            としたのですが、その後すとーむさんより<a href="http://www.geocities.jp/v_2357/program">nscrpng.spi</a>との互換
+            性の問題もあり透過形式を a(アルファブレンド)にしてほしいとのご要望があっ
+            たため、そのように変更しました。透過形式を a にすると、透過ＰＮＧのよ
+            うにアルファチャンネルを持っている場合にはそれを使い、持っていない場合
+            には画像の右半分をアルファ値として使用します。たしかにこちらの方が分か
+            りやすい気がします。し～くるさんの元々のパッチも実はそうなっていました。
+          </p>
+
+        </div>
+
+        <div class="diary-day">
+          <h3>2月3日</h3>
+
+          <p>すとーむさんからのパッチ「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=104">
+              for PSP のパッチ</a>」に手を入れた上で反映させ 20070202 をリリースしま
+            したが、こちらで手を入れた部分に間違いがありました。申し訳ありません。
+            すとーむさんからのご指摘を元に、その個所はいただいた元々のパッチをほぼ
+            そのまま取り入れさせていただきました。</p>
+
+          <p>すとーむさんからのご要望「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=106">
+              透過ＰＮＧ</a>」を元に、以前し～くるさんが作成された透過ＰＮＧパッチを
+            参考にして、フルカラーの透過ＰＮＧに対応しました。ただし、パレットカラー
+            のＰＮＧの透過色には未対応です。また、タグの透過形式は c(コピー)を指定
+            してください。a(アルファブレンド)は画像の右半分に白黒でアルファ値を指
+            定することになっているので、透過ＰＮＧの場合でもアルファチャンネルを無
+            視して右半分の画像をアルファ値に使用します。</p>
+
+        </div>
+
+        <div class="diary-day">
+          <h3>2月2日</h3>
+
+          <p>すとーむさんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=101">
+              命令文のバグ報告２</a>」を参考に、ラベルを正常に読み込めないバグを修正
+            しました。内部的には、ラベルを ScriptHandler::readStr() で読むように変
+            更しました。</p>
+
+          <p>すとーむさんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=101">
+              命令文のバグ報告２</a>」を参考に、print コマンドでマスク画像を指定する場合に、２回目以降にマスク画像が反映されないバグを修正しました。</p>
+
+          <p>すとーむさんからのパッチ「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=104">
+              for PSP のパッチ</a>」を参考に、PSP でスリープモードから復帰するときに
+            テキストが消えてしまうバグを修正しました。その他にも HOME ボタンでゲー
+            ムを終了するときに必要な関数が足りないバグを修正しました。ただし、当方
+            では未確認です。</p>
+
+          <p>hiyuhさんからのパッチ「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=105">
+              mixing size_t and ogg_int64_t</a>」を取り入れ、64bit Linux 環境でコンパイル刷る際に warning が出る問題に対処しました。</p>
+
+        </div>
+
+      </div> <!-- diary -->
+    </div> <!-- diary-container -->
+
+
+    <div id="footer">
+      Copyright (c) 1998-2007 Studio O.G.A. All rights reserved.
+    </div> <!-- footer -->
+
+  </div> <!-- body -->
 
 </body>
+
 </html>

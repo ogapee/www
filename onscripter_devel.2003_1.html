@@ -1,304 +1,306 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <HTML lang="ja">
+
 <HEAD>
-<META http-equiv="Content-Type" content="text/html; charset=EUC-JP">
-<META http-equiv="Content-Style-Type" content="text/css">
-<META name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-<TITLE> ONScripter ��ȯ���� </TITLE>
-<LINK rel="stylesheet" type="text/css" href="/ogapee.css">
+  <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <META http-equiv="Content-Style-Type" content="text/css">
+  <META name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <TITLE> ONScripter 開発日誌 </TITLE>
+  <LINK rel="stylesheet" type="text/css" href="/ogapee.css">
 </HEAD>
 
 <body>
 
-<div id="body">
+  <div id="body">
 
-<div id="header">
-<H1>ONScripter ��ȯ����</H1>
+    <div id="header">
+      <H1>ONScripter 開発日誌</H1>
 
-Since: Feb. 6, 2002<br>
-Last updated: Mar. 23, 2003
-</div> <!-- header -->
+      Since: Feb. 6, 2002<br>
+      Last updated: Mar. 23, 2003
+    </div> <!-- header -->
 
-<div id="toc-container">
+    <div id="toc-container">
 
-<h3>���γ�ȯ����</h3>
+      <h3>過去の開発日誌</h3>
 
-<div id="toc">
+      <div id="toc">
 
-<ul>
-  <li> 2002ǯ
-    <ul>
-      <li> <A HREF="onscripter_devel.2002_4.html">10���12��</A>
-      <li> <A HREF="onscripter_devel.2002_3.html"> 7��� 9��</A>
-      <li> <A HREF="onscripter_devel.2002_2.html"> 4��� 6��</A>
-      <li> <A HREF="onscripter_devel.2002_1.html"> 1��� 3��</A>
-    </ul>
-  <li> 2001ǯ
-    <ul>
-      <li> <A HREF="onscripter_devel.2001.html">12��</A>
-    </ul>
-</ul>
-</div> <!-- toc -->
-</div> <!-- toc-container -->
+        <ul>
+          <li> 2002年
+            <ul>
+              <li> <A HREF="onscripter_devel.2002_4.html">10月～12月</A>
+              <li> <A HREF="onscripter_devel.2002_3.html"> 7月～ 9月</A>
+              <li> <A HREF="onscripter_devel.2002_2.html"> 4月～ 6月</A>
+              <li> <A HREF="onscripter_devel.2002_1.html"> 1月～ 3月</A>
+            </ul>
+          <li> 2001年
+            <ul>
+              <li> <A HREF="onscripter_devel.2001.html">12月</A>
+            </ul>
+        </ul>
+      </div> <!-- toc -->
+    </div> <!-- toc-container -->
 
 
-<div id="diary-container">
-<div id="diary">
+    <div id="diary-container">
+      <div id="diary">
 
-<h2>2003ǯ1���3��</h2>
+        <h2>2003年1月～3月</h2>
 
-<div class="diary-day">
-<h3>3��23��</h3>
+        <div class="diary-day">
+          <h3>3月23日</h3>
 
-<P>���¦Ť���� patch �������졢 arc �ǥ��������֥ե����뤬���Ĥ���ʤ��Ƥ�������³����褦�˽������ޤ�����</P>
+          <P>αβεさんの patch を取り入れ、 arc でアーカイブファイルが見つからなくても処理を継続するように修正しました。</P>
 
-<P>���¦Ť���� patch �������졢reset �ǰ��Ū�˥ƥ����Ȥ��ĤäƤ��ޤ����Ȥ������Զ��������ޤ�����</P>
+          <P>αβεさんの patch を取り入れ、reset で一時的にテキストが残ってしまうことがある不具合を修正しました。</P>
 
-<P>���¦Ť���� patch �򻲹ͤˡ�menusetwindow ���طʿ�����ά����Ƥ�����ʥǥե������: #999999�ˤ��б����ɲä��ޤ�����</P>
+          <P>αβεさんの patch を参考に、menusetwindow で背景色が省略されている場合（デフォルト値: #999999）の対応を追加しました。</P>
 
-<P>���¦Ť���� patch �������졢Ctrl �����ǤΥ����å׵�ǽ���ɲä��ޤ�����</P>
+          <P>αβεさんの patch を取り入れ、Ctrl キーでのスキップ機能を追加しました。</P>
 
-<P>���¦Ť���� patch �������졢Shift+'Q'�Ƕ���Ū�� end ��¹Ԥ���褦�˳�ĥ���ޤ�������������������줿���ä��ΤǤ�������ñ�˲����륭�����ȴְ�äƲ����Ƥ��ޤ���ǽ�������ꡢ�ɤ����褦���ȻפäƤ����Ȥ����Ǥ�����</P>
+          <P>αβεさんの patch を取り入れ、Shift+'Q'で強制的に end を実行するように拡張しました。これは前から入れたかったのですが、簡単に押せるキーだと間違って押してしまう可能性があり、どうしようかと思っていたところでした。</P>
 
-<P>�������व��� patch �򻲹ͤˡ�MacOS X �Ǥ� MIDI ���դ��б����ޤ��������ߤ� SDL on MacOSX �Ǥ� MIDI �����դǤ��ʤ����ᡢ���Ӥ������व��˺������Ƥ��������� ONScripter �������MIDI���������ǽ���б����뤿��ν�����Ԥ��ޤ���������� SDL �Ǥ��Զ�礬��ä����ޤǤλ���Ū�ʽ��֤ˤʤ�ޤ������� ONScripter �������ޤ���Х��ʥ�ˤĤ��Ƥϡ�<A HREF="http://homepage.mac.com/anmira/onscripter/">ONScripter for MacOS X</A>�ʤ��Ĥ餵��ˤ������������ɤǤ���褦�ˤʤ�ͽ��Ǥ���</P>
+          <P>そ～かむさんの patch を参考に、MacOS X での MIDI 演奏に対応しました。現在の SDL on MacOSX では MIDI が演奏できないため、別途そ～かむさんに作成していただいた ONScripter ランチャのMIDI再生補助機能に対応するための修正を行いました。これは SDL での不具合が解消されるまでの暫定的な処置になります。この ONScripter ランチャを含んだバイナリについては、<A HREF="http://homepage.mac.com/anmira/onscripter/">ONScripter for MacOS X</A>（かつらさん）からダウンロードできるようになる予定です。</P>
 
-<h4>20030323a</h4>
+          <h4>20030323a</h4>
 
-<P>�������व��� patch �˴�Ϣ���ơ��䤬���ä������򤷤Ƥ��ޤä��ս��ľ���ޤ�����</P>
+          <P>そ～かむさんの patch に関連して、私が誤った修正をしてしまった箇所を直しました。</P>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>3��16��</h3>
+        <div class="diary-day">
+          <h3>3月16日</h3>
 
-<P>�����ֹ�15�֤���������褵��ʤ��ʤäƤ����Х��������ޤ�����</P>
+          <P>効果番号15番が正常に描画されなくなっていたバグを修正しました。</P>
 
-<P>alpha blending ���ľ����®�����ޤ�����</P>
+          <P>alpha blending を書き直し高速化しました。</P>
 
-<P>ʸ���Υ���åԥ󥰤˴ؤ���Х��������ޤ�����</P>
+          <P>文字のクリッピングに関するバグを修正しました。</P>
 
-<P>PDA ����� blt �Ѥβ����β������ѹ��롼�����3x3 ʿ�경�ե��륿�� bi-linear ��֤��ѹ����ޤ���������ˡ�����С����ȥ롼������̲����ޤ���������Ǥ��ʤ����˽̤�褦�ˤʤ�ޤ�����PDA �ǥ��������֤򰵽̤��Ƥ���ͤϡ�����Υ���С����ǰ��̤�ľ�����Ȥ򤪴��ᤷ�ޤ�������������֤򤷤Ƥ���ط��塢����ե��դ������α郎���Ȥ��Ƹ������ꡢ���꿧��ȴ���Ƥ��륫��������������꿧�������������ꤷ�ޤ���������ϥȥ졼�ɥ��դʤΤǲ������Ƥ����������ǥ����ȥåץޥ���Ǥ⡢-DPDA �դ��ǥ���ѥ��뤹�뤳�Ȥǡ����̤����Ȥ��Ǥ��ޤ���</P>
+          <P>PDA および blt 用の画像の解像度変更ルーチンを、3x3 平滑化フィルタ＋ bi-linear 補間に変更しました。さらに、コンバータとルーチンを共通化しました。これでかなり綺麗に縮むようになりました。PDA でアーカイブを圧縮している人は、今回のコンバータで圧縮し直すことをお勧めします。ただし、補間をしている関係上、アルファ付き画像の縁が線として見えたり、特定色で抜いているカーソル画像の特定色境界が見えたりしますが、これはトレードオフなので我慢してください。デスクトップマシンでも、-DPDA 付きでコンパイルすることで、効果を試すことができます。</P>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>3��6��</h3>
+        <div class="diary-day">
+          <h3>3月6日</h3>
 
-<P>s1100089���󤫤�ΥХ������Ȥˡ�goto �ΰ�����ʸ�����ѿ���$�ǻϤޤ�ˤξ�硢�����������Ƥ��ʤ��ä��Х��������ޤ�����parser ���ѹ������Ȥ��˥���Х������褦�Ǥ���</P>
+          <P>s1100089さんからのバグ報告をもとに、goto の引数が文字列変数（$で始まる）の場合、正しく扱えていなかったバグを修正しました。parser を変更したときにエンバグしたようです。</P>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>3��2��</h3>
+        <div class="diary-day">
+          <h3>3月2日</h3>
 
-<P>s1100089���󤫤�ΥХ������Ȥˡ��ԤΤ��������2byteʸ���ʥƥ����ȡˤ�̵�����֤�@�����줿�Ȥ��˲��Ԥ��Ƥ����Х�����ޤ�����</P>
+          <P>s1100089さんからのバグ報告をもとに、行のそれ以前に2byte文字（テキスト）が無い状態で@が現れたときに改行していたバグを取りました。</P>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>3��1��</h3>
+        <div class="diary-day">
+          <h3>3月1日</h3>
 
-<P>�������٤��ʤ�ޤ�������bero�������𤷤Ƥ����������Х��������ޤ������ޤ���<A HREF="http://sdl-dc.sourceforge.net/onscripter-dc.html">ONScripter for Dreamcast</A>�ؤΥ�󥯤��ɲä��ޤ�����</P>
+          <P>だいぶ遅くなりましたが、beroさんに報告していただいたバグを修正しました。また、<A HREF="http://sdl-dc.sourceforge.net/onscripter-dc.html">ONScripter for Dreamcast</A>へのリンクを追加しました。</P>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>2��22��</h3>
+        <div class="diary-day">
+          <h3>2月22日</h3>
 
-<P>bero�����Dreamcast�Ǥ�ư�����򤤤������ޤ�����Ʊ������𤷤Ƥ����������Х��ˤĤ��Ƥϡ�������˽���������Τ��꡼���������ޤ���</P>
+          <P>beroさんにDreamcastでの動作報告をいただきました。同時に報告していただいたバグについては、近日中に修正したものをリリースいたします。</P>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>2��10��</h3>
+        <div class="diary-day">
+          <h3>2月10日</h3>
 
-<P>���Ĥ�Τ��ܤ�����ˡ�ONScripter ��<A HREF="http://tokyo.cool.ne.jp/eboshi/onscripter.html">Windows �Х��ʥ�</A>��������Ƥ��������ޤ��������� Windows ��Ǥ�������°��NScripter����Ѥ���Ф褤�ΤǤ�����ONScripter ��NScripter�ȤǤϥ����֥ե�����˸ߴ�����̵�����ᡢ�㤨�г��Ǥ� PDA��SL���꡼���Υ����륹�ˡ��ȤǤ� 
-Windows �Ǥ�ꤿ���Ȥ������ˤϤ�����Ǥ���</P>
+          <P>かつをのえぼしさんに、ONScripter の<A HREF="http://tokyo.cool.ne.jp/eboshi/onscripter.html">Windows バイナリ</A>を公開していただきました。本来 Windows 上では製品付属のNScripterを使用すればよいのですが、ONScripter とNScripterとではセーブファイルに互換性が無いため、例えば外では PDA（SLシリーズのザウルス）、家では
+            Windows でやりたいという方にはお勧めです。</P>
 
-</div>
+        </div>
 
 
-<div class="diary-day">
-<h3>2��8��</h3>
+        <div class="diary-day">
+          <h3>2月8日</h3>
 
-<P>ADPCM �� wave �ե������ bgm, mp3 �Ǳ��դǤ���褦�˽������ޤ�����</P>
+          <P>ADPCM の wave ファイルを bgm, mp3 で演奏できるように修正しました。</P>
 
-<P>soundpressplgin, spi �˻����б����ޤ��������ꤵ�줿��ĥ�Ҥ� NBZ ���椹��褦�ˤ��ޤ������⤽�⡢spi �� soundpressplgin �ˤ��ǥ����ɽ����ϥ���������¦�Ǥ��٤��ǤϤʤ��ΤǤ�����ONScripter �ǤϤɤΤߤ� DLL ����ѤǤ��ʤ����ᡢNBZ ���ꤷ���ص��奢��������¦�����椹��褦�ˤ��Ƥ��ޤ���</P>
+          <P>soundpressplgin, spi に暫定対応しました。指定された拡張子を NBZ 復号するようにします。そもそも、spi や soundpressplgin によるデコード処理はアーカイブ側でやるべきではないのですが、ONScripter ではどのみち DLL を使用できないため、NBZ を仮定して便宜上アーカイブ側で復号するようにしています。</P>
 
-<P>̿����@��\�μ�갷���䡢#�ʿ�����ˤΤߤιԤμ�갷�����Զ��������ޤ�����</P>
+          <P>命令後の@や\の取り扱いや、#（色指定）のみの行の取り扱いの不具合を修正しました。</P>
 
-<P>��ˤȤä�<A HREF="http://galileo.spaceports.com/~ogapee/onscripter.html">http://galileo.spaceports.com/~ogapee/onscripter.html</A>�����ʤ������¦Ť������­����Ƥ��ޤ����������������Ϥ��������깹�����ޤ��󡣸��ԤΥ��ڡ������Ȥ��ʤ��ʤä����˥Хå����åפȤ��ƻ��Ѥ��ޤ���</P>
+          <P>試しにとった<A HREF="http://galileo.spaceports.com/~ogapee/onscripter.html">http://galileo.spaceports.com/~ogapee/onscripter.html</A>が、なぜかαβεさんに補足されています。しかし、ここはさしあたり更新しません。現行のスペースが使えなくなった場合にバックアップとして使用します。</P>
 
-</div>
+        </div>
 
 
-<div class="diary-day">
-<h3>2��6��</h3>
+        <div class="diary-day">
+          <h3>2月6日</h3>
 
-<P>�ڡ�������������ǯ�Ǥ���</P>
+          <P>ページ公開から一周年です。</P>
 
-<P>���Ĥ餵��� <A HREF="http://homepage.mac.com/anmira/onscripter/">ONScripter for MacOS X</A> ��������Ƥ��������ޤ�����Mac OS X �桼��������ONScripter�Υ���ѥ���˶�ϫ����Ƥ����������󤪻��������</P>
+          <P>かつらさんに <A HREF="http://homepage.mac.com/anmira/onscripter/">ONScripter for MacOS X</A> を公開していただきました。Mac OS X ユーザの方でONScripterのコンパイルに苦労されている方は是非お試し下さい。</P>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>2��4��<span style="color:red">20030128��20030202 ��ȤäƤ���ͤϡ��׺��������������֥ե����뤬����Ƥ��ޤ���</span></h3>
+        <div class="diary-day">
+          <h3>2月4日<span style="color:red">20030128～20030202 を使っている人は、要差し換え。セーブファイルが壊れています。</span></h3>
 
-<P>���Ĥ餵�󤫤�ΥХ����򸵤ˡ�20030128�ʹߤǥ����֥ե����뤬����˺�������ʤ��Զ��������ޤ����������ؤ󿽤�������ޤ��󤬡�20030128 ����� 20030202 �Ǻ������������֥ե�������˴����Ʋ�������</P>
+          <P>かつらさんからのバグ報告を元に、20030128以降でセーブファイルが正常に作成されない不具合を修正しました。たいへん申し訳ありませんが、20030128 および 20030202 で作成したセーブファイルは破棄して下さい。</P>
 
-<P>��ƣ���󤫤�ΥХ����򸵤ˡ�puttext ��β��Ԥ˴ؤ����Զ��������ޤ�����</P>
+          <P>遠藤さんからのバグ報告を元に、puttext 後の改行に関する不具合を修正しました。</P>
 
-<P>���¦Ť���� patch �������졢getreg ���Զ��������ޤ�����</P>
+          <P>αβεさんの patch を取り入れ、getreg の不具合を修正しました。</P>
 
-<P>mask ������Զ��������ޤ�����</P>
+          <P>mask 指定の不具合を修正しました。</P>
 
-<P>���������ְ��̻��ˡ�����⤷���ϱ���Υԥ������Ʃ�ῧ�˻��ꤷ�Ƥ�������ξ��ˡ���֤αƶ��ˤ�ä�Ʃ�ῧ��������ȿ�Ǥ���ʤ���礬���ä����ᡢ�����ˡ����� bi-linear ���ᤷ�ޤ�����</P>
+          <P>アーカイブ圧縮時に、左上もしくは右上のピクセルを透過色に指定している画像の場合に、補間の影響によって透過色が正しく反映されない場合があったため、補間方法を従来の bi-linear に戻しました。</P>
 
-</div>
+        </div>
 
 
-<div class="diary-day">
-<h3>2��2��</h3>
+        <div class="diary-day">
+          <h3>2月2日</h3>
 
-<P>nsaconv, sarconv �β����������ѹ��롼����ˤ����ơ���������������ݤ��Ƥ��ʤ��Х��������ޤ�����</P>
+          <P>nsaconv, sarconv の画像解像度変更ルーチンにおいて、メモリを正しく確保していないバグを修正しました。</P>
 
-<P>A.B���󤫤�����򸵤ˡ�(���ե�����̾)"TRUEʸ����""FALSEʸ����"�β��ˤ�����Х��������ޤ�����</P>
+          <P>A.Bさんからの報告を元に、(条件ファイル名)"TRUE文字列""FALSE文字列"の解釈におけるバグを修正しました。</P>
 
-</div>
+        </div>
 
 
-<div class="diary-day">
-<h3>1��28��</h3>
+        <div class="diary-day">
+          <h3>1月28日</h3>
 
-<P>���¦Ť���� patch �򻲹ͤˡ�lsp �� mask �� string ������᤹��ݤΥХ�����ޤ������ץ�����ब��λ���Ƥ��ޤ�����ʥХ��ʤΤǡ�20030126 ��ȤäƤ���ͤ�ɬ���������Ƥ���������</P>
+          <P>αβεさんの patch を参考に、lsp で mask や string 指定を解釈する際のバグを取りました。プログラムが終了してしまう重大なバグなので、20030126 を使っている人は必ず更新してください。</P>
 
-</div>
+        </div>
 
 
-<div class="diary-day">
-<h3>1��26��</h3>
+        <div class="diary-day">
+          <h3>1月26日</h3>
 
-<P>���¦Ť���� patch �������졢�ե�����ľ���ɤ߹���(DirectReader)���� �ե����뤬���դ���ʤ���С��ե�����̾���羮ʸ�����̤����˸��������ɤ߹���褦�������ޤ�����(Win32 �ʳ�) (��: �ǥ��쥯�ȥ�̾����̤��ʤ��褦�ˤϤʤäƤޤ��� �����դˤ��б�����Ȥ����顢 ��äȤޤȤ�ʼ�����ˡ�ˤ���ɬ�פ�����ޤ�)</P>
+          <P>αβεさんの patch を取り入れ、ファイル直接読み込み(DirectReader)時に ファイルが見付からなければ、ファイル名を大小文字区別せずに検索して読み込むよう修正しました。(Win32 以外) (注: ディレクトリ名を区別しないようにはなってません。 その辺にも対応するとしたら、 もっとまともな実装方法にする必要があります)</P>
 
-<P>���¦Ť���� patch �򻲹ͤˡ��ե�����ľ���ɤ߹���(DirectReader)���˥ե����뤬̵���̤ξ��Υե����륵�����������������Ƥ��ʤ��ä��Х��������ޤ�����</P>
+          <P>αβεさんの patch を参考に、ファイル直接読み込み(DirectReader)時にファイルが無圧縮の場合のファイルサイズを正しく扱えていなかったバグを修正しました。</P>
 
-<P>���¦Ť���� patch �򻲹ͤˡ�nsa �� arc.nsa �����դ���ʤ�����³�Ԥ���褦�˽������ޤ�����</P>
+          <P>αβεさんの patch を参考に、nsa で arc.nsa が見付からない場合に続行するように修正しました。</P>
 
-<P>���¦Ť���� patch �������졢reset ���� font �ο��� reset ���ʤ��褦�˽������ޤ�����</P>
+          <P>αβεさんの patch を取り入れ、reset 時に font の色を reset しないように修正しました。</P>
 
-<P>���¦Ť���� patch �򻲹ͤˡ�readToken �ǡ������֤��ƥ����ȤǤϤʤ���硢'\'��'@'����ڤ�Ȥ��Ʋ�᤹��褦���ѹ����ޤ�����goto ���ǻ����٥�θ�� '\' ���� ���ߤ����ä������Ф��뽤���Ǥ���</P>
+          <P>αβεさんの patch を参考に、readToken で、現状態がテキストではない場合、'\'や'@'を区切りとして解釈するように変更しました。goto 等で指定ラベルの後に '\' 等の ゴミがあった場合に対する修正です。</P>
 
-<P>�����μ��� mov %0,1+(2*%4+(5-3 mod 2)) �ʤɡˤ��б����ޤ�����parser �ˤ��ʤ���ݤ�����ѹ���ä��ޤ���������Х����Ƥ����ǽ��������ޤ���</P>
+          <P>数字の式（ mov %0,1+(2*%4+(5-3 mod 2)) など）に対応しました。parser にかなり大掛かりな変更を加えました。エンバグしている可能性があります。</P>
 
-<P>�ʲ��������ؿ��������Ǥ���</p>
-<ul>
-<li> readStr() ̿��ʸ������ʸ���󡦿����⤷���ϥƥ����������ʸ�����ѿ����ɤ�
-<li> readInf() ̿��ʸ�����ο������⤷���ϥƥ���������ο����ѿ����ɤ�
-<li> readToken() ̿��ʸ���Ρ���٥롢�ƥ�����ʸ�Ϥ���Ӥ���¾���ɤ�
-</ul>
+          <P>以下は内部関数の説明です。</p>
+          <ul>
+            <li> readStr() 命令文引数の文字列・色、もしくはテキスト途中の文字列変数を読む
+            <li> readInf() 命令文引数の数字、もしくはテキスト途中の数字変数を読む
+            <li> readToken() 命令文自体、ラベル、テキスト文章およびその他を読む
+          </ul>
 
-<P>nsaconv �򰵽̸� 640x480 �⡼�ɤ��б����ޤ�����-e ���ץ������Ȥ߹�碌�뤳�Ȥˤ�ꡢ640x480��640x480 �⤷���� 800x600��640x480 ���Ѵ��Ǥ褯�̤ߤޤ���</P>
+          <P>nsaconv を圧縮後 640x480 モードに対応しました。-e オプションを組み合わせることにより、640x480→640x480 もしくは 800x600→640x480 の変換でよく縮みます。</P>
 
-<P>-e �դ� 640x480 �ˤ��ƥ��ꥮ��512MB��CF�˼��ޤ륲������äƤߤޤ�����swap �� 64MB �Ȥäơ��ʤ�Ȥ������ư���ޤ�������������̵��Ǥ��ޤ��������꡼��­�Ȥ���������ɥ������ˤ˽Фޤ���free �Ǹ���ȡ�used ���ִֺ�����® Mem: 29604, Swap: 57684, Total 87288 �ޤǤ����ޤ������Υ�������ä�Ʊ�����Ѳ����̤�¿���Ȼפ��ΤǤ��������̤�VGA ���ȥǡ����̤�Ⱦü�ǤϤʤ��Τǡ��Ȥ��Ƥ��ʤ������ǡ�������Ū�˲������뵡����������ʤ��Ȥ��Ĥ����⤷��ޤ��󡣲��̤��������Ǥ���</P>
+          <P>-e 付き 640x480 にしてギリギリ512MBのCFに収まるゲームをやってみました。swap を 64MB とって、なんとか正常に動きました。ただし、無視できますが、メモリー不足というウィンドウが頻繁に出ます。free で見ると、used が瞬間最大風速 Mem: 29604, Swap: 57684, Total 87288 までいきます。このゲームは特に同時使用画像量が多いと思うのですが、一般にVGA だとデータ量も半端ではないので、使われていない画像データを一時的に解放する機構を実装しないときついかもしれません。画面は非常に綺麗です。</P>
 
-<P>640x480��640x480 �ξ��ϡ�onscripter-cf, onscripter-sd�Υ��������ȤäƤ���������800x600��640x480�ξ��ϡ��б����륢��������äƤʤ��Τǡ����󥽡��뤫��ʲ��Τ褦�˼¹Ԥ��Ƥ������������Τ����� launcher ����ޤ���</P>
+          <P>640x480→640x480 の場合は、onscripter-cf, onscripter-sdのアイコンを使ってください。800x600→640x480の場合は、対応するアイコンを作ってないので、コンソールから以下のように実行してください。そのうちに launcher を作ります。</P>
 
-<pre>
+          <pre>
 onscripter --root /mnt/cf/nscr --force-button-shortcut --disable-rescale 
 </pre>
 
-<P><A HREF="http://free.prohosting.com/">free.prohosting.com</A>�ϰ��¤���Ȥ�����ʧ���򤷤ʤ��ȥ�������Ȥ����ä�����ǽ����ǻ���ʤΤǡ�<A HREF="http://www.tripod.co.jp/">tripod.co.jp</A>�˰�ž���ޤ�����</P>
+          <P><A HREF="http://free.prohosting.com/">free.prohosting.com</A>は一回限りだという支払いをしないとアカウントを抹消される可能性が濃厚なので、<A HREF="http://www.tripod.co.jp/">tripod.co.jp</A>に移転しました。</P>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>1��21��</h3>
+        <div class="diary-day">
+          <h3>1月21日</h3>
 
-<P>ƣ�Ĥ��� ONScripter �� Free BSD Ports ��������Ƥ������ä��Τǡ���󥯤�ĥ��ޤ�����</P>
-</div>
+          <P>藤田さんが ONScripter の Free BSD Ports を公開してくださったので、リンクを張りました。</P>
+        </div>
 
-<div class="diary-day">
-<h3>1��6��</h3>
+        <div class="diary-day">
+          <h3>1月6日</h3>
 
-<P>sarconv, nsaconv �β������ѹ���2x2��˵�Х���˥���֤���4x4��˵�Ť��դ��Х���˥���֤��ѹ����ޤ����������Ϥ��줤�ˤʤä��Ǥ��礦����</P>
-</div>
+          <P>sarconv, nsaconv の解像度変更を、2x2近傍バイリニア補間から4x4近傍重み付きバイリニア補間に変更しました。少しはきれいになったでしょうか？</P>
+        </div>
 
-<div class="diary-day">
-<h3>1��2��</h3>
+        <div class="diary-day">
+          <h3>1月2日</h3>
 
-<P>Zaurus �����Ϥ�����դ��ʤ��ʤ븽�ݤǤ�����Frame Buffer Driver �Υ��å��˴ؤ���SDL on Qtopia���Զ�礬�����Ǥ�����SL-C700�ʳ��ǤϤ����Զ��ϤǤʤ��褦�ʤΤǡ�VGA��QVGA���ڤ��ؤ��˴ؤ�����ʬ�ȴ��Ĥ��Ƥ����Τ��Ȼפ��ޤ���</P>
+          <P>Zaurus で入力を受け付けなくなる現象ですが、Frame Buffer Driver のロックに関するSDL on Qtopiaの不具合が原因でした。SL-C700以外ではこの不具合はでないようなので、VGAとQVGAの切り替えに関する部分と干渉していたのだと思います。</P>
 
-<P>�ʲ���õ��ε��פǤ���</P>
+          <P>以下は探求の軌跡です。</P>
 
-<ol>
-<li>�ޤ����ޥ������åɴ�Ϣ�� dead lock �ˤʤäƤ��뤳�Ȥ򵿤��ޤ������Ȥ����������ץꥱ����������Qt ��Ϣ����ʬ�� single thread ��ư���Ƥ��ꡢ��������Ϥ�����դ��ʤ��ʤäƤ�ư���Ƥ��뤿�ᡢ���ץꥱ������������Ǥ� dead lock ���Ƥ��ʤ��褦�Ǥ����ĤޤꡢONScripterLabel::eventLoop ����ǰʲ��Υ롼�׼��Τ�����˲�äƤ��ޤ�����Key event �� Mouse event �� QApplication ����ʤ��ʤäƤ���褦�Ǥ���
+          <ol>
+            <li>まず、マルチスレッド関連で dead lock になっていることを疑いました。ところが、アプリケーション内のQt 関連の部分は single thread で動いており、これは入力を受け付けなくなっても動いているため、アプリケーション内部では dead lock していないようです。つまり、ONScripterLabel::eventLoop の中で以下のループ自体は正常に回っていますが、Key event や Mouse event が QApplication に来なくなっているようです。
 
-<PRE>
+              <PRE>
 ONScripterLabel::eventLoop{
   SDL_WaitEvent  
     SDL_PumpEvents
       qApp-&gt;processEvents
-        qt_fbdpy-&gt;getEvent ��Frame Buffer Driver���饤�٥�Ȥ��������
-          qwsProcessEvent ��widget�إ��٥��ȯ�ԡ�
-            widget-&gt;###event��widget�Υ��٥�Ƚ�����
-              SDL_Private####��SDL �Υ��٥�Ȥ򥭥塼�ء�
-        select���ʻ������¤Ĥ����٥���Ԥ���
-          widget-&gt;event��widget�إ��٥��ȯ�ԡ�
-            widget-&gt;###event��widget�Υ��٥�Ƚ�����
-              SDL_Private####��SDL �Υ��٥�Ȥ򥭥塼�ء�
-    SDL_PeepEvents��SDL ���٥�ȥ��塼���饤�٥�Ȥ���Ф���
-  ONScripter �Ǥ�SDL���٥�Ȥν���
+        qt_fbdpy-&gt;getEvent （Frame Buffer Driverからイベントを受け取る）
+          qwsProcessEvent （widgetへイベント発行）
+            widget-&gt;###event（widgetのイベント処理）
+              SDL_Private####（SDL のイベントをキューへ）
+        select　（時間制限つきイベント待ち）
+          widget-&gt;event（widgetへイベント発行）
+            widget-&gt;###event（widgetのイベント処理）
+              SDL_Private####（SDL のイベントをキューへ）
+    SDL_PeepEvents（SDL イベントキューからイベントを取り出す）
+  ONScripter でのSDLイベントの処理
 }
 </PRE>
 
-<li>���ˡ�˿����������Ϥ�����դ��ʤ��ʤ��Ψ������ʾ�ʣ�������ǤϤʤ��Ȥ���������餷���ġġˤξ��ǡ�������ץȤ�ONScripter�������򾯤����Ľ������Ƥ���������ڤ�ʬ���ޤ���������ȡ��ɤ���� ONScripterLabel::flush() ��¿ȯ��������Ϥ�����դ��ʤ��ʤ��Ψ���⤯�ʤ�Ȥ������Ȥ�Ƚ�����ޤ���������ɽ���������Ԥ�ʤ��ȡ����Ϥ�����դ��ʤ��ʤ뤳�ȤϤ���ޤ���<br>
+            <li>次に、某ゲームで入力を受け付けなくなる確率９５％以上（１００％ではないところがいやらしい……）の場所で、スクリプトとONScripterの双方を少しずつ修正していき問題を切り分けました。すると、どうやら ONScripterLabel::flush() を多発すると入力を受け付けなくなる確率が高くなるということが判明しました。画面表示を全く行わないと、入力を受け付けなくなることはありません。<br>
 
-ONScripterLabel::flush ��ƤӽФ��ȡ��ʲ��δؿ�����˸ƤӽФ���� SDL_QWin::repaintRect �� Frame Buffer ��ľ�����褵��ޤ����Ĥޤꡢ���λ��� Frame Buffer ���������������������Ȥ�����������Ƥ���褦�Ǥ���
+              ONScripterLabel::flush を呼び出すと、以下の関数が順に呼び出されて SDL_QWin::repaintRect で Frame Buffer に直接描画されます。つまり、この時の Frame Buffer アクセスが何か悪いことを引き起こしているようです。
 
-<pre>
+              <pre>
 ONScripterLabel::flush()
   SDL_UpdateRect()
     QT_NormalUpdate()
       SDL_QWin::repaintRect(const QRect&amp; rect)
 </pre>
 
-<li>�����Ǥ� QDirectPainter ��ľ�� Frame Buffer �˥����������Ƥ���ΤǤ�����Web �� QDirectPainter �λ������õ�����Ȥ����ʲ����㤬���Ĥ���ޤ�����
+            <li>ここでは QDirectPainter で直接 Frame Buffer にアクセスしているのですが、Web で QDirectPainter の使用例を探したところ以下の例が見つかりました。
 
-<OL>
-  <LI>�ؿ�����������ǥ����å��˼��Τ�������Frame Buffer Driver ����å�
-  <LI>Frame Buffer �����
-  <LI>�������פ���ȴ����Ȥ��˥ǥ��󥹥ȥ饯����ƤФ��ƥ��å�����
-</OL>
+              <OL>
+                <LI>関数スコープ内でスタックに実体を生成しFrame Buffer Driver をロック
+                <LI>Frame Buffer に操作
+                <LI>スコープから抜けるときにデコンストラクタを呼ばせてロックを解除
+              </OL>
 
-<li>�Ȥ�������SDL_QWin �Ǥϰʲ��Τ褦�ˤ��Ƥ��ޤ���<br>
+            <li>ところが、SDL_QWin では以下のようにしています。<br>
 
-<OL>
-  <LI>new �ǳ���
-  <LI>Frame Buffer �����
-  <LI>QDirectPainter::end()�ʼºݤ�QPainter::end()�ˤ�Ƥ���� delete �ǲ���
-</OL>
+              <OL>
+                <LI>new で確保
+                <LI>Frame Buffer に操作
+                <LI>QDirectPainter::end()（実際はQPainter::end()）を呼んだ後 delete で解放
+              </OL>
 
-�����ǻ�ˡ�end() ��ƤФʤ��褦�ˤ����Ȥ��������Ϥ�����դ��ʤ��ʤ뤳�ȤϤ��ä���̵���ʤ�ޤ��������� end() �ϡ�QDirectPainter �οƥ��饹�Ǥ��� QPainter �Υǥ��󥹥ȥ饯���Ǥ�ƤФ�뵡�񤬤��ꡢ��������˸ƤФ�Ƥ��ʤ���Ф����ǸƤӽФ���ޤ����Ĥޤꡢ~ QDirectPainter() �ǽ�λ�����򤹤����ˡ��ƥ��饹�� end() �ǿƥ��饹�ν�λ�����򤷤Ƥ��뤿�ᡢ~QDirectPainter() �ν�λ���������ޤ����äƤ��ʤ��ä��褦�Ǥ���
+              ここで試しに、end() を呼ばないようにしたところ、入力を受け付けなくなることはいっさい無くなりました。この end() は、QDirectPainter の親クラスである QPainter のデコンストラクタでも呼ばれる機会があり、それ以前に呼ばれていなければそこで呼び出されます。つまり、~ QDirectPainter() で終了処理をする前に、親クラスの end() で親クラスの終了処理をしているため、~QDirectPainter() の終了処理がうまくいっていなかったようです。
 
-<li>�ޤ�����������Ƥ��� qtopia-free-1.5.0 ��ʬ�ǥ���ѥ��뤷��libqte.so.2.3.2, libqpe.so.1.5.0 ���äơ�ONScripter �򤳤�ȥ�󥯤��������餻�Ƥߤޤ�������������C700 �Ǥϥץ�����༫�Τ�ư���ΤǤ�������ư���� Protocol error ����ɽ�����Ф�塢���⤽�⥢�ץꥱ������󤬥��٥�Ȥ��館�ʤ��褦�Ǥ��ޤ������ޤ��󡣤Ȥ����櫓�ǡ�C700�ѤΥ����������������ޤǤ� Qt/E �Υ�������ľ�ܤ����뤳�ȤϤǤ������ˤ���ޤ���
+            <li>また、公開されている qtopia-free-1.5.0 を自分でコンパイルし、libqte.so.2.3.2, libqpe.so.1.5.0 を作って、ONScripter をこれとリンクさせて走らせてみました。しかし、C700 ではプログラム自体は動くのですが、起動時に Protocol error 等の表示が出る上、そもそもアプリケーションがイベントをもらえないようでうまくいきません。というわけで、C700用のソースが公開されるまでは Qt/E のソースを直接いじることはできそうにありません。
 
-</ol>
+          </ol>
 
-<P>ʸ���󥹥ץ饤�Ȥ�����ǰ�ʸ������ flush ���Ƥ����Τ�ʸ�������Τǰ�� flush ����褦���ѹ����ޤ�����</P>
+          <P>文字列スプライトの描画で一文字ずつ flush していたのを、文字列全体で一回 flush するように変更しました。</P>
 
-<P>���ĤΤޤˤ� SL-5500 �� Home �������褦�ˤʤäƤ��ƤӤä��ꤷ�ޤ�����</P>
+          <P>いつのまにか SL-5500 で Home が効くようになっていてびっくりしました。</P>
 
-</div>
+        </div>
 
-</div> <!-- diary -->
-</div> <!-- diary-container -->
+      </div> <!-- diary -->
+    </div> <!-- diary-container -->
 
 
-<div id="footer">
-Copyright (c) 1998-2006 Studio O.G.A. All rights reserved.
-</div> <!-- footer -->
+    <div id="footer">
+      Copyright (c) 1998-2006 Studio O.G.A. All rights reserved.
+    </div> <!-- footer -->
 
-</div> <!-- body -->
+  </div> <!-- body -->
 
 </BODY>
+
 </HTML>

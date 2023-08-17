@@ -1,762 +1,764 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <HTML lang="ja">
+
 <HEAD>
-<META http-equiv="Content-Type" content="text/html; charset=EUC-JP">
-<META http-equiv="Content-Style-Type" content="text/css">
-<META name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-<TITLE> ONScripter ��ȯ���� </TITLE>
-<LINK rel="stylesheet" type="text/css" href="/ogapee.css">
+  <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <META http-equiv="Content-Style-Type" content="text/css">
+  <META name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <TITLE> ONScripter 開発日誌 </TITLE>
+  <LINK rel="stylesheet" type="text/css" href="/ogapee.css">
 </HEAD>
 
 <body>
 
-<div id="body">
+  <div id="body">
 
-<div id="header">
-<H1>ONScripter ��ȯ����</H1>
+    <div id="header">
+      <H1>ONScripter 開発日誌</H1>
 
-Since: Feb. 6, 2002<br>
-Last updated: Dec. 30, 2005
-</div> <!-- header -->
+      Since: Feb. 6, 2002<br>
+      Last updated: Dec. 30, 2005
+    </div> <!-- header -->
 
-<div id="toc-container">
+    <div id="toc-container">
 
-<h3>���γ�ȯ����</h3>
+      <h3>過去の開発日誌</h3>
 
-<div id="toc">
+      <div id="toc">
 
-<ul>
-  <li> <A HREF="onscripter_devel.2004_1.html"> 2004ǯ</A>
-  <li> 2003ǯ
-    <ul>
-      <li> <A HREF="onscripter_devel.2003_4.html">10���12��</A>
-      <li> <A HREF="onscripter_devel.2003_3.html"> 7��� 9��</A>
-      <li> <A HREF="onscripter_devel.2003_2.html"> 4��� 6��</A>
-      <li> <A HREF="onscripter_devel.2003_1.html"> 1��� 3��</A>
-    </ul>
-  <li> 2002ǯ
-    <ul>
-      <li> <A HREF="onscripter_devel.2002_4.html">10���12��</A>
-      <li> <A HREF="onscripter_devel.2002_3.html"> 7��� 9��</A>
-      <li> <A HREF="onscripter_devel.2002_2.html"> 4��� 6��</A>
-      <li> <A HREF="onscripter_devel.2002_1.html"> 1��� 3��</A>
-    </ul>
-  <li> 2001ǯ
-    <ul>
-      <li> <A HREF="onscripter_devel.2001.html">12��</A>
-    </ul>
-</ul>
-</div> <!-- toc -->
-</div> <!-- toc-container -->
+        <ul>
+          <li> <A HREF="onscripter_devel.2004_1.html"> 2004年</A>
+          <li> 2003年
+            <ul>
+              <li> <A HREF="onscripter_devel.2003_4.html">10月～12月</A>
+              <li> <A HREF="onscripter_devel.2003_3.html"> 7月～ 9月</A>
+              <li> <A HREF="onscripter_devel.2003_2.html"> 4月～ 6月</A>
+              <li> <A HREF="onscripter_devel.2003_1.html"> 1月～ 3月</A>
+            </ul>
+          <li> 2002年
+            <ul>
+              <li> <A HREF="onscripter_devel.2002_4.html">10月～12月</A>
+              <li> <A HREF="onscripter_devel.2002_3.html"> 7月～ 9月</A>
+              <li> <A HREF="onscripter_devel.2002_2.html"> 4月～ 6月</A>
+              <li> <A HREF="onscripter_devel.2002_1.html"> 1月～ 3月</A>
+            </ul>
+          <li> 2001年
+            <ul>
+              <li> <A HREF="onscripter_devel.2001.html">12月</A>
+            </ul>
+        </ul>
+      </div> <!-- toc -->
+    </div> <!-- toc-container -->
 
 
-<div id="diary-container">
-<div id="diary">
+    <div id="diary-container">
+      <div id="diary">
 
-<h2>2005ǯ</h2>
+        <h2>2005年</h2>
 
-<div class="diary-day">
-<h3>12��30��</h3>
+        <div class="diary-day">
+          <h3>12月30日</h3>
 
-<p>�����ѿ���ʸ���ѿ��ǡ�����ǥå����λ��꤬�ϰϳ��ΤȤ��ν���������
-�ޤ��������ߥ���ǥå����� 0 ���� 4095 �ޤǼ��ޤ�����ONScripter �Ǥ�
-�����ϰϳ�����ꤹ��ȡ����̤ΰ���ѿ��ؤΥ����������֤�����³�Ԥ����
-�ͤˤ��ޤ���</p>
+          <p>数値変数と文字変数で、インデックスの指定が範囲外のときの処理を入れ
+            ました。現在インデックスは 0 から 4095 まで取れますが、ONScripter では
+            この範囲外を指定すると、共通の一時変数へのアクセスに置き換え続行する仕
+            様にします。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>12��9��</h3>
+        <div class="diary-day">
+          <h3>12月9日</h3>
 
-<p>zZz���󤫤�ΥХ����򸵤ˡ��ƥ�����ɽ���κݤ˴���Ĥ�Ⱦ�ѿ����θ�
-�˶��򡦲��Ԥ������ʸ���������뤳�Ȥ�����Х��������ޤ�����</p>
+          <p>zZzさんからのバグ報告を元に、テキスト表示の際に奇数個の半角数字の後
+            に空白・改行があると文字化けすることがあるバグを修正しました。</p>
 
-<p>zZz���󤫤�Υѥå��������졢�������٥�Ȥ� SDLK_KP_ENTER �� 
-SDLK_RETURN ��Ʊ�ͤ˰����褦�ˤ��ޤ�����</p>
+          <p>zZzさんからのパッチを取り入れ、キーイベントの SDLK_KP_ENTER も
+            SDLK_RETURN と同様に扱うようにしました。</p>
 
-<p>�Х�����<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=70">�֥ҥȥʥĤ�̴�פ�ʸ��ɽ���ˤĤ���</a>�פ򸵤ˡ��ʲ��νĽ񤭥⡼�ɻ����Զ��������ޤ�����</p>
+          <p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=70">「ヒトナツの夢」の文字表示について</a>」を元に、以下の縦書きモード時の不具合を修正しました。</p>
 
-<p>�Ľ񤭤��ĥ�ӻ��ѻ��ˡ��ƥ����ȹԤ�ʸ����ʬ���ˤ���Ƥ����Х��ʡ���
-�������ޤ�������������getcursor �����ͤˤ��Τ��줬ȿ�Ǥ���ʤ��Τ���
-�ȤΥХ����Ȥ����������ޤ���</p>
+          <p>縦書きかつルビ使用時に、テキスト行が文字間分右にずれていたバグ（？）
+            を修正しました。しかし、getcursor の戻値にこのずれが反映されないのは本
+            家のバグだという気がします。</p>
 
-<p>ʸ�����ץ饤�Ȥϡ���˲��񤭤����褹��褦�ˤ��ޤ�����</p>
+          <p>文字スプライトは、常に横書きで描画するようにしました。</p>
 
-<p>���ץ饤�Ȥ�Ʃ���٤򡢥����ɤκݤ˥ꥻ�åȤ��ʤ��褦�ˤ��ޤ�����</p>
+          <p>スプライトの透過度を、ロードの際にリセットしないようにしました。</p>
 
-<p>�Ľ񤭤ΤȤ��ϡ��ܲȤǤ� setwindow �ΡֽĤ�ʸ�����סߡֽĤ�ʸ������
-��ʸ��ɽ���ΰ�ˤʤꡢclickstr �Υ���å��Ԥ��Ȳ��ڡ����ζ��̤�ֽĤ�
-ʸ�����פ���˷��Ƥ���褦�Ǥ��������Х����Ȼפ��ޤ����������Υ���
-��Ϥ��λ��ͤθ��˺�������Ƥ���Τǡ�ONScripter �⤳��ˤʤ餤�ޤ���
-</p>
+          <p>縦書きのときは、本家では setwindow の「縦の文字数」×「縦の文字数」
+            が文字表示領域になり、clickstr のクリック待ちと改ページの区別も「縦の
+            文字数」を基準に決めているようです。これもバグだと思いますが、現状のゲー
+            ムはこの仕様の元に作成されているので、ONScripter もこれにならいます。
+          </p>
 
-<p>����ޤǥХ��äƵ�ǽ���Ƥ��ʤ��ä��Ľ񤭻��� select �ϥ��ޥ�ɤ���
-�����ޤ�����</p>
+          <p>これまでバグって機能していなかった縦書き時の select 系コマンドに対
+            応しました。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>11��15��</h3>
+        <div class="diary-day">
+          <h3>11月15日</h3>
 
-<p>ScriptHandler::readToken() �ˤ����ơ����곰��ʸ�������ߥХåե�����
-Ƭ���褿�Ȥ��ˡ�������ץȤ������˥����åפ���뤳�Ȥ�����Х�������
-�ޤ������Τ�̵���ä��ΤǤ������ѡ�����񤭴������Ȥ��˥���Х������褦
-�Ǥ���</p>
+          <p>ScriptHandler::readToken() において、想定外の文字が現在バッファの先
+            頭に来たときに、スクリプトが不正にスキップされることがあるバグを修正し
+            ました。昔は無かったのですが、パーサを書き換えたときにエンバグしたよう
+            です。</p>
 
-<p><a href="http://d.hatena.ne.jp/nyanonon/20051108">�ˤ�ΤΤ�����
-</a>�ˤ��ȡ��ץ���������Τ򥢥�������Ͽ����С�Home�����ǥۡ������
-����ä���⡢�������С��Υ������󤫤饲����������Ǥ���Ȥ���ޤ�������
-������Ƥߤޤ����Ȥ�����VGA �Ǥ�����äƤ��ޤ��󤬡����ޤ����äƤ���
-�褦�Ǥ��������餷����ONScripter �����ۥѥå������˼�����줵���Ƥ���
-�����ޤ����ޤ���ONScripter-Resume �Ϻ�����ޤ�����</p>
+          <p><a href="http://d.hatena.ne.jp/nyanonon/20051108">にゃののん日記
+            </a>によると、プログラム本体をアイコン登録すれば、Homeキーでホーム画面
+            に戻った後も、タスクバーのアイコンからゲームに復帰できるとあります。さっ
+            そく試してみましたところ、VGA でしかやっていませんが、うまくいっている
+            ようです。素晴らしい。ONScripter の配布パッケージに取り入れさせていた
+            だきます。また、ONScripter-Resume は削除しました。</p>
 
-<p>��λ���⤢�ꡢZaurus �ѥѥå������Τ���˥����������ޤ�������
-�ޤǤϸ�Υ��������ή�Ѥ��Ƥ��ޤ��������Ƕ�� Zaurus �ˤ����äƤ��ʤ�
-�褦�Ǥ������ Zaurus �ˤϤ���ΤǤ������ʤ����������С��ˤϽФƤ��ޤ�
-��</p>
+          <p>上の事情もあり、Zaurus 用パッケージのためにアイコンを作りました。今
+            までは碁のアイコンを流用していましたが、最近の Zaurus には入っていない
+            ようです。私の Zaurus にはあるのですが、なぜかタスクバーには出てきませ
+            ん。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>11��2��</h3>
+        <div class="diary-day">
+          <h3>11月2日</h3>
 
-<p>���̸��̤Υ⥶�������󡦥����Ȥ˴ؤ��ƥХ�������Ԥ��ޤ�����
-onscripter-20051101 �Ǥν����ߥ��Ǥ���</p>
+          <p>画面効果のモザイクイン・アウトに関してバグ修正を行いました。
+            onscripter-20051101 での修正ミスです。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>11��1��</h3>
+        <div class="diary-day">
+          <h3>11月1日</h3>
 
-<p>�������뤵�󤫤�Ρ�<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=69">PSP �ѤΥѥå�</a>�פ�Ŭ�Ѥ���PSP �Ѥ� Makefile �䥭���Х���ɤ��ɲä��ޤ�����</p>
+          <p>し～くるさんからの「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=69">PSP 用のパッチ</a>」を適用し、PSP 用の Makefile やキーバインドを追加しました。</p>
 
-<p>���̸��̤Υ⥶�������󡦥����Ȥˤ����ơ������٤ˤ�äƤϥ������ơ�
-�����ե���Ȥ򵯤����Х��������ޤ��������⤽��⥶����������λ���
-���ְ�äƤ����Τǡ�������⽤�����ޤ�����</p>
+          <p>画面効果のモザイクイン・アウトにおいて、解像度によってはセグメンテー
+            ションフォルトを起こすバグを修正しました。そもそもモザイクの描画の仕方
+            が間違っていたので、そちらも修正しました。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>10��13��</h3>
+        <div class="diary-day">
+          <h3>10月13日</h3>
 
-<p>BPP16 ��������ƥ���ѥ��뤷���Ȥ��ˡ�������β���������˰����ʤ�
-���Ȥ�����Х��������ޤ�����SDL_Surface �ǲ����Хåե������� 4byte 
-�� align ����Ƥ���Τ�˺��Ƥ��ޤ�����</p>
+          <p>BPP16 を定義してコンパイルしたときに、奇数幅の画像を正常に扱えない
+            ことがあるバグを修正しました。SDL_Surface で画像バッファの幅が 4byte
+            に align されているのを忘れていました。</p>
 
-<p>bar ���ޥ�ɸ�κ������ΰ褬�����ˤʤ뤳�Ȥ�����Х��������ޤ�����
-</p>
+          <p>bar コマンド後の再描画領域が不正になることがあるバグを修正しました。
+          </p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>10��11��</h3>
+        <div class="diary-day">
+          <h3>10月11日</h3>
 
-<p>�Х�����<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=48">�η��</a>�פ򸵤ˡ�selnum ���ޥ�ɤˤ����ơ��Ԥ򥫥���Ȥ����ѿ�����������������ʤ��Х��������ޤ�����</p>
+          <p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=48">歌月十夜</a>」を元に、selnum コマンドにおいて、行をカウントする変数が正しく更新されないバグを修正しました。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>10��10��</h3>
+        <div class="diary-day">
+          <h3>10月10日</h3>
 
-<p>�������뤵�󤫤�ν�����<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=68">save_data_len�ν�����ߥ���</a>�פ������졢save_data_len �����������Ƥ��ʤ����� ScriptParser::allocFileIOBuf ��� memcpy �ε�ư�����������ʤ뤳�Ȥ�����Х��������ޤ�����PSP ���ư��������Ǥ���</p>
+          <p>し～くるさんからの修正「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=68">save_data_lenの初期化ミス？</a>」を取り入れ、save_data_len が初期化されていないため ScriptParser::allocFileIOBuf 内の memcpy の挙動がおかしくなることがあるバグを修正しました。PSP 上で動作したそうです。</p>
 
-<h4>20051010a</h4>
+          <h4>20051010a</h4>
 
-<p>erasetextwindow �� 0 �����ꤵ�줿�Ȥ��ˡ����˥ƥ����Ȥ����褵��Ƥ�
-��Ȥ��Τߡ����̸��̤����äƤ�ƥ����Ȥ�ɽ�����³����褦�ˤ��ޤ�����
-����ޤǤϡ����̸��̤�����ȶ���Ū�˥ƥ����Ȥ�ɽ������褦�ˤ��Ƥ��ꡢ
-��̤Ȥ��ưտޤ��ʤ��ƥ������Ȥ�ɽ������뤳�Ȥ�����ޤ�����</p>
+          <p>erasetextwindow で 0 が指定されたときに、既にテキストが描画されてい
+            るときのみ、画面効果に入ってもテキストの表示を継続するようにしました。
+            これまでは、画面効果に入ると強制的にテキストを表示するようにしており、
+            結果として意図しないテキスト枠が表示されることがありました。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>10��8��</h3>
+        <div class="diary-day">
+          <h3>10月8日</h3>
 
-<p>���ͤȤ��ơ��ǥե����(saveon ͭ����)�Ǥϲ��ڡ��������٤�(��̩�ˤ�
-�����㤤�ޤ���)�����֥ǡ����Υ��ʥåץ���åȤ�ȤäƤ���ΤǤ�������
-��ޤǤϤ���� tmpfile �����������ե�����˳�Ǽ���Ƥ��ޤ��������󡢥�
-�ʥåץ���åȤ��������¸����褦���ѹ������ޤ������֥ǡ����μº�
-���ɤ߽񤭤⡢���������Τ��ۤ� fread, fwrite �ǰ��٤��ɤ߽񤭤�
-��褦�ˤ��ޤ������ǥ����������������٤��Ķ��ǤϷ빽ͭ�����Ȼפ��ޤ���
-�⤷�������顢�����֥ǡ������ɤ߽񤭤˴ؤ��ƥ���Х����Ƥ����ǽ������
-��Τǡ��������Ť������ϸ���𲼤�����</p>
+          <p>仕様として、デフォルト(saveon 有効時)では改ページする度に(厳密には
+            少し違いますが)セーブデータのスナップショットをとっているのですが、こ
+            れまではこれを tmpfile で生成したファイルに格納していました。今回、ス
+            ナップショットをメモリ上に保存するように変更し、またセーブデータの実際
+            の読み書きも、メモリ上で全体を構築し fread, fwrite で一度に読み書きす
+            るようにしました。ディスクアクセスの遅い環境では結構有効だと思います。
+            もしかしたら、セーブデータの読み書きに関してエンバグしている可能性があ
+            るので、何か気づいた方は御報告下さい。</p>
 
-<p>�ޤ��������֥ե�����ʳ����ɤ߽񤭤�Ԥ��ǡ����ե�����ˤĤ��Ƥ⡢
-Ʊ�ͤ˰쵤���ɤ߽񤭤���褦���ѹ����ޤ�����</p>
+          <p>また、セーブファイル以外で読み書きを行うデータファイルについても、
+            同様に一気に読み書きするように変更しました。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>10��4��</h3>
+        <div class="diary-day">
+          <h3>10月4日</h3>
 
-<p>���ޤǡ�fgetc ��ɤ��������ǥХåե���󥰤���Ƥ������������顢
-fread ���ɤ߹���®�٤Ϥ��������Ѥ��ʤ��������Ȼפ�����Ǥ����ΤǤ�����
-�����ˤ���ΤǤ��礦������Ӥ��Ƥߤ��������������뤳�Ȥ�ʬ����ޤ�����
-ScriptHandler::readScriptSub �ν������֤���Ӥ��Ƥߤޤ�������˿������
-��nscript.dat �� 5M ���١ˤǡ�fputc �ǣ��á�fread��(������ 4K �Хåե�
-���) 0.04�äǤ����������ͥå��ˤʤäƤ���Τ�����ޤ��󤬡��ǥ�����
-�����������٤��Ķ����Ȥ��ʤ�ƶ������ꤽ���Ǥ����Ȥ����櫓�ǡ�fread ��
-����������Τ˹������ޤ�����</p>
+          <p>今まで、fgetc もどうせ内部でバッファリングされているんだろうから、
+            fread と読み込み速度はたいして変わらないだろうと思い込んでいたのですが、
+            実装にもよるのでしょうが、比較してみたら相当差があることが分かりました。
+            ScriptHandler::readScriptSub の処理時間を比較してみましたが、某ゲーム
+            （nscript.dat が 5M 程度）で、fputc 版１秒、fread版(自前で 4K バッファ
+            リング) 0.04秒でした。何がネックになっているのかしりませんが、ディスク
+            アクセスが遅い環境だとかなり影響がありそうです。というわけで、fread で
+            実装したものに更新しました。</p>
 
-<p>�Ĥ��Ǥˡ������������ɤ߹��ߥ롼���������Хåե���󥰤���褦��
-���ޤ�����</p>
+          <p>ついでに、アーカイブ読み込みルーチンも一部バッファリングするように
+            しました。</p>
 
-<p>memprof �Ǹ��Ƥߤ��顢ScriptHandler::ArrayVariable �򥳥ԡ�����Ȥ�
-�� ScriptParser::loadStr �����ˤ鷺���Ǥ������꡼�����Ƥ����Τǽ�
-�����ޤ�����</p>
+          <p>memprof で見てみたら、ScriptHandler::ArrayVariable をコピーするとき
+            と ScriptParser::loadStr で非常にわずかですがメモリークしていたので修
+            正しました。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>10��1��</h3>
+        <div class="diary-day">
+          <h3>10月1日</h3>
 
-<p>�Х�����<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=67">��Ӥ�����</a>�פ򸵤ˡ�ʸ�Ϥ�����դ���ʸ������ϤޤäƤ��������������褵��ʤ��Х��������ޤ�����</p>
+          <p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=67">ルビの問題</a>」を元に、文章がルビ付きの文字から始まっている場合に正常に描画されないバグを修正しました。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>9��23��</h3>
+        <div class="diary-day">
+          <h3>9月23日</h3>
 
-<p>�Х�����<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=66">��ߥ奪�����ϣ��ѻդǾ��ʤ�����ʤ�</a>�פ򸵤ˡ�bar ���ޥ�ɤǸ����ͤ���ο������ꤵ�줿�Ȥ��ˡ�unsigned �ǥ��㥹�Ȥ���۾���ͤȤʤꡢ���η�̴Ķ��ˤ�äƤ������Х��������ޤ�����</p>
+          <p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=66">レミュオールの錬金術師で商品が減らない</a>」を元に、bar コマンドで現在値に負の数が指定されたときに、unsigned でキャストされ異常な値となり、その結果環境によっては落ちるバグを修正しました。</p>
 
-<h4>20050923a</h4>
+          <h4>20050923a</h4>
 
-<p>�ǡ����ɤ߹��߻��ˡ�bar �� prnum �ν�����������Դ���������뤳�Ȥ�
-����Х��������ޤ�����</p>
+          <p>データ読み込み時に、bar と prnum の初期化処理が不完全で落ちることが
+            あるバグを修正しました。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>9��16��</h3>
+        <div class="diary-day">
+          <h3>9月16日</h3>
 
-<p>�Х�����<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=66">��ߥ奪�����ϣ��ѻդǾ��ʤ�����ʤ�</a>�פ� nyo ���󤫤餤���������ѥå��򸵤ˡ�puttext ���ޥ�ɤ� '/' �ǽ����ݤˡ���ɬ�פʲ��Ԥ�����Х��������ޤ�����</p>
+          <p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=66">レミュオールの錬金術師で商品が減らない</a>」で nyo さんからいただいたパッチを元に、puttext コマンドが '/' で終わる際に、不必要な改行が入るバグを修正しました。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>9��13��</h3>
+        <div class="diary-day">
+          <h3>9月13日</h3>
 
-<p>���ä��� BPP16 ��������Ƥ����Ȥ��������Х���ȯ�������������ޤ�����
-ñ�ʤ뷿�ν񤭴���ϳ��Ǥ���Zaurus �ѥѥå������򤪻Ȥ�������ɬ������
-���Ƥ���������</p>
+          <p>さっそく BPP16 を定義していたときに落ちるバグを発見し、修正しました。
+            単なる型の書き換え漏れです。Zaurus 用パッケージをお使いの方は必ず更新
+            してください。</p>
 
-<h4>20050913a</h4>
+          <h4>20050913a</h4>
 
-<p>cselbtn ���ޥ�ɤǡ�csel �����ꤵ��Ƥ��ʤ��ֹ椬�Ϥ��줿�Ȥ��ˡ�̵
-�뤷��³�Ԥ���褦�ˤ��ޤ���������ޤǤ϶�����λ���Ƥ��ޤ�����</p>
+          <p>cselbtn コマンドで、csel で設定されていない番号が渡されたときに、無
+            視して続行するようにしました。これまでは強制終了していました。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>9��12��</h3>
+        <div class="diary-day">
+          <h3>9月12日</h3>
 
-<p>BPP16 ��������ƥ���ѥ��뤷�����ˡ����������� RGB 16bpp, alpha
-8bpp �Ǵ�������褦�ˤ����ǽ����Ϥ� 16bpp �Ȥʤ�褦�ˤ��ޤ�����BPP16 
-��������ʤ����ϡ�����ޤ��̤� RGBA 32bpp �Ǵ������ޤ�������ˤȤ��
-�������������ط����������ѹ����ޤ���������Х�����ɽ�������������ʤä�
-���뤫�⤷��ޤ���Τǡ������Ť������Ϥ���𲼤�����</p>
+          <p>BPP16 を定義してコンパイルした場合に、内部画像を RGB 16bpp, alpha
+            8bpp で管理するようにし、最終出力も 16bpp となるようにしました。BPP16
+            を定義しない場合は、これまで通り RGBA 32bpp で管理します。これにともな
+            い、画像処理関係を大幅に変更しました。エンバグして表示がおかしくなって
+            いるかもしれませんので、お気づきの方はご報告下さい。</p>
 
-<p>����ޤǤ� PDA ���������ȡ����̥������� QVGA �ˤ��ƺǽ����ϤǤ��� 
-screen_surface �Τߤ� 16bpp �ǳ��ݤ��Ƥ��ޤ����������󤫤�� PDA ����
-�����Ƥ���̥������� QVGA �ˤʤ�����Ǥ����ʤ���PDA �˲ä��� PDA_VGA 
-���������ȡ��ǽ�� VGA ����ݤ��ˤ��������Ԥ���� QVGA �ǳ��ݤ��褦
-�Ȥ��ޤ���Zaurus �ѥѥå������Ǥϡ�PDA, PDA_VGA, BPP16 �������������
-����ѥ��뤷�Ƥ��ޤ���Zaurus �Ǥ��δ��Ǥ������ˤ�®���ʤ�ޤ��������פ�
-���ۤɤǤϤ���ޤ���Ǥ������ޤ���BPP16 ����ꤹ��ȡ��ʤ��� smpeg �� 
-mpeg1 ư��κ������̤��Υ������ͤˤʤ�ޤ���</p>
+          <p>これまでは PDA を定義すると、画面サイズを QVGA にして最終出力である
+            screen_surface のみを 16bpp で確保していましたが、今回からは PDA を定
+            義しても画面サイズが QVGA になるだけです。なお、PDA に加えて PDA_VGA
+            も定義すると、最初に VGA を確保しにいき、失敗すると QVGA で確保しよう
+            とします。Zaurus 用パッケージでは、PDA, PDA_VGA, BPP16 を全て定義して
+            コンパイルしています。Zaurus では体感できる程には速くなりましたが、思っ
+            たほどではありませんでした。また、BPP16 を指定すると、なぜか smpeg で
+            mpeg1 動画の再生画面がノイズの様になります。</p>
 
-<p>SDL_ACTIVEEVENT, SDL_VIDEOEXPOSE ���٥�Ȥ�ȯ�������Ȥ��ˡ���������
-�̤������褵��ʤ���礬����Х��������ޤ�����</p>
+          <p>SDL_ACTIVEEVENT, SDL_VIDEOEXPOSE イベントが発生したときに、正しく画
+            面が再描画されない場合があるバグを修正しました。</p>
 
-<p>createBackground(), btnCommand() ���ǡ�̵�̤˲����������ݤ��Ƥ�
-���Х��������ޤ�����</p>
+          <p>createBackground(), btnCommand() 等で、無駄に画像メモリを確保してい
+            たバグを修正しました。</p>
 
-<p>monocro, nega �θ��̤�̿��ľ���ȿ�Ǥ����褦�ˤ��ޤ��������Ϥ���
-�������ͤǤ�̵���ä���������ΤǤ����ġġ�</p>
+          <p>monocro, nega の効果が命令直後に反映されるようにしました。前はそう
+            いう仕様では無かった気がするのですが……。</p>
 
-<p>�Х�����<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=66">��ߥ奪�����ϣ��ѻդǾ��ʤ�����ʤ�</a>�פ򸵤ˡ�MIDI �ե�����α��դ���ߤ���ݤˡ��롼�ױ��դ�̵ͭ�򼨤������ѿ�����ä����ꤷ�Ƥ��ޤ����Ȥ�����Х��������ޤ�����</p>
+          <p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=66">レミュオールの錬金術師で商品が減らない</a>」を元に、MIDI ファイルの演奏を停止する際に、ループ演奏の有無を示す状態変数を誤って設定してしまうことがあるバグを修正しました。</p>
 
-<p>�Х�����<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=66">��ߥ奪�����ϣ��ѻդǾ��ʤ�����ʤ�</a>�פ򸵤ˡ�ɽ��ʸ�� '/' �θ�β��Ԥǡ�������ץȤιԥ����󥿤����������ä��ʤ��Х��������ޤ�����</p>
+          <p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=66">レミュオールの錬金術師で商品が減らない</a>」を元に、表示文の '/' の後の改行で、スクリプトの行カウンタが正しく増加しないバグを修正しました。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>8��24��</h3>
+        <div class="diary-day">
+          <h3>8月24日</h3>
 
-<p>tmkk���󤫤餤���������ѥå��򻲹ͤˡ�UTF8 �ե����륷���ƥ�������
-��ե�����̾���ɤ߹��ߤ��б����ޤ�����Linux �Ǥϡ��ǥե���ȤǤ� EUC 
-�����ꤷ��UTF8_FILESYSTEM ��������ƥ���ѥ��뤹��� UTF8 �����ꤷ�ޤ���
-MacOS X �Ǥϡ�Makefile.MacOSX�Υǥե���Ȥ� UTF8_FILESYSTEM ���������
-���ꡢUTF8 �����ꤷ�Ƥ��ޤ���</p>
+          <p>tmkkさんからいただいたパッチを参考に、UTF8 ファイルシステム上の日本
+            語ファイル名の読み込みに対応しました。Linux では、デフォルトでは EUC
+            を想定し、UTF8_FILESYSTEM を定義してコンパイルすると UTF8 を想定します。
+            MacOS X では、Makefile.MacOSXのデフォルトで UTF8_FILESYSTEM を定義して
+            おり、UTF8 を想定しています。</p>
 
-<p>OpenGL ��Ϣ�Υ����ɤ������ޤ�����</p>
+          <p>OpenGL 関連のコードを削除しました。</p>
 
-<p>����Ǥ�����Zaurus �Ǥ� framebuffer �Υե����ޥåȤ˹�碌��������
-���� RGB 16bpp, alpha 8bpp �Ǵ����������ѥ����̤��㸺������ι�®��
-��ޤ����Ȼפ��ޤ������ޤǤ� RGBA 32bpp �Ǵ������Ƥ����Τǡ��빽���̤�
-����Ȼפ��ޤ���������ˤϼ�������ͽ��Ǥ���</p>
+          <p>今後ですが、Zaurus では framebuffer のフォーマットに合わせて内部画
+            像を RGB 16bpp, alpha 8bpp で管理し、使用メモリ量の低減と描画の高速化
+            を図ろうと思います。今までは RGBA 32bpp で管理していたので、結構効果が
+            あると思います。９月中には実装する予定です。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>8��19��</h3>
+        <div class="diary-day">
+          <h3>8月19日</h3>
 
-<p>Zaurus �ǻ��Ѥ��Ƥ��ơ�������å�����Υ����ɡ������֤�ɽ�����٤���
-�ǡ�TTF_RenderGlyph_Blended �η�̤�ñ��� LRU �ǣ���ʸ��ʬ����å���
-���뤳�Ȥˤ��ޤ������ʤ�����ʸ�����Ȥ����ȡ������������Х����֡�����
-�ɲ��̤�ʸ���������Ƥ��ξ����������å�������ꤽ��������Ǥ��ޤ꿼��
-��̣�Ϥ���ޤ����δ�®�٤Ͼ夬�äƤ��ޤ����Ȥ���������Τ��Ǥ�
-SL-C700�ʤΤǤ�����VGA ���Ȳ������褬�٤���ͷ�ֵ������ޤ��󡣥�꡼��
-���Υƥ��Ȥ˻ȤäƤ�������Ǥ��������ͥ�������ؤ����꿷��������ˤ���
-�в�Ŭ�ˤʤ�ΤǤ��礦����</p>
+          <p>Zaurus で使用していて、右クリックからのロード・セーブの表示が遅いの
+            で、TTF_RenderGlyph_Blended の結果を単純な LRU で３０文字分キャッシュ
+            することにしました。なぜ３０文字かというと、これだけあればセーブ・ロー
+            ド画面の文字がたいていの場合全部キャッシュに入りそうだからであまり深い
+            意味はありません。体感速度は上がっています。というか、私のは素の
+            SL-C700なのですが、VGA だと画面描画が遅くて遊ぶ気がしません。リリース
+            前のテストに使っているだけです。カーネルを入れ替えたり新しい機種にすれ
+            ば快適になるのでしょうか。</p>
 
-<p>drawsp2, drawbg2 �ǻ��Ѥ������̾���ž�դ��Υ���ե��֥��ǥ���
-�������顢̵�̤���ʬ��ʤ��ޤ������������ФǤ���</p>
+          <p>drawsp2, drawbg2 で使用する拡大縮小回転付きのアルファブレンディング
+            処理から、無駄な部分を省きました。下の布石です。</p>
 
-<p>����ޤǡ���®���Τ���λ�ߤȤ��� OpenGL ��Хå�����ɤˤ�������
-���Ƥ��ޤ���������OpenGL�ǤȤθߴ������ݤĤ��Ȥ˸³��򴶤��Ƥ��ޤ�
-���������������ʥХ��˰ʳ��Τ����餵�ޤ�����ϡ�nega, mono ��������
-�����Ȥȣ��ĤΥƥ����������˾��ʤ��礭�ʲ����������ʤ����ȤǤ�����
-¾�ˤ⡢¿���β��̸��̤���®���β��ä����ʤ���OpenGL ¦�ν��Ϥ�����
-��Хåե���󥰤���Ƥ��뤳�Ȥ�ӥǥ����å���ǥ쥤�䡼�����򤹤�Τ�
-�ᥤ������ǥ쥤�䡼�����򤹤�Τ��ΰ㤤����տޤ����Ȥ�������褬
-�񤷤��������꤬����ޤ������Τ��������Ĥ��ϡ�����ʬ��� GLSL �� 
-fragment shader ��񤯤ʤɤ���в�褷�ޤ�����OpenGL ����Ѥ������
-�Ȥ��㲼�����ꡢ�ʤ�٤�¿���δĶ��ǻ��Ѥ��Ƥ�餤�����Ȥ�����ݤ��鳰
-��Ƥ��ޤ��ޤ��������� STL ��Ȥ������ΤǤ�����Ʊ����ͳ�Ǵ����ƻȤä�
-���ޤ��󡣤������� C �ǽ񤯵��Ϥ��ޤ��󤬡����������櫓�ǡ�OpenGL ��Ϣ
-�Υ����ɤϸ��� ifdef �Ǵ�����ʬΥ����Ƥ��ޤ���������������Ƥ�����
-�⤢�ꡢ�ä���˾���ʤ���м���Υ�꡼������ OpenGL ��Ϣ�����ɤ�����
-�ޤ���</p>
+          <p>これまで、高速化のための試みとして OpenGL をバックエンドにした実装
+            を試してきましたが、非OpenGL版との互換性を保つことに限界を感じてきまし
+            た。実装上の問題（バグ）以外のあからさまな問題は、nega, mono が効かな
+            いことと１つのテクスチャメモリに乗らない大きな画像が扱えないことですが、
+            他にも、多くの画面効果が高速化の恩恵を被れない、OpenGL 側の出力がダブ
+            ルバッファリングされていることやビデオチップ内でレイヤー合成をするのか
+            メインメモリ上でレイヤー合成をするのかの違いから意図したとおりの描画が
+            難しい等々問題があります。このうちいくつかは、画像分割や GLSL で
+            fragment shader を書くなどすれば解決しますが、OpenGL を使用するメリッ
+            トが低下したり、なるべく多くの環境で使用してもらいたいという主旨から外
+            れてしまいます。本当は STL も使いたいのですが、同じ理由で敢えて使って
+            いません。さすがに C で書く気はしませんが。そういうわけで、OpenGL 関連
+            のコードは現状 ifdef で完全に分離されていますが、可読性やメンテの問題
+            もあり、特に要望がなければ次回のリリースから OpenGL 関連コードを削除し
+            ます。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>8��18��</h3>
+        <div class="diary-day">
+          <h3>8月18日</h3>
 
-<p>bgcopy, getspsize ���ޥ�ɤ�������ޤ�������������bgcopy �ϲ�������
-¸��̤�б��Ǥ���</p>
+          <p>bgcopy, getspsize コマンドを実装しました。ただし、bgcopy は画像の保
+            存に未対応です。</p>
 
-<p>bar_info, prnum_info �ǡ������֥ǡ����ɤ߹��߻��˽�������Ƥ��ʤ���
-���Х��������ޤ�����</p>
+          <p>bar_info, prnum_info で、セーブデータ読み込み時に初期化していなかっ
+            たバグを修正しました。</p>
 
-<p>btnwait ���ˡ����ץ饤�ȤΥ��˥᡼����󤬵�ǽ���ʤ��Х���������
-������</p>
+          <p>btnwait 時に、スプライトのアニメーションが機能しないバグを修正しま
+            した。</p>
 
-<p>�Х�����<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=65">2byte �ե�����̾</a>�פ򸵤ˡ����������֤���ǤϤʤ��ե����륷���ƥफ��ľ�ܥե�������ɤ߹���ݤˡ�LINUX ���������Ƥ�����ե�����̾�� SJIS ���� EUC ���Ѵ�����褦�ˤ��ޤ�����</p>
+          <p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=65">2byte ファイル名</a>」を元に、アーカイブからではなくファイルシステムから直接ファイルを読み込む際に、LINUX が定義されている場合ファイル名を SJIS から EUC に変換するようにしました。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>7��19��</h3>
+        <div class="diary-day">
+          <h3>7月19日</h3>
 
-<p>�ܥ���������ˡ�����ܥ��󤫤�ե������������줿�顢�̤Υܥ����Ϣ
-³���ƥե����������ܤ���ˤ��� exbtn_d ����Ȥ�¹Ԥ���褦�ˤ���
-�������ޤ���exbtn �� P ����ǥ�����ֹ����ꤷ�ʤ����ˤϡ������ֹ�
-�򣰤ˤ���褦�ˤ��ޤ�����</p>
+          <p>ボタン選択時に、あるボタンからフォーカスが外れたら、別のボタンに連
+            続してフォーカスが移る場合にも常に exbtn_d の中身を実行するようにしま
+            した。また、exbtn の P 指定でセルの番号を指定しない場合には、セル番号
+            を０にするようにしました。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>7��17��</h3>
+        <div class="diary-day">
+          <h3>7月17日</h3>
 
-<p>if ���ޥ�ɤ� fchk, lchk �ǡ�"*label" �����ΰ����򰷤��ʤ��ä��Х�
-�������ޤ�����</p>
+          <p>if コマンドの fchk, lchk で、"*label" 形式の引数を扱えなかったバグ
+            を修正しました。</p>
 
-<p>exbtn ���ޥ�ɤˤ����ơ�C ����ǥܥ��󼫿ȤΥ��ץ饤���ֹ����ꤷ
-�����ˡ���ɽ���ˤʤ�ʤ��Х��������ޤ�����</p>
+          <p>exbtn コマンドにおいて、C 指定でボタン自身のスプライト番号を指定し
+            た場合に、非表示にならないバグを修正しました。</p>
 
-<p>spi, soundpressplgin ���ޥ�ɤˤ����ơ�nbzplgin.dll �����ꤵ�줿��
-���Τ�������Ϣ�Ť���褦�ˤ��ޤ�����</p>
+          <p>spi, soundpressplgin コマンドにおいて、nbzplgin.dll が指定されたと
+            きのみ復号を関連づけるようにしました。</p>
 
-<p>~���̲᤹��Ȥ��ˡ����߹Ԥ�����;�פ˥�����Ȥ���Ƥ����Х�������
-�ޤ�����</p>
+          <p>~を通過するときに、現在行が１つ余計にカウントされていたバグを修正し
+            ました。</p>
 
-<p>�����ֹ棱�ΤȤ��ˡ������̤�ƹ��ۤ���ΤǤϤʤ���dirty ���ΰ�Τ�
-�ƹ��ۤ���褦�ˤ��ޤ����������ʥ��ץ饤�Ȥ� print 1 ��Ϣ³Ū��ư����
-�褦�ʱ�Ф���®������ޤ���</p>
+          <p>効果番号１のときに、全画面を再構築するのではなく、dirty な領域のみ
+            再構築するようにしました。小さなスプライトを print 1 で連続的に動かす
+            ような演出が高速化されます。</p>
 
-<p>�����֥ǡ����ΥС�����󤬣�̤���ΤȤ��ˡ��Ť������Υƥ����������
-�ɤ߹����������꤬��������뤳�Ȥ�����Х��������ޤ�����</p>
+          <p>セーブデータのバージョンが２未満のときに、古い形式のテキスト履歴の
+            読み込み方に問題があり落ちることがあるバグを修正しました。</p>
 
-<p>puttext ���ޥ�ɤˤ��ƥ���������κݤϡ���������֤���¸���ʤ���
-���ˤ��ޤ�����</p>
+          <p>puttext コマンドによるテキスト描画の際は、ゲーム状態を保存しないよ
+            うにしました。</p>
 
-<p>*start ľ���ɬ����������֤���¸����褦�ˤ��ޤ�����</p>
+          <p>*start 直後で必ずゲーム状態を保存するようにしました。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>7��16��</h3>
+        <div class="diary-day">
+          <h3>7月16日</h3>
 
-<p>exbtn ���ޥ�ɤ� M ����(��ư)�κݤˡ���ɽ�����ä����ץ饤�Ȥ�ɽ����
-�֤ˤʤ�ʤ��Х��������ޤ�����</p>
+          <p>exbtn コマンドの M 指定(移動)の際に、非表示だったスプライトが表示状
+            態にならないバグを修正しました。</p>
 
-<p>saveoff ���ޥ�ɼ¹Ի��ˡ���������֤���¸���ʤ��褦�ˤ��ޤ�����
-</p>
+          <p>saveoff コマンド実行時に、ゲーム状態を保存しないようにしました。
+          </p>
 
-<p>csel ���ޥ�ɼ¹Ի��ˡ��ƥ����ȥ⡼�ɤ�����ʤ��褦�ˤ��ޤ�����</p>
+          <p>csel コマンド実行時に、テキストモードに入らないようにしました。</p>
 
-<p>pretextgosub ��������˹Ԥ����˥�������֤���¸���Ƥ����Τ�
-pretextgosub �������褫�鵢�äƤ��ƥƥ��������������������¸����褦
-�ˤ��ޤ�����</p>
+          <p>pretextgosub の飛び先に行く前にゲーム状態を保存していたのを、
+            pretextgosub の飛び先から帰ってきてテキスト描画に入る前に保存するよう
+            にしました。</p>
 
-<p>OpenGL ���ѻ��ˡ�ʸ����������������Х��������ޤ�������������̵
-���ǥȥåפ����褵��ʤ��Զ�礬����ޤ���</p>
+          <p>OpenGL 使用時に、文字の描画等が乱れるバグを修正しました。ただし、無
+            条件でトップに描画されない不具合があります。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>7��1��</h3>
+        <div class="diary-day">
+          <h3>7月1日</h3>
 
-<p>�Х�����<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=62">�Ҥ��餷 �� nsaconv �����������</a>�פ򸵤ˡ�nsaconv, sarconv �ˤ����ơ�Windows bitmap �ե����ޥåȤΣ����Ǥ������ bit �������ξ��ʥѥ�åȥ��顼�ˤν̾����б����ޤ�������������bit �������ȣ��ξ��ˤ�̤�б��Ǥ���</p>
+          <p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=62">ひぐらし を nsaconv 時の途中停止</a>」を元に、nsaconv, sarconv において、Windows bitmap フォーマットの１画素あたりの bit 数が８の場合（パレットカラー）の縮小に対応しました。ただし、bit 数が１と４の場合には未対応です。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>6��29��</h3>
+        <div class="diary-day">
+          <h3>6月29日</h3>
 
-<p>�Х�����<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=63">ʸ��ɽ���ΰ���طʰ��֤������</a>�פ򸵤ˡ�setwindow �ξ��֤򥻡��֥ǡ���������������ݤˡ��طʲ����ե�����̾�� NULL �Ǥʤ�����̵���Ǥ�������ꤷ�Ƥ����Х��������ޤ�����</p>
+          <p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=63">文字表示領域の背景位置がずれる</a>」を元に、setwindow の状態をセーブデータから復元する際に、背景画像ファイル名が NULL でない場合に無条件でそれを設定していたバグを修正しました。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>6��16��</h3>
+        <div class="diary-day">
+          <h3>6月16日</h3>
 
-<p>Seung Park ���󤫤餤���������ѥå��򻲹ͤˡ�X11 �ʳ��δĶ��� 
-SDL_WM_ToggleFullScreen, SDL_WM_ToggleFullScreen ����ǽ���ʤ�����ǡ�
-���إ����ɤ�����ޤ���������ǡ�Windows �� MacOSX �δĶ��Ǥⵯư��˲�
-�̥⡼�ɤ��ڤ��ؤ��������褦�ˤʤ�ޤ�����</p>
+          <p>Seung Park さんからいただいたパッチを参考に、X11 以外の環境で
+            SDL_WM_ToggleFullScreen, SDL_WM_ToggleFullScreen が機能しない問題で、
+            代替コードを入れました。これで、Windows や MacOSX の環境でも起動後に画
+            面モードの切り替えが出来るようになりました。</p>
 
-<p>Seung Park ����ν�����Τ����졢SDL_QUIT ���٥�Ȥ���­�� 
-endCommand ��¹Ԥ���褦�˽������ޤ�����</p>
+          <p>Seung Park さんの修正を採り入れ、SDL_QUIT イベントを補足し
+            endCommand を実行するように修正しました。</p>
 
-<p>OpenGL ��ͭ���ˤ� SMPEG ����Ѥ��� MPEG1 ư����������ݤˡ������
-�Ǥϥӥǥ������ե�������� SDL_SWSURFACE ���ڤ��ؤ��Ƥ����ΤǤ�����
-OpenGL �����ե����Τޤ޺�������褦�˽������ޤ�����ư��κ�������ǲ�
-�̤��ڤ��ؤ���ȯ�������줷������ȡ�Win32 �Ķ��ǥե륹���꡼���ư���
-����������˥ޥ������������ʤ�������褷�ޤ������ʤ���SDL-1.2.6,
-SDL-1.2.7 �ˤ� Overlay �ν���������ɤ˥Х������ꡢ����ޤ����ǿ��� 
-SDL �򤪻Ȥ���������</p>
+          <p>OpenGL を有効にし SMPEG を使用して MPEG1 動画を再生する際に、これま
+            ではビデオサーフェスを毎回 SDL_SWSURFACE に切り替えていたのですが、
+            OpenGL サーフェスのまま再生するように修正しました。動画の再生前後で画
+            面を切り替えが発生し見苦しい問題と、Win32 環境でフルスクリーンで動画を
+            再生した後にマウスが復帰しない問題を解決しました。なお、SDL-1.2.6,
+            SDL-1.2.7 には Overlay の初期化コードにバグがあり、落ちます。最新の
+            SDL をお使い下さい。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>6��2��</h3>
+        <div class="diary-day">
+          <h3>6月2日</h3>
 
-<p>�Х�����<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=61">�ȹ�α� ����ä�̵�¥롼��</a>�פ򸵤ˡ������餯������������ if ʸ��� lchk ̿�᤬��ǽ���ʤ��ʤäƤ����Х��������ޤ�����</p>
+          <p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=61">紅刻の唄 第壱話で無限ループ</a>」を元に、おそらくだいぶ前から if 文中の lchk 命令が機能しなくなっていたバグを修正しました。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>5��24��</h3>
+        <div class="diary-day">
+          <h3>5月24日</h3>
 
-<p>Zaurus �ѥѥå������Ǥϡ������ܡ��ɤǥޥ���������ԤǤ���褦�� --
-force-button-shortcut ���ץ�������ꤷ�Ƶ�ư����褦�ˤʤäƤ���Τ�
-���������Ĥκ����餫���Υ��ץ���󤬵�ǽ���Ƥ��ޤ���Ǥ������ޤȤ����
-��Ǥ��ʤ��ä������ब¿�����ä��Ȼפ��ޤ�����ǽ����褦�˽������ޤ�
-����</p>
+          <p>Zaurus 用パッケージでは、キーボードでマウス操作を代行できるように --
+            force-button-shortcut オプションを指定して起動するようになっているので
+            すが、いつの頃からかこのオプションが機能していませんでした。まともに操
+            作できなかったゲームが多数あったと思われます。機能するように修正しまし
+            た。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>5��23��</h3>
+        <div class="diary-day">
+          <h3>5月23日</h3>
 
-<p>monocro �θ��̤�ȯ������쥤��� humanz �ν���ͤ������ޤ�����
-�֥쥤�������פ�<a href="onscripter.html#memo">��ȯ���</a>�ˤޤȤ�
-�ޤ�����</p>
+          <p>monocro の効果が発生するレイヤや humanz の初期値を修正しました。
+            「レイヤ描画順」を<a href="onscripter.html#memo">開発メモ</a>にまとめ
+            ました。</p>
 
-<p>SDL surface �� RGBA ���¤Ӥ�TTF_RenderGlyph_Blended ���֤���Τ�
-��������ʸ��������®�����ޤ���������¾��alphaBlend �� loop ��ι�®
-�����ǡ�systemcall load �����褬 4% ��(Linux Desktop)®���ʤ�ޤ�����
-</p>
+          <p>SDL surface の RGBA の並びを、TTF_RenderGlyph_Blended が返すものと
+            そろえ、文字描画を高速化しました。その他、alphaBlend の loop 内の高速
+            化等で、systemcall load の描画が 4% 程(Linux Desktop)速くなりました。
+          </p>
 
-<p>ʸ���ϡ�������ˤ�¾�Υ쥤���̵�뤷��ɬ���ȥåפ˽񤯤褦�˽�����
-�ޤ�����</p>
+          <p>文字は、描画時には他のレイヤを無視して必ずトップに書くように修正し
+            ました。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>5��20��</h3>
+        <div class="diary-day">
+          <h3>5月20日</h3>
 
-<p>�������뤵�󤫤�ΥХ�����<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=59">�ե륹���꡼��⡼�ɤˤĤ���</a>�פ򸵤ˡ�SDL_WM_ToggleFullScreen() ����������Ƥ��ʤ��Ķ�(X11 �ʳ�)�� --fullscreen ����ꤷ�Ƶ�ư�����Ȥ��ˡ��ե륯�꡼��⡼�ɤˤʤ�褦�� SDL_SetVideoMode �� SDL_FULLSCREEN ���Ϥ��褦�ˤ��ޤ������ޤ���������ɥ��⡼�ɤǵ�ư���� --window ���ץ������ɲä��ޤ�����</p>
+          <p>し～くるさんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=59">フルスクリーンモードについて</a>」を元に、SDL_WM_ToggleFullScreen() が実装されていない環境(X11 以外)で --fullscreen を指定して起動したときに、フルクリーンモードになるように SDL_SetVideoMode に SDL_FULLSCREEN を渡すようにしました。また、ウィンドウモードで起動する --window オプションを追加しました。</p>
 
-<p>���ˤ��󤫤�ΥХ�����<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=60">�����ɽ����ۥ�����岼�򷫤��֤��� Access violation</a>�פ򸵤ˡ�--enable-wheeldown-advance ���ץ�������Ѥ������֤ǡ�select ���ޥ�ɤ���ޥ����ۥ�����ξ�ǲ��۲��̤����ꤽ��������������Ȥ��ˡ�����뤳�Ȥ�����Х��������ޤ�����</p>
+          <p>春男さんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=60">選択肢表示中ホイール上下を繰り返すと Access violation</a>」を元に、--enable-wheeldown-advance オプションを使用した状態で、select コマンドからマウスホイールの上で回想画面に入りそこから復帰するときに、落ちることがあるバグを修正しました。</p>
 
-<p>����� Zaurus �ǤϻȤ�ʤ���ǽ�˴ؤ��뽤���ʤΤǡ�Zaurus �ǥѥå���
-���ι����Ϥ���ޤ���</p>
+          <p>今回は Zaurus では使わない機能に関する修正なので、Zaurus 版パッケー
+            ジの更新はありません。</p>
 
-<h4>20050520a</h4>
+          <h4>20050520a</h4>
 
-<p>��β��۲��̤�����������Ȥ������������ǡ��̤�����ȤΤ���ߤ��
-�������ս���Ѥ��ޤ�����</p>
+          <p>上の回想画面から復帰するときに落ちる問題で、別の問題とのからみを考
+            え修正箇所を変えました。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>5��14��</h3>
+        <div class="diary-day">
+          <h3>5月14日</h3>
 
-<p>�⤦ beta �ǤȤ������Ȥ�ʤ��������Ȼפ����С������ɽ������ beta 
-���뤳�Ȥˤ��ޤ��������塢�̾�Υ�꡼���� 
-onscripter-20050514.tar.gz (�С������ 20050514)���¸��ǤΥ�꡼���� 
-onscripter-exp-20050514.tar.gz (�С������ exp-20050514)�Ȥ���ɽ���ˤ�
-�ޤ����������Υǥ��쥯�ȥ�ˤ�С�������ֹ���դ���褦�ˤ��ޤ����Τǡ�
-�Х��ʥ�ѥå��������������Ƥ������Ϥ����դ���������</p>
+          <p>もう beta 版ということもないだろうと思い、バージョン表記から beta
+            を取ることにしました。今後、通常のリリースは
+            onscripter-20050514.tar.gz (バージョン 20050514)、実験版のリリースは
+            onscripter-exp-20050514.tar.gz (バージョン exp-20050514)という表記にし
+            ます。ソースのディレクトリにもバージョン番号を付けるようにしましたので、
+            バイナリパッケージを作成されている方はご注意ください。</p>
 
-<p>�ʤ��¸��ǤȤϡ��礭�ʽ����η�̥���Х����Ƥ����ǽ�����⤤���䡢
-��˾�ˤ�äƻ䤬����Ȥν���ʤ��Ķ��Ǥ�ư���ѹ���Ԥä����˥�꡼
-���������¾�οͤ���ʬ�˥ƥ��Ȥ򤷤�������꤬�ʤ�����̾��Ǥ˼�����
-��ޤ���</p>
+          <p>なお実験版とは、大きな修正の結果エンバグしている可能性が高い場合や、
+            要望によって私が試すことの出来ない環境での動作変更を行った場合にリリー
+            スし、私や他の人が十分にテストをした上で問題がなければ通常版に取り込ま
+            れます。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>5��7��<span style="color:red">20050504 ��ȤäƤ���ͤϡ��׺��������������֥ǡ������������񤭹��ޤ�Ƥ��ޤ���</span></h3>
+        <div class="diary-day">
+          <h3>5月7日<span style="color:red">20050504 を使っている人は、要差し換え。セーブデータが正しく書き込まれていません。</span></h3>
 
-<p>20050504 �Ǥϡ�������ץȤθ��߹Ԥη׻���ְ㤨�Ƥ��ꡢ���ߤξ��֤�
-�����������֥ǡ�������¸����ޤ���20050507 �ʹߤ˺��������Ƥ���������
-</p>
+          <p>20050504 では、スクリプトの現在行の計算を間違えており、現在の状態が
+            正しくセーブデータに保存されません。20050507 以降に差し換えてください。
+          </p>
 
-<p>���ˤ��󤫤�ΥХ�����<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=57">̤������ѿ�����</a>�פ򸵤ˡ��ե���Ȥ�ʸ�����֤ξ��֤�������륯�饹�ǲ��񤭡��Ľ񤭤ξ��֤��������Ƥ��ʤ��ä��Х��ȡ��ƥ����Ƚ����ˤ�����ʸ�������󥿤��������Ƥ��ʤ��ä��Х��������ޤ�����</p>
+          <p>春男さんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=57">未初期化変数２件</a>」を元に、フォントや文字位置の状態を管理するクラスで横書き・縦書きの状態を初期化していなかったバグと、テキスト処理における文字カウンタを初期化していなかったバグを修正しました。</p>
 
-<p>���ˤ��󤫤�ΥХ�����<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=55">�ޥ����Υۥ����륢�åפǲ��ۥ⡼�ɤ�����ޤ���</a>�פ򸵤ˡ��ƥ����Ƚ�ü�Υ���å��Ԥ��κݤˡ��ޥ����Υۥ����륢�åפǲ��ۥ⡼�ɤ�����ʤ��ä��Х��������ޤ������Ĥ��Ǥˡ�rmenu ���������Ƥ��ʤ��Ȥ��ˡ�������å��ǥƥ����Ȥ�ä��褦�ˤ��ޤ�����</p>
+          <p>春男さんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=55">マウスのホイールアップで回想モードに入れません</a>」を元に、テキスト終端のクリック待ちの際に、マウスのホイールアップで回想モードに入れなかったバグを修正しました。ついでに、rmenu が定義されていないときに、右クリックでテキストを消すようにしました。</p>
 
-<p>���ˤ��󤫤餤������������˾��<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=56">�ۥ������������ɤ߿ʤ᤿��</a>�פ�Τ����졢��ư���� --enable-wheeldown-advance ���ץ�������ꤹ��ȡ��ƥ����Ƚ�ü�ǤΥ���å��Ԥ��κݤˡ��ޥ����Υۥ�������������򥯥�å����Ȥ��ư����褦�ˤ��ޤ�����textgosub �ǥ���å��Ԥ��򥫥����ޥ������Ƥ���Ȥ��ˤϸ��̤Ϥ���ޤ��󡣺ǽ�ϡ��ܲȤȤϵ�ư���㤦��Τ� ONScripter ��ɸ����ͤˤ��褦�Ȼפä��ΤǤ������嵭�Υۥ����륢�åפǤβ��ۥ⡼�ɤ��Ȥ߹�碌�Ʋ��ۥ⡼�ɤȹԤä����褿�ꤷ�Ƥ���Ȥ��ˡ��ְ�äưտޤ����ɤ߿ʤ�Ƥ��ޤ����Ȥ����ä��Τǡ����ץ���󰷤��ˤ��ޤ�����</p>
+          <p>春男さんからいただいたご要望「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=56">ホイールダウンで読み進めたい</a>」を採り入れ、起動時に --enable-wheeldown-advance オプションを指定すると、テキスト終端でのクリック待ちの際に、マウスのホイールダウン操作をクリック操作として扱うようにしました。textgosub でクリック待ちをカスタマイズしているときには効果はありません。最初は、本家とは挙動が違うものの ONScripter の標準仕様にしようと思ったのですが、上記のホイールアップでの回想モードと組み合わせて回想モードと行ったり来たりしているときに、間違って意図せず読み進めてしまうことがあったので、オプション扱いにしました。</p>
 
-<p>���̸��� 16, 17 �Υ⥶�����ǡ������٤ˤ�äƤϥ������ơ������ե�
-��Ȥ�����������Х��������ޤ�����</p>
+          <p>画面効果 16, 17 のモザイクで、解像度によってはセグメンテーションフォ
+            ルトを引き起こすバグを修正しました。</p>
 
-<p>��ư���ˡ����󥽡���˾�˥С�������ֹ��ɽ������褦�ˤ��ޤ�����
-</p>
+          <p>起動時に、コンソールに常にバージョン番号を表示するようにしました。
+          </p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>5��4��</h3>
+        <div class="diary-day">
+          <h3>5月4日</h3>
 
-<p>zenkakko ̿����ѻ��ˡ�[]�Ǥ�����줿�ս꤬ gettag �Ǽ��������褦
-�˽������ޤ������ޤ���pretextgosub �˴ؤ����ư�κ٤����Х���������
-������</p>
+          <p>zenkakko 命令使用時に、[]でくくられた箇所が gettag で取得されるよう
+            に修正しました。また、pretextgosub に関する挙動の細かいバグを修正しま
+            した。</p>
 
-<p>���̸��̤�����롼�����㴳��®�����ޤ�����</p>
+          <p>画面効果の描画ルーチンを若干高速化しました。</p>
 
-<p>���ޤǤ� puttext �ΰ����򶯰��˥ƥ����Ȱ����ˤ��Ƥ����ΤǤ�����
-pretextgosub ��Ǥ��ޤ���ǽ����褦���̾�Υ��ޥ�ɤ�Ʊ�ͤ˰����褦��
-�������ޤ�����</p>
+          <p>今までは puttext の引数を強引にテキスト扱いにしていたのですが、
+            pretextgosub 内でうまく機能するように通常のコマンドと同様に扱うように
+            修正しました。</p>
 
-<p>logsp ���ޥ�ɤǡ������ѥ��ץ饤�Ȳ����β������оݥ�������ʸ����ʬ
-���ݤ��Ƥ����Х��������ޤ�����</p>
+          <p>logsp コマンドで、ログ用スプライト画像の横幅を対象ログの全文字数分
+            確保していたバグを修正しました。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>5��2��</h3>
+        <div class="diary-day">
+          <h3>5月2日</h3>
 
-<p>�ƥ������Ѥ�����̿��Ǥ��ιԤ���λ����Ȥ��ˡ����Υƥ����ȹԤ���Ƭ
-�� pretextgosub �������ʤ��Х��������ޤ�����</p>
+          <p>テキスト用の制御命令でその行が終了するときに、次のテキスト行の先頭
+            で pretextgosub が効かないバグを修正しました。</p>
 
-<p>�����������ѹ��롼�����ʿ�경����ʬ���®�����ޤ�����getscreenshot 
-̿���¹Ի��β������ѹ�������������������β��������٤��ѹ�����ץ���
-��ब��®�ˤʤ�ޤ���</p>
+          <p>画像解像度変更ルーチンの平滑化の部分を高速化しました。getscreenshot
+            命令や実行時の解像度変更処理・アーカイブ中の画像解像度を変更するプログ
+            ラムが高速になります。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>4��29��</h3>
+        <div class="diary-day">
+          <h3>4月29日</h3>
 
-<p>mp3 �ϤǺ������줿 wav �ե����ޥåȤβ�����stop ̿��Ǿò�����ʤ�
-�Х��������ޤ�����</p>
+          <p>mp3 系で再生された wav フォーマットの音が、stop 命令で消音されない
+            バグを修正しました。</p>
 
-<p>�������뤵�󤫤餤���������ѥå�������ߡ�
-USE_GL_TEXTURE_RECTANGLE �򥳥�ѥ������������뤳�Ȥǡ������Ѿ�ʳ�
-��������ĥƥ��������ľ���ɤ߹����褦�ˤ��ޤ���������ˤ�äơ�����
-�Ϥˤ�äƤϤ��ᤫ�⤷��ޤ��󤬡�ɬ�פʥƥ������������̤�������Ⱦ
-ʬ�ˤʤ�Ϥ��Ǥ���</p>
+          <p>し～くるさんからいただいたパッチを取り込み、
+            USE_GL_TEXTURE_RECTANGLE をコンパイル時に定義することで、２の冪乗以外
+            の幅を持つテクスチャを直接読み込めるようにしました。これによって、実装
+            系によってはだめかもしれませんが、必要なテクスチャメモリの量が期待値半
+            分になるはずです。</p>
 
-<p>�������뤵��ˤ���Ƥ����������ե륹���꡼��ξ��֤ǵ�ư��ǽ�ˤ��� --
-fullscreen ���ץ������ɲä��ޤ�����</p>
+          <p>し～くるさんにご提案いただき、フルスクリーンの状態で起動可能にする --
+            fullscreen オプションを追加しました。</p>
 
-<p>exbtn ������ʸ����ǡ����ޥ�ɤ���ʸ���ξ����б����ޤ�����</p>
+          <p>exbtn の制御文字列で、コマンドが小文字の場合に対応しました。</p>
 
-<p>itoa2, logsp2, cellcheckexbtn, spreload, sp_rgb_gradation,
-zenkakko, loadgosub ��������ޤ�����</p>
+          <p>itoa2, logsp2, cellcheckexbtn, spreload, sp_rgb_gradation,
+            zenkakko, loadgosub を実装しました。</p>
 
-<p>btndef ���ˡ�exbtn_d �����Ƥ��ä���Ƥ��ʤ��ä��Х��������ޤ�����</p>
+          <p>btndef 時に、exbtn_d の内容が消されていなかったバグを修正しました。</p>
 
-<p>textclear ��ˡ��Ԥβ�᤬���������ʤ�Х��������ޤ�����</p>
+          <p>textclear 後に、行の解釈がおかしくなるバグを修正しました。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>3��8��</h3>
+        <div class="diary-day">
+          <h3>3月8日</h3>
 
-<P>�����餪�������ȻפäƤ����ΤǤ������ä˾�����ʸ�����سԤ˥��å���
-�褦�ʤ�Τ��ФƱ������褵��Ƥ����Х��������ޤ�����ʸ������κݤˡ�
-����ե��ͤ���Ť˳ݤ��Ƥ��������Ǥ�����</P>
+          <P>前からおかしいと思っていたのですが、特に小さな文字で輪郭にエッジの
+            ようなものが出て汚く描画されていたバグを修正しました。文字描画の際に、
+            アルファ値を二重に掛けていたせいでした。</P>
 
-<P>ʸ�����ץ饤�Ȥ���ѻ��ˡ�ʸ��������ǲ��Ԥ���ʤ��褦�˽�������
-������</P>
+          <P>文字スプライトを使用時に、文字列が途中で改行されないように修正しま
+            した。</P>
 
-<P>���ޥ�ɥ饤��˽��Ϥ�����å�����������������ޤ�����</P>
+          <P>コマンドラインに出力されるメッセージを一部抑制しました。</P>
 
-<P>tattsuu ����ˤ���Ŧ�������������� Linux Zaurus �ؤε����¸��ʬ��
-�ۼ����뤿����Ȥ߹�����ޥ����κ�ɸ�Ѵ����Υ����ɤ������ޤ�����
-20030622 �ʹߤǵ����¸��ʬ�ν����� SDL �饤�֥��¦�Ǥ�äƤ�餦����
-�ˤ������ᡢ���ߤǤϻȤ��Ƥ��ޤ���Ǥ��������Τ�����ηаޤˤĤ��Ƥϡ�
-20030622 �γ�ȯ����򻲾Ȥ��Ƥ���������</P>
+          <P>tattsuu さんにご指摘いただき、以前 Linux Zaurus への機種依存部分を
+            吸収するために組み込んだマウスの座標変換回りのコードを削除しました。
+            20030622 以降で機種依存部分の処理を SDL ライブラリ側でやってもらうこと
+            にしたため、現在では使われていませんでした。このあたりの経緯については、
+            20030622 の開発日誌を参照してください。</P>
 
-<P>�ˤ�ΤΤ󤵤󤫤�ΥХ����˴�Ť������ں����Υ����ͥ�����Υ�
-���������ޤ���������Ĵ�٤�ʬ���ä��Τϡ�stop ̿��ϡ�play ��, wave 
-��, mp3 �Ϥˤϸ��̤�����ޤ�����loopbgm, dwave �Ϥˤϸ��̤�����ޤ���
-�ޤ���dwave �Ϥϡ�save, load, reset �ˤ�äƾò�����뤳�ȤϤ���ޤ���
-���Τ������ۣ��˽������Ƥ������ᡢ�Ĥ�٤������ä���Ƥ��ޤ����Ȥ���
-��ޤ��������ʤߤˡ����Ĥ�<A HREF="http://www.areanine.gr.jp/~nyano/">
-��ʤ����ƥ��Υ�</A>���Ҹ����Ƥ���ޤ���</P>
+          <P>にゃののんさんからのバグ報告に基づき、音楽再生のチャンネル管理のバ
+            グを修正しました。今回調べて分かったのは、stop 命令は、play 系, wave
+            系, mp3 系には効果がありますが、loopbgm, dwave 系には効果がありません。
+            また、dwave 系は、save, load, reset によって消音されることはありません。
+            このあたりを曖昧に処理していたため、鳴るべき音が消されてしまうことがあ
+            りました。ちなみに、いつも<A HREF="http://www.areanine.gr.jp/~nyano/">
+              りなざうテクノウ</A>を拝見しております。</P>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>2��18��</h3>
+        <div class="diary-day">
+          <h3>2月18日</h3>
 
-<P>������ץ���������ѿ������Ǥ򤵤�������ѿ��ǻ��ꤷ�Ƥ�����ˡ���
-�Ȥ��줿������ͤ��Ǽ���빽¤�Τ����ƻҤ������ѿ�����Ʊ���˾�񤭤���
-�Ƥ��ޤ����������ͤμ������Ǥ��ʤ��ä��Х��������ޤ�����</P>
+          <P>スクリプト中で配列変数の要素をさらに配列変数で指定している時に、参
+            照された配列の値を格納する構造体が、親子の配列変数から同時に上書きされ
+            てしまい、正しい値の取得ができなかったバグを修正しました。</P>
 
-<P>�ե����뤬¸�ߤ��ʤ�����ɽ�������꤬ȿ�Ǥ���ʤ��Х����ǥե����
-��ʸ�������ְ�äƤ����Х���������å���˥塼��ɽ�������ְ�äƤ�����
-���������ޤ�����</P>
+          <P>ファイルが存在しない場合の表示色指定が反映されないバグ、デフォルト
+            の文字色が間違っていたバグ、右クリックメニューの表示色が間違っていたバ
+            グを修正しました。</P>
 
-<P>���ޤǤ��ε�ǽ�˵��դ��ʤ��ä��Τ���ʬ�Ǥ��Ի׵ĤǤ�����SDL_ttf ��
-TTF_SetFontStyle �ؿ���Ȥ�������(bold)ɽ�����б��Ǥ��ޤ�������������
-�ޤǻ��Ѥ��Ƥ����ե���Ȥ��������ˤʤä��餫�ʤ긫���餯�ʤäƤ��ޤ���
-���������������ε�ǽ�ϡ��ե���ȥե�����ξ���Ȥ�̵�ط��� SDL_ttf ��
-�ȼ��˼¸����Ƥ��뤻�������ä��礭�ʥ������Υե���ȤǤĤ֤줬��Ω����
-�������Τ��ᡢ�����Ϥ��ޤ�����̵���ˤ��Ƥ���ޤ�����������ϡ�
-ONScripterLabel::drawGlyph �ؿ���� #if 0 �򳰤��Ƥ����������ޤ����ʤ�
-�������ˤ���ȡ�embedded bitmap ��ޤ� TrueType font �ˤ����ơ�
-embedded bitmap ����Ѥ��륵������ʸ�������褷�褦�Ȥ���������褦��
-�ʤ�ޤ����������ˤ��ʤ��������ޤ��󤬡�ɸ��� SDL_ttf �Ǥ� embedded
-bitmap ������������Ǥ��ʤ��Τǡ����⤽��桼���������������ä��ե���
-�Ȥ���Ѥ��Ƥ���ȤϹͤ���줺�³��Ϥʤ��Ȼפ��ޤ���</P>
+          <P>今までこの機能に気付かなかったのが自分でも不思議ですが、SDL_ttf の
+            TTF_SetFontStyle 関数を使うと太字(bold)表示に対応できます。しかし、今
+            まで使用していたフォントが、太字になったらかなり見ずらくなってしまいま
+            した。この太字の機能は、フォントファイルの情報とは無関係に SDL_ttf が
+            独自に実現しているせいか、特に大きなサイズのフォントでつぶれが目立ちま
+            す。そのため、実装はしましたが無効にしてあります。試したい方は、
+            ONScripterLabel::drawGlyph 関数中の #if 0 を外してください。また、なぜ
+            か太字にすると、embedded bitmap を含む TrueType font において、
+            embedded bitmap を使用するサイズで文字を描画しようとすると落ちるように
+            なりました。太字にしなければ落ちませんが、標準の SDL_ttf では embedded
+            bitmap を正しく描画できないので、そもそもユーザの方がこういったフォン
+            トを使用しているとは考えられず実害はないと思います。</P>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>2��14��</h3>
+        <div class="diary-day">
+          <h3>2月14日</h3>
 
-<P>tokuhirom ���󤫤�Υѥå��򻲹ͤˡ�CD-ROM �ɥ饤�֤�ʣ��������ˡ�
-���Ѥ���ɥ饤�֤���ꤹ�륪�ץ���� --cdnumber ���ɲä��ޤ�����</P>
+          <P>tokuhirom さんからのパッチを参考に、CD-ROM ドライブが複数ある場合に、
+            使用するドライブを指定するオプション --cdnumber を追加しました。</P>
 
-<P>tokuhirom ����ˤ���Ŧ�����������Ų줵�󤬸�������Ƥ��� Debian
-Woody �ѤΥѥå������ؤ� apt line �򹹿����ޤ�����</P>
+          <P>tokuhirom さんにご指摘いただき、古賀さんが公開されている Debian
+            Woody 用のパッケージへの apt line を更新しました。</P>
 
-<P>tokuhirom ���󤫤�Υѥå��������졢�����ܡ��ɥ��硼�ȥ��åȤˤ�
-���ơ���������ξ岼��ư�� k �� j �����ǤǤ���褦�ˤ��ޤ�����vi �Υ���
-�Х���ɤǤ���</P>
+          <P>tokuhirom さんからのパッチを取り入れ、キーボードショートカットにお
+            いて、カーソルの上下移動を k と j キーでできるようにしました。vi のキー
+            バインドです。</P>
 
-<P>tattsuu ���󤫤�ΥХ����򸵤ˡ�ogg vorbis �ե������ wave �ե���
-�ޥåȤ����椹��Ȥ��ˡ��إå��Ρ֥���ץ뤢����Υӥåȿ��פλ��꤬��
-��äƤ����Х��������ޤ�����</P>
+          <P>tattsuu さんからのバグ報告を元に、ogg vorbis ファイルを wave フォー
+            マットに復号するときに、ヘッダの「サンプルあたりのビット数」の指定が間
+            違っていたバグを修正しました。</P>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>1��31��</h3>
+        <div class="diary-day">
+          <h3>1月31日</h3>
 
-<P>ld, tal, humanorder ���ޥ�ɤˤ����ơ����ֻ��꤬�����ʾ��Ǥ����
-�ʤ����ͤ��б����ޤ�����</P>
+          <P>ld, tal, humanorder コマンドにおいて、位置指定が不正な場合でも落ち
+            ない仕様に対応しました。</P>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>1��30��</h3>
+        <div class="diary-day">
+          <h3>1月30日</h3>
 
-<P>tmkk���󤫤�� patch �������졢MacOS X ��� SDL-1.2.8 �Ķ��ˤ���
-�ơ�SDL_WM_SetCaption�ؿ��˻����ѹ������ä����ᡢ������ UTF-8 ��ʸ����
-���Ϥ��褦�˽������ޤ��������δĶ��˳����������ϡ�����ѥ�����˥��
-���ץ���� -liconv ����ꤷ�Ƥ���������</P>
+          <P>tmkkさんからの patch を取り入れ、MacOS X 上の SDL-1.2.8 環境におい
+            て、SDL_WM_SetCaption関数に仕様変更があったため、引数に UTF-8 の文字列
+            を渡すように修正しました。この環境に該当する方は、コンパイル時にリンカ
+            オプション -liconv を指定してください。</P>
 
-<P>tmkk���󤫤�� patch �������졢libmad ����Ѥ��� MP3 ����������
-�ˡ������Υ������������������ޤ�����MadFixedToUshort�ؿ��˥���å�
-�ν������ɲä��ޤ�����</P>
+          <P>tmkkさんからの patch を取り入れ、libmad を使用して MP3 を再生する際
+            に、時々ノイズが乗る問題を修正しました。MadFixedToUshort関数にクリップ
+            の処理を追加しました。</P>
 
-<P>FORCE_1BYTE_CHAR ������ˡ�ʸ�κǸ��ñ����Ф��ƥ�ɥ�åפ���ǽ
-���Ƥ��ʤ��ä��Х��������ޤ�����</P>
+          <P>FORCE_1BYTE_CHAR 設定時に、文の最後の単語に対してワードラップが機能
+            していなかったバグを修正しました。</P>
 
-<P>����������ˡ�����åԥ󥰽�����ְ㤨�Ƥ������ᡢ�����ΰ���������
-�����褵��ʤ����Ȥ�����Х��������ޤ�����</P>
+          <P>効果描画時に、クリッピング処理を間違えていたため、画像の一部が効果
+            中描画されないことがあるバグを修正しました。</P>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>1��27��</h3>
+        <div class="diary-day">
+          <h3>1月27日</h3>
 
-<P>ScriptParser::loadStr( FILE *fp, char **str ) �ǥե����뤫��ʸ����
-���ɤ߹���ݤˡ������ EOF �ˤʤ��̵�¥롼�פ˴٤�Х��������ޤ�����
-�оݥե����뤬�Ť��ץ�����फ�������ʪ�Ǿ���­��ʤ����˵������
-���Ǥ�����³�Ԥ���褦�ˤ��ޤ������ޤ������δؿ����������Хåե���
-���ݤ��Ƥ����Τǡ��Хåե��򥯥饹�ѿ��˻�������褦�ˤ��ޤ�����</P>
+          <P>ScriptParser::loadStr( FILE *fp, char **str ) でファイルから文字列
+            を読み込む際に、途中で EOF になると無限ループに陥るバグを修正しました。
+            対象ファイルが古いプログラムからの生成物で情報が足りない場合に起こるよ
+            うですが、続行するようにしました。また、この関数内で毎回一時バッファを
+            確保していたので、バッファをクラス変数に持たせるようにしました。</P>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>1��26��</h3>
+        <div class="diary-day">
+          <h3>1月26日</h3>
 
-<P>�����ե�����Υ���������ɤ߹�����ʬ�򶯲����ޤ��������˥���꤬��
-���ʾ��ˡ�������ʬ���ɤ����Ф��ƥե����뼫�Τ��ɤ߹���褦�ˤ��ޤ�����
-</P>
+          <P>画像ファイルのタグ指定の読み込み部分を強化しました。アニメ指定が不
+            正な場合に、その部分は読み飛ばしてファイル自体は読み込むようにしました。
+          </P>
 
-<P>sin, cos, tan ���ޥ�ɤ�������ޤ�����</P>
+          <P>sin, cos, tan コマンドを実装しました。</P>
 
-<P>�����֥ե������ɤ߹��߸�ˡ���ƥ����ȥ⡼�ɤǺƳ�����褦�˽�����
-�ޤ������ɤ߹��߸�ˡ��ְ�äƥƥ����ȥ�����ɥ���ɽ������뤳�Ȥ�����
-�Х��ؤ��н�Ǥ���</P>
+          <P>セーブファイル読み込み後に、非テキストモードで再開するように修正し
+            ました。読み込み後に、間違ってテキストウィンドウが表示されることがある
+            バグへの対処です。</P>
 
-<P>chendo����� patch �򻲹ͤˡ�FORCE_1BYTE_CHAR ������ˡ���ɥ��
-�פ����褦�ˤ��ޤ������Ĥޤꡢñ�������ǹԤ�ޤ������ˡ�����ñ��
-�����ǲ��Ԥ����褦�ˤʤ�ޤ���</P>
+          <P>chendoさんの patch を参考に、FORCE_1BYTE_CHAR 設定時に、ワードラッ
+            プされるようにしました。つまり、単語の途中で行をまたぐ場合に、その単語
+            の前で改行されるようになります。</P>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>1��15��</h3>
+        <div class="diary-day">
+          <h3>1月15日</h3>
 
-<P>����ѥ������ENABLE_1BYTE_CHAR�����ꤵ�졢���ĥ�����ץ����`(back
-quote)����Ѥ� 1byte ʸ����Ǥ��뤳�Ȥ���ꤷ�Ƥ�����ˡ�ʸ��������
-���ĤǤ����ľ���Ⱦ�ѥ��ڡ�������������뤳�Ȥ�������֤������ޤ�����
-�Ѹ�Υ٥�������Ȥ����Ͱʳ��ˤϱƶ���̵�������ΤϤ��Ǥ�����ʸ������
-�����򤫤ʤ��ѹ������Τǡ������Ѥǥ���Х����Ƥ����ǽ���⤢��ޤ�����
-�ˤ����꤬����ޤ����餴��𤯤�������</P>
+          <P>コンパイル時にENABLE_1BYTE_CHARが指定され、かつスクリプト中で`(back
+            quote)を使用し 1byte 文字列であることを指定している場合に、文字数が奇
+            数個であると直後に半角スペースが挿入されることがある状態を修正しました。
+            英語ノベルを作ろうという人以外には影響の無い修正のはずですが、文字描画
+            処理をかなり変更したので、副作用でエンバグしている可能性もあります。な
+            にか問題がありましたらご報告ください。</P>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>1��11��</h3>
+        <div class="diary-day">
+          <h3>1月11日</h3>
 
-<P>chendo ���󤫤�ΥХ����˴�Ť��������֥ǡ����ɤ߹��߻��� wave �ե�
-���뤬�Ĥ�äѤʤ��ˤʤ��礬����Х�������</P>
+          <P>chendo さんからのバグ報告に基づき、セーブデータ読み込み時に wave ファ
+            イルが鳴りっぱなしになる場合があるバグを修正。</P>
 
-<P>for �롼����� break ���鼡�� next �ޤǤ˸����륳�ޥ�ɤ��ѿ�����
-�����Ф��ݤˡ��ѿ���ɾ�����Ƥ����Х��������㤨�� mov ?1[%1], 1 �Ȥ�
-�����ޥ�ɤ��ɤ����Ф��ݤˡ�?1[%1]�Ȥ����ѿ���ɾ������ȡ����褳�Υ���
-��ɤ��¹Ԥ���ʤ����Ȥ����ꤷ�� %1 ��������ϰϳ����ͤ����äƤ������
-�˥��顼�ˤʤ�ޤ��������ץ˥󥰥������Ť�˿�����������뤳�Ȥ������
-������</P>
+          <P>for ループ中の break から次の next までに現われるコマンドや変数を読
+            み飛ばす際に、変数を評価していたバグを修正。例えば mov ?1[%1], 1 とい
+            うコマンドを読み飛ばす際に、?1[%1]という変数を評価すると、本来このコマ
+            ンドが実行されないことを想定して %1 に配列の範囲外の値が入っていた場合
+            にエラーになります。オープニングロゴが重い某ゲームで落ちることがありま
+            した。</P>
 
-<P>Hayashi �����ꡢTru64 UNIX 5.1B(pk4), Compaq C++ V6.5-042 �ˤ���
-�륳��ѥ��륨�顼���н�ˡ����𤷤Ƥ����������������ޤ�����</P>
+          <P>Hayashi さんより、Tru64 UNIX 5.1B(pk4), Compaq C++ V6.5-042 におけ
+            るコンパイルエラーと対処法を報告していただき、修正しました。</P>
 
-</div>
+        </div>
 
-</div> <!-- diary -->
-</div> <!-- diary-container -->
+      </div> <!-- diary -->
+    </div> <!-- diary-container -->
 
 
-<div id="footer">
-Copyright (c) 1998-2006 Studio O.G.A. All rights reserved.
-</div> <!-- footer -->
+    <div id="footer">
+      Copyright (c) 1998-2006 Studio O.G.A. All rights reserved.
+    </div> <!-- footer -->
 
-</div> <!-- body -->
+  </div> <!-- body -->
 
 </body>
+
 </html>

@@ -1,250 +1,252 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <HTML lang="ja">
+
 <HEAD>
-<META http-equiv="Content-Type" content="text/html; charset=EUC-JP">
-<META http-equiv="Content-Style-Type" content="text/css">
-<META name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-<TITLE> ONScripter ��ȯ���� </TITLE>
-<LINK rel="stylesheet" type="text/css" href="/ogapee.css">
+  <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <META http-equiv="Content-Style-Type" content="text/css">
+  <META name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <TITLE> ONScripter 開発日誌 </TITLE>
+  <LINK rel="stylesheet" type="text/css" href="/ogapee.css">
 </HEAD>
 
 <body>
 
-<div id="body">
+  <div id="body">
 
-<div id="header">
-<h1>ONScripter ��ȯ����</h1>
+    <div id="header">
+      <h1>ONScripter 開発日誌</h1>
 
-Since: Feb. 6, 2002<br>
-Last updated: Mar. 21, 2002
-</div> <!-- header -->
+      Since: Feb. 6, 2002<br>
+      Last updated: Mar. 21, 2002
+    </div> <!-- header -->
 
-<div id="toc-container">
+    <div id="toc-container">
 
-<h3>���γ�ȯ����</h3>
+      <h3>過去の開発日誌</h3>
 
-<div id="toc">
+      <div id="toc">
 
-</div> <!-- toc -->
-</div> <!-- toc-container -->
+      </div> <!-- toc -->
+    </div> <!-- toc-container -->
 
 
-<div id="diary-container">
-<div id="diary">
+    <div id="diary-container">
+      <div id="diary">
 
-<h2>2001ǯ12��</h2>
-  
-<div class="diary-day">
-<h3>12��30��</h3>
+        <h2>2001年12月</h2>
 
-<p>savename, savenumber, rmenu, menusetwindow �������</p>
+        <div class="diary-day">
+          <h3>12月30日</h3>
 
-<p>������å���˥塼�ȥ����֤�ɽ����ʬ�������</p>
+          <p>savename, savenumber, rmenu, menusetwindow を実装。</p>
 
-<p>���ȡĤ� UTF8 ��̵���ʡ��ˤ⤷���� Qt ���Ѵ��Ǥ��ʤ�����ɽ�������
-���Τ�drawLine ��ɽ������褦�ˤ�����</p>
+          <p>右クリックメニューとセーブの表示部分を実装。</p>
 
-<p>globalon ���������global.sav �� globalon �����ɤ߹��ߤȡ���λ���ν�
-�Ф��������</p>
+          <p>─と…が UTF8 に無い（？）もしくは Qt で変換できないため表示されな
+            いのを、drawLine で表示するようにした。</p>
 
-<p>�����ʳ��Ԥ���Ԥ�ʤ��⡼�ɤˤ��ơ�Ĺ�����ѵ׻���ʤ�����
-qnscripter �ϰ��ڥ꡼�����Ƥ��ʤ��Τˡ�XFree86 �γ��ݥ��꤬ 3MB/s ��
-�餤��®�٤������Ƥ��äƤ��롣���Ф餯���ơ��¥���⥹��åפ�������
-���Ԥ����Ƥ��ޤä��Τǡ����ǡ�����������</p>
+          <p>globalon を実装し、global.sav の globalon 時の読み込みと、終了時の書
+            出しを実装。</p>
 
-</div>
+          <p>選択肢以外待ちを行わないモードにして、長時間耐久試験。なぜか、
+            qnscripter は一切リークしていないのに、XFree86 の確保メモリが 3MB/s く
+            らいの速度で増えていっている。しばらくして、実メモリもスワップも全部食
+            い尽くしてしまったので、中断。原因不明。</p>
 
-<div class="diary-day">
-<h3>12��24��</h3>
+        </div>
 
-<p>ld, cl ��Ʃ�� a �Τ߼����� alphaBlend �����������ǡ��٤���ΤΥ�
-�����ե����ɤ������褦�ˤʤꡢΩ������Ʃ���ɤ߹��ߤˤ��б����Ĥ��Ǥˡ�
-text window �ο�̣�򲼤�������⡢QBrush ��Ȥ���ˡ���� alphaBlend ��
-�ѹ�������ǡ��ۤܰ��̤�Ǹ�ޤ�ư���ΤǤϤʤ��Τ���������</p>
+        <div class="diary-day">
+          <h3>12月24日</h3>
 
-</div>
+          <p>ld, cl の透過 a のみ実装。 alphaBlend を実装。これで、遅いもののク
+            ロスフェードが出来るようになり、立ち絵の透過読み込みにも対応。ついでに、
+            text window の色味を下げる処理も、QBrush を使う方法から alphaBlend に
+            変更。これで、ほぼ一通り最後まで動くのではないのだろうか。</p>
 
-<div class="diary-day">
-<h3>12��23��</h3>
+        </div>
 
-<p>select �����������ޥ����Ԥ��ϡ�btnwait ��Ʊ��������</p>
+        <div class="diary-day">
+          <h3>12月23日</h3>
 
-</div>
+          <p>select を全実装。マウス待ちは、btnwait と同じ機構。</p>
 
-<div class="diary-day">
-<h3>12��19��</h3>
+        </div>
 
-<p>����������Τϡ������� %4020 �Ȥ����ѿ��˻ȤäƤ���������ä���
-1000 �ޤǤ���ʤ��Ρ�����10000 �˳�ĥ���롣</p>
+        <div class="diary-day">
+          <h3>12月19日</h3>
 
-<p>cmp �������</p>
+          <p>途中で落ちるのは、内部で %4020 とかを変数に使っていたからだった。
+            1000 までじゃないの？？？10000 に拡張する。</p>
 
-<p>woody only �Ķ���ư������apt-get install libqt3-mt-dev �Ȥ��ơ�
-setenv QTDIR /usr/share/qt �Ȥ��ơ�����˥���ѥ�����¹ԤǤ�����</p>
+          <p>cmp を実装。</p>
 
-<p>skip �ǡ�label ��ޤ��������θ���Ƥ��ʤ��ä��Τ�����</p>
+          <p>woody only 環境で動かす。apt-get install libqt3-mt-dev として、
+            setenv QTDIR /usr/share/qt として、正常にコンパイル＆実行できた。</p>
 
-</div>
+          <p>skip で、label をまたぐ場合を考慮していなかったのを修正。</p>
 
-<div class="diary-day">
-<h3>12��20��</h3>
+        </div>
 
-<p>select ��Ⱦʬ������ʣ���Ԥ���������ᤷ��SelectLink ����Ȥ����ޤǡˡ�</p>
+        <div class="diary-day">
+          <h3>12月20日</h3>
 
-</div>
+          <p>select を半分実装（複数行を正しく解釈し、SelectLink を作るところまで）。</p>
 
-<div class="diary-day">
-<h3>12��18��</h3>
+        </div>
 
-<p>effectblank �������</p>
+        <div class="diary-day">
+          <h3>12月18日</h3>
 
-<p>Shutter effect ��������ԥ�����ε��٤��Ѳ������ʤ� effect �ϡ���ñ
-�˼����Ǥ��롣����ϡ��Ǥ�褯�Ȥ��� cross fade ��ɤ����뤫��</p>
+          <p>effectblank を実装。</p>
 
-</div>
+          <p>Shutter effect を実装。ピクセルの輝度を変化させない effect は、簡単
+            に実装できる。問題は、最もよく使われる cross fade をどうするか。</p>
 
-<div class="diary-day">
-<h3>12��17��</h3>
+        </div>
 
-<p>gosub �� return ��������ץ��������Ρ�����ޤǰ���Ԥ��褦�ˤʤä���
-</p>
+        <div class="diary-day">
+          <h3>12月17日</h3>
 
-<p>mov �� br �� '\\' ����������顢�����ץ˥󥰤η빽��ޤǿʤ�褦��
-�ʤä���������ʸ��ɽ���δ��Ф��������������ڡ������ѡ�</p>
+          <p>gosub と return を実装。プロローグの、途中まで一応行くようになった。
+          </p>
 
-<p>inc, skip, mov, goto �����������¾��bug fix��</p>
+          <p>mov と br と '\\' を実装したら、オープニングの結構先まで進むように
+            なった。だが、文字表示の感覚がおかしい。スペースも変？</p>
 
-<p>�����ȥ��ۤ���������Υ����ץ˥󥰤� OK��</p>
+          <p>inc, skip, mov, goto を実装。その他、bug fix。</p>
 
-<p>setwindow �����������ǡ��ե���Ȥ�ɽ���������ɤ�����������ü����
-��뤳�Ȥ����롣</p>
+          <p>タイトルを越え、その先のオープニングも OK。</p>
 
-</div>
+          <p>setwindow を実装。これで、フォントの表示は大体良し。ただ、右端で切
+            れることがある。</p>
 
-<div class="diary-day">
-<h3>12��16��</h3>
+        </div>
 
-<p>ʸ��ɽ�����������ܸ��Фä��ꡣtextCommand ��Ⱦʬ���餤������</p>
+        <div class="diary-day">
+          <h3>12月16日</h3>
 
-<p>if, notif ������ȼ����string_buffer �����椫��Ǥ⥳�ޥ�ɲ��Ǥ�
-��褦�ˤ����ޤ����ƤΥ��ޥ�ɼ¹Ԥ� executeLabel ����Ԥ����Ȥˤ��롣
-����˷빽���֤����롣</p>
+          <p>文字表示実装。日本語もばっちり。textCommand を半分くらい実装。</p>
 
-<p>������������������λ����ǤΥХ��������Ф����빽���ä���</p>
+          <p>if, notif 実装に伴い、string_buffer の途中からでもコマンド解釈でき
+            るようにし、また全てのコマンド実行を executeLabel から行うことにする。
+            これに結構時間を取られる。</p>
 
-<p>�ǽ�β��̤��Ф�Ȥ����ޤǹԤä�����gosub ��������Ƥ��ʤ��ΤǤ���
-�ޤǡ�</p>
+          <p>ソースを印刷し、この時点でのバグを洗い出し。結構あった。</p>
 
-</div>
+          <p>最初の画面が出るところまで行ったが。gosub を実装していないのでここ
+            まで。</p>
 
-<div class="diary-day">
-<h3>12��12��</h3>
+        </div>
 
-<p>qpixmap ���Ф��� qpainter �� bitBlt ��Ȥ��С�����ɽ����ʸ��ɽ����
-���Ʋ�褹�롣�ʤ�Ȥ���ʲ򤬤���Ȥϡ������� Qt���ǡ�ľ�����顢��Ū
-�Ȥ������ѥե����ޥ󥹥��åס����������� 60msec �ȸ��äƤ����Τ���
-0msec���Ĥޤ� Qt �� event loop �� cache ǽ�Ϥ����¤˻Ȥ��ˤϤ�������
-�Ȥ������Ȥ餷���������餷����</p>
+        <div class="diary-day">
+          <h3>12月12日</h3>
 
-</div>
+          <p>qpixmap に対して qpainter と bitBlt を使えば、画像表示も文字表示も
+            全て解決する。なんとこんな解があるとは。すげー Qt。で、直したら、劇的
+            とも言えるパフォーマンスアップ。何しろ前回 60msec と言っていたのが、
+            0msec。つまり Qt の event loop と cache 能力を最大限に使うにはこうしろ
+            ということらしい。素晴らしい。</p>
 
-<div class="diary-day">
-<h3>12��11��</h3>
+        </div>
 
-<p>btnwait �� reset ���������ϡ�ʸ��ɽ���������� bbndemo ��������
-ư����</p>
+        <div class="diary-day">
+          <h3>12月11日</h3>
 
-</div>
+          <p>btnwait と reset を実装。後は、文字表示を入れれば bbndemo が完全に
+            動く。</p>
 
-<div class="diary-day">
-<h3>12��10��</h3>
+        </div>
 
-<p>ɽ���Ѥβ����ǡ������ȼ�������ǻ�������ʬ copy ����̸��̤ʤɤ�����
-�����Ǽ��������Ǹ�� widget �˥��ԡ�����褦�ˤ��롣���Τ� X11 �� 
-waring ��Ǥʤ��ʤä���</p>
+        <div class="diary-day">
+          <h3>12月10日</h3>
 
-<p>̵����� setWFlags( WRepaintNoErase ) �����ꤷ�ơ������褷�ʤ��� 
-draw ����褦�ˤ��Ƥ�������180msec ���餤�����롣QLabel ��Ѿ����ơ���
-���� QLabel ��Ѿ����� class ���ä��顢���Τ� 60msec ���餤�Ǥ��ʤ�
-���ࡼ���ˤʤä������Ρ�</p>
+          <p>表示用の画像データを独自の配列で持ち、部分 copy や画面効果などは全部
+            自前で実装し、最後に widget にコピーするようにする。何故か X11 の
+            waring もでなくなった。</p>
 
-<p>��®���Τ��ᡢ�����ǡ����� ButtonLink ��ľ�ܻ������롣</p>
+          <p>無理やり setWFlags( WRepaintNoErase ) を設定して、再描画しないで
+            draw するようにしていたが、180msec くらいかかる。QLabel を継承して、独
+            自に QLabel を継承して class を作ったら、何故か 60msec くらいでかなり
+            スムーズになった。何故？</p>
 
-</div>
+          <p>高速化のため、画像データを ButtonLink に直接持たせる。</p>
 
-<div class="diary-day">
-<h3>12��8��</h3>
+        </div>
 
-<p>effect handler ����̤������DelayedEffectInfo �ǡ�¨�¹ԡ��ٱ�¹�
-���б������롣</p>
+        <div class="diary-day">
+          <h3>12月8日</h3>
 
-<p>readStr �ǡ�alias ���褹��褦�ˤ��롣</p>
+          <p>effect handler を一通り実装。DelayedEffectInfo で、即実行・遅延実行
+            に対応させる。</p>
 
-<p>"effect", "arc", "bg", "btndef", "btn" ����ư������٤˼�������
-ǽ (btn) �������������Qt �ǲ��̤ΰ��� windows ���̤β�����ĥ���դ���
-��ˡ��ʬ����ʤ����ᡢɽ���Ϥ��������������̥��ԡ��ˤʤäƤ���ˡ�</p>
+          <p>readStr で、alias を解決するようにする。</p>
 
-<p>����˥ܥ���ξ���̲᤹���٤ˡ�</p>
-<pre>
+          <p>"effect", "arc", "bg", "btndef", "btn" を一応動作する程度に実装。機
+            能 (btn) を実装。ただ、Qt で画面の一部 windows に別の画像を張り付ける
+            方法が分からないため、表示はおかしい（全画面コピーになっている）。</p>
+
+          <p>さらにボタンの上を通過する度に、</p>
+          <pre>
 X Error: 204 204
   Major opcode:  156
 X Error: BadMatch (invalid parameter attributes) 8
   Major opcode:  156
 </pre>
-<p class="noindent">���Ф롣</p>
+          <p class="noindent">が出る。</p>
 
-<p>����ǡ�NScripter �� btndemo ��Ⱦʬư����</p>
+          <p>これで、NScripter の btndemo が半分動く。</p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>12��7��</h3>
+        <div class="diary-day">
+          <h3>12月7日</h3>
 
-<p>ScriptParser ��񤭻Ϥ�롣����� script �������ɤ߹��ߡ��ƥ�٥�
-�� index �����������ԤŤ� parse ���ʤ��顢lookup table �����ǥ��ޥ�
-�ɤ��б����� class method �� dispatch ������Ȥߤ�񤯡�</p>
+          <p>ScriptParser を書き始める。メモリに script を全部読み込み、各ラベル
+            の index を作成し、一行づつ parse しながら、lookup table 形式でコマン
+            ドに対応する class method を dispatch する仕組みを書く。</p>
 
-<p>numaliasCommand �� straliasCommand ����Ƭ����� link list �Ȥ��Ƽ�
-����</p>
+          <p>numaliasCommand と straliasCommand を先頭固定の link list として実
+            装。</p>
 
-<p>QScripter_impl �� ScriptParser ����Ѿ�����string_buffer �ʤɤ�ͭ
-�Ǥ���褦�ˤ��롣���ޥ�ɤϡ��ޤ� ScriptParser �� parseLine �ǲ��Ϥ���
-���ϤǤ����餽�������ǽ��������ϤǤ��ʤ����ʲ���ɽ���ϡˤ� 
-QScript_impl �� parseLine �ǲ��Ϥ��ƽ�������褦�ˤ��롣</p>
+          <p>QScripter_impl を ScriptParser から継承し、string_buffer などを共有
+            できるようにする。コマンドは、まず ScriptParser の parseLine で解析し、
+            解析できたらその内部で処理、解析できない場合（画面表示系）は
+            QScript_impl の parseLine で解析して処理するようにする。</p>
 
-<p>gosub ���б����ơ���٥�ξ��֤���ü����� link list �Ǵ������롣��
-�Υ�٥�˰ܤ���ˤϡ����ʤ餺 event loop ���ͳ����褦�ˤ���ͽ�ꡣ
-</p>
+          <p>gosub に対応して、ラベルの状態を先端固定の link list で管理する。別
+            のラベルに移る時には、かならず event loop を経由するようにする予定。
+          </p>
 
-</div>
+        </div>
 
-<div class="diary-day">
-<h3>12��5��</h3>
+        <div class="diary-day">
+          <h3>12月5日</h3>
 
-<p>��ȯ���ϡ�</p>
+          <p>開発開始。</p>
 
-<p>sar �����Υե�������ɤ߹��� SarReader ��񤯡����̥ե��������Ȥ�
-���Ƥ����顢�ե����ޥåȤ�ʬ���äƤ��ޤä������̤������äƤ��ʤ��ä���
-�Ǵ�ñ�������Ǥ������Ĥ��Ǥˡ�����ץ륢�ץꥱ�������� arc.sar ����
-�Ȥ�����Ÿ������ sardec ��񤯡�</p>
+          <p>sar 形式のファイルを読み込む SarReader を書く。圧縮ファイルの中身を
+            見ていたら、フォーマットが分かってしまった。圧縮がかかっていなかったの
+            で簡単に復元できた。ついでに、サンプルアプリケーションで arc.sar の中
+            身を全部展開する sardec を書く。</p>
 
-<p>nscript.dat �ΰŹ沽�����⡢web ��õ���Ƥ�����ʬ���äƤ��ޤä�����
-�ꤢ����������ץȤ��������롣</p>
+          <p>nscript.dat の暗号化方式も、web を探していたら分かってしまった。と
+            りあえずスクリプトを復元する。</p>
 
-<p>Qt �� GUI ���롣�����˥塼�С������դ����طʤ������ɡ�ɽ���Ǥ�
-�뤳�Ȥ��ǧ��MouseEvent �� TimerEvent �Υϥ�ɥ�󥰤�񤯡�</p>
+          <p>Qt で GUI を作る。一応メニューバー等を付け、背景がロード・表示でき
+            ることを確認。MouseEvent と TimerEvent のハンドリングも書く。</p>
 
-</div>
+        </div>
 
-</div> <!-- diary -->
-</div> <!-- diary-container -->
+      </div> <!-- diary -->
+    </div> <!-- diary-container -->
 
 
-<div id="footer">
-Copyright (c) 1998-2006 Studio O.G.A. All rights reserved.
-</div> <!-- footer -->
+    <div id="footer">
+      Copyright (c) 1998-2006 Studio O.G.A. All rights reserved.
+    </div> <!-- footer -->
 
-</div> <!-- body -->
+  </div> <!-- body -->
 
 </body>
+
 </html>

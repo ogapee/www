@@ -1,459 +1,568 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html lang="ja">
+
 <HEAD>
-<META http-equiv="Content-Type" content="text/html; charset=EUC-JP">
-<META http-equiv="Content-Style-Type" content="text/css">
-<META name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-<TITLE>ONScripter on Android</TITLE>
-<LINK rel="stylesheet" type="text/css" href="/ogapee.css">
+  <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <META http-equiv="Content-Style-Type" content="text/css">
+  <META name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <TITLE>ONScripter on Android</TITLE>
+  <LINK rel="stylesheet" type="text/css" href="/ogapee.css">
 </HEAD>
 
 <body>
 
-<div id="body">
+  <div id="body">
 
-<div id="header">
-<H1>ONScripter on Android</H1>
+    <div id="header">
+      <H1>ONScripter on Android</H1>
 
-Since: May 30, 2010<br>
-<!--Last updated: Nov. 5, 2017 ENABLE_1BYTE_CHAR �� FORCE_1BYTE_CHAR ��ͭ���ˤ����Ѹ쥲�����ѥ��ץ�򹹿�<br>-->
-<!--Last updated: Jan. 15, 2022 ���ץ�򹹿�<br>-->
-<!--Last updated: Jul. 5, 2020 �ѥ����󣱡�Google Play �������������ɤ�����ˡ����<br>-->
-Last updated: Mar. 23, 2023 <a href="#sdk">SDK</a> �ȥ��ץ�򹹿�<br>
-<!--Last updated: Jan. 18, 2022 <A href="#sdk">SDK</a> �򹹿�<br>-->
-<!--Last updated: Aug. 17, 2014 Google Play �ǥ��ץ�����<br>-->
-<!--Last updated: Jun. 14, 2020 Android Studio �ǤΥ��ץ�κ�����ˡ ����<br>-->
-<!--Last updated: Aug. 12, 2013 ���Ѻ����㹹��<br>-->
-�������Ƥ�<A HREF="../onscripter_devel.2023.html">ONScripter ��ȯ����</A>�򻲾�<br>
-</div> <!-- header -->
+      Since: May 30, 2010<br>
+      <!--Last updated: Nov. 5, 2017 ENABLE_1BYTE_CHAR と FORCE_1BYTE_CHAR を有効にした英語ゲーム用アプリを更新<br>-->
+      <!--Last updated: Jan. 15, 2022 アプリを更新<br>-->
+      <!--Last updated: Jul. 5, 2020 パターン１：Google Play からダウンロードする方法を修正<br>-->
+      Last updated: Mar. 23, 2023 <a href="#sdk">SDK</a> とアプリを更新<br>
+      <!--Last updated: Jan. 18, 2022 <A href="#sdk">SDK</a> を更新<br>-->
+      <!--Last updated: Aug. 17, 2014 Google Play でアプリを公開<br>-->
+      <!--Last updated: Jun. 14, 2020 Android Studio でのアプリの作成方法 更新<br>-->
+      <!--Last updated: Aug. 12, 2013 使用作品例更新<br>-->
+      更新内容は<A HREF="../onscripter_devel.2023.html">ONScripter 開発日誌</A>を参照<br>
+    </div> <!-- header -->
 
-<div id="toc-container">
+    <div id="toc-container">
 
-<h3>�ܼ�</h3>
+      <h3>目次</h3>
 
-<div id="toc">
+      <div id="toc">
 
-<ul>
-  <li> <A HREF="#introduction">�Ϥ����</A>
-  <li> <A HREF="#usage">���ץ�λ�����ˡ</A>
-    <ul>
-      <li> <A HREF="#install">���󥹥ȡ�����ˡ</A>
-      <li> <A HREF="#gamedata">������ǡ�����������ˡ</A>
-      <li> <A HREF="#run">�¹���ˡ</A>
-      <li> <a href="#button">�ܥ���</a>
-      <li> <a href="#menu">��˥塼</a>
-      <li> <a href="#limitation">���¡����ջ���</a>
-    </ul>
-  <li> <A HREF="#develop">���ץ�γ�ȯ��ˡ</A>
-    <ul>
-      <li> <a href="#flow">��ȯ��ή��</a>
-      <li> <a href="#develop-as">Android Studio �ǤΥ��ץ�κ�����ˡ</a>
-      <!--<li> <s><a href="#develop-win">Windows �ǤΥ��ץ�κ�����ˡ</a></s>-->
-      <!--<li> <s><a href="#develop-linux">Linux �ǤΥ��ץ�κ�����ˡ</a></s>-->
-      <li> <a href="#sdk">�饤�֥��ȼ��եץ������켰 (SDK)</a>
-      <li> <a href="#distribution">������ǡ�����������ˡ</a>
-      <li> <a href="#customize">�������ޥ���</a>
-    </ul>
-  <li> <A HREF="#link">���</A>
-  <li> <A HREF="#tips">Tips</A>
-  <li> <A HREF="android_fb.html">�ե졼��Хåե���ľ�ܥ�����������Х��ʥ� (Obsolete)</A>
-  <li> <a href="../onscripter.html">���</a>
-</ul>
+        <ul>
+          <li> <A HREF="#introduction">はじめに</A>
+          <li> <A HREF="#usage">アプリの使用方法</A>
+            <ul>
+              <li> <A HREF="#install">インストール方法</A>
+              <li> <A HREF="#gamedata">ゲームデータの配置方法</A>
+              <li> <A HREF="#run">実行方法</A>
+              <li> <a href="#button">ボタン</a>
+              <li> <a href="#menu">メニュー</a>
+              <li> <a href="#limitation">制限・注意事項</a>
+            </ul>
+          <li> <A HREF="#develop">アプリの開発方法</A>
+            <ul>
+              <li> <a href="#flow">開発の流れ</a>
+              <li> <a href="#develop-as">Android Studio でのアプリの作成方法</a>
+                <!--<li> <s><a href="#develop-win">Windows でのアプリの作成方法</a></s>-->
+                <!--<li> <s><a href="#develop-linux">Linux でのアプリの作成方法</a></s>-->
+              <li> <a href="#sdk">ライブラリと周辺プログラム一式 (SDK)</a>
+              <li> <a href="#distribution">ゲームデータの配布方法</a>
+              <li> <a href="#customize">カスタマイズ</a>
+            </ul>
+          <li> <A HREF="#link">リンク</A>
+          <li> <A HREF="#tips">Tips</A>
+          <li> <A HREF="android_fb.html">フレームバッファに直接アクセスするバイナリ (Obsolete)</A>
+          <li> <a href="../onscripter.html">戻る</a>
+        </ul>
 
-</div> <!-- toc -->
-</div> <!-- toc-container -->
-
-
-<div id="main-container">
-<div id="main">
-
-<div class="content">
-<h2 id="introduction">�Ϥ����</h2>
-
-<p> <a href="http://www.android.com/">Android</a> 2.0 �ʾ��ư���Υ٥륲���२�󥸥� ONScripter on Android �Υ��ץ�(apk)�ȥ������켰�����ۤ��Ƥ��ޤ���</p>
-<p>Android 4.4 �ʹ� 5.0 ̤���Ǥϡ����ץ꤫�鳰��SD�����ɤ˽񤭹��ळ�Ȥ�����ޤ��󡣤��Τ��ᡢ�������Ȥ����ۤ��륢�ץ�� Android 4.4 �ʹ� 5.0 ̤���ε���ǻȤ����ϡ�������ǡ�������SD�����ɤǤϤʤ��������������SD�����ɡˤ����֤���褦�ˤ��Ƥ���������</p>
-
-<table><tr>
-<th style="width:4em">�оݸ���</th><th>���ץ�</th>
-</tr><tr>
-<td rowspan=4>���ܸ�</td><td><A HREF="https://play.google.com/store/apps/details?id=jp.ogapee.onscripter.release">ONScripter</A> 20230323 in Google Play</td>
-</tr><tr>
-<td><A HREF="ONScripter-20230323-debug.apk">ONScripter-20230323-debug.apk</A> ����侩��</td>
-</tr><tr>
-<td><A HREF="ONScripter-20190819-armeabi-debug.apk">ONScripter-20190819-armeabi-debug.apk</A> ��Android 2.0 �ʹߤ�ư��ġ���侩��</td>
-</tr><tr>
-<td>Android 4.4 �ʹ� 5.0 ̤���򤪻Ȥ������ϡ�����SD�����ɤǤϤʤ��������������SD�����ɡˤ˥�����ǡ��������֤��Ƥ���������</td>
-</tr><tr>
-<td>�Ѹ�</td><td><A HREF="ONScripter-20170816-1byte-debug.apk">ONScripter-20170816-1byte-debug.apk</A><br>����(ENABLE_1BYTE_CHAR and FORCE_1BYTE_CHAR are enabled)</td>
-</tr></table>
-
-<p>����1GB�Υ�����ǡ�����Ʊ������Google Play �Ǹ�����ǽ��ͭ����̵���ΥΥ٥륲���ॢ�ץ��������뤳�Ȥ��Ǥ��ޤ���</p>
-
-<p>���Ѥˤ����äƻ��Ϣ������ɬ�פϤ���ޤ��󡣤ޤ������ѼԤ��Ф��ƻ䤫�鲿���׵᤹�뤳�Ȥ⤢��ޤ��󡣼�ͳ�˻ȤäƤ���������</p>
-
-<h4>���Ѻ�����</h4>
-
-<table><tr>
-<th colspan=2>
-<s><a href="https://play.google.com/store/apps/details?id=net.yumemisou.bokuno">�ܤ��Τ��ߤ�ߤ餤 for Android</a></s></th>
-</tr><tr>
-<th><a href="bokuyume_20130615a_small.png"><img src="bokuyume_20130615a_small.png" alt="bokuyume" width=240></a></th>
-<th><a href="bokuyume_20130615b_small.png"><img src="bokuyume_20130615b_small.png" alt="bokuyume" width=240></a></th>
-</tr></table>
-
-<table><tr>
-<th colspan=2>
-<s><a href="https://play.google.com/store/apps/details?id=com.android48.dochiore_free">�ɤ��餫�����˹���Ƥ�����θ��ǡ�</a><br><a href="https://play.google.com/store/apps/details?id=com.android48.dochiore">�ɤ��餫�����˹���Ƥ���</a>��<a href="https://play.google.com/store/apps/category/CASUAL?feature=category-nav">�����奢�륲����</a>���̳�����</s></th>
-</tr><tr>
-<th><a href="dochiore_free_20130408a_small.png"><img src="dochiore_free_20130408a_small.png" alt="dochiore_free" width=240></a></th>
-<th><a href="dochiore_free_20130408b_small.png"><img src="dochiore_free_20130408b_small.png" alt="dochiore_free" width=240></a></th>
-</tr></table>
-
-<table><tr>
-<th colspan=2>
-<s><a href="https://play.google.com/store/apps/details?id=jp.cutlass.noesis02">NOeSIS02 -����-</a></s></th>
-</tr><tr>
-<th><a href="noesis02_20121026a_small.png"><img src="noesis02_20121026a_small.png" alt="NOeSIS02" width=240></a></th>
-<th><a href="noesis02_20121026b_small.png"><img src="noesis02_20121026b_small.png" alt="NOeSIS02" width=240></a></th>
-</tr></table>
-
-<table><tr>
-<th colspan=2>
-<a href="https://play.google.com/store/apps/details?id=jp.asaruspy.onscripter">������ȥ��ѥ�</a></th>
-</tr><tr>
-<th><a href="asaruspy_20121023a_small.png"><img src="asaruspy_20121023a_small.png" alt="asaruspy" width=240></a></th>
-<th><a href="asaruspy_20121023b_small.png"><img src="asaruspy_20121023b_small.png" alt="asaruspy" width=240></a></th>
-</tr></table>
-
-<table><tr>
-<th colspan=2>
-<a href="https://play.google.com/store/apps/details?id=jp.infinitys.pastmemory">Past Memory -���ȵ���- �θ���</a></th>
-</tr><tr>
-<th><a href="pastmemory_trial_20120706a_small.png"><img src="pastmemory_trial_20120706a_small.png" alt="Past Memory Trial" width=240></a></th>
-<th><a href="pastmemory_trial_20120706b_small.png"><img src="pastmemory_trial_20120706b_small.png" alt="Past Memory Trial" width=240></a></th>
-</tr></table>
-
-<table><tr>
-<th colspan=2>
-<a href="https://play.google.com/store/apps/details?id=com.hoshimi.kaeru3">������ȷ�������</a></th>
-</tr><tr>
-<th><a href="kaeru3_20120405a_small.png"><img src="kaeru3_20120405a_small.png" alt="kaeru3" width=240></a></th>
-<th><a href="kaeru3_20120405b_small.png"><img src="kaeru3_20120405b_small.png" alt="kaeru3" width=240></a></th>
-</tr></table>
-
-<table><tr>
-<th colspan=2>
-<s><a href="https://play.google.com/store/apps/details?id=com.hoshimi.kimikimer0">���ߤϥ����� ��ǯ����</a></s><br><a href="http://www.amazon.co.jp/dp/4047294845">����</a></th>
-</tr><tr>
-<th><a href="kimikime_20120212a_small.png"><img src="kimikime_20120212a_small.png" alt="kimikime" width=240></a></th>
-<th><a href="kimikime_20120212b_small.png"><img src="kimikime_20120212b_small.png" alt="kimikime" width=240></a></th>
-</tr></table>
-
-<table><tr>
-<th colspan=2>
-<s><a href="https://play.google.com/store/apps/details?id=jp.cutlass.noesis01">NOeSIS -�����Ǥ���������ʪ��-</a></s><br><a href="http://www.ganganonline.com/comic/noesis/">̡��ʥ���饤��Ϣ�ܡ�</a>��<a href="http://www.amazon.co.jp/gp/product/4757540086">̡��</a>��<a href="http://www.amazon.co.jp/dp/4061388711">����</a></th>
-</tr><tr>
-<th><a href="noesis01_20111030a_small.png"><img src="noesis01_20111030a_small.png" alt="NOeSIS01" width=240></a></th>
-<th><a href="noesis01_20111030b_small.png"><img src="noesis01_20111030b_small.png" alt="NOeSIS01" width=240></a></th>
-</tr></table>
-
-<table><tr>
-<th colspan=2>
-<a href="https://play.google.com/store/apps/details?id=jp.cutlass.noesis">NOeSIS �θ���</a></th>
-</tr><tr>
-<th><a href="noesis_20110825a_small.png"><img src="noesis_20110825a_small.png" alt="NOeSIS" width=240></a></th>
-<th><a href="noesis_20110825b_small.png"><img src="noesis_20110825b_small.png" alt="NOeSIS" width=240></a></th>
-</tr></table>
+      </div> <!-- toc -->
+    </div> <!-- toc-container -->
 
 
-</div> <!-- content -->
+    <div id="main-container">
+      <div id="main">
+
+        <div class="content">
+          <h2 id="introduction">はじめに</h2>
+
+          <p> <a href="http://www.android.com/">Android</a> 2.0 以上で動作するノベルゲームエンジン ONScripter on Android のアプリ(apk)とソース一式を配布しています。</p>
+          <p>Android 4.4 以降 5.0 未満では、アプリから外部SDカードに書き込むことが出来ません。そのため、当サイトで配布するアプリを Android 4.4 以降 5.0 未満の機種で使う場合は、ゲームデータを外部SDカードではなく内部メモリ（内部SDカード）に配置するようにしてください。</p>
+
+          <table>
+            <tr>
+              <th style="width:4em">対象言語</th>
+              <th>アプリ</th>
+            </tr>
+            <tr>
+              <td rowspan=4>日本語</td>
+              <td><A HREF="https://play.google.com/store/apps/details?id=jp.ogapee.onscripter.release">ONScripter</A> 20230323 in Google Play</td>
+            </tr>
+            <tr>
+              <td><A HREF="ONScripter-20230323-debug.apk">ONScripter-20230323-debug.apk</A> （非推奨）</td>
+            </tr>
+            <tr>
+              <td><A HREF="ONScripter-20190819-armeabi-debug.apk">ONScripter-20190819-armeabi-debug.apk</A> （Android 2.0 以降で動作可、非推奨）</td>
+            </tr>
+            <tr>
+              <td>Android 4.4 以降 5.0 未満をお使いの方は、外部SDカードではなく内部メモリ（内部SDカード）にゲームデータを配置してください。</td>
+            </tr>
+            <tr>
+              <td>英語</td>
+              <td><A HREF="ONScripter-20170816-1byte-debug.apk">ONScripter-20170816-1byte-debug.apk</A><br>　　(ENABLE_1BYTE_CHAR and FORCE_1BYTE_CHAR are enabled)</td>
+            </tr>
+          </table>
+
+          <p>最大1GBのゲームデータを同梱したGoogle Play で公開可能な有償・無償のノベルゲームアプリを作成することができます。</p>
+
+          <p>使用にあたって私に連絡する必要はありません。また、使用者に対して私から何か要求することもありません。自由に使ってください。</p>
+
+          <h4>使用作品例</h4>
+
+          <table>
+            <tr>
+              <th colspan=2>
+                <s><a href="https://play.google.com/store/apps/details?id=net.yumemisou.bokuno">ぼくのゆめみるみらい for Android</a></s>
+              </th>
+            </tr>
+            <tr>
+              <th><a href="bokuyume_20130615a_small.png"><img src="bokuyume_20130615a_small.png" alt="bokuyume" width=240></a></th>
+              <th><a href="bokuyume_20130615b_small.png"><img src="bokuyume_20130615b_small.png" alt="bokuyume" width=240></a></th>
+            </tr>
+          </table>
+
+          <table>
+            <tr>
+              <th colspan=2>
+                <s><a href="https://play.google.com/store/apps/details?id=com.android48.dochiore_free">どちらかが俺に惚れている～体験版～</a><br><a href="https://play.google.com/store/apps/details?id=com.android48.dochiore">どちらかが俺に惚れている</a>（<a href="https://play.google.com/store/apps/category/CASUAL?feature=category-nav">カジュアルゲーム</a>１位獲得）</s>
+              </th>
+            </tr>
+            <tr>
+              <th><a href="dochiore_free_20130408a_small.png"><img src="dochiore_free_20130408a_small.png" alt="dochiore_free" width=240></a></th>
+              <th><a href="dochiore_free_20130408b_small.png"><img src="dochiore_free_20130408b_small.png" alt="dochiore_free" width=240></a></th>
+            </tr>
+          </table>
+
+          <table>
+            <tr>
+              <th colspan=2>
+                <s><a href="https://play.google.com/store/apps/details?id=jp.cutlass.noesis02">NOeSIS02 -羽化-</a></s>
+              </th>
+            </tr>
+            <tr>
+              <th><a href="noesis02_20121026a_small.png"><img src="noesis02_20121026a_small.png" alt="NOeSIS02" width=240></a></th>
+              <th><a href="noesis02_20121026b_small.png"><img src="noesis02_20121026b_small.png" alt="NOeSIS02" width=240></a></th>
+            </tr>
+          </table>
+
+          <table>
+            <tr>
+              <th colspan=2>
+                <a href="https://play.google.com/store/apps/details?id=jp.asaruspy.onscripter">アサルとスパイ</a>
+              </th>
+            </tr>
+            <tr>
+              <th><a href="asaruspy_20121023a_small.png"><img src="asaruspy_20121023a_small.png" alt="asaruspy" width=240></a></th>
+              <th><a href="asaruspy_20121023b_small.png"><img src="asaruspy_20121023b_small.png" alt="asaruspy" width=240></a></th>
+            </tr>
+          </table>
+
+          <table>
+            <tr>
+              <th colspan=2>
+                <a href="https://play.google.com/store/apps/details?id=jp.infinitys.pastmemory">Past Memory -過去と記憶- 体験版</a>
+              </th>
+            </tr>
+            <tr>
+              <th><a href="pastmemory_trial_20120706a_small.png"><img src="pastmemory_trial_20120706a_small.png" alt="Past Memory Trial" width=240></a></th>
+              <th><a href="pastmemory_trial_20120706b_small.png"><img src="pastmemory_trial_20120706b_small.png" alt="Past Memory Trial" width=240></a></th>
+            </tr>
+          </table>
+
+          <table>
+            <tr>
+              <th colspan=2>
+                <a href="https://play.google.com/store/apps/details?id=com.hoshimi.kaeru3">かえると剣鬼　参</a>
+              </th>
+            </tr>
+            <tr>
+              <th><a href="kaeru3_20120405a_small.png"><img src="kaeru3_20120405a_small.png" alt="kaeru3" width=240></a></th>
+              <th><a href="kaeru3_20120405b_small.png"><img src="kaeru3_20120405b_small.png" alt="kaeru3" width=240></a></th>
+            </tr>
+          </table>
+
+          <table>
+            <tr>
+              <th colspan=2>
+                <s><a href="https://play.google.com/store/apps/details?id=com.hoshimi.kimikimer0">キミはキメラＲ 全年齢版</a></s><br><a href="http://www.amazon.co.jp/dp/4047294845">小説</a>
+              </th>
+            </tr>
+            <tr>
+              <th><a href="kimikime_20120212a_small.png"><img src="kimikime_20120212a_small.png" alt="kimikime" width=240></a></th>
+              <th><a href="kimikime_20120212b_small.png"><img src="kimikime_20120212b_small.png" alt="kimikime" width=240></a></th>
+            </tr>
+          </table>
+
+          <table>
+            <tr>
+              <th colspan=2>
+                <s><a href="https://play.google.com/store/apps/details?id=jp.cutlass.noesis01">NOeSIS -嘘を吐いた記憶の物語-</a></s><br><a href="http://www.ganganonline.com/comic/noesis/">漫画（オンライン連載）</a>・<a href="http://www.amazon.co.jp/gp/product/4757540086">漫画</a>・<a href="http://www.amazon.co.jp/dp/4061388711">小説</a>
+              </th>
+            </tr>
+            <tr>
+              <th><a href="noesis01_20111030a_small.png"><img src="noesis01_20111030a_small.png" alt="NOeSIS01" width=240></a></th>
+              <th><a href="noesis01_20111030b_small.png"><img src="noesis01_20111030b_small.png" alt="NOeSIS01" width=240></a></th>
+            </tr>
+          </table>
+
+          <table>
+            <tr>
+              <th colspan=2>
+                <a href="https://play.google.com/store/apps/details?id=jp.cutlass.noesis">NOeSIS 体験版</a>
+              </th>
+            </tr>
+            <tr>
+              <th><a href="noesis_20110825a_small.png"><img src="noesis_20110825a_small.png" alt="NOeSIS" width=240></a></th>
+              <th><a href="noesis_20110825b_small.png"><img src="noesis_20110825b_small.png" alt="NOeSIS" width=240></a></th>
+            </tr>
+          </table>
 
 
-<div class="content">
-<h2 id="usage">���ץ�λ�����ˡ</h2>
+        </div> <!-- content -->
 
-<p>��<a href="http://android-smart.com/2012/02/%e3%80%8conscripter-on-android%e3%80%8d%e3%81%a7%e3%83%91%e3%82%bd%e3%82%b3%e3%83%b3%e7%94%a8%e3%83%8e%e3%83%99%e3%83%ab%e3%82%b2%e3%83%bc%e3%83%a0%e3%82%92%e3%82%b9%e3%83%9e%e3%83%9b%e3%81%a7.html">��ONScripter on Android�פǥѥ������ѥΥ٥륲����򥹥ޥۤǥץ쥤</a>�פξҲ𵭻���ʬ����䤹���Ǥ����������Ȥ����ۤ��륢�ץ�Ǥϥ�����ǡ����������Ѱդ��Ƶ�ư�������򤷤ޤ���������Υ�����ǡ�����ư����<a href="#develop">���ѥ��ץ��ȯ</a>���뤳�Ȥ�Ǥ��ޤ���</p>
 
-<div class="sub-content">
-<h3 id="install">���󥹥ȡ�����ˡ</h3>
+        <div class="content">
+          <h2 id="usage">アプリの使用方法</h2>
 
-<p>Google Play �� ONScripter �򸡺����ƥ��󥹥ȡ��뤷�Ƥ���������</p>
+          <p>「<a href="http://android-smart.com/2012/02/%e3%80%8conscripter-on-android%e3%80%8d%e3%81%a7%e3%83%91%e3%82%bd%e3%82%b3%e3%83%b3%e7%94%a8%e3%83%8e%e3%83%99%e3%83%ab%e3%82%b2%e3%83%bc%e3%83%a0%e3%82%92%e3%82%b9%e3%83%9e%e3%83%9b%e3%81%a7.html">「ONScripter on Android」でパソコン用ノベルゲームをスマホでプレイ</a>」の紹介記事が分かりやすいです。当サイトで配布するアプリではゲームデータを別途用意して起動時に選択しますが、自作のゲームデータを起動する<a href="#develop">専用アプリを開発</a>することもできます。</p>
 
-<p>�������Ȥ����ۤ��Ƥ��륢�ץ�򥤥󥹥ȡ��뤹����ϡ������� Android ü���Ρ�����ע��֥������ƥ��ע��֥ǥХ��������פ��������󶡸��˥����å������졢Play ���ȥ��ʳ�����Υ��ץ�Υ��󥹥ȡ������Ĥ��Ƥ����ޤ��������ǡ�Android ü���Υ����֥֥饦���Ǥ��Υڡ����ΰ��־�Υ��ץ�򥯥�å���������������ɸ�˥��󥹥ȡ��뤷�Ƥ���������</p>
+          <div class="sub-content">
+            <h3 id="install">インストール方法</h3>
 
-<!--<p> ���γ����饤�󥹥ȡ��뤹����ϡ�USB �����֥�����Τ���³�����塢���ޥ�ɥץ���ץȤ���ʲ��Τ褦�˥��󥹥ȡ��뤷�Ƥ���������</p>
+            <p>Google Play で ONScripter を検索してインストールしてください。</p>
+
+            <p>当サイトで配布しているアプリをインストールする場合は、事前に Android 端末の「設定」→「セキュリティ」→「デバイス管理」の不明な提供元にチェックを入れ、Play ストア以外からのアプリのインストールを許可しておきます。次いで、Android 端末のウェブブラウザでこのページの一番上のアプリをクリックし、ダウンロード後にインストールしてください。</p>
+
+            <!--<p> 本体外からインストールする場合は、USB ケーブルで本体と接続した後、コマンドプロンプトから以下のようにインストールしてください。</p>
 
 <pre>
 adb install -r ONScripter-xxxxxxxx-debug.apk
 </pre>-->
 
-<p>���󥹥ȡ������������� ONScripter �Υ������� <img src="/ons.png" alt="ONS" width=32> ����˥塼���ɲä���ޤ���</p>
+            <p>インストールに成功すると ONScripter のアイコン <img src="/ons.png" alt="ONS" width=32> がメニューに追加されます。</p>
 
-<h4>������������</h4>
+            <h4>アクセス権限</h4>
 
-<p>ɬ�׺���¤ΰʲ��Υ����������¤��׵ᤷ�ޤ���</p>
+            <p>必要最低限の以下のアクセス権限を要求します。</p>
 
-<dl>
-<dt>�����ƥ�ġ��롧ü���Υ��꡼�פ�̵���ˤ���
-<dd>������¹����ü�������꡼�פ��ʤ��褦���׵ᤷ�ޤ���
-<dt>���ȥ졼����SD�����ɤΥ���ƥ�Ĥ���/�������
-<dd>������ǡ����䥻���֥ǡ�����SD�����ɤ˽񤭹��ि����׵ᤷ�ޤ���
-<dt>�ͥåȥ���̿��������ʥ��󥿡��ͥåȥ�������
-<dd>���ѥ��ץ��ȯ���ƽ��˥�����ǡ��������������ɤ������ɬ�פˤʤ�ޤ��ʤ���ʳ������Ӥˤϻ��Ѥ��ޤ���ˡ��������Ȥ����ۤ��륢�ץ�Ǥ��׵ᤷ�ޤ���
-<dt>�ͥåȥ���̿����ޡ����åȥ饤���󥹤γ�ǧ
-<dd>Google Play ���饲����ǡ��������������ɤ������ɬ�פˤʤ�ޤ����������Ȥ����ۤ��륢�ץ�Ǥ��׵ᤷ�ޤ���
-</dl>
+            <dl>
+              <dt>システムツール：端末のスリープを無効にする
+              <dd>ゲーム実行中に端末がスリープしないように要求します。
+              <dt>ストレージ：SDカードのコンテンツを修正/削除する
+              <dd>ゲームデータやセーブデータをSDカードに書き込むために要求します。
+              <dt>ネットワーク通信：完全なインターネットアクセス
+              <dd>専用アプリを開発して初回にゲームデータをダウンロードする場合に必要になります（それ以外の用途には使用しません）。当サイトで配布するアプリでは要求しません。
+              <dt>ネットワーク通信：マーケットライセンスの確認
+              <dd>Google Play からゲームデータをダウンロードする場合に必要になります。当サイトで配布するアプリでは要求しません。
+            </dl>
 
-</div> <!-- sub-content -->
+          </div> <!-- sub-content -->
 
-<div class="sub-content">
-<h3 id="gamedata">������ǡ�����������ˡ</h3>
+          <div class="sub-content">
+            <h3 id="gamedata">ゲームデータの配置方法</h3>
 
-<p>SD �����ɡ�Android 4.4 �ʹ� 5.0 ̤���ξ�����������ˤ�ľ���� ons �Ȥ���̾���Υǥ��쥯�ȥ������������β��˥����ऴ�Ȥ˥ǥ��쥯�ȥ�(̾����Ǥ��)��������ơ�����ˤ��β��˥�����ι����ե�����򥳥ԡ����Ƥ���������nscript.dat, arc.nsa �Σ��ĤϺ���ɬ�פˤʤ�Ȼפ��ޤ���</p>
+            <p>SD カード（Android 4.4 以降 5.0 未満の場合は内部メモリ）の直下に ons という名前のディレクトリを作成し、その下にゲームごとにディレクトリ(名前は任意)を作成して、さらにその下にゲームの構成ファイルをコピーしてください。nscript.dat, arc.nsa の２つは最低必要になると思います。</p>
 
-<pre>
-/sdcard/ons/game1/nscript.dat (������ι����ե�����)
-                 /arc.nsa     (������ι����ե�����)
-                 /����¾�Υ�����ι����ե����� (����Ū�����ƥ��ԡ�)
+            <pre>
+/sdcard/ons/game1/nscript.dat (ゲームの構成ファイル)
+                 /arc.nsa     (ゲームの構成ファイル)
+                 /その他のゲームの構成ファイル (基本的に全てコピー)
 /sdcard/ons/game2/...
 </pre>
 
-<ul>
-<li>������ι����ե�����(arc.nsa �ʤ�) �ϲ������ѹ��ʤɤϤ����˸��Υե�����ʥ��֥ǥ��쥯�ȥ��ޤ�ˤ򤽤Τޤޥ��ԡ����Ƥ���������
-<li>�ǥե���ȤǤ���¢����Ƥ���ե���ȡ�<a href="http://mplus-fonts.osdn.jp/">M+ �ե����</a>�����ۤ���Ƥ��� mplus-2m-medium.ttf�ˤ���Ѥ��ޤ�����default.ttf �Ȥ���̾���Υե���ȥե�����򥲡���ǡ�����Ʊ�������֤��Ȥ��������Ѥ��ޤ������Ѳ�ǽ�ʥե���ȤˤĤ��Ƥ�<a href="../onscripter.html#truetype-font">TrueType font �ˤ��ʸ��ɽ��</a>�򻲹ͤˤ��Ƥ���������
-</ul>
+            <ul>
+              <li>ゲームの構成ファイル(arc.nsa など) は解像度変更などはせずに元のファイル（サブディレクトリを含む）をそのままコピーしてください。
+              <li>デフォルトでは内蔵されているフォント（<a href="http://mplus-fonts.osdn.jp/">M+ フォント</a>で配布されている mplus-2m-medium.ttf）を使用しますが、default.ttf という名前のフォントファイルをゲームデータと同じ場所に置くとそちらを使用します。使用可能なフォントについては<a href="../onscripter.html#truetype-font">TrueType font による文字表示</a>を参考にしてください。
+            </ul>
 
-</div> <!-- sub-content -->
+          </div> <!-- sub-content -->
 
-<div class="sub-content">
-<h3 id="run">�¹���ˡ</h3>
+          <div class="sub-content">
+            <h3 id="run">実行方法</h3>
 
-<p>ONScripter �Υ������� <img src="/ons.png" alt="ONS" width=32> �򥿥åפ��� ONScripter ��ư���Ƥ���������</p>
+            <p>ONScripter のアイコン <img src="/ons.png" alt="ONS" width=32> をタップして ONScripter を起動してください。</p>
 
-<h4>Android 5.0 �ʹ�</h4>
-<p>�ޣ��Τ褦�ʥ�����������̤�ɽ�������Τǡ�������ǡ���������ǥ��쥯�ȥ�˰�ư������ˡ�����������ܥ���ʤ⤷���ϡ֡ġפؤΥ�����������ġˤ򲡤��Ƥ���������</p>
+            <h4>Android 5.0 以降</h4>
+            <p>図１のようなゲーム選択画面が表示されるので、ゲームデータがあるディレクトリに移動した後に、右下の選択ボタン（もしくは「…」へのアクセスを許可）を押してください。</p>
 
-<div class="figure">
-<p><img src="select_directory_1.png" alt="Fig.1" border=1 style="width: 40%;"><br>
-�ޣ���������������Android 5.0 �ʾ��</p>
-</div>
+            <div class="figure">
+              <p><img src="select_directory_1.png" alt="Fig.1" border=1 style="width: 40%;"><br>
+                図１：ゲームの選択（Android 5.0 以上）</p>
+            </div>
 
-<h4>Android 5.0 ̤��</h4>
-<p>�ޣ��Τ褦�ʥ�����������̤�ɽ�������Τǡ�������ǡ���������ǥ��쥯�ȥ�˰�ư������ˤ��Ƥ���������..�Ͽƥǥ��쥯�ȥ�ؤΰ�ư��ɽ���ޤ���Render Font Outline �˥����å��������ȡ��ե���Ȥ��سԤ����褹��褦�ˤʤ�ޤ��������å��򳰤����̾������ˤʤ�ޤ���</p>
+            <h4>Android 5.0 未満</h4>
+            <p>図２のようなゲーム選択画面が表示されるので、ゲームデータがあるディレクトリに移動（選択）してください。..は親ディレクトリへの移動を表します。Render Font Outline にチェックを入れると、フォントの輪郭を描画するようになります。チェックを外すと通常の描画になります。</p>
 
-<div class="figure">
-<p><img src="select_directory_2.png" alt="Fig.2" border=1 style="width: 80%;"><br>
-�ޣ���������������Android 5.0 ̤����</p>
-</div>
+            <div class="figure">
+              <p><img src="select_directory_2.png" alt="Fig.2" border=1 style="width: 80%;"><br>
+                図２：ゲームの選択（Android 5.0 未満）</p>
+            </div>
 
-</div> <!-- sub-content -->
+          </div> <!-- sub-content -->
 
-<div class="sub-content">
-<h3 id="button">�ܥ���</h3>
+          <div class="sub-content">
+            <h3 id="button">ボタン</h3>
 
-<table>
-<tr><th>�ܥ���</th><th>��ǽ</th></tr>
-<tr><td>MENU</td><td>��˥塼ɽ�� (���������)</td></tr>
-<tr><td>BACK</td><td>�ޥ���������å� (ESC ����)</td></tr>
-<tr><td>�ܥ�塼��(+/-)</td><td>�ܥ�塼���ѹ�</td></tr>
-<tr><td>HOME</td><td>�¹Ԥ�Хå����饦��ɤ˰ܤ�����<br>(ONScripter �Υ�������򥿥åפ���ȺƳ����ޤ�)</td></tr>
-<tr><td>������å�</td><td>�ޥ���������å� (Enter ����)</td></tr>
-<tr><td>������å�</td><td>�ޥ���������å� (ESC ����)</td></tr>
-<tr><td>��ۥ�����</td><td>�ޥ�����ۥ�����</td></tr>
-<tr><td>���ۥ�����</td><td>�ޥ������ۥ�����</td></tr>
-<tr><td>���Υܥ���</td><td>��������ܥ���˥���������ư</td></tr>
-<tr><td>���Υܥ���</td><td>��������ܥ���˥���������ư</td></tr>
-<tr><td>��˥塼</td><td>�ʲ��Υ�˥塼��ɽ��</td></tr>
-</table>
-</div> <!-- sub-content -->
+            <table>
+              <tr>
+                <th>ボタン</th>
+                <th>機能</th>
+              </tr>
+              <tr>
+                <td>MENU</td>
+                <td>メニュー表示 (次項で説明)</td>
+              </tr>
+              <tr>
+                <td>BACK</td>
+                <td>マウス右クリック (ESC キー)</td>
+              </tr>
+              <tr>
+                <td>ボリューム(+/-)</td>
+                <td>ボリューム変更</td>
+              </tr>
+              <tr>
+                <td>HOME</td>
+                <td>実行をバックグラウンドに移し中断<br>(ONScripter のアイコンをタップすると再開します)</td>
+              </tr>
+              <tr>
+                <td>左クリック</td>
+                <td>マウス左クリック (Enter キー)</td>
+              </tr>
+              <tr>
+                <td>右クリック</td>
+                <td>マウス右クリック (ESC キー)</td>
+              </tr>
+              <tr>
+                <td>上ホイール</td>
+                <td>マウス上ホイール</td>
+              </tr>
+              <tr>
+                <td>下ホイール</td>
+                <td>マウス下ホイール</td>
+              </tr>
+              <tr>
+                <td>次のボタン</td>
+                <td>次の選択ボタンにカーソルを移動</td>
+              </tr>
+              <tr>
+                <td>前のボタン</td>
+                <td>前の選択ボタンにカーソルを移動</td>
+              </tr>
+              <tr>
+                <td>メニュー</td>
+                <td>以下のメニューを表示</td>
+              </tr>
+            </table>
+          </div> <!-- sub-content -->
 
-<div class="sub-content">
-<h3 id="menu">��˥塼</h3>
+          <div class="sub-content">
+            <h3 id="menu">メニュー</h3>
 
-<table>
-<tr><th>����</th><th>��ǽ</th></tr>
-<tr><td>�����ȥ⡼��</td><td>�����ȥ⡼�ɳ��� (a ����)</td></tr>
-<tr><td>�����å�</td><td>���������ޤ����Ф��⡼�ɤ��ڤ��ؤ�</td></tr>
-<tr><td>®������</td><td>�ִ�ɽ�����̾�ɽ�����ڤ��ؤ�</td></tr>
-<tr><td rowspan=2>����</td><td>�ܥ����Ʃ����</td></tr>
-<tr><td>�ե���Ȥ��سԤ�ɽ������ɽ�����ڤ��ؤ��ʼ���ư����ȿ�ǡ�</td></tr>
-<tr><td>�С������</td><td>�С������ʤɤ�ɽ��</td></tr>
-<tr><td>�ץ饤�Х����ݥꥷ��</td><td><a href="/privacy_policy.html">�ץ饤�Х����ݥꥷ���Υڡ���</a>�򻲾�</td></tr>
-<tr><td>��λ</td><td>������ν�λ (SDL_QUIT ��ȯ��)</td></tr>
-</table>
-</div> <!-- sub-content -->
+            <table>
+              <tr>
+                <th>項目</th>
+                <th>機能</th>
+              </tr>
+              <tr>
+                <td>オートモード</td>
+                <td>オートモード開始 (a キー)</td>
+              </tr>
+              <tr>
+                <td>スキップ</td>
+                <td>次の選択肢まで飛ばすモードに切り替え</td>
+              </tr>
+              <tr>
+                <td>速度切替</td>
+                <td>瞬間表示・通常表示の切り替え</td>
+              </tr>
+              <tr>
+                <td rowspan=2>設定</td>
+                <td>ボタンの透過度</td>
+              </tr>
+              <tr>
+                <td>フォントの輪郭の表示・非表示の切り替え（次回起動時に反映）</td>
+              </tr>
+              <tr>
+                <td>バージョン</td>
+                <td>バージョンなどを表示</td>
+              </tr>
+              <tr>
+                <td>プライバシーポリシー</td>
+                <td><a href="/privacy_policy.html">プライバシーポリシーのページ</a>を参照</td>
+              </tr>
+              <tr>
+                <td>終了</td>
+                <td>ゲームの終了 (SDL_QUIT を発行)</td>
+              </tr>
+            </table>
+          </div> <!-- sub-content -->
 
-<div class="sub-content">
-<h3 id="limitation">���¡����ջ���</h3>
-<ul>
-<li> �ǥ����ץ쥤�β����٤˹礦�褦�˥�������̤β����٤���ưĴ������ޤ��������٤� 32bit �Ǥ���
-<li> �Ÿ��ܥ���򲡤��Ȳ��̤����դˤʤ겻�ڤκ��������Ǥ���ޤ����⤦�����Ÿ��ܥ���򲡤��ȥ������Ƴ����ޤ���
-<li> HOME �ܥ���򲡤��Ƚ��������Ǥ���¾�Υ��ץ��¹ԤǤ���褦�ˤʤ�ޤ������ξ��֤Ǥϡ������ȥ⡼�ɤˤ��Ƥ��Ƥ�ʹԤ������ޤ����ڤκ��������Ǥ���ޤ���ONScripter �Υ�������򥿥åפ���ȥ������Ƴ����ޤ���
-<li> ���̾�ǥե�å�����Ȥ��������˱����ƾ岼����������ɽ�ˤ��륽�եȥ������ܥ��󤬰����Ф���ޤ������եȥ������ܥ����Ʃ���٤ϥ�˥塼�����ѹ��Ǥ��ޤ���
-<li> ɸ����б����Ƥ���ư��� MPEG-1 �����Ǥ���������ư��������ץ��<a href="https://play.google.com/store/apps/details?id=org.videolan.vlc&hl=ja">VLC for Android</a> �ʤɡˤ򥤥󥹥ȡ��뤷�Ƥ����ȡ�������ץ����ư�����̿�ᤫ�� MPEG-4 �ʤɤ�¾�η�����ư���������뤳�Ȥ�Ǥ��ޤ������ꤵ�줿ư�������Ǥ���ư��������ץ̵꤬�����Ϥ��Τޤ���˿ʤߤޤ���ư��������ץ�ˤ�äƤ�ư�������� ONScripter ��������������ʤ���礬����ޤ������ξ��ϡ�ư�������ˤ��ä��� ONScripter ��Хå����饦��ɤ˰�ư���Ƥ���ե������饦��ɤ��᤹���������ޤ���
-<li> <a href="../onscripter.html#option">��ư���ץ����</a>�� --force-button-shortcut ����ꤷ�����֤ǵ�ư���ޤ���
-<li> ���Ѥ��벻�ڤΥ���ץ�󥰼��ȿ��� 22.05KHz �� 44.1KHz �Τɤ��餫�ˤ��Ƥ��������ʺ��߲ġˡ�MP3, Ogg Vorbis, WAV �򥵥ݡ��Ȥ��Ƥ��ޤ���48 KHz �ʤɤβ���������˺�������ʤ��Τǡ�<a href="http://www.vector.co.jp/soft/dl/winnt/art/se445019.html">�����Ǥ��ġ���</a>�ʤɤ�Ȥä� 44.1 KHz ���Ѵ����Ƥ���������
-<li> ������ BMP, JPEG, PNG, GIF �򥵥ݡ��Ȥ��Ƥ��ޤ���
-<li> Lua �ˤ���ĥ�򥵥ݡ��Ȥ��Ƥ��ޤ����ʰ����ε�ǽ��̤������
-</ul>
+          <div class="sub-content">
+            <h3 id="limitation">制限・注意事項</h3>
+            <ul>
+              <li> ディスプレイの解像度に合うようにゲーム画面の解像度が自動調整されます。色深度は 32bit です。
+              <li> 電源ボタンを押すと画面がオフになり音楽の再生も中断されます。もう一度電源ボタンを押すとゲームを再開します。
+              <li> HOME ボタンを押すと処理を中断して他のアプリを実行できるようになります。この状態では、オートモードにしていても進行せず、また音楽の再生も中断されます。ONScripter のアイコンをタップするとゲームを再開します。
+              <li> 画面上でフリックするとその方向に応じて上下左右から上の表にあるソフトウェアボタンが引き出されます。ソフトウェアボタンの透過度はメニューから変更できます。
+              <li> 標準で対応している動画は MPEG-1 形式ですが、別途動画再生アプリ（<a href="https://play.google.com/store/apps/details?id=org.videolan.vlc&hl=ja">VLC for Android</a> など）をインストールしておくと、スクリプト中の動画再生命令から MPEG-4 などの他の形式の動画を再生することもできます。指定された動画を再生できる動画再生アプリが無い場合はそのまま先に進みます。動画再生アプリによっては動画再生後に ONScripter に正常に復帰しない場合があります。その場合は、動画再生後にいったん ONScripter をバックグラウンドに移動してからフォアグラウンドに戻すと復帰します。
+              <li> <a href="../onscripter.html#option">起動オプション</a>の --force-button-shortcut を指定した状態で起動します。
+              <li> 使用する音楽のサンプリング周波数は 22.05KHz か 44.1KHz のどちらかにしてください（混在可）。MP3, Ogg Vorbis, WAV をサポートしています。48 KHz などの音源は正常に再生されないので、<a href="http://www.vector.co.jp/soft/dl/winnt/art/se445019.html">えこでこツール</a>などを使って 44.1 KHz に変換してください。
+              <li> 画像は BMP, JPEG, PNG, GIF をサポートしています。
+              <li> Lua による拡張をサポートしています。（一部の機能は未実装）
+            </ul>
 
-</div> <!-- sub-content -->
+          </div> <!-- sub-content -->
 
-</div> <!-- content -->
+        </div> <!-- content -->
 
 
-<div class="content">
-<h2 id="develop">���ץ�γ�ȯ��ˡ</h2>
+        <div class="content">
+          <h2 id="develop">アプリの開発方法</h2>
 
-<div class="sub-content">
-<h3 id="flow">��ȯ��ή��</h3>
+          <div class="sub-content">
+            <h3 id="flow">開発の流れ</h3>
 
-<ol>
+            <ol>
 
-<li><b>����</b> <a href="http://www.nscripter.com/">NScripter</a> (2011/12/15)(<a href="http://ja.wikipedia.org/wiki/NScripter">����</a>)����Ѥ��� Windows PC �ǥ����������ޤ����ʲ�������ֺ¤����ͤˤʤ�Ȼפ��ޤ���
-<ul>
-<li><a href="http://sorejyadamedarou.sakura.ne.jp/o_show/nscripter/index.htm">NScripter����</a>
-<li><a href="http://ryuji.s1.xrea.com/nscr/nscr.html">NScripter�ֺ�</a>
-<li><a href="http://www42.atwiki.jp/ironmaiden/pages/17.html">NScripter�Ȥ����ֺ�</a> (����ץ륹����ץȤ���)
-<li><a href="http://senzogawa.s90.xrea.com/reference/NScrAPI.html">NScripter API Reference</a> (���Ѳ�ǽ��̿��ΰ������������ʲ���̿��ϥ��ݡ��Ȥ��Ƥ��ޤ���)
-<ul>
-<li> ��ȯ�ٱ�
-<li> �������ޥ�ɼ¹�
-<li> CSV�ե��������
-<li> �ƥ����ȥܥ���
-</ul>
-</ul>
+              <li><b>製作</b> <a href="http://www.nscripter.com/">NScripter</a> (2011/12/15)(<a href="http://ja.wikipedia.org/wiki/NScripter">解説</a>)を使用して Windows PC でゲームを製作します。以下の入門講座が参考になると思います。
+                <ul>
+                  <li><a href="http://sorejyadamedarou.sakura.ne.jp/o_show/nscripter/index.htm">NScripter研究</a>
+                  <li><a href="http://ryuji.s1.xrea.com/nscr/nscr.html">NScripter講座</a>
+                  <li><a href="http://www42.atwiki.jp/ironmaiden/pages/17.html">NScripter使い方講座</a> (サンプルスクリプトあり)
+                  <li><a href="http://senzogawa.s90.xrea.com/reference/NScrAPI.html">NScripter API Reference</a> (使用可能な命令の一覧、ただし以下の命令はサポートしていません)
+                    <ul>
+                      <li> 開発支援
+                      <li> 外部コマンド実行
+                      <li> CSVファイル操作
+                      <li> テキストボタン
+                    </ul>
+                </ul>
 
-<li><b>ư���ǧ</b> Android �µ��� PC �� USB �����֥����³���������������ǡ�����µ��˥��ԡ��������Υڡ����ΰ��־�����ۤ��Ƥ��륢�ץ����Ѥ���ư����ǧ���ޤ������꤬����� Windows PC ����äƽ������ޤ���
+              <li><b>動作確認</b> Android 実機と PC を USB ケーブルで接続して製作したゲームデータを実機にコピーし、このページの一番上で配布しているアプリを使用して動作を確認します。問題があれば Windows PC に戻って修正します。
 
-<li><b>���ץ�κ���</b> �����ब���������顢<a href="#develop-as">Android Studio �ǤΥ��ץ�κ�����ˡ</a>�򻲹ͤ˥��󥹥ȡ����ǽ�����ѥ��ץ��������ޤ���
+              <li><b>アプリの作成</b> ゲームが完成したら、<a href="#develop-as">Android Studio でのアプリの作成方法</a>を参考にインストール可能な専用アプリを作成します。
 
-<li><b>����</b> <a href="https://play.google.com/?hl=ja">Google Play</a>�����ȤΥ����֥ڡ������Ż����Τʤɤǥ��ץ��������ޤ���
+              <li><b>公開</b> <a href="https://play.google.com/?hl=ja">Google Play</a>、自身のウェブページ、電子媒体などでアプリを公開します。
 
-</ol>
+            </ol>
 
-</div>
+          </div>
 
-<div class="sub-content">
-<h3 id="develop-as">Android Studio �ǤΥ��ץ�κ�����ˡ</h3>
+          <div class="sub-content">
+            <h3 id="develop-as">Android Studio でのアプリの作成方法</h3>
 
-<p>���糫ȯ�Ķ���IDE�ˤǤ��� Android Studio ����Ѥ��ƥ��ץ�����������ˡ�ˤĤ����������ޤ����ʲ��Ǥ� Windows �Ǥκ�����ˡ�ˤĤ����������ޤ�����Linux �� Mac �Ǥ�Ʊ�ͤ���ˡ�Ǻ����Ǥ���Ȼפ��ޤ���̤��ǧ�ˡ�</p>
+            <p>統合開発環境（IDE）である Android Studio を使用してアプリを作成する方法について説明します。以下では Windows での作成方法について説明しますが、Linux や Mac でも同様の方法で作成できると思います（未確認）。</p>
 
-<h4>���եȥ�������Ƴ��</h4>
+            <h4>ソフトウェアの導入</h4>
 
-<ol>
-  <li> Android Studio �Υ��󥹥ȡ���
-    <p><a href="https://developer.android.com/studio/index.html?hl=ja">Android Studio</a> ���饤�󥹥ȡ���ʸ������Ǥκǿ��Ǥ� Electric Eel 2022.1.1 Patch 2�ˤ����������ɤ��ƥ��󥹥ȡ��뤷�ޤ���</p>
-  <li> SDK �Υ��󥹥ȡ���
-    <p> Android Studio ���� SDK Manager ��ư�����ʲ��Υѥå������򥤥󥹥ȡ��뤷�ޤ��������ΥС������ϸ������ǤΥС������Ǥ���</p>
-    <ul>
-      <li> SDK Platforms
-	<ul>
-	  <li> Android 13.0 (Tiramisu)
-	</ul>
-      <li> SDK Tools
-	<ul>
-	  <li> Android SDK Build Tools 33.0.3
-	  <li> NDK (Side by side) 24.0.8215888
-	  <li> Android SDK Platform-Tools 34.0.1
-	</ul>
-    </ul>
-    <p> File -> Project Structure �����ǧ�Ǥ��� Gradle ��Ϣ�ΥС������ϰʲ��ΤȤ���Ǥ���</p>
-    <ul>
-      <li> Android Gradle Plugin Version 7.2.2
-      <li> Gradle Version 7.4
-    </ul>
+            <ol>
+              <li> Android Studio のインストール
+                <p><a href="https://developer.android.com/studio/index.html?hl=ja">Android Studio</a> からインストーラ（現時点での最新版は Electric Eel 2022.1.1 Patch 2）をダウンロードしてインストールします。</p>
+              <li> SDK のインストール
+                <p> Android Studio から SDK Manager を起動し、以下のパッケージをインストールします。末尾のバージョンは現時点でのバージョンです。</p>
+                <ul>
+                  <li> SDK Platforms
+                    <ul>
+                      <li> Android 13.0 (Tiramisu)
+                    </ul>
+                  <li> SDK Tools
+                    <ul>
+                      <li> Android SDK Build Tools 33.0.3
+                      <li> NDK (Side by side) 24.0.8215888
+                      <li> Android SDK Platform-Tools 34.0.1
+                    </ul>
+                </ul>
+                <p> File -> Project Structure から確認できる Gradle 関連のバージョンは以下のとおりです。</p>
+                <ul>
+                  <li> Android Gradle Plugin Version 7.2.2
+                  <li> Gradle Version 7.4
+                </ul>
 
-<li> <a href="#sdk">�饤�֥��ȼ��եץ������켰 (SDK)</a>���� onscripter_android_studio-xxxxxxxx.zip �����������ɤ��� c:\src\ ��Ÿ�����ޤ���xxxxxxxx �ˤϥС�������ֹ椬����ޤ��ˡ�
-<pre>
+              <li> <a href="#sdk">ライブラリと周辺プログラム一式 (SDK)</a>から onscripter_android_studio-xxxxxxxx.zip をダウンロードして c:\src\ に展開します（xxxxxxxx にはバージョン番号が入ります）。
+                <pre>
 c:\src\ONScripter\...
 </pre>
 
-  <li> <a href="../onscripter.html">ONScripter �Υڡ���</a>����ǿ��� ONScripter �����������ɤ��� ONScripter\app\src\main\cpp\application\onscripter-xxxxxxxx ��Ÿ�����ޤ���xxxxxxxx �ˤϥС�������ֹ椬����ޤ��ˡ�
-<pre>
+              <li> <a href="../onscripter.html">ONScripter のページ</a>から最新の ONScripter をダウンロードして ONScripter\app\src\main\cpp\application\onscripter-xxxxxxxx に展開します（xxxxxxxx にはバージョン番号が入ります）。
+                <pre>
 c:\src\ONScripter\app\src\main\cpp\application\onscripter-xxxxxxxx\ONScripter.h
 c:\src\ONScripter\app\src\main\cpp\application\onscripter-xxxxxxxx\ONScripter.cpp
 c:\src\ONScripter\app\src\main\cpp\application\onscripter-xxxxxxxx\...
 </pre>
 
-</ol>
+            </ol>
 
-<h4>���ץ�κ���</h4>
+            <h4>アプリの作成</h4>
 
-<p>ɬ�פ˱�����<a href="#distribution">������ǡ�����������ˡ</a>��<a href="#customize">�������ޥ���</a>�򻲹ͤ������Ԥä���ǡ��ʲ��μ��˽��äƥ��ץ��������ޤ���</p>
-  
-<ol>
-<li>Android Studio ��ư���� c:\src\ONScripter �򳫤��ޤ���<!--���˰ʲ��Υ�����������å�������ɽ���������ϡ�OK�פ򲡤��Ƥ���������
+            <p>必要に応じて<a href="#distribution">ゲームデータの配布方法</a>・<a href="#customize">カスタマイズ</a>を参考に設定を行った上で、以下の手順に従ってアプリを作成します。</p>
+
+            <ol>
+              <li>Android Studio を起動して c:\src\ONScripter を開きます。<!--初回に以下のダイアログメッセージが表示される場合は「OK」を押してください。
   
 <pre>
 Gradle settings for this project are not configured yet.
 </pre>
 
-��Import Project from Gradle�פΥ�����������ɽ���������ϡ�Gradle home �� Gradle �Υ��󥹥ȡ�����ʤ��Ȥ��аʲ��ˤ���ꤷ�ơ�OK�פ򲡤��Ƥ���������
+「Import Project from Gradle」のダイアログが表示される場合は、Gradle home に Gradle のインストール場所（たとえば以下）を指定して「OK」を押してください。
 
 <pre>
 C:\Program Files\Android\Android Studio\gradle\gradle-5.1.1
 </pre>
 
 Minimum supported Gradle version is 7.0.2. Current version is 6.8.
-��File�ע���Project Structure�ע���Gradle Version�� �� 7.3.3 �ʤɤ����ꤷ�Ƥ���������
+「File」→「Project Structure」→「Gradle Version」 を 7.3.3 などに設定してください。
 
 
-<li>��˥塼�С��Ρ�File�ע���New�ע���Import Module�פ����򤷡��ʲ��Υե���������򤷤��ɤ߹���Ǥ������������������ʲ����ֻ��βս�ϡ�Windows �Υ��������̾���ɤߴ����Ƥ����������ޤ��������ɽ������� Module name �ι��ܤϥǥե���Ȥ� library �Τޤޤˤ��Ƥ���������
+<li>メニューバーの「File」→「New」→「Import Module」を選択し、以下のファイルを選択して読み込んでください。ただし、以下の赤字の箇所は、Windows のアカウント名で読み換えてください。また、途中で表示される Module name の項目はデフォルトの library のままにしてください。
 <pre>
 C:\Users\<span style="color:red;">username</span>\AppData\Local\Android\Sdk\extras\google\market_licensing\library
 </pre>
 
-<li>�ʲ��Υ��顼��å�������ɽ���������ϡ�Set ndk.dir in local.properties to ... �򥯥�å����Ƥ���������
+<li>以下のエラーメッセージが表示される場合は、Set ndk.dir in local.properties to ... をクリックしてください。
 <pre>
 NDK not configured ...
 </pre>
-�⤷���ϡ�c:\src\ONScripter\local.properties �˼�ư�ǰʲ��ιԤ��ɲä��Ƥ����������ֻ��βս�ϡ����ȤδĶ��˹�碌���ѹ����Ƥ���������
+もしくは、c:\src\ONScripter\local.properties に手動で以下の行を追加してください。赤字の箇所は、自身の環境に合わせて変更してください。
 <pre>
 ndk.dir=C\:\\Users\\<span style="color:red;">username</span>\\AppData\\Local\\Android\\Sdk\\ndk\\<span style="color:red;">20.0.5594570</span>
 </pre>
 
-<li>�ʲ��Υ��顼��å�������ɽ���������ϡ�
+<li>以下のエラーメッセージが表示される場合は、
 <pre>
 Compatible side by side NDK version was not found. Default is 20.0.5594570.
 </pre>
-c:\src\ONScripter\local.properties �ʥե����뤬¸�ߤ��ʤ����Ͽ����˺������Ƥ��������ˤ˼�ư�ǰʲ��ιԤ��ɲä��Ƥ����������ֻ��βս�ϡ����ȤδĶ��˹�碌���ѹ����Ƥ���������
+c:\src\ONScripter\local.properties （ファイルが存在しない場合は新規に作成してください）に手動で以下の行を追加してください。赤字の箇所は、自身の環境に合わせて変更してください。
 <pre>
 ndk.dir=C\:\\Users\\<span style="color:red;">username</span>\\AppData\\Local\\Android\\Sdk\\ndk\\<span style="color:red;">20.0.5594570</span>
 </pre>-->
 
-<!--
-<li>Android Studio 4.0 �ʹߤǤϰʲ��Υ��顼��å�������ɽ������ޤ���
+                <!--
+<li>Android Studio 4.0 以降では以下のエラーメッセージが表示されます。
 <pre>
 Project with path ':library' could not be found in project ':app'.
 </pre>
-c:\src\ONScripter\app\bundle.gradle �ΰʲ��ιԤ������Ƥ���������
+c:\src\ONScripter\app\bundle.gradle の以下の行を削除してください。
 <pre>
     implementation project(':library')
 </pre>-->
 
-<!--
-<li> C:\src\ONScripter\build.gradle ��ʲ����ֻ��Τ褦�˽������Ƥ���������
+                <!--
+<li> C:\src\ONScripter\build.gradle を以下の赤字のように修正してください。
 <pre>
     dependencies {
         classpath 'com.android.tools.build:gradle:<span style="color:red;">3.6.0</span>'
 </pre>
 -->
 
-<!--
-<li> Gradle �ΥС������ 6 �ʹߤξ��ϰʲ��Υ��顼��ȯ�����ޤ���
+                <!--
+<li> Gradle のバージョンが 6 以降の場合は以下のエラーが発生します。
 <pre>
 Unable to find method 'org.gradle.api.file.ProjectLayout.fileProperty(Lorg/gradle/api/provider/Provider;)
 </pre>
-��File�ע���Project Structure�ע���Project�פ� Gradle Version �� 6.x (6.1.1 �ʤ�) ���� 5.x (5.6.4 �ʤɡˤ��ѹ����Ƥ���������
+「File」→「Project Structure」→「Project」の Gradle Version を 6.x (6.1.1 など) から 5.x (5.6.4 など）に変更してください。
 -->
-<!--
-<li>�ޤ����ʲ��Υ��顼��å�������ɽ���������ϡ�Remove minSdkVersion and sync project �򥯥�å����� Do Refactor �ܥ���򲡤������⤷���� C:\src\ONScripter\library\src\main\AndroidManifest.xml ���Խ����ơ�android:minSdkVersion=&quot;3&quot; �ε��Ҥ� AndroidManifest.xml ���������Ƥ���������
+                <!--
+<li>また，以下のエラーメッセージが表示される場合は、Remove minSdkVersion and sync project をクリックして Do Refactor ボタンを押すか、もしくは C:\src\ONScripter\library\src\main\AndroidManifest.xml を編集して、android:minSdkVersion=&quot;3&quot; の記述を AndroidManifest.xml から削除してください。
 <pre>
 Remove The minSdk version should not be declared in the android manifest file. You can move the version from the manifest to the defaultConfig in the build.gradle file.
 </pre>
 
-<li>C:\src\ONScripter\app\build.gradle ��ʲ����ֻ��Τ褦�˽������ơ�compileSdkVersion �� targetSdkVersion ��ɤ���� 31 ���ѹ�����minSdkVersion �� 5 ���ѹ����Ƥ����������ޤ���useLibrary 'org.apache.http.legacy' �ιԤ��ɲä��Ƥ���������
+<li>C:\src\ONScripter\app\build.gradle を以下の赤字のように修正して、compileSdkVersion と targetSdkVersion をどちらも 31 に変更し、minSdkVersion を 5 に変更してください。また、useLibrary 'org.apache.http.legacy' の行を追加してください。
 <pre>
 android {
     compileSdkVersion <span style="color:red;">29</span>
@@ -467,90 +576,90 @@ android {
 }
 </pre>
 -->
-<li>�ʲ��Υ��顼��å��������Ф���ϡ�
+              <li>以下のエラーメッセージが出る場合は、
 
-<pre>
+                <pre>
 A problem occurred evaluating project ':app'.
 > Failed to apply plugin 'com.android.internal.application'.
    > Android Gradle plugin requires Java 11 to run. You are currently using Java 1.8.
 </pre>
 
-File -> Settings -> Build, Execution, Deployment -> Build Tools -> Gradle �򳫤��ơ�Gradle JDK �� Android Studio ��¢�� jbr-11 ���ѹ�����Try Again �����򤷤ޤ���
+                File -> Settings -> Build, Execution, Deployment -> Build Tools -> Gradle を開いて、Gradle JDK を Android Studio 内蔵の jbr-11 に変更し、Try Again を選択します。
 
-<li>�ʲ��Υ��顼��å��������Ф���ϡ�
+              <li>以下のエラーメッセージが出る場合は、
 
-<pre>
+                <pre>
 A problem occurred configuring project ':app'.
 > SDK location not found. Define a valid SDK location with an ANDROID_HOME environment variable or by setting the sdk.dir path in your project's local properties file at 'C:\src\ONScripter\local.properties'.
 </pre>
 
-C:\src\ONScripter\local.properties �򳫤��ưʲ����ֻ��βս�� Windows �Υ��������̾���ѹ����Ƥ���������
-<pre>
+                C:\src\ONScripter\local.properties を開いて以下の赤字の箇所を Windows のアカウント名に変更してください。
+                <pre>
 sdk.dir=C\:\\Users\\<span style="color:red">username</span>\\AppData\\Local\\Android\\sdk
 </pre>
 
-<li> �ǥե���ȤǤ� 32bit ARM �ץ����å���armeabi-v7a�ˤ� 64bit ARM �ץ����å���arm64-v8a���ѤΥ��ץ��������ޤ���32bit Intel �ץ����å��ѤΥ��ץ�����������ϰʲ����ֻ��βս�� x86 �ˡ�64bit Intel �ץ����å��ѤΥ��ץ�����������ϰʲ����ֻ��βս�� x86_64 ���ѹ����Ƥ���������<br>
+              <li> デフォルトでは 32bit ARM プロセッサ（armeabi-v7a）と 64bit ARM プロセッサ（arm64-v8a）用のアプリを作成します。32bit Intel プロセッサ用のアプリを作成する場合は以下の赤字の箇所を x86 に、64bit Intel プロセッサ用のアプリを作成する場合は以下の赤字の箇所を x86_64 に変更してください。<br>
 
-ONScripter/app/build.gradle:
-<pre>
+                ONScripter/app/build.gradle:
+                <pre>
     defaultConfig {
         ndk {
             abiFilters '<span style="color:red;">armeabi-v7a</span>', '<span style="color:red;">arm64-v8a</span>'
         }
     }
 </pre>
-</ol>
+            </ol>
 
-<h5>�ǥХå���</h5>
+            <h5>デバッグ版</h5>
 
-<ol>
-  <li>��Build�ע���Make Project�פ�¹Ԥ��ƥӥ�ɤ��ޤ����ӥ�ɤ���������ȡ��ʲ��ξ��˥��ץ꤬��������ޤ���
-<pre>
+            <ol>
+              <li>「Build」→「Make Project」を実行してビルドします。ビルドに成功すると、以下の場所にアプリが生成されます。
+                <pre>
 c:\src\ONScripter\app\build\outputs\apk\debug\app-debug.apk       
 </pre>
-</ol>
+            </ol>
 
-<h5>��꡼���ǡ�Google Play �Ǹ����������</h5>
+            <h5>リリース版（Google Play で公開する場合）</h5>
 
-<ol>
-<li>IDE �κ��ˤ��� ��Build Variants�פ����򤷡�app �� Active Build Variant �� release ���ѹ����ޤ���
-<li>��Build�ע���Make Project�פ�¹Ԥ��ƥӥ�ɤ��ޤ����ӥ�ɤ���������ȡ��ʲ��ξ��˥��ץ꤬��������ޤ���
-<pre>
+            <ol>
+              <li>IDE の左にある 「Build Variants」を選択し、app の Active Build Variant を release に変更します。
+              <li>「Build」→「Make Project」を実行してビルドします。ビルドに成功すると、以下の場所にアプリが生成されます。
+                <pre>
 c:\src\ONScripter\app\build\outputs\apk\release\app-release-unsigned.apk
 </pre>
-<li>��Build�ע���Generate Signed Bundle/APK�ע���Android App Bundle�פ����򤷤ƥ��ץ�˽�̾�򤷤ޤ���Key ���ʤ����ϡ�Create new�פ򲡤��� Key ��������ޤ�������� Build Variants �ι�� release �����򤷤Ƥ�����������̾����������ȡ��ʲ��ξ��˽�̾�ѤߤΥ��ץ꤬��������ޤ���
-<pre>
+              <li>「Build」→「Generate Signed Bundle/APK」→「Android App Bundle」を選択してアプリに署名をします。Key がない場合は「Create new」を押して Key を作成します。途中の Build Variants の項は release を選択してください。署名に成功すると、以下の場所に署名済みのアプリが生成されます。
+                <pre>
 c:\src\ONScripter\app\release\app-release.aab
 </pre>
-</ol>
+            </ol>
 
-</div>  
-<!--
+          </div>
+          <!--
 <div class="sub-content">
-<h3 id="develop-win">Windows �ǤΥ��ץ�κ�����ˡ</h3>
+<h3 id="develop-win">Windows でのアプリの作成方法</h3>
 
-<p><span style="color:red;">������ˡ�ϰ�������ˡ�ǡ����ߤϥ��ݡ��Ȥ��Ƥ��ޤ���</span></p>
+<p><span style="color:red;">この方法は以前の方法で、現在はサポートしていません。</span></p>
 
-<h4>���եȥ�������Ƴ��</h4>
+<h4>ソフトウェアの導入</h4>
 
-<p>Ĺ������Υѥ�����Ǥ���ɬ�����⤳�ΤȤ���ˤ���ɬ�פϤ���ޤ��󡣤��������ǥ��쥯�ȥ�̾��ե�����̾�� 2byte ʸ���ʴ����䤫�ʡˤ䥹�ڡ������ޤޤ�ʤ��褦�ˤ��Ƥ���������</p>
+<p>長方形内のパスは例です。必ずしもこのとおりにする必要はありません。ただし、ディレクトリ名やファイル名に 2byte 文字（漢字やかな）やスペースが含まれないようにしてください。</p>
 
-<p style="text-indent:0">��<a href="http://hoshimi12.com/?p=3505">ONScripter on Android�λȤ�����ʬ�ѥ��</a>�⤼�һ��ͤˤ��Ƥ�������</p>
+<p style="text-indent:0">※<a href="http://hoshimi12.com/?p=3505">ONScripter on Androidの使い方自分用メモ</a>もぜひ参考にしてください</p>
 
 <ol>
-<li> <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java SE Downloads</a> �� JDK DOWNLOAD �����򤷡�Java SE Development Kit 8 (64bit�� Windows �ξ��� jdk-8u162-windows-x64.exe �ʤ�) �򥤥󥹥ȡ��뤷�Ƥ���������
+<li> <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java SE Downloads</a> の JDK DOWNLOAD を選択し、Java SE Development Kit 8 (64bit版 Windows の場合は jdk-8u162-windows-x64.exe など) をインストールしてください。
 <pre>
 C:\Program Files\Java\jdk1.8.0_162\...
 </pre>
 <ul>
-<li> �Ķ��ѿ� JAVA_HOME �����ꤷ�ޤ��� (�� C:\Program Files\Java\jdk1.8.0_162)
+<li> 環境変数 JAVA_HOME を設定します。 (例 C:\Program Files\Java\jdk1.8.0_162)
 </ul>
 
-<li> <a href="http://developer.android.com/studio/index.html">Android Studio</a>�ΰ��ֲ��Ρ֥��ޥ�ɥ饤��ġ���Τ����ꤹ��פ�������Ǥ���ǿ��� SDK Tools �Ǥϡ�25.3.0 �ʹߤ��� android ���ޥ�ɤ� update �����Ǥ��ʤ��ʤäƤ��ޤä����ᡢ25.2.5 ����Ѥ��ޤ���<a href="https://dl-ssl.google.com/android/repository/tools_r25.2.5-windows.zip">tools_r25.2.5-windows.zip</a>�����������ɤ��ưʲ��ξ���Ÿ�����ޤ���
+<li> <a href="http://developer.android.com/studio/index.html">Android Studio</a>の一番下の「コマンドラインツールのみ入手する」から入手できる最新の SDK Tools では、25.3.0 以降から android コマンドで update を指定できなくなってしまったため、25.2.5 を使用します。<a href="https://dl-ssl.google.com/android/repository/tools_r25.2.5-windows.zip">tools_r25.2.5-windows.zip</a>をダウンロードして以下の場所に展開します。
 <pre>
 c:\src\android-sdk\...
 </pre>
-�ޤ� SDK tools ���󥹥ȡ����ˡ�c:\src\android-sdk\tools\android.bat ��ư����</span>�ʲ��Υѥå������򥤥󥹥ȡ��뤷�Ƥ���������
+また SDK tools インストール後に、c:\src\android-sdk\tools\android.bat を起動し、</span>以下のパッケージをインストールしてください。
 <ul>
 <li> Tools
 <ul>
@@ -569,64 +678,64 @@ c:\src\android-sdk\...
 </ul>
 </ul>
 
-<li> <a href="http://developer.android.com/ndk/downloads/index.html">NDK Downloads</a> ����ǿ��� NDK (�� android-ndk-r16b-windows-x86_64.zip) �����������ɤ��� c:\src\ ��Ÿ�����ޤ���
+<li> <a href="http://developer.android.com/ndk/downloads/index.html">NDK Downloads</a> から最新の NDK (例 android-ndk-r16b-windows-x86_64.zip) をダウンロードして c:\src\ に展開します。
 <pre>
 c:\src\android-ndk-r16b\...
 </pre>
 
-<li> <a href="#sdk">�饤�֥��ȼ��եץ������켰 (SDK)</a>���� onscripter_android-xxxxxxxx.tar.gz �����������ɤ��ưʲ��ξ���Ÿ�����ޤ���xxxxxxxx �ˤϥС�������ֹ椬����ޤ��ˡ�
+<li> <a href="#sdk">ライブラリと周辺プログラム一式 (SDK)</a>から onscripter_android-xxxxxxxx.tar.gz をダウンロードして以下の場所に展開します（xxxxxxxx にはバージョン番号が入ります）。
 <pre>
 c:\src\onscripter_android\jni\...
 c:\src\onscripter_android\src\...
 c:\src\onscripter_android\...
 </pre>
-<li> <a href="../onscripter.html">ONScripter �Υڡ���</a>����ǿ��� ONScripter �����������ɤ��� onscripter_android\jni\application\onscripter-xxxxxxxx ��Ÿ�����ޤ���xxxxxxxx �ˤϥС�������ֹ椬����ޤ��ˡ�
+<li> <a href="../onscripter.html">ONScripter のページ</a>から最新の ONScripter をダウンロードして onscripter_android\jni\application\onscripter-xxxxxxxx に展開します（xxxxxxxx にはバージョン番号が入ります）。
 <pre>
 c:\src\onscripter_android\jni\application\onscripter-xxxxxxxx\ONScripter.h
 c:\src\onscripter_android\jni\application\onscripter-xxxxxxxx\ONScripter.cpp
 c:\src\onscripter_android\jni\application\onscripter-xxxxxxxx\...
 </pre>
 
-<li> <a href="http://ant.apache.org">Apache Ant</a> �� Binary Distributions ����Х��ʥ�(�� apache-ant-1.10.2-bin.zip)�����������ɤ���Ŭ���ʾ���Ÿ�����ޤ���
+<li> <a href="http://ant.apache.org">Apache Ant</a> の Binary Distributions からバイナリ(例 apache-ant-1.10.2-bin.zip)をダウンロードして適当な場所に展開します。
 <pre>
 c:\src\apache-ant-1.10.2-bin\...
 </pre>
 </ol>
 
-<h4>���ץ�κ���</h4>
+<h4>アプリの作成</h4>
 
-<p>ɬ�פ˱�����<a href="#distribution">������ǡ�����������ˡ</a>��<a href="#customize">�������ޥ���</a>�򻲹ͤ������Ԥä���ǡ����ޥ�ɥץ���ץȤ�Ω���夲���ʹߤμ��˽��äƥ��ץ��������Ƥ����������¹ԥե�����Υѥ��ϴĶ��˹�碌��Ŭ���ѹ����Ƥ���������</p>
+<p>必要に応じて<a href="#distribution">ゲームデータの配布方法</a>・<a href="#customize">カスタマイズ</a>を参考に設定を行った上で、コマンドプロンプトを立ち上げ、以降の手順に従ってアプリを作成してください。実行ファイルのパスは環境に合わせて適宜変更してください。</p>
 
-<p>�ޤ���Google Play Licesing package �饤�֥�������򤷤ޤ��ʺǽ�ˣ��٤����¹Ԥ��ޤ��ˡ�</p>
+<p>まず、Google Play Licesing package ライブラリの設定をします（最初に１度だけ実行します）。</p>
 <pre>
 &gt; cd c:\src\android-sdk\extras\google\market_licensing\library
 &gt; c:\src\android-sdk\tools\android.bat update project -p . --target android-28
 </pre>
-<p style="text-indent:0"><span style="color:red">����:</span>��Ƭ�� &gt; �ϥץ���ץȤʤΤ����Ϥ��ޤ��󡣤ޤ���&gt; ����ʤ⤷����м��� &gt; �ޤǡˤΥ��ޥ�ɤ�ʣ���Ԥ�ʬ�������Ԥ����Ϥ��Ƥ����������ʹߤ�Ʊ���Ǥ���</p>
+<p style="text-indent:0"><span style="color:red">注意:</span>先頭の &gt; はプロンプトなので入力しません。また、&gt; から（もしあれば次の &gt; まで）のコマンドは複数行に分けず１行で入力してください。以降も同じです。</p>
 
-<p>�ޤ����ʲ��Τ褦�ˤ��� android.support.v4.provider.DocumentFile �� Java �Х��ȥ����ɤ�ޤ� classes.jar �� aar �ե����뤫����Ф��ƥ��ԡ����ޤ��ʺǽ�ˣ��٤����¹Ԥ��ޤ��ˡ�</p>
+<p>また、以下のようにして android.support.v4.provider.DocumentFile の Java バイトコードを含む classes.jar を aar ファイルから抽出してコピーします（最初に１度だけ実行します）。</p>
 
 <ol>
-  <li> c:\src\android-sdk\extras\android\m2repository\com\android\support\support-v4\24.1.1\support-v4-24.1.1.aar �� c:\src �˥��ԡ�
-  <li> �ե�����̾�� c:\src\support-v4-24.1.1.zip ���ѹ������������ץ��������ǥ��֥륯��å�������Ȥ�Ÿ��
-  <li> classes.jar �� classes_support.jar ��̾�����ѹ����� c:\src\onscripter_android\libs �˥��ԡ�
+  <li> c:\src\android-sdk\extras\android\m2repository\com\android\support\support-v4\24.1.1\support-v4-24.1.1.aar を c:\src にコピー
+  <li> ファイル名を c:\src\support-v4-24.1.1.zip に変更し、エクスプローラ等でダブルクリックして中身を展開
+  <li> classes.jar を classes_support.jar に名前を変更して c:\src\onscripter_android\libs にコピー
 </ol>
 </pre>
 
-<p>����ˡ��ʲ��Τ褦�ˤ��� android.support.appcompat-v7v4.provider.DocumentFile �� Java �Х��ȥ����ɤ�ޤ� classes.jar �� aar �ե����뤫����Ф��ƥ��ԡ����ޤ��ʺǽ�ˣ��٤����¹Ԥ��ޤ��ˡ�</p>
+<p>さらに、以下のようにして android.support.appcompat-v7v4.provider.DocumentFile の Java バイトコードを含む classes.jar を aar ファイルから抽出してコピーします（最初に１度だけ実行します）。</p>
 
 <ol>
-  <li> c:\src\android-sdk\extras\android\m2repository\com\android\support\appcompat-v7\24.1.1\appcompat-v7-24.1.1.aar �� c:\src �˥��ԡ�
-  <li> �ե�����̾�� c:\src\appcompat-v7-24.1.1.zip ���ѹ������������ץ��������ǥ��֥륯��å�������Ȥ�Ÿ��
-  <li> classes.jar �� classes_appcompat.jar ��̾�����ѹ����� c:\src\onscripter_android\libs �˥��ԡ�
+  <li> c:\src\android-sdk\extras\android\m2repository\com\android\support\appcompat-v7\24.1.1\appcompat-v7-24.1.1.aar を c:\src にコピー
+  <li> ファイル名を c:\src\appcompat-v7-24.1.1.zip に変更し、エクスプローラ等でダブルクリックして中身を展開
+  <li> classes.jar を classes_appcompat.jar に名前を変更して c:\src\onscripter_android\libs にコピー
 </ol>
 
-<p>����ˡ��ʲ��Τ褦�ˤ��� org.apache.http.legacy.jar �򥳥ԡ����ޤ��ʺǽ�ˣ��٤����¹Ԥ��ޤ��ˡ�</p>
+<p>さらに、以下のようにして org.apache.http.legacy.jar をコピーします（最初に１度だけ実行します）。</p>
 <ol>
-  <li> c:\src\android-sdk\platforms\android-28\optional\org.apache.http.legacy.jar �� c:\src\android-sdk\extras\google\market_licensing\library\libs\ �˥��ԡ�
+  <li> c:\src\android-sdk\platforms\android-28\optional\org.apache.http.legacy.jar を c:\src\android-sdk\extras\google\market_licensing\library\libs\ にコピー
 </ol>
 
-<h5>�ǥХå���</h5>
+<h5>デバッグ版</h5>
 
 <pre>
 &gt; cd c:\src\onscripter_android
@@ -635,16 +744,16 @@ c:\src\apache-ant-1.10.2-bin\...
 &gt; ..\apache-ant-1.10.2\bin\ant clean
 &gt; ..\apache-ant-1.10.2\bin\ant debug
 </pre>
-<p style="text-indent:0"><span style="color:red">���ա�</span>android.bat �� --library �λ�������Хѥ��ǤϤʤ����Хѥ��ˤ��Ƥ����������ޤ���../ �ϣ��ľ�Υǥ��쥯�ȥ��ؤ��ޤ���</p>
+<p style="text-indent:0"><span style="color:red">注意：</span>android.bat の --library の指定は絶対パスではなく相対パスにしてください。また、../ は１つ上のディレクトリを指します。</p>
 
-<p>��������ȡ��ʲ��ξ��� debug �����ǽ�̾���줿���ץ꤬��������ޤ������Υ��ץ�ϼµ��˥��󥹥ȡ��뤷�Ƽ¹ԤǤ��ޤ�����Google Play �Ǥϸ����Ǥ��ޤ���</p>
+<p>成功すると、以下の場所に debug キーで署名されたアプリが作成されます。このアプリは実機にインストールして実行できますが、Google Play では公開できません。</p>
 
 <pre>
 onscripter_android\bin\ONScripter-debug.apk
 </pre>
 
 
-<h5>��꡼���ǡ�Google Play �Ǹ����������</h5>
+<h5>リリース版（Google Play で公開する場合）</h5>
 
 <pre>
 &gt; cd c:\src\onscripter_android
@@ -653,53 +762,53 @@ onscripter_android\bin\ONScripter-debug.apk
 &gt; ..\apache-ant-1.10.2\bin\ant clean
 &gt; ..\apache-ant-1.10.2\bin\ant release
 </pre>
-<p style="text-indent:0"><span style="color:red">���ա�</span>android.bat �� --library �λ�������Хѥ��ǤϤʤ����Хѥ��ˤ��Ƥ���������</p>
+<p style="text-indent:0"><span style="color:red">注意：</span>android.bat の --library の指定は絶対パスではなく相対パスにしてください。</p>
 
-<p>��������ȡ��ʲ��ξ��˽�̾������Ƥ��ʤ����ץ꤬��������ޤ���</p>
+<p>成功すると、以下の場所に署名がされていないアプリが作成されます。</p>
 
 <pre>
 onscripter_android\bin\ONScripter-release-unsigned.apk
 </pre>
 
-<p>�����Żҽ�̾��Ԥ��ޤ���</p>
+<p>次に電子署名を行います。</p>
 
-<p>�ޤ����ʲ��Υ��ޥ�ɤ�¹Ԥ��ƾ�����ʸ���release.keystore ��������ޤ��ʥ��ޥ�ɤϣ��Ԥ�ʬ�������Ԥ����Ϥ��Ƥ��������ˡ�releasename �ϸ�����̾�ǡ���ͳ���դ��Ƥ������������κ�Ȥ��Żҽ�̾���٤˹Ԥ鷺�ˡ������ˣ��٤����Ԥ��ޤ������Ԥ����Żҽ�̾���ѹ�����Ƥ��ޤ������ץ�ι������󥹥ȡ��뤬�Ǥ��ʤ��ʤ�ޤ���</p>
+<p>まず、以下のコマンドを実行して証明書（鍵）release.keystore を作成します（コマンドは２行に分けず１行で入力してください）。releasename は鍵の別名で、自由に付けてください。この作業は電子署名の度に行わずに、事前に１度だけ行います。毎回行うと電子署名が変更されてしまい、アプリの更新インストールができなくなります。</p>
 
 <pre>
 &gt; &quot;c:\Program Files\Java\jdk1.8.0_162\bin\keytool.exe&quot; -genkey -v -keystore release.keystore -alias releasename -keyalg RSA -validity 10000
 </pre>
 
-<p>�����Ĥ������������ɬ�פ�����Τǡ�<a href="http://phpjavascriptroom.com/?t=mobile&amp;p=android_keystore#a_keystore">keytool���ޥ�ɤǽ�̾�ե�����κ���</a>�ʤɤ򻲹ͤ����Ϥ��Ƥ����������������줿������ʸ��� release.keystore �Ͼä��ʤ��褦�����դ��Ƥ���������</p>
+<p>いくつか質問に答える必要があるので、<a href="http://phpjavascriptroom.com/?t=mobile&amp;p=android_keystore#a_keystore">keytoolコマンドで署名ファイルの作成</a>などを参考に入力してください。生成された証明書（鍵） release.keystore は消さないように注意してください。</p>
 
-<p>���ˡ��ʲ��Υ��ޥ�ɤ�¹Ԥ��ƥ��ץ���Żҽ�̾�򤷤ޤ���</p>
+<p>次に、以下のコマンドを実行してアプリに電子署名をします。</p>
 
 <pre>
 &gt; &quot;c:\Program Files\Java\jdk1.8.0_162\bin\jarsigner.exe&quot; -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore release.keystore bin/ONScripter-release-unsigned.apk releasename
 </pre>
 
-<p>�Ǹ�ˡ�zipalign �ǰʲ��Τ褦�˥��ץ���Ŭ�����ޤ���</p>
+<p>最後に、zipalign で以下のようにアプリを最適化します。</p>
 
 <pre>
 &gt; ..\android-sdk\build-tools\28.0.2\zipalign.exe -f -v 4 bin/ONScripter-release-unsigned.apk bin/ONScripter-release-signed.apk
 </pre>
 
-<p>����ǡ�Google Play ���������ǽ�ʥ��ץ� bin/ONScripter-release-signed.apk ���������ޤ�����</p>
+<p>これで、Google Play から公開可能なアプリ bin/ONScripter-release-signed.apk が完成しました。</p>
 
 </div>
 -->
-<!--
+          <!--
 <div class="sub-content">
-<h3 id="develop-linux">Linux �ǤΥ��ץ�κ�����ˡ</h3>
+<h3 id="develop-linux">Linux でのアプリの作成方法</h3>
 
-<p><span style="color:red;">������ˡ�ϰ�������ˡ�ǡ����ߤϥ��ݡ��Ȥ��Ƥ��ޤ���</span></p>
+<p><span style="color:red;">この方法は以前の方法で、現在はサポートしていません。</span></p>
 
-<p>64bit �� Linux �Ǥγ�ȯ��ˡ���������ޤ��������δĶ�(Linux Debian/Stretch)�򸵤��������ޤ���</p>
+<p>64bit 版 Linux での開発方法を説明します。当方の環境(Linux Debian/Stretch)を元に説明します。</p>
 
-<h4>���եȥ�������Ƴ��</h4>
+<h4>ソフトウェアの導入</h4>
 
 <ol>
-  <li> <a href="http://developer.android.com/studio/index.html">Android Studio</a>�ΰ��ֲ��Ρ֥��ޥ�ɥ饤��ġ���Τ����ꤹ��פ�������Ǥ���ǿ��� SDK Tools �Ǥϡ�25.3.0 �ʹߤ��� android ���ޥ�ɤ� update �����Ǥ��ʤ��ʤäƤ��ޤä����ᡢ25.2.5 ����Ѥ��ޤ���<a href="https://dl-ssl.google.com/android/repository/tools_r25.2.5-linux.zip">tools_r25.2.5-linux.zip</a>�����������ɤ���Ŭ���ʾ����� /usr/local/src/android-sdk/�ˤ�Ÿ�����Ƥ����������ʲ���&lt;path_to_sdk&gt;��Ÿ���������Υѥ����� /usr/local/src/andorid-sdk�ˤ��֤������Ƥ����������ޤ����Ķ��ѿ��� PATH �� &lt;path_to_sdk&gt;/tools �� &lt;path_to_sdk&gt;/tools/bin ���ɲä��Ƥ���������
-  <li> SDK tools �򥤥󥹥ȡ��뤷����ˡ�android ��ư���ơ��ʲ��Υѥå������򥤥󥹥ȡ��뤷�Ƥ���������Android SDK Platform-tools �� Android SDK Build-tools �Ϻǿ��ΥС������ǹ����ޤ���<br>
+  <li> <a href="http://developer.android.com/studio/index.html">Android Studio</a>の一番下の「コマンドラインツールのみ入手する」から入手できる最新の SDK Tools では、25.3.0 以降から android コマンドで update を指定できなくなってしまったため、25.2.5 を使用します。<a href="https://dl-ssl.google.com/android/repository/tools_r25.2.5-linux.zip">tools_r25.2.5-linux.zip</a>をダウンロードして適当な場所（例 /usr/local/src/android-sdk/）に展開してください。以下、&lt;path_to_sdk&gt;は展開した場所のパス（例 /usr/local/src/andorid-sdk）で置き換えてください。また、環境変数の PATH に &lt;path_to_sdk&gt;/tools と &lt;path_to_sdk&gt;/tools/bin を追加してください。
+  <li> SDK tools をインストールした後に、android を起動して、以下のパッケージをインストールしてください。Android SDK Platform-tools と Android SDK Build-tools は最新のバージョンで構いません。<br>
 <ul>
 <li> Tools
 <ul>
@@ -717,7 +826,7 @@ onscripter_android\bin\ONScripter-release-unsigned.apk
 <li> Google Play Licesing Library, revision 1
 </ul>
 </ul>
-���ޥ�ɥ饤�󤫤�¹Ԥ�����ϡ��ʲ��Υ��ޥ�ɤ�����˥��󥹥ȡ��뤵��Ƥ���ѥå������ȥ��󥹥ȡ����ǽ�ʥѥå������ΰ������ǧ�Ǥ��ޤ���<br>
+コマンドラインから実行する場合は、以下のコマンドから既にインストールされているパッケージとインストール可能なパッケージの一覧を確認できます。<br>
 <pre>
 &gt; sdkmanager --list
 ...
@@ -732,8 +841,8 @@ onscripter_android\bin\ONScripter-release-unsigned.apk
   platforms;android-28              | 6            | Android SDK Platform 28
 ...
 </pre>
-<p style="text-indent:0"><span style="color:red">����:</span>��Ƭ�� &gt; �ϥץ���ץȤʤΤ����Ϥ��ޤ��󡣰ʹߤ�Ʊ���Ǥ���</p>
-�ʲ��Υ��ޥ�ɤˤ�ä�ɬ�פʥѥå������򥤥󥹥ȡ��뤷�ޤ���
+<p style="text-indent:0"><span style="color:red">注意:</span>先頭の &gt; はプロンプトなので入力しません。以降も同じです。</p>
+以下のコマンドによって必要なパッケージをインストールします。
 <pre>
 &gt; sdkmanager &quot;build-tools;29.0.2&quot;
 &gt; sdkmanager &quot;extras;android;m2repository&quot;
@@ -742,50 +851,50 @@ onscripter_android\bin\ONScripter-release-unsigned.apk
 &gt; sdkmanager &quot;platforms;android-28&quot;
 </pre>
 
-<li> <a href="http://developer.android.com/ndk/downloads/index.html">NDK Downloads</a>�κǿ��� NDK (�� android-ndk-r16b-linux-x86_64.zip) �����������ɤ���Ŭ���ʾ����� /usr/local/src/�ˤ�Ÿ�����ޤ����ʲ���&lt;path_to_ndk&gt;��Ÿ���������Υѥ����� /usr/local/src/andorid-ndk-r16b�ˤ��֤������Ƥ���������
+<li> <a href="http://developer.android.com/ndk/downloads/index.html">NDK Downloads</a>の最新の NDK (例 android-ndk-r16b-linux-x86_64.zip) をダウンロードして適当な場所（例 /usr/local/src/）に展開します。以下、&lt;path_to_ndk&gt;は展開した場所のパス（例 /usr/local/src/andorid-ndk-r16b）で置き換えてください。
 
-<li> <a href="#sdk">�饤�֥��ȼ��եץ������켰 (SDK)</a>���� onscripter_android.tar.gz �����������ɤ���Ŭ���ʾ���Ÿ�����ޤ���
-<li> <a href="../onscripter.html">ONScripter �Υڡ���</a>����ǿ��� ONScripter �����������ɤ��� onscripter_android/jni/application/onscripter-xxxxxxxx ��Ÿ�����ޤ���
-<li> Oracle/Sun �� JDK, Apache Ant ��ɬ�פˤʤ�Τǥǥ����ȥ�ӥ塼�����Υѥå����������ƥ�ʤɤ�Ȥäƥ��󥹥ȡ��뤷�Ƥ���������Oracle/Sun JDK �Υѥå��������ʤ���硢Debian �Ǥ�<a href="https://wiki.debian.org/Java/Sun">Java Sun</a>�˽��äưʲ��Τ褦�˼�ʬ�ǥѥå�������������ƥ��󥹥ȡ��뤷�Ƥ���������JDK ���Τϡ�<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java SE Downloads</a> �� JDK DOWNLOAD �����򤷡�Java SE Development Kit 8 (64bit�� Linux �ξ��� jdk-8u162-linux-x64.tar.gz �ʤ�) �����������ɤ��Ƥ���������
+<li> <a href="#sdk">ライブラリと周辺プログラム一式 (SDK)</a>から onscripter_android.tar.gz をダウンロードして適当な場所に展開します。
+<li> <a href="../onscripter.html">ONScripter のページ</a>から最新の ONScripter をダウンロードして onscripter_android/jni/application/onscripter-xxxxxxxx に展開します。
+<li> Oracle/Sun の JDK, Apache Ant が必要になるのでディストリビューションのパッケージシステムなどを使ってインストールしてください。Oracle/Sun JDK のパッケージがない場合、Debian では<a href="https://wiki.debian.org/Java/Sun">Java Sun</a>に従って以下のように自分でパッケージを作成してインストールしてください。JDK 自体は、<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java SE Downloads</a> の JDK DOWNLOAD を選択し、Java SE Development Kit 8 (64bit版 Linux の場合は jdk-8u162-linux-x64.tar.gz など) をダウンロードしてください。
 <pre>
 &gt; fakeroot make-jpkg jdk-8u162-linux-x64.tar.gz
 &gt; su
 &gt; dpkg -i oracle-java8-jdk_8u162_amd64.deb
 </pre>
-����ˡ��ʲ��Τ褦�ˤ��ƥ��󥹥ȡ��뤷�� JAVA �����򤷤ޤ�
+さらに、以下のようにしてインストールした JAVA を選択します
 <pre>
 &gt; update-alternatives --config java
 </pre>
 </ol>
 
-<h4>���ץ�κ���</h4>
+<h4>アプリの作成</h4>
 
-<p>ɬ�פ˱�����<a href="#distribution">������ǡ�����������ˡ</a>��<a href="#customize">�������ޥ���</a>�򻲹ͤ������Ԥä���ǡ��ʲ��μ��˽��äƥ��ץ��������Ƥ���������</p>
+<p>必要に応じて<a href="#distribution">ゲームデータの配布方法</a>・<a href="#customize">カスタマイズ</a>を参考に設定を行った上で、以下の手順に従ってアプリを作成してください。</p>
 
-<p>�ޤ���Google Play Licesing Library �饤�֥�������򤷤ޤ��ʺǽ�ˣ��٤����¹Ԥ��ޤ��ˡ�</p>
+<p>まず、Google Play Licesing Library ライブラリの設定をします（最初に１度だけ実行します）。</p>
 <pre>
 &gt; cd &lt;path_to_sdk&gt;/extras/google/market_licensing/library
 &gt; android update project -p . --target android-28
 </pre>
 
-<p>�ޤ����ʲ��Τ褦�ˤ��� android.support.v4.provider.DocumentFile �� Java �Х��ȥ����ɤ�ޤ� classes.jar �� aar �ե����뤫����Ф��ƥ��ԡ����ޤ��ʺǽ�ˣ��٤����¹Ԥ��ޤ��ˡ�</p>
+<p>また、以下のようにして android.support.v4.provider.DocumentFile の Java バイトコードを含む classes.jar を aar ファイルから抽出してコピーします（最初に１度だけ実行します）。</p>
 <pre>
 &gt; unzip &lt;path_to_sdk&gt;/extras/android/m2repository/com/android/support/support-v4/24.1.1/support-v4-24.1.1.aar -d /tmp
 &gt; cp /tmp/classes.jar onscripter_android/libs/classes_support.jar
 </pre>
 
-<p>����ˡ��ʲ��Τ褦�ˤ��� android.support.appcompat-v7v4.provider.DocumentFile �� Java �Х��ȥ����ɤ�ޤ� classes.jar �� aar �ե����뤫����Ф��ƥ��ԡ����ޤ��ʺǽ�ˣ��٤����¹Ԥ��ޤ��ˡ�</p>
+<p>さらに、以下のようにして android.support.appcompat-v7v4.provider.DocumentFile の Java バイトコードを含む classes.jar を aar ファイルから抽出してコピーします（最初に１度だけ実行します）。</p>
 <pre>
 &gt; unzip &lt;path_to_sdk&gt;/extras/android/m2repository/com/android/support/appcompat-v7/24.1.1/appcompat-v7-24.1.1.aar -d /tmp
 &gt; cp /tmp/classes.jar onscripter_android/libs/classes_appcompat.jar
 </pre>
 
-<p>����ˡ��ʲ��Τ褦�ˤ��� org.apache.http.legacy.jar �򥳥ԡ����ޤ��ʺǽ�ˣ��٤����¹Ԥ��ޤ��ˡ�</p>
+<p>さらに、以下のようにして org.apache.http.legacy.jar をコピーします（最初に１度だけ実行します）。</p>
 <pre>
 &gt; cp &lt;path_to_sdk&gt;/platforms/android-28/optional/org.apache.http.legacy.jar &lt;path_to_sdk&gt;/extras/google/market_licensing/library/libs/
 </pre>
 
-<h5>�ǥХå���</h5>
+<h5>デバッグ版</h5>
 
 <pre>
 &gt; cd onscripter_android
@@ -794,15 +903,15 @@ onscripter_android\bin\ONScripter-release-unsigned.apk
 &gt; ant clean
 &gt; ant debug
 </pre>
-<p style="text-indent:0"><span style="color:red">���ա�</span>&lt;relative_path_to_sdk&gt;�ϸ��ߤΥǥ��쥯�ȥ꤫�� SDK �ޤǤ����Хѥ�����ꤷ�Ƥ������������Хѥ��ˤ���Ȥ��ޤ������ޤ���</p>
+<p style="text-indent:0"><span style="color:red">注意：</span>&lt;relative_path_to_sdk&gt;は現在のディレクトリから SDK までの相対パスを指定してください。絶対パスにするとうまくいきません。</p>
 
-<p>��������ȡ��ʲ��ξ��� debug �����ǽ�̾���줿���ץ꤬��������ޤ������Υ��ץ�ϼµ��˥��󥹥ȡ��뤷�Ƽ¹ԤǤ��ޤ�����Google Play �Ǥϸ����Ǥ��ޤ���</p>
+<p>成功すると、以下の場所に debug キーで署名されたアプリが作成されます。このアプリは実機にインストールして実行できますが、Google Play では公開できません。</p>
 
 <pre>
 onscripter_android/bin/ONScripter-debug.apk
 </pre>
 
-<h5>��꡼���ǡ�Google Play �Ǹ����������</h5>
+<h5>リリース版（Google Play で公開する場合）</h5>
 
 <pre>
 &gt; cd onscripter_android
@@ -811,308 +920,318 @@ onscripter_android/bin/ONScripter-debug.apk
 &gt; ant clean
 &gt; ant release
 </pre>
-<p style="text-indent:0"><span style="color:red">���ա�</span>&lt;relative_path_to_sdk&gt;�ϸ��ߤΥǥ��쥯�ȥ꤫�� SDK �ޤǤ����Хѥ�����ꤷ�Ƥ������������Хѥ��ˤ���Ȥ��ޤ������ޤ���</p>
+<p style="text-indent:0"><span style="color:red">注意：</span>&lt;relative_path_to_sdk&gt;は現在のディレクトリから SDK までの相対パスを指定してください。絶対パスにするとうまくいきません。</p>
 
-<p>��������ȡ��ʲ��ξ��˽�̾������Ƥ��ʤ����ץ꤬��������ޤ���</p>
+<p>成功すると、以下の場所に署名がされていないアプリが作成されます。</p>
 
 <pre>
 onscripter_android/bin/ONScripter-release-unsigned.apk
 </pre>
 
-<p>�����Żҽ�̾��Ԥ��ޤ���</p>
+<p>次に電子署名を行います。</p>
 
-<p>�ޤ����ʲ��Υ��ޥ�ɤ�¹Ԥ��ƾ�����ʸ���release.keystore ��������ޤ���releasename �ϸ�����̾�ǡ�������ʸ������֤������Ƥ������������κ�Ȥ��Żҽ�̾���٤˹Ԥ鷺�ˡ������ˣ��٤����Ԥ��ޤ������Ԥ����Żҽ�̾���ѹ�����Ƥ��ޤ������ץ�򹹿������Ȥ��˥��åץǡ��Ȥ��Ǥ��ʤ��ʤ�ޤ��ʰ�ö���ץ��������Х��󥹥ȡ���Ǥ��ޤ��ˡ��ޤ������襢�ץ�򹹿�����Ȥ���ɬ�פˤʤ�Τǡ�������̾��˺��ʤ��褦�˥�⤷�Ƥ����Ƥ���������</p>
+<p>まず、以下のコマンドを実行して証明書（鍵）release.keystore を作成します。releasename は鍵の別名で、好きな文字列に置き換えてください。この作業は電子署名の度に行わずに、事前に１度だけ行います。毎回行うと電子署名が変更されてしまい、アプリを更新したときにアップデートができなくなります（一旦アプリを削除すればインストールできます）。また、将来アプリを更新するときに必要になるので、鍵の別名は忘れないようにメモしておいてください。</p>
 
 <pre>
 &gt; keytool -genkey -v -keystore release.keystore -alias releasename -keyalg RSA -validity 10000
 </pre>
 
-<p>�����Ĥ������������ɬ�פ�����Τǡ�<a href="http://phpjavascriptroom.com/?t=mobile&amp;p=android_keystore#a_keystore">keytool���ޥ�ɤǽ�̾�ե�����κ���</a>�ʤɤ򻲹ͤ����Ϥ��Ƥ����������������줿������ʸ��� release.keystore �Ͼä��ʤ��褦�����դ��Ƥ���������</p>
+<p>いくつか質問に答える必要があるので、<a href="http://phpjavascriptroom.com/?t=mobile&amp;p=android_keystore#a_keystore">keytoolコマンドで署名ファイルの作成</a>などを参考に入力してください。生成された証明書（鍵） release.keystore は消さないように注意してください。</p>
 
-<p>���ˡ��ʲ��Υ��ޥ�ɤ�¹Ԥ��ƥ��ץ���Żҽ�̾�򤷤ޤ���</p>
+<p>次に、以下のコマンドを実行してアプリに電子署名をします。</p>
 
 <pre>
 &gt; jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore release.keystore bin/ONScripter-release-unsigned.apk releasename
 </pre>
 
-<p>�Ǹ�ˡ�zipalign �ǰʲ��Τ褦�˥��ץ���Ŭ�����ޤ���zipalign �� &lt;path_to_sdk&gt;/build-tools/28.0.2/zipalign �ʤɤˤ���ޤ���</p>
+<p>最後に、zipalign で以下のようにアプリを最適化します。zipalign は &lt;path_to_sdk&gt;/build-tools/28.0.2/zipalign などにあります。</p>
 
 <pre>
 &gt; zipalign -f -v 4 bin/ONScripter-release-unsigned.apk bin/ONScripter-release-signed.apk
 </pre>
 
-<p>����ǡ�Google Play ���������ǽ�ʥ��ץ� bin/ONScripter-release-signed.apk ���������ޤ�����</p>
+<p>これで、Google Play から公開可能なアプリ bin/ONScripter-release-signed.apk が完成しました。</p>
 
 </div>
 -->
 
-<div class="sub-content">
-<h3 id="sdk">�饤�֥��ȼ��եץ������켰 (SDK)</h3>
+          <div class="sub-content">
+            <h3 id="sdk">ライブラリと周辺プログラム一式 (SDK)</h3>
 
-<p>ONScripter on Android �Υ��ץ��������뤿���ɬ�פ� ONScripter ���ΰʳ��Υץ������켰�Ǥ���Android Studio ��Ȥ����� onscripter_android_studio-xxxxxxxx.zip �����������ɤ��Ƥ���������</p>
+            <p>ONScripter on Android のアプリを作成するために必要な ONScripter 本体以外のプログラム一式です。Android Studio を使う場合は onscripter_android_studio-xxxxxxxx.zip をダウンロードしてください。</p>
 
-<table><tr>
-<th style="width:6em">��꡼����</th><th>SDK</th>
-</tr><tr>
-<td>20230323</td>
-<td><A HREF="onscripter_android_studio-20230323.zip">onscripter_android_studio-20230323.zip</a><br>
-����compileSdkVersion �� targetSdkVersion �� 33 ���ѹ����ޤ�����<br>
-������ư���˥���������򤷤Ƽ¹Ԥ�����ˡ��ǥ��쥯�ȥ��̵ͭ�򥭥�å��夷���ǥ��쥯�ȥ꤬¸�ߤ��ʤ����ˤ� ONScripter.java �� findFile �ؿ���ƤФʤ����Ȥˤ�äƥե�������ɤ߹��ߤ��®�����ޤ�����</p>
-</tr><tr>
-<td>20230103</td>
-<td><A HREF="onscripter_android_studio-20230103.zip">onscripter_android_studio-20230103.zip</a><br>
-������ʸ���Ⱦ�ʸ������̤��ƥե�����̾��ȹ礷�Ƥ������ᡢ�����Υե�������ɤ߹��ߤ˼��Ԥ���Х��������ޤ�����</p>
-</tr><tr>
-<td>20220816</td>
-<td><A HREF="onscripter_android_studio-20220816.zip">onscripter_android_studio-20220816.zip</a><br>
-��<A HREF="onscripter_android-20220816.tar.gz">onscripter_android-20220816.tar.gz</a><br>
-����������ǡ����򥢥ץ����¢����ȡ����ץ�򥤥󥹥ȡ��뤷�����2���ܰʹߤϵ�ư�˼��Ԥ���Х��������ޤ�����<br>
-����Play Asset Delivery (PAD) �� install-time Asset Pack ���б����ơ�����1GB�ޤǤΥ�����ǡ����򥢥ץ����¢�Ǥ���褦�ˤ��ޤ������ޤ�������ʳ��Υ�����ǡ�����������ˡ���ѻߤ��ޤ�����</p>
-</tr><tr>
-<td>20220721</td>
-<td><A HREF="onscripter_android_studio-20220721.zip">onscripter_android_studio-20220721.zip</a><br>
-��<A HREF="onscripter_android-20220721.tar.gz">onscripter_android-20220721.tar.gz</a><br>
-������˥塼�Υץ饤�Х����ݥꥷ�����顢Intent ��Ȥä�<a href="/privacy_policy.html">�ץ饤�Х����ݥꥷ���Υڡ���</a>�򻲾ȤǤ���褦�ˤ��ޤ�����
-</tr><tr>
-<td>20220123</td>
-<td><A HREF="onscripter_android_studio-20220123.zip">onscripter_android_studio-20220123.zip</a><br>
-��<A HREF="onscripter_android-20220123.tar.gz">onscripter_android-20220123.tar.gz</a><br>
-����<a href="#distribution">������ǡ�����������ˡ</a>�Τ����֥ѥ����󣲡����ץ����¢������ˡ�פǥ��ץ�Υ����åȤ˥�����ǡ��������֤������ˡ����󥹥ȡ�����˥�����ǡ�����Ÿ���������¹���ϥ����åȤ���ľ�ܥե�������ɤ߹���褦�ˤ��ޤ�����
-</tr><tr>
-<td>20220118</td>
-<td><A HREF="onscripter_android_studio-20220118.zip">onscripter_android_studio-20220118.zip</a><br>
-��<A HREF="onscripter_android-20220118.tar.gz">onscripter_android-20220118.tar.gz</a><br>
-����compileSdkVersion, targetSdkVersion �� 32 ���ѹ����ޤ�����<br>
-����Google Play Licensing Library �� Import module ��Ȥ鷺�� app �β���ľ���Ȥ߹���褦�ˤ��ޤ�����<br>
-����AndroidManifest.xml �� android:exported=&quot;true&quot; �����ꤷ�ޤ�����<br>
-����File API �� DocumentFile ��Ȥ鷺�� ContentResolver.query �� DocumentsContract ��Ȥäƥե�������ɤ߽񤭤���褦�ˤ��ޤ�����<br>
-����<a href="#distribution">������ǡ�����������ˡ</a>�Τ����֥ѥ����󣲡����ץ����¢������ˡ�פˤΤ��б����Ƥ��ޤ���
-</tr><tr>
-<td>20200825</td>
-<td><A HREF="onscripter_android_studio-20200825.zip">onscripter_android_studio-20200825.zip</a><br>
-��<A HREF="onscripter_android-20200825.tar.gz">onscripter_android-20200825.tar.gz</a><br>
-������ư���˥ǥ��쥯�ȥ�����򤹤�Ȥ����� NullPointerException ��ȯ�����뤳�Ȥ���������˰����б����ޤ�����
-</tr><tr>
-<td>20200805</td>
-<td><A HREF="onscripter_android_studio-20200805.zip">onscripter_android_studio-20200805.zip</a><br>
-��<A HREF="onscripter_android-20200805.tar.gz">onscripter_android-20200805.tar.gz</a><br>
-�����ޥ˥ե����Ȥ� requestLegacyExternalStorage �� true �����ꤷ�ޤ�����
-</tr><tr>
-<td>20200722</td>
-<td><A HREF="onscripter_android_studio-20200722.zip">onscripter_android_studio-20200722.zip</a><br>
-��<A HREF="onscripter_android-20200722.tar.gz">onscripter_android-20200722.tar.gz</a><br>
-����Target API �� 29 ���ѹ����ޤ�����<br>
-����HTTP �̿���ͭ���ˤ��ޤ�����
-</tr><tr>
-<td>20200223</td>
-<td><A HREF="onscripter_android_studio-20200223.zip">onscripter_android_studio-20200223.zip</a><br>
-��<A HREF="onscripter_android-20200223.tar.gz">onscripter_android-20200223.tar.gz</a><br>
-����Lua �� Android.mk �� FORTIFY ����������ʲ��Υ��ץ������ɲä��ޤ�����
-</tr><!--<tr>
+            <table>
+              <tr>
+                <th style="width:6em">リリース日</th>
+                <th>SDK</th>
+              </tr>
+              <tr>
+                <td>20230323</td>
+                <td><A HREF="onscripter_android_studio-20230323.zip">onscripter_android_studio-20230323.zip</a><br>
+                  　　compileSdkVersion と targetSdkVersion を 33 に変更しました。<br>
+                  　　起動時にゲームを選択して実行する場合に、ディレクトリの有無をキャッシュし、ディレクトリが存在しない場合には ONScripter.java の findFile 関数を呼ばないことによってファイルの読み込みを高速化しました。</p>
+              </tr>
+              <tr>
+                <td>20230103</td>
+                <td><A HREF="onscripter_android_studio-20230103.zip">onscripter_android_studio-20230103.zip</a><br>
+                  　　大文字と小文字を区別してファイル名を照合していたため、一部のファイルの読み込みに失敗するバグを修正しました。</p>
+              </tr>
+              <tr>
+                <td>20220816</td>
+                <td><A HREF="onscripter_android_studio-20220816.zip">onscripter_android_studio-20220816.zip</a><br>
+                  　<A HREF="onscripter_android-20220816.tar.gz">onscripter_android-20220816.tar.gz</a><br>
+                  　　ゲームデータをアプリに内蔵すると、アプリをインストールした後に2回目以降は起動に失敗するバグを修正しました。<br>
+                  　　Play Asset Delivery (PAD) の install-time Asset Pack に対応して、最大1GBまでのゲームデータをアプリに内蔵できるようにしました。また、これ以外のゲームデータの配布方法は廃止しました。</p>
+              </tr>
+              <tr>
+                <td>20220721</td>
+                <td><A HREF="onscripter_android_studio-20220721.zip">onscripter_android_studio-20220721.zip</a><br>
+                  　<A HREF="onscripter_android-20220721.tar.gz">onscripter_android-20220721.tar.gz</a><br>
+                  　　メニューのプライバシーポリシーから、Intent を使って<a href="/privacy_policy.html">プライバシーポリシーのページ</a>を参照できるようにしました。
+              </tr>
+              <tr>
+                <td>20220123</td>
+                <td><A HREF="onscripter_android_studio-20220123.zip">onscripter_android_studio-20220123.zip</a><br>
+                  　<A HREF="onscripter_android-20220123.tar.gz">onscripter_android-20220123.tar.gz</a><br>
+                  　　<a href="#distribution">ゲームデータの配布方法</a>のうち「パターン２：アプリに内蔵する方法」でアプリのアセットにゲームデータを配置した場合に、インストール時にゲームデータを展開せず、実行中はアセットから直接ファイルを読み込むようにしました。
+              </tr>
+              <tr>
+                <td>20220118</td>
+                <td><A HREF="onscripter_android_studio-20220118.zip">onscripter_android_studio-20220118.zip</a><br>
+                  　<A HREF="onscripter_android-20220118.tar.gz">onscripter_android-20220118.tar.gz</a><br>
+                  　　compileSdkVersion, targetSdkVersion を 32 に変更しました。<br>
+                  　　Google Play Licensing Library を Import module を使わずに app の下に直接組み込むようにしました。<br>
+                  　　AndroidManifest.xml に android:exported=&quot;true&quot; を設定しました。<br>
+                  　　File API や DocumentFile を使わずに ContentResolver.query と DocumentsContract を使ってファイルを読み書きするようにしました。<br>
+                  　　<a href="#distribution">ゲームデータの配布方法</a>のうち「パターン２：アプリに内蔵する方法」にのみ対応しています。
+              </tr>
+              <tr>
+                <td>20200825</td>
+                <td><A HREF="onscripter_android_studio-20200825.zip">onscripter_android_studio-20200825.zip</a><br>
+                  　<A HREF="onscripter_android-20200825.tar.gz">onscripter_android-20200825.tar.gz</a><br>
+                  　　起動時にディレクトリを選択するところで NullPointerException が発生することがある問題に一部対応しました。
+              </tr>
+              <tr>
+                <td>20200805</td>
+                <td><A HREF="onscripter_android_studio-20200805.zip">onscripter_android_studio-20200805.zip</a><br>
+                  　<A HREF="onscripter_android-20200805.tar.gz">onscripter_android-20200805.tar.gz</a><br>
+                  　　マニフェストで requestLegacyExternalStorage を true に設定しました。
+              </tr>
+              <tr>
+                <td>20200722</td>
+                <td><A HREF="onscripter_android_studio-20200722.zip">onscripter_android_studio-20200722.zip</a><br>
+                  　<A HREF="onscripter_android-20200722.tar.gz">onscripter_android-20200722.tar.gz</a><br>
+                  　　Target API を 29 に変更しました。<br>
+                  　　HTTP 通信を有効にしました。
+              </tr>
+              <tr>
+                <td>20200223</td>
+                <td><A HREF="onscripter_android_studio-20200223.zip">onscripter_android_studio-20200223.zip</a><br>
+                  　<A HREF="onscripter_android-20200223.tar.gz">onscripter_android-20200223.tar.gz</a><br>
+                  　　Lua の Android.mk に FORTIFY を抑制する以下のオプションを追加しました。
+              </tr><!--<tr>
 <td>20190911</td>
 <td><A HREF="onscripter_android_studio-20190911.zip">onscripter_android_studio-20190911.zip</a><br>
-��<A HREF="onscripter_android-20190911.tar.gz">onscripter_android-20190911.tar.gz</a><br>
-����UTF-8�ǽ񤫤줿������ץ� pscript.dat ���ɤ߹��ߤ��б����ޤ�����
+　<A HREF="onscripter_android-20190911.tar.gz">onscripter_android-20190911.tar.gz</a><br>
+　　UTF-8で書かれたスクリプト pscript.dat の読み込みに対応しました。
 </tr><tr>
 <td>20190819</td>
 <td><A HREF="onscripter_android_studio-20190819.zip">onscripter_android_studio-20190819.zip</a><br>
-����targetSdkVersion �� 28 ���ѹ����ޤ������ޤ���ARM �Υ������ƥ������ Android API ��Ƚ�꤬�Խ�ʬ�ǥӥ�ɻ���¹Ի��˼��Ԥ����礬���ä����ὤ�����ޤ�����<br>
-��<A HREF="onscripter_android-20190819.tar.gz">onscripter_android-20190819.tar.gz</a><br>
-����Android Studio ��Ȥ�ʤ��ǥӥ�ɤ������ˡ�Android 2.0 (armeabi) �ʾ�Ǽ¹ԤǤ��륢�ץ������Ǥ���褦�ˤ��ޤ�����
+　　targetSdkVersion を 28 に変更しました。また、ARM のアーキテクチャや Android API の判定が不十分でビルド時や実行時に失敗する場合があったため修正しました。<br>
+　<A HREF="onscripter_android-20190819.tar.gz">onscripter_android-20190819.tar.gz</a><br>
+　　Android Studio を使わないでビルドした場合に、Android 2.0 (armeabi) 以上で実行できるアプリを作成できるようにしました。
 </tr><tr>
 <td>20181128</td>
 <td><A HREF="onscripter_android_studio-20190818.zip">onscripter_android_studio-20190818.zip</a><br>
-����targetSdkVersion �� 24 �ʾ�Ǥ� Intent �����Ѥ���ư�������Ǥ���褦�ˤ��ޤ�����<br>
-����32bit (armeabi-v7a) �� 64bit (arm64-v8a) ���ѤΥ��ץ����������褦�ˤ��ޤ�����
+　　targetSdkVersion が 24 以上でも Intent を利用して動画を再生できるようにしました。<br>
+　　32bit (armeabi-v7a) と 64bit (arm64-v8a) 兼用のアプリを生成するようにしました。
 </tr><tr>
 <td>20181030</td>
 <td><A HREF="onscripter_android_studio-20181030.zip">onscripter_android_studio-20181030.zip</a><br>
-����targetSdkVersion �� 26 ���ѹ����ޤ�����
+　　targetSdkVersion を 26 に変更しました。
 </tr><tr>
 <td>20180409</td>
 <td><A HREF="onscripter_android_studio-20180409.zip">onscripter_android_studio-20180409.zip</a><br>
-��<A HREF="onscripter_android-20180409.tar.gz">onscripter_android-20180409.tar.gz</a><br>
-�����ǥ��쥯�ȥ�κ������б����ޤ�����
+　<A HREF="onscripter_android-20180409.tar.gz">onscripter_android-20180409.tar.gz</a><br>
+　　ディレクトリの作成に対応しました。
 </tr><tr>
 <td>20180407</td>
 <td><A HREF="onscripter_android_studio-20180407.zip">onscripter_android_studio-20180407.zip</a><br>
-��<A HREF="onscripter_android-20180407.tar.gz">onscripter_android-20180407.tar.gz</a><br>
-�������ץ�� <a href="http://mplus-fonts.osdn.jp/">M+ �ե����</a>�����ۤ���Ƥ��� mplus-2m-medium.ttf ����¢����褦�ˤ��ޤ�����default.ttf ���ʤ�������¢�ե���Ȥ���Ѥ��ޤ���
+　<A HREF="onscripter_android-20180407.tar.gz">onscripter_android-20180407.tar.gz</a><br>
+　　アプリに <a href="http://mplus-fonts.osdn.jp/">M+ フォント</a>で配布されている mplus-2m-medium.ttf を内蔵するようにしました。default.ttf がない場合は内蔵フォントを使用します。
 </tr><tr>
 <td>20180405</td>
 <td><A HREF="onscripter_android_studio-20180405.zip">onscripter_android_studio-20180405.zip</a><br>
-��<A HREF="onscripter_android-20180405.tar.gz">onscripter_android-20180405.tar.gz</a><br>
-����Android Studio �ѤΥץ��������ȥե�����ʾ�ˤ����
+　<A HREF="onscripter_android-20180405.tar.gz">onscripter_android-20180405.tar.gz</a><br>
+　　Android Studio 用のプロジェクトファイル（上）を公開
 </tr><tr>
 <td>20180321</td>
 <td><A HREF="onscripter_android-20180321.tar.gz">onscripter_android-20180321.tar.gz</a><br>
-����jni/jpeg/jidctfst.S ����
+　　jni/jpeg/jidctfst.S を修正
 </tr><tr>
 <td>20170816</td>
 <td><A HREF="onscripter_android-20170816.tar.gz">onscripter_android-20170816.tar.gz</a><br>
-����NDK_TOOLCHAIN_VERSION := 4.9 �� Application.mk ���ɲ�
+　　NDK_TOOLCHAIN_VERSION := 4.9 を Application.mk に追加
 </tr><tr>
 <td>20161016</td>
 <td><A HREF="onscripter_android-20161016.tar.gz">onscripter_android-20161016.tar.gz</a><br>
-�����ܥ������̤ξ岼��������ե�å��ˤ�äư����Ф��������ѹ�
+　　ボタンを画面の上下左右からフリックによって引き出す方式に変更
 </tr><tr>
 <td>20161005</td>
 <td><A HREF="onscripter_android-20161005.tar.gz">onscripter_android-20161005.tar.gz</a><br>
-����Android 5.0 �ʹߤǳ��� SD �����ɤؤν񤭹��ߤ��б�<br>
-����Lua �� io_open �ؿ��ǽ񤭹��ߥ⡼�ɤǼ��Ԥ������� stdout ���֤��褦�˽���<br>
-����SMPEG ��Ƴ����YUV Overlay �ˤ����Ϥ�̵������</td>
+　　Android 5.0 以降で外部 SD カードへの書き込みに対応<br>
+　　Lua の io_open 関数で書き込みモードで失敗した場合に stdout を返すように修正<br>
+　　SMPEG を導入（YUV Overlay による出力は無効化）</td>
 </tr><tr>
 <td>20150810</td>
 <td><A HREF="onscripter_android-20150810.tar.gz">onscripter_android-20150810.tar.gz</a><br>
-����Android ART ��5.0�ʹ�ɸ����б� �ǿ��� + SDL_mixer ����</td>
+　　Android ART （5.0以降標準）対応 最新版 + SDL_mixer 修正</td>
 </tr><tr>
 <td>20140816</td>
 <td><A HREF="onscripter_android-20140816.tar.gz">onscripter_android-20140816.tar.gz</a><br>
-����Android ART ��5.0�ʹ�ɸ����б� �ǿ���</td>
+　　Android ART （5.0以降標準）対応 最新版</td>
 </tr><tr>
 <td>20140406</td>
 <td><A HREF="onscripter_android-20140406.tar.gz">onscripter_android-20140406.tar.gz</a><br>
-��������ư��ץ졼�䡼�θƤӽФ�������</td>
+　　外部動画プレーヤーの呼び出し方を修正</td>
 </tr><tr>
 <td>20130202</td>
 <td><A HREF="onscripter_android-20130202.tar.gz">onscripter_android-20130202.tar.gz</a><br>
-����libjpeg �� jidctfst.S �ΥХ�����</td>
+　　libjpeg の jidctfst.S のバグを修正</td>
 </tr><tr>
 <td>20120319</td>
 <td><A HREF="onscripter_android-20120319.tar.gz">onscripter_android-20120319.tar.gz</a><br>
-���������� 16bit �ǤΥ��ʥåץ���å�</td>
+　　色深度 16bit 版のスナップショット</td>
 </tr><tr>
 <td>20120122</td>
 <td><A HREF="onscripter_android-20120122.tar.gz">onscripter_android-20120122.tar.gz</a><br>
-�����Ź沽 zip �б��ǤΥ��ʥåץ���å�</td>
+　　暗号化 zip 対応版のスナップショット</td>
 </tr><tr>
 <td>20110815</td>
 <td><A HREF="onscripter_android-20110815.tar.gz">onscripter_android-20110815.tar.gz</a><br>
-�����Ź沽 zip ���б��ǤΥ��ʥåץ���å�</td>
+　　暗号化 zip 非対応版のスナップショット</td>
 </tr>-->
-</table>
+            </table>
 
-<p><a
-href="http://libsdl-android.sourceforge.net/">Port of libSDL to Android mobile platform, including several games.</a>�� Android �˰ܿ�����Ƥ��� SDL �ȥ�����򸵤˺������Ƥ��ޤ������ˤ�����������2010ǯ5������Τ�ΤǤ���<a
-href="http://github.com/pelya/commandergenius/archives/sdl_android">pelya/commandergenius</a>�� last-working-sdl-1.3 �����ˤ����������˺Ǥ�ᤤ�Ȼפ��ޤ���������ͤ��󤬸�������Ƥ��� ONScripter for Android 2.1 (ARM) 20100530a test1 �Υ������⻲�ͤˤ����Ƥ��������ޤ�����</p>
+            <p><a href="http://libsdl-android.sourceforge.net/">Port of libSDL to Android mobile platform, including several games.</a>で Android に移植されている SDL とゲームを元に作成しています。元にしたソースは2010年5月時点のものです。<a href="http://github.com/pelya/commandergenius/archives/sdl_android">pelya/commandergenius</a>の last-working-sdl-1.3 が元にしたソースに最も近いと思います。秋月かたねさんが公開されていた ONScripter for Android 2.1 (ARM) 20100530a test1 のソースも参考にさせていただきました。</p>
 
-<p>�ʲ��Υե����뤬�ޤޤ�Ƥ��ޤ���</p>
-<ul>
-<li> ���ץ�򥳥�ѥ��뤹�뤿�������ե����롦�꥽��������������
-<li> Android �� ONScripter �ζ��Ϥ��򤹤� JAVA �Υץ������
-<dl>
-<dt> ONScripter.java (MainActivity.java �򸵤˰ʲ��ε�ǽ���ɲ�)
-<dd> ��ư���Υ�����ǡ�������Native Code (C++) �Ǻ������줿 ONScripter ������ʬ�θƤӽФ������եȥ������ܥ����������˥塼������Intent �����Ѥ���ư�����
-<dt> Video.java (�ʲ��ε�ǽ���ɲ�)
-<dd> �µ��Υܥ�塼��ܥ���ˤ�벻���ѹ�
-<dd> onSurfaceChanged() ��� OpenGL �ν������Ԥ���onPause(), onResume() ��� SDL_ACTIVEEVENT ��ȯ�Ԥ��� ONScripter ¦�ǥᥤ�󥹥�åɤΥ��å�(GLThread.SwapBuffers() �ؤΥ�������)�ȺƳ����β��̺����꤬�Ԥ���褦���ѹ� (���ޤ�������ˡ�ǤϤ���ޤ��󤬡��������ڤ��ؤ����б����뤿��)
-<dt> DataDownload.java (�ʲ��ε�ǽ����ɡ��ɲ�)
-<dd> Google Play �⤷���ϼ��Ȥ��Ѱդ��������Ȥ���Υ�����ǡ�������������ɵ�ǽ
-</dl>
-<li> SDL-1.3 (SDL port for Android SDK/NDK 1.6 ���饳�ԡ�)
-<li> SDL_image (SDL port for Android SDK/NDK 1.6 ���饳�ԡ�)
-<li> SDL_mixer (SDL port for Android SDK/NDK 1.6 ���饳�ԡ� + <a href="sdl_mixer.diff">sdl_mixer.diff</a>)
-<li> SDL_ttf (SDL_ttf-2.0.11 + TTF_RenderGlyph_Shaded �ؿ��ؤΥѥå�)
-<li> freetype (SDL port for Android SDK/NDK 1.6 ���饳�ԡ�)
-<li> jpeg (SDL port for Android SDK/NDK 1.6 ���饳�ԡ�)
-<li> png (SDL port for Android SDK/NDK 1.6 ���饳�ԡ�)
-<li> libogg-1.3.3 (�ʲ��Υѥå������Ƥ��塤���פʥե�����������Ƥ���ե��������֤��ѹ�)
-  <ul>
-    <li> <a href="libogg-1.3.3.diff">libogg-1.3.3.diff</a> (Andoroid.mk �� config_types.h ���ɲ�)
-  </ul>
-<li> tremor (libvorbisidec_1.2.1+git20180316 �˰ʲ��Υѥå������Ƥ��塤���פʥե��������)
-  <ul>
-    <li> <a href="tremor-arm-thumb2.diff">tremor-arm-thumb2.diff</a> ([PATCH] tremor: add IT instructions for arm thumb2 tune flags)<br>
-    <li> <a href="libvorbisidec-1.2.1+git20180316-fix.diff">libvorbisidec-1.2.1+git20180316-fix.diff</a>��Android.mk ���ɲá�armeabi-v7a �ѥ�����֥�����ʬΥ������ǥ������������ɲá�
-  </ul>
-<li> lua-5.1.5
-<li> bzip2-1.0.5
-<li> libmad-0.15.1b (�ʲ��Υѥå������Ƥ��塤���פʥե��������)
-  <ul>
-    <li> <a href="libmad_0.15.1b-9.diff">libmad_0.15.1b-9.diff</a> (<a href="https://packages.debian.org/sid/libmad0-dev">Debian �ѥå�����</a>)
-    <li> ��Υѥå������Ƥ����������� debian/patches/ �ʲ��Τ��٤ƤΥѥå�
-    <li> <a href="libmad_0.15.1b-9-fix2.diff">libmad_0.15.1b-9-fix2.diff</a> (Android.mk ���ɲá�__arm__, __aarch64__, __i386__, __x86_64__ ��Ƚ�̡�
-  </ul>
-</ul>
+            <p>以下のファイルが含まれています。</p>
+            <ul>
+              <li> アプリをコンパイルするための設定ファイル・リソース・アイコン
+              <li> Android と ONScripter の橋渡しをする JAVA のプログラム
+                <dl>
+                  <dt> ONScripter.java (MainActivity.java を元に以下の機能を追加)
+                  <dd> 起動時のゲームデータ選択・Native Code (C++) で作成された ONScripter 本体部分の呼び出し・ソフトウェアボタン処理・メニュー処理・Intent を利用した動画再生
+                  <dt> Video.java (以下の機能を追加)
+                  <dd> 実機のボリュームボタンによる音量変更
+                  <dd> onSurfaceChanged() 内で OpenGL の初期化を行い、onPause(), onResume() 内で SDL_ACTIVEEVENT を発行して ONScripter 側でメインスレッドのロック(GLThread.SwapBuffers() へのアクセス)と再開時の画面再設定が行われるように変更 (あまり綺麗な方法ではありませんが、タスク切り替えに対応するため)
+                  <dt> DataDownload.java (以下の機能を改良・追加)
+                  <dd> Google Play もしくは自身で用意したサイトからのゲームデータダウンロード機能
+                </dl>
+              <li> SDL-1.3 (SDL port for Android SDK/NDK 1.6 からコピー)
+              <li> SDL_image (SDL port for Android SDK/NDK 1.6 からコピー)
+              <li> SDL_mixer (SDL port for Android SDK/NDK 1.6 からコピー + <a href="sdl_mixer.diff">sdl_mixer.diff</a>)
+              <li> SDL_ttf (SDL_ttf-2.0.11 + TTF_RenderGlyph_Shaded 関数へのパッチ)
+              <li> freetype (SDL port for Android SDK/NDK 1.6 からコピー)
+              <li> jpeg (SDL port for Android SDK/NDK 1.6 からコピー)
+              <li> png (SDL port for Android SDK/NDK 1.6 からコピー)
+              <li> libogg-1.3.3 (以下のパッチを当てた後，不要なファイルを削除してからファイル配置を変更)
+                <ul>
+                  <li> <a href="libogg-1.3.3.diff">libogg-1.3.3.diff</a> (Andoroid.mk と config_types.h の追加)
+                </ul>
+              <li> tremor (libvorbisidec_1.2.1+git20180316 に以下のパッチを当てた後，不要なファイルを削除)
+                <ul>
+                  <li> <a href="tremor-arm-thumb2.diff">tremor-arm-thumb2.diff</a> ([PATCH] tremor: add IT instructions for arm thumb2 tune flags)<br>
+                  <li> <a href="libvorbisidec-1.2.1+git20180316-fix.diff">libvorbisidec-1.2.1+git20180316-fix.diff</a>（Android.mk の追加，armeabi-v7a 用アセンブリ言語の分離，エンディアンの定義の追加）
+                </ul>
+              <li> lua-5.1.5
+              <li> bzip2-1.0.5
+              <li> libmad-0.15.1b (以下のパッチを当てた後，不要なファイルを削除)
+                <ul>
+                  <li> <a href="libmad_0.15.1b-9.diff">libmad_0.15.1b-9.diff</a> (<a href="https://packages.debian.org/sid/libmad0-dev">Debian パッケージ</a>)
+                  <li> 上のパッチを当てると生成される debian/patches/ 以下のすべてのパッチ
+                  <li> <a href="libmad_0.15.1b-9-fix2.diff">libmad_0.15.1b-9-fix2.diff</a> (Android.mk の追加，__arm__, __aarch64__, __i386__, __x86_64__ の判別）
+                </ul>
+            </ul>
 
-</div> <!-- sub-content -->
+          </div> <!-- sub-content -->
 
-<div class="sub-content">
-<h3 id="distribution">������ǡ�����������ˡ</h3>
+          <div class="sub-content">
+            <h3 id="distribution">ゲームデータの配布方法</h3>
 
-<p>����1GB�ޤǤΥ�����ǡ��������ۤ��뤳�Ȥ��Ǥ��ޤ���</p>
+            <p>最大1GBまでのゲームデータを配布することができます。</p>
 
-<h5>strings.xml �ν���</h5>
+            <h5>strings.xml の修正</h5>
 
-<p>�ʲ��Τ褦��<span style="color:red">�ֻ��θĽ�</span>�������Ƥ���������</p>
+            <p>以下のように<span style="color:red">赤字の個所</span>を修正してください。</p>
 
-ONScripter/app/src/main/res/values/strings.xml:<br>
-<pre>
+            ONScripter/app/src/main/res/values/strings.xml:<br>
+            <pre>
     &lt;bool name=&quot;use_launcher&quot;&gt;<span style="color:red">false</span>&lt;/bool&gt;
 </pre>
 
-<p>������ι����ե������ ONScripter/asset_pack/src/main/assets/ �ʲ������֤��Ƥ���������</p>
+            <p>ゲームの構成ファイルは ONScripter/asset_pack/src/main/assets/ 以下に配置してください。</p>
 
-���ץ�������������㡧
-<pre>
+            アプリ作成時の配置例：
+            <pre>
 ONScripter/asset_pack/src/main/assets/arc.nsa
 ONScripter/asset_pack/src/main/assets/nscript.dat
 ONScripter/asset_pack/src/main/assets/bgm/bgm01.ogg
 </pre>
 
-<p>�ե�����̾�ʥե����̾��ޤ�ˤ���ʸ���Ⱦ�ʸ���϶��̤���ޤ���������ץ���Υե�����̾�ȥե����륷���ƥ�Υե�����̾�����פ���褦�����դ��Ƥ���������</p>
+            <p>ファイル名（フォルダ名を含む）の大文字と小文字は区別されます。スクリプト中のファイル名とファイルシステムのファイル名が一致するように注意してください。</p>
 
-<p>�����Υե�����ϥ��ץ�Υ��󥹥ȡ������Ʊ���˥��󥹥ȡ��뤵��ޤ���</p>
+            <p>これらのファイルはアプリのインストール時に同時にインストールされます。</p>
 
-<p>���ץ꤬���Ϥ���ե������ getFilesDir() �Ǽ�������륢�ץ��ͭ���������ȥ졼���˽񤭹��ޤ�ޤ���</p>
+            <p>アプリが出力するファイルは getFilesDir() で取得されるアプリ固有の内部ストレージに書き込まれます。</p>
 
-<p>�ޤ����ʲ��Τ褦�����ꤷ�ơ�assets �ե������Υե�����򰵽̤��ʤ��ǥ��ץ���������褦�ˤ��Ƥ���������</p>
+            <p>また、以下のように設定して、assets フォルダ内のファイルを圧縮しないでアプリを作成するようにしてください。</p>
 
-<h5> Android Studio �ξ��</h5>
+            <h5> Android Studio の場合</h5>
 
-<p>������ǡ����˴ޤޤ�뤹�٤ƤΥե�����γ�ĥ�Ҥ򡢰ʲ��Υե������ noCompress �ι����󤷤Ƥ���������</p>
+            <p>ゲームデータに含まれるすべてのファイルの拡張子を、以下のファイルの noCompress の項に列挙してください。</p>
 
-ONScripter/app/build.gradle:
-<pre>
+            ONScripter/app/build.gradle:
+            <pre>
     aaptOptions {
       noCompress 'envdata', 'txt', 'dat', 'sar', 'nsa', 'ns2', 'sav', 'ttf', 'png', 'bmp', 'jpg', 'wav', 'ogg', 'mp3', 'mpg'
     }
 </pre>
 
-</div>
+          </div>
 
-<div class="sub-content">
-<h3 id="customize">�������ޥ���</h3>
+          <div class="sub-content">
+            <h3 id="customize">カスタマイズ</h3>
 
-<h4>���ץ�ΥС�������ֹ�ι���</h4>
+            <h4>アプリのバージョン番号の更新</h4>
 
-<p>���ץ�򹹿�������ϡ�ɬ���ʲ��� versionCode ��<span style="color:red">�ֻ��ο���</span>�򹹿����ο��ͤ������䤷�Ƥ�������������Ǥ���ΤϿ����Τߤ�ʸ������ԲĤǤ������ͤ� 1 ���������䤷�Ƥ��äƤ⹽���ޤ��󤷡��ʲ�����Τ褦��ǯ�����ˤ��뤳�Ȥ�Ǥ��ޤ���</p>
+            <p>アプリを更新する場合は、必ず以下の versionCode の<span style="color:red">赤字の数値</span>を更新前の数値から増やしてください。指定できるのは数字のみで文字列は不可です。数値は 1 から順に増やしていっても構いませんし、以下の例のように年月日にすることもできます。</p>
 
-ONScripter/app/src/main/AndroidManifest.xml:<br>
-<pre>
+            ONScripter/app/src/main/AndroidManifest.xml:<br>
+            <pre>
       android:versionCode="<span style="color:red">20230323</span>"
 </pre>
 
-<h4>�ѥå�����̾���ѹ�</h4>
+            <h4>パッケージ名の変更</h4>
 
-<p>�ʲ���<span style="color:red">�ֻ��θĽ�</span>���ѹ�����ȡ��������Ȥ����ۤ��Ƥ��륢�ץ�ȶ�¸�Ǥ���褦�ˤʤ�ޤ������ץ�� Google Play �ʤɤ��軰�Ԥ˸�����������ѹ����Ƥ����������ʤ����ʲ���<span style="color:red">�ֻ��θĽ�</span>��Ʊ��Υѥå�����̾�ˤʤ�褦�����դ��Ƥ�����������������ñ��ζ��ڤ�ʸ���ϡ�SDL_JAVA_PACKAGE_PATH �� _ �ǡ�����ʳ��� . �ˤʤ�ޤ���</p>
+            <p>以下の<span style="color:red">赤字の個所</span>を変更すると、当サイトで配布しているアプリと共存できるようになります。アプリを Google Play などで第三者に公開する場合は変更してください。なお、以下の<span style="color:red">赤字の個所</span>は同一のパッケージ名になるように注意してください。ただし、単語の区切り文字は、SDL_JAVA_PACKAGE_PATH は _ で、それ以外は . になります。</p>
 
-ONScripter/app/src/main/cpp/Android.mk:<br>
-<pre>
+            ONScripter/app/src/main/cpp/Android.mk:<br>
+            <pre>
 SDL_JAVA_PACKAGE_PATH := <span style="color:red">jp_ogapee_onscripter</span>
 </pre>
 
-ONScripter/app/src/main/java/jp/ogapee/onscripter/*.java:<br>
-<pre>
+            ONScripter/app/src/main/java/jp/ogapee/onscripter/*.java:<br>
+            <pre>
 package <span style="color:red">jp.ogapee.onscripter</span>;
 </pre>
 
-ONScripter/app/build.gradle:<br>
-<pre>
+            ONScripter/app/build.gradle:<br>
+            <pre>
     namespac '<span style="color:red">jp.ogapee.onscripter</span>'
 </pre>
 
-<!--<p>�ѥå�����̾���ѹ��������ϡ�ľ��˥��ץ���������Ȥ��� ndk-build �� -B ���ץ������դ��Ƽ¹Ԥ��Ƥ��������������������ƥ���ѥ��뤷ľ���ޤ���</p>
+            <!--<p>パッケージ名を変更した場合は、直後にアプリを作成するときに ndk-build に -B オプションを付けて実行してください。ソースを全てコンパイルし直します。</p>
 
 Windows:
 <pre>
@@ -1124,159 +1243,160 @@ Linux:
 &gt; ndk-build -B
 </pre>-->
 
-<h4>���ץꥱ�������̾���ѹ�</h4>
+            <h4>アプリケーション名の変更</h4>
 
-<p>���ץꥱ�������̾���Ѹ�ξ��ϰʲ���<span style="color:red">�ֻ��θĽ�</span>���ѹ����Ƥ���������</p>
+            <p>アプリケーション名が英語の場合は以下の<span style="color:red">赤字の個所</span>を変更してください。</p>
 
-ONScripter/app/src/main/res/values/strings.xml:<br>
-<pre>
+            ONScripter/app/src/main/res/values/strings.xml:<br>
+            <pre>
     &lt;string name="app_name"&gt;<span style="color:red">ONScripter</span>&lt;/string&gt;
 </pre>
 
-<p>���ץꥱ�������̾�����ܸ�ξ��ϡ��嵭�μ����б�����Ѹ�Υ��ץꥱ�������̾�����ꤹ��ȤȤ�ˡ��ʲ��Υե������&lt;resources&gt;�β��˰ʲ��ι��ܤ�����������ܸ�Υ��ץꥱ�������̾�����ꤷ�Ƥ���������</p>
+            <p>アプリケーション名が日本語の場合は、上記の手順で対応する英語のアプリケーション名を設定するとともに、以下のファイルの&lt;resources&gt;の下に以下の項目を作成して日本語のアプリケーション名を設定してください。</p>
 
-ONScripter/app/src/main/res/values-ja/strings.xml:<br>
-<pre>
-    <span style="color:red">&lt;string name="app_name"&gt;�������̥�����ץ���&lt;/string&gt;</span>
+            ONScripter/app/src/main/res/values-ja/strings.xml:<br>
+            <pre>
+    <span style="color:red">&lt;string name="app_name"&gt;オーエヌスクリプター&lt;/string&gt;</span>
 </pre>
 
-<h4>����������ѹ�</h4>
+            <h4>アイコンの変更</h4>
 
-<p>�ʲ��β����ե�������ѹ����Ƥ���������</p>
+            <p>以下の画像ファイルを変更してください。</p>
 
-ONScripter/app/src/main/res/drawable-hdpi/icon.png: 72x72�Υ�������<br>
-ONScripter/app/src/main/res/drawable-mdpi/icon.png: 48x48�Υ�������<br>
-ONScripter/app/src/main/res/drawable-ldpi/icon.png: 36x36�Υ�������
+            ONScripter/app/src/main/res/drawable-hdpi/icon.png: 72x72のアイコン<br>
+            ONScripter/app/src/main/res/drawable-mdpi/icon.png: 48x48のアイコン<br>
+            ONScripter/app/src/main/res/drawable-ldpi/icon.png: 36x36のアイコン
 
-<h4>��˥塼���Ƥν������</h4>
+            <h4>メニュー内容の初期設定</h4>
 
-<p>�ʲ���<span style="color:red">�ֻ��θĽ�</span>�������Ƥ���������</p>
+            <p>以下の<span style="color:red">赤字の個所</span>を修正してください。</p>
 
-<h5>�С������ʸ����</h5>
+            <h5>バージョン文字列</h5>
 
-ONScripter/app/src/main/res/values/strings.xml:<br>
-<pre>
+            ONScripter/app/src/main/res/values/strings.xml:<br>
+            <pre>
     &lt;string name="version"&gt;<span style="color:red">ONScripter 20230323\nStudio O.G.A. Ogapee</span>&lt;/bool&gt;
 </pre>
 
-<p>��˥塼�Ρ֥С������פ������줿�Ȥ���ɽ������ʸ�������ꤷ�ޤ���&quot;\n&quot;�ǲ��Ԥ���ޤ���</p>
+            <p>メニューの「バージョン」が押されたときに表示する文字列を指定します。&quot;\n&quot;で改行されます。</p>
 
-<h5>���եȥ������ܥ����ɽ������ɽ��</h5>
+            <h5>ソフトウェアボタンの表示／非表示</h5>
 
-ONScripter/app/src/main/res/values/strings.xml:<br>
-<pre>
+            ONScripter/app/src/main/res/values/strings.xml:<br>
+            <pre>
     &lt;bool name="button_visible"&gt;<span style="color:red">false</span>&lt;/bool&gt;
 </pre>
 
-<p>true �ξ���ɽ�����֤ǡ�false �ξ�����ɽ�����֤ǥ�����򳫻Ϥ��ޤ�����ɽ���ξ��ϡ���������̤ϥǥХ������̤������ɽ������ޤ������ϸ�ϥ�˥塼�����ڤ��ؤ����ޤ���</p>
+            <p>true の場合は表示状態で、false の場合は非表示状態でゲームを開始します。非表示の場合は、ゲーム画面はデバイス画面の中央に表示されます。開始後はメニューから切り替えられます。</p>
 
-<h5>ʸ������ʸ������</h5>
+            <h5>文字の袋文字描画</h5>
 
-ONScripter/app/src/main/res/values/strings.xml:<br>
-<pre>
+            ONScripter/app/src/main/res/values/strings.xml:<br>
+            <pre>
     &lt;bool name="render_font_outline"&gt;<span style="color:red">true</span>&lt;/bool&gt;
 </pre>
 
-<p>true �ξ���<a href="../onscripter.html#option">��ư���ץ����</a>�� --render-font-outline ����ꤷ������Ʊ���ˤʤ�ޤ���</p>
+            <p>true の場合は<a href="../onscripter.html#option">起動オプション</a>で --render-font-outline を指定した場合と同じになります。</p>
 
-<h4>��Ĺɽ��</h4>
+            <h4>縦長表示</h4>
 
-<p>�ʲ��Τ褦��<span style="color:red">�ֻ��θĽ�</span>���ѹ�����ȡ���Ĺ���̡��Ĥޤ��̾��ɽ�����飹���ٲ�ž�������֤����褹��褦�ˤʤ�ޤ���</p>
+            <p>以下のように<span style="color:red">赤字の個所</span>を変更すると、縦長画面、つまり通常の表示から９０度回転した状態で描画するようになります。</p>
 
-ONScripter/app/src/main/AndroidManifest.xml:<br>
-<pre>
+            ONScripter/app/src/main/AndroidManifest.xml:<br>
+            <pre>
       android:screenOrientation="<span style="color:red">portrait</span>"
 </pre>
 
-</div> <!-- sub-content -->
+          </div> <!-- sub-content -->
 
-</div> <!-- content -->
-
-
-<div class="content">
-<h2 id="link">���</h2>
-
-<dl>
-<dt> <a href="http://cutlass.jugem.jp/">cutlass weblog</a>
-<dd> ONScripter on Android ����Ѥ����������NOeSIS -�����Ǥ���������ʪ��-�פ��������Ƥ��ޤ�����������Ǥ���
-</dl>
-
-</div> <!-- content -->
+        </div> <!-- content -->
 
 
-<div class="content">
-<h2 id="tips">Tips</h2>
+        <div class="content">
+          <h2 id="link">リンク</h2>
 
-<ul>
+          <dl>
+            <dt> <a href="http://cutlass.jugem.jp/">cutlass weblog</a>
+            <dd> ONScripter on Android を使用したゲーム「NOeSIS -嘘を吐いた記憶の物語-」を公開されていました。お勧めです。
+          </dl>
 
-<li>��Ϣ����Х����
-<ul>
-<li>��<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=231">���ư���ι����ե�����Υ��ԡ��˼��Ԥ��ޤ�</a>��
-<li>��<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=233">ONScripter on Android�Υ���ѥ��뤬�Ǥ��ޤ���</a>��
-<li>��<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=235">������ǡ�����¢Android���ץ��savedate�ե����������������ʤ�</a>��
-<li>��<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=238">Android���ץ���������´��¡�50MB��4GB�ˤ�ȼ����˾</a>��
-<li>��<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=257">���ƤΥե�����ؤν�̾���Ԥ��ʤ�����˼µ��ؤΥ��󥹥ȡ��뤬�Ǥ��ʤ�</a>��
-</ul>
+        </div> <!-- content -->
 
-<li>�ե������ .nomedia �Ȥ������Υե�������֤��ȡ����Υե������겼�γ��ؤˤ�������䲻�ڥե�����ϥ����꡼�䲻�ڥץ쥤�䡼�θ����оݳ��ˤʤ�褦�Ǥ���
 
-<li>�����꡼�󥷥�åȤ򻣤�ˤϡ�ü���� USB �� PC ����³����PC ¦�� Dalvic Debug Monitor (android-sdk\tools\ddms.bat) ��ư���ơ�ü��¦����³�����פ� HTC Sync �ˤ��ޤ������� DDM ��ü�������򤷡�Device -&gt; Screen capture ��¹Ԥ��ޤ���
+        <div class="content">
+          <h2 id="tips">Tips</h2>
 
-<li> Ctrl-F11, Ctrl-F12 �ǥ��ߥ�졼���β���ɽ����Ĳ����ڤ��ؤ�����
-����ONScripter on Android �ϲ��������ѤʤΤǡ����ߥ�졼�����ѻ��ˤ���
-���ؤ��Ƥ����������ޤ���Alt-Enter �ǥե륹���꡼��⡼�ɤ��ڤ��ؤ�����
-���ޤ���
+          <ul>
 
-<li> ���ߥ�졼���κ���ľ��ϡ�SD card ��Υե������¹ԤǤ��ʤ��褦
-�ʤΤǡ��ʲ��Τ褦�˥ޥ���Ȥ�ľ���Ƽ¹Բ�ǽ�ˤ��ޤ���
+            <li>関連するバグ報告
+              <ul>
+                <li>「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=231">初回起動時の構成ファイルのコピーに失敗します</a>」
+                <li>「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=233">ONScripter on Androidのコンパイルができません</a>」
+                <li>「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=235">ゲームデータ内蔵Androidアプリでsavedateフォルダ等が作成されない</a>」
+                <li>「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=238">Androidアプリの容量制限緩和（50MB→4GB）に伴う要望</a>」
+                <li>「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=257">全てのファイルへの署名が行われないために実機へのインストールができない</a>」
+              </ul>
 
-<pre>
+            <li>フォルダに .nomedia という空のファイルを置くと、そのフォルダより下の階層にある画像や音楽ファイルはギャラリーや音楽プレイヤーの検索対象外になるようです。
+
+            <li>スクリーンショットを撮るには、端末を USB で PC と接続し、PC 側で Dalvic Debug Monitor (android-sdk\tools\ddms.bat) を起動して、端末側で接続タイプを HTC Sync にします。次に DDM で端末を選択し、Device -&gt; Screen capture を実行します。
+
+            <li> Ctrl-F11, Ctrl-F12 でエミュレータの画面表示を縦横に切り替えられま
+              す。ONScripter on Android は横画面専用なので、エミュレータ使用時には切
+              り替えてください。また、Alt-Enter でフルスクリーンモードの切り替えがで
+              きます。
+
+            <li> エミュレータの作成直後は、SD card 上のファイルを実行できないよう
+              なので、以下のようにマウントし直して実行可能にします。
+
+              <pre>
 mount -o remount /dev/block/vold/179:0 /mnt/sdcard
 </pre>
 
-<li> Windows �� SDK Setup.exe ��Ω���夲�ƥѥå������򹹿�����ݤ� 
-&quot;Failed to fetch URL
-https://dl-ssl.google.com/android/repository/repository.xml&quot; �ȥ�
-�顼���Ф���ϡ�c:\Users\<span style="color:red;">username</span>\.android\androidtool.cfg �ǰʲ��Τ褦�����ꤹ��Ȥ��ޤ��������⤷��ޤ���
+            <li> Windows で SDK Setup.exe を立ち上げてパッケージを更新する際に
+              &quot;Failed to fetch URL
+              https://dl-ssl.google.com/android/repository/repository.xml&quot; とエ
+              ラーが出る場合は、c:\Users\<span style="color:red;">username</span>\.android\androidtool.cfg で以下のように設定するとうまくいくかもしれません。
 
-<pre>
+              <pre>
 sdkman.force.http=true
 </pre>
 
-<li> Linux (Debian) �� android ��Ω���夲�ƥѥå������򹹿�����ݤ� 
-&quot;Failed to fetch URL
-https://dl-ssl.google.com/android/repository/repository.xml&quot; �ȥ�
-�顼���Ф���ϡ��ʲ��Τ褦�ˤ���Ȥ��ޤ��������⤷��ޤ���
+            <li> Linux (Debian) で android を立ち上げてパッケージを更新する際に
+              &quot;Failed to fetch URL
+              https://dl-ssl.google.com/android/repository/repository.xml&quot; とエ
+              ラーが出る場合は、以下のようにするとうまくいくかもしれません。
 
-<pre>
+              <pre>
 echo "0" &gt; /proc/sys/net/ipv6/bindv6only
 </pre>
 
-<li> Android �� JAVA �Υ�����������ˡ��
+            <li> Android の JAVA のソースの入手法。
 
-<pre>
+              <pre>
 &gt; git clone https://android.googlesource.com/platform/frameworks/base.git
 &gt; cd base
 &gt; git tag -l
-# android 1.6 �ξ��
+# android 1.6 の場合
 &gt; git checkout android-1.6_r2
-# android 2.1 �ξ��
+# android 2.1 の場合
 &gt; git checkout android-2.1_r2.1s
 </pre>
 
-</ul>
+          </ul>
 
-</div> <!-- content -->
+        </div> <!-- content -->
 
 
-</div> <!-- main -->
-</div> <!-- main-container -->
+      </div> <!-- main -->
+    </div> <!-- main-container -->
 
-<div id="footer">
-Copyright (c) 1998-2023 Studio O.G.A. All rights reserved.
-</div> <!-- footer -->
+    <div id="footer">
+      Copyright (c) 1998-2023 Studio O.G.A. All rights reserved.
+    </div> <!-- footer -->
 
-</div> <!-- body -->
+  </div> <!-- body -->
 
 </body>
+
 </html>

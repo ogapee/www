@@ -1,520 +1,519 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <HTML lang="ja">
+
 <HEAD>
-<META http-equiv="Content-Type" content="text/html; charset=EUC-JP">
-<META http-equiv="Content-Style-Type" content="text/css">
-<META name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-<TITLE> ONScripter ��ȯ���� </TITLE>
-<LINK rel="stylesheet" type="text/css" href="/ogapee.css">
+  <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <META http-equiv="Content-Style-Type" content="text/css">
+  <META name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <TITLE> ONScripter 開発日誌 </TITLE>
+  <LINK rel="stylesheet" type="text/css" href="/ogapee.css">
 </HEAD>
 
 <body>
 
-<div id="body">
+  <div id="body">
 
-<div id="header">
-<H1>ONScripter ��ȯ����</H1>
+    <div id="header">
+      <H1>ONScripter 開発日誌</H1>
 
-Since: Feb. 6, 2002<br>
-Last updated: Nov. 29, 2004
-</div> <!-- header -->
+      Since: Feb. 6, 2002<br>
+      Last updated: Nov. 29, 2004
+    </div> <!-- header -->
 
-<div id="toc-container">
+    <div id="toc-container">
 
-<h3>���γ�ȯ����</h3>
+      <h3>過去の開発日誌</h3>
 
-<div id="toc">
+      <div id="toc">
 
-<ul>
-  <li> 2003ǯ
-    <ul>
-      <li> <A HREF="onscripter_devel.2003_4.html">10���12��</A>
-      <li> <A HREF="onscripter_devel.2003_3.html"> 7��� 9��</A>
-      <li> <A HREF="onscripter_devel.2003_2.html"> 4��� 6��</A>
-      <li> <A HREF="onscripter_devel.2003_1.html"> 1��� 3��</A>
-    </ul>
-  <li> 2002ǯ
-    <ul>
-      <li> <A HREF="onscripter_devel.2002_4.html">10���12��</A>
-      <li> <A HREF="onscripter_devel.2002_3.html"> 7��� 9��</A>
-      <li> <A HREF="onscripter_devel.2002_2.html"> 4��� 6��</A>
-      <li> <A HREF="onscripter_devel.2002_1.html"> 1��� 3��</A>
-    </ul>
-  <li> 2001ǯ
-    <ul>
-      <li> <A HREF="onscripter_devel.2001.html">12��</A>
-    </ul>
-</ul>
-</div> <!-- toc -->
-</div> <!-- toc-container -->
+        <ul>
+          <li> 2003年
+            <ul>
+              <li> <A HREF="onscripter_devel.2003_4.html">10月～12月</A>
+              <li> <A HREF="onscripter_devel.2003_3.html"> 7月～ 9月</A>
+              <li> <A HREF="onscripter_devel.2003_2.html"> 4月～ 6月</A>
+              <li> <A HREF="onscripter_devel.2003_1.html"> 1月～ 3月</A>
+            </ul>
+          <li> 2002年
+            <ul>
+              <li> <A HREF="onscripter_devel.2002_4.html">10月～12月</A>
+              <li> <A HREF="onscripter_devel.2002_3.html"> 7月～ 9月</A>
+              <li> <A HREF="onscripter_devel.2002_2.html"> 4月～ 6月</A>
+              <li> <A HREF="onscripter_devel.2002_1.html"> 1月～ 3月</A>
+            </ul>
+          <li> 2001年
+            <ul>
+              <li> <A HREF="onscripter_devel.2001.html">12月</A>
+            </ul>
+        </ul>
+      </div> <!-- toc -->
+    </div> <!-- toc-container -->
 
 
-<div id="diary-container">
-<div id="diary">
+    <div id="diary-container">
+      <div id="diary">
 
-<h2>2004ǯ</h2>
+        <h2>2004年</h2>
 
-<div class="diary-day">
-<h3>11��29��</h3>
+        <div class="diary-day">
+          <h3>11月29日</h3>
 
-<P>���¦Ť���� patch �������졢getcselstr, cellcheckspbtn, bgmvol 
-̿����ɲä��ޤ�����</P>
+          <P>αβεさんの patch を取り入れ、getcselstr, cellcheckspbtn, bgmvol
+            命令を追加しました。</P>
 
-<P>���¦Ť���� patch �������졢systemcall �� automode ���ɲä��ޤ�
-�������Ĥ⤢�꤬�Ȥ��������ޤ���
+          <P>αβεさんの patch を取り入れ、systemcall に automode を追加しまし
+            た。いつもありがとうございます。
 
-<P>�ܲȤ��ѹ���ȼ����*customsel ������������Ǽ�ưŪ�� skipoff �����
-���褦�ˤ��ޤ�����</P>
+          <P>本家の変更に伴い、*customsel に飛んだ時点で自動的に skipoff されな
+            いようにしました。</P>
 
-</DIV>
+        </DIV>
 
-<div class="diary-day">
-<h3>11��03��</h3>
+        <div class="diary-day">
+          <h3>11月03日</h3>
 
-<P>�����Υ���ѥ���ǥ���ѥ�����˥��顼�ˤʤä��Τǡ��������ޤ�����</P>
+          <P>一部のコンパイラでコンパイル時にエラーになったので、修正しました。</P>
 
-<P>�����Υ���ѥ���ʡ��ˤǡ�������Τ�˺�줫�� OpenGL �Ķ��ǵ�ưľ��
-�˥������ơ������ե���Ȥ������Х��������ޤ�����</P>
+          <P>一部のコンパイラ（？）で、初期化のし忘れから OpenGL 環境で起動直後
+            にセグメンテーションフォルトで落ちるバグを修正しました。</P>
 
-<P>�Ĥ��Ǥˡ�������Ū�ʥ��㥹�Ȥʤɤ� warning ���Ф�ս�������ޤ�����
-</P>
+          <P>ついでに、非明示的なキャストなどで warning が出る箇所を修正しました。
+          </P>
 
-<P>20041025 �Ǥ����餵�ޤ�����Τʤ��ä��ͤϡ����åץǡ��Ȥ���ɬ�פϤ�
-��ޤ���</P>
+          <P>20041025 であからさまな問題のなかった人は、アップデートする必要はあ
+            りません。</P>
 
-</DIV>
+        </DIV>
 
-<div class="diary-day">
-<h3>10��25��</h3>
+        <div class="diary-day">
+          <h3>10月25日</h3>
 
-<P>pretextgosub, gettag, indent, linepage2, checkpage ��������ޤ�����
-</P>
+          <P>pretextgosub, gettag, indent, linepage2, checkpage を実装しました。
+          </P>
 
-<P>checkpage, getlog, logsp, texthide, textshow ��������ޤ�����</P>
+          <P>checkpage, getlog, logsp, texthide, textshow を実装しました。</P>
 
-<P>definereset ��������ޤ�����</P>
+          <P>definereset を実装しました。</P>
 
-<P>��Ӥξ���򥻡��֥ե�����˳�Ǽ����褦�˽������ޤ������ޤ������۲�
-�̤ǥ�Ӥξ����ɽ���Ǥ���褦�˽������ޤ�����</P>
+          <P>ルビの情報をセーブファイルに格納するように修正しました。また、回想画
+            面でルビの情報を表示できるように修正しました。</P>
 
-<P>�ѹ�����¿���Х����������Ƥ����ǽ��������Τǡ���ư�������Ȱ�ä�
-������ˤϱ�θ̵������𲼤�����</P>
+          <P>変更点が多くバグが混入している可能性があるので、挙動が以前と違って
+            いる場合には遠慮無くご報告下さい。</P>
 
-</DIV>
+        </DIV>
 
-<div class="diary-day">
-<h3>9��27��</h3>
+        <div class="diary-day">
+          <h3>9月27日</h3>
 
-<P>������������<A
-HREF="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=47">
-�Ҥ��餷�Τʤ����ˡ�BGM������������</A>�פ򻲹ͤˡ����������֤ǤϤʤ�
-�ե����륷���ƥफ��ľ�ܥե�������ɤ߹���ݤˡ��롼�ȥѥ����飲���ذ�
-���˥ե����뤬�����硢��ʸ����ʸ���ΰ㤤��ۼ��Ǥ����ɤ߹���ʤ����
-������Х��������ޤ�����
-</P>
+          <P>いただいた「<A HREF="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=47">
+              ひぐらしのなく頃に：BGM一部再生せず</A>」を参考に、アーカイブではなく
+            ファイルシステムから直接ファイルを読み込む際に、ルートパスから２階層以
+            下にファイルがある場合、大文字小文字の違いを吸収できず読み込めない場合
+            があるバグを修正しました。
+          </P>
 
-<P>������å���˥塼�Υǥե���ȤΥե���ȥ��������ѹ����ޤ������ʤ�
-���ˡ��ǽ�Υ�꡼������¸�ߤ���Х��Ǥ�����</P>
+          <P>右クリックメニューのデフォルトのフォントサイズを変更しました。なに
+            げに、最初のリリースから存在するバグでした。</P>
 
-<P>20040925a ��ȯ��������ENABLE_1BYTE_CHAR ������ˣ��Ԥ�Ⱦ��ɽ������
-����κݤ�̵�¥롼�פ˴٤�Х��������ޤ�����</P>
+          <P>20040925a で発生した、ENABLE_1BYTE_CHAR 指定時に１行の半角表示数が
+            奇数の際に無限ループに陥るバグを修正しました。</P>
 
-</DIV>
+        </DIV>
 
-<div class="diary-day">
-<h3>9��25��</h3>
+        <div class="diary-day">
+          <h3>9月25日</h3>
 
-<P> blt �ǡ���������ξ����б����ޤ�����</P>
+          <P> blt で、引数が負の場合に対応しました。</P>
 
-<P> ������å���˥塼ɽ���αѸ첽���б����ޤ������Ѹ첽������ϡ���
-��ѥ������ ENABLE_1BYTE_CHAR �� FORCE_1BYTE_CHAR ��ξ�����ꤷ�Ƥ���
-�������ޤ����ξ�硢�����ѿ��� prnum ��ɽ����Ⱦ�Ѥˤʤ�ޤ���
-ENABLE_1BYTE_CHAR ����Τߤʤ�С�����Τ�¤��¸�Υ������ư��˱ƶ�
-�Ϥ���ޤ��󤬡�FORCE_1BYTE_CHAR ����ꤹ���ɽ���˱ƶ����Фޤ���</P>
+          <P> 右クリックメニュー表示の英語化に対応しました。英語化する場合は、コ
+            ンパイル時に ENABLE_1BYTE_CHAR と FORCE_1BYTE_CHAR を両方指定してくだ
+            さい。またこの場合、数字変数や prnum の表示も半角になります。
+            ENABLE_1BYTE_CHAR 指定のみならば、私の知る限り既存のゲームの動作に影響
+            はありませんが、FORCE_1BYTE_CHAR も指定すると表示に影響が出ます。</P>
 
-<h4>20040925a</h4>
+          <h4>20040925a</h4>
 
-<P>ENABLE_1BYTE_CHAR ͭ�����ˡ�Ϣ³���� _ �� 1byte �� clickstr ʸ����
-���򤹤���ˡ�ʸ���֤˥��ڡ��������äƤ��ޤ��Х��������ޤ�����</P>
+          <P>ENABLE_1BYTE_CHAR 有効時に、連続して _ で 1byte の clickstr 文字を
+            回避する場合に、文字間にスペースが入ってしまうバグを修正しました。</P>
 
-</DIV>
+        </DIV>
 
-<div class="diary-day">
-<h3>9��18��</h3>
+        <div class="diary-day">
+          <h3>9月18日</h3>
 
-<P>for �롼�פΥͥ��Ȥξ���򥻡��֥ե����������Ƥ��ʤ��ä��Х���
-�����ޤ�����</P>
+          <P>for ループのネストの情報をセーブファイルに入れていなかったバグを修
+            正しました。</P>
 
-<P>�����֥ե��������������ɤ߹���ݤˡ����㥹�Ȥ�ְ㤨���ͤˤ�ä�
-��������ɤ߹���Ƥ��ʤ��ä��Х��������ޤ�������¸�Ϥ��ޤ����äƤ���
-�褦�Ǥ����ȤϤ�������¸������Τ��ɤ߹���Ǥޤ���¸���Ƥ�����������
-���ä��櫓�Ǥ�����</P>
+          <P>セーブファイル中の配列を読み込む際に、キャストを間違えて値によって
+            は正常に読み込めていなかったバグを修正しました。保存はうまくいっていた
+            ようです。とはいえ、保存したものを読み込んでまた保存していたら結局駄目
+            だったわけですが。</P>
 
-<P>�ƥ����Ȥ�ɽ�����ԡ��ɤ����λ��ˡ������åװ�����ʸ�������褵��ʤ���
-���Х��������ޤ�����</P>
+          <P>テキストの表示スピードが０の時に、スキップ扱いで文字が描画されなかっ
+            たバグを修正しました。</P>
 
-<h4>20040918a</h4>
+          <h4>20040918a</h4>
 
-<P>�����Υ���ѥ���ǥ��顼�ˤʤä��Τǡ��������ޤ�����</P>
+          <P>一部のコンパイラでエラーになったので、修正しました。</P>
 
-</DIV>
+        </DIV>
 
-<div class="diary-day">
-<h3>9��15��</h3>
+        <div class="diary-day">
+          <h3>9月15日</h3>
 
-<P>�������व�󤫤�ΥХ�����<A
-HREF="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=46">
-MacOSX ��ǡ�Ogg Vorbis���ѤΥ�����Ǥϡ����������餷��</A>�פ򸵤ˡ�
-Mac �ʤɤ� big endian �ε���� Ogg Vorbis ���ѻ��ˡ������� wav ������
-�Ѵ����줺���������Υ����Τ褦�ˤʤäƤ����Х��������ޤ��������ΥХ�
-�� Ogg Vorbis ���б�����1ǯ������¸�ߤ��Ƥ����Τǡ����ޤ� ONScripter
-on Mac �Ǥ� Ogg Vorbis �����ԲĤǤ�����</P>
+          <P>そ～かむさんからのバグ報告「<A HREF="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=46">
+              MacOSX 上で、Ogg Vorbis使用のゲームでは、声が砂あらしに</A>」を元に、
+            Mac などの big endian の機種で Ogg Vorbis 使用時に、正しく wav 形式に
+            変換されず再生音がノイズのようになっていたバグを修正しました。このバグ
+            は Ogg Vorbis に対応した1年前から存在していたので、今まで ONScripter
+            on Mac では Ogg Vorbis 再生不可でした。</P>
 
-<P>������ץȤ��ɤ߹��߼����ѹ����ޤ������ޤ���0.txt, 00.txt ��õ����
-���Ĥ��ä����ˤϡ�0.txt, 00.txt, 1.txt, 01.txt ... 99.txt �ν����õ
-�����ޤ�����������?.txt ��������ˤϡ�0?.txt �ϸ��ˤ����ޤ���
-0.txt, 00.txt ��̵�����ˤϡ�nscript.dat ���ΰŹ沽���줿�ե������õ
-���ˤ����ޤ���</P>
+          <P>スクリプトの読み込み手順を変更しました。まず、0.txt, 00.txt を探し、
+            見つかった場合には、0.txt, 00.txt, 1.txt, 01.txt ... 99.txt の順に全探
+            索します。ただし、?.txt がある場合には、0?.txt は見にいきません。
+            0.txt, 00.txt が無い場合には、nscript.dat 等の暗号化されたファイルを探
+            しにいきます。</P>
 
-</DIV>
+        </DIV>
 
-<div class="diary-day">
-<h3>9��13��</h3>
+        <div class="diary-day">
+          <h3>9月13日</h3>
 
-<P>˿������Υ������̤����褬���ޤ���٤��ä��Τǡ��ɤäƤߤޤ�������
-�ޤ�Ȥ�����20040419 �� drawbg2 �����б������Ȥ��ˡ�������������Υ롼
-������̲��������ᡢ��������󥰤��ž��ޤޤʤ��̾�����κݤ���ɬ��
-�ʥ����С��إåɤ��Ǥ��Ƥ����ΤǤ��������줬ͽ�۰ʾ���礭���ä��褦��
-�����̾�������������Υ롼�����ʬ�����쳵�ˤϸ����ޤ��󤬡�����˴ؤ�
-�Ƥϣ�������®���ʤ�ޤ������Ȥ��������������ޤ�����</P>
+          <P>某ゲームのロゴ画面の描画があまりに遅かったので、追ってみました。つ
+            まるところ、20040419 で drawbg2 等に対応したときに、描画の前処理のルー
+            チンを共通化したため、スケーリングや回転を含まない通常描画の際に不必要
+            なオーバーヘッドができていたのですが、それが予想以上に大きかったようで
+            す。通常描画の前処理のルーチンを分け、一概には言えませんが、描画に関し
+            ては２～３倍速くなりました。というか、元に戻りました。</P>
 
-</DIV>
+        </DIV>
 
-<div class="diary-day">
-<h3>9��11��</h3>
+        <div class="diary-day">
+          <h3>9月11日</h3>
 
-<P>lr_trap ��������ޤ�����</P>
+          <P>lr_trap を実装しました。</P>
 
-<P>�����֥ե�������� BGM ���վ��֤˴ؤ���Х��������ޤ�����</P>
+          <P>セーブファイル中の BGM 演奏状態に関するバグを修正しました。</P>
 
-<P><A HREF="onscripter.html#save">�ۤʤ�ץ�åȥե�������Ʊ����ͷ��
-��ˡ</A>�ˤĤ�����­���ޤ�����</P>
+          <P><A HREF="onscripter.html#save">異なるプラットフォーム上で同時に遊ぶ
+              方法</A>について補足しました。</P>
 
-</DIV>
+        </DIV>
 
-<div class="diary-day">
-<h3>9��10��</h3>
+        <div class="diary-day">
+          <h3>9月10日</h3>
 
-<P>Ⱦ�ѥ������ʤ�ɽ�����б����ޤ�����</P>
+          <P>半角カタカナの表示に対応しました。</P>
 
-<P>textgosub ���ѻ��ˡ������ǲ��Ԥ��Ƥ��ʤ��ä��Х��������ޤ�����
-</P>
+          <P>textgosub 使用時に、行末で改行していなかったバグを修正しました。
+          </P>
 
-</DIV>
+        </DIV>
 
-<div class="diary-day">
-<h3>9��9��</h3>
+        <div class="diary-day">
+          <h3>9月9日</h3>
 
-<P>���ä�������Х��Ǥ���goto �� gosub ̿��ǡ�ʸ���ѿ�������˼�
-��ʤ��ʤäƤ����Х��������ޤ�����</P>
+          <P>さっそくエンバグです。goto や gosub 命令で、文字変数を引数に取
+            れなくなっていたバグを修正しました。</P>
 
-<P>����ѥ������ ENABLE_1BYTE_CHAR ������������ε�ư��������ޤ�����
-clickstr, select �ʤɤ�����˵�ǽ����褦�ˤʤ�ޤ�����<A
-HREF="onscripter.html#enable_1byte">����ץ륹����ץ�</A>�򻲾Ȥ��Ƥ�
-�����������ʤߤˡ�ENABLE_1BYTE_CHAR �� ` �μ�갷���������ѹ����ޤ���
-����Τ�¤��¸�Υ�����Ǥ�Ⱦ�Ѥ� ` �ϻȤ��Ƥ��ʤ��Τǡ�
-ENABLE_1BYTE_CHAR ������������֤Ǥ��¸�Υ����������˼¹ԤǤ��ޤ���
-</P>
+          <P>コンパイル時に ENABLE_1BYTE_CHAR を定義した場合の挙動を改善しました。
+            clickstr, select などが正常に機能するようになりました。<A HREF="onscripter.html#enable_1byte">サンプルスクリプト</A>を参照してく
+            ださい。ちなみに、ENABLE_1BYTE_CHAR は ` の取り扱いだけを変更します。
+            私の知る限り既存のゲームでは半角の ` は使われていないので、
+            ENABLE_1BYTE_CHAR を定義した状態でも既存のゲームは正常に実行できます。
+          </P>
 
-</DIV>
+        </DIV>
 
-<div class="diary-day">
-<h3>9��2��</h3>
+        <div class="diary-day">
+          <h3>9月2日</h3>
 
-<P>select �� btnwait ���������Ԥ��λ��ˡ����˥᡼�����ͭ���ˤʤ��
-���˽������ޤ�����</P>
+          <P>select や btnwait 等で選択待ちの時に、アニメーションが有効になるよ
+            うに修正しました。</P>
 
-<P>chvol ��������ޤ�����������̤���ڤǤ���</P>
+          <P>chvol を実装しました。ただし未検証です。</P>
 
-<P>defsub, getparam ��������ޤ�����</P>
+          <P>defsub, getparam を実装しました。</P>
 
-<P>TTF_RenderGlyph_Blended �Ǻ���� SDL_Surface �� pixel order �ȡ�
-ONScripter ��ǻȤ� SDL_Surface �� pixel order ���ۤʤ뤳�Ȥ������ǡ�
-ʸ���ο����꤬������ȿ�Ǥ���ʤ��Х��������ޤ�����</P>
+          <P>TTF_RenderGlyph_Blended で作られる SDL_Surface の pixel order と、
+            ONScripter 内で使う SDL_Surface の pixel order が異なることが原因で、
+            文字の色指定が正しく反映されないバグを修正しました。</P>
 
-<P>���̣��֤�̿�᤬�褿�����ǡ��ƥ����Ȥ����褵��Ƥ�����˾ä��褦
-�˽������ޤ��������ޤǤϡ��ºݤ˸��̤����褵�������ǥƥ����Ȥ�ä���
-��������ޤ�����</P>
+          <P>効果０番の命令が来た時点で、テキストが描画されている場合に消すよう
+            に修正しました。今までは、実際に効果が描画される時点でテキストを消すバ
+            グがありました。</P>
 
-<P>�����ܤ��� parser ��ޤॳ����ʬ�������񤭴�����Ԥ��ޤ��������Τ�
-���ʤ������줿���ᡢ����Х����Ƥ����ǽ��������ޤ��Τǡ����ޤ�ư��
-�Ƥ���������ε�ư�����������ʤä����ˤϤ��Τ餻����������</P>
+          <P>何度目かの parser を含むコア部分の大幅書き換えを行いました。全体に
+            かなり手を入れたため、エンバグしている可能性がありますので、今まで動い
+            ていたゲームの挙動がおかしくなった場合にはお知らせください。</P>
 
-<P>����ѥ������ ENABLE_1BYTE_CHAR ����ꤹ�뤳�Ȥǡ�`(back quote) ��
-�߹����⤷�����̤� ` �ޤǤ�1byte ʸ���ǵ��Ҥ��줿�ƥ�����ʸ�Ȥߤʤ�
-��ɽ������褦�ˤ��ޤ���Ⱦ�ѥ��ڡ�����ɽ���Ȥ���ͭ���ˤʤ�ޤ������ƥ�
-������ο������ֻ��ꡢ�ѿ�ɽ����̵���ˤʤ�ޤ����ƥ���������ǿ����Ѥ�
-����ϡ�/ �ǹԤ�ʬ����ʤɤ��Ƥ����������פϡ��Ѹ�Υ٥��ѤΤ���γ�
-ĥ�ǡ������ ONScripter �ȼ��γ�ĥ�Ǥ��������ܲȤ� ` �˲�����ǽ����
-���ä����ˤϡ�����⤷�����̤�ʸ�����ѹ�����ޤ���
-</P>
+          <P>コンパイル時に ENABLE_1BYTE_CHAR を指定することで、`(back quote) 以
+            降行末もしくは別の ` までを、1byte 文字で記述されたテキスト文とみなし
+            て表示するようにします。半角スペースが表示として有効になりますが、テキ
+            スト内の色・時間指定、変数表示は無効になります。テキスト途中で色を変え
+            る場合は、/ で行を分けるなどしてください。要は、英語ノベル用のための拡
+            張で、これは ONScripter 独自の拡張です。将来本家で ` に何か機能を割り
+            振った場合には、削除もしくは別の文字に変更されます。
+          </P>
 
-</DIV>
+        </DIV>
 
-<div class="diary-day">
-<h3>6��14��</h3>
+        <div class="diary-day">
+          <h3>6月14日</h3>
 
-<P>�������व�󤫤�ΥХ����򸵤ˡ�USE_OPENGL ���ѻ��� 
-PFNGLBLENDCOLOREXTPROC ���������Ƥ��ʤ����ˡ��������褦���ѹ���
-�ʤ���PFNGLBLENDCOLOREXTPROC �ǤϤʤ���PFNGLBLENDCOLORPROC ����Ѥ���
-���Ȥˤ��ޤ�����</P>
+          <P>そ～かむさんからのバグ報告を元に、USE_OPENGL 使用時に
+            PFNGLBLENDCOLOREXTPROC が定義されていない場合に、定義するように変更。
+            なお、PFNGLBLENDCOLOREXTPROC ではなく、PFNGLBLENDCOLORPROC を使用する
+            ことにしました。</P>
 
-<P>�������व�󤫤�ΥХ����ˤ��ȡ�g++ 2.95.2 on MacOS X �Ǥϡ�
-glGenTextures, glDeleteTextures ���裲�����򡢤��줾�� (GLuint*),
-(const GLuint*) �˥��㥹�Ȥ��ʤ��ȥ���ѥ��륨�顼�ˤʤ뤽���Ǥ���g++
-2.95.4 on Linux �Ǥ��ä˥��顼�ˤϤʤ�ʤ��ΤǤ��������㥹�Ȥ���褦��
-�������ޤ�����</P>
+          <P>そ～かむさんからのバグ報告によると、g++ 2.95.2 on MacOS X では、
+            glGenTextures, glDeleteTextures の第２引数を、それぞれ (GLuint*),
+            (const GLuint*) にキャストしないとコンパイルエラーになるそうです。g++
+            2.95.4 on Linux では特にエラーにはならないのですが、キャストするように
+            修正しました。</P>
 
-<P>OpenGL ͭ�����Υǥ��ѱ��̿��(drawclear, drawfill, drawbg, drawbg2,
-drawsp, drawsp2, drawtext, draw)��������ӥǥ�����˺ܤ�¤겿�祹��
-�饤�Ȥ�ŤͤƤ⤵������ư���ޤ���</P>
+          <P>OpenGL 有効時のデモ用演出命令(drawclear, drawfill, drawbg, drawbg2,
+            drawsp, drawsp2, drawtext, draw)を実装。ビデオメモリに載る限り何枚スプ
+            ライトを重ねてもさくさく動きます。</P>
 
-<P>GL_REPLACE ������� GL_MODULATE ��Ȥ����Ȥǡ��ԥ�����ñ�̤Υ���
-�ե��֥��ǥ��󥰤ȥ��ץ饤��ñ�̤Υ���ե��֥��ǥ��󥰤�ξΩ��¸���
-drawsp, drawsp2, tal, amsp, msp �ʤɤǡ�����ޤǥ���ե��ͤκƷ׻��Ȳ�
-���κ��ɤ߹��ߤ򤷤Ƥ�����ʬ����ά�����®������ޤ�����</P>
+          <P>GL_REPLACE の代わりに GL_MODULATE を使うことで、ピクセル単位のアル
+            ファブレンディングとスプライト単位のアルファブレンディングの両立を実現。
+            drawsp, drawsp2, tal, amsp, msp などで、これまでアルファ値の再計算と画
+            像の再読み込みをしていた部分が省略され高速化されました。</P>
 
-<P>�����κǽ餬�����ѿ��ǡ����Ĥ������� - �����ä����ˡ��ޥ��ʥ��Ȥ�
-�������������ʤ��ä��Х�������</P>
+          <P>数式の最初が数値変数で、かつその前に - があった場合に、マイナスとし
+            て正しく扱われなかったバグを修正。</P>
 
-</DIV>
+        </DIV>
 
-<div class="diary-day">
-<h3>6��9��</h3>
+        <div class="diary-day">
+          <h3>6月9日</h3>
 
-<P>�����餵���ꡢ20040608 �Ǥ� Mac OS X ��Ǥ�ư�����򤤤������ޤ�
-����OpenGL ��̵����ͭ���ˤ������ˡ������������ʤ�ư��뤽���Ǥ���
-��¿���</P>
+          <P>きさらさんより、20040608 版の Mac OS X 上での動作報告をいただきまし
+            た。OpenGL を無効・有効にした時に、いずれも問題なく動作するそうです。
+            一安心。</P>
 
-</DIV>
+        </DIV>
 
-<div class="diary-day">
-<h3>6��8��</h3>
+        <div class="diary-day">
+          <h3>6月8日</h3>
 
-<P>20040606 �ʹߤˡ�big endian �Υޥ�������餫�ˤ��������ʤꤽ���ʥ���
-�ɤ����ä��Τǡ��������ޤ��������������ڤǤ��ʤ��Τ�̤��ǧ�Ǥ���</P>
+          <P>20040606 以降に、big endian のマシンで明らかにおかしくなりそうなコー
+            ドがあったので、修正しました。ただし検証できないので未確認です。</P>
 
-</DIV>
+        </DIV>
 
-<div class="diary-day">
-<h3>6��7��</h3>
+        <div class="diary-day">
+          <h3>6月7日</h3>
 
-<P>USE_OPENGL ���ѻ��ˡ�glBlendColor ���������Ƥ��ʤ�����
-SDL_GL_GetProcAddress �Ǵؿ��ؤΥݥ��󥿤��������褦���ѹ�������ǡ�
-����δĶ��Ǿ��ʤ��Ȥ⥳��ѥ�����̤�褦�ˤʤ�Ȼפ��ޤ���
-glBlendColor ����������Ƥ��ʤ����ϡ��ؿ��ؤΥݥ��󥿤μ����˼��Ԥ���
-�����ǥץ������Ͻ�λ���ޤ����ʤ���Zaurus �ǥѥå������Ǥ� OpenGL ��
-���Ѥ��ʤ��Τǡ�������ι����Ϥ���ޤ���</P>
+          <P>USE_OPENGL 使用時に、glBlendColor が定義されていない場合に
+            SDL_GL_GetProcAddress で関数へのポインタを取得するように変更。これで、
+            大抵の環境で少なくともコンパイルは通るようになると思います。
+            glBlendColor が実装されていない場合は、関数へのポインタの取得に失敗し、
+            そこでプログラムは終了します。なお、Zaurus 版パッケージでは OpenGL は
+            使用しないので、こちらの更新はありません。</P>
 
-</DIV>
+        </DIV>
 
-<div class="diary-day">
-<h3>6��6��</h3>
+        <div class="diary-day">
+          <h3>6月6日</h3>
 
-<P>OpenGL �Τ���ˡ������ɤ߹��߻��ˡ�����ե��ͤ�׻��� SDL_Surface 
-�γƥԥ�����˳�Ǽ���뤳�Ȥˤ��롣����Ū���̤Ȥ��ơ�����ե��դ�����(a 
-����)��ɬ�ץ����̤�Ⱦʬ�ˤʤ�Τǡ����Τλ��ѥ����̤�빽���äƤ�
-��Ȼפ��ޤ����ޤ��������������̲����Хåե������������Τǡ����ѥ�
-����̤�����˸��äƤ��ޤ���</P>
+          <P>OpenGL のために、画像読み込み時に、アルファ値を計算し SDL_Surface
+            の各ピクセルに格納することにする。副次的効果として、アルファ付き画像(a
+            指定)の必要メモリ量が半分になるので、全体の使用メモリ量も結構減ってい
+            ると思います。また、内部用全画面画像バッファを２枚削除したので、使用メ
+            モリ量がさらに減っています。</P>
 
-<P>�ܥ���(btn,cselbtn,spbtn,exbtn)�������(select)����¾��ɽ�����Ǥ���
-��Ū�˰����褦�ˤ���������ʬ����ǲ�����ȯ����ΰ�ʪ��������</P>
+          <P>ボタン(btn,cselbtn,spbtn,exbtn)や選択肢(select)等を他の表示要素と統
+            一的に扱うようにし、コア部分を簡素化。開発初期の遺物の整理。</P>
 
-<P>USE_OVERLAY �� SCREEN_ROTATION ��Ϣ�Υ����ɤ��������Ԥ� VRAM �ؤ�
-����ž���ι�®���ƥ��ȤΤ���ˡ���Ԥϰ����ΥС������� Zaurus �� SDL 
-�饤�֥���Ȥ����������Ƥ����ΤǤ������ɤ���⺣��Ȥ�ͽ�꤬�ʤ���
-�Ǻ�����ޤ�����</P>
+          <P>USE_OVERLAY や SCREEN_ROTATION 関連のコードを削除。前者は VRAM への
+            画像転送の高速化テストのために、後者は以前のバージョンの Zaurus 用 SDL
+            ライブラリを使うために入れていたのですが、どちらも今後使う予定がないの
+            で削除しました。</P>
 
-<P>����ѥ������ USE_OPENGL ����ꤹ�뤳�Ȥǡ������Τ褦�ʼ㴳������
-�Ϥ����ΤΡ�OpgnGL �����Ѥ�����®������б����ӥǥ������ɾ�˲�����
-���餫�����ɤ߹���Ǥ������ʤ�٤��黻�����ƥӥǥ������ɾ�ǹԤ��褦��
-���Ƥ��ޤ����礭�ʲ������ڤ��ؤ���ȼ�����ả�ޤǤ��ʤ�ȿ�����٤��ä�˿
-������Υ����������̤�Ķ��®�ˡ��ʤ���endian �ط��ν�����ְ㤨�Ƥ�
-���ǽ��������Τǡ��ɤʤ��� big endian �� CPU ���ư���ǧ�򤷤Ƥ���
-������Ȥ��줷���Ǥ���</P>
+          <P>コンパイル時に USE_OPENGL を指定することで、下記のような若干の制限
+            はあるものの、OpgnGL を利用した高速描画に対応。ビデオカード上に画像を
+            あらかじめ読み込んでおき、なるべく演算は全てビデオカード上で行うように
+            しています。大きな画像の切り替えを伴うため今までかなり反応が遅かった某
+            ゲームのキャラ選択画面が超高速に。なお、endian 関係の処理を間違えてい
+            る可能性があるので、どなたか big endian の CPU 上で動作確認をしていた
+            だけるとうれしいです。</P>
 
-<UL>
-  <LI> ��������Ƥ��� OpenGL �ΥС������ϡ����̤˥ӥǥ������ɤΥɥ�
-���Фˤ�äưۤʤꡢ�Ť��С�����󤷤����ݡ��Ȥ���Ƥ��ʤ���硢����
-�ѥ���Ǥ��ʤ�����ư�����������ʤɤ����꤬�Ф�Ȼפ��ޤ�������� 
-OpenGL 1.4 ��ɸ��̿�ᡦ���(glBlendColor, GL_CONSTANT_ALPHA)����Ѥ�
-�Ƥ��ޤ��Τǡ����Τޤޥ���ѥ��뤹��ˤ� OpenGL 1.4 �ʾ�δĶ���ɬ��
-�Ǥ������������Ť��С������Ǥ⥪�ץ����(��̾)�ǥ��ݡ��Ȥ��Ƥ����
-�礬����Τǡ��ե����ɥХå����Ƥ���������б�����뤫�⤷��ޤ���
-  <LI> �������������ϡ��ɤ˰�¸�������ƥ������㥵������ۤ���ȡ���
-�β��������褵��ޤ��󡣥�������򲣤��¤٤���Ĺ�β�����Ȥ����˥᡼����
-��ʤɤǤ��ޤ�����ˤʤ�ޤ���
-  <LI> drawsp �ʤɥǥ���ɽ��̿��̤�������᡹�б����ޤ����Ȥ�����������
-���̿��Τ���� OpenGL ��Ƴ�������褦�ʤ�ΤǤ���
-  <LI> monocro, nega ��̤�������ɤ�������ˡ���פ��⤫�Ф����ɤ�������Τ���
-</UL>
+          <UL>
+            <LI> 実装されている OpenGL のバージョンは、一般にビデオカードのドラ
+              イバによって異なり、古いバージョンしかサポートされていない場合、コン
+              パイルできない・挙動がおかしいなどの問題が出ると思われます。今回は
+              OpenGL 1.4 の標準命令・定数(glBlendColor, GL_CONSTANT_ALPHA)を使用し
+              ていますので、そのままコンパイルするには OpenGL 1.4 以上の環境が必要
+              です。ただし、古いバージョンでもオプション(別名)でサポートしている場
+              合があるので、フィードバックしてくだされば対応出来るかもしれません。
+            <LI> 画像サイズがハードに依存する最大テクスチャサイズを越えると、そ
+              の画像が描画されません。セル画像を横に並べた横長の画像を使うアニメーショ
+              ンなどでたまに問題になります。
+            <LI> drawsp などデモ用表示命令未実装。近々対応します。というか、これ
+              らの命令のために OpenGL を導入したようなものです。
+            <LI> monocro, nega が未実装。良い実装方法が思い浮かばず、どうしたものか。
+          </UL>
 
-<P>���̣����֤ʤɥӥǥ���������Ǳ黻�Ǥ����ܽ褬Ω�äƤ��ʤ���ǽ����
-���Ĥ����ꡢ�����ϥᥤ������ǹ���������� glTexSubImage2D ��ž
-�����뤳�Ȥˤ��ޤ���OpenGL ��Ȥ�ʤ����Ȥɤ����ٰۤʤ�Τ���Ĵ�٤�
-����ˡ�640x480�β��̤Ǽºݤ˷�¬���Ƥߤ��Ȥ�������δĶ��Ǥϸ��̣���
-�֤Ǥ� 27:40 (fps)���Ǥ���®��������ۤ��Ѥ��ʤ��Ȥ�����̤ˤʤ��
-����������ϲ���������ž�����碌�����֤Ǥ������ʤߤˡ��ӥǥ���������
-�Ǳ黻���Ǥ��� glBlendColor ��Ȥä�����ե��֥��ǥ��󥰡ʸ��̣����֡�
-���� 52:702 (fps)���Ǥ���٤���®�Ȥ�����̤ˤʤ�ޤ�����</P>
+          <P>効果１８番などビデオカード内で演算できる目処が立っていない機能がい
+            くつかあり、それらはメインメモリ上で合成した後に glTexSubImage2D で転
+            送することにします。OpenGL を使わない場合とどの程度異なるのかを調べる
+            ために、640x480の画面で実際に計測してみたところ，私の環境では効果１８
+            番では 27:40 (fps)で素よりは速いがそれほど変わらないという結果になりま
+            した。これは画像生成と転送を合わせた時間です。ちなみに、ビデオカード内
+            で演算ができる glBlendColor を使ったアルファブレンディング（効果１０番）
+            だと 52:702 (fps)で素に比べて爆速という結果になりました。</P>
 
-</DIV>
+        </DIV>
 
-<div class="diary-day">
-<h3>5��16��</h3>
+        <div class="diary-day">
+          <h3>5月16日</h3>
 
-<P>uniuni-z ���󤫤�ΥХ����򸵤ˡ�PDA ��������쥢����������β���
-�β������ѹ��򤷤Ƥ���Ȥ��ˡ�btn ̿��� btndef �ǻ��ꤵ�줿������
-���������ꤵ��ʤ��ä��Х�������20040417 �ʹߤǥХ���ȯ�����Ƥ��ޤ�
-����
-</P>
+          <P>uniuni-z さんからのバグ報告を元に、PDA が定義されアーカイブ中の画像
+            の解像度変更をしているときに、btn 命令で btndef で指定された画像が
+            正しく設定されなかったバグを修正。20040417 以降でバグが発生していまし
+            た。
+          </P>
 
-</DIV>
+        </DIV>
 
-<div class="diary-day">
-<h3>5��3��</h3>
+        <div class="diary-day">
+          <h3>5月3日</h3>
 
-<P>�����֥ե������ɤ߹��߸�ˡ�btndef �ǻ��ꤵ�줿�ܥ�������ե��������
-�ꤷ�Ƥ��ʤ��ä��Х�������</P>
+          <P>セーブファイル読み込み後に、btndef で指定されたボタン画像ファイルを設
+            定していなかったバグを修正。</P>
 
-<P>loopbgm, loopbgmstop �������</P>
+          <P>loopbgm, loopbgmstop を実装。</P>
 
-<P>�����ѿ��򥻡��֥ե�����˽񤭹���褦���ѹ����ޤ���������ֹ�򤤤�
-�ĤǤ����褦���ѹ�������ˤȤ�ʤ��������֥ե�����ΥС��������
-���ޤ�����</P>
+          <P>配列変数をセーブファイルに書き込むように変更。また、配列の番号をいく
+            つでも取れるように変更。これにともない、セーブファイルのバージョンを上
+            げました。</P>
 
-<P>640x480 �ʳ��β����٤λ��ˡ������ƥ��˥塼����������ˤ��ʤ��Х�
-������</P>
+          <P>640x480 以外の解像度の時に、システムメニューが画面中央にこないバグ
+            を修正。</P>
 
-<P>exbtn �ǡ��������ǻ��ꤷ�����ץ饤�Ȥ��ΰ������ʸ������Υ��ץ�
-���Ȥ��ΰ褬�ŤʤäƤ�����ˡ���Ԥ���������褵��ʤ��Х������������
-</P>
+          <P>exbtn で、第一引数で指定したスプライトの領域と制御文字列内のスプラ
+            イトの領域が重なっている場合に、後者が正常に描画されないバグを一部修正。
+          </P>
 
-<P>spbtn, exbtn �ǡ����뤬���Ĥ���̵�����ˤ���������֤β������Ѱդ�
-�Ƥ����Х�������</P>
+          <P>spbtn, exbtn で、セルが１個しか無い場合にも非選択状態の画像を用意し
+            ていたバグを修正。</P>
 
-<P>�������ΰ�����θ�Ψ����</P>
+          <P>再描画領域管理の効率化。</P>
 
-<P>bgm, bgmonce, mp3, mp3loop, mp3save ̿��� MIDI �ե���������
-��ǽ�ˤ��롣</P>
+          <P>bgm, bgmonce, mp3, mp3loop, mp3save 命令で MIDI ファイルを演奏
+            可能にする。</P>
 
-<P>rmenu �� end ���б����ޤ�����ޤǡ�rmenu reset ��&quot;��λ���ޤ���
-��������Ǥ�����&quot;��ɽ�����Ƥ��ޤ������������ rmenu end �λ���ɽ
-���Ȥ���rmenu reset �κݤ�&quot;�ꥻ�åȤ��ޤ�����������Ǥ�����&quot;
-��ɽ������褦���ѹ����ޤ�����</P>
+          <P>rmenu で end に対応。またこれまで、rmenu reset は&quot;終了します。
+            よろしいですか？&quot;と表示していましたが、これは rmenu end の時の表
+            示とし、rmenu reset の際は&quot;リセットします。よろしいですか？&quot;
+            と表示するように変更しました。</P>
 
-</DIV>
+        </DIV>
 
-<div class="diary-day">
-<h3>4��19��</h3>
+        <div class="diary-day">
+          <h3>4月19日</h3>
 
-<P>drawclear, drawfill, drawbg, drawbg2, drawsp, drawsp2, drawtext,
-draw ���������ư�������ץ����å���̵��������θ������ž��ޤ������
-���������黻�Ǥ�äƤ��ޤ����ϡ��ɥ�������������졼�����ϻȤäƤ���
-���Τǡ�®���ˤϴ��Ԥ��ʤ��Ǥ���������</P>
+          <P>drawclear, drawfill, drawbg, drawbg2, drawsp, drawsp2, drawtext,
+            draw を実装。浮動小数点プロセッサが無い機種を考慮し、回転を含め画像変
+            換は整数演算でやっています。ハードウェアアクセラレーションは使っていな
+            いので、速さには期待しないでください。</P>
 
-<P>mask ���������ɤ߹��ߤκݤˡ�directory �դ��Υե�����̾�� parse ��
-����褦�ˤ��롣stralias ��ʸ���ѿ��Ǥ����Ǥ���褦�ˤ��褦�Ȥ�����
-�Ǥ��Ƥ��ޤ����������⤽���ܲȤǤ��б����Ƥ��ʤ��ΤǤ��ä��ꤢ������
-������</P>
+          <P>mask 画像等の読み込みの際に、directory 付きのファイル名を parse で
+            きるようにする。stralias や文字変数でも指定できるようにしようとして中
+            断していましたが、そもそも本家では対応していないのであっさりあきらめま
+            した。</P>
 
-<P>���蹹���ΰ�����˴ؤ���Х��������²��̳�����ꤷ���Ȥ��ˡ�����
-�����ΰ褬�����ˤʤ��礬����ޤ�����</P>
+          <P>描画更新領域管理に関するバグを修正。実画面外を指定したときに、描画
+            更新領域が不正になる場合がありました。</P>
 
-</DIV>
+        </DIV>
 
-<div class="diary-day">
-<h3>4��17��</h3>
+        <div class="diary-day">
+          <h3>4月17日</h3>
 
-<P>�Ľ񤭥⡼�� and/or ��Ӥ˴ؤ��뽤��¿�������Ѥ���ʬ�ˤϤ���������
-��ʤ��Ȼפ��ޤ����Ľ񤭤�ñ�˲����Ѥ�ʸ����Ĥ��¤٤Ƥ�������ǡ���
-�������̤ϸ��̤˰��֡���ž��Ĵ�����Ƥ��ޤ�����̤Ϥ�äȰ��֤���ʸ¦
-�˵ͤ�ʤ���Фʤ�ʤ��ΤǤ��������Τ������н褷�ޤ����Ľ񤭤��äȼ�
-���˰�����ˡ�Ϥʤ���ΤǤ��礦����</P>
+          <P>縦書きモード and/or ルビに関する修正多数。使用する分にはだいたい問
+            題ないと思います。縦書きは単に横書き用の文字を縦に並べているだけで、句
+            読点や括弧は個別に位置・回転を調整しています。括弧はもっと位置を本文側
+            に詰めなければならないのですが、そのうちに対処します。縦書きをもっと自
+            然に扱う方法はないものでしょうか。</P>
 
-<P>shadedistance ����������������Ƥ��������褷�Ƥ���ʸ���ˤ��֤�ȡ�
-��񤭤��Ƥ��ޤ��ޤ����ܲȤǤϥ���å��Ԥ��ˤʤä��Ȥ��˾�¦�����ƺ���
-�褷�Ƥ���褦�Ǥ��������Τ����б����ޤ���</P>
+          <P>shadedistance を実装。ただし、影が既に描画している文字にかぶると、
+            上書きしてしまいます。本家ではクリック待ちになったときに上側を全て再描
+            画しているようですが、そのうち対応します。</P>
 
-<P>00.txt, 01.txt ���Υ�����ץȤ��ɤ߹��ߤ��б���</P>
+          <P>00.txt, 01.txt 等のスクリプトの読み込みに対応。</P>
 
-<P>csp ̿��ǡ����ץ饤�Ȥ���Ѥ��ʤ��ܥ����ܥ��������������
-�ʤ��褦�˽����ʥ���Х��ˡ�</P>
+          <P>csp 命令で、スプライトを使用しないボタンをボタン定義から削除し
+            ないように修正（エンバグ）。</P>
 
-<P>btn ̿��ǡ��ܥ�������ե�����γ�¦����ꤷ���Ȥ��ˡ��ܥ����
-��������åԥ󥰤���ʤ��Х������ʥ���Х��ˡ�</P>
+          <P>btn 命令で、ボタン画像ファイルの外側を指定したときに、ボタン画
+            像がクリッピングされないバグを修正（エンバグ）。</P>
 
-<P>spbtn, exbtn ̿��ǥܥ�������򤷤���ˡ���Ͽ�������ץ饤���ֹ�
-�˿����˲������ɤ߹���Ȥ��줬ȿ�Ǥ���ʤ��Х������ʥ���Х��ˡ�</P>
+          <P>spbtn, exbtn 命令でボタン定義をした後に、登録したスプライト番号
+            に新たに画像を読み込むとそれが反映されないバグを修正（エンバグ）。</P>
 
-<P>���Ĥδ֤ˤ�������Х������Ѥ��Ƥ��ޤ���������ޤǤˡ����򤨤���
-�����ͤ��������ѹ����٤������֤��Ƥ��뤿�ᡢ�Τ�ư���Ƥ����Τ˺��ˤʤ�
-�������ư���ʤ��ʤäƤ����Τ�¾�ˤ�빽����Ȼפ��ޤ������Ť������ϡ�
-�ե����ɥХå������������ꤤ���ޤ���</P>
+          <P>いつの間にやら相当バグが累積していました。これまでに、やむをえず内
+            部仕様の大幅な変更を何度か繰り返しているため、昔は動いていたのに今になっ
+            て正常に動かなくなっているものが他にも結構あると思います。気づいた方は、
+            フィードバックをよろしくお願いします。</P>
 
-</DIV>
+        </DIV>
 
-<div class="diary-day">
-<h3>4��2��</h3>
+        <div class="diary-day">
+          <h3>4月2日</h3>
 
-<P>hiromizu ���󤫤�ΥХ����򸵤ˡ��٤���§ʸ���Ȥ��ư����Ƥ��ʤ���
-���Х�������</P>
+          <P>hiromizu さんからのバグ報告を元に、』が禁則文字として扱われていなかっ
+            たバグを修正。</P>
 
-</DIV>
+        </DIV>
 
-<div class="diary-day">
-<h3>2��25��</h3>
+        <div class="diary-day">
+          <h3>2月25日</h3>
 
-<P>spbtn, exbtn �ǥܥ�������ꤷ����� csp �ǥ��ץ饤�ȼ��Τ��õ��
-�����ˡ�btnwait ���Զ�礬������������˥Х�������csp ���ˡ��ܥ�
-��ꥹ�Ȥ���������褦�ˤ��ޤ�����</P>
+          <P>spbtn, exbtn でボタンを設定した後に csp でスプライト自体が消去され
+            た場合に、btnwait で不具合が生じる（落ちる）バグを修正。csp 時に、ボタ
+            ンリストから削除するようにしました。</P>
 
-</DIV>
+        </DIV>
 
-<div class="diary-day">
-<h3>1��19��</h3>
+        <div class="diary-day">
+          <h3>1月19日</h3>
 
-<P>���¦Ť��󤫤�Υѥå��������� bgmstop ̿����ɲä��ޤ�����</P>
+          <P>αβεさんからのパッチを取り入れ bgmstop 命令を追加しました。</P>
 
-<P>���¦Ť��󤫤�Υѥå��������� ":/��;file" ����(trans-mode���̵꤬
-��) ����������б����ޤ�����</P>
+          <P>αβεさんからのパッチを取り入れ ":/～;file" 形式(trans-mode指定が無
+            い) 画像指定へ対応しました。</P>
 
-<P>���¦Ť��󤫤�Υѥå��򻲹ͤˡ�nsa ̿���� arc ̿���̵�뤹��褦�ˤ��ޤ�����(nsa ̿��� arc ̿�᤬ʻ�ѤǤ�����ͤǤ����硢���꤬���뤫�⤷��ޤ���) </P>
+          <P>αβεさんからのパッチを参考に、nsa 命令後の arc 命令を無視するようにしました。(nsa 命令と arc 命令が併用できる仕様である場合、問題があるかもしれません) </P>
 
-<P>���¦Ť��󤫤�Υѥå��������졢locate ̿��������ޤ�����X, Y ���դˤʤäƤ��ޤ��������ޤǰ�������Ƭ����ɾ��������Τ��ȻפäƤ��ޤ�����</P>
+          <P>αβεさんからのパッチを取り入れ、locate 命令を修正しました。X, Y が逆になっていました。今まで引数は先頭から評価されるものだと思っていました。</P>
 
-<P>���¦Ť��󤫤�Υѥå��������� playMP3 �� WMA �ե��������ꤷ�����˥��顼�ˤʤ�ʤ����᥻�����ơ������ե���Ȥ�ȯ�����븽�ݤ򥢥ɥۥå��˲��򤷤ޤ����� �� �Ȥꤢ���� AVIWrapper ���ĥ�����б�����������? �� �����󡢤ɤ�������Τ���</P>
+          <P>αβεさんからのパッチを取り入れ playMP3 で WMA ファイルを指定した場合にエラーにならないためセグメンテーションフォルトが発生する現象をアドホックに回避しました。 → とりあえず AVIWrapper を拡張して対応する方向で? → うーん、どうしたものか。</P>
 
-<P>Copyright �򹹿����ޤ�����</P>
+          <P>Copyright を更新しました。</P>
 
-</DIV>
+        </DIV>
 
-<div class="diary-day">
-<h3>1��5��</h3>
+        <div class="diary-day">
+          <h3>1月5日</h3>
 
-<P>btnwait ̿��ǡ��ܥ��󲡲����˥ܥ�������򥯥ꥢ���Ƥ����Х��������ޤ��������ͤ����ʾ�λ��Τߥ��ꥢ����褦�˽������ޤ������ܥ���������̤Ǥ��ä��걦����å�����ȥܥ�������Ǥ��ʤ��ʤ뤳�Ȥ�����ޤ����������줬��褵��Ƥ��ޤ���</P>
+          <P>btnwait 命令で、ボタン押下後常にボタン定義をクリアしていたバグを修正しました。戻値が１以上の時のみクリアするように修正しました。ボタン選択画面でうっかり右クリックするとボタンが選択できなくなることがありましたが、これが解決されています。</P>
 
-</DIV>
+        </DIV>
 
-</div> <!-- diary -->
-</div> <!-- diary-container -->
+      </div> <!-- diary -->
+    </div> <!-- diary-container -->
 
 
-<div id="footer">
-Copyright (c) 1998-2006 Studio O.G.A. All rights reserved.
-</div> <!-- footer -->
+    <div id="footer">
+      Copyright (c) 1998-2006 Studio O.G.A. All rights reserved.
+    </div> <!-- footer -->
 
-</div> <!-- body -->
+  </div> <!-- body -->
 
 </BODY>
+
 </HTML>
