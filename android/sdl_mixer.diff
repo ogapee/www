@@ -1,0 +1,29 @@
+--- sdl_mixer.org/dynamic_ogg.h	2010-06-02 04:07:23.000000000 +0900
++++ sdl_mixer/dynamic_ogg.h	2015-08-08 22:41:09.000000000 +0900
+@@ -36,10 +36,11 @@
+ 	ogg_int64_t (*ov_pcm_total)(OggVorbis_File *vf,int i);
+ #ifdef OGG_USE_TREMOR
+ 	long (*ov_read)(OggVorbis_File *vf,char *buffer,int length, int *bitstream);
++	int (*ov_time_seek)(OggVorbis_File *vf,ogg_int64_t pos);
+ #else
+ 	long (*ov_read)(OggVorbis_File *vf,char *buffer,int length, int bigendianp,int word,int sgned,int *bitstream);
+-#endif
+ 	int (*ov_time_seek)(OggVorbis_File *vf,double pos);
++#endif
+ } vorbis_loader;
+ 
+ extern vorbis_loader vorbis;
+--- sdl_mixer.org/music_ogg.c	2010-06-02 04:07:23.000000000 +0900
++++ sdl_mixer/music_ogg.c	2015-08-08 22:48:50.000000000 +0900
+@@ -229,7 +229,11 @@
+ /* Jump (seek) to a given position (time is in seconds) */
+ void OGG_jump_to_time(OGG_music *music, double time)
+ {
++#ifdef OGG_USE_TREMOR
++       vorbis.ov_time_seek( &music->vf, time*1000.0 );
++#else
+        vorbis.ov_time_seek( &music->vf, time );
++#endif
+ }
+ 
+ #endif /* OGG_MUSIC */

@@ -1,0 +1,11 @@
+--- libvorbisidec-1.0.2+svn18153-old/asm_arm.h	2013-11-03 01:04:36.000000000 +0900
++++ libvorbisidec-1.0.2+svn18153-new/asm_arm.h	2015-01-11 16:18:56.000000000 +0900
+@@ -15,7 +15,7 @@
+ 
+  ********************************************************************/
+ 
+-#ifdef _ARM_ASSEM_
++#if defined(_ARM_ASSEM_) && !defined(__aarch64__)
+ 
+ #if !defined(_V_WIDE_MATH) && !defined(_LOW_ACCURACY_)
+ #define _V_WIDE_MATH

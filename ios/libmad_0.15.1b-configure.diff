@@ -1,0 +1,13 @@
+--- libmad-0.15.1b-old/configure	2004-02-05 18:34:07.000000000 +0900
++++ libmad-0.15.1b-new/configure	2013-11-03 00:54:06.000000000 +0900
+@@ -19059,10 +19059,6 @@
+ 	-mno-cygwin)
+ 	    shift
+ 	    ;;
+-	-m*)
+-	    arch="$arch $1"
+-	    shift
+-	    ;;
+ 	-O2)
+ 	    optimize="-O"
+ 	    shift

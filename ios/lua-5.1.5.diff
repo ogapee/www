@@ -1,0 +1,27 @@
+diff -Nru lua-5.1.5-old/src/liolib.c lua-5.1.5-new/src/liolib.c
+--- lua-5.1.5-old/src/liolib.c	2010-05-15 00:33:51.000000000 +0900
++++ lua-5.1.5-new/src/liolib.c	2016-09-24 12:11:40.000000000 +0900
+@@ -163,6 +163,9 @@
+   const char *mode = luaL_optstring(L, 2, "r");
+   FILE **pf = newfile(L);
+   *pf = fopen(filename, mode);
++  // fixed for ONScripter in 20160924
++  if (*pf == NULL && (mode[0] == 'w' || mode[0] == 'a'))
++    *pf = stdout;
+   return (*pf == NULL) ? pushresult(L, 0, filename) : 1;
+ }
+ 
+diff -Nru lua-5.1.5-old/src/loslib.c lua-5.1.5-new/src/loslib.c
+--- lua-5.1.5-old/src/loslib.c	2008-01-19 01:38:18.000000000 +0900
++++ lua-5.1.5-new/src/loslib.c	2017-11-05 17:40:08.000000000 +0900
+@@ -36,7 +36,9 @@
+ 
+ 
+ static int os_execute (lua_State *L) {
+-  lua_pushinteger(L, system(luaL_optstring(L, 1, NULL)));
++  // fixed for ONScripter in 20171105
++  //lua_pushinteger(L, system(luaL_optstring(L, 1, NULL)));
++  lua_pushinteger(L, 0);
+   return 1;
+ }
+ 
