@@ -1,0 +1,712 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="en">
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=EUC-JP">
+<META http-equiv="Content-Style-Type" content="text/css">
+<META name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<TITLE>ONScripter page</TITLE>
+<LINK rel="stylesheet" type="text/css" href="/ogapee.css">
+</HEAD>
+
+<body>
+
+<div id="body">
+
+<div id="header">
+<H1>ONScripter page</H1>
+
+I have little time to maintain ONScripter recently and might not respond to requests immediately.<br>
+Since: Feb. 6, 2002<br>
+<!--Last updated: Mar. 21, 2016 (BTS has been restored.)<br>-->
+<!--Last updated: Jan. 14, 2020 (ONScripter on Windows updated.)<br>-->
+<!--Last updated: Aug. 16, 2022 (Source package updated.)<br>-->
+<!--Last updated: Jan. 3, 2022 (Added <a href="/cgi-bin/kagemai/guest.cgi?id=364&project=onscripter&action=view_report">Haiku</a> to supported platforms.)<br>-->
+<!--Last updated: Jun. 29, 2014 (PNaCl Binary package updated.)<br>-->
+<!--Last updated: Jul. 12, 2009 (Experimental source updated.)<br>-->
+Last updated: Apr. 4, 2023 (Derived projects added.)<br>
+</div> <!-- header -->
+
+<div id="toc-container">
+
+<h3>Table of contents</h3>
+
+<div id="toc">
+
+<ul>
+  <li> <a href="#INTRODUCTION">Introduction</a>
+    <ul>
+      <li> <a href="#package-source">Source packages</a></li>
+      <li> <a href="#package-binary">Binary packages</a></li>
+      <li> <a href="#derived-projects">Derived projects</a></li>
+      <li> <a href="#feature">Features</a>
+      <li> <a href="onscripter_devel.2023.html">Development diary</a></li>
+      <li> <a href="/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=top">Bug report</a></li>
+      <li> <a href="android/">ONScripter on Android</a>
+      <li> <a href="ios/">ONScripter on iOS</a>
+      <li> <a href="win/">ONScripter on Windows</a>
+    </ul>
+  <li> <a href="#howto">How to run</a>
+    <ul>
+      <li> <a href="#environment">Requirements</a>
+      <li> <a href="#compile">How to build</a>
+      <li> <a href="#run">How to run</a>
+    </ul>
+  <li> <a href="#todo">ToDo</a>
+  <li> <a href="#misc">Miscellaneous</a>
+    <ul>
+      <li> <a href="#keyboard-shortcut"> Keyboard shortcut </a>
+      <li> <a href="#option"> Command line options </a>
+      <li> <a href="#save"> How to play on different platforms at the same time </a>
+      <li> <a href="#registry"> Reading from the registry </a>
+      <li> <a href="#dll"> Loading DLL </a>
+      <li> <a href="#edit-mode"> Online modification of volume and variables </a>
+      <li> <a href="#truetype-font"> Displaying Kanji characters using TrueType font </a>
+      <li> <a href="#cd-audio-mapping"> Using sound files instead of CD audio </a>
+      <li> <a href="#midi"> Playing MIDI </a>
+      <li> <a href="#archive-compression"> Compression of archives </a>
+      <li> <a href="#mp3-on-windows"> Problem of chattering MP3 music on Windows platform </a>
+      <li> <a href="#enable-1byte"> How to write an English novel </a>
+      <li> <a href="#memo"> Memo </a>
+    </ul>
+  <li> <a href="index.html">Go back</a>
+</ul>
+
+</div> <!-- toc -->
+</div> <!-- toc-container -->
+
+
+<div id="main-container">
+<div id="main">
+
+<div class="content">
+<h2 id="INTRODUCTION">Introduction</h2>
+
+<p>ONScripter (O-N-Scripter) is a program that interprets and executes scripts written for <a href="http://www.nscripter.com/">NScripter</a> (<a href="http://en.wikipedia.org/wiki/NScripter">Details</a>) in its own way. It can run games on Windows, Android, iOS, etc. using the exact same game data.</p>
+
+<p>I accept behavior reports, bug reports, feature addition requests, and patches at any time, so please send them to [<a href="/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=top">Bug Tracking System</a>]. Please uncheck the box in the middle of the options field before submitting your report. You can send your reports directly to the email address listed at the bottom of this page.</p>
+
+<div class="sub-content">
+<h3 id="package-source">Source package</h3>
+
+<table><tr>
+<td>Latest release</td>
+<td><a href="onscripter-20220816.tar.gz">onscripter-20220816.tar.gz</a></td>
+</tr><tr>
+<td>Previous release</td>
+<td><a href="onscripter-20220123.tar.gz">onscripter-20220123.tar.gz</a></td>
+<!--  <li> <a href="onscripter-exp-20090712.tar.gz">onscripter-exp-20090712.tar.gz</a>(実験版, バグ修正)-->
+</tr></table>
+
+</div> <!-- sub-content -->
+
+<div class="sub-content">
+<h3 id="package-binary">Binary package (Android and Zaurus packages are tested by ME）</h3>
+
+<table>
+<tr><th>Platform</th><th>Distributor</th></tr>
+<tr><td rowspan=2>Android (2.0 and later)</td><td><a href="https://play.google.com/store/apps/details?id=jp.ogapee.onscripter.release">ONScripter</A> in Google Play</td></tr>
+<tr><td><a href="android/">ONScripter on Android</a></td></tr>
+<tr><td>Zaurus (SL-C700, etc.)</td><td><a href="zaurus/index.html">SDL on Zaurus page</a></td></tr>
+
+<tr><td rowspan=3>Linux</td><td class="span">Debian Official <a href="http://packages.debian.org/sid/onscripter">Unstable (sid)</a></td></tr>
+<tr><td class="span">Debian Official <a href="http://packages.debian.org/bookworm/onscripter">Testing (bookworm)</a></td></tr>
+<tr><td class="span">Debian Official <a href="http://packages.debian.org/bullseye/onscripter">Stable (bullseye)</a></td></tr>
+
+<tr><td rowspan=2>MacOSX</td><td class="span"><a href="https://github.com/Homebrew/homebrew-core/tree/master/Formula/onscripter.rb">Homebrew</a></td></tr>
+<tr><td><a href="http://tmkk.pv.land.to/onscripter/">ONScripter Launcher and Binary for Mac OS X</a></td></tr>
+
+<tr><td rowspan=1>Windows</td><td class="span"><a href="win/">ONScripter on Windows</a></td></tr>
+
+<!--<tr><td>PNaCl</td><td><a href="http://neo.idletime.tokyo/web/onscripter/">IdleTime</a> (Playable on Google Chrome)</td></tr>
+
+<tr><td>PSP</td><td><a href="https://www.dropbox.com/s/mj92ccgvwoit746/onscripter_signed/">onscripter_signed</a> (signed, can work on the original FW)</td></tr>
+
+<tr><td>Pandora</td><td><a href="http://sano-ya.org/pandora/onscripter/">Pandora Handheld PC / ONScripter</a></td></tr>-->
+
+<tr><td>iPhone, iPod touch</td><td><a href="http://ipodons.web.fc2.com/index.html">iPodOns</a></td></tr>
+
+<tr><td>NetWalker</td><td><a href="http://zero975.cocolog-nifty.com/qt_blog/">Qt beginner's memo</a></td></tr>
+
+<tr><td>Brain (WindowsCE 6.0)</td><td><a href="http://lycoris2475.xxxxxxxx.jp/">ONScripter for Brain</a></td></tr>
+
+<tr><td>NetBSD</td><td><a href="http://cvsweb.netbsd.org/bsdweb.cgi/pkgsrc/games/onscripter/">pkgsrc</a></td></tr>
+
+<tr><td>OS2/Warp</td><td><a href="http://www.os2.jp/modules/search/index.php?query=onscripter&amp;action=results&amp;showcontext=1">packages</a></td></tr>
+
+<tr><td>Playstation3</td><td><a href="http://www.fumi2kick.com/ps3app/">PS3 Linux de zisaku soft wo tanoshimo</a></td></tr>
+
+<tr><td>Wii</td><td><a href="http://wiibrew.org/wiki/ONScripter">ONScripter WiiBrew</a></td></tr>
+
+<tr><td rowspan=2>FreeBSD</td><td class="span"><a href="http://www.freshports.org/devel/onscripter">Official FreeBSD package</a></td></tr>
+<tr><td><a href="http://fjts.org/~m/Install/PrivPorts/"> Private Ports for FreeBSD </a></td></tr>
+
+<tr><td>Dreamcast</td><td><a href="http://sdl-dc.sourceforge.net/onscripter-dc.html">ONScripter for Dreamcast</a></td></tr>
+
+<tr><td colspan=2>Let me know if you have others</td></tr>
+
+</table>
+
+</div> <!-- sub-content -->
+
+<div class="sub-content">
+<h3 id="derived-projects">Derived projects</h3>
+
+<p>The following are projects derived from ONScripter. They are maintained by others.</p>
+
+<ul>
+  <li><a href="https://github.com/insani-org/onscripter-insani">onscripter-insani</a><br>
+    A project maintained by Seung Park of <a href="http://nscripter.insani.org/">nscripter.insani.org</a>.</li>
+  <li><a href="https://github.com/chronotrig/ponscripter-fork-wh/tree/wh-dev">ponscripter-fork-wh (wh-dev branch)</a><br>
+    PONScripter project.</li>
+  <li>ONScripter-EN<br>
+    A variant of ONScripter that can handle English scripts as well as Japanese scripts. It has been maintained by Haeleth and Uncle Mion.</li>
+</ul>
+</div>
+
+<div class="sub-content">
+<h3 id="feature">Features</h3>
+
+<ol>
+  <li> You can load and save save files that are compatible with the latest NScripter (2011/12/15). Please see <a href="#save">How to play on different platforms at the same time</a>.
+  <li> All operations can be done from the keyboard. Of course, you can also use the mouse.
+  <li> You can change CD Audio playback to music file (MP3, Ogg) playback.
+  <li> It supports multiple platforms, including Windows, Linux, MacOS X, MacOS 9, <a href="android/">Android</a>(1.6 or later), iPhone, iPad, PSP, <a href="zaurus/index.html">Zaurus</a> (SL-5500,SL-A300,SL-B500,SL-C700), FreeBSD, <a href="/cgi-bin/kagemai/guest.cgi?id=381&project=onscripter&action=view_report">OpenBSD</a>, <a href="/cgi-bin/kagemai/guest.cgi?id=364&project=onscripter&action=view_report">Haiku</a>, Solaris(on SPARC), Tru64 UNIX, OS/2Warp, iPod, PocketPC, Playstation3, Wii, GP2X, NetWalker and Dreamcast. It should also work on other platforms as well if <a href="#environment">Requirements</a> are satisfied.
+  <li> Since we have not implemented all the commands and specifications, some games may behave strangely. If this happens, please report it to the bug tracking system above.
+</ol>
+
+</div> <!-- sub-content -->
+
+</div> <!-- content -->
+
+
+<div class="content">
+<h2 id="howto">How to run</h2>
+
+<div class="sub-content">
+<h3 id="environment">Requirements</h3>
+
+<p>The following programming languages and libraries are required. The versions listed are for my development environment, but you don't need to adapt to this version.</p>
+
+<h4>Required</h4>
+<ul>
+  <li> C++ programming language
+<ul>
+  <li> g++ 8.3.0 (Linux)
+  <li> Visual Studio 2019 C++ (Windows)
+</ul>
+  <li> Japanese TTF file based on Unicode renamed as &quot;default.ttf&quot;
+  <li> libjpeg-6b (<a href="http://www.ijg.org/">Independent JPEG Group</a>)
+  <li> bzip2-1.0.5 (<a href="http://sources.redhat.com/bzip2/">bzip2</a>)
+  <li> SDL-1.2.14, SDL_image-1.2.10, SDL_mixer-1.2.8, SDL_ttf-2.0.9 (<a href="http://www.libsdl.org">Simple Directmedia Layer</a>)
+  <li> FreeType 2.3.11 (<a href="http://freetype.sourceforge.net/">the Free Type Project</a>)
+</ul>
+
+<h4>Recommended</h4>
+<ul>
+  <li> SMPEG-0.4.5<br>
+SMPEG is required to play MPEG1 movie files. Either SMPEG or MAD is required to play MP3 music files.
+  <li> ogg-1.2.0, vorbis-1.3.1 (<a href="http://www.xiph.org/">The Ogg Vorbis CODEC Project</a>)<br>
+Ogg Vorbis is required to play Ogg Vorbis music files. It is enabled by default in Makefile.Linux and Makefile.ArmLinux included in the source package. Tremor Vorbis can be used instead that decodes music using integer arithmetics only.
+</ul>
+
+<h4>Optional</h4>
+<ul>
+  <li> mad-0.15.1b (<a href="http://www.mars.org/home/rob/proj/mpeg/">MAD: Mpeg Audio Decoder</a>)<br>
+MAD is a MP3 decoding library that uses only integer arithmetics. This is essential if you want to play MP3 music files on Android or Zaurus. To use MAD, SDL_mixer library must be built with MAD enabled instead of SMPEG.
+
+  <li> avifile-0.7.48 (<a href="http://avifile.sourceforge.net/">avifile</a>)<br>
+Avifile is necessary if you want to play AVI files with avi command. It is enabled when USE_AVIFILE is defined and AVIWrapper.o is linked.
+</ul>
+
+<p>ONScripter has been tested on Linux (Debian Buster), <a href="android/">Android</a> (Sony (8.0)), <a href="ios/">iOS</a> (iPad2), and sometimes on Windows.</p>
+
+</div> <!-- sub-content -->
+
+
+<div class="sub-content">
+<h3 id="compile">How to build</h3>
+
+<p> Unpack ONScripter source package in an appropriate location. Type &quot; make -f Makefile.Linux &quot; on Linux, or type &quot; nmake -f Makefile.Win &quot; on Windows. On Windows, the path to the header files and libraries for bzip2, SDL, SMPEG, etc., should be modified in Makefile.Win depending on your environment.</p>
+
+</div> <!-- sub-content -->
+
+
+<div class="sub-content">
+<h3 id="run">How to run</h3>
+
+<p><span style="color:red">[Required]</span> Copy the necessary archives of a game to the same location. Usually, you need a script file (0.txt or nscript.dat) and archive files (arc.sar or *.nsa or *.ns2). If there are multiple archive files such as arc1.nsa to arc9.nsa, you need to copy them as well. In some games, images and sounds are placed outside archive files. In that case, you also need to copy them all. The easiest way is to copy the directory including sub-directories where a game is installed.</p>
+
+<p><span style="color:red">[Required]</span> Following <a href="#truetype-font">Displaying Kanji using TrueType font</a>, put a Japanese TrueType font file renamed as &quot;default.ttf&quot;.</p>
+
+<p>[Optional] If you want to play music files instead of CD audio tracks, please follow the instructions in <a href="#cd-audio-mapping">Using music files instead of CD audio</a> to prepare music files.</p>
+
+<p><span style="color:red">[Required]</span> Run ONScripter. It reads from nscript.dat and archives in the same directory, and the game will start. Since ONScripter outputs save files and status files in the same directory, please be sure that the directory is writable.</p>
+
+</div> <!-- sub-content -->
+</div> <!-- content -->
+
+<div class="content">
+<h2 id="todo">ToDo</h2>
+
+<ol>
+  <li> (<span style="color:red">High</span>) Lua support
+  <li> (<span style="color:#ff8800">Middle</span>) Apply &quot;windoweffect&quot; when &quot;windowerase&quot; is performed on mouse right click
+  <li> (<span style="color:#ff8800">Middle</span>) Store the image obtained by &quot;bgcopy&quot; when storing save files
+  <li> (<span style="color:#ff8800">Middle</span>) Deal with the case where shadow of characters is overlapped to other characters
+  <li> (<span style="color:#00ff00">Low</span>) &quot;english&quot; command support to handle an English script
+  <li> (<span style="color:#00ff00">Low</span>) Verify &quot;existspbtn&quot; which is implemented as &quot;spbtn&quot;
+  <li> (<span style="color:#00ff00">Low</span>) Clean up of code
+</ol>       
+
+</div> <!-- content -->
+
+
+<div class="content">
+<h2 id="misc">Miscellaneous</h2>
+
+<div class="sub-content">
+<h3 id="keyboard-shortcut"> Keyboard shortcut </h3>
+
+<p> All operations including mouse operations can be performed by
+keyboard short-cuts, though the shortcut keys defined in the script
+have higher priority.</p>
+
+<table>
+<tr><th> Key </th><th> Description </th></tr>
+<tr><td>space</td><td> Same as mouse left click, except it behaves as if the area outside the button is clicked even if the mouse cursor is just on a button. </td></tr>
+<tr><td>enter</td><td> Same as mouse left click. </td></tr>
+<tr><td>escape</td><td> Same as mouse right click. </td></tr>
+<tr><td>p,k,↑</td><td> Move the mouse cursor onto the previous choice (button) at decision branch (button selection).</td></tr>
+<tr><td>n,j,↓</td><td> Move the mouse cursor onto the next choice (button) at decision branch (button selection).</td></tr>
+<tr><td> s </td><td> Skip sentences to the next decision branch. </td></tr>
+<tr><td> o </td><td> Switch to one page display mode. </td></tr>
+<tr><td>h,←</td><td> Same as mouse wheel up. </td></tr>
+<tr><td>l,→</td><td> Same as mouse wheel down. </td></tr>
+<tr><td> f </td><td> Switch between full screen mode and windowed mode. </td></tr>
+<tr><td> a </td><td> Enter into the auto read mode if automode or mode_ext is defined. </td></tr>
+<tr><td> z </td><td> Enter into the volume and variables modification mode if &quot;--edit&quot; is specified in the command line options. </td></tr>
+<tr><td> 1, 2, 3 </td><td> Change the speed of drawing characters. </td></tr>
+<tr><td> Shift + q </td><td> Quit. (end command is issued) </td></tr>
+</table>
+
+</div> <!-- sub-content -->
+
+
+<div class="sub-content">
+<h3 id="option"> Command line options </h3>
+
+<table>
+<tr><th> Options </th><th> Description </th></tr>
+<tr><td>-h,--help</td><td> Show the help messages and exit.</td></tr>
+<tr><td>-v,--version</td><td> Show the version information and exit.</td></tr>
+<tr><td>--cdaudio</td><td> Use CD audio if available. Even if it is not available, sound files are not used instead. [default: use Music files instead of CD audio]</td></tr>
+<tr><td>--cdnumber cd_number</td><td> Choose the CD-ROM drive number to use if there are many. [default: 0]</td></tr>
+<tr><td>-f,--font file</td><td> Set a TTF font file. [default: default.ttf in the current directory]</td></tr>
+<tr><td>--registry file</td><td> Set a registry file. </td></tr>
+<tr><td>--dll file</td><td> Set a dll file. </td></tr>
+<tr><td>-r,--root path</td><td> Set the directory where the script and archives are placed. [default: current directory]</td></tr>
+<tr><td>--fullscreen</td><td> Start in full screen mode. </td></tr>
+<tr><td>--window</td><td> Start in windowed mode. </td></tr>
+<tr><td>--force-button-shortcut</td><td> Ignore &quot;getenter&quot; and &quot;useescspc&quot; commands. In other words, &quot;esc&quot;, &quot;space&quot; and &quot;enter&quot; keys are forced to behave as a mouse click. </td></tr>
+<tr><td>--enable-wheeldown-advance</td><td> Advance the text on mouse wheel down when it waits for a click at the end of a sentence. If the behavior of waiting for a click is customized by &quot;textgosub&quot;, this option has no effect. </td></tr>
+<tr><td>--disable-rescale</td><td> Do not rescale the images in the archives to fit in the screen when compiled with PDA_WIDTH or PDA_AUTOSIZE defined. Along with the compressed archives as mentioned in <a href="#archive-compression">Compression of archives</a>, ONScripter will run faster by avoiding the need for resizing. Note that image files outside the archives are resized as before. </td></tr>
+<tr><td>--render-font-outline</td><td> Render the outline of a text in black (or white if the color of the text is dark) using the outline rendering function supported in SDL_ttf since 2.0.10. Text will be clearly shown.</td></tr>
+<tr><td>--edit</td><td> Enable online modification of the volume and variables when &quot;z&quot; is pressed. </td></tr>
+</table>
+
+</div> <!-- sub-content -->
+
+
+<div class="sub-content">
+<h3 id="save">How to play on different platforms at the same time</h3>
+
+<p>You can share save files among different platforms such as desktop PC (Windows, Linux, MacOSX), smartphone (Android, iPhone), etc. To do this, you need to prepare game data on all platforms and move all output files generated from ONScripter (or NScripter) from one platform to another.</p>
+
+<p>NScripter or ONScripter generates/updates following files. Some may not be generated depending on games.</p>
+
+<table>
+<tr><th> Output files </th><th> Description </th></tr>
+<tr><td><i>archive_path/</i>gloval.sav</td><td>global variables</td></tr>
+<tr><td><i>archive_path/</i>envdata</td><td>environmental variables</td></tr>
+<tr><td><i>archive_path/</i>kidoku.dat</td><td>already-read texts</td></tr>
+<tr><td><i>archive_path/</i>NScrflog.dat</td><td>already-read files</td></tr>
+<tr><td><i>archive_path/</i>NScrllog.dat</td><td>already-read labels in a script</td></tr>
+<tr><td><i>archive_path/</i>save*.dat</td><td>save files (those generated by ONScripter can not be read from NScripter, but those generated by NScripter can be read from ONScripter)</td></tr>
+<tr><td><i>archive_path/sav/</i>save*.dat</td><td>save files compatible with NScripter (not warranted) generated by ONScripter</td></tr>
+<tr><td><i>archive_path/</i>other images</td><td>Screenshots may be saved as images. Directory and name of images are dependent on games.</td></tr>
+</table>
+
+<p>The format of a save file may change when a newer version of NScripter (or ONScripter) is released. So, ONScripter generates a save file having extra information about the version number of a save file in the header. A save file without a version number is also generated under &quot;sav&quot; directory if it exists and it is compatible with a save file generated from the latest NScripter. Note that the version number of a save file is different from the version number (e.g. 20120225) of ONScripter. </p>
+
+<p>ONScripter can load any save files with version number and save files in the latest format without version number.</p>
+
+<h4>From ONScripter to ONScripter</h4>
+
+<dl>
+<dt>Simply copy all the above mentioned modified files including save*.dat.
+<dd>ONScripter_dir/* → ONScripter_dir/*
+</dl>
+
+<h4>From NScripter to ONScripter</h4>
+
+<dl>
+<dt>Simply copy all the above mentioned modified files including save*.dat.
+<dd>NScripter_dir/* → ONScripter_dir/*
+</dl>
+
+<h4>From ONScripter to NScripter</h4>
+
+<dl>
+<dt>Copy all the above mentioned modified files excluding save*.dat.
+<dd>ONScripter_dir/* -&gt; NScripter_dir/*
+<dt>Copy save files under &quot;sav&quot; directory
+<dd>ONScripter_dir/sav/save*.dat -&gt; NScripter_dir/save*.dat
+</dl>
+
+<h4>Notice</h4>
+<ul>
+  <li>Save files generated from the latest NScripter (nscr.exe released in 2011/12/15) are supported. <span style="color:red">ONScripter doesn't load save files generated from older version of NScripter.</span>
+  <li>Compatibility between the latest NScripter and ONScripter is not guaranteed, but there has been no problem as far as I know.
+  <li>Use the above mentioned latest NScripter from the beginning if you use both ONScripter and NScripter. In that case, be sure to make &quot;sav&quot; directory in advance.
+</ul>
+
+</div> <!-- sub-content -->
+
+
+<div class="sub-content">
+<h3 id="registry"> Reading from the registry </h3>
+
+<p>getreg command reads data from the registry of Windows. ONScripter emulates this command by reading from registry.txt (text file) that describes the data.</p>
+
+<p>The format of registry.txt is as follows. Letters are case sensitive. Be careful not to have extra spaces. If you use Kanji characters, use Shift JIS code set.</p>
+
+<pre>
+[the second argument of getreg command (excluding quotation marks around)]
+the third argument of getreg command = string to be compared (including quotation marks around)
+</pre>
+
+<p class="noindent">Example of registry.txt</p>
+
+<pre>
+[software\StudioOGA\ONScripter]
+"INSTALL"="FULL"
+
+[software\StudioOGA\のまど]
+"Download log file"="c:\nomad_down.log"
+"Upload log file"="c:\nomad_up.log"
+</pre>
+
+<p>You can share a registry file among games if ONScripter is launched with --registry option. Without --registry option, it looks for registry.txt in the current directory.</p>
+
+</div> <!-- sub-content -->
+
+
+<div class="sub-content">
+<h3 id="dll"> Loading DLL </h3>
+
+<p>exec_dll command executes DLL (Dynamic Link
+Library) that is built to run on Windows. ONScripter emulates this command by reading from dll.txt (text file) that describes the relationship between the name of a DLL and its return value. So, DLL is not executed and the return value is fixed.</p>
+
+<p>The format of dll.txt is as follows. Letters are case sensitive. Be careful not to have extra spaces. If you use Kanji characters, use Shift JIS code set.</p>
+
+<pre>
+[Name of DLL]
+str = &quot;string&quot; (string value received in getret command)
+ret = integer (integer value received in getret command)
+</pre>
+
+<p class="noindent">Example of dll.txt</p>
+
+<pre>
+[test.dll]
+str = "山田/太郎/やまだ/たろう"
+ret = 1
+
+[test2.dll]
+str = "StudioOGA"
+ret = 2
+</pre>
+
+<p>You can share a dll file among games if ONScripter is launched with --dll option. Without --dll option, it looks for dll.txt in the current directory.</p>
+
+</div> <!-- sub-content -->
+
+
+<div class="sub-content">
+<h3 id="edit-mode"> Online modification of volume and variables </h3>
+
+<p>This is a temporary function and might be modified or removed in the future.</p>
+
+<p>It is enabled by setting '--edit' option when launching ONScripter.</p>
+
+<p>If you press z key when waiting for key-in, you will enter edit mode and the title bar becomes as follows.</p>
+
+<pre>
+[EDIT MODE]  MP3 vol (m)  SE vol (s)  Voice vol (v)  Numeric variable (n)
+</pre>
+
+<p class="noindent">If you further press any of m, s, v, n key, you will enter sub edit mode where you can change corresponding variables. You can escape from edit mode by pressing ESC key.</p>
+
+<p>If you press 'n' key, you have to choose a variable first and then change its value.</p>
+
+<p>You can use '0' to '9', '-', BackSpace, Esc, Enter keys when you change numeric variables. '-' key is accepted when you are editting a numeric variable and the value is 0. If the value is other than 0, you need to clear the value by pressing BackSpace key and then press '-' key. </p>
+
+</div> <!-- sub-content -->
+
+
+<div class="sub-content">
+<h3 id="truetype-font"> Displaying Kanji characters using TrueType font </h3>
+
+<p> Japanese TrueType font is required to display Kanji characters. For example, msgothic.ttc under c:\Windows\Fonts in Windows 7, or freely available TrueType fonts shown below can be used.</p>
+
+<dl>
+  <dt> <a href="http://jikasei.me/font/genjyuu/">Genjyuu gothic</a>
+  <dd> It is a round gothic style font derived from <a href="http://ja.wikipedia.org/wiki/Source_Han_Sans">Gennokaku gothic</a>. Among them, I recommend GenJyuuGothicX-Monospace-Bold.ttf because it is bold, beautiful, and easy-to-read.
+
+  <dt> <a href="http://mix-mplus-ipa.osdn.jp/">M+ and IPA compositional font</a>
+  <dd> Re-distributable fonts based on M+ font and IPA font. Among them, I recommend Migu-2M-bold.ttf because it is bold, beautiful, and easy-to-read.
+
+  <dt> <a href="http://ossipedia.ipa.go.jp/ipafont/index.html">IPA font</a>
+  <dd> Re-distributable Gothic and Mincho font.
+
+  <dt> <a href="http://mikachan-font.com/">Mika-chan font</a>
+  <dd> Handwritten font.
+</dl>
+
+<p> Because SDL_ttf renders Kanji characters badly when TTF_STYLE_BOLD is enabled, ONScripter just ignores "bold" settings. If you use a small device like smartphones, it is better to use a bold TrueType font such as Migu-2M-bold.ttf mentioned above and HG Gothic E (HGRGE.TTC).
+
+<p> TrueType font file should be renamed to <STRONG>default.ttf</STRONG> and be placed in the same directory where a script file is placed before launching ONScripter. </p>
+
+</div> <!-- sub-content -->
+
+
+<div class="sub-content">
+<h3 id="cd-audio-mapping"> Using sound files instead of CD audio </h3>
+
+<p>Create a directory named &quot;cd&quot; in the directory where scripts and archives are placed, and put sound files as follows.<br>
+cd/track01.xxx<br>
+cd/track02.xxx<br>
+cd/track03.xxx<br>
+...<br>
+cd/track14.xxx<br>
+...<br>
+MP3, OGG and WAV format are supported. Please change the above &quot;xxx&quot; according to the format of the sound files.</p>
+
+<p> The behavior of a command to play the first CD audio track,
+i.e. play &quot;*1&quot;, is changed to play
+&quot;track01.mp3&quot;. This is the default behavior unless
+&quot;--cdaudio&quot; option is specified. In case of missing sound
+files, &quot;play&quot; command is just ignored. </p>
+
+</div> <!-- sub-content -->
+
+
+<div class="sub-content">
+<h3 id="midi"> Playing MIDI </h3>
+
+<p>MIDI is played by SDL_mixer. When playing MIDI, a temporary file &quot;tmp.mus&quot; is created because SDL_mixer can only load MIDI data from a file.</p>
+
+<dl>
+  <dt> Playing MIDI using a software sound module on Unix (tested on Linux and Zaurus) (default)
+  <dd> Playing MIDI using timidity, a software sound module incorporated in SDL_mixer. In this case, you need to download a set of sound patches <a href="http://www.libsdl.org/projects/SDL_mixer/timidity/timidity.tar.gz">timidity.tar.gz</a> and expand them under, for example, /usr/local/lib/.
+  <dt> Playing MIDI on Windows
+  <dd> You need to download a set of sound patches <a href="http://www.libsdl.org/projects/SDL_mixer/timidity/timidity.tar.gz">timidity.tar.gz</a> and expand them under c:\.
+  <dt> Playing MIDI using a hardware sound module on Unix (tested on Linux)
+  <dd> playmidi 等の外部音源を使用できる MIDI player をインストールし、環境変数 MUSIC_CMD を設定してください。（例 MUSIC_CMD=/usr/bin/playmidi）<br>
+       当方では、シリアル接続で外部音源を繋ぎ、MUSIC_CMD に '/usr/bin/midiplay -q -o /dev/ttyS0' を設定して動作確認をしています。<br>
+       <a href="http://sourceforge.net/projects/playmidi/">playmidi</a>は、カーネルで認識される MIDI ポートに対してしか演奏できませんが、<a href="http://member.nifty.ne.jp/Breeze/softwares/unix/midiplay+.html">midiplay</a>はシリアルに直接出せます。<br>
+       <a href="http://crystal.apana.org.au/ghansper/MidiAxis.html">シリアルポートをMIDIポートにする patch</a>を使えば、playmidi でもシリアル接続音源を使えそうですが、未確認です。       
+</dl>
+
+</div> <!-- sub-content -->
+
+
+<div class="sub-content">
+<h3 id="archive-compression"> Compression of archives </h3>
+
+<p>The screen size of Linux Zaurus (320x240) or PSP (360x270) is smaller than the size expected in the script. By resizing the images in the archives beforehand, you can keep the size of the archives small and use the storage efficiently. Images with SPB format are stored as BMP format unless -e option is specified. </p>
+
+<h4>Usage</h4>
+
+<pre>
+sarconv                    src_screen_width dst_screen_width src_SAR_filename dst_SAR_filename
+nsaconv [-e] [-ns2] [-ns3] src_screen_width dst_screen_width src_NSA_filename dst_NSA_filename
+</pre>
+
+<p>src_screen_width can be 640 or 800.</p>
+
+<p>dst_screen_width can be any width such as 176(iPod), 320(QVGA), 360(PSP), 384(PSP), 640(VGA). </p>
+
+<h4>Examples</h4>
+
+<p>Converting a SAR archive from 640x480 to 320x240.</p>
+
+<pre>
+&gt; sarconv 640 320 arc.sar zaurus_dir/arc.sar
+...
+</pre>
+
+<p>Converting a NSA archive from 800x600 to 320x240.</p>
+
+<pre>
+&gt; nsaconv [-e] 800 320 arc.nsa zaurus_dir/arc.nsa
+&gt; nsaconv [-e] 800 320 arc1.nsa zaurus_dir/arc1.nsa
+...
+</pre>
+
+<p>Converting a NSA (ns2) archive from 800x600 to 640x480.</p>
+
+<pre>
+&gt; nsaconv [-e] -ns2 800 640 arc.nsa zaurus_dir/arc.nsa
+&gt; nsaconv [-e] -ns2 800 640 arc1.nsa zaurus_dir/arc1.nsa
+...
+</pre>
+
+<p>You have to manually distinguish the version (1 or 2 or 3) of NSA archive. The use of ns2 command in the script indicates version 2, while the use of ns3 command indicates version 3. If you cannot check the script, please try without -ns2 first. If it fails, please try with -ns2 or -ns3.</p>
+
+<p>With the -e option, wav and bmp files are compressed in nbz format. This sets a special value, incompatible with NScripter, for the flag indicating the compression type of NSA archive. This extension may conflict with an extension by NScripter in the future. In that case, it can be solved by modifying the converter and reconverting archives. Since reconverting doesn't affect save files, etc., those who use ONScripter in Zaurus are advised to convert with this option. Since wav is compressed with bzip2, archives become quite small in games that heavily use wav. As a disadvantage, the game speed is slightly slower because it additionally decodes bzip2, but it's not noticiable. </p>
+
+<p>With the -j option, bmp files are converted to jpeg files while keeping the filenames unchanged. Except, bmp files using palette color are not converted.</p>
+
+<p>The option -q sets the quality of jpeg compression ranging from 0 to 100. Small value indicates low quality but small file size. The default value is 75.</p>
+
+<p>The option --disable-rescale is required when <a href="#archive-compression">a rescaled archive</a> is used.<br>
+
+<p>You can enjoy a game in 320x240 resolution on Linux if ONScripter is compiled with -DPDA.</p>
+
+</div> <!-- sub-content -->
+
+
+<div class="sub-content">
+<h3 id="mp3-on-windows"> Problem of chattering MP3 music on Windows platform </h3>
+
+<p>Some MP3 files are played with muddled sound when ONScripter is linked with pre-built SMPEG binaries on Windows. It is due to an optimization problem when compiling SMPEG with MSVC and can be solved by suppressing some of MSVC's global optimization, as shown below, and compiling it yourself.</p>
+
+<p>File to be modified: audio/mpeglayer3.cpp</br>
+Add the following #pragma specification before and after the function layer3reorderandantialias.</p>
+
+<PRE>
+#pragma optimize( "g", off )
+void MPEGaudio::layer3reorderandantialias(int ch,int gr,
+                                          REAL  in[SBLIMIT][SSLIMIT],
+                                          REAL out[SBLIMIT][SSLIMIT]){
+  ......
+}
+#pragma optimize( "g", on )
+</PRE>
+
+</div> <!-- sub-content -->
+
+
+<div class="sub-content">
+<h3 id="enable-1byte"> How to write an English novel </h3>
+
+<p>This feature is an extension of ONScripter based on a request from Chend (chendo[at]gmail.com). He has contributed significantly to ONScripter by proposing specifications and sending patches.</p>
+
+<p>By defining ENABLE_1BYTE_CHAR at compile-time, the text from `(back quote) to the end of the line or another ` is displayed as a sentence written in 1-byte characters. In the text, single-byte spaces are enabled for display, but the display of variables within the text is disabled, and the color and time specifications are also disabled depending on the starting position. If you want to change the color in the middle of the text, use / to separate lines. However, the forced click character is ignored (_) immediately after waiting for a click (@) or page break (\).</p>
+
+<p>将来本家で ` に何か機能を割り振った場合には、削除もしくは別の文字に
+変更される可能性があります。現状のように ENABLE_1BYTE_CHAR の指定の有
+無で使い分けられるようにするかもしれませんが、保証の限りではありません。
+</p>
+
+<p>また、コンパイル時に ENABLE_1BYTE_CHAR と合わせて FORCE_1BYTE_CHAR 
+を指定すると、全ての表示を半角にすることが可能になります。具体的には、
+上記に加えて、右クリックメニューの表示が英語になり、また数字変数の表示
+が半角になります。</p>
+
+<p>以下にスクリプト例を書きます。</p>
+
+<PRE>
+*define 
+clickstr `.?"`, 2 
+savename `Save the scene`, `Load the scene`, "Memory "
+rmenu `Save to file`,save,`Load from file`,load
+game
+ 
+*start
+`Hi, this was test.
+`Hi, this is test again.
+`_"He said so."
+`_"She said so."
+`Does it work??
+br
+selgosub `Say "Turn to the right."`, *right, 
+`Say "Turn to the left."`, *left ,
+"`Do nothing.", *nothing
+end 
+
+*right
+`You turned to the right.
+return
+
+*left
+`You turned to the left.
+return
+
+*nothing
+`You didn't do anything.
+return
+</PRE>
+
+</div> <!-- sub-content -->
+
+<div class="sub-content">
+<h3 id="memo"> Memo </h3>
+
+<h4>event_mode</h4>
+<p>The values in the table below are used exclusively.</p>
+<table>
+<tr><th>Value</th><th>Description</th><th>Example</th></tr>
+<tr><td>IDLE_EVENT_MODE</td><td>Not clickable wait.</td><td>wait</td></tr>
+<tr><td>WAIT_BUTTON_MODE</td><td>Wait for selection using ButtonLink (image).</td><td>btnwait, select, right-click menu</td></tr>
+<tr><td>WAIT_INPUT_MODE</td><td> Wait for clickable user input.</td><td>delay, click, @, \, text rendering, screen effect</td></tr>
+</table>
+
+<p>The values in the table below are used conjunction with the values in the table above.</p>
+<table>
+<tr><th>Value</th><th>Description</th><th>Example</th></tr>
+<tr><td>WAIT_TIMER_MODE</td><td>Wait for the specified time, animation is processed while waiting</td><td>Most cases except for screen efffect and text rendering.</td></tr>
+<tr><td>WAIT_VOICE_MODE</td><td>Wait until voice is finihsed.</td><td>automode, btntime2 only</td></tr>
+<tr><td>WAIT_TEXT_MODE</td><td>Wait at the end of text.</td><td>@, \, select</td></tr>
+<tr><td>WAIT_RCLICK_MODE</td><td>Wait for right click.</td><td>lrclick</td></tr>
+</table>
+
+<h4> Order of rendering layers</h4>
+
+<p> In the table below, the lower layer is hidden by the upper layer. The initial value of &quot;humanz&quot; is 499.</p>
+
+<p> Text is always rendered at the top when appeared.</p>
+
+<table>
+<tr><th>Normal</th><th>&quot;windowback&quot; is used</th></tr>
+<tr><td colspan="2" style="text-align:center">Button</td></tr>
+<tr><td colspan="2" style="text-align:center">Cursor</td></tr>
+<tr><td>Text window and text</td><td>Numeric label</td></tr>
+<tr><td>Numeric label</td><td>Bar</td></tr>
+<tr><td>Bar</td><td>Sprite (from humanz to 0)</td></tr>
+<tr><td>** monochrome and negation effect **</td><td>Text window and text</td></tr>
+<tr><td>Sprite2 (from 255 to 0)</td><td>Sprite2 (from 255 to 0)</td></tr>
+<tr><td>Sprite (from humanz to 0)</td><td>** monochrome and negation effect **</td></tr>
+<tr><td colspan="2" style="text-align:center">Tachi-e (standing characters)</td></tr>
+<tr><td colspan="2" style="text-align:center">Sprite (from 999 to humanz+1)</td></tr>
+<tr><td colspan="2" style="text-align:center">Background</td></tr>
+</table>
+
+</div> <!-- sub-content -->
+
+</div> <!-- content -->
+
+</div> <!-- main -->
+</div> <!-- main-container -->
+
+
+<div id="footer">
+E-mail: <i>ogapee@yahoo.kp at aqua.dti2.ne.jp</i> (please remove yahoo.kp at)<br>
+Copyright (c) 1998-2023 Studio O.G.A. All rights reserved.
+</div> <!-- footer -->
+
+</div> <!-- body -->
+
+</body>
+</html>

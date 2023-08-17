@@ -1,0 +1,154 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="ja">
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=EUC-JP">
+<META http-equiv="Content-Style-Type" content="text/css">
+<META name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<TITLE> ONScripter 開発日誌 </TITLE>
+<LINK rel="stylesheet" type="text/css" href="/ogapee.css">
+</HEAD>
+
+<body>
+
+<div id="body">
+
+<div id="header">
+<H1>ONScripter 開発日誌</H1>
+
+Since: Feb. 6, 2002<br>
+Last updated: Dec. 31, 2003
+</div> <!-- header -->
+
+<div id="toc-container">
+
+<h3>過去の開発日誌</h3>
+
+<div id="toc">
+
+<ul>
+  <li> 2003年
+    <ul>
+      <li> <A HREF="onscripter_devel.2003_3.html"> 7月〜 9月</A>
+      <li> <A HREF="onscripter_devel.2003_2.html"> 4月〜 6月</A>
+      <li> <A HREF="onscripter_devel.2003_1.html"> 1月〜 3月</A>
+    </ul>
+  <li> 2002年
+    <ul>
+      <li> <A HREF="onscripter_devel.2002_4.html">10月〜12月</A>
+      <li> <A HREF="onscripter_devel.2002_3.html"> 7月〜 9月</A>
+      <li> <A HREF="onscripter_devel.2002_2.html"> 4月〜 6月</A>
+      <li> <A HREF="onscripter_devel.2002_1.html"> 1月〜 3月</A>
+    </ul>
+  <li> 2001年
+    <ul>
+      <li> <A HREF="onscripter_devel.2001.html">12月</A>
+    </ul>
+</ul>
+</div> <!-- toc -->
+</div> <!-- toc-container -->
+
+
+<div id="diary-container">
+<div id="diary">
+
+<h2>2003年10月〜12月</h2>
+
+<div class="diary-day">
+<h3>12月31日</h3>
+
+<P>現在表示されているテキスト文字をアルファ付き画像として保存し、効果の後の再描画にそれを使うようにしました。これで、文字色やルビが正しく復帰するようになりました。</P>
+
+<P>名前が紛らわしいので、画像のみを picture_surface に、アルファつき文字画面を text_surface に、両者を合成した最終画面を accumultation_surface に変更しました。</P>
+
+</div>
+
+<div class="diary-day">
+<h3>12月1日</h3>
+
+<P> SL-C860 に対応した阿川さんのパッチに追従し、<A HREF="zaurus/index.html#Package">Zaurus 用の SDL library </A>を<A HREF="zaurus/sl-devel.html#devel-20031201">更新</A>しました。</P>
+
+</div>
+
+<div class="diary-day">
+<h3>11月29日<span style="color:red">セーブファイルのバージョンアップ</span></h3>
+
+<P>rubyon, rubyoff を実装しました。ただし、画面の再描画が生じると、ルビが消えてしまいます。これは、以前からある、部分的に文字の色を変更した後に画面の再描画が生じると文字の色が全部同じになってしまう問題と同じ原因です。原因は分かっていますが、ちょっとどうしたらよいか思案中です。</P>
+
+<P>これに伴い、セーブファイルのバージョンを上げました。この ONScripter で生成したセーブファイルは、以前のバージョンの ONScripter では読み込めません。逆はできます。また、NScripter とセーブファイルを共有している場合には、セーブファイルを移行した上で NScripter を最新のものに変更する必要があります（ONScripter しか使わない場合には特に移行作業をする必要はありません）。セーブファイルを移行するには、以下のどちらかを実行してください。</p>
+
+<OL>
+<LI>NScripter で保存したセーブファイルは、一旦古い ONScripter で読み込み保存し直す。
+
+<LI>古い ONScripter で保存してあるセーブファイル（1で処理したファイルを含む）は、最新の ONScripter で読み込み保存し直す。
+</OL>
+
+<p style="text-indent:0">これが面倒な人は、既存のゲームに関しては古い ONScripter をそのままお使い下さい。</p>
+
+<P>と思いきや、20031103 以前では、ロードした直後にセーブするとロードデータがセーブファイルに反映されない場合があるバグがありました。20031103 以前でセーブし直す場合には、一回毎に ONScripter を立ち上げ直すか、もしくは読み込み後にテキストを一つ進めてから保存するなどした方が安全です。</P>
+
+<P>某所にあった MacOS9 用のパッチを一部取り入れました。</P>
+
+<P>MACOSX もしくは MACOS9 が定義されている場合に ctrl キー押下を無視する仕様を廃止して元に戻しました。この辺りの挙動は検証できないので、おかしかったらご報告下さい。</P>
+
+<P>SL-7x0 上の onscripter-cf-s, onscripter-sd-s で 「<A HREF="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=41">qvga モードに切り替わらない</A>」を修正しました。どうやら、複数のアイコンが同じ実行ファイルを共有している場合に、解像度情報を /home/zaurus/Settings/display.conf で実行ファイル毎に管理しているため、QVGA,VGA を使い分けることができないようです。アイコン毎に固有の実行ファイル（スクリプト）を用意することで解決しました。
+</P>
+
+</div>
+
+<div class="diary-day">
+<h3>11月3日</h3>
+
+<P>ロード時に、gosub のネスト情報の一部を初期化していないバグを修正しました。テキスト文が一行ずれることがありました。</P>
+
+<P>if 文で条件節が真にもかかわらず実行文が空の場合など、RET_CONTINUE_NOREAD を返しながら現在位置が改行コードの時に、行番号がずれるバグを修正しました。こういう変則的なスクリプトはほとんどありませんが、もし遭遇するとセーブ時にほぼ必ず落ちる致命的なバグでした。</P>
+
+<P>ONScripter では、ctrl キー押下時に強制スキップ状態になりますが、Mac では ctrl + マウスクリックでマウス右クリック相当になるようなので、MACOSX もしくは MACOS9 が定義されている場合には ctrl キー押下を無視するようにしました。</P>
+
+<P>某所にあった MacOS9 用のパッチを一部取り入れました。</P>
+
+</div>
+
+<div class="diary-day">
+<h3>10月5日</h3>
+
+<P>textgosub 使用時には、スキップモードにおいても textgosub で指定されたラベルに飛ぶようにしました。</P>
+
+<P>humanorder を実装しました。</P>
+
+</div>
+
+<div class="diary-day">
+<h3>10月3日</h3>
+
+<P> shadowTextDisplay 内では dirty_rect に追加しないようにしました。refreshSurface の最後で dirty_rect に追加しました。アニメーションが正しく描画されないバグを修正しました。</P>
+
+<P> 解像度変換ルーチンで、縮小比が大きいときにあまりに遅いので、処理を簡略化しました。ただし計算量自体は変わらないので、せいぜい体感で倍くらいです。</P>
+
+<P> 既読スキップが効かなくなっていたのを修正しました。</P>
+
+<P> btntime2 及び automode の挙動の修正。指定時間とボイス演奏時間のうち長い方だけ待つようにしました。</P>
+
+<P> skip モードで textbtnwait に入った場合に、skip を継続できるように修正しました。</P>
+
+<P> automode_time が負の場合、前回の文末(@,\\)から現在の位置までの文字数と -automode_time の積だけ待つように修正しました。</P>
+
+<P> アニメーションスプライトで、セルの表示時間が０の場合も正しく取り扱えるように修正しました。</P>
+
+<P> btnwait 時に、ある条件で過去のボタン定義を消去していなかったバグを修正しました。</P>
+
+<P> Makefile.Win で、nsaconv, sarconv を生成するようにし、また OggVorbis を標準で使うようにしました。</P>
+
+</div>
+
+</div> <!-- diary -->
+</div> <!-- diary-container -->
+
+
+<div id="footer">
+Copyright (c) 1998-2006 Studio O.G.A. All rights reserved.
+</div> <!-- footer -->
+
+</div> <!-- body -->
+
+</BODY>
+</HTML>

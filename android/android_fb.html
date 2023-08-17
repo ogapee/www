@@ -1,0 +1,467 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=EUC-JP">
+<META http-equiv="Content-Style-Type" content="text/css">
+<META name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<TITLE> フレームバッファに直接アクセスする ONScripter on Android </TITLE>
+<LINK rel="stylesheet" type="text/css" href="/ogapee.css">
+</HEAD>
+
+<body>
+
+<div id="body">
+
+<div id="header">
+<H1> フレームバッファに直接アクセスする ONScripter on Anroid </H1>
+
+Since: May 30, 2010<br>
+Last updated: May 30, 2010 (パッケージ更新、更新内容は<A HREF="../onscripter_devel.2010_1.html">ONScripter 開発日誌</A>)<br>
+</div> <!-- header -->
+
+<div id="toc-container">
+
+<h3>目次</h3>
+
+<div id="toc">
+
+<ul>
+  <li> <A HREF="#introduction">はじめに</A>
+  <li> <A HREF="#Package">バイナリパッケージ</A>
+  <li> <A HREF="#Run">実行方法</A>
+  <li> <A HREF="#environment">開発環境の導入</A>
+    <ul>
+      <li> <a href="#crosscompiler">クロスコンパイラ</a>
+      <li> <a href="#environmentvariable">環境変数</a>
+      <li> <A HREF="#SDL-1.2.14">SDL-1.2.14</A>
+      <li> <A HREF="#libjpeg-8b">libjpeg 8b</A>
+      <li> <A HREF="#zlib-1.2.5">zlib-1.2.5</A>
+      <li> <A HREF="#libpng-1.2.43">libpng-1.2.43</A>
+      <li> <A HREF="#SDL_image-1.2.10">SDL_image-1.2.10</A>
+      <li> <A HREF="#SDL_mixer-1.2.11">SDL_mixer-1.2.11</A>
+      <li> <A HREF="#bzip2-1.0.5">bzip2-1.0.5</A>
+      <li> <A HREF="#freetype-2.3.12">freetype-2.3.12</A>
+      <li> <A HREF="#SDL_ttf-2.0.9">SDL_ttf-2.0.9</A>
+      <li> <A HREF="#mad-0.15.1b">mad-0.15.1b</A>
+      <!--<li> <A HREF="#ivorbis">Tremor Vorbis I Stream 20020517: 1.0.2</A><font color=red>(updated in Sep. 2, 2003)</font>-->
+    </ul>
+  <li> <a href="../onscripter.html">戻る</a>
+</ul>
+
+</div> <!-- toc -->
+</div> <!-- toc-container -->
+
+
+<div id="main-container">
+<div id="main">
+
+<div class="content">
+<h2 id="introduction">はじめに</h2>
+
+<p> 特に理由が無い限り、このページのバイナリではなく <a
+href="android.html"> ONScripter on Android のページ </a>のバイナリを使
+用してください。</p>
+
+<p> フレームバッファ (/dev/graphics/fb0) に直接アクセスすることによっ
+て <a href="http://www.android.com/">Android</a> 上で動作する 
+ONScripter のバイナリパッケージを配布します。実行には root 権限が必要
+です。SDL など必要なライブラリは全て静的にリンクされているため、単体で
+動作するはずです。</p>
+
+<p>現在のところエミュレータ(Android 2.2)上でしかテストしておりません。
+ただし 以下の手順を見てもわかるとおり、コンパイルは Android のバージョ
+ンに非依存なので、他のバージョンの Android でも動作すると思います。何
+か要望があればご連絡下さい。</p>
+
+<!--<p> 現在 Emulator 上でテストしています。mpeg ムービー再生、CD-Audio 演
+奏以外の<A HREF="../onscripter.html">ONScripter</A>の全ての機能が動作
+します。ペンとボタン（もしくはキーボード）を併用しての入力となります。
+具体的な機能及び実行方法については、<A
+HREF="../onscripter.html">ONScripter のページ</A>を参照してください。
+</p>-->
+
+</div> <!-- content -->
+
+
+<div class="content">
+<h2 id="Package">バイナリパッケージ</h2>
+
+<ul>
+  <li> <A HREF="http://ogapee.at.infoseek.co.jp/android/onscripter_20100530_android">onscripter_20100530_android</A>
+[ミラー <A HREF="http://onscripter.sourceforge.jp/android/onscripter_20100530_android"> onscripter_20100530_android</A>]
+</ul>
+
+<p>制限・注意事項</p>
+<ul>
+<li> root 権限が必要です。
+<li> ESC キー（＝マウス右クリック）はホームボタンで代用しています。
+<li> 音は鳴りません。/dev/eac がオーディオデバイスのようですが、SDL から使う方法が分かりません。動画再生も無効にしてあります。
+<li> Emulator 上のマウスカーソルが実マウスカーソルに追従しません。キーボードショートカットでカーソルを移動してください。
+<li> コンパイル時に -DPDA と -DPDA_AUTOSIZE を指定しています。解像度は画面いっぱいに自動調整されます。
+<li> Emulator + SDL では実マウスが左クリックくらいしか効かないので、<a href="../onscripter.html#keyboard-shortcut">キーボードショートカット</a>を駆使してください。
+<li> キーボードショートカットがスクリプトから無効にされないように、<a href="../onscripter.html#option">起動オプション</a>で --force-button-shortcut を指定した方がいいかもしれません。
+</ul>
+
+<!--<p>CD-Audio の代わりに MP3 ファイルを使う場合は、44.1KHz もしくは 
+22.05KHz でサンプルされたものを用意してください。</p>-->
+
+</div> <!-- content -->
+
+
+<div class="content">
+<h2 id="Run">実行方法</h2>
+
+<p>/sdcard にゲームのファイル一式(nscript.dat, arc.nsa, default.ttf な
+ど)があるとします。</p>
+
+<pre>
+&gt; adb push onscripter_android /sdcard
+&gt; adb shell /sdcard/onscripter_android -r /sdcard
+</pre>
+
+</div> <!-- content -->
+
+<div class="content">
+<h2 id="environment">開発環境の導入</h2>
+
+<p>ここでは当方の環境(Linux Debian/squeeze)における開発環境の導入方法
+を説明します。</p>
+
+<p>Emulator の導入方法については、まず<a
+href="http://developer.android.com/sdk/index.html">Android SDK Starter
+Package</a>から自身の環境に合わせて SDK インストーラをダウンロードして
+実行してください。インストーラの実行に Sun JAVA が必要です。Eclipse や 
+NDK は必要ありません。その後の Emulator の設定方法などについては<a
+href="http://www.google.com/">グーグル</a>などで調べてください。</p>
+
+<div class="sub-content">
+<h3 id="crosscompiler">クロスコンパイラ</h3>
+
+<p><a
+href="http://www.codesourcery.com/sgpp/lite/arm/portal/subscription?@template=lite">Download
+Sourcery G++ Lite Edition for ARM</a>より GNU/Linux on ARM 用のクロス
+コンパイラのインストーラ (IA32 GNU/Linux Installer) をダウンロードして
+実行します。</p>
+
+<pre>
+&gt; sudo sh arm-2010q1-202-arm-none-linux-gnueabi.bin
+</pre>
+
+<p>インストール先は、例えば /opt/Sourcery_G++_Lite とします。</p>
+
+</div> <!-- sub-content -->
+
+
+<div class="sub-content">
+<h3 id="environmentvariable">環境変数</h3>
+
+<p>以下のファイルを作成し、クロスコンパイルをする前に、source
+dev-arm-android.sh として環境変数を設定します。</p>
+
+dev-arm-android.sh:
+<pre>
+setenv PATH /opt/Sourcery_G++_Lite/bin/:/opt/Sourcery_G++_Lite/arm-none-linux-gnueabi/bin/:$PATH
+setenv LD arm-none-linux-gnueabi-ld
+setenv CC arm-none-linux-gnueabi-gcc
+setenv CXX arm-none-linux-gnueabi-g++
+setenv LDFLAGS -L/opt/Sourcery_G++_Lite/arm-none-linux-gnueabi/lib
+setenv CFLAGS -I/opt/Sourcery_G++_Lite/arm-none-linux-gnueabi/include
+echo "Altered environment for Android Development ARM"
+</pre>
+</div> <!-- sub-content -->
+
+
+<div class="sub-content">
+<h3 id="SDL-1.2.14">SDL-1.2.14</h3>
+
+<p><A HREF="http://www.libsdl.org/">SDL本家</A>より SDL-1.2.14.tar.gz
+をダウンロード。</p>
+
+<P>SDL-1.2.14/src/video/fbcon/SDL_fbvideo.c の中で、
+&quot;/dev/fb0&quot; を &quot;/dev/graphics/fb0&quot; に２個所置換しま
+す。
+
+<pre>
+&gt; configure \
+--prefix=/opt/Sourcery_G++_Lite/arm-none-linux-gnueabi \
+--host=i386-linux \
+--target=arm-linux \
+--enable-video=yes \
+--enable-cdrom=no \
+--enable-joystick=yes \
+--enable-loadso=no \
+--enable-esd=no \
+--enable-arts=no \
+--enable-pulseaudio=no \
+--enable-video-fbcon=yes \
+--enable-shared=no \
+--enable-sdl-dlopen=no \
+--enable-video-x11=no \
+--enable-x11-shared=no \
+--enable-dga=no \
+--enable-video-dga=no \
+--enable-video-x11-dgamouse=no \
+--enable-video-x11-vm=no \
+--enable-video-x11-xv=no \
+--enable-video-x11-xinerama=no \
+--enable-video-x11-xme=no \
+--enable-video-x11-xrandr=no \
+--enable-video-photon=no \
+--enable-video-carbon=no \
+--enable-video-cocoa=no \
+--enable-video-fbcon=yes \
+--enable-video-directfb=no \
+--enable-video-ps2gs=no \
+--enable-video-ggi=no \
+--enable-video-svga=no \
+--enable-video-vgl=no \
+--enable-video-wscons=no \
+--enable-video-aalib=no \
+--enable-video-qtopia=no \
+--enable-video-picogui=no \
+--enable-video-dummy=no \
+--enable-video-opengl=no
+&gt; make
+&gt; sudo make install
+</pre>
+</div> <!-- sub-content -->
+
+
+<div class="sub-content">
+<h3 id="libjpeg-8b">libjpeg 8b</h3>
+
+<p><A HREF="http://www.ijg.org/">Independent JPEG Group</A>より 
+jpegsrc.v8b.tar.gzをダウンロード。</p>
+
+<pre>
+&gt; configure \
+--prefix=/opt/Sourcery_G++_Lite/arm-none-linux-gnueabi \
+--host=i386-linux \
+--target=arm-linux \
+--enable-shared=no
+&gt; make
+&gt; sudo make install
+</pre>
+</div> <!-- sub-content -->
+
+
+<div class="sub-content">
+<h3 id="zlib-1.2.5">zlib-1.2.5</h3>
+
+<p><A HREF="http://www.zlib.net/">zlib</A>より zlib-1.2.5.tar.gz をダ
+ウンロード。</p>
+
+<pre>
+&gt; configure --static --prefix=/opt/Sourcery_G++_Lite/arm-none-linux-gnueabi
+</pre>
+Makefile: line 171 を以下のように修正
+<pre>
+	-cp $(SHAREDLIBV) $(DESTDIR)$(sharedlibdir)
+</pre>
+<pre>
+&gt; make
+&gt; sudo make install
+</pre>
+</div> <!-- sub-content -->
+
+
+<div class="sub-content">
+<h3 id="libpng-1.2.43">libpng-1.2.43</h3>
+
+<p><A HREF="http://www.libpng.org/pub/png/libpng.html">libpng</A>より 
+lbipng-1.2.43.tar.gz をダウンロード。</p>
+
+<pre>
+&gt; configure \
+--prefix=/opt/Sourcery_G++_Lite/arm-none-linux-gnueabi \
+--host=i386-linux \
+--target=arm-linux \
+--enable-shared=no
+&gt; make
+&gt; sudo make install
+</pre>
+</div> <!-- sub-content -->
+
+
+<div class="sub-content">
+<h3 id="SDL_image-1.2.10">SDL_image-1.2.10</h3>
+
+<p><A HREF="http://www.libsdl.org/">SDL本家</A>より 
+SDL_image-1.2.10.tar.gz をダウンロード。</p>
+
+<pre>
+&gt; configure \
+--prefix=/opt/Sourcery_G++_Lite/arm-none-linux-gnueabi \
+--host=i386-linux \
+--target=arm-linux \
+--enable-shared=no
+&gt; make
+&gt; sudo make install
+</pre>
+</div> <!-- sub-content -->
+
+
+<div class="sub-content">
+<h3 id="SDL_mixer-1.2.11">SDL_mixer-1.2.11</h3>
+
+<p><A HREF="http://www.libsdl.org/">SDL本家</A>より 
+SDL_mixer-1.2.11.tar.gz をダウンロード。</p>
+
+<pre>
+&gt; configure \
+--prefix=/opt/Sourcery_G++_Lite/arm-none-linux-gnueabi \
+--host=i386-linux \
+--target=arm-linux \
+--disable-music-mp3 \
+--disable-music-ogg --disable-music-native-midi \
+--disable-music-cmd --disable-music-mod \
+--disable-smpegtest \
+--enable-shared=no
+&gt; make
+&gt; sudo make install-lib
+&gt; sudo make install-hdrs
+</pre>
+</div> <!-- sub-content -->
+
+
+<div class="sub-content">
+<h3 id="bzip2-1.0.5">bzip2-1.0.5</h3>
+
+<p><A HREF="http://sources.redhat.com/bzip2/">The bzip2 and libbzip2
+official home page</A>より bzip2-1.0.5-tar.gz をダウンロード。</p>
+
+<p>Makefile: の下記の行を変更</p>
+<pre>
+CC=arm-none-linux-gnueabi-gcc
+AR=arm-none-linux-gnueabi-ar
+RANLIB=arm-none-linux-gnueabi-ranlib
+
+PREFIX=/opt/Sourcery_G++_Lite/arm-none-linux-gnueabi
+
+all: libbz2.a bzip2 bzip2recover
+</pre>
+
+<pre>
+&gt; make
+&gt; sudo make install
+</pre>
+</div> <!-- sub-content -->
+
+
+<div class="sub-content">
+<h3 id="freetype-2.3.12">freetype-2.3.12</h3>
+
+<p><A HREF="http://www.freetype.org/">the Free Type Project</A>より 
+freetype-2.3.12.tar.gz をダウンロード。</p>
+
+<pre>
+&gt; configure \
+--prefix=/opt/Sourcery_G++_Lite/arm-none-linux-gnueabi \
+--host=i386-linux \
+--target=arm-linux \
+--enable-shared=no
+&gt; make
+&gt; sudo make install
+</pre>
+</div> <!-- sub-content -->
+
+
+<div class="sub-content">
+<h3 id="SDL_ttf-2.0.9">SDL_ttf-2.0.9</h3>
+
+<p><A HREF="http://www.libsdl.org/">SDL本家</A>より 
+SDL_ttf-2.0.9.tar.gz をダウンロード。</p>
+
+<pre>
+&gt; configure \
+--prefix=/opt/Sourcery_G++_Lite/arm-none-linux-gnueabi \
+--host=i386-linux \
+--target=arm-linux \
+--without-x \
+--enable-shared=no
+&gt; make
+&gt; sudo make install
+</pre>
+</div> <!-- sub-content -->
+
+
+<div class="sub-content">
+<h3 id="mad-0.15.1b">mad-0.15.1b</h3>
+
+<p><A HREF="http://www.mars.org/home/rob/proj/mpeg/">MAD: MPEG Audio Decoder</A>より libmad-0.15.1b.tar.gz をダウンロード。</p>
+
+<p>MADは整数計算のみでMP3をデコードするライブラリです。ARM系のCPUでは
+浮動小数点計算が非常に遅いため、ONScripterでは、SMPEGに差し替えこれで
+MP3をデコードします。</p>
+
+<!--
+<p>一部の MP3 が演奏できないので、MP3 の frame header の資料と MADのソー
+スを付き合わせ、どこがおかしいのかを調べました。結果、frame header の 
+15,16bit 目の Emphasis が2の場合、MAD は不正なヘッダとして弾いています。
+私が参考にした資料には、2 は reserved となっているため、MAD 的には正し
+いことをしているようですが、なぜかこの MP3 は 2 になっているため、2 の
+場合 0 (none) 扱いすることにして続行するパッチ<A
+HREF="mad-0.14.2b-k1.diff">mad-0.14.2b-k1.diff</A>をあて、演奏可能にな
+りました。</p>
+-->
+<pre>
+&gt; configure \
+--prefix=/opt/Sourcery_G++_Lite/arm-none-linux-gnueabi \
+--host=i386-linux \
+--target=arm-linux \
+--enable-fpm=arm --enable-speed --disable-debugging --enable-sso \
+--enable-shared=no
+&gt; make
+&gt; sudo make install
+</pre>
+</div> <!-- sub-content -->
+
+<!--
+<div class="sub-content">
+<h3 id="ivorbis">Tremor Vorbis I Stream 20020517: 1.0.2</h3>
+
+<p>整数演算のみのデコーダである, <A
+HREF="http://svn.xiph.org/trunk/Tremor/">the Ogg Vorbis 'Tremor'
+integer playback codec</A>をダウンロード。configure.in の記述が一部お
+かしいので、パッチ<A HREF="Tremor-K1.diff">Tremor-K1.diff</A>をあてま
+す。</p>
+
+<pre>
+&gt; wget -r -l1 http://svn.xiph.org/trunk/Tremor/
+&gt; cd svn.xiph.org/trunk/Tremor
+&gt; sh autogen.sh --build=i686-linux --host=arm-linux
+    --prefix=/opt/Embedix/tools/arm-linux
+&gt; make
+&gt; su
+&gt; make install
+</pre>
+</div> <!-- sub-content -->
+
+
+<div class="sub-content">
+<h3 id="onscripter">ONScripter</h3>
+
+<p>最後に、<A HREF="../onscripter.html">ONScripter のページ</a>から最
+新の ONScripter のソースをダウンロードしてコンパイルします。strip した
+方がサイズ小さくなっていいと思います。</p>
+
+<pre>
+&gt; make -f Makefile.Android
+&gt; arm-none-linux-gnueabi-strip onscripter_android
+</pre>
+</div> <!-- sub-content -->
+
+</div> <!-- content -->
+
+
+</div> <!-- main -->
+</div> <!-- main-container -->
+
+<div id="footer">
+Copyright (c) 1998-2010 Studio O.G.A. All rights reserved.
+</div> <!-- footer -->
+
+</div> <!-- body -->
+
+</body>
+</html>

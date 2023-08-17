@@ -1,0 +1,243 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="ja">
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=EUC-JP">
+<META http-equiv="Content-Style-Type" content="text/css">
+<META name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<TITLE> ONScripter 開発日誌 </TITLE>
+<LINK rel="stylesheet" type="text/css" href="/ogapee.css">
+</HEAD>
+
+<body>
+
+<div id="body">
+
+<div id="header">
+<H1>ONScripter 開発日誌</H1>
+
+Since: Feb. 6, 2002<br>
+Last updated: Aug. 25, 2020
+</div> <!-- header -->
+
+<div id="toc-container">
+
+<h3>過去の開発日誌</h3>
+
+<div id="toc">
+
+<ul>
+  <li> <A HREF="onscripter_devel.2019.html"> 2019年</A>
+  <li> <A HREF="onscripter_devel.2018.html"> 2018年</A>
+  <li> <A HREF="onscripter_devel.2017.html"> 2017年</A>
+  <li> <A HREF="onscripter_devel.2016.html"> 2016年</A>
+  <li> <A HREF="onscripter_devel.2015.html"> 2015年</A>
+  <li> <A HREF="onscripter_devel.2014.html"> 2014年</A>
+  <li> <A HREF="onscripter_devel.2013.html"> 2013年</A>
+  <li> <A HREF="onscripter_devel.2012.html"> 2012年</A>
+  <li> <A HREF="onscripter_devel.2011_1.html"> 2011年</A>
+  <li> <A HREF="onscripter_devel.2010_1.html"> 2010年</A>
+  <li> <A HREF="onscripter_devel.2009_1.html"> 2009年</A>
+  <li> <A HREF="onscripter_devel.2008_1.html"> 2008年</A>
+  <li> <A HREF="onscripter_devel.2007_1.html"> 2007年</A>
+  <li> <A HREF="onscripter_devel.2006_1.html"> 2006年</A>
+  <li> <A HREF="onscripter_devel.2005_1.html"> 2005年</A>
+  <li> <A HREF="onscripter_devel.2004_1.html"> 2004年</A>
+  <li> 2003年
+    <ul>
+      <li> <A HREF="onscripter_devel.2003_4.html">10月〜12月</A>
+      <li> <A HREF="onscripter_devel.2003_3.html"> 7月〜 9月</A>
+      <li> <A HREF="onscripter_devel.2003_2.html"> 4月〜 6月</A>
+      <li> <A HREF="onscripter_devel.2003_1.html"> 1月〜 3月</A>
+    </ul>
+  <li> 2002年
+    <ul>
+      <li> <A HREF="onscripter_devel.2002_4.html">10月〜12月</A>
+      <li> <A HREF="onscripter_devel.2002_3.html"> 7月〜 9月</A>
+      <li> <A HREF="onscripter_devel.2002_2.html"> 4月〜 6月</A>
+      <li> <A HREF="onscripter_devel.2002_1.html"> 1月〜 3月</A>
+    </ul>
+  <li> 2001年
+    <ul>
+      <li> <A HREF="onscripter_devel.2001.html">12月</A>
+    </ul>
+</ul>
+</div> <!-- toc -->
+</div> <!-- toc-container -->
+
+
+<div id="diary-container">
+<div id="diary">
+
+<h2>2020年</h2>
+
+<div class="diary-day">
+<h3>8月25日</h3>
+
+<p>Play Console アプリのクラッシュ数から確認できるクラッシュ時のスタックトレースを見ると、起動時にディレクトリを選択するところで NullPointerException が発生して落ちる場合があるようなので、一部対応しました。<a href="android/#sdk">Android 版 SDK</a> と Android 版アプリを更新しました。</p>
+
+</div>
+
+<div class="diary-day">
+<h3>8月5日</h3>
+
+<p>手元の端末を Android 10 にアップデートしたところ、ONScripter を起動してゲームデータを選択した直後に落ちるようになってしまいました。調べたところ、Android 10 から対象範囲別ストレージが導入され、任意のファイルにアクセスするためには AndroidManifest.xml に以下の赤字の内容を記述する必要があるようです。<a href="android/#sdk">Android 版 SDK</a> と Android 版アプリを更新しました。</p>
+
+<pre>
+&lt;manifest xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+    ...
+    &lt;application android:label=&quot;@string/app_name&quot; android:icon=&quot;@drawable/icon&quot; <span style="color:red;">android:requestLegacyExternalStorage=&quot;true&quot;</span> android:usesCleartextTraffic=&quot;true&quot;>
+</pre>
+
+</div>
+
+<div class="diary-day">
+<h3>7月22日</h3>
+
+<p>本家ではスクリプトでラベルを二重に定義すると実行時にエラーになります。ONScripter ではラベルの二重定義についてはチェックしておらず、最初に見つかったラベルを使用するようにしていました。一方、PONScripter では、std::map を使ってラベルの登録と検索を行っており、ラベルが二重に定義されている場合は、最後に見つかったラベルが使用されます。ONScripter でも PONScripter に合わせて最後に見つかったラベルを使用するように変更しました。</p>
+
+<p>アプリをリリースしようとしたら、Google Play Console に以下のメッセージが表示されました。そこで、<a href="android/#sdk">Android 版 SDK</a> を更新して、対象を Android 9 (API 28) から Android 10 (API 29) に変更しました。</p>
+
+<pre>
+2020 年 8 月以降、新しいアプリは Android 10（API レベル 29）以上を対象にする必要があります。
+2019 年 11 月以降、アプリのアップデートは Android 10（API レベル 29）以上を対象にする必要があります。
+</pre>
+
+<p>また、<a href="android/#sdk">Android 版 SDK</a> の AndroidManifest.xml に以下の赤字の内容を記述して、HTTP 通信を有効にしました。</p>
+
+<pre>
+&lt;manifest xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+    ...
+    &lt;application android:label=&quot;@string/app_name&quot; android:icon=&quot;@drawable/icon&quot; <span style="color:red;">android:usesCleartextTraffic=&quot;true&quot;</span>>
+</pre>
+</div>
+
+<div class="diary-day">
+<h3>7月21日</h3>
+
+<p>文字コードが UTF-8 の場合に、右クリックメニューの文字が正しく描画されないバグを修正しました。</p>
+
+</div>
+
+<div class="diary-day">
+<h3>7月4日</h3>
+
+<p><a href="android/#distribution">ゲームデータの配布方法</a>を「パターン１：Google Play からダウンロードする方法」にすると、Android 5.0 以上の端末では実行時に以下のログを出力して落ちるとメールでご報告をいただきました。</p>
+
+<pre>
+java.lang.IllegalArgumentException: Service Intent must be explicit: Intent { act=com.android.vending.licensing.ILicensingService }  
+</pre>
+
+<p>拡張ファイルをダウンロードするには、Google によって提供されている LicenseChecker.java の 153 行目を以下の赤字の箇所のように修正する必要があるようなので、<a href="android/#distribution">ゲームデータの配布方法</a>にそのように追記しました。</p>
+
+<pre style="border:none;background-color:white;">
+ONScripter/library/src/main/java/com/google/android/vending/licensing/LicenseChecker.java:
+</pre>
+<pre>
+.bindService(
+        new Intent(
+                new String(
+                        Base64.decode("Y29tLmFuZHJvaWQudmVuZGluZy5saWNlbnNpbmcuSUxpY2Vuc2luZ1NlcnZpY2U=")))<span style="color:red;">.setPackage("com.android.vending")</span>,
+                this, // ServiceConnection.
+                Context.BIND_AUTO_CREATE);
+</pre>
+
+</div>
+
+<div class="diary-day">
+<h3>6月21日</h3>
+
+<p>バグ報告「<a href="/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=372">20200530バージョンにおけるtagの不具合</a>」を元に、20200530において、textgosub 命令と pretextgosub 命令を併用しているときに、textgosub 命令で指定されたラベルから戻ると、文章の途中であっても再び pretextgosub 命令で指定されたラベルを呼び出してしまうバグを修正しました。20200510 にこのバグはなかったのですが、20200530 の修正に問題がありバグが発生していました。</p>
+
+</div>
+
+<div class="diary-day">
+<h3>5月30日</h3>
+
+<p>メールでいただいたバグ報告を元に、文字コードが UTF-8 の場合に、gettag 命令においてタグを正しく読み取ることができないバグを修正しました。</p>
+
+</div>
+
+<div class="diary-day">
+<h3>5月10日</h3>
+
+<p>バグ報告「<a href="/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=370">movie命令でエラー</a>」を元に、MPEG-1 形式ではない動画（MPEG-4形式など）を、誤って MPEG-1 形式として再生しようとすることがあるバグを修正しました。Android 版では、以前は外部の動画再生アプリを使用してすべての動画を再生していましたが、20190911 以降では、MPEG-1 形式は ONScripter 内部で、それ以外の動画は外部の動画再生アプリを使用して再生します。このときに、MPEG-1 ではない形式の動画を誤って MPEG-1 形式として再生しようとして落ちていたようです。</p>
+
+<p>なお、ONScripter や本家が想定している動画の形式は MPEG-1 です。Android 版と iOS 版では MPEG-4 など他の形式の動画も再生できますが、これはあくまでもおまけの機能です。また、Android 版では、外部の動画再生アプリによっては動画再生後に ONScripter に正常に復帰しない場合があります。その場合は、動画再生後にいったん ONScripter をバックグラウンドに移動してからフォアグラウンドに戻すと復帰します。こちらの環境で正常に復帰するのは VLC for Android、Google フォト、アルバム（Sony Mobile Communications）などです。MX Player は、以前は正常に復帰していましたが、今は正常に復帰しません。</p>
+
+</div>
+
+<div class="diary-day">
+<h3>4月19日</h3>
+
+<p>メールでいただいたバグ報告を元に、LUA の luacall animation がだいぶ前から機能していなかったバグを修正しました。</p>
+
+</div>
+
+<div class="diary-day">
+<h3>3月8日</h3>
+
+<p>だいぶ前から、BTS（影舞）から送られてくるバグ報告のメールの本文が文字化けするようになっていました。長年放置していましたが、今回調べてみたところ、本文の文字コードは JIS ですが、メールヘッダに Content-Type: の指定がないため、メーラで正しく表示されないことが原因のようでした。そこで、応急処置として、BTS（影舞）を以下のように修正したところ、メーラで正しく表示されるようになりました。</p>
+
+<pre>
+--- mailer.rb.bak       2020-03-08 08:16:24.417151324 +0900
++++ mailer.rb   2020-03-08 08:47:41.344970850 +0900
+@@ -75,7 +75,9 @@
+STDOUT.reopen(pipe_cw)
+STDERR.reopen(pipe_cw)
+
+-        exec(@mail_command.untaint, '-s', subject.untaint, to.dup.untaint)
++        #exec(@mail_command.untaint, '-s', subject.untaint, to.dup.untaint)
++        exec(@mail_command.untaint, '-a', 'Content-Type: text/plain; charset="ISO-2022-JP"', '-s', subject.untaint, to.dup.untaint)
+}
+
+pipe_cw.close
+</pre>
+
+</div>
+
+
+<div class="diary-day">
+<h3>3月6日</h3>
+
+<p>いつの間にか、BTS（影舞）の管理モードに入ろうとすると Internal Server Error が表示されるようになっていました。調べたところ、kagemai/project/_tmp に大量の一時ファイルが溜まっており、それを Dir.glob で列挙しようとして失敗していたようでした。手動で一時ファイルを削除したところ、管理モードに入れるようになりました。</p>
+
+<p>バグ報告「<a href="http://onscripter.osdn.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=368">自サーバーからのダウンロードが止まる・strspにrender-font-outlineが反映されない</a>」を元に、文字列スプライトの描画のバグを修正しました。アルファブレンディング処理に間違いがあり、strsp 命令で影指定を 0 にしても文字の輪郭が描画されているように見えていました。</p>
+
+</div>
+
+<div class="diary-day">
+<h3>2月23日</h3>
+
+<p>Debian の公式パッケージを管理していただいている Paul さんからのバグ報告を元に、文字コードが UTF-8 の場合に、clickWait と clickNewPage 内で clickstr 命令で指定された強制クリック文字が正しく処理されないバグを修正しました。また、メールで Paul さんに返信したのですが宛先エラーになってしまいました。</p>
+
+<p>最新の環境でビルドした Android 版を実行すると、Lua で以下のエラーが発生するようになりました。
+<pre>
+FORTIFY: strchr: prevented read past end of buffer
+</pre>
+そこで、<a href="android/#sdk">Android 版 SDK</a> を更新して、Lua の Android.mk に FORTIFY を抑制する以下のオプションを追加しました。
+<pre>
+LOCAL_CFLAGS := -D_FORTIFY_SOURCE=0
+</pre>
+</p>
+
+</div>
+
+<div class="diary-day">
+<h3>1月14日</h3>
+
+<p>バグ報告「<a href="/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=365">Windowsでのコンパイルの問題</a>」を元に、<a href="win">ONScripter on Windows</a> の関連ライブラリのソースを更新し、libpng と zlib をビルドする際に「警告をエラーとして扱う」を「いいえ」に設定(/WX- オプションを指定）するようにしました。</p>
+
+</div>
+
+</div> <!-- diary -->
+</div> <!-- diary-container -->
+
+
+<div id="footer">
+Copyright (c) 1998-2020 Studio O.G.A. All rights reserved.
+</div> <!-- footer -->
+
+</div> <!-- body -->
+
+</body>
+</html>

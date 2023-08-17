@@ -1,0 +1,292 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="ja">
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=EUC-JP">
+<META http-equiv="Content-Style-Type" content="text/css">
+<META name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<TITLE> ONScripter 開発日誌 </TITLE>
+<LINK rel="stylesheet" type="text/css" href="/ogapee.css">
+</HEAD>
+
+<body>
+
+<div id="body">
+
+<div id="header">
+<H1>ONScripter 開発日誌</H1>
+
+Since: Feb. 6, 2002<br>
+Last updated: Dec. 21, 2002
+</div> <!-- header -->
+
+<div id="toc-container">
+
+<h3>過去の開発日誌</h3>
+
+<div id="toc">
+
+<ul>
+  <li> 2002年
+    <ul>
+      <li> <A HREF="onscripter_devel.2002_3.html"> 7月〜 9月</A>
+      <li> <A HREF="onscripter_devel.2002_2.html"> 4月〜 6月</A>
+      <li> <A HREF="onscripter_devel.2002_1.html"> 1月〜 3月</A>
+    </ul>
+  <li> 2001年
+    <ul>
+      <li> <A HREF="onscripter_devel.2001.html">12月</A>
+    </ul>
+</ul>
+</div> <!-- toc -->
+</div> <!-- toc-container -->
+
+
+<div id="diary-container">
+<div id="diary">
+
+<h2>2002年10月〜12月</h2>
+
+<div class="diary-day">
+<h3>12月21日</h3>
+
+<p>Zaurus でスクリーンセーバから復帰した時に、画面を再描画するようにしました（event loop で SDL_ACTIVEEVENT を扱うように）。</p>
+
+<p>System menu(Menu,Save,Load,yes/no)で、無駄に全画面描画していた部分を改善しました。</p>
+
+<p>これまでは、.htaccessに</p>
+
+<pre>
+AddDefaultCharset EUC-JP
+AddType 'text/html; charset=EUC-JP' html
+</pre>
+
+<P class="noindent">と書いていましたが、これを</p>
+<pre>
+AddDefaultCharset EUC-JP
+</pre>
+
+<P class="noindent">だけにしたところ、広告３段＋内容ループが解消されました。</p>
+
+</div>
+
+<div class="diary-day">
+<h3>12月18日</h3>
+
+<p>misty_rc さんからのバグ報告を元に、bar コマンドで幅が０の時に落ちるバグを修正しました。</p>
+
+</div>
+
+
+<div class="diary-day">
+<h3>12月17日</h3>
+
+<p>松井さんより SL-B500 での動作報告をいただきました。</p>
+
+<p>数日前（？）から wind.prohosting.com の調子が悪いようです。広告３段＋内容ループになっています。文字数を減らせばループにならないようですが、そういうわけにも。しばらく待てば直るのでしょうか……。</p>
+
+</div>
+
+<div class="diary-day">
+<h3>12月15日</h3>
+
+<p>SL-C700に対応しました。通常のアーカイブによるVGA表示、および圧縮されたアーカイブによるQVGA表示に対応しています。ただし、SL-C700だと現状不安定で、頻繁に入力を受け付けなくなります。原因を調査中です。</p>
+
+<p>SL-C700 のVGA表示は非常に綺麗です。ただし、アーカイブサイズが圧縮しない場合と比べて４倍になるため、最近の大容量ゲームを遊ぶ場合はアーカイブを圧縮して 320x240 で表示するのが現実的です。って、だったら SL-B500 でいいじゃん。</p>
+
+<h4>20021215a</h4>
+
+<p>デバッグ用の printf を取り忘れていたのを削除しました。</p>
+
+</div>
+
+<div class="diary-day">
+<h3>11月21日</h3>
+
+<p>sarconv, nsaconv で画像の大きさを変更するのに浮動小数点演算を行っていましたが、Zaurus で変換速度を上げるために整数演算で行うようにしました。ONScripter 内部では元々整数演算で画像の大きさを変換していましたが、sarconv, nsaconv は開発当初は Zaurus で実行することを想定していなかったため、精度を出すために浮動小数点演算で計算していました。</p>
+
+<p>Zaurus 上での実行速度が当社比１０倍以上になりました。入出力ファイル共に nfs マウントした場所にあります。こんなに違うとは……。<BR>
+
+某 sar ファイル: 旧 sarconv    2時間40分46秒 新 sarconv     9分18秒<BR>
+某 nsa ファイル: 旧 nsaconv -e 4時間 6分21秒 新 nsaconv -e 18分56秒</p>
+
+<p>ちなみに、以前最初に Zaurus 上で sarconv を試そうとしたときには、あまりの遅さに途中でやめてしまいました。</p>
+
+</div>
+
+<div class="diary-day">
+<h3>11月13日</h3>
+
+<p>神木さんのはうまく表示されますが、こちらのは表示されません。試行錯誤した結果、原因が分かりました。SL-5500 （SL-A300 もたぶん同様）に含まれている libqte.so に freetype library が static link されているため、dynamic link 時に onscripter-lib の libfreetype.so と libqte.so のどちらが先に見つかるかによって使用される関数が異なることが原因でした。私のパッケージでは、リンク時に -lqte の後に -lfreetype があったため、結果的に libqte.so のものが使われていました。神木さんのは逆になっていたのだと思います。対処したものをあげておきました。</p>
+
+<p>さらに、なぜか -lSDL を -lSDL_image の前に持ってこないと、十字キーの上下が効かなくなります。また、なぜか libSDL_image に libSDL が static link されており、make しなおしたところ解消されました（謎）。次回の onscripter-lib のアップデート時に修正したものをあげます。</p>
+
+<p>VGA Zaurus(SL-C700)に対応するため、PDA と PDA_VGA 定数を指定した場合は、最初に 640x480 で画面を初期化し、失敗したら 320x240 で確保しにいくようにしました。ただし、これでうまく行くかどうかは試してみないと分かりません。Makefile.ARMLinux のデフォルトでは両方を指定します。</p>
+
+<p>PDA で半角文字を表示するときに、偶数列目の文字が正常に表示されないバグを修正しました。前から気になってはいましたが、上記の修正を PC 上で試していてついでに修正しました。</p>
+
+<p>また、影付き文字の影が右側に出ていたので、右下に出るように変更しました。これで文字が見やすくなったはずです。</p>
+
+</div>
+
+<div class="diary-day">
+<h3>11月12日</h3>
+
+<p><A HREF="http://emmie.koka-in.org/~kensyu/zaurus/diary/20021110.html">SDL と ONScripter (神木さん)</A>において、主に SL-A300 で音切れを起こす点に関して、kernel と SDL の関係を hack された結果が掲載されています。修正した ipk も公開されており、これを早速試された<A HREF="http://www.ayati.com/KOMONO/a300.htm">文市さん</A>から、「別のソフトみたい」というコメントをいただいております。SL-A300 は持っていないので分かりませんが、そんなに違うんですね。</p>
+
+<p>というわけで、library の version up も兼ねて、神木さんの patch を当てたパッケージを公開しました。</p>
+
+<p>また、Zaurus で十字キーの上下で選択肢やボタンの移動ができるようにもしました。これはおそらく SDL のバグで、パッチをあてています。onscripter-lib_1.0.3_arm.ipk を入れてください。</p>
+
+<p>なお、SDL_main() ですが、SDL.h で SDL_main.h を include しているので、onscripter.cpp から呼んでいるものはデフォルトで C linkage になるはずです。少なくとも当方では C linkage になります。</p>
+
+<p>Zaurus 用の timidity-patch_1.0.1-sd_arm.ipk を公開しました。コマンドラインからの SD カードへのインストールにのみ対応しています。</p>
+
+<p>４時間５０分…、微妙です。</p>
+
+</div>
+
+<div class="diary-day">
+<h3>11月9日</h3>
+
+<p>今朝、lycos から返事が来ていました。内容を要約すると、「Lycos では、潜在的な問題を含むページを除くために、いくつもの方法を使ってページのチェックをしていますが、あなたのページはこれに引っ掛かって削除されてしまったようです。アカウントは復旧します、迷惑をかけてしまっていたらごめんなさい。」というものでした。</p>
+
+<p>あまり期待していなかっただけに、すばやく対応していただき少しびっくりしました。言ってみるものですね。</p>
+
+<p>おまけで、<A HREF="http://www.angelfire.com/">http://www.angelfire.com/</A>に作ったページを不条理に消されてしまったけれど、英語で文句を言うのは敷居が高いという方のために、今回出した<A HREF="angelfire_20021109_message.txt">メール</A>と<A HREF="angelfire_20021109_reply.txt">返事</A>を置いておきます。最初は support department に出したのですが、abuse department に言ってくれとたらい回しにされ、abuse department に直接メールを送る方法が見当たらなかったので、abuse を報告する form に上の苦情を書いて送りました。</p>
+
+<p>また何かの拍子に削除されかねないですが、<A HREF="http://www.angelfire.com/space/ogapee/">http://www.angelfire.com/space/ogapee/</A> はミラーサイトとします。</p>
+
+</div>
+
+<div class="diary-day">
+<h3>11月8日</h3>
+
+<p>なぜか、<A HREF="http://www.angelfire.com/space/ogapee/">http://www.angelfire.com/space/ogapee/</A>は削除されてしまいました。.ipk を置いたのがいけなかったのでしょうか。文句のメールを出しましたが、メールが多いから処理されないかもしれないという返事が来ました。そもそも、削除されたことに関するサポートが無いようです。</p>
+
+<p>度々の変更で申し訳ありませんが、<A HREF="http://wind.prohosting.com/ogapee/">http://wind.prohosting.com/ogapee/ </A>の調子が良くなったので、こちらをメインページに戻します。ミラーページはまた探します。</p>
+
+</div>
+
+<div class="diary-day">
+<h3>11月4日</h3>
+
+<p>lookbackbutton の非選択状態画像が、回想時にカーソルのフォーカスを外しても表示されないバグを修正しました。いつの間にかエンバグしていました。</p>
+
+<p>画面効果の 16(Mosaic out), 17(Mosaic in) を実装しました。これで、全ての画面効果が実装されました。</p>
+
+</div>
+
+<div class="diary-day">
+<h3>11月2日</h3>
+
+<p>どうやら、<A HREF="http://wind.prohosting.com/ogapee/">http://wind.prohosting.com/ogapee/ </A>の .htaccess が有効になったようです。</p>
+<pre>
+AddDefaultCharset EUC-JP
+</pre>
+<p style="text-indent:0">か</p>
+<pre>
+AddType 'text/html;charset=EUC-JP' html
+</pre>
+<p style="text-indent:0">を設定すれば、charset が EUC-JP になります。それ以外では、HTTP header で charset が ISO-8859-1 に指定されるので、meta tag では効果がないようです。</p>
+
+<p>ただし、今後は <A HREF="http://www.angelfire.com/space/ogapee/">http://www.angelfire.com/space/ogapee/</A> をメインサイトとし、<A HREF="http://wind.prohosting.com/ogapee/">http://wind.prohosting.com/ogapee/</A> はミラーサイトとします。なお、<A HREF="http://ogapee.t35.com/">http://ogapee.t35.com/</A> は廃止します。</p>
+
+</div>
+
+<div class="diary-day">
+<h3>10月31日</h3>
+
+<p>Web page を <A HREF="http://www.angelfire.com/space/ogapee/">http://www.angelfire.com/space/ogapee/</A> に移転しました。<A HREF="http://wind.prohosting.com/ogapee/">http://wind.prohosting.com/ogapee/</A> の方は日本語表示復旧の目処が立たず、<A HREF="http://ogapee.t35.com/">http://ogapee.t35.com/</A> の方はここしばらく死亡中・遅い・サブディレクトリに ipk ファイルをアップロードできないなど問題が多かったので、さしあたって、<A HREF="http://www.angelfire.com/space/ogapee/">http://www.angelfire.com/space/ogapee/</A> をメインにします。<A HREF="http://wind.prohosting.com/ogapee/">http://wind.prohosting.com/ogapee/</A> は、しばらく様子をみて、復旧しないようであれば廃止します。</p>
+
+</div>
+
+<div class="diary-day">
+<h3>10月29日</h3>
+
+<p>ヤマケンさんに誘っていただき、<A HREF="http://sourceforge.jp/projects/zaurus-ja/">zaurus-ja</A> でザウルス用のパッケージを公開しました。</p>
+
+<p>αβεさんの patch を取り入れ、msp の第４引数が省略されている場合の処理を修正しました。</p>
+
+<p>αβεさんの patch を取り入れ、"￥" が表示されないバグを修正しました。</p>
+
+<p>αβεさんの patch を取り入れ、caption の SJIS → EUC 変換を修正しました。</p>
+
+<p>v, dv を実装しました。</p>
+
+<p>existspbtn を spbtn として実装しました。何が違うのでしょうか？ lsp で読まれているのかチェックをして、読まれているときだけボタン化するのでしょうか？</p>
+
+<p>zaurus 用のパッケージに sarconv と nsaconv を同梱しました。</p>
+
+<p>wind.prohosting.com はつい先日サーバが移転し、移転先の apache では meta tag で charset を EUC-JP に設定しても反映されず charset を ISO-8859-1 に強制されるため、たいていのブラウザだと日本語表示が文字化けしてしまいます。そのうち直るのでしょうか。t35.com も移転中で死亡しているし……、困ったものです。</p>
+
+</div>
+
+<div class="diary-day">
+<h3>10月20日</h3>
+
+<p>mpegplay を実装しました。ただし、MPEG ファイルの映像及び音楽の再生に SMPEG を利用しているため、音楽演奏に MAD を使用している Zaurus では未サポートです（make の際に -DMP3_MAD を指定すると mpegplay の実装がスキップされます）。ちなみに Zaurus(SL-5500) で SMPEG を使用すると、音声を切ったとしても映像のコマ落ちが激しく、実用的ではありません。使いやすく CPU にチューンされた別の MPEG デコーダがあればよいのですが。</p>
+
+<h4>20021020a</h4>
+
+<P class="noindent">yamagu さんの patch を取り入れ、素の libjpeg-6b を使う場合に、リンク時に libjpeg-6b の関数をリンクできない問題を修正しました。</p>
+
+</div>
+
+<div class="diary-day">
+<h3>10月18日</h3>
+
+<p>αβεさんの patch を取り入れ、usewheel の wheel 対応しました(SDL-1.2.5 以降でのみ有効)。</p>
+
+<p>αβεさんの patch を取り入れ、getpageup を実装しました。</p>
+
+<p>αβεさんの patch を取り入れ、dwaveload, dwaveplay, dwaveplayloop を実装しました。</p>
+
+<p>αβεさんの patch を取り入れ、命令処理の返り値が RET_SKIP_LINE の時、 次行がテキスト文字列として解釈されてしまう問題に対処しました。ただしあまり検証していません。</p>
+
+<p>αβεさんの patch を取り入れ、select待ち時にスプライトアニメーションが動くように実装しました。正しい対応とするにはもう一寸修正が必要だそうですが、どのあたりに不具合があるのでしょう？</p>
+
+<p>チャンネル数の上限を 50 にすることに関して、２次修正をしました。</p>
+
+<p>nsaconv, nsadec で NSA のバージョン２形式に対応しました。ただし、バージョン１と２の自動判定はなく、バージョン２の場合はコマンドラインオプション -ns2 で指定してください。バージョンが分からない場合は、-ns2 をつけずに実行し、エラーが出たり変換後のアーカイブでうまくゲームが動かない場合は -ns2 を付けてください。</p>
+
+</div>
+
+<div class="diary-day">
+<h3>10月8日</h3>
+
+<p>バイナリパッケージを提供して下さる方を募集中です。特に、MacOS X 用や rpm 等。メールを下さい。</p>
+
+<p>αβεさんの patch を参考に、linepage を実装しました。</p>
+
+<p>αβεさんの patch を参考に、movl を再実装しました。typo で機能していませんでした。</p>
+
+<p>αβεさんの patch を参考に、mp3stop を playstop に割り付けました。ただし、mp3stop の実装がこれで正しいのかどうか未検証です。</p>
+
+<p>αβεさんの patch を参考に、movemousecursor を実装しました。ただし未検証です。</p>
+
+<p>αβεさんの patch を参考に、"mov$0", "mov%0", "mov?0[0]" 等、命令後スペースを空けずに記述されている '$' '%' '?'を解釈するよう修正しました。</p>
+
+<p>αβεさんの patch を参考に、ns2 を実装しました。ただし ns2 を使用するゲームを持っていないので未検証です。αβεさんの実装では、nsa との違いは先頭に意図不明の 1byte が追加されていることくらいのようですが、この 1byte には具体的にはどんな値が入っているのでしょうか。これで nsa と ns2 が区別できれば、nsaconv, nsadec も対応できるのですが。</p>
+
+<p>αβεさんの patch を取り入れ、SDL_image が正しく判定しない JPG 画像 ("JFIF" ラベルが存在しないもの)を強制的に読み込むように対処しました。</p>
+
+<p>αβεさんの patch を参考に、effect の 15 と 18 番の命令で指定される画像が ":形式;ファイル名" となっている場合に対応しました。</p>
+
+<p>QWR06270 さんのバグ報告を元に、wave ファイルの同時再生チャンネル数をデフォルトの 8 から 50 に増加しました。</p>
+
+<p>Zaurus で、22.05KHz, 44.1KHz のいずれサンプリングレートの MP3 も再生できるように修正しました。ただし、他のサンプリングレートは対応していません。</p>
+
+</div>
+
+</div> <!-- diary -->
+</div> <!-- diary-container -->
+
+
+<div id="footer">
+Copyright (c) 1998-2006 Studio O.G.A. All rights reserved.
+</div> <!-- footer -->
+
+</div> <!-- body -->
+
+</BODY>
+</HTML>

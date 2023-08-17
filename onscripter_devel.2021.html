@@ -1,0 +1,154 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="ja">
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=EUC-JP">
+<META http-equiv="Content-Style-Type" content="text/css">
+<META name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<TITLE> ONScripter 開発日誌 </TITLE>
+<LINK rel="stylesheet" type="text/css" href="/ogapee.css">
+</HEAD>
+
+<body>
+
+<div id="body">
+
+<div id="header">
+<H1>ONScripter 開発日誌</H1>
+
+Since: Feb. 6, 2002<br>
+Last updated: Aug. 19, 2021
+</div> <!-- header -->
+
+<div id="toc-container">
+
+<h3>過去の開発日誌</h3>
+
+<div id="toc">
+
+<ul>
+  <li> <A HREF="onscripter_devel.2020.html"> 2020年</A>
+  <li> <A HREF="onscripter_devel.2019.html"> 2019年</A>
+  <li> <A HREF="onscripter_devel.2018.html"> 2018年</A>
+  <li> <A HREF="onscripter_devel.2017.html"> 2017年</A>
+  <li> <A HREF="onscripter_devel.2016.html"> 2016年</A>
+  <li> <A HREF="onscripter_devel.2015.html"> 2015年</A>
+  <li> <A HREF="onscripter_devel.2014.html"> 2014年</A>
+  <li> <A HREF="onscripter_devel.2013.html"> 2013年</A>
+  <li> <A HREF="onscripter_devel.2012.html"> 2012年</A>
+  <li> <A HREF="onscripter_devel.2011_1.html"> 2011年</A>
+  <li> <A HREF="onscripter_devel.2010_1.html"> 2010年</A>
+  <li> <A HREF="onscripter_devel.2009_1.html"> 2009年</A>
+  <li> <A HREF="onscripter_devel.2008_1.html"> 2008年</A>
+  <li> <A HREF="onscripter_devel.2007_1.html"> 2007年</A>
+  <li> <A HREF="onscripter_devel.2006_1.html"> 2006年</A>
+  <li> <A HREF="onscripter_devel.2005_1.html"> 2005年</A>
+  <li> <A HREF="onscripter_devel.2004_1.html"> 2004年</A>
+  <li> 2003年
+    <ul>
+      <li> <A HREF="onscripter_devel.2003_4.html">10月〜12月</A>
+      <li> <A HREF="onscripter_devel.2003_3.html"> 7月〜 9月</A>
+      <li> <A HREF="onscripter_devel.2003_2.html"> 4月〜 6月</A>
+      <li> <A HREF="onscripter_devel.2003_1.html"> 1月〜 3月</A>
+    </ul>
+  <li> 2002年
+    <ul>
+      <li> <A HREF="onscripter_devel.2002_4.html">10月〜12月</A>
+      <li> <A HREF="onscripter_devel.2002_3.html"> 7月〜 9月</A>
+      <li> <A HREF="onscripter_devel.2002_2.html"> 4月〜 6月</A>
+      <li> <A HREF="onscripter_devel.2002_1.html"> 1月〜 3月</A>
+    </ul>
+  <li> 2001年
+    <ul>
+      <li> <A HREF="onscripter_devel.2001.html">12月</A>
+    </ul>
+</ul>
+</div> <!-- toc -->
+</div> <!-- toc-container -->
+
+
+<div id="diary-container">
+<div id="diary">
+
+<h2>2021年</h2>
+
+<div class="diary-day">
+<h3>8月19日</h3>
+
+<p>iOS 14 の iPad Air 2 で動画を再生すると、画面の回転方向を正確に取得することができず（0 (unknown)が返る）、さらに誤って回転方向に UIInterfaceOrientationLandscapeLeft を設定してしまうバグがあったため、以下のように修正しました。<a href="ios/#SDK">iOS 版 SDK</a>を差し替えて更新しました。</p>
+
+<pre>
+--- onscripter_ios/DataDownloader-old/MoviePlayer.m  2018-12-10 20:53:40.000000000 +0900
++++ onscripter_ios/DataDownloader-new/MoviePlayer.m  2021-08-19 12:00:43.000000000 +0900
+@@ -19,9 +19,10 @@
+uiwindow.rootViewController = self;
+[uiwindow makeKeyAndVisible];
+
+-    if ([[UIDevice currentDevice] orientation] != UIInterfaceOrientationLandscapeLeft &&
+-        [[UIDevice currentDevice] orientation] != UIInterfaceOrientationLandscapeRight)
+-        [[UIDevice currentDevice] setValue:@(UIInterfaceOrientationLandscapeLeft) forKey:@"orientation"];
++    UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
++    if (orientation != UIInterfaceOrientationLandscapeLeft &&
++        orientation != UIInterfaceOrientationLandscapeRight)
++        [[UIDevice currentDevice] setValue:@(UIInterfaceOrientationLandscapeRight) forKey:@"orientation"];
+
+player = [[AVPlayerViewController alloc] init];
+player.showsPlaybackControls = false;
+</pre>
+  
+</div>
+
+<div class="diary-day">
+<h3>8月15日</h3>
+
+<p>ひさびさに Mac で ONScripter をビルドして動作確認をしました。まず、Mac を macOS Big Sur 11.5.1, Xcode 12.5.1 にアップデートし、<a href="ios/#SDK">iOS 版 SDK</a>と最新のONScripterを使用してビルドしたところ、iPad Air 2（iOS 14.7.1）の実機および Xcode 12.5.1 のシミュレータ（iPhone 12 Pro Max - iOS 14.5）で特に問題なく動作しました。</p>
+
+<p>しかし、USE_SELECTOR を有効にして起動時にゲームを選択できるようにしたところ、選択画面が表示されなくなっていました。また、これは数年前からあった不具合ですが、起動時にゲーム選択画面がランドスケープではなくポートレートで起動してしまう問題がありました。ScriptSelector.m を以下のように修正して、ScriptSelector.view のサイズを明示的に設定し、また ViewController を addSubview ではなく rootViewController に指定したところ、どちらの問題も解決しました。</p>
+
+<pre>
+--- onscripter_ios-old/DataDownloader/ScriptSelector.m     2019-09-11 11:08:23.000000000 +0900
++++ onscripter_ios-new/DataDownloader/ScriptSelector.m     2021-08-15 16:11:57.400545132 +0900
+@@ -13,7 +13,8 @@
+}
+
+UIWindow *uiwindow = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+-    [uiwindow addSubview:self.view];
++    [self.view setFrame:CGRectMake(0, 0, uiwindow.frame.size.width, uiwindow.frame.size.height)];
++    uiwindow.rootViewController = self;
+[uiwindow makeKeyAndVisible];
+
+is_running = YES;
+</pre>
+
+<p>また、これも数年前からあった不具合ですが、起動時にゲーム画面がランドスケープではなくポートレートで起動してしまう問題がありました。SDL の SDL_uikitopengles.m を以下のように修正して、ViewController を addSubview で設定しないようにしたところ、この問題も解決しました。</p>
+
+<pre>
+--- onscripter_ios-old/SDL/src/video/uikit/SDL_uikitopengles.m     2012-10-28 18:08:43.000000000 +0900
++++ onscripter_ios-new/SDL/src/video/uikit/SDL_uikitopengles.m     2021-08-15 16:15:49.617991796 +0900
+@@ -132,7 +132,8 @@
+[view->viewcontroller setView:view];
+[view->viewcontroller retain];
+}
+-    [uiwindow addSubview: view];
++    // removed by Ogapee to enable screen orientation control (2021.8.15)
++    //[uiwindow addSubview: view];
+
+// The view controller needs to be the root in order to control rotation on iOS 6.0
+if (uiwindow.rootViewController == nil) {
+</pre>
+
+<p>また、IPHONEOS_DEPLOYMENT_TARGET を 8.0 から 9.0 に変更しました。これらの変更を反映させて<a href="ios/#SDK">iOS 版 SDK</a> を更新しました。</p>
+  
+</div>
+
+</div> <!-- diary -->
+</div> <!-- diary-container -->
+
+
+<div id="footer">
+Copyright (c) 1998-2021 Studio O.G.A. All rights reserved.
+</div> <!-- footer -->
+
+</div> <!-- body -->
+
+</body>
+</html>

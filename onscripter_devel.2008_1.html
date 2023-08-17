@@ -1,0 +1,327 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="ja">
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=EUC-JP">
+<META http-equiv="Content-Style-Type" content="text/css">
+<META name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<TITLE> ONScripter 開発日誌 </TITLE>
+<LINK rel="stylesheet" type="text/css" href="/ogapee.css">
+</HEAD>
+
+<body>
+
+<div id="body">
+
+<div id="header">
+<H1>ONScripter 開発日誌</H1>
+
+Since: Feb. 6, 2002<br>
+Last updated: Nov. 23, 2008
+</div> <!-- header -->
+
+<div id="toc-container">
+
+<h3>過去の開発日誌</h3>
+
+<div id="toc">
+
+<ul>
+  <li> <A HREF="onscripter_devel.2007_1.html"> 2007年</A>
+  <li> <A HREF="onscripter_devel.2006_1.html"> 2006年</A>
+  <li> <A HREF="onscripter_devel.2005_1.html"> 2005年</A>
+  <li> <A HREF="onscripter_devel.2004_1.html"> 2004年</A>
+  <li> 2003年
+    <ul>
+      <li> <A HREF="onscripter_devel.2003_4.html">10月〜12月</A>
+      <li> <A HREF="onscripter_devel.2003_3.html"> 7月〜 9月</A>
+      <li> <A HREF="onscripter_devel.2003_2.html"> 4月〜 6月</A>
+      <li> <A HREF="onscripter_devel.2003_1.html"> 1月〜 3月</A>
+    </ul>
+  <li> 2002年
+    <ul>
+      <li> <A HREF="onscripter_devel.2002_4.html">10月〜12月</A>
+      <li> <A HREF="onscripter_devel.2002_3.html"> 7月〜 9月</A>
+      <li> <A HREF="onscripter_devel.2002_2.html"> 4月〜 6月</A>
+      <li> <A HREF="onscripter_devel.2002_1.html"> 1月〜 3月</A>
+    </ul>
+  <li> 2001年
+    <ul>
+      <li> <A HREF="onscripter_devel.2001.html">12月</A>
+    </ul>
+</ul>
+</div> <!-- toc -->
+</div> <!-- toc-container -->
+
+
+<div id="diary-container">
+<div id="diary">
+
+<h2>2008年</h2>
+
+<div class="diary-day">
+<h3>11月23日</h3>
+
+<p>Herbasさんからのバグ報告「<a
+href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=134">
+splitの切り出す対象文字列の特定の文字処理</a>」を元に、split 命令で指
+定した区切り文字が２バイト文字（漢字）の後半のバイトと一致した場合に、
+正常に切り出すことができないバグを修正しました。</p>
+
+<p>Herbasさんからメールでいただいたバグ報告を元に、saveon 状態で 
+pretext gosub 使用時に、pretext gosub に飛ぶ前にセーブされないバグを修
+正しました。</p>
+
+</div>
+
+<div class="diary-day">
+<h3>10月25日</h3>
+
+<p>Komatsuさんからのバグ報告「<a
+href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=133">
+[全般]テキストに変な禁則処理が適用される</a>」を元に、バックログや右ク
+リックメニューからの復帰の際に正しく禁則処理が行われないバグを修正しま
+した。ONScripterLabel::restoreTextBuffer() 内の単純ミスでした。</p>
+
+</div>
+
+<div class="diary-day">
+<h3>10月13日</h3>
+
+<p>すとーむさんからのバグ報告「<a
+href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=131">
+bg_infoの大きさ</a>」を元に、背景に指定した画像の大きさがスクリーンの
+大きさよりも大きい場合に正しく処理できないバグを修正しました。</p>
+
+</div>
+
+<div class="diary-day">
+<h3>8月31日</h3>
+
+<p>すとーむさんからのバグ報告「<a
+href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=129">
+拡張スプライト番号</a>」を元に、拡張スプライトの０番が描画されないバグ
+を修正しました。</p>
+
+</div>
+
+<div class="diary-day">
+<h3>8月24日</h3>
+
+<p>本家では、exbtn_d は exbtn 命令が同時に１つ以上使われないとその効果
+が表れないようです。そのように修正しました。</p>
+
+</div>
+
+<div class="diary-day">
+<h3>8月23日</h3>
+
+<p>すとーむさんからのバグ報告「<a
+href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=89">
+命令のバグ報告</a>」を元に、クリックやスペースキーでテキストを飛ばした
+際に、クリック待ちの後もテキストを飛ばす状態が継続してしまうバグを修正
+しました。</p>
+
+<p>すとーむさんからのバグ報告「<a
+href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=123">
+windowchipの挙動</a>」を元に、右クリックから windowerase を実行すると 
+windowchip で指定したスプライトが消えないバグを修正しました。本家では、
+このときに windoweffect の効果が反映されるのですが、簡単に実装できない
+ため ONScripter では当座は瞬間表示とします。</p>
+
+<p>lsp, vsp など描画命令を実行する時に、erasetextwindow が 1 に設定さ
+れていない場合に leaveTextWindow() で文字を消すようにしました。現在の
+本家はたしかにこういう仕様ですが、昔からこんな仕様でしたっけ？これまで
+は、その後の print, ld, tal など画像効果を引数にとる命令に到達した時点
+で文字を消すようにしていました。</p>
+
+<h4>20080823a</h4>
+
+<p>背景画像保持スプライト(bg_info)の大きさが、背景に指定された画像の大
+きさになっていたバグを修正しました。画面の大きさと等しくするのが正しい
+ようです。</p>
+
+</div>
+
+<div class="diary-day">
+<h3>8月17日</h3>
+
+<p>前回の更新からだいぶ時間があいてしまい、その間バグ報告をいただいた
+方にはたいへん申し訳ありませんでした。作業環境が大きく変わってしまった
+こともあり十分テストできておりませんが、実験版としてソースのみ更新しま
+す。なお、画面描画周りを大幅に修正したため、今まで正常に動いていた個所
+がおかしくなっている可能性があります。何かお気づきの点がありましたら、
+バグトラッキングシステムまでご報告ください。
+</p>
+
+<p>すとーむさんからのバグ報告「<a
+href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=123">
+windowchipの挙動</a>」を元に、テキスト描画時に windowchip で指定してい
+たスプライトが消えてしまうバグを修正しました。windowchip の動作を勘違
+いしていました。</p>
+
+<p>tmkk さんからのバグ報告「<a
+href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=124">Big
+endianな環境でOgg Vorbisが再生できない</a>」でいただいたパッチを適用し、
+big endian な環境で Ogg Vorbis の再生がボリュームを変更した場合にうま
+くいかないバグを修正しました。ご指摘のとおり、decodeOggVorbis() の 
+dst_buf に little endian 決め打ちで PCM を格納していたことが原因でした。
+native endian で格納するように修正しました。</p>
+
+<p>すとーむさんからのバグ報告「<a
+href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=125">draw 
+系命令</a>」を元に、drawsp2 命令が参照しているスプライトの情報を上書き
+してしまうバグを修正しました。</p>
+
+<p>GGB00161 さんからのバグ報告「<a
+href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=128">monocro
+命令の表示タイミング</a>」を元に、monocro, nega 命令が実行された時点で
+効果が画面に反映されてしまうバグを修正しました。</p>
+
+<h4>20080817a</h4>
+
+<p>すとーむさんからのバグ報告「<a
+href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=89">
+命令のバグ報告</a>」を元に、textspeed 命令によるテキスト表示速度指定の
+有無に関わらず、クリックやスペースキーでテキストが飛ばせないバグを修正
+しました。</p>
+
+<h4>20080817b</h4>
+
+<p>すとーむさんからのバグ報告「<a
+href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=127">
+for Win で最新の SDL 用のパッチ</a>」を元に、最新の SDL ではキャプショ
+ン表示に UTF8 文字列を要求するため、Windows 環境において文字列を UTF8 
+に変換してからキャプション表示関数に渡す処理を追加しました。
+Makefile.Win で必要な定数を設定してください。なお Linux や MacOSX 環境
+での UTF8 変換には既に対応済です。</p>
+
+</div>
+
+<div class="diary-day">
+<h3>1月21日</h3>
+
+<p>ひとつもりさんからのバグ報告「<a
+href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=122">
+タグ中にある特定の文字が正常に認識されません</a>」を元に、pretextgosub 
+で使用するタグを読み取る際、タグ中の２バイト文字（漢字）の２バイト目が
+タグ終端' ]'と同じ値である場合に、正しく読み取ることができないバグを修
+正しました。</p>
+
+</div>
+
+<div class="diary-day">
+<h3>1月15日</h3>
+
+<p>bgm 命令で ogg のストリーミング演奏をしている途中に dwave 命令等で 
+ogg の復号をすると、ストリーミング演奏の情報を納めた構造体が破壊される
+バグを修正しました。20080111, 20080112 での修正における単純な実装ミス
+でした。</p>
+
+</div>
+
+<div class="diary-day">
+<h3>1月12日</h3>
+
+<p>ルビを表示する際に、その行でそれまでに表示された文字数とルビが指定
+された文字列の文字数の和が１行に表示可能な文字数を超えた場合に、ルビが
+指定された文字列を表示する前に改行が入らないバグを修正しました。
+</p>
+
+<p>20080111 での修正が中途半端で、ボリュームの設定が正しく反映されない
+ことがあるバグを修正しました。</p>
+
+</div>
+
+<div class="diary-day">
+<h3>1月11日</h3>
+
+<p>すとーむさんからのバグ報告「<a
+href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=89">
+命令のバグ報告</a>」を元に、bgm 命令で ogg を再生する際に、ボリュー
+ム変更が反映されないバグを修正しました。</p>
+
+</div>
+
+<div class="diary-day">
+<h3>1月10日</h3>
+
+<p>し〜くるさんからのパッチを取り入れ、GP2X, iPhone, WinCE 用の変更と 
+Makefile を反映させました。</p>
+
+</div>
+
+<div class="diary-day">
+<h3>1月7日</h3>
+
+<p>すとーむさんからのバグ報告「<a
+href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=101">
+命令文のバグ報告２</a>」を元に、texton, textoff 命令実行時に 
+windoweffect で指定した効果が描画されないバグを修正しました。</p>
+
+<p>windowchip 命令を実装しました。</p>
+
+</div>
+
+<div class="diary-day">
+<h3>1月6日</h3>
+
+<p>すとーむさんからのバグ報告「<a
+href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=119">
+拡張スプライトで</a>」を元に、ONScripterLabel クラスのサイズが大きくな
+り、PSP では main 関数の中でスタック上に確保しようとする時点で落ちてし
+まうようになったので、ONScripterLabel::sprite_info,
+ONScripterLabel::sprite2_info を動的に確保するようにしました。また、
+lsp2 コマンドにおいて、与えられた座標を中心座標ではなく左上座標として
+描画していたバグを修正しました。</p>
+
+<p>vsp2 命令を実装しました。</p>
+
+</div>
+
+
+<div class="diary-day">
+<h3>1月5日</h3>
+
+<p>henrich さんからのバグ報告「<a
+href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=120">AVIWrapper.h:54:
+error: 'CImage' has not been declared</a>」を元に、avifile ライブラリ
+で使用する型や関数にネームスペース(avm::)を追加するパッチを当てました。
+当方の環境(Debian etch, libavifile-0.7.dev (1:0.7.44.20051021-2.2))で
+は当てても当てなくてもコンパイルできますが、Debian Unstable 環境で最新
+の libavifile を使用するとビルドできなかったそうです。</p>
+
+<p>すとーむさんからのバグ報告「<a
+href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=121">logsp
+strsp 系について</a>」を元に、PDA オプションを付けてコンパイルし解像度
+変換を行う場合に、logsp, strsp, movemousecursor, shadedistance 命令に
+おいて解像度変換が反映されないバグを修正しました。</p>
+
+<p>Ying-Chun Liu さんからのバグ報告を元に、ENABLE_1BYTE_CHAR と 
+FORCE_1BYTE_CHAR を定義してコンパイルした際、右クリックメニューのセー
+ブもしくはロードを実行中にバッファーオーバーフローで落ちることがあるバ
+グを修正しました。</p>
+
+<p> logsp 命令実行時にルビが正しく表示されないバグを修正しました。</p>
+
+<p> savegame2, pagetag, gettaglog  命令を実装しました。</p>
+
+<p> TextBuffer クラスを、tag の情報を含んだ Page クラスに変更しました。
+</p>
+
+<p> maxkaisoupage を指定した際に、回想用のバッファ page_list の数が１
+つ少なくなるバグを修正しました。</p>
+
+</div>
+
+</div> <!-- diary -->
+</div> <!-- diary-container -->
+
+
+<div id="footer">
+Copyright (c) 1998-2008 Studio O.G.A. All rights reserved.
+</div> <!-- footer -->
+
+</div> <!-- body -->
+
+</body>
+</html>

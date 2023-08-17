@@ -1,0 +1,446 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="ja">
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=EUC-JP">
+<META http-equiv="Content-Style-Type" content="text/css">
+<META name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<TITLE> ONScripter 開発日誌 </TITLE>
+<LINK rel="stylesheet" type="text/css" href="/ogapee.css">
+</HEAD>
+
+<body>
+
+<div id="body">
+
+<div id="header">
+<H1>ONScripter 開発日誌</H1>
+
+Since: Feb. 6, 2002<br>
+Last updated: Oct. 25, 2006
+</div> <!-- header -->
+
+<div id="toc-container">
+
+<h3>過去の開発日誌</h3>
+
+<div id="toc">
+
+<ul>
+  <li> <A HREF="onscripter_devel.2005_1.html"> 2005年</A>
+  <li> <A HREF="onscripter_devel.2004_1.html"> 2004年</A>
+  <li> 2003年
+    <ul>
+      <li> <A HREF="onscripter_devel.2003_4.html">10月〜12月</A>
+      <li> <A HREF="onscripter_devel.2003_3.html"> 7月〜 9月</A>
+      <li> <A HREF="onscripter_devel.2003_2.html"> 4月〜 6月</A>
+      <li> <A HREF="onscripter_devel.2003_1.html"> 1月〜 3月</A>
+    </ul>
+  <li> 2002年
+    <ul>
+      <li> <A HREF="onscripter_devel.2002_4.html">10月〜12月</A>
+      <li> <A HREF="onscripter_devel.2002_3.html"> 7月〜 9月</A>
+      <li> <A HREF="onscripter_devel.2002_2.html"> 4月〜 6月</A>
+      <li> <A HREF="onscripter_devel.2002_1.html"> 1月〜 3月</A>
+    </ul>
+  <li> 2001年
+    <ul>
+      <li> <A HREF="onscripter_devel.2001.html">12月</A>
+    </ul>
+</ul>
+</div> <!-- toc -->
+</div> <!-- toc-container -->
+
+
+<div id="diary-container">
+<div id="diary">
+
+<h2>2006年</h2>
+
+<div class="diary-day">
+<h3>10月25日</h3>
+
+<p>GGB00161さんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=95">puttext命令が無効になっています</a>」を参考に、puttext 命令で表示ができなくなっていたバグを修正しました。また、通常の文字表示および puttext での文字表示において、文字列の最後が半角奇数文字の場合に誤って改行されるバグを修正しました。</p>
+
+<p>し〜くるさんからのパッチ「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=96">画面解像度の自動設定パッチ</a>」を取り入れ、コンパイルオプションに PDA_AUTOSIZE を定義することによって、画面解像度を自動設定できるようにしました。また、Makefile.iPodLinux をいただいたものに差し換えました。</p>
+
+<p>し〜くるさんからのパッチ「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=97">Makefile.PSPの修正</a>」を取り入れ、Makefile.PSP を更新しました。</p>
+
+<p>追加機能のご要望「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=98">矢印キーでの操作</a>」を参考に、矢印キーの上下で選択項目を循環できるようにしました。これに関連して、ショートカットキーの割り当てを見直しました。気付かなかったのですが、本家では矢印キーで選択項目間の移動ができるようなので、ONScripter で矢印キーの上下をマウスホイールの上下に割り付けるとバッティングしてしまいます。そこで、矢印キーの上下は選択項目の移動に、矢印キーの左右をホイールの上下に割り付けるように変更しました。くわしくは、<a href="onscripter.html#keyboard-shortcut">キーボードショートカット</a>をご覧ください。</p>
+
+<p>hiyuh さんからのパッチ「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=100">Exceed MAX_SPRITE_NO in ONScripterLabel_command..cpp</a>」を参考に、csp コマンドで有効ではないスプライト番号を指定されたときにセグメンテーションフォルトを引き起こすことがあるバグを修正しました。</p>
+
+<p>本家との互換性を保つため、ONS のセーブファイルのバージョンを上げました。過去のセーブファイルももちろん問題なく読み込めます。</p>
+
+</div>
+
+<div class="diary-day">
+<h3>8月26日</h3>
+
+<p>すとーむさんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=94">returnについて</a>」を参考に、return コマンドの引数にラベルをとれるようにしました。</p>
+
+<p>テキスト回想画面と回想から復帰した画面で禁則処理が働かないバグを修正しました。20060813 でセーブファイルの構造を変えたときにエンバグしていました。</p>
+
+</div>
+
+<div class="diary-day">
+<h3>8月13日</h3>
+
+<p>今まで、btnwait と select コマンドにおいて、event queue を空にする
+ということをしていました。そのため、Seung Park さんからご報告をいただ
+いていたのですが、keydown した後の keyup がクリアされると、キーが押しっ
+ぱなしであると判断され不具合が起こることがありました。20030616 でこの
+処理を入れているようですが、なぜ入れたのか当時の開発日誌を見ても分かり
+ません。とりあえず削除します。</p>
+
+<p>本家との互換性を保つため、ONS のセーブファイルのバージョンを上げま
+した。過去のセーブファイルももちろん問題なく読み込めます。</p>
+
+</div>
+
+<div class="diary-day">
+<h3>8月12日</h3>
+
+<p>すとーむさんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=93">処理速度</a>」によると、処理速度が半分以下になる場合があるそうですが、現状ではいい解決策が思いつきません。原因は、バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=91">タイトルは特殊な状況下でのエフェクト</a>」への対処として、画面出力用の画像バッファを内部的に毎回２種類生成するようにしたためです。そのため、いただいたスクリプトのように瞬間表示でひたすら描画を繰り返す演出では処理時間がほぼ倍になります。ただし、通常の画面効果は以前と同じ処理速度で動作しますし、文章を読み進めていく場面では体感速度はそれほど低下しないと思います。今回、２種類目の生成効率を少し上げたので、若干改善していると思います。</p>
+
+<p>Seung Park さんのパッチを取り入れ、big endian な環境で OggVorbis ファ
+イルが正常に再生されるようにしました。ただし、当方では未確認です。</p>
+
+</div>
+
+<div class="diary-day">
+<h3>8月5日</h3>
+
+<p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=92">タイトルはテキストウィンド</a>」を元に、setwindow および setwindow3 の挙動がおかしいバグを修正しました。内部的には、next_display_mode 変数を削除し、現在の描画状態の取り扱いを単純化しました。描画関係がおかしくなっている可能性があるので、もし何かお気づきの点がありましたら御報告下さい。</p>
+
+<p><a
+href="http://nscripter.insani.org/onscripter.html">nscripter.insani.org</a>
+で配布されているパッチのコメント(ONScripterLabel_sound.cpp)を見ると、
+こちらで配布しているソースでは、MacOS X ppc などの big endian の環境で 
+OggVorbis の再生がうまくいかないとのことなのですが、これどなたか確認し
+ていただけないでしょうか。具体的には、以下のスクリプトを走らせ、ストリー
+ミング有りと無しの両方の場合でどうなるかを御報告頂ければ幸いです。
+</p>
+<pre>
+*define
+game
+*start
+mp3vol 100
+bgm "test.ogg"
+ストリーミング有り\
+stop
+voicevol 100
+dwave 0,"test.ogg"
+ストリーミング無し\
+end
+</pre>
+
+<p>上記の件、パッチ作成者の Seung Park さんにメールで尋ねたところ、す
+ぐにテストをしていただき返事をいただきました。どちらの場合でも不具合が
+出るそうです。勘違いしていたのですが、どうやら ov_read のエンディアン
+指定は、マシンのエンディアンとは関係なく、OggVorbis ファイル中のデータ
+のエンディアンを指定するようで、これは通常 little endian にすればよい
+ようです。次回のリリースで修正します。</p>
+
+</div>
+
+<div class="diary-day">
+<h3>8月3日</h3>
+
+<p>すとーむさんさんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=89">命令のバグ報告</a>」を元に、erasetextwindow 0 が設定されている場合には、btnwait コマンド処理時にもテキスト表示を継続するように修正しました。</p>
+
+</div>
+
+<div class="diary-day">
+<h3>8月2日</h3>
+
+<p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=91">タイトルは特殊な状況下でのエフェクト</a>」を元に、テキスト表示状態から非テキスト表示状態に移るとき、もしくは非テキスト表示状態からテキスト表示状態に移るときに、未描画のスプライトが強制的に描画されてしまうバグを修正しました。バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=90">エフェクト</a>」での修正は根本的な解決になっていなかったので、この修正は元に戻しました。今回の修正では、accumulation_surface と補完的に用いる画面状態保存用のバッファ（サーフェス）を、メモリ使用量がなるべく少なくなるように１枚だけ追加しました。おそらく本家とは異なる実装になっていると思いますが、たいていの場合挙動は一致すると思います。</p>
+
+<p>すとーむさんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=89">命令のバグ報告</a>」を元に、文字スプライトの幅を１文字分広く取っていたバグを修正しました。</p>
+
+<p>すとーむさんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=89">命令のバグ報告</a>」を元に、btndown 設定時に、入力待ちではないときにボタンを離すと、離したことがボタン状態変数に反映されないバグを修正しました。</p>
+
+<p>btnwait コマンド処理内で event queue を空にする flushEvent を実行し
+ていたのですが、マウスボタンを素早くクリックすると、ボタンを離したイベ
+ントまで消されてしまうという不具合が以前からありました。上記の修正のつ
+いでに、今回 flushEvent をコメントアウトしました。もはや覚えていません
+が、理由があって flushEvent を入れたはずなので、何か不具合があるかもし
+れません。</p>
+
+</div>
+
+<div class="diary-day">
+<h3>7月29日</h3>
+
+<p>すとーむさんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=89">命令のバグ報告</a>」を元に、getspsize コマンドが縮小されたアーカイブを正しく扱えないバグを修正しました。</p>
+
+<p>すとーむさんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=89">命令のバグ報告</a>」を元に、textbtnwait で autoclick が効かないバグを修正しました。</p>
+
+<p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=90">エフェクト</a>」を元に、テキスト表示状態から非テキスト表示状態に移るとき(windoweffect が適用されるとき）に、未描画のスプライトが強制的に描画されてしまうバグを修正しました。</p>
+
+</div>
+
+<div class="diary-day">
+<h3>6月18日</h3>
+
+<p>hiyuhさんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=88">Fix strict aliasing warnigs.</a>」を元に、コンパイル時に warning が出る問題に対処しました。また blt コマンドの第３・４引数に負の値を取れるようにしました。</p>
+
+<p>すとーむさんからのパッチを元に、sarconv, nsaconv に -j -q オプショ
+ンを追加しました。また、jpeg 圧縮でデフォルトでベースライン最適化を行
+うようにしました。</p>
+
+</div>
+
+<div class="diary-day">
+<h3>5月30日</h3>
+
+<p><a href="http://you-like.to/cgi-bin/ponytail/yukiwiki/wiki.cgi">き
+さらさん</a>のご厚意で、<a
+href="http://ponytail.jpn.org/kagemai/html/guest.cgi?project=ONScripter&amp;action=top">
+バグトラッキングシステム</a>を運用して頂けることになりました。たいへん
+感謝しています。旧バグトラッキングシステムのバグ報告も全て移行し、現在
+のところメール通知機能が無効になっていること以外は以前とほぼ同じ使い勝
+手になっていると思います。ぜひご活用下さい。</p>
+
+</div>
+
+<div class="diary-day">
+<h3>5月4日</h3>
+
+<p>すとーむさんからのご指摘に基づき、文字スプライトボタンの画像面積を、
+FontInfo で指定された縦横幅分確保していたバグを修正しました。20060503
+でエンバグしていました。これが原因で、キーボードショートカットでのボタ
+ン移動が正しく機能していませんでした。</p>
+
+</div>
+
+<div class="diary-day">
+<h3>5月3日</h3>
+
+<p>バグトラッキングシステムへの spam がひどく、αβεさんと連絡がとれ
+ないため、使用を中止します。当座は、バグは直接メールで送ってください。
+どなたか代わりにバグトラッキングシステムを運用してくださる方はいらっしゃ
+らないでしょうか。</p>
+
+<p>strsp, drawsp3 コマンドを実装しました。</p>
+
+<p>すとーむさんからのご指摘に基づき、本家にならいスキップモードの際に
+return キーおよび space キーでも停止するようにしました。return キーや 
+space キーでは停止できないと勘違いしていました。失礼しました。</p>
+
+<p>hiyuhさんからのパッチ「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=87">crosses initialization of 'SDL_KeyboardEvent ke'</a>」を取り入れ、gcc-4.xでコンパイルエラーになるバグを修正しました。</p>
+
+</div>
+
+<div class="diary-day">
+<h3>4月15日</h3>
+
+<p><a
+href="http://nscripter.insani.org/index.html">NSCRIPTER.INSANI.ORG</a>
+で公開されているパッチの一部を取り入れ、getbgmvol, getmp3vol,
+getsevol, getvoicevol コマンドを実装しました。</p>
+
+<p><a
+href="http://nscripter.insani.org/index.html">NSCRIPTER.INSANI.ORG</a>
+で公開されているパッチの一部を取り入れ、BPP32 版の 
+AnimationInfo::blendBySurface() の alpha blending 計算が間違っていたバ
+グを修正しました。</p>
+
+<p><a
+href="http://nscripter.insani.org/index.html">NSCRIPTER.INSANI.ORG</a>
+で公開されている Seung Park さんのパッチの一部を取り入れ、英語版の右ク
+リックメニューの表記をよりふさわしい英語に直しました。</p>
+
+<p><a
+href="http://nscripter.insani.org/index.html">NSCRIPTER.INSANI.ORG</a>
+で公開されている Seung Park さんのパッチを参考に、日本語版・英語版とも
+に、右クリックメニューからファイルの読み込み・保存を行う際に、分の表記
+が常に２桁（１桁の場合は０埋め）になるようにしました。1: 3 の場合は 
+1:03 となります。</p>
+
+<p><a
+href="http://nscripter.insani.org/index.html">NSCRIPTER.INSANI.ORG</a>
+で公開されている Seung Park さんのパッチを参考に、systemcall reset が
+呼ばれた後でキャンセルされた場合に、正しく続行出来ないバグを修正しまし
+た。</p>
+
+<p>すとーむさんからのご指摘を参考に、スキップモードの際に、マウスの右
+クリックでも停止するようにしました。</p>
+
+</div>
+
+<div class="diary-day">
+<h3>4月9日</h3>
+
+<p>キーボードショートカットの割り当てを変更しました。カーソルキーの上
+下でマウスホイールの代わりに、左右で選択肢の移動になります。また、vi 
+風に hjkl で左上下右になります。今までのキーに慣れていた方には申し訳あ
+りませんが、マウスホイールを直感的に扱えるようにするにはこの方がいいだ
+ろうと思い変更させていただきました。詳しくは<a
+href="onscripter.html#keyboard-shortcut">キーボードショートカット</a>
+をご覧ください。</p>
+
+<p>すとーむさんからのパッチを参考に、ジョイスティックのレバーに対応し
+ました。キーバインドは、上の修正にともない変えてあります。</p>
+
+<p>し〜くるさんからのパッチ「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=84">iPodLinux 用のパッチ（音声無効パッチ含む）</a>」のうち、iPod 用のキー変換を実装しました。</p>
+
+<p>し〜くるさんからのパッチ「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=84">iPodLinux 用のパッチ（音声無効パッチ含む）</a>」のうち、SDL_mixer と smpeg の関数をコメントアウトしてライブラリがリンクされないようにする個所は、もっといい方法はないのでしょうか。機能しないにしろ、SDL_mixer と smpeg (もしくは MAD) が iPod 用にコンパイル＋リンクできればいいのですが。</p>
+
+<h4>20060409a</h4>
+
+<p>し〜くるさんより、スレッドを無効にし Audio/Joystick/CDROM を有効に
+したSDLと SDL_mixer, MAD の組合わせで、iPod 上で ONScripter(20060409) 
+が動作したとのご報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=84">iPodLinux 用のパッチ（音声無効パッチ含む）</a>」をいただきました。その際に使用した Makefile.iPodLinux をいただいたので、同梱します。</p>
+
+<h4>20060409b</h4>
+
+<p>し〜くるさんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=86">英文字を含んだバージョンの表示</a>」にあるとおり、20060409a でバージョン番号にアルファベットを足したらコンパイルエラーが出るようになっていました。単純なミスで、修正しました。いつもはコンパイルがとおるかチェックをするのですが、20060409a は修正点が軽微だったのでさぼっていました。申し訳ありません。</p>
+
+</div>
+
+<div class="diary-day">
+<h3>4月8日</h3>
+
+<p>すとーむさんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=85">drawbg2 と for 命令</a>」を元に、drawsp2, drawsp, drawbg2 命令で、画面解像度変更が反映されていないバグを修正しました。</p>
+
+<p>し〜くるさんからのパッチ「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=84">iPodLinux 用のパッチ（音声無効パッチ含む）</a>」を参考に、画面の大きさの指定方法を変更しました。今までは、コンパイル時に PDA_VGA, PDA_PSP などの文字列を指定していましたが、これからは PDA_WIDTH に画面の横幅を直接指定する方法に変えます。VGA の場合は、PDA_WIDTH=640、PSP の場合は PDA_WIDTH=360 などになります。なお、PDA_WIDTH は PDA を定義したときにのみ有効になり、PDA_WIDTH を指定しない場合は 320 (QVGA)になります。</p>
+
+<p>し〜くるさんからのパッチ「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=84">iPodLinux 用のパッチ（音声無効パッチ含む）</a>」を参考に、sarconv,nsaconv で、変換先の画像サイズを直接指定するようにしました。詳しくは<a href="onscripter.html#archive-compression">アーカイブ圧縮</a>をご覧ください。</p>
+
+<p>し〜くるさんからのご報告を参考に、ipod nano などマルチスレッドが使えず SDL_AddTimer が NULL を返す場合でも処理を続行できるようにしました。
+</p>
+
+<p>+で文字列を連結する機能に対応しました。また、取り扱える文字列の長さを全角で1024文字未満に制限しました。</p>
+
+</div>
+
+<div class="diary-day">
+<h3>3月9日</h3>
+
+<p>たいへん対応が遅くなりましたが、春男さんからのご要望「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=58">CDDA 演奏で mp3 以外の形式（wav,ogg）にも対応</a>」にしたがい、CDaudio 演奏の振り替えにおいて、mp3 以外に ogg, wav 形式に対応しました。mp3, ogg, wav の順でファイルを探します。</p>
+
+<p>Sofiya猫さんの OS/2 用のパッチを取り入れました。</p>
+
+<p>hiyuhさんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=82">CDDA 演奏振り替えでSIGSEGV</a>」を元に、CDDAの振り替え演奏において、ループするときにセグメンテーションフォルトで落ちるバグを修正しました。20060227でエンバグしていました。</p>
+
+<p>おそらく20051209以降で、ENABLE_1BYTE_CHAR 指定（英語モード）時に半
+角文字が表示されないバグがあり、修正しました。</p>
+
+</div>
+
+<div class="diary-day">
+<h3>3月5日</h3>
+
+<p>Sofiya猫さんが OS/2 版バイナリを公開してくださったので、リンクを張
+りました。</p>
+
+<p>Sofiya猫さんからのバグ報告を元に、OGG 再生を無効にしてコンパイルし
+た場合に、openOggVorbis 関数が不正に NULL ではない値を返し、落ちること
+があるバグを修正しました。</p>
+
+<p>hiyuhさんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=80">no effect was found [3000]</a>」を元に、エフェクト番号が0から255の範囲を超えて指定されたときに、0とみなして続行するようにしました。</p>
+
+<p>hiyuhさんからのパッチ「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=77">Fix warning for 20060224 and 20060227</a>」を適用し、コンパイル時の warning を抑制しました。</p>
+
+<p>hiyuhさんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=79">-DLINUX - DUTF8_FILESYSTEM でウインドウタイトルの文字化け</a>」を元に、Linux でロケールがUTF8の場合に、ウィンドウタイトルが文字化けする問題に対処しました。ただし、こちらでは検証できないため、コンパイルが通ることは確認しましたが、文字化けの有無については未確認です。</p>
+
+</div>
+
+<div class="diary-day">
+<h3>2月27日</h3>
+
+<p>bgm 系の命令で OGG の Streaming 再生を可能にしました。ONScripter で
+は音の再生に SDL_Mixer を使っていますが、SDL_Mixer の仕様上、１つの 
+Streaming 可能な音楽(mp3, ogg)と複数の Streaming 不可能な音楽(wave)を
+同時に再生することしかできません。つまり、dwave で複数チャネルの OGG
+Streaming 再生に対応することは現状では難しく、dwave で OGG を再生する
+場合には、全体をいったん wave 形式に復元してから再生します。</p>
+
+<p>上記の変更にともない、音楽再生回りを大きく変更しました。エンバグし
+ている可能性もあるため、何かお気付きの点がございましたらご報告ください。
+また、今まで bgm 系命令において無駄に繰り返しメモリを確保していた問題
+が修正されています。</p>
+
+<p>setwindow3 コマンドを実装しました。</p>
+
+</div>
+
+<div class="diary-day">
+<h3>2月24日</h3>
+
+<p>hiyuhさんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=75">ONScripterLabel_image::makeMonochromeSurface でSIGSEGV</a>」を元に、描画処理のクリッピングを見直し、指定した描画範囲がスクリーン外の場合に makeNegaSurface, makeMonochromeSurface がセグメンテーションフォルトを起こすバグを修正しました。</p>
+
+<p>すとーむさんからいただいたパッチを元に、 コンパイル時に PDA_PSP2 を
+定義することによって 384x288 の画面サイズで表示できるようにしました。
+</p>
+
+</div>
+
+<div class="diary-day">
+<h3>1月31日</h3>
+
+<p>すとーむさんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=74">改ページ処理</a>」を元に、linepage, linepage2 の挙動がおかしいバグを修正しました。20051209 からバグが発生していたようです。</p>
+
+</div>
+
+<div class="diary-day">
+<h3>1月28日</h3>
+
+<p>hiyuhさんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=73">横書の選択肢が縦書になるバグ</a>」を元に、cselbtn で表示するテキストの横の文字数が１になっていたバグを修正しました。20051209 からバグが発生していたようです。</p>
+
+<p>横書きでルビを使用する時に、文字の表示位置が上にずれるバグを修正し
+ました。</p>
+
+<p>hiyuhさんからのパッチ「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=73">横書の選択肢が縦書になるバグ</a>」を取り入れ、コンパイル時に型の不一致で警告が出る問題を修正しました。</p>
+
+<p>exbtn, spbtn 命令でスプライトを範囲指定付きで消すときに、セルの番号が強制的に０に設定されるバグを修正しました。</p>
+
+</div>
+
+<div class="diary-day">
+<h3>1月15日</h3>
+
+<p>20060104 で文字のキャッシュサーフェスへの描画法を変えましたが、RGB 
+の計算が間違っていたので修正しました。</p>
+
+<p>すとーむさんからの要望「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=71">キーボードショートカットにホイールアップを</a>」を元に、ホイールアップと等価のキーボードショートカットとしてLキーを割り当てました。</p>
+
+<p>dyob さんからの要望「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=72">mpeg 再生中プログラムが終了しない</a>」を元に、MPEG および AVI 再生において、Window の終了ボタンを押したときにプログラムが終了するようにしました。</p>
+
+<p>複合ボタンの&quot;c100-150&quot;に対応しました。</p>
+
+<p>getspmode コマンドを実装しました。</p>
+
+</div>
+
+<div class="diary-day">
+<h3>1月4日</h3>
+
+<p>Linux と Zaurus 版の Makefile で、-fomit-frame-pointer を指定するよ
+うにしました。これだけで１割くらい速くなった気がします。</p>
+
+<p>これまでは、文字の描画に TTF_RenderGlyph_Blended を使っていましたが、
+これを TTF_RenderGlyph_Shaded に変えました。TTF_RenderGlyph_Blended の 
+RGB 部分は単なるベタ塗りであり、TTF_RenderGlyph_Shaded でアルファ成分
+だけもらった方が、(1)文字キャッシュのヒット率の向上、(2)文字キャッシュ
+の必要メモリの低減、(3)文字の描画処理の高速化といいことすくめであるこ
+とに気がつきました。この結果、文字描画だけみれば数割は速度が向上してい
+ると思います。</p>
+
+<p>文字のキャッシュサーフェスへの描画方法を工夫しましたが、性能はほと
+んど変わらないようです。</p>
+
+</div>
+
+</div> <!-- diary -->
+</div> <!-- diary-container -->
+
+
+<div id="footer">
+Copyright (c) 1998-2006 Studio O.G.A. All rights reserved.
+</div> <!-- footer -->
+
+</div> <!-- body -->
+
+</body>
+</html>
