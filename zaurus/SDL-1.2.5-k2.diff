@@ -1,0 +1,60 @@
+diff -Nur SDL-1.2.5-org/src/audio/dsp/SDL_dspaudio.c SDL-1.2.5/src/audio/dsp/SDL_dspaudio.c
+--- SDL-1.2.5-org/src/audio/dsp/SDL_dspaudio.c	2002-04-15 16:38:54.000000000 +0900
++++ SDL-1.2.5/src/audio/dsp/SDL_dspaudio.c	2002-12-15 18:06:29.000000000 +0900
+@@ -263,7 +263,11 @@
+ 		SDL_SetError("Fragment size must be a power of two");
+ 		return(-1);
+ 	}
++#if 0
+ 	frag_spec |= 0x00020000;	/* two fragments, for low latency */
++#else /* for SL-A300 */
++	frag_spec |= 0x00120000;	/* 18 fragments, for smoothness */
++#endif
+ 
+ 	/* Set the audio buffering parameters */
+ #ifdef DEBUG_AUDIO
+diff -Nur SDL-1.2.5-org/src/audio/dsp/SDL_dspaudio.h SDL-1.2.5/src/audio/dsp/SDL_dspaudio.h
+--- SDL-1.2.5-org/src/audio/dsp/SDL_dspaudio.h	2002-03-06 20:23:02.000000000 +0900
++++ SDL-1.2.5/src/audio/dsp/SDL_dspaudio.h	2002-12-15 18:06:29.000000000 +0900
+@@ -27,6 +27,7 @@
+ 
+ #ifndef _SDL_dspaudio_h
+ #define _SDL_dspaudio_h
++// #define DEBUG_AUDIO
+ 
+ #include "SDL_sysaudio.h"
+ 
+diff -Nur SDL-1.2.5-org/src/video/qtopia/SDL_QWin.cc SDL-1.2.5/src/video/qtopia/SDL_QWin.cc
+--- SDL-1.2.5-org/src/video/qtopia/SDL_QWin.cc	2002-09-01 09:37:24.000000000 +0900
++++ SDL-1.2.5/src/video/qtopia/SDL_QWin.cc	2002-12-16 03:45:24.000000000 +0900
+@@ -279,6 +279,7 @@
+   } else if(scancode  >= 0x1000) {
+     // Special keys
+     switch(scancode) {
++    case Qt::Key_F33: scancode = SDLK_RETURN; break; // added
+     case Qt::Key_Escape: scancode = SDLK_ESCAPE; break;
+     case Qt::Key_Tab: scancode = SDLK_TAB; break;
+     case Qt::Key_Backspace: scancode = SDLK_BACKSPACE; break;
+diff -Nur SDL-1.2.5-org/src/video/qtopia/SDL_QWin.h SDL-1.2.5/src/video/qtopia/SDL_QWin.h
+--- SDL-1.2.5-org/src/video/qtopia/SDL_QWin.h	2002-09-01 09:37:24.000000000 +0900
++++ SDL-1.2.5/src/video/qtopia/SDL_QWin.h	2003-01-02 11:43:35.000000000 +0900
+@@ -98,7 +98,7 @@
+       my_locked--; // decrease lock refcount;
+     }
+     if(!my_locked && my_painter) {
+-      my_painter->end();
++      /*my_painter->end();*/
+       delete my_painter;
+       my_painter = 0;
+     }
+diff -Nur SDL-1.2.5-org/src/video/qtopia/SDL_sysmouse.cc SDL-1.2.5/src/video/qtopia/SDL_sysmouse.cc
+--- SDL-1.2.5-org/src/video/qtopia/SDL_sysmouse.cc	2002-05-20 05:06:01.000000000 +0900
++++ SDL-1.2.5/src/video/qtopia/SDL_sysmouse.cc	2002-12-15 18:06:29.000000000 +0900
+@@ -60,6 +60,7 @@
+ void QT_WarpWMCursor(_THIS, Uint16 x, Uint16 y)
+ {
+   SDL_Win->setMousePos(QPoint(x, y));
++  SDL_PrivateMouseMotion( 0, 0, SDL_Win->mousePos().x(), SDL_Win->mousePos().y());
+ }
+ 
+ }; /* Extern C */

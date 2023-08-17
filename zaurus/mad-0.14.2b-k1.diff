@@ -1,0 +1,15 @@
+diff -Nur mad-0.14.2b-org/libmad/frame.c mad-0.14.2b/libmad/frame.c
+--- mad-0.14.2b-org/libmad/frame.c	2001-10-18 04:13:41.000000000 +0900
++++ mad-0.14.2b/libmad/frame.c	2002-12-15 05:56:28.000000000 +0900
+@@ -211,8 +211,11 @@
+   header->emphasis = mad_bit_read(&stream->ptr, 2);
+ 
+   if (header->emphasis == 2) {
++    header->emphasis = 0;
++    /*      
+     stream->error = MAD_ERROR_BADEMPHASIS;
+     return -1;
++    */
+   }
+ 
+   /* error_check() */

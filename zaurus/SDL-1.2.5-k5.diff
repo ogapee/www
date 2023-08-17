@@ -1,0 +1,12 @@
+diff -Nru SDL-1.2.5-Agawa20030704/src/video/qtopia/SDL_sysvideo.cc SDL-1.2.5/src/video/qtopia/SDL_sysvideo.cc
+--- SDL-1.2.5-Agawa20030704/src/video/qtopia/SDL_sysvideo.cc	2003-08-16 19:27:51.000000000 +0900
++++ SDL-1.2.5/src/video/qtopia/SDL_sysvideo.cc	2003-08-16 19:28:28.000000000 +0900
+@@ -494,6 +494,8 @@
+             sdlRotation = 2;
+           else
+             sdlRotation = qteRotation;
++        } else if ( machine == MACHINE_SHARP_SLA300 ){
++            sdlRotation = 3;
+         } else {
+           sdlRotation = qteRotation;
+         }

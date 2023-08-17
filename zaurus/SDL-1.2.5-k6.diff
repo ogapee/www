@@ -1,0 +1,15 @@
+diff -Nur SDL-1.2.5-Agawa20030704/src/video/qtopia/SDL_sysvideo.cc SDL-1.2.5/src/video/qtopia/SDL_sysvideo.cc
+--- SDL-1.2.5-Agawa20030704/src/video/qtopia/SDL_sysvideo.cc	2003-08-16 19:27:51.000000000 +0900
++++ SDL-1.2.5/src/video/qtopia/SDL_sysvideo.cc	2003-08-31 09:15:05.000000000 +0900
+@@ -507,7 +507,10 @@
+           && isInputStyle)
+         sdlRotation = 2;
+     } else if (width <= fbSize.height() && height <= fbSize.width()) {
+-      sdlRotation = 1;
++      if ( machine == MACHINE_SHARP_SLA300 )
++        sdlRotation = 3;
++      else
++        sdlRotation = 1;
+     } else {
+       SDL_SetError("Unsupported resolution, %dx%d\n", width, height);
+       return NULL;

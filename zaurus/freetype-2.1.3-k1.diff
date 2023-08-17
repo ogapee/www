@@ -1,0 +1,12 @@
+diff -Nur freetype-2.1.3-org/include/freetype/config/ftoption.h freetype-2.1.3/include/freetype/config/ftoption.h
+--- freetype-2.1.3-org/include/freetype/config/ftoption.h	2002-11-07 07:32:53.000000000 +0900
++++ freetype-2.1.3/include/freetype/config/ftoption.h	2002-12-15 05:42:31.000000000 +0900
+@@ -311,7 +311,7 @@
+   /* embedded bitmaps in all formats using the SFNT module (namely         */
+   /* TrueType & OpenType).                                                 */
+   /*                                                                       */
+-#define TT_CONFIG_OPTION_EMBEDDED_BITMAPS
++#undef TT_CONFIG_OPTION_EMBEDDED_BITMAPS
+ 
+ 
+   /*************************************************************************/

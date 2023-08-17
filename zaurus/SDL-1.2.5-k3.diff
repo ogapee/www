@@ -1,0 +1,98 @@
+diff -Nru SDL-1.2.5-Agawa030622/src/video/qtopia/SDL_QWin.cc SDL-1.2.5/src/video/qtopia/SDL_QWin.cc
+--- SDL-1.2.5-Agawa030622/src/video/qtopia/SDL_QWin.cc	2003-06-22 22:21:39.000000000 +0900
++++ SDL-1.2.5/src/video/qtopia/SDL_QWin.cc	2003-06-22 22:17:16.000000000 +0900
+@@ -122,6 +122,10 @@
+ 
+   int borderWidth = (fbSize_.width() - my_image->width()) >> 1;
+   int borderHeight = (fbSize_.height() - my_image->height()) >> 1;
++  if ( rotation_ & 1 ){
++    borderWidth = (fbSize_.height() - my_image->width()) >> 1;
++    borderHeight = (fbSize_.width() - my_image->height()) >> 1;
++  }
+   realPos.setX(realPos.x() - borderWidth);
+   realPos.setY(realPos.y() - borderHeight);
+ 
+@@ -229,27 +233,41 @@
+   int dstBorderTopBottom = (dstSize.height() - srcSize.height()) >>1;
+   int dstStartOffsetX = dstSize.width() - dstBorderLeftRight - 2;
+   int dstStartOffsetY = dstSize.height() - dstBorderTopBottom - 1;
+-  srcBits += srcBlitRect.left() + srcBlitRect.top() * srcSize.width();
++  int left = srcBlitRect.left() & ~(int)1; // to be 32bit aligned
++  srcBits += left + srcBlitRect.top() * srcSize.width();
+   dstBits += dstStartOffsetY * dstSize.width() + dstStartOffsetX;
+-  dstBits -= srcBlitRect.left();
++  dstBits -= left;
+   dstBits -= srcBlitRect.top() * dstSize.width();
+ 
+   Uint32 *pSrc = (Uint32 *)srcBits;
+   Uint32 *pDst = (Uint32 *)dstBits;
+ 
+-  int width = srcBlitRect.width() >> 1, w;
++  int width = srcBlitRect.width(), width2 = srcBlitRect.width(), w;
++  if ( srcBlitRect.left() & 1 ){
++    width--; width2++;
++  }
++  if ( (srcBlitRect.left()+srcBlitRect.width()) & 1 ){
++    width--; width2++;
++  }
++  width >>= 1;
+   int height = srcBlitRect.height();
+-  int srcYAdd = srcSize.width() - srcBlitRect.width();
+-  int dstYSub = dstSize.width() - srcBlitRect.width();
++  int srcYAdd = srcSize.width() - width2;
++  int dstYSub = dstSize.width() - width2;
+ 
+   while (height--) {
+     w = width;
++    if (srcBlitRect.left() & 1){
++      *((Uint16 *)pDst) = *(((Uint16 *)pSrc) + 1);
++      pDst--; pSrc++;
++    }
+     while (w--) {
+       *pDst-- = (*pSrc << 16) | (*pSrc >> 16);
+       ++pSrc;
+     }
+-//     if (srcBlitRect.width() & 1)
+-//       *(((Uint16 *)pDst)--) = *(((Uint16 *)pSrc)++);
++    if ((srcBlitRect.left()+srcBlitRect.width()) & 1){
++      *(((Uint16 *)pDst) + 1) = *((Uint16 *)pSrc);
++      pDst--; pSrc++;
++    }
+     (Uint16 *)pSrc += srcYAdd;
+     (Uint16 *)pDst -= dstYSub;
+   }
+diff -Nru SDL-1.2.5-Agawa030622/src/video/qtopia/SDL_sysmouse.cc SDL-1.2.5/src/video/qtopia/SDL_sysmouse.cc
+--- SDL-1.2.5-Agawa030622/src/video/qtopia/SDL_sysmouse.cc	2003-06-22 22:21:39.000000000 +0900
++++ SDL-1.2.5/src/video/qtopia/SDL_sysmouse.cc	2003-06-22 22:18:03.000000000 +0900
+@@ -60,7 +60,7 @@
+ void QT_WarpWMCursor(_THIS, Uint16 x, Uint16 y)
+ {
+   SDL_Win->setMousePos(QPoint(x, y));
+-  SDL_PrivateMouseMotion( 0, 0, SDL_Win->mousePos().x(), SDL_Win->mousePos().y());
++  SDL_PrivateMouseMotion( 0, 0, x, y );
+ }
+ 
+ }; /* Extern C */
+diff -Nru SDL-1.2.5-Agawa030622/src/video/qtopia/SDL_sysvideo.cc SDL-1.2.5/src/video/qtopia/SDL_sysvideo.cc
+--- SDL-1.2.5-Agawa030622/src/video/qtopia/SDL_sysvideo.cc	2003-06-22 22:21:39.000000000 +0900
++++ SDL-1.2.5/src/video/qtopia/SDL_sysvideo.cc	2003-06-22 22:19:06.000000000 +0900
+@@ -352,6 +352,8 @@
+         LOG("QT_GetMachine: /proc/deviceinfo/product is '%s'\n", buf);
+         if (strncmp(buf, "SL-A300", 7) == 0)
+           machine = MACHINE_SHARP_SLA300;
++        else if (strncmp(buf, "SL-5500", 7) == 0)
++          machine = MACHINE_SHARP_SL5500;
+         else if (strncmp(buf, "SL-B500", 7) == 0)
+           machine = MACHINE_SHARP_SLB500;
+         else if (strncmp(buf, "SL-C700", 7) == 0)
+@@ -433,6 +435,10 @@
+     // qte での回転角度を取得
+     QT_GetQteServerSpec(_this, &qteRotation, &isQteQvga);
+ 
++    // hack for SL-5500
++    if (machine == MACHINE_SHARP_SL5500)
++      qteRotation = 3;
++
+     // SL-B500 用ハック(とりあえず、ね)
+     if (machine == MACHINE_SHARP_SLB500)
+       qteRotation = 3;

@@ -1,0 +1,87 @@
+diff -Nru SDL-1.2.5-Agawa0623/src/audio/dsp/SDL_dspaudio.c SDL-1.2.5/src/audio/dsp/SDL_dspaudio.c
+--- SDL-1.2.5-Agawa0623/src/audio/dsp/SDL_dspaudio.c	2003-06-26 17:34:46.000000000 +0900
++++ SDL-1.2.5/src/audio/dsp/SDL_dspaudio.c	2003-06-29 11:45:15.000000000 +0900
+@@ -267,8 +267,9 @@
+ 		return(-1);
+ 	}
+ 
+-    frag_spec |= 0x00020000;	/* two fragments, for low latency */
+-
++    //frag_spec |= 0x00020000;	/* two fragments, for low latency */
++    frag_spec |= 0x00120000;    /* 18 fragments, for smoothness */
++#if 0
+     /* for Sharp SL-A300 */
+     fp = fopen("/proc/deviceinfo/product", "rb");
+     if (fp) {
+@@ -277,7 +278,7 @@
+         if (strncmp(buf, "SL-A300", 7) == 0)
+             frag_spec |= 0x00120000;    /* 18 fragments, for smoothness */
+     }
+-
++#endif
+ 	/* Set the audio buffering parameters */
+ #ifdef DEBUG_AUDIO
+ 	fprintf(stderr, "Requesting %d fragments of size %d\n",
+diff -Nru SDL-1.2.5-Agawa0623/src/video/qtopia/SDL_sysvideo.cc SDL-1.2.5/src/video/qtopia/SDL_sysvideo.cc
+--- SDL-1.2.5-Agawa0623/src/video/qtopia/SDL_sysvideo.cc	2003-06-26 17:35:03.000000000 +0900
++++ SDL-1.2.5/src/video/qtopia/SDL_sysvideo.cc	2003-06-29 11:44:16.000000000 +0900
+@@ -442,11 +442,11 @@
+     // SL-B500 用ハック(とりあえず、ね)
+     if (machine == MACHINE_SHARP_SLB500)
+       qteRotation = 3;
+-
++#if 0
+     // SL-C750/760 用ハック(Thanks to 浜地さん)
+     if (machine == MACHINE_SHARP_SLC750 || machine == MACHINE_SHARP_SLC760)
+       qteRotation = (qteRotation + 2) & 3;
+-
++#endif
+     // 生フレームバッファのサイズを得る
+     if (qteRotation & 1) {
+       fbSize.setWidth(qteSize.height());
+@@ -467,7 +467,9 @@
+ 
+     // SL-C700 のスタイル
+     bool isInputStyle = false;
+-    if (machine == MACHINE_SHARP_SLC700) {
++    if (machine == MACHINE_SHARP_SLC700 ||
++        machine == MACHINE_SHARP_SLC750 ||
++        machine == MACHINE_SHARP_SLC760 ) {
+       int status = system("/home/QtPalmtop/bin/chkhinge");
+       if (WEXITSTATUS(status) != 2)
+         isInputStyle = true;
+@@ -484,7 +486,9 @@
+       else {
+         // で、その指定が無いのであれば qte の回転角度に合わせるだけ
+         // なんだけど、SL-C700 ではちょい複雑。
+-        if (machine == MACHINE_SHARP_SLC700 &&
++        if ((machine == MACHINE_SHARP_SLC700 ||
++             machine == MACHINE_SHARP_SLC750 ||
++             machine == MACHINE_SHARP_SLC760) &&
+             fbSize.width() == 320 && fbSize.height() == 240) {
+           if (isInputStyle)
+             sdlRotation = 2;
+@@ -496,7 +500,9 @@
+       }
+     } else if (width <= fbSize.width() && height <= fbSize.height()) {
+       sdlRotation = 0;
+-      if (machine == MACHINE_SHARP_SLC700 &&
++      if ((machine == MACHINE_SHARP_SLC700 ||
++           machine == MACHINE_SHARP_SLC750 ||
++           machine == MACHINE_SHARP_SLC760) &&
+           fbSize.width() == 320 && fbSize.height() == 240
+           && isInputStyle)
+         sdlRotation = 2;
+@@ -510,10 +516,10 @@
+     if (getenv(SDL_QT_INVERT_ROTATION_ENV_NAME) != NULL) {
+       sdlRotation = (sdlRotation + 2) & 3;
+     }
+-
++#if 0
+     if (machine == MACHINE_SHARP_SLC750 || machine == MACHINE_SHARP_SLC760)
+       sdlRotation = (sdlRotation + 2) & 3;
+-
++#endif
+     LOG("QT_SetVideoMode: argSize=%dx%d\n", width, height);
+     LOG("QT_SetVideoMode: qteSize=%dx%d\n",
+         qteSize.width(), qteSize.height());

@@ -1,0 +1,64 @@
+diff -cNr SDL_mixer-1.2.4.org/timidity/config.h SDL_mixer-1.2.4-k1/timidity/config.h
+*** SDL_mixer-1.2.4.org/timidity/config.h	Wed Mar 14 17:42:58 2001
+--- SDL_mixer-1.2.4-k1/timidity/config.h	Sun Nov 10 21:41:34 2002
+***************
+*** 49,55 ****
+  
+  /* Default sampling rate, default polyphony, and maximum polyphony.
+     All but the last can be overridden from the command line. */
+! #define DEFAULT_RATE	32000
+  #define DEFAULT_VOICES	32
+  #define MAX_VOICES	48
+  
+--- 49,55 ----
+  
+  /* Default sampling rate, default polyphony, and maximum polyphony.
+     All but the last can be overridden from the command line. */
+! #define DEFAULT_RATE	22050
+  #define DEFAULT_VOICES	32
+  #define MAX_VOICES	48
+  
+***************
+*** 101,112 ****
+  /* On some machines (especially PCs without math coprocessors),
+     looking up sine values in a table will be significantly faster than
+     computing them on the fly. Uncomment this to use lookups. */
+! /* #define LOOKUP_SINE */
+  
+  /* Shawn McHorse's resampling optimizations. These may not in fact be
+     faster on your particular machine and compiler. You'll have to run
+     a benchmark to find out. */
+! #define PRECALC_LOOPS
+  
+  /* If calling ldexp() is faster than a floating point multiplication
+     on your machine/compiler/libm, uncomment this. It doesn't make much
+--- 101,112 ----
+  /* On some machines (especially PCs without math coprocessors),
+     looking up sine values in a table will be significantly faster than
+     computing them on the fly. Uncomment this to use lookups. */
+! #define LOOKUP_SINE
+  
+  /* Shawn McHorse's resampling optimizations. These may not in fact be
+     faster on your particular machine and compiler. You'll have to run
+     a benchmark to find out. */
+! /* #define PRECALC_LOOPS */
+  
+  /* If calling ldexp() is faster than a floating point multiplication
+     on your machine/compiler/libm, uncomment this. It doesn't make much
+***************
+*** 210,216 ****
+  #ifdef __WIN32__
+  #define DEFAULT_PATH	"\\TIMIDITY"
+  #else
+! #define DEFAULT_PATH	"/usr/local/lib/timidity"
+  #endif
+  
+  /* These affect general volume */
+--- 210,216 ----
+  #ifdef __WIN32__
+  #define DEFAULT_PATH	"\\TIMIDITY"
+  #else
+! #define DEFAULT_PATH	"/etc/"
+  #endif
+  
+  /* These affect general volume */

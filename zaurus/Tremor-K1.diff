@@ -1,0 +1,11 @@
+--- configure.in.org	2007-08-19 11:53:29.000000000 +0900
++++ configure.in	2007-08-19 11:53:42.000000000 +0900
+@@ -9,7 +9,7 @@
+ AC_CANONICAL_HOST
+ AC_CANONICAL_TARGET
+ 
+-AM_CONFIG_HEADER([config.h])
++AM_CONFIG_HEADER(config.h)
+ 
+ AM_INIT_AUTOMAKE(libvorbisidec,1.2.0)
+ 
