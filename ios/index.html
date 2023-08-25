@@ -14,13 +14,13 @@
   <div id="body">
 
     <div id="header">
-      <H1>ONScripter on iOS</H1>
+      <h1>ONScripter on iOS</h1>
 
       Since: Jan. 11, 2012<br>
       <!--Last updated: Aug. 15, 2021 macOS Big Sur 11.5.1 + Xcode 12.5.1 + iOS 14.7.1 で動作確認<br>-->
       Last updated: Apr. 7, 2023 SDK を更新<br>
       <!--Last updated: Oct. 16, 2016 <a href="#application">アプリの申請</a>を更新<br>-->
-      更新内容は<A HREF="../onscripter_devel.2023.html">ONScripter 開発日誌</A>を参照<br>
+      更新内容は<a href="../onscripter_devel.2023.html">ONScripter 開発日誌</a>を参照<br>
     </div> <!-- header -->
 
     <div id="toc-container">
@@ -30,37 +30,41 @@
       <div id="toc">
 
         <ul>
-          <li> <A HREF="#introduction">はじめに</A>
-          <li> <A HREF="#develop">アプリの開発方法</A>
+          <li><a href="#introduction">はじめに</A></li>
+          <li><a href="#develop">アプリの開発方法</A>
             <ul>
-              <li> <a href="#flow">開発の流れ</a>
-              <li> <a href="#environment">開発環境の構築</a>
+              <li><a href="#flow">開発の流れ</a></li>
+              <li><a href="#environment">開発環境の構築</a>
                 <ul>
-                  <li> <a href="#tool">コマンドラインツールの導入</a>
-                  <li> <a href="#SDK">SDK の導入</a>
+                  <li><a href="#tool">コマンドラインツールの導入</a></li>
+                  <li><a href="#SDK">SDK の導入</a></li>
                 </ul>
-              <li> <a href="#build">アプリの作成</a>
+              </li>
+              <li><a href="#build">アプリの作成</a>
                 <ul>
-                  <li> <a href="#sources">最新の ONScripter の導入</a>
-                  <li> <a href="#config">プロジェクトの設定</a>
-                  <li> <a href="#contents">ゲームデータの配布方法</a>
-                  <li> <a href="#icon">アイコン</a>
-                  <li> <a href="#compile">作成</a>
+                  <li><a href="#sources">最新の ONScripter の導入</a></li>
+                  <li><a href="#config">プロジェクトの設定</a></li>
+                  <li><a href="#contents">ゲームデータの配布方法</a></li>
+                  <li><a href="#icon">アイコン</a></li>
+                  <li><a href="#compile">作成</a></li>
                 </ul>
-              <li> <a href="#application">アプリの申請</a>
-              <li> <a href="#gamedata">zip 内のゲームデータの配置方法</a>
-              <li> <A HREF="#run">実行方法</A>
-              <li> <a href="#limitation">制限・注意事項</a>
-              <li> <a href="#misc">その他</a>
+              </li>
+              <li><a href="#application">アプリの申請</a></li>
+              <li><a href="#gamedata">zip 内のゲームデータの配置方法</a></li>
+              <li><a href="#run">実行方法</A></li>
+              <li><a href="#limitation">制限・注意事項</a></li>
+              <li><a href="#misc">その他</a>
                 <ul>
-                  <li> <a href="#SDL">SDL</a>
-                  <li> <a href="#SDL_image">SDL_image</a>
-                  <li> <a href="#SDL_ttf">SDL_ttf</a>
-                  <li> <a href="#SDL_mixer">SDL_mixer</a>
-                  <li> <a href="#misc_library">その他のライブラリ</a>
+                  <li><a href="#SDL">SDL</a></li>
+                  <li><a href="#SDL_image">SDL_image</a></li>
+                  <li><a href="#SDL_ttf">SDL_ttf</a></li>
+                  <li><a href="#SDL_mixer">SDL_mixer</a></li>
+                  <li><a href="#misc_library">その他のライブラリ</a></li>
                 </ul>
+              </li>
             </ul>
-          <li> <a href="../onscripter.html">戻る</a>
+          </li>
+          <li><a href="../onscripter.html">戻る</a></li>
         </ul>
 
       </div> <!-- toc -->
@@ -186,24 +190,24 @@ $ sudo port install pkgconfig
               </tr>
               <tr>
                 <td>20230407</td>
-                <td><A HREF="onscripter_ios-20230407.tar.gz">onscripter_ios-20230407.tar.gz</a> 最新版<br>
+                <td><a href="onscripter_ios-20230407.tar.gz">onscripter_ios-20230407.tar.gz</a> 最新版<br>
                   　　Xcode 14.3 + iOS 11.0-16.4.1 用<br>
                   　　Apple シリコンを搭載した Mac でビルドできるようにしました。</td>
               </tr>
               <tr>
                 <td>20220831</td>
-                <td><A HREF="onscripter_ios-20220831.tar.gz">onscripter_ios-20220831.tar.gz</a> 最新版<br>
+                <td><a href="onscripter_ios-20220831.tar.gz">onscripter_ios-20220831.tar.gz</a> 最新版<br>
                   　　Xcode 13.4.1 + iOS 9.0-15.6.1 用<br>
                   　　TestFlightで内部テストができることを確認しました。</td>
               </tr>
               <tr>
                 <td>20220705</td>
-                <td><A HREF="onscripter_ios-20220705.tar.gz">onscripter_ios-20220705.tar.gz</a><br>
+                <td><a href="onscripter_ios-20220705.tar.gz">onscripter_ios-20220705.tar.gz</a><br>
                   　　Xcode 13.4.1 + iOS 9.0-15.5 用</td>
               </tr>
               <tr>
                 <td>20210819</td>
-                <td><A HREF="onscripter_ios-20210819.tar.gz">onscripter_ios-20210819.tar.gz</a><br>
+                <td><a href="onscripter_ios-20210819.tar.gz">onscripter_ios-20210819.tar.gz</a><br>
                   　　Xcode 12.5.1 + iOS 9.0-14.7.1 用</td>
               </tr>
             </table>
@@ -584,8 +588,8 @@ $(SRCROOT)/../../Release-iphoneos/include/freetype2
             <h4 id="misc_library">その他のライブラリ</h4>
 
             <ul>
-              <li> libfreetype.a (<A HREF="http://www.freetype.org/">the Free Type Project</A> の freetype-2.4.8)
-              <li> libmad.a (<A HREF="http://www.mars.org/home/rob/proj/mpeg/">MAD: MPEG Audio Decoder</A> の libmad-0.15.1b)<br>
+              <li> libfreetype.a (<a href="http://www.freetype.org/">the Free Type Project</A> の freetype-2.4.8)
+              <li> libmad.a (<a href="http://www.mars.org/home/rob/proj/mpeg/">MAD: MPEG Audio Decoder</A> の libmad-0.15.1b)<br>
                 ただし、以下のパッチが適用されています。
                 <ul>
                   <li> Debian の <a href="http://packages.debian.org/ja/jessie/amd64/libmad0">libmad0 パッケージ</a> から入手できる <a href="libmad_0.15.1b-8.diff">libmad_0.15.1b-8.diff</a>

@@ -14,17 +14,17 @@
   <div id="body">
 
     <div id="header">
-      <H1>ONScripter page</H1>
+      <h1>ONScripter page</h1>
 
-      I have little time to maintain ONScripter recently and might not respond to requests immediately.<br>
-      Since: Feb. 6, 2002<br>
+      I have little time to maintain ONScripter recently and might not respond to requests immediately.<br />
+      Since: Feb. 6, 2002<br />
       <!--Last updated: Mar. 21, 2016 (BTS has been restored.)<br>-->
       <!--Last updated: Jan. 14, 2020 (ONScripter on Windows updated.)<br>-->
-      <!--Last updated: Aug. 16, 2022 (Source package updated.)<br>-->
+      Last updated: Aug. 24, 2023 (Source package updated.)<br />
       <!--Last updated: Jan. 3, 2022 (Added <a href="/cgi-bin/kagemai/guest.cgi?id=364&project=onscripter&action=view_report">Haiku</a> to supported platforms.)<br>-->
       <!--Last updated: Jun. 29, 2014 (PNaCl Binary package updated.)<br>-->
       <!--Last updated: Jul. 12, 2009 (Experimental source updated.)<br>-->
-      Last updated: Apr. 4, 2023 (Derived projects added.)<br>
+      <!--Last updated: Apr. 4, 2023 (Derived projects added.)<br>-->
     </div> <!-- header -->
 
     <div id="toc-container">
@@ -36,40 +36,44 @@
         <ul>
           <li> <a href="#INTRODUCTION">Introduction</a>
             <ul>
-              <li> <a href="#package-source">Source packages</a></li>
-              <li> <a href="#package-binary">Binary packages</a></li>
-              <li> <a href="#derived-projects">Derived projects</a></li>
-              <li> <a href="#feature">Features</a>
-              <li> <a href="onscripter_devel.2023.html">Development diary</a></li>
-              <li> <a href="/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=top">Bug report</a></li>
-              <li> <a href="android/">ONScripter on Android</a>
-              <li> <a href="ios/">ONScripter on iOS</a>
-              <li> <a href="win/">ONScripter on Windows</a>
+              <li><a href="#source">Source files</a></li>
+              <li><a href="#package-source">Source packages</a></li>
+              <li><a href="#package-binary">Binary packages</a></li>
+              <li><a href="#derived-projects">Derived projects</a></li>
+              <li><a href="#feature">Features</a></li>
+              <li><a href="onscripter_devel.2023.html">Development diary</a></li>
+              <li><a href="/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=top">Bug report</a></li>
+              <li><a href="android/">ONScripter on Android</a></li>
+              <li><a href="ios/">ONScripter on iOS</a></li>
+              <li><a href="win/">ONScripter on Windows</a></li>
             </ul>
+          </li>
           <li> <a href="#howto">How to run</a>
             <ul>
-              <li> <a href="#environment">Requirements</a>
-              <li> <a href="#compile">How to build</a>
-              <li> <a href="#run">How to run</a>
+              <li><a href="#environment">Requirements</a></li>
+              <li><a href="#compile">How to build</a></li>
+              <li><a href="#run">How to run</a></li>
             </ul>
-          <li> <a href="#todo">ToDo</a>
-          <li> <a href="#misc">Miscellaneous</a>
+          </li>
+          <li><a href="#todo">ToDo</a></li>
+          <li><a href="#misc">Miscellaneous</a>
             <ul>
-              <li> <a href="#keyboard-shortcut"> Keyboard shortcut </a>
-              <li> <a href="#option"> Command line options </a>
-              <li> <a href="#save"> How to play on different platforms at the same time </a>
-              <li> <a href="#registry"> Reading from the registry </a>
-              <li> <a href="#dll"> Loading DLL </a>
-              <li> <a href="#edit-mode"> Online modification of volume and variables </a>
-              <li> <a href="#truetype-font"> Displaying Kanji characters using TrueType font </a>
-              <li> <a href="#cd-audio-mapping"> Using sound files instead of CD audio </a>
-              <li> <a href="#midi"> Playing MIDI </a>
-              <li> <a href="#archive-compression"> Compression of archives </a>
-              <li> <a href="#mp3-on-windows"> Problem of chattering MP3 music on Windows platform </a>
-              <li> <a href="#enable-1byte"> How to write an English novel </a>
-              <li> <a href="#memo"> Memo </a>
+              <li><a href="#keyboard-shortcut">Keyboard shortcut</a></li>
+              <li><a href="#option">Command line options</a></li>
+              <li><a href="#save">How to play on different platforms at the same time</a></li>
+              <li><a href="#registry">Reading from the registry</a></li>
+              <li><a href="#dll">Loading DLL</a></li>
+              <li><a href="#edit-mode">Online modification of volume and variables</a></li>
+              <li><a href="#truetype-font">Displaying Kanji characters using TrueType font</a></li>
+              <li><a href="#cd-audio-mapping">Using sound files instead of CD audio</a></li>
+              <li><a href="#midi">Playing MIDI</a></li>
+              <li><a href="#archive-compression">Compression of archives</a></li>
+              <li><a href="#mp3-on-windows">Problem of chattering MP3 music on Windows platform</a></li>
+              <li><a href="#enable-1byte">How to write an English novel</a></li>
+              <li><a href="#memo">Memo</a></li>
             </ul>
-          <li> <a href="index.html">Go back</a>
+          </li>
+          <li><a href="index.html">Go back</a></li>
         </ul>
 
       </div> <!-- toc -->
@@ -87,25 +91,32 @@
           <p>I accept behavior reports, bug reports, feature addition requests, and patches at any time, so please send them to [<a href="/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=top">Bug Tracking System</a>]. Please uncheck the box in the middle of the options field before submitting your report. You can send your reports directly to the email address listed at the bottom of this page.</p>
 
           <div class="sub-content">
-            <h3 id="package-source">Source package</h3>
+            <h3 id="source">Source files</h3>
+            <table>
+              <tr>
+                <td><a href="https://github.com/ogapee/onscripter">https://github.com/ogapee/onscripter</a></td>
+              </tr>
+            </table>
+          </div> <!-- sub-content -->
 
+          <div class="sub-content">
+            <h3 id="package-source">Source package</h3>
             <table>
               <tr>
                 <td>Latest release</td>
-                <td><a href="onscripter-20220816.tar.gz">onscripter-20220816.tar.gz</a></td>
+                <td><a href="onscripter-20230824.tar.gz">onscripter-20230824.tar.gz</a></td>
               </tr>
               <tr>
                 <td>Previous release</td>
-                <td><a href="onscripter-20220123.tar.gz">onscripter-20220123.tar.gz</a></td>
-                <!--  <li> <a href="onscripter-exp-20090712.tar.gz">onscripter-exp-20090712.tar.gz</a>(実験版, バグ修正)-->
+                <td><a href="onscripter-20220816.tar.gz">onscripter-20220816.tar.gz</a></td>
+                <!--  <li> <a href="onscripter-exp-20090712.tar.gz">onscripter-exp-20090712.tar.gz</a>(Experimental)-->
               </tr>
             </table>
 
           </div> <!-- sub-content -->
 
           <div class="sub-content">
-            <h3 id="package-binary">Binary package (Android and Zaurus packages are tested by ME）</h3>
-
+            <h3 id="package-binary">Binary package (Android packages are tested by ME)</h3>
             <table>
               <tr>
                 <th>Platform</th>
@@ -204,9 +215,7 @@
               <tr>
                 <td colspan=2>Let me know if you have others</td>
               </tr>
-
             </table>
-
           </div> <!-- sub-content -->
 
           <div class="sub-content">
@@ -231,8 +240,8 @@
               <li> You can load and save save files that are compatible with the latest NScripter (2011/12/15). Please see <a href="#save">How to play on different platforms at the same time</a>.
               <li> All operations can be done from the keyboard. Of course, you can also use the mouse.
               <li> You can change CD Audio playback to music file (MP3, Ogg) playback.
-              <li> It supports multiple platforms, including Windows, Linux, MacOS X, MacOS 9, <a href="android/">Android</a>(1.6 or later), iPhone, iPad, PSP, <a href="zaurus/index.html">Zaurus</a> (SL-5500,SL-A300,SL-B500,SL-C700), FreeBSD, <a href="/cgi-bin/kagemai/guest.cgi?id=381&project=onscripter&action=view_report">OpenBSD</a>, <a href="/cgi-bin/kagemai/guest.cgi?id=364&project=onscripter&action=view_report">Haiku</a>, Solaris(on SPARC), Tru64 UNIX, OS/2Warp, iPod, PocketPC, Playstation3, Wii, GP2X, NetWalker and Dreamcast. It should also work on other platforms as well if <a href="#environment">Requirements</a> are satisfied.
-              <li> Since we have not implemented all the commands and specifications, some games may behave strangely. If this happens, please report it to the bug tracking system above.
+              <li> It supports multiple platforms, including Windows, Linux, MacOS X, MacOS 9, <a href="android/">Android</a>(1.6 or later), iPhone, iPad, PSP, <a href="zaurus/index.html">Zaurus</a> (SL-5500, SL-A300, SL-B500, SL-C700), FreeBSD, <a href="/cgi-bin/kagemai/guest.cgi?id=381&project=onscripter&action=view_report">OpenBSD</a>, <a href="/cgi-bin/kagemai/guest.cgi?id=364&project=onscripter&action=view_report">Haiku</a>, Solaris(on SPARC), Tru64 UNIX, OS/2Warp, iPod, PocketPC, Playstation3, Wii, GP2X, NetWalker and Dreamcast. It should also work on other platforms as well if <a href="#environment">Requirements</a> are satisfied.
+              <li> Since we have not implemented all the commands and specifications, some games may behave strangely. If this happens, please report it to the bug-tracking system above.
             </ol>
 
           </div> <!-- sub-content -->
@@ -252,7 +261,7 @@
             <ul>
               <li> C++ programming language
                 <ul>
-                  <li> g++ 8.3.0 (Linux)
+                  <li> g++ 10.2.1 (Linux)
                   <li> Visual Studio 2019 C++ (Windows)
                 </ul>
               <li> Japanese TTF file based on Unicode renamed as &quot;default.ttf&quot;
@@ -267,13 +276,13 @@
               <li> SMPEG-0.4.5<br>
                 SMPEG is required to play MPEG1 movie files. Either SMPEG or MAD is required to play MP3 music files.
               <li> ogg-1.2.0, vorbis-1.3.1 (<a href="http://www.xiph.org/">The Ogg Vorbis CODEC Project</a>)<br>
-                Ogg Vorbis is required to play Ogg Vorbis music files. It is enabled by default in Makefile.Linux and Makefile.ArmLinux included in the source package. Tremor Vorbis can be used instead that decodes music using integer arithmetics only.
+                Ogg Vorbis is required to play Ogg Vorbis music files. It is enabled by default in Makefile.Linux and Makefile.ArmLinux that are included in the source package. Tremor Vorbis can be used instead that decodes music using integer arithmetics only.
             </ul>
 
             <h4>Optional</h4>
             <ul>
-              <li> mad-0.15.1b (<a href="http://www.mars.org/home/rob/proj/mpeg/">MAD: Mpeg Audio Decoder</a>)<br>
-                MAD is a MP3 decoding library that uses only integer arithmetics. This is essential if you want to play MP3 music files on Android or Zaurus. To use MAD, SDL_mixer library must be built with MAD enabled instead of SMPEG.
+              <li> mad-0.15.1b (<a href="http://www.mars.org/home/rob/proj/mpeg/">MAD: Mpeg Audio Decoder</a>)<br />
+                MAD is an MP3 decoding library that uses only integer arithmetics. This is essential if you want to play MP3 music files on Android or Zaurus. To use MAD, SDL_mixer library must be built with MAD enabled instead of SMPEG.
 
               <li> avifile-0.7.48 (<a href="http://avifile.sourceforge.net/">avifile</a>)<br>
                 Avifile is necessary if you want to play AVI files with avi command. It is enabled when USE_AVIFILE is defined and AVIWrapper.o is linked.
@@ -287,7 +296,7 @@
           <div class="sub-content">
             <h3 id="compile">How to build</h3>
 
-            <p> Unpack ONScripter source package in an appropriate location. Type &quot; make -f Makefile.Linux &quot; on Linux, or type &quot; nmake -f Makefile.Win &quot; on Windows. On Windows, the path to the header files and libraries for bzip2, SDL, SMPEG, etc., should be modified in Makefile.Win depending on your environment.</p>
+            <p>Unpack the ONScripter source package in an appropriate location. Type &quot; make -f Makefile.Linux &quot; on Linux, or type &quot; nmake -f Makefile.Win &quot; on Windows. On Windows, the path to the header files and libraries for bzip2, SDL, SMPEG, etc., should be modified in Makefile.Win depending on your environment.</p>
 
           </div> <!-- sub-content -->
 
@@ -313,7 +322,7 @@
             <li> (<span style="color:red">High</span>) Lua support
             <li> (<span style="color:#ff8800">Middle</span>) Apply &quot;windoweffect&quot; when &quot;windowerase&quot; is performed on mouse right click
             <li> (<span style="color:#ff8800">Middle</span>) Store the image obtained by &quot;bgcopy&quot; when storing save files
-            <li> (<span style="color:#ff8800">Middle</span>) Deal with the case where shadow of characters is overlapped to other characters
+            <li> (<span style="color:#ff8800">Middle</span>) Deal with the case where the shadow of characters is overlapped with other characters
             <li> (<span style="color:#00ff00">Low</span>) &quot;english&quot; command support to handle an English script
             <li> (<span style="color:#00ff00">Low</span>) Verify &quot;existspbtn&quot; which is implemented as &quot;spbtn&quot;
             <li> (<span style="color:#00ff00">Low</span>) Clean up of code
@@ -328,9 +337,7 @@
           <div class="sub-content">
             <h3 id="keyboard-shortcut"> Keyboard shortcut </h3>
 
-            <p> All operations including mouse operations can be performed by
-              keyboard short-cuts, though the shortcut keys defined in the script
-              have higher priority.</p>
+            <p>All operations including mouse operations can be performed by keyboard short-cuts, though the shortcut keys defined in the script have higher priority.</p>
 
             <table>
               <tr>
@@ -338,60 +345,60 @@
                 <th> Description </th>
               </tr>
               <tr>
-                <td>space</td>
-                <td> Same as mouse left click, except it behaves as if the area outside the button is clicked even if the mouse cursor is just on a button. </td>
+                <td>Space</td>
+                <td>Same as mouse left click, except it behaves as if the area outside the button is clicked even if the mouse cursor is just on a button.</td>
               </tr>
               <tr>
-                <td>enter</td>
-                <td> Same as mouse left click. </td>
+                <td>Enter</td>
+                <td>Same as mouse left click.</td>
               </tr>
               <tr>
-                <td>escape</td>
-                <td> Same as mouse right click. </td>
+                <td>Esc</td>
+                <td>Same as mouse right click.</td>
               </tr>
               <tr>
-                <td>p,k,↑</td>
-                <td> Move the mouse cursor onto the previous choice (button) at decision branch (button selection).</td>
+                <td>P, K, ↑</td>
+                <td>Move the mouse cursor onto the previous choice (button) at the decision branch (button selection).</td>
               </tr>
               <tr>
-                <td>n,j,↓</td>
-                <td> Move the mouse cursor onto the next choice (button) at decision branch (button selection).</td>
+                <td>N, J, ↓</td>
+                <td>Move the mouse cursor onto the next choice (button) at the decision branch (button selection).</td>
               </tr>
               <tr>
-                <td> s </td>
-                <td> Skip sentences to the next decision branch. </td>
+                <td>S</td>
+                <td>Skip sentences to the next decision branch.</td>
               </tr>
               <tr>
-                <td> o </td>
-                <td> Switch to one page display mode. </td>
+                <td>O</td>
+                <td>Switch to one-page display mode.</td>
               </tr>
               <tr>
-                <td>h,←</td>
-                <td> Same as mouse wheel up. </td>
+                <td>H, ←</td>
+                <td>Same as mouse wheel up.</td>
               </tr>
               <tr>
-                <td>l,→</td>
-                <td> Same as mouse wheel down. </td>
+                <td>L, →</td>
+                <td>Same as mouse wheel down.</td>
               </tr>
               <tr>
-                <td> f </td>
-                <td> Switch between full screen mode and windowed mode. </td>
+                <td>F</td>
+                <td>Switch between full-screen mode and windowed mode.</td>
               </tr>
               <tr>
-                <td> a </td>
-                <td> Enter into the auto read mode if automode or mode_ext is defined. </td>
+                <td>A</td>
+                <td>Enter into the auto-read mode if automode or mode_ext is defined.</td>
               </tr>
               <tr>
-                <td> z </td>
-                <td> Enter into the volume and variables modification mode if &quot;--edit&quot; is specified in the command line options. </td>
+                <td>Z</td>
+                <td>Enter into the volume and variables modification mode if &quot;--edit&quot; is specified in the command line options.</td>
               </tr>
               <tr>
-                <td> 1, 2, 3 </td>
-                <td> Change the speed of drawing characters. </td>
+                <td>1, 2, 3</td>
+                <td>Change the speed of drawing characters.</td>
               </tr>
               <tr>
-                <td> Shift + q </td>
-                <td> Quit. (end command is issued) </td>
+                <td>Shift + q</td>
+                <td>Quit. (end command is issued)</td>
               </tr>
             </table>
 
@@ -399,72 +406,72 @@
 
 
           <div class="sub-content">
-            <h3 id="option"> Command line options </h3>
+            <h3 id="option">Command line options</h3>
 
             <table>
               <tr>
-                <th> Options </th>
-                <th> Description </th>
+                <th>Options</th>
+                <th>Description</th>
               </tr>
               <tr>
-                <td>-h,--help</td>
-                <td> Show the help messages and exit.</td>
+                <td>-h, --help</td>
+                <td>Show the help messages and exit.</td>
               </tr>
               <tr>
-                <td>-v,--version</td>
-                <td> Show the version information and exit.</td>
+                <td>-v, --version</td>
+                <td>Show the version information and exit.</td>
               </tr>
               <tr>
                 <td>--cdaudio</td>
-                <td> Use CD audio if available. Even if it is not available, sound files are not used instead. [default: use Music files instead of CD audio]</td>
+                <td>Use CD audio if available. Even if it is not available, sound files are not used instead. [default: use Music files instead of CD audio]</td>
               </tr>
               <tr>
                 <td>--cdnumber cd_number</td>
-                <td> Choose the CD-ROM drive number to use if there are many. [default: 0]</td>
+                <td>Choose the CD-ROM drive number to use if there are many. [default: 0]</td>
               </tr>
               <tr>
-                <td>-f,--font file</td>
-                <td> Set a TTF font file. [default: default.ttf in the current directory]</td>
+                <td>-f, --font file</td>
+                <td>Set a TTF font file. [default: default.ttf in the current directory]</td>
               </tr>
               <tr>
                 <td>--registry file</td>
-                <td> Set a registry file. </td>
+                <td>Set a registry file.</td>
               </tr>
               <tr>
                 <td>--dll file</td>
-                <td> Set a dll file. </td>
+                <td>Set a dll file.</td>
               </tr>
               <tr>
-                <td>-r,--root path</td>
-                <td> Set the directory where the script and archives are placed. [default: current directory]</td>
+                <td>-r, --root path</td>
+                <td>Set the directory where the script and archives are placed. [default: current directory]</td>
               </tr>
               <tr>
                 <td>--fullscreen</td>
-                <td> Start in full screen mode. </td>
+                <td>Start in full-screen mode.</td>
               </tr>
               <tr>
                 <td>--window</td>
-                <td> Start in windowed mode. </td>
+                <td>Start in windowed mode.</td>
               </tr>
               <tr>
                 <td>--force-button-shortcut</td>
-                <td> Ignore &quot;getenter&quot; and &quot;useescspc&quot; commands. In other words, &quot;esc&quot;, &quot;space&quot; and &quot;enter&quot; keys are forced to behave as a mouse click. </td>
+                <td>Ignore &quot;getenter&quot; and &quot;useescspc&quot; commands. In other words, &quot;esc&quot;, &quot;space&quot; and &quot;enter&quot; keys are forced to behave as a mouse click.</td>
               </tr>
               <tr>
                 <td>--enable-wheeldown-advance</td>
-                <td> Advance the text on mouse wheel down when it waits for a click at the end of a sentence. If the behavior of waiting for a click is customized by &quot;textgosub&quot;, this option has no effect. </td>
+                <td>Advance the text by turning the mouse wheel downwards when it waits for a click at the end of a sentence. If the behavior of waiting for a click is customized by &quot;textgosub&quot;, this option has no effect.</td>
               </tr>
               <tr>
                 <td>--disable-rescale</td>
-                <td> Do not rescale the images in the archives to fit in the screen when compiled with PDA_WIDTH or PDA_AUTOSIZE defined. Along with the compressed archives as mentioned in <a href="#archive-compression">Compression of archives</a>, ONScripter will run faster by avoiding the need for resizing. Note that image files outside the archives are resized as before. </td>
+                <td>Do not rescale the images in the archives to fit in the screen when compiled with PDA_WIDTH or PDA_AUTOSIZE defined. Along with the compressed archives as mentioned in <a href="#archive-compression">Compression of archives</a>, ONScripter will run faster by avoiding the need for resizing. Note that image files outside the archives are resized as before.</td>
               </tr>
               <tr>
                 <td>--render-font-outline</td>
-                <td> Render the outline of a text in black (or white if the color of the text is dark) using the outline rendering function supported in SDL_ttf since 2.0.10. Text will be clearly shown.</td>
+                <td>Render the outline of a text in black (or white if the color of the text is dark) using the outline rendering function supported in SDL_ttf since 2.0.10. Text will be clearly shown.</td>
               </tr>
               <tr>
                 <td>--edit</td>
-                <td> Enable online modification of the volume and variables when &quot;z&quot; is pressed. </td>
+                <td>Enable online modification of the volume and variables when &quot;z&quot; is pressed.</td>
               </tr>
             </table>
 
@@ -476,12 +483,12 @@
 
             <p>You can share save files among different platforms such as desktop PC (Windows, Linux, MacOSX), smartphone (Android, iPhone), etc. To do this, you need to prepare game data on all platforms and move all output files generated from ONScripter (or NScripter) from one platform to another.</p>
 
-            <p>NScripter or ONScripter generates/updates following files. Some may not be generated depending on games.</p>
+            <p>NScripter or ONScripter generates/updates the following files. Some may not be generated depending on the games.</p>
 
             <table>
               <tr>
-                <th> Output files </th>
-                <th> Description </th>
+                <th>Output files</th>
+                <th>Description</th>
               </tr>
               <tr>
                 <td><i>archive_path/</i>gloval.sav</td>
@@ -513,32 +520,32 @@
               </tr>
               <tr>
                 <td><i>archive_path/</i>other images</td>
-                <td>Screenshots may be saved as images. Directory and name of images are dependent on games.</td>
+                <td>Screenshots may be saved as images. The directory and name of images are dependent on the games.</td>
               </tr>
             </table>
 
-            <p>The format of a save file may change when a newer version of NScripter (or ONScripter) is released. So, ONScripter generates a save file having extra information about the version number of a save file in the header. A save file without a version number is also generated under &quot;sav&quot; directory if it exists and it is compatible with a save file generated from the latest NScripter. Note that the version number of a save file is different from the version number (e.g. 20120225) of ONScripter. </p>
+            <p>The format of a save file may change when a newer version of NScripter (or ONScripter) is released. So, ONScripter generates a save file having extra information about the version number of a save file in the header. A save file without a version number is also generated under &quot;sav&quot; directory if it exists and is compatible with a save file generated from the latest NScripter. Note that the version number of a save file is different from the version number (e.g. 20120225) of ONScripter. </p>
 
             <p>ONScripter can load any save files with version number and save files in the latest format without version number.</p>
 
             <h4>From ONScripter to ONScripter</h4>
 
             <dl>
-              <dt>Simply copy all the above mentioned modified files including save*.dat.
+              <dt>Simply copy all the above-mentioned modified files including save*.dat.
               <dd>ONScripter_dir/* → ONScripter_dir/*
             </dl>
 
             <h4>From NScripter to ONScripter</h4>
 
             <dl>
-              <dt>Simply copy all the above mentioned modified files including save*.dat.
+              <dt>Simply copy all the above-mentioned modified files including save*.dat.
               <dd>NScripter_dir/* → ONScripter_dir/*
             </dl>
 
             <h4>From ONScripter to NScripter</h4>
 
             <dl>
-              <dt>Copy all the above mentioned modified files excluding save*.dat.
+              <dt>Copy all the above-mentioned modified files excluding save*.dat.
               <dd>ONScripter_dir/* -&gt; NScripter_dir/*
               <dt>Copy save files under &quot;sav&quot; directory
               <dd>ONScripter_dir/sav/save*.dat -&gt; NScripter_dir/save*.dat
@@ -546,9 +553,9 @@
 
             <h4>Notice</h4>
             <ul>
-              <li>Save files generated from the latest NScripter (nscr.exe released in 2011/12/15) are supported. <span style="color:red">ONScripter doesn't load save files generated from older version of NScripter.</span>
+              <li>Save files generated from the latest NScripter (nscr.exe released in 2011/12/15) are supported. <span style="color:red;">ONScripter doesn't load save files generated from older versions of NScripter.</span>
               <li>Compatibility between the latest NScripter and ONScripter is not guaranteed, but there has been no problem as far as I know.
-              <li>Use the above mentioned latest NScripter from the beginning if you use both ONScripter and NScripter. In that case, be sure to make &quot;sav&quot; directory in advance.
+              <li>Use the above-mentioned latest NScripter from the beginning if you use both ONScripter and NScripter. In that case, be sure to make &quot;sav&quot; directory in advance.
             </ul>
 
           </div> <!-- sub-content -->
@@ -559,11 +566,11 @@
 
             <p>getreg command reads data from the registry of Windows. ONScripter emulates this command by reading from registry.txt (text file) that describes the data.</p>
 
-            <p>The format of registry.txt is as follows. Letters are case sensitive. Be careful not to have extra spaces. If you use Kanji characters, use Shift JIS code set.</p>
+            <p>The format of registry.txt is as follows. Letters are case-sensitive. Be careful not to have extra space. If you use Kanji characters, use Shift JIS code set.</p>
 
             <pre>
-[the second argument of getreg command (excluding quotation marks around)]
-the third argument of getreg command = string to be compared (including quotation marks around)
+[The second argument of getreg command (excluding quotation marks around)]
+The third argument of getreg command = string to be compared (including quotation marks around)
 </pre>
 
             <p class="noindent">Example of registry.txt</p>
@@ -586,9 +593,9 @@ the third argument of getreg command = string to be compared (including quotatio
             <h3 id="dll"> Loading DLL </h3>
 
             <p>exec_dll command executes DLL (Dynamic Link
-              Library) that is built to run on Windows. ONScripter emulates this command by reading from dll.txt (text file) that describes the relationship between the name of a DLL and its return value. So, DLL is not executed and the return value is fixed.</p>
+              Library) that is built to run on Windows. ONScripter emulates this command by reading from dll.txt (text file) which describes the relationship between the name of a DLL and its return value. So, DLL is not executed and the return value is fixed.</p>
 
-            <p>The format of dll.txt is as follows. Letters are case sensitive. Be careful not to have extra spaces. If you use Kanji characters, use Shift JIS code set.</p>
+            <p>The format of dll.txt is as follows. Letters are case-sensitive. Be careful not to have extra space. If you use Kanji characters, use Shift JIS code set.</p>
 
             <pre>
 [Name of DLL]
@@ -620,17 +627,17 @@ ret = 2
 
             <p>It is enabled by setting '--edit' option when launching ONScripter.</p>
 
-            <p>If you press z key when waiting for key-in, you will enter edit mode and the title bar becomes as follows.</p>
+            <p>If you press the z key when waiting for the key-in, you will enter edit mode and the title bar becomes as follows.</p>
 
             <pre>
 [EDIT MODE]  MP3 vol (m)  SE vol (s)  Voice vol (v)  Numeric variable (n)
 </pre>
 
-            <p class="noindent">If you further press any of m, s, v, n key, you will enter sub edit mode where you can change corresponding variables. You can escape from edit mode by pressing ESC key.</p>
+            <p class="noindent">If you further press any of the M, S, V, or N keys, you will enter sub-edit mode where you can change corresponding variables. You can escape from edit mode by pressing the ESC key.</p>
 
-            <p>If you press 'n' key, you have to choose a variable first and then change its value.</p>
+            <p>If you press the N key, you have to choose a variable first and then change its value.</p>
 
-            <p>You can use '0' to '9', '-', BackSpace, Esc, Enter keys when you change numeric variables. '-' key is accepted when you are editting a numeric variable and the value is 0. If the value is other than 0, you need to clear the value by pressing BackSpace key and then press '-' key. </p>
+            <p>You can use the '0' to '9', '-', BackSpace, Esc, and Enter keys when you change numeric variables. The '-' key is accepted when you are editing a numeric variable and the value is 0. If the value is other than 0, you need to clear the value by pressing the BackSpace key and then pressing the '-' key. </p>
 
           </div> <!-- sub-content -->
 
@@ -638,14 +645,14 @@ ret = 2
           <div class="sub-content">
             <h3 id="truetype-font"> Displaying Kanji characters using TrueType font </h3>
 
-            <p> Japanese TrueType font is required to display Kanji characters. For example, msgothic.ttc under c:\Windows\Fonts in Windows 7, or freely available TrueType fonts shown below can be used.</p>
+            <p>Japanese TrueType font is required to display Kanji characters. For example, msgothic.ttc under c:\Windows\Fonts in Windows 7, or freely available TrueType fonts shown below can be used.</p>
 
             <dl>
               <dt> <a href="http://jikasei.me/font/genjyuu/">Genjyuu gothic</a>
-              <dd> It is a round gothic style font derived from <a href="http://ja.wikipedia.org/wiki/Source_Han_Sans">Gennokaku gothic</a>. Among them, I recommend GenJyuuGothicX-Monospace-Bold.ttf because it is bold, beautiful, and easy-to-read.
+              <dd> It is a round gothic style font derived from <a href="http://ja.wikipedia.org/wiki/Source_Han_Sans">Gennokaku gothic</a>. Among them, I recommend GenJyuuGothicX-Monospace-Bold.ttf because it is bold, beautiful, and easy to read.
 
               <dt> <a href="http://mix-mplus-ipa.osdn.jp/">M+ and IPA compositional font</a>
-              <dd> Re-distributable fonts based on M+ font and IPA font. Among them, I recommend Migu-2M-bold.ttf because it is bold, beautiful, and easy-to-read.
+              <dd> Re-distributable fonts based on M+ font and IPA font. Among them, I recommend Migu-2M-bold.ttf because it is bold, beautiful, and easy to read.
 
               <dt> <a href="http://ossipedia.ipa.go.jp/ipafont/index.html">IPA font</a>
               <dd> Re-distributable Gothic and Mincho font.
@@ -654,9 +661,9 @@ ret = 2
               <dd> Handwritten font.
             </dl>
 
-            <p> Because SDL_ttf renders Kanji characters badly when TTF_STYLE_BOLD is enabled, ONScripter just ignores "bold" settings. If you use a small device like smartphones, it is better to use a bold TrueType font such as Migu-2M-bold.ttf mentioned above and HG Gothic E (HGRGE.TTC).
+            <p>Because SDL_ttf renders Kanji characters badly when TTF_STYLE_BOLD is enabled, ONScripter just ignores "bold" settings. If you use a small device like a smartphone, it is better to use a bold TrueType font such as Migu-2M-bold.ttf mentioned above and HG Gothic E (HGRGE.TTC).
 
-            <p> TrueType font file should be renamed to <STRONG>default.ttf</STRONG> and be placed in the same directory where a script file is placed before launching ONScripter. </p>
+            <p>TrueType font file should be renamed to <STRONG>default.ttf</STRONG> and be placed in the same directory where a script file is placed before launching ONScripter. </p>
 
           </div> <!-- sub-content -->
 
@@ -673,7 +680,7 @@ ret = 2
               ...<br>
               MP3, OGG and WAV format are supported. Please change the above &quot;xxx&quot; according to the format of the sound files.</p>
 
-            <p> The behavior of a command to play the first CD audio track,
+            <p>The behavior of a command to play the first CD audio track,
               i.e. play &quot;*1&quot;, is changed to play
               &quot;track01.mp3&quot;. This is the default behavior unless
               &quot;--cdaudio&quot; option is specified. In case of missing sound
@@ -705,7 +712,7 @@ ret = 2
           <div class="sub-content">
             <h3 id="archive-compression"> Compression of archives </h3>
 
-            <p>The screen size of Linux Zaurus (320x240) or PSP (360x270) is smaller than the size expected in the script. By resizing the images in the archives beforehand, you can keep the size of the archives small and use the storage efficiently. Images with SPB format are stored as BMP format unless -e option is specified. </p>
+            <p>The screen size of Linux Zaurus (320x240) or PSP (360x270) is smaller than the size expected in the script. By resizing the images in the archives beforehand, you can keep the size of the archives small and use the storage efficiently. Images with SPB format are stored in BMP format unless the -e option is specified. </p>
 
             <h4>Usage</h4>
 
@@ -743,13 +750,13 @@ nsaconv [-e] [-ns2] [-ns3] src_screen_width dst_screen_width src_NSA_filename ds
 ...
 </pre>
 
-            <p>You have to manually distinguish the version (1 or 2 or 3) of NSA archive. The use of ns2 command in the script indicates version 2, while the use of ns3 command indicates version 3. If you cannot check the script, please try without -ns2 first. If it fails, please try with -ns2 or -ns3.</p>
+            <p>You have to manually distinguish the version (1, 2, or 3) of NSA archives. The use of ns2 command in the script indicates version 2, while the use of ns3 command indicates version 3. If you cannot check the script, please try without -ns2 first. If it fails, please try with -ns2 or -ns3.</p>
 
-            <p>With the -e option, wav and bmp files are compressed in nbz format. This sets a special value, incompatible with NScripter, for the flag indicating the compression type of NSA archive. This extension may conflict with an extension by NScripter in the future. In that case, it can be solved by modifying the converter and reconverting archives. Since reconverting doesn't affect save files, etc., those who use ONScripter in Zaurus are advised to convert with this option. Since wav is compressed with bzip2, archives become quite small in games that heavily use wav. As a disadvantage, the game speed is slightly slower because it additionally decodes bzip2, but it's not noticiable. </p>
+            <p>With the -e option, wav and bmp files are compressed in nbz format. This sets a special value, incompatible with NScripter, for the flag indicating the compression type of NSA archives. This extension may conflict with an extension by NScripter in the future. In that case, it can be solved by modifying the converter and reconverting archives. Since reconverting doesn't affect save files, etc., those who use ONScripter in Zaurus are advised to convert with this option. Since wav files are compressed with bzip2, archives become quite small in games that heavily use wav files. As a disadvantage, the game speed is slightly slower because it additionally decodes bzip2, but it's not noticeable. </p>
 
             <p>With the -j option, bmp files are converted to jpeg files while keeping the filenames unchanged. Except, bmp files using palette color are not converted.</p>
 
-            <p>The option -q sets the quality of jpeg compression ranging from 0 to 100. Small value indicates low quality but small file size. The default value is 75.</p>
+            <p>The option -q sets the quality of jpeg compression ranging from 0 to 100. A small value indicates low quality but a small file size. The default value is 75.</p>
 
             <p>The option --disable-rescale is required when <a href="#archive-compression">a rescaled archive</a> is used.<br>
 
@@ -786,17 +793,12 @@ void MPEGaudio::layer3reorderandantialias(int ch,int gr,
 
             <p>By defining ENABLE_1BYTE_CHAR at compile-time, the text from `(back quote) to the end of the line or another ` is displayed as a sentence written in 1-byte characters. In the text, single-byte spaces are enabled for display, but the display of variables within the text is disabled, and the color and time specifications are also disabled depending on the starting position. If you want to change the color in the middle of the text, use / to separate lines. However, the forced click character is ignored (_) immediately after waiting for a click (@) or page break (\).</p>
 
-            <p>将来本家で ` に何か機能を割り振った場合には、削除もしくは別の文字に
-              変更される可能性があります。現状のように ENABLE_1BYTE_CHAR の指定の有
-              無で使い分けられるようにするかもしれませんが、保証の限りではありません。
-            </p>
+            <p>If any function is assigned to ` in the future, it may be removed or changed to another character. The current function of ` may be available with ENABLE_1BYTE_CHAR defined as it is now, but this is not guaranteed.</p>
 
-            <p>また、コンパイル時に ENABLE_1BYTE_CHAR と合わせて FORCE_1BYTE_CHAR
-              を指定すると、全ての表示を半角にすることが可能になります。具体的には、
-              上記に加えて、右クリックメニューの表示が英語になり、また数字変数の表示
-              が半角になります。</p>
 
-            <p>以下にスクリプト例を書きます。</p>
+            <p>In addition, if FORCE_1BYTE_CHAR is specified together with ENABLE_1BYTE_CHAR at compile-time, it is possible to display all characters in 1-byte characters entirely. Specifically, in addition to the above, the right-click menu will be displayed in English and numeric variables will be displayed in 1-byte characters.</p>
+
+            <p>An example script is written below.</p>
 
             <PRE>
 *define 
@@ -855,12 +857,12 @@ return
               </tr>
               <tr>
                 <td>WAIT_INPUT_MODE</td>
-                <td> Wait for clickable user input.</td>
+                <td>Wait for clickable user input.</td>
                 <td>delay, click, @, \, text rendering, screen effect</td>
               </tr>
             </table>
 
-            <p>The values in the table below are used conjunction with the values in the table above.</p>
+            <p>The values in the table below are used in conjunction with the values in the table above.</p>
             <table>
               <tr>
                 <th>Value</th>
@@ -870,16 +872,16 @@ return
               <tr>
                 <td>WAIT_TIMER_MODE</td>
                 <td>Wait for the specified time, animation is processed while waiting</td>
-                <td>Most cases except for screen efffect and text rendering.</td>
+                <td>Most cases except for screen effect and text rendering.</td>
               </tr>
               <tr>
                 <td>WAIT_VOICE_MODE</td>
-                <td>Wait until voice is finihsed.</td>
+                <td>Wait until voice is finished.</td>
                 <td>automode, btntime2 only</td>
               </tr>
               <tr>
                 <td>WAIT_TEXT_MODE</td>
-                <td>Wait at the end of text.</td>
+                <td>Wait at the end of the text.</td>
                 <td>@, \, select</td>
               </tr>
               <tr>
@@ -891,9 +893,9 @@ return
 
             <h4> Order of rendering layers</h4>
 
-            <p> In the table below, the lower layer is hidden by the upper layer. The initial value of &quot;humanz&quot; is 499.</p>
+            <p>In the table below, the lower layer is hidden by the upper layer. The initial value of &quot;humanz&quot; is 499.</p>
 
-            <p> Text is always rendered at the top when appeared.</p>
+            <p>Text is always rendered at the top when appears.</p>
 
             <table>
               <tr>

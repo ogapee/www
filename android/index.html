@@ -14,18 +14,18 @@
   <div id="body">
 
     <div id="header">
-      <H1>ONScripter on Android</H1>
+      <h1>ONScripter on Android</h1>
 
       Since: May 30, 2010<br>
       <!--Last updated: Nov. 5, 2017 ENABLE_1BYTE_CHAR と FORCE_1BYTE_CHAR を有効にした英語ゲーム用アプリを更新<br>-->
       <!--Last updated: Jan. 15, 2022 アプリを更新<br>-->
       <!--Last updated: Jul. 5, 2020 パターン１：Google Play からダウンロードする方法を修正<br>-->
-      Last updated: Mar. 23, 2023 <a href="#sdk">SDK</a> とアプリを更新<br>
-      <!--Last updated: Jan. 18, 2022 <A href="#sdk">SDK</a> を更新<br>-->
+      Last updated: Aug. 24, 2023 <a href="#sdk">SDK</a> とアプリを更新<br>
+      <!--Last updated: Jan. 18, 2022 <a href="#sdk">SDK</a> を更新<br>-->
       <!--Last updated: Aug. 17, 2014 Google Play でアプリを公開<br>-->
       <!--Last updated: Jun. 14, 2020 Android Studio でのアプリの作成方法 更新<br>-->
       <!--Last updated: Aug. 12, 2013 使用作品例更新<br>-->
-      更新内容は<A HREF="../onscripter_devel.2023.html">ONScripter 開発日誌</A>を参照<br>
+      更新内容は<a href="../onscripter_devel.2023.html">ONScripter 開発日誌</a>を参照<br>
     </div> <!-- header -->
 
     <div id="toc-container">
@@ -35,30 +35,32 @@
       <div id="toc">
 
         <ul>
-          <li> <A HREF="#introduction">はじめに</A>
-          <li> <A HREF="#usage">アプリの使用方法</A>
+          <li><a href="#introduction">はじめに</a></li>
+          <li><a href="#usage">アプリの使用方法</a>
             <ul>
-              <li> <A HREF="#install">インストール方法</A>
-              <li> <A HREF="#gamedata">ゲームデータの配置方法</A>
-              <li> <A HREF="#run">実行方法</A>
-              <li> <a href="#button">ボタン</a>
-              <li> <a href="#menu">メニュー</a>
-              <li> <a href="#limitation">制限・注意事項</a>
+              <li><a href="#install">インストール方法</a></li>
+              <li><a href="#gamedata">ゲームデータの配置方法</a></li>
+              <li><a href="#run">実行方法</a></li>
+              <li><a href="#button">ボタン</a></li>
+              <li><a href="#menu">メニュー</a></li>
+              <li><a href="#limitation">制限・注意事項</a></li>
             </ul>
-          <li> <A HREF="#develop">アプリの開発方法</A>
+          </li>
+          <li> <a href="#develop">アプリの開発方法</a>
             <ul>
-              <li> <a href="#flow">開発の流れ</a>
-              <li> <a href="#develop-as">Android Studio でのアプリの作成方法</a>
-                <!--<li> <s><a href="#develop-win">Windows でのアプリの作成方法</a></s>-->
-                <!--<li> <s><a href="#develop-linux">Linux でのアプリの作成方法</a></s>-->
-              <li> <a href="#sdk">ライブラリと周辺プログラム一式 (SDK)</a>
-              <li> <a href="#distribution">ゲームデータの配布方法</a>
-              <li> <a href="#customize">カスタマイズ</a>
+              <li><a href="#flow">開発の流れ</a></li>
+              <li><a href="#develop-as">Android Studio でのアプリの作成方法</a></li>
+              <!--<li><s><a href="#develop-win">Windows でのアプリの作成方法</a></s></li>-->
+              <!--<li><s><a href="#develop-linux">Linux でのアプリの作成方法</a></s></li>-->
+              <li><a href="#sdk">ライブラリと周辺プログラム一式 (SDK)</a></li>
+              <li><a href="#distribution">ゲームデータの配布方法</a></li>
+              <li><a href="#customize">カスタマイズ</a></li>
             </ul>
-          <li> <A HREF="#link">リンク</A>
-          <li> <A HREF="#tips">Tips</A>
-          <li> <A HREF="android_fb.html">フレームバッファに直接アクセスするバイナリ (Obsolete)</A>
-          <li> <a href="../onscripter.html">戻る</a>
+          </li>
+          <li><a href="#link">リンク</a></li>
+          <li><a href="#tips">Tips</a></li>
+          <li><a href="android_fb.html">フレームバッファに直接アクセスするバイナリ (Obsolete)</a></li>
+          <li><a href="../onscripter.html">戻る</a></li>
         </ul>
 
       </div> <!-- toc -->
@@ -81,20 +83,21 @@
             </tr>
             <tr>
               <td rowspan=4>日本語</td>
-              <td><A HREF="https://play.google.com/store/apps/details?id=jp.ogapee.onscripter.release">ONScripter</A> 20230323 in Google Play</td>
+              <td><a href="https://play.google.com/store/apps/details?id=jp.ogapee.onscripter.release">ONScripter</a> 20230824 in Google Play</td>
             </tr>
             <tr>
-              <td><A HREF="ONScripter-20230323-debug.apk">ONScripter-20230323-debug.apk</A> （非推奨）</td>
+              <td><a href="ONScripter-20230824-debug.apk">ONScripter-20230824-debug.apk</a> （非推奨）</td>
             </tr>
             <tr>
-              <td><A HREF="ONScripter-20190819-armeabi-debug.apk">ONScripter-20190819-armeabi-debug.apk</A> （Android 2.0 以降で動作可、非推奨）</td>
+              <td><a href="ONScripter-20190819-armeabi-debug.apk">ONScripter-20190819-armeabi-debug.apk</a> （Android 2.0 以降で動作可、非推奨）</td>
             </tr>
             <tr>
               <td>Android 4.4 以降 5.0 未満をお使いの方は、外部SDカードではなく内部メモリ（内部SDカード）にゲームデータを配置してください。</td>
             </tr>
             <tr>
               <td>英語</td>
-              <td><A HREF="ONScripter-20170816-1byte-debug.apk">ONScripter-20170816-1byte-debug.apk</A><br>　　(ENABLE_1BYTE_CHAR and FORCE_1BYTE_CHAR are enabled)</td>
+              <td><a href="ONScripter-20170816-1byte-debug.apk">ONScripter-20170816-1byte-debug.apk</a><br />
+                (ENABLE_1BYTE_CHAR and FORCE_1BYTE_CHAR are enabled)</td>
             </tr>
           </table>
 
@@ -452,37 +455,37 @@ adb install -r ONScripter-xxxxxxxx-debug.apk
 
             <ol>
               <li> Android Studio のインストール
-                <p><a href="https://developer.android.com/studio/index.html?hl=ja">Android Studio</a> からインストーラ（現時点での最新版は Electric Eel 2022.1.1 Patch 2）をダウンロードしてインストールします。</p>
+                <p><a href="https://developer.android.com/studio/index.html?hl=ja">Android Studio</a> からインストーラ（現時点での最新版は Electric Eel 2022.3.1 Patch 2）をダウンロードしてインストールします。</p>
               <li> SDK のインストール
                 <p> Android Studio から SDK Manager を起動し、以下のパッケージをインストールします。末尾のバージョンは現時点でのバージョンです。</p>
                 <ul>
                   <li> SDK Platforms
                     <ul>
-                      <li> Android 13.0 (Tiramisu)
+                      <li> Android API 34
                     </ul>
                   <li> SDK Tools
                     <ul>
-                      <li> Android SDK Build Tools 33.0.3
+                      <li> Android SDK Build Tools 34.0.0
                       <li> NDK (Side by side) 24.0.8215888
-                      <li> Android SDK Platform-Tools 34.0.1
+                      <li> Android SDK Platform-Tools 34.0.4
                     </ul>
                 </ul>
                 <p> File -> Project Structure から確認できる Gradle 関連のバージョンは以下のとおりです。</p>
                 <ul>
                   <li> Android Gradle Plugin Version 7.2.2
-                  <li> Gradle Version 7.4
+                  <li> Gradle Version 7.5.1
                 </ul>
 
-              <li> <a href="#sdk">ライブラリと周辺プログラム一式 (SDK)</a>から onscripter_android_studio-xxxxxxxx.zip をダウンロードして c:\src\ に展開します（xxxxxxxx にはバージョン番号が入ります）。
+              <li> <a href="#sdk">ライブラリと周辺プログラム一式 (SDK)</a>から onscripter_android-xxxxxxxx.zip をダウンロードして c:\src\ に展開します（xxxxxxxx にはバージョン番号が入ります）。
                 <pre>
 c:\src\ONScripter\...
 </pre>
 
-              <li> <a href="../onscripter.html">ONScripter のページ</a>から最新の ONScripter をダウンロードして ONScripter\app\src\main\cpp\application\onscripter-xxxxxxxx に展開します（xxxxxxxx にはバージョン番号が入ります）。
+              <li> <a href="../onscripter.html">ONScripter のページ</a>から最新の ONScripter をダウンロードして onscripter_android-xxxxxxxx\app\src\main\cpp\application\onscripter-yyyyyyyy に展開します（yyyyyyyy にはバージョン番号が入ります）。
                 <pre>
-c:\src\ONScripter\app\src\main\cpp\application\onscripter-xxxxxxxx\ONScripter.h
-c:\src\ONScripter\app\src\main\cpp\application\onscripter-xxxxxxxx\ONScripter.cpp
-c:\src\ONScripter\app\src\main\cpp\application\onscripter-xxxxxxxx\...
+c:\src\onscripter_android-xxxxxxxx\app\src\main\cpp\application\onscripter-yyyyyyyy\ONScripter.h
+c:\src\onscripter_android-xxxxxxxx\app\src\main\cpp\application\onscripter-yyyyyyyy\ONScripter.cpp
+c:\src\onscripter_android-xxxxxxxx\app\src\main\cpp\application\onscripter-yyyyyyyy\...
 </pre>
 
             </ol>
@@ -615,7 +618,7 @@ sdk.dir=C\:\\Users\\<span style="color:red">username</span>\\AppData\\Local\\And
             <ol>
               <li>「Build」→「Make Project」を実行してビルドします。ビルドに成功すると、以下の場所にアプリが生成されます。
                 <pre>
-c:\src\ONScripter\app\build\outputs\apk\debug\app-debug.apk       
+c:\src\ONScripter\app\build\outputs\apk\debug\app-debug.apk
 </pre>
             </ol>
 
@@ -674,7 +677,7 @@ c:\src\android-sdk\...
 <li> Extras
 <ul>
 <li> Android Support Repository (47)
-<li> Google Play Licesing Library
+<li> Google Play Licensing Library
 </ul>
 </ul>
 
@@ -823,7 +826,7 @@ onscripter_android\bin\ONScripter-release-unsigned.apk
 <li> Extras
 <ul>
 <li> Android Support Repository, revision 47
-<li> Google Play Licesing Library, revision 1
+<li> Google Play Licensing Library, revision 1
 </ul>
 </ul>
 コマンドラインから実行する場合は、以下のコマンドから既にインストールされているパッケージとインストール可能なパッケージの一覧を確認できます。<br>
@@ -958,7 +961,7 @@ onscripter_android/bin/ONScripter-release-unsigned.apk
           <div class="sub-content">
             <h3 id="sdk">ライブラリと周辺プログラム一式 (SDK)</h3>
 
-            <p>ONScripter on Android のアプリを作成するために必要な ONScripter 本体以外のプログラム一式です。Android Studio を使う場合は onscripter_android_studio-xxxxxxxx.zip をダウンロードしてください。</p>
+            <p>ONScripter on Android のアプリを作成するために必要な ONScripter 本体以外のプログラム一式です。Android Studio を使う場合は onscripter_android-xxxxxxxx.zip をダウンロードしてください。</p>
 
             <table>
               <tr>
@@ -966,39 +969,48 @@ onscripter_android/bin/ONScripter-release-unsigned.apk
                 <th>SDK</th>
               </tr>
               <tr>
+                <td>最新版</td>
+                <td><a href="https://github.com/ogapee/onscripter_android">https://github.com/ogapee/onscripter_android</a>
+              </tr>
+              <tr>
+                <td>20230824</td>
+                <td><a href="onscripter_android-20230824.zip">onscripter_android-20230824.zip</a><br />
+                  　　compileSdkVersion と targetSdkVersion を 34 に変更しました。</p>
+              </tr>
+              <tr>
                 <td>20230323</td>
-                <td><A HREF="onscripter_android_studio-20230323.zip">onscripter_android_studio-20230323.zip</a><br>
+                <td><a href="onscripter_android_studio-20230323.zip">onscripter_android_studio-20230323.zip</a><br />
                   　　compileSdkVersion と targetSdkVersion を 33 に変更しました。<br>
                   　　起動時にゲームを選択して実行する場合に、ディレクトリの有無をキャッシュし、ディレクトリが存在しない場合には ONScripter.java の findFile 関数を呼ばないことによってファイルの読み込みを高速化しました。</p>
               </tr>
               <tr>
                 <td>20230103</td>
-                <td><A HREF="onscripter_android_studio-20230103.zip">onscripter_android_studio-20230103.zip</a><br>
+                <td><a href="onscripter_android_studio-20230103.zip">onscripter_android_studio-20230103.zip</a><br />
                   　　大文字と小文字を区別してファイル名を照合していたため、一部のファイルの読み込みに失敗するバグを修正しました。</p>
               </tr>
               <tr>
                 <td>20220816</td>
-                <td><A HREF="onscripter_android_studio-20220816.zip">onscripter_android_studio-20220816.zip</a><br>
-                  　<A HREF="onscripter_android-20220816.tar.gz">onscripter_android-20220816.tar.gz</a><br>
+                <td><a href="onscripter_android_studio-20220816.zip">onscripter_android_studio-20220816.zip</a><br>
+                  　<a href="onscripter_android-20220816.tar.gz">onscripter_android-20220816.tar.gz</a><br>
                   　　ゲームデータをアプリに内蔵すると、アプリをインストールした後に2回目以降は起動に失敗するバグを修正しました。<br>
                   　　Play Asset Delivery (PAD) の install-time Asset Pack に対応して、最大1GBまでのゲームデータをアプリに内蔵できるようにしました。また、これ以外のゲームデータの配布方法は廃止しました。</p>
               </tr>
               <tr>
                 <td>20220721</td>
-                <td><A HREF="onscripter_android_studio-20220721.zip">onscripter_android_studio-20220721.zip</a><br>
-                  　<A HREF="onscripter_android-20220721.tar.gz">onscripter_android-20220721.tar.gz</a><br>
+                <td><a href="onscripter_android_studio-20220721.zip">onscripter_android_studio-20220721.zip</a><br>
+                  　<a href="onscripter_android-20220721.tar.gz">onscripter_android-20220721.tar.gz</a><br>
                   　　メニューのプライバシーポリシーから、Intent を使って<a href="/privacy_policy.html">プライバシーポリシーのページ</a>を参照できるようにしました。
               </tr>
               <tr>
                 <td>20220123</td>
-                <td><A HREF="onscripter_android_studio-20220123.zip">onscripter_android_studio-20220123.zip</a><br>
-                  　<A HREF="onscripter_android-20220123.tar.gz">onscripter_android-20220123.tar.gz</a><br>
+                <td><a href="onscripter_android_studio-20220123.zip">onscripter_android_studio-20220123.zip</a><br>
+                  　<a href="onscripter_android-20220123.tar.gz">onscripter_android-20220123.tar.gz</a><br>
                   　　<a href="#distribution">ゲームデータの配布方法</a>のうち「パターン２：アプリに内蔵する方法」でアプリのアセットにゲームデータを配置した場合に、インストール時にゲームデータを展開せず、実行中はアセットから直接ファイルを読み込むようにしました。
               </tr>
               <tr>
                 <td>20220118</td>
-                <td><A HREF="onscripter_android_studio-20220118.zip">onscripter_android_studio-20220118.zip</a><br>
-                  　<A HREF="onscripter_android-20220118.tar.gz">onscripter_android-20220118.tar.gz</a><br>
+                <td><a href="onscripter_android_studio-20220118.zip">onscripter_android_studio-20220118.zip</a><br>
+                  　<a href="onscripter_android-20220118.tar.gz">onscripter_android-20220118.tar.gz</a><br>
                   　　compileSdkVersion, targetSdkVersion を 32 に変更しました。<br>
                   　　Google Play Licensing Library を Import module を使わずに app の下に直接組み込むようにしました。<br>
                   　　AndroidManifest.xml に android:exported=&quot;true&quot; を設定しました。<br>
@@ -1007,108 +1019,108 @@ onscripter_android/bin/ONScripter-release-unsigned.apk
               </tr>
               <tr>
                 <td>20200825</td>
-                <td><A HREF="onscripter_android_studio-20200825.zip">onscripter_android_studio-20200825.zip</a><br>
-                  　<A HREF="onscripter_android-20200825.tar.gz">onscripter_android-20200825.tar.gz</a><br>
+                <td><a href="onscripter_android_studio-20200825.zip">onscripter_android_studio-20200825.zip</a><br>
+                  　<a href="onscripter_android-20200825.tar.gz">onscripter_android-20200825.tar.gz</a><br>
                   　　起動時にディレクトリを選択するところで NullPointerException が発生することがある問題に一部対応しました。
               </tr>
               <tr>
                 <td>20200805</td>
-                <td><A HREF="onscripter_android_studio-20200805.zip">onscripter_android_studio-20200805.zip</a><br>
-                  　<A HREF="onscripter_android-20200805.tar.gz">onscripter_android-20200805.tar.gz</a><br>
+                <td><a href="onscripter_android_studio-20200805.zip">onscripter_android_studio-20200805.zip</a><br>
+                  　<a href="onscripter_android-20200805.tar.gz">onscripter_android-20200805.tar.gz</a><br>
                   　　マニフェストで requestLegacyExternalStorage を true に設定しました。
               </tr>
               <tr>
                 <td>20200722</td>
-                <td><A HREF="onscripter_android_studio-20200722.zip">onscripter_android_studio-20200722.zip</a><br>
-                  　<A HREF="onscripter_android-20200722.tar.gz">onscripter_android-20200722.tar.gz</a><br>
+                <td><a href="onscripter_android_studio-20200722.zip">onscripter_android_studio-20200722.zip</a><br>
+                  　<a href="onscripter_android-20200722.tar.gz">onscripter_android-20200722.tar.gz</a><br>
                   　　Target API を 29 に変更しました。<br>
                   　　HTTP 通信を有効にしました。
               </tr>
               <tr>
                 <td>20200223</td>
-                <td><A HREF="onscripter_android_studio-20200223.zip">onscripter_android_studio-20200223.zip</a><br>
-                  　<A HREF="onscripter_android-20200223.tar.gz">onscripter_android-20200223.tar.gz</a><br>
+                <td><a href="onscripter_android_studio-20200223.zip">onscripter_android_studio-20200223.zip</a><br>
+                  　<a href="onscripter_android-20200223.tar.gz">onscripter_android-20200223.tar.gz</a><br>
                   　　Lua の Android.mk に FORTIFY を抑制する以下のオプションを追加しました。
               </tr><!--<tr>
 <td>20190911</td>
-<td><A HREF="onscripter_android_studio-20190911.zip">onscripter_android_studio-20190911.zip</a><br>
-　<A HREF="onscripter_android-20190911.tar.gz">onscripter_android-20190911.tar.gz</a><br>
+<td><a href="onscripter_android_studio-20190911.zip">onscripter_android_studio-20190911.zip</a><br>
+　<a href="onscripter_android-20190911.tar.gz">onscripter_android-20190911.tar.gz</a><br>
 　　UTF-8で書かれたスクリプト pscript.dat の読み込みに対応しました。
 </tr><tr>
 <td>20190819</td>
-<td><A HREF="onscripter_android_studio-20190819.zip">onscripter_android_studio-20190819.zip</a><br>
+<td><a href="onscripter_android_studio-20190819.zip">onscripter_android_studio-20190819.zip</a><br>
 　　targetSdkVersion を 28 に変更しました。また、ARM のアーキテクチャや Android API の判定が不十分でビルド時や実行時に失敗する場合があったため修正しました。<br>
-　<A HREF="onscripter_android-20190819.tar.gz">onscripter_android-20190819.tar.gz</a><br>
+　<a href="onscripter_android-20190819.tar.gz">onscripter_android-20190819.tar.gz</a><br>
 　　Android Studio を使わないでビルドした場合に、Android 2.0 (armeabi) 以上で実行できるアプリを作成できるようにしました。
 </tr><tr>
 <td>20181128</td>
-<td><A HREF="onscripter_android_studio-20190818.zip">onscripter_android_studio-20190818.zip</a><br>
+<td><a href="onscripter_android_studio-20190818.zip">onscripter_android_studio-20190818.zip</a><br>
 　　targetSdkVersion が 24 以上でも Intent を利用して動画を再生できるようにしました。<br>
 　　32bit (armeabi-v7a) と 64bit (arm64-v8a) 兼用のアプリを生成するようにしました。
 </tr><tr>
 <td>20181030</td>
-<td><A HREF="onscripter_android_studio-20181030.zip">onscripter_android_studio-20181030.zip</a><br>
+<td><a href="onscripter_android_studio-20181030.zip">onscripter_android_studio-20181030.zip</a><br>
 　　targetSdkVersion を 26 に変更しました。
 </tr><tr>
 <td>20180409</td>
-<td><A HREF="onscripter_android_studio-20180409.zip">onscripter_android_studio-20180409.zip</a><br>
-　<A HREF="onscripter_android-20180409.tar.gz">onscripter_android-20180409.tar.gz</a><br>
+<td><a href="onscripter_android_studio-20180409.zip">onscripter_android_studio-20180409.zip</a><br>
+　<a href="onscripter_android-20180409.tar.gz">onscripter_android-20180409.tar.gz</a><br>
 　　ディレクトリの作成に対応しました。
 </tr><tr>
 <td>20180407</td>
-<td><A HREF="onscripter_android_studio-20180407.zip">onscripter_android_studio-20180407.zip</a><br>
-　<A HREF="onscripter_android-20180407.tar.gz">onscripter_android-20180407.tar.gz</a><br>
+<td><a href="onscripter_android_studio-20180407.zip">onscripter_android_studio-20180407.zip</a><br>
+　<a href="onscripter_android-20180407.tar.gz">onscripter_android-20180407.tar.gz</a><br>
 　　アプリに <a href="http://mplus-fonts.osdn.jp/">M+ フォント</a>で配布されている mplus-2m-medium.ttf を内蔵するようにしました。default.ttf がない場合は内蔵フォントを使用します。
 </tr><tr>
 <td>20180405</td>
-<td><A HREF="onscripter_android_studio-20180405.zip">onscripter_android_studio-20180405.zip</a><br>
-　<A HREF="onscripter_android-20180405.tar.gz">onscripter_android-20180405.tar.gz</a><br>
+<td><a href="onscripter_android_studio-20180405.zip">onscripter_android_studio-20180405.zip</a><br>
+　<a href="onscripter_android-20180405.tar.gz">onscripter_android-20180405.tar.gz</a><br>
 　　Android Studio 用のプロジェクトファイル（上）を公開
 </tr><tr>
 <td>20180321</td>
-<td><A HREF="onscripter_android-20180321.tar.gz">onscripter_android-20180321.tar.gz</a><br>
+<td><a href="onscripter_android-20180321.tar.gz">onscripter_android-20180321.tar.gz</a><br>
 　　jni/jpeg/jidctfst.S を修正
 </tr><tr>
 <td>20170816</td>
-<td><A HREF="onscripter_android-20170816.tar.gz">onscripter_android-20170816.tar.gz</a><br>
+<td><a href="onscripter_android-20170816.tar.gz">onscripter_android-20170816.tar.gz</a><br>
 　　NDK_TOOLCHAIN_VERSION := 4.9 を Application.mk に追加
 </tr><tr>
 <td>20161016</td>
-<td><A HREF="onscripter_android-20161016.tar.gz">onscripter_android-20161016.tar.gz</a><br>
+<td><a href="onscripter_android-20161016.tar.gz">onscripter_android-20161016.tar.gz</a><br>
 　　ボタンを画面の上下左右からフリックによって引き出す方式に変更
 </tr><tr>
 <td>20161005</td>
-<td><A HREF="onscripter_android-20161005.tar.gz">onscripter_android-20161005.tar.gz</a><br>
+<td><a href="onscripter_android-20161005.tar.gz">onscripter_android-20161005.tar.gz</a><br>
 　　Android 5.0 以降で外部 SD カードへの書き込みに対応<br>
 　　Lua の io_open 関数で書き込みモードで失敗した場合に stdout を返すように修正<br>
 　　SMPEG を導入（YUV Overlay による出力は無効化）</td>
 </tr><tr>
 <td>20150810</td>
-<td><A HREF="onscripter_android-20150810.tar.gz">onscripter_android-20150810.tar.gz</a><br>
+<td><a href="onscripter_android-20150810.tar.gz">onscripter_android-20150810.tar.gz</a><br>
 　　Android ART （5.0以降標準）対応 最新版 + SDL_mixer 修正</td>
 </tr><tr>
 <td>20140816</td>
-<td><A HREF="onscripter_android-20140816.tar.gz">onscripter_android-20140816.tar.gz</a><br>
+<td><a href="onscripter_android-20140816.tar.gz">onscripter_android-20140816.tar.gz</a><br>
 　　Android ART （5.0以降標準）対応 最新版</td>
 </tr><tr>
 <td>20140406</td>
-<td><A HREF="onscripter_android-20140406.tar.gz">onscripter_android-20140406.tar.gz</a><br>
+<td><a href="onscripter_android-20140406.tar.gz">onscripter_android-20140406.tar.gz</a><br>
 　　外部動画プレーヤーの呼び出し方を修正</td>
 </tr><tr>
 <td>20130202</td>
-<td><A HREF="onscripter_android-20130202.tar.gz">onscripter_android-20130202.tar.gz</a><br>
+<td><a href="onscripter_android-20130202.tar.gz">onscripter_android-20130202.tar.gz</a><br>
 　　libjpeg の jidctfst.S のバグを修正</td>
 </tr><tr>
 <td>20120319</td>
-<td><A HREF="onscripter_android-20120319.tar.gz">onscripter_android-20120319.tar.gz</a><br>
+<td><a href="onscripter_android-20120319.tar.gz">onscripter_android-20120319.tar.gz</a><br>
 　　色深度 16bit 版のスナップショット</td>
 </tr><tr>
 <td>20120122</td>
-<td><A HREF="onscripter_android-20120122.tar.gz">onscripter_android-20120122.tar.gz</a><br>
+<td><a href="onscripter_android-20120122.tar.gz">onscripter_android-20120122.tar.gz</a><br>
 　　暗号化 zip 対応版のスナップショット</td>
 </tr><tr>
 <td>20110815</td>
-<td><A HREF="onscripter_android-20110815.tar.gz">onscripter_android-20110815.tar.gz</a><br>
+<td><a href="onscripter_android-20110815.tar.gz">onscripter_android-20110815.tar.gz</a><br>
 　　暗号化 zip 非対応版のスナップショット</td>
 </tr>-->
             </table>
@@ -1209,7 +1221,7 @@ ONScripter/asset_pack/src/main/assets/bgm/bgm01.ogg
 
             ONScripter/app/src/main/AndroidManifest.xml:<br>
             <pre>
-      android:versionCode="<span style="color:red">20230323</span>"
+      android:versionCode="<span style="color:red">20230824</span>"
 </pre>
 
             <h4>パッケージ名の変更</h4>
@@ -1275,7 +1287,7 @@ Linux:
 
             ONScripter/app/src/main/res/values/strings.xml:<br>
             <pre>
-    &lt;string name="version"&gt;<span style="color:red">ONScripter 20230323\nStudio O.G.A. Ogapee</span>&lt;/bool&gt;
+    &lt;string name="version"&gt;<span style="color:red">ONScripter 20230824\nStudio O.G.A. Ogapee</span>&lt;/bool&gt;
 </pre>
 
             <p>メニューの「バージョン」が押されたときに表示する文字列を指定します。&quot;\n&quot;で改行されます。</p>

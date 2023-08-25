@@ -22,11 +22,11 @@
       Since: Feb. 6, 2002<br>
       <!--Last updated: Mar. 21, 2016 (BTS復旧)<br>-->
       <!--Last updated: Jan. 14, 2020 (ONScripter on Windows 更新)<br>-->
-      <!--Last updated: Aug. 16, 2022 (ソース更新)<br>-->
+      Last updated: Aug. 24, 2023 (ソース更新)<br>
       <!--Last updated: Jan. 3, 2022 (動作確認プラットフォームに <a href="/cgi-bin/kagemai/guest.cgi?id=364&project=onscripter&action=view_report">Haiku</a> を追加)<br>-->
       <!--Last updated: Jun. 29, 2014 (PNaCl バイナリパッケージ追加)<br>-->
       <!--Last updated: Jul. 12, 2009 (Experimental ソース更新)<br>-->
-      Last updated: Apr. 4, 2023 (派生プロジェクトを追加)<br>
+      <!--Last updated: Apr. 4, 2023 (派生プロジェクトを追加)<br>-->
     </div> <!-- header -->
 
     <div id="toc-container">
@@ -36,42 +36,46 @@
       <div id="toc">
 
         <ul>
-          <li> <a href="#INTRODUCTION">はじめに</a>
+          <li><a href="#INTRODUCTION">はじめに</a>
             <ul>
-              <li> <a href="#package-source">ソースパッケージ</a></li>
-              <li> <a href="#package-binary">バイナリパッケージ</a></li>
-              <li> <a href="#derived-projects">派生プロジェクト</a></li>
-              <li> <a href="#feature">特長</a>
-              <li> <a href="onscripter_devel.2023.html">開発日誌</a></li>
-              <li> <a href="/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=top">バグ報告</a></li>
-              <li> <a href="android/">ONScripter on Android</a>
-              <li> <a href="ios/">ONScripter on iOS</a>
-              <li> <a href="win/">ONScripter on Widows</a>
+              <li><a href="#source">ソースファイル</a></li>
+              <li><a href="#package-source">ソースパッケージ</a></li>
+              <li><a href="#package-binary">バイナリパッケージ</a></li>
+              <li><a href="#derived-projects">派生プロジェクト</a></li>
+              <li><a href="#feature">特長</a></li>
+              <li><a href="onscripter_devel.2023.html">開発日誌</a></li>
+              <li><a href="/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=top">バグ報告</a></li>
+              <li><a href="android/">ONScripter on Android</a></li>
+              <li><a href="ios/">ONScripter on iOS</a></li>
+              <li><a href="win/">ONScripter on Widows</a></li>
             </ul>
+          </li>
           <li> <a href="#howto">実行方法</a>
             <ul>
-              <li> <a href="#environment">動作環境</a>
-              <li> <a href="#compile">コンパイル</a>
-              <li> <a href="#run">実行</a>
+              <li><a href="#environment">動作環境</a>
+              <li><a href="#compile">コンパイル</a>
+              <li><a href="#run">実行</a>
             </ul>
-          <li> <a href="#todo">TODO</a>
-          <li> <a href="#misc">雑多なこと</a>
+          </li>
+          <li><a href="#todo">TODO</a></li>
+          <li><a href="#misc">雑多なこと</a>
             <ul>
-              <li> <a href="#keyboard-shortcut">キーボードショートカット</a>
-              <li> <a href="#option">起動オプション</a>
-              <li> <a href="#save">異なるプラットフォーム上で同時に遊ぶ方法</a>
-              <li> <a href="#registry">レジストリ読み込み</a>
-              <li> <a href="#dll">DLL 読み込み</a>
-              <li> <a href="#edit-mode">音量及び変数編集モード</a>
-              <li> <a href="#truetype-font">TrueType font による文字表示</a>
-              <li> <a href="#cd-audio-mapping">CD audio 演奏の振り替え</a>
-              <li> <a href="#midi">MIDI 演奏機能</a>
-              <li> <a href="#archive-compression">アーカイブ圧縮</a>
-              <li> <a href="#mp3-on-windows">Windows 上で MP3 の音がぶつぶつとぎれる問題</a>
-              <li> <a href="#enable-1byte">英語ノベル作成(Obsolete)</a>
-              <li> <a href="#memo">開発メモ</a>
+              <li><a href="#keyboard-shortcut">キーボードショートカット</a></li>
+              <li><a href="#option">起動オプション</a></li>
+              <li><a href="#save">異なるプラットフォーム上で同時に遊ぶ方法</a></li>
+              <li><a href="#registry">レジストリ読み込み</a></li>
+              <li><a href="#dll">DLL 読み込み</a></li>
+              <li><a href="#edit-mode">音量及び変数編集モード</a></li>
+              <li><a href="#truetype-font">TrueType font による文字表示</a></li>
+              <li><a href="#cd-audio-mapping">CD audio 演奏の振り替え</a></li>
+              <li><a href="#midi">MIDI 演奏機能</a></li>
+              <li><a href="#archive-compression">アーカイブ圧縮</a></li>
+              <li><a href="#mp3-on-windows">Windows 上で MP3 の音がぶつぶつとぎれる問題</a></li>
+              <li><a href="#enable-1byte">英語ノベル作成(Obsolete)</a></li>
+              <li><a href="#memo">開発メモ</a></li>
             </ul>
-          <li> <a href="index.html">戻る</a>
+          </li>
+          <li><a href="index.html">戻る</a></li>
         </ul>
 
       </div> <!-- toc -->
@@ -90,25 +94,31 @@
 
 
           <div class="sub-content">
-            <h3 id="package-source">ソースパッケージ</h3>
+            <h3 id="source">ソースファイル</h3>
+            <table>
+              <tr>
+                <td><a href="https://github.com/ogapee/onscripter">https://github.com/ogapee/onscripter</a></td>
+              </tr>
+            </table>
+          </div>
 
+          <div class="sub-content">
+            <h3 id="package-source">ソースパッケージ</h3>
             <table>
               <tr>
                 <td>最新版</td>
-                <td><a href="onscripter-20220816.tar.gz">onscripter-20220816.tar.gz</a></td>
+                <td><a href="onscripter-20230824.tar.gz">onscripter-20230284.tar.gz</a></td>
               </tr>
               <tr>
                 <td>旧版</td>
-                <td><a href="onscripter-20220123.tar.gz">onscripter-20220123.tar.gz</a></td>
+                <td><a href="onscripter-20220816.tar.gz">onscripter-20220816.tar.gz</a></td>
               </tr>
             </table>
             <!--  <li> <a href="onscripter-exp-20090712.tar.gz">onscripter-exp-20090712.tar.gz</a>(実験版, バグ修正)-->
-
           </div> <!-- sub-content -->
 
           <div class="sub-content">
-            <h3 id="package-binary">バイナリパッケージ (Android, Zaurus 以外は当方では動作未確認)</h3>
-
+            <h3 id="package-binary">バイナリパッケージ (Android 以外は当方では動作未確認)</h3>
             <table>
               <tr>
                 <th>プラットフォーム</th>
@@ -207,9 +217,7 @@
               <tr>
                 <td colspan=2>その他募集中</td>
               </tr>
-
             </table>
-
           </div> <!-- sub-content -->
 
           <div class="sub-content">
@@ -255,7 +263,7 @@
             <ul>
               <li> C++ 処理系
                 <ul>
-                  <li> g++ 8.3.0 (Linux)
+                  <li> g++ 10.2.1 (Linux)
                   <li> Visual Studio 2019 C++ (Windows)
                 </ul>
               <li> Unicode で指定された日本語 TTF フォント(ファイル名は default.ttf に)
@@ -341,59 +349,59 @@
                 <th>説明</th>
               </tr>
               <tr>
-                <td>space</td>
+                <td>Space</td>
                 <td>マウスの左クリックと同じだが、下にボタンがあってもボタン外を押したことになる</td>
               </tr>
               <tr>
-                <td>return</td>
+                <td>Enter</td>
                 <td>マウスの左クリックと同じ</td>
               </tr>
               <tr>
-                <td>escape</td>
+                <td>ESC</td>
                 <td>マウスの右クリックと同じ</td>
               </tr>
               <tr>
-                <td>p,k,↑</td>
+                <td>P, K, ↑</td>
                 <td>ボタン・文章選択時にマウスカーソルを前の選択項目に動かす</td>
               </tr>
               <tr>
-                <td>n,j,↓</td>
+                <td>N, J, ↓</td>
                 <td>ボタン・文章選択時にマウスカーソルを次の選択項目に動かす</td>
               </tr>
               <tr>
-                <td> s </td>
+                <td>S</td>
                 <td>次の選択肢まで飛ばすモードに切り替え</td>
               </tr>
               <tr>
-                <td> o </td>
+                <td>O</td>
                 <td>１ページ表示をするかしないかの切り替え</td>
               </tr>
               <tr>
-                <td>h,←</td>
+                <td>H, ←</td>
                 <td>マウスのホイールアップと同じ</td>
               </tr>
               <tr>
-                <td>l,→</td>
+                <td>L, →</td>
                 <td>マウスのホイールダウンと同じ</td>
               </tr>
               <tr>
-                <td> f </td>
-                <td>Full screen mode と Window mode の切り替え</td>
+                <td>F</td>
+                <td>Full-screen mode と Window mode の切り替え</td>
               </tr>
               <tr>
-                <td> a </td>
+                <td>A</td>
                 <td>automode もしくは mode_ext が設定されている場合に、読み上げモードに入る</td>
               </tr>
               <tr>
-                <td> z </td>
+                <td>Z</td>
                 <td>--edit オプションを指定して起動したときに、音量及び変数変更モードに入る</td>
               </tr>
               <tr>
-                <td> 1, 2, 3 </td>
+                <td>1, 2, 3</td>
                 <td>文字の描画速度を変更</td>
               </tr>
               <tr>
-                <td> Shift + q </td>
+                <td>Shift + q</td>
                 <td>終了（end 命令を発行）</td>
               </tr>
             </table>
@@ -520,14 +528,7 @@
               </tr>
             </table>
 
-            <p>セーブファイルのフォーマットは NScripter (ONScripter) がバージョン
-              アップするときに変更されることがあります。そのため、ONScripter の出力
-              するセーブファイルには、先頭にセーブファイルのバージョン番号が入ってい
-              ます。また、sav というディレクトリがある場合には、バージョン番号なしの
-              セーブファイルを sav 以下にも同時に作成します。sav 以下に生成されるセー
-              ブファイルは、最新の NScripter が生成するセーブファイルと互換性があり
-              ます。なお、セーブファイルのバージョン番号は ONScripter のバージョンと
-              は異なります。</p>
+            <p>セーブファイルのフォーマットは NScripter (ONScripter) がバージョンアップするときに変更されることがあります。そのため、ONScripter が出力するセーブファイルには、先頭にセーブファイルのバージョン番号が入っています。また、sav というディレクトリがある場合には、バージョン番号なしのセーブファイルを sav 以下にも同時に作成します。sav 以下に生成されるセーブファイルは、最新の NScripter が生成するセーブファイルと互換性があります。なお、セーブファイルのバージョン番号は ONScripter のバージョンとは異なります。</p>
 
             <p>ONScripter は、バージョン番号ありの任意のセーブファイルか、もしくは最新のフォーマットでバージョン番号なしのセーブファイルを読み込むことができます。</p>
 
@@ -567,13 +568,9 @@
           <div class="sub-content">
             <h3 id="registry">レジストリ読み込み</h3>
 
-            <p>getreg 命令は Windows の registry から指定されたデータを取得し
-              ます。ONScripter では、テキストファイル registry.txt にデータを記述し、
-              これを読み込むことでこの機能を実現します。</p>
+            <p>getreg 命令は Windows の registry から指定されたデータを取得します。ONScripter では、テキストファイル registry.txt にデータを記述し、これを読み込むことでこの機能を実現します。</p>
 
-            <p>registry.txt の書式は次の通りです。大文字・小文字は区別されます。ま
-              た余計なスペース等を入れないようにして下さい。２バイト文字が使われてい
-              る場合、文字コードが Shift JIS になることに注意してください。</p>
+            <p>registry.txt の書式は次の通りです。大文字・小文字は区別されます。また余計なスペース等を入れないようにして下さい。２バイト文字が使われている場合、文字コードが Shift JIS になることに注意してください。</p>
 
             <pre>
 [getreg の２番目の引数（ただし前後の""は除く）]
@@ -591,9 +588,7 @@ getreg の３番目の引数 = 比較対象文字列（前後の""は必要で�
 "Upload log file"="c:\nomad_up.log"
 </pre>
 
-            <p>ONScripter 起動時に --registry オプションを指定することで、
-              registry.txt を一カ所にまとめておくことができます。--registry を指定し
-              ない場合は、現在のディレクトリの registry.txt を読みにいきます。</p>
+            <p>ONScripter 起動時に --registry オプションを指定することで、 registry.txt を一カ所にまとめておくことができます。--registry を指定しない場合は、現在のディレクトリの registry.txt を読みにいきます。</p>
 
 
           </div> <!-- sub-content -->
@@ -602,15 +597,9 @@ getreg の３番目の引数 = 比較対象文字列（前後の""は必要で�
           <div class="sub-content">
             <h3 id="dll">DLL 読み込み</h3>
 
-            <p>exec_dll 命令は Windows 上で実行可能な DLL (Dynamic Link
-              Library) を実行します。ONScripter では、テキストファイル dll.txt に
-              DLL 名とその戻値の対応を記述し、これを読み込むことでこの機能を実現しま
-              す。従って、実際に DLL が実行されるわけではなく、また戻値は固定になり
-              ます。</p>
+            <p>exec_dll 命令は Windows 上で実行可能な DLL (Dynamic Link Library) を実行します。ONScripter では、テキストファイル dll.txt に DLL 名とその戻値の対応を記述し、これを読み込むことでこの機能を実現します。従って、実際に DLL が実行されるわけではなく、また戻値は固定になります。</p>
 
-            <p>dll.txt の書式は次の通りです。大文字・小文字は区別されます。また余
-              計なスペース等を入れないようにして下さい。２バイト文字が使われている場
-              合、文字コードが Shift JIS になることに注意してください。</p>
+            <p>dll.txt の書式は次の通りです。大文字・小文字は区別されます。また余計なスペース等を入れないようにして下さい。２バイト文字が使われている場合、文字コードが Shift JIS になることに注意してください。</p>
 
             <pre>
 [DLL 名]
@@ -630,9 +619,7 @@ str = "StudioOGA"
 ret = 2
 </pre>
 
-            <p>ONScripter 起動時に --dll オプションを指定することで、dll.txt を一
-              カ所にまとめておくことができます。--dll を指定しない場合は、現在のディ
-              レクトリの dll.txt を読みにいきます。</p>
+            <p>ONScripter 起動時に --dll オプションを指定することで、dll.txt を一カ所にまとめておくことができます。--dll を指定しない場合は、現在のディレクトリの dll.txt を読みにいきます。</p>
 
           </div> <!-- sub-content -->
 
@@ -650,16 +637,11 @@ ret = 2
 [EDIT MODE]  MP3 vol (m)  SE vol (s)  Voice vol (v)  Numeric variable (n)
 </pre>
 
-            <p class="noindent">と表示されるはずです。この状態で、m, s, v, n のい
-              ずれかのキーを押すことで、それぞれの値を変更するサブモードに入ります。
-              また、Esc キーを押すことによってモードを抜けることができます。</p>
+            <p class="noindent">と表示されるはずです。この状態で、M, S, V, N のいずれかのキーを押すことで、それぞれの値を変更するサブモードに入ります。また、Esc キーを押すことによってモードを抜けることができます。</p>
 
             <p>数字変数の場合は、値変更の前にどの変数を変更するのかを選択します。</p>
 
-            <p>値変更サブモードでは、0 から 9 までの数字と -, BackSpace, Esc, リター
-              ンキーが使えます。- キーは、対象が数字変数でかつ数字が0の時のみ有効に
-              なります。既に数字が入力されている場合には、一旦 BackSpace で数字を全
-              部消してから - キーを押してください。</p>
+            <p>値変更サブモードでは、0 から 9 までの数字と -, BackSpace, Esc, Enter キーが使えます。- キーは、対象が数字変数でかつ数字が0の時のみ有効になります。既に数字が入力されている場合には、一旦 BackSpace で数字を全部消してから - キーを押してください。</p>
 
           </div> <!-- sub-content -->
 
@@ -693,21 +675,17 @@ ret = 2
           <div class="sub-content">
             <h3 id="cd-audio-mapping">CD audio 演奏の振り替え</h3>
 
-            <p>ゲームのスクリプトがある場所に cd というディレクトリを作成し、そこに以下の名前で音楽ファイルを置きます。<br>
-              cd/track01.xxx<br>
-              cd/track02.xxx<br>
-              cd/track03.xxx<br>
-              ...<br>
-              cd/track14.xxx<br>
-              ...<br>
-              音楽ファイルのフォーマットは mp3, ogg, wav 形式に対応しています。上の
-              xxxは、使用するフォーマットに合わせて変更してください。</p>
+            <p>ゲームのスクリプトがある場所に cd というディレクトリを作成し、そこに以下の名前で音楽ファイルを置きます。<br />
+              cd/track01.xxx<br />
+              cd/track02.xxx<br />
+              cd/track03.xxx<br />
+              ...<br />
+              cd/track14.xxx<br />
+              ...<br />
+              音楽ファイルのフォーマットは mp3, ogg, wav 形式に対応しています。上のxxxは、使用するフォーマットに合わせて変更してください。</p>
 
             <p>スクリプト中の CD audio の１曲目を演奏する命令は、
-              &quot;track01.mp3&quot; (mp3 形式の場合)を演奏するように変更されます。
-              &quot;--cdaudio&quot;オプションが指定されていないかぎり、これがデフォ
-              ルトの挙動となります。音楽ファイルが見つからない場合は、演奏せずに続行
-              します。</p>
+              &quot;track01.mp3&quot; (mp3 形式の場合)を演奏するように変更されます。&quot;--cdaudio&quot;オプションが指定されていないかぎり、これがデフォルトの挙動となります。音楽ファイルが見つからない場合は、演奏せずに続行します。</p>
 
           </div> <!-- sub-content -->
 
@@ -715,7 +693,7 @@ ret = 2
           <div class="sub-content">
             <h3 id="midi">MIDI 演奏機能</h3>
 
-            <p>MIDI は SDL_mixer の機能を使って演奏します。<br>
+            <p>MIDI は SDL_mixer の機能を使って演奏します。<br />
               この時、現在のディレクトリに tmp.mus という一時ファイルを作ります。美しくないですが、SDL_mixer の MIDI 読み込み部がファイルからの読み込みしかサポートしていないためやむをえません。</p>
 
             <dl>
@@ -737,11 +715,7 @@ ret = 2
           <div class="sub-content">
             <h3 id="archive-compression">アーカイブ圧縮</h3>
 
-            <p>昔のZaurus (320x240) や PSP (360x270) などは画面の大きさが小さいた
-              め、あらかじめアーカイブ中の画像ファイルを画面サイズに合わせて小さくし
-              ておくことにより、アーカイブサイズを縮小し、少ない記憶デバイスを有効活
-              用することができます。なお、SPB 圧縮の画像は、後述の -e オプションを指
-              定しない場合 BMP 形式として格納されます。</p>
+            <p>昔のZaurus (320x240) や PSP (360x270) などは画面の大きさが小さいため、あらかじめアーカイブ中の画像ファイルを画面サイズに合わせて小さくしておくことにより、アーカイブサイズを縮小し、少ない記憶デバイスを有効活用することができます。なお、SPB 圧縮の画像は、後述の -e オプションを指定しない場合 BMP 形式として格納されます。</p>
 
             <h4>使い方</h4>
 
@@ -752,21 +726,18 @@ ret = 2
 
             <p>変換元画面幅は 640 か 800 のいずれかを指定してください。</p>
 
-            <p>変換先画面幅は 176(iPod), 320(QVGA), 360(PSP), 384(PSP), 640(VGA)
-              などが指定できます。</p>
+            <p>変換先画面幅は 176(iPod), 320(QVGA), 360(PSP), 384(PSP), 640(VGA)などが指定できます。</p>
 
             <h4>使用例</h4>
 
-            <p>画面のサイズが 640x480 で拡張子が sar のアーカイブを 320x240 にする
-              場合</p>
+            <p>画面のサイズが 640x480 で拡張子が sar のアーカイブを 320x240 にする場合</p>
 
             <pre>
 &gt; sarconv 640 320 arc.sar zaurus_dir/arc.sar
 ...
 </pre>
 
-            <p>画面のサイズが 800x600 で拡張子が nsa のアーカイブ（バージョン１）
-              を 320x240 にする場合</p>
+            <p>画面のサイズが 800x600 で拡張子が nsa のアーカイブ（バージョン１）を 320x240 にする場合</p>
 
             <pre>
 &gt; nsaconv [-e] 800 320 arc.nsa zaurus_dir/arc.nsa
@@ -791,10 +762,8 @@ ret = 2
 
             <p>-q オプションで jpeg で圧縮する際の品質（０～１００）を指定することができます。小さい値を指定すると、品質が悪くなりますが、圧縮後のサイズが小さくなります。デフォルトとは７５です。</p>
 
-            <p>サイズを小さくしたアーカイブを使うときは、onscripter に --disable-rescale オプションを指定してください。<br>
-
-              なお、Linux 等でも、-DPDA をつけてコンパイルすることにより、320x240 画
-              面でゲームを実行することができます。</p>
+            <p>サイズを小さくしたアーカイブを使うときは、onscripter に --disable-rescale オプションを指定してください。<br />
+              なお、Linux 等でも、-DPDA をつけてコンパイルすることにより、320x240 画面でゲームを実行することができます。</p>
 
           </div> <!-- sub-content -->
 
@@ -805,10 +774,8 @@ ret = 2
             <p>Windows でコンパイル済の SMPEG のバイナリを持ってくると、MP3 によっては音がぶつぶつとぎれて演奏されます。これは、SMPEG を MSVC でコンパイルする時の最適化の問題で、下記の通りに MSVC の global optimization を一部抑制する指定をし、自分でコンパイルすることで解決できます。</p>
 
 
-            <p>修正するファイル: audio/mpeglayer3.cpp<br>
-
-              関数 layer3reorderandantialias の前後に、下のように #pragma 指定を追加
-              する。</p>
+            <p>修正するファイル: audio/mpeglayer3.cpp<br />
+              関数 layer3reorderandantialias の前後に、下のように #pragma 指定を追加する。</p>
 
             <PRE>
 #pragma optimize( "g", off )
@@ -826,27 +793,13 @@ void MPEGaudio::layer3reorderandantialias(int ch,int gr,
           <div class="sub-content">
             <h3 id="enable-1byte">英語ノベル作成(Obsolete)</h3>
 
-            <p>これは Chend さん(chendo[at]gmail.com)からの要望に基づく ONScripter
-              独自の拡張です。これまで、仕様の提案やパッチなど多くの協力をしていただ
-              きました。</p>
+            <p>これは Chend さん(chendo[at]gmail.com)からの要望に基づく ONScripter独自の拡張です。これまで、仕様の提案やパッチなど多くの協力をしていただきました。</p>
 
-            <p>コンパイル時に ENABLE_1BYTE_CHAR を定義することで、`(back quote) 以
-              降行末もしくは別の ` までを、1byte 文字で記述されたテキスト文とみなし
-              て表示するようにします。この間では半角スペースが表示として有効になりま
-              すが、テキスト内の変数表示は無効になり、また色・時間指定も開始位置によっ
-              ては無効になります。テキスト途中で色を変える場合は、/ で行を分けるなど
-              してください。ただし、クリック待ち(@)改ページ待ち(\)直後の強制クリック
-              文字を無視(_)は有効です。</p>
+            <p>コンパイル時に ENABLE_1BYTE_CHAR を定義することで、`(back quote) 以降行末もしくは別の ` までを、1byte 文字で記述されたテキスト文とみなして表示するようにします。この間では半角スペースが表示として有効になりますが、テキスト内の変数表示は無効になり、また色・時間指定も開始位置によっては無効になります。テキスト途中で色を変える場合は、/ で行を分けるなどしてください。ただし、クリック待ち(@)改ページ待ち(\)直後の強制クリック文字を無視(_)は有効です。</p>
 
-            <p>将来本家で ` に何か機能を割り振った場合には、削除もしくは別の文字に
-              変更される可能性があります。現状のように ENABLE_1BYTE_CHAR の指定の有
-              無で使い分けられるようにするかもしれませんが、保証の限りではありません。
-            </p>
+            <p>将来本家で ` に何か機能を割り振った場合には、削除もしくは別の文字に変更される可能性があります。現状のように ENABLE_1BYTE_CHAR の指定の有無で使い分けられるようにするかもしれませんが、保証の限りではありません。</p>
 
-            <p>また、コンパイル時に ENABLE_1BYTE_CHAR と合わせて FORCE_1BYTE_CHAR
-              を指定すると、全ての表示を半角にすることが可能になります。具体的には、
-              上記に加えて、右クリックメニューの表示が英語になり、また数字変数の表示
-              が半角になります。</p>
+            <p>また、コンパイル時に ENABLE_1BYTE_CHAR と合わせて FORCE_1BYTE_CHARを指定すると、全ての表示を半角にすることが可能になります。具体的には、上記に加えて、右クリックメニューの表示が英語になり、また数字変数の表示が半角になります。</p>
 
             <p>以下にスクリプト例を書きます。</p>
 

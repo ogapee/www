@@ -1,0 +1,16 @@
+{
+    "grammarly.files.include": [
+        "**/readme.md",
+        "**/README.md",
+        "**/*.txt",
+        "**/*.html",
+        "**/*.html.en"
+    ],
+    "files.associations": {
+        "*.html.ja": "html",
+        "*.html.en": "html"
+    } /*,
+    "files.associations": {
+        "*.html": "txt"
+    }*/
+}
