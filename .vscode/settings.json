@@ -6,6 +6,14 @@
         "**/*.html",
         "**/*.html.en"
     ],
+    "files.exclude": {
+        "**/*.png": true,
+        "**/*.diff": true,
+        "**/*.zip": true,
+        "**/*.tar.gz": true,
+        "**/*.apk": true,
+        "**/*.aab": true
+    },
     "files.associations": {
         "*.html.ja": "html",
         "*.html.en": "html"

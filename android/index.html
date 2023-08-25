@@ -18,9 +18,9 @@
 
       Since: May 30, 2010<br>
       <!--Last updated: Nov. 5, 2017 ENABLE_1BYTE_CHAR と FORCE_1BYTE_CHAR を有効にした英語ゲーム用アプリを更新<br>-->
-      <!--Last updated: Jan. 15, 2022 アプリを更新<br>-->
+      Last updated: Aug. 25, 2023 アプリを更新<br />
       <!--Last updated: Jul. 5, 2020 パターン１：Google Play からダウンロードする方法を修正<br>-->
-      Last updated: Aug. 24, 2023 <a href="#sdk">SDK</a> とアプリを更新<br>
+      <!--Last updated: Aug. 24, 2023 <a href="#sdk">SDK</a> とアプリを更新<br>-->
       <!--Last updated: Jan. 18, 2022 <a href="#sdk">SDK</a> を更新<br>-->
       <!--Last updated: Aug. 17, 2014 Google Play でアプリを公開<br>-->
       <!--Last updated: Jun. 14, 2020 Android Studio でのアプリの作成方法 更新<br>-->
@@ -33,7 +33,6 @@
       <h3>目次</h3>
 
       <div id="toc">
-
         <ul>
           <li><a href="#introduction">はじめに</a></li>
           <li><a href="#usage">アプリの使用方法</a>
@@ -50,7 +49,6 @@
             <ul>
               <li><a href="#flow">開発の流れ</a></li>
               <li><a href="#develop-as">Android Studio でのアプリの作成方法</a></li>
-              <!--<li><s><a href="#develop-win">Windows でのアプリの作成方法</a></s></li>-->
               <!--<li><s><a href="#develop-linux">Linux でのアプリの作成方法</a></s></li>-->
               <li><a href="#sdk">ライブラリと周辺プログラム一式 (SDK)</a></li>
               <li><a href="#distribution">ゲームデータの配布方法</a></li>
@@ -62,7 +60,6 @@
           <li><a href="android_fb.html">フレームバッファに直接アクセスするバイナリ (Obsolete)</a></li>
           <li><a href="../onscripter.html">戻る</a></li>
         </ul>
-
       </div> <!-- toc -->
     </div> <!-- toc-container -->
 
@@ -83,10 +80,10 @@
             </tr>
             <tr>
               <td rowspan=4>日本語</td>
-              <td><a href="https://play.google.com/store/apps/details?id=jp.ogapee.onscripter.release">ONScripter</a> 20230824 in Google Play</td>
+              <td><a href="https://play.google.com/store/apps/details?id=jp.ogapee.onscripter.release">ONScripter</a> 20230825 in Google Play</td>
             </tr>
             <tr>
-              <td><a href="ONScripter-20230824-debug.apk">ONScripter-20230824-debug.apk</a> （非推奨）</td>
+              <td><a href="ONScripter-20230825-debug.apk">ONScripter-20230825-debug.apk</a> （非推奨）</td>
             </tr>
             <tr>
               <td><a href="ONScripter-20190819-armeabi-debug.apk">ONScripter-20190819-armeabi-debug.apk</a> （Android 2.0 以降で動作可、非推奨）</td>
@@ -214,8 +211,6 @@
               <th><a href="noesis_20110825b_small.png"><img src="noesis_20110825b_small.png" alt="NOeSIS" width=240></a></th>
             </tr>
           </table>
-
-
         </div> <!-- content -->
 
 
@@ -230,12 +225,6 @@
             <p>Google Play で ONScripter を検索してインストールしてください。</p>
 
             <p>当サイトで配布しているアプリをインストールする場合は、事前に Android 端末の「設定」→「セキュリティ」→「デバイス管理」の不明な提供元にチェックを入れ、Play ストア以外からのアプリのインストールを許可しておきます。次いで、Android 端末のウェブブラウザでこのページの一番上のアプリをクリックし、ダウンロード後にインストールしてください。</p>
-
-            <!--<p> 本体外からインストールする場合は、USB ケーブルで本体と接続した後、コマンドプロンプトから以下のようにインストールしてください。</p>
-
-<pre>
-adb install -r ONScripter-xxxxxxxx-debug.apk
-</pre>-->
 
             <p>インストールに成功すると ONScripter のアイコン <img src="/ons.png" alt="ONS" width=32> がメニューに追加されます。</p>
 
@@ -478,7 +467,7 @@ adb install -r ONScripter-xxxxxxxx-debug.apk
 
               <li> <a href="#sdk">ライブラリと周辺プログラム一式 (SDK)</a>から onscripter_android-xxxxxxxx.zip をダウンロードして c:\src\ に展開します（xxxxxxxx にはバージョン番号が入ります）。
                 <pre>
-c:\src\ONScripter\...
+c:\src\onscripter_android-xxxxxxxx\...
 </pre>
 
               <li> <a href="../onscripter.html">ONScripter のページ</a>から最新の ONScripter をダウンロードして onscripter_android-xxxxxxxx\app\src\main\cpp\application\onscripter-yyyyyyyy に展開します（yyyyyyyy にはバージョン番号が入ります）。
@@ -495,7 +484,7 @@ c:\src\onscripter_android-xxxxxxxx\app\src\main\cpp\application\onscripter-yyyyy
             <p>必要に応じて<a href="#distribution">ゲームデータの配布方法</a>・<a href="#customize">カスタマイズ</a>を参考に設定を行った上で、以下の手順に従ってアプリを作成します。</p>
 
             <ol>
-              <li>Android Studio を起動して c:\src\ONScripter を開きます。<!--初回に以下のダイアログメッセージが表示される場合は「OK」を押してください。
+              <li>Android Studio を起動して c:\src\onscripter_android-xxxxxxxx を開きます。<!--初回に以下のダイアログメッセージが表示される場合は「OK」を押してください。
   
 <pre>
 Gradle settings for this project are not configured yet.
@@ -510,11 +499,6 @@ C:\Program Files\Android\Android Studio\gradle\gradle-5.1.1
 Minimum supported Gradle version is 7.0.2. Current version is 6.8.
 「File」→「Project Structure」→「Gradle Version」 を 7.3.3 などに設定してください。
 
-
-<li>メニューバーの「File」→「New」→「Import Module」を選択し、以下のファイルを選択して読み込んでください。ただし、以下の赤字の箇所は、Windows のアカウント名で読み換えてください。また、途中で表示される Module name の項目はデフォルトの library のままにしてください。
-<pre>
-C:\Users\<span style="color:red;">username</span>\AppData\Local\Android\Sdk\extras\google\market_licensing\library
-</pre>
 
 <li>以下のエラーメッセージが表示される場合は、Set ndk.dir in local.properties to ... をクリックしてください。
 <pre>
@@ -532,16 +516,6 @@ Compatible side by side NDK version was not found. Default is 20.0.5594570.
 c:\src\ONScripter\local.properties （ファイルが存在しない場合は新規に作成してください）に手動で以下の行を追加してください。赤字の箇所は、自身の環境に合わせて変更してください。
 <pre>
 ndk.dir=C\:\\Users\\<span style="color:red;">username</span>\\AppData\\Local\\Android\\Sdk\\ndk\\<span style="color:red;">20.0.5594570</span>
-</pre>-->
-
-                <!--
-<li>Android Studio 4.0 以降では以下のエラーメッセージが表示されます。
-<pre>
-Project with path ':library' could not be found in project ':app'.
-</pre>
-c:\src\ONScripter\app\bundle.gradle の以下の行を削除してください。
-<pre>
-    implementation project(':library')
 </pre>-->
 
                 <!--
@@ -593,10 +567,10 @@ A problem occurred evaluating project ':app'.
 
                 <pre>
 A problem occurred configuring project ':app'.
-> SDK location not found. Define a valid SDK location with an ANDROID_HOME environment variable or by setting the sdk.dir path in your project's local properties file at 'C:\src\ONScripter\local.properties'.
+> SDK location not found. Define a valid SDK location with an ANDROID_HOME environment variable or by setting the sdk.dir path in your project's local properties file at 'C:\src\onscripter_android-xxxxxxxx\local.properties'.
 </pre>
 
-                C:\src\ONScripter\local.properties を開いて以下の赤字の箇所を Windows のアカウント名に変更してください。
+                C:\src\onscripter_android-xxxxxxxx\local.properties を開いて以下の赤字の箇所を Windows のアカウント名に変更してください。
                 <pre>
 sdk.dir=C\:\\Users\\<span style="color:red">username</span>\\AppData\\Local\\Android\\sdk
 </pre>
@@ -618,7 +592,7 @@ sdk.dir=C\:\\Users\\<span style="color:red">username</span>\\AppData\\Local\\And
             <ol>
               <li>「Build」→「Make Project」を実行してビルドします。ビルドに成功すると、以下の場所にアプリが生成されます。
                 <pre>
-c:\src\ONScripter\app\build\outputs\apk\debug\app-debug.apk
+c:\src\onscripter_android-xxxxxxxx\app\build\outputs\apk\debug\app-debug.apk
 </pre>
             </ol>
 
@@ -628,177 +602,16 @@ c:\src\ONScripter\app\build\outputs\apk\debug\app-debug.apk
               <li>IDE の左にある 「Build Variants」を選択し、app の Active Build Variant を release に変更します。
               <li>「Build」→「Make Project」を実行してビルドします。ビルドに成功すると、以下の場所にアプリが生成されます。
                 <pre>
-c:\src\ONScripter\app\build\outputs\apk\release\app-release-unsigned.apk
+c:\src\onscripter_android-xxxxxxxx\app\build\outputs\apk\release\app-release-unsigned.apk
 </pre>
               <li>「Build」→「Generate Signed Bundle/APK」→「Android App Bundle」を選択してアプリに署名をします。Key がない場合は「Create new」を押して Key を作成します。途中の Build Variants の項は release を選択してください。署名に成功すると、以下の場所に署名済みのアプリが生成されます。
                 <pre>
-c:\src\ONScripter\app\release\app-release.aab
+c:\src\onscripter_android-xxxxxxxx\app\release\app-release.aab
 </pre>
             </ol>
 
           </div>
-          <!--
-<div class="sub-content">
-<h3 id="develop-win">Windows でのアプリの作成方法</h3>
 
-<p><span style="color:red;">この方法は以前の方法で、現在はサポートしていません。</span></p>
-
-<h4>ソフトウェアの導入</h4>
-
-<p>長方形内のパスは例です。必ずしもこのとおりにする必要はありません。ただし、ディレクトリ名やファイル名に 2byte 文字（漢字やかな）やスペースが含まれないようにしてください。</p>
-
-<p style="text-indent:0">※<a href="http://hoshimi12.com/?p=3505">ONScripter on Androidの使い方自分用メモ</a>もぜひ参考にしてください</p>
-
-<ol>
-<li> <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java SE Downloads</a> の JDK DOWNLOAD を選択し、Java SE Development Kit 8 (64bit版 Windows の場合は jdk-8u162-windows-x64.exe など) をインストールしてください。
-<pre>
-C:\Program Files\Java\jdk1.8.0_162\...
-</pre>
-<ul>
-<li> 環境変数 JAVA_HOME を設定します。 (例 C:\Program Files\Java\jdk1.8.0_162)
-</ul>
-
-<li> <a href="http://developer.android.com/studio/index.html">Android Studio</a>の一番下の「コマンドラインツールのみ入手する」から入手できる最新の SDK Tools では、25.3.0 以降から android コマンドで update を指定できなくなってしまったため、25.2.5 を使用します。<a href="https://dl-ssl.google.com/android/repository/tools_r25.2.5-windows.zip">tools_r25.2.5-windows.zip</a>をダウンロードして以下の場所に展開します。
-<pre>
-c:\src\android-sdk\...
-</pre>
-また SDK tools インストール後に、c:\src\android-sdk\tools\android.bat を起動し、</span>以下のパッケージをインストールしてください。
-<ul>
-<li> Tools
-<ul>
-<li> Android SDK Tools (25.2.5)
-<li> Android SDK Platform-tools (29.0.2)
-<li> Android SDK Build-tools (29.0.2)
-</ul>
-<li> Android 9.0 (API 28)
-<ul>
-<li> SDK Platform
-</ul>
-<li> Extras
-<ul>
-<li> Android Support Repository (47)
-<li> Google Play Licensing Library
-</ul>
-</ul>
-
-<li> <a href="http://developer.android.com/ndk/downloads/index.html">NDK Downloads</a> から最新の NDK (例 android-ndk-r16b-windows-x86_64.zip) をダウンロードして c:\src\ に展開します。
-<pre>
-c:\src\android-ndk-r16b\...
-</pre>
-
-<li> <a href="#sdk">ライブラリと周辺プログラム一式 (SDK)</a>から onscripter_android-xxxxxxxx.tar.gz をダウンロードして以下の場所に展開します（xxxxxxxx にはバージョン番号が入ります）。
-<pre>
-c:\src\onscripter_android\jni\...
-c:\src\onscripter_android\src\...
-c:\src\onscripter_android\...
-</pre>
-<li> <a href="../onscripter.html">ONScripter のページ</a>から最新の ONScripter をダウンロードして onscripter_android\jni\application\onscripter-xxxxxxxx に展開します（xxxxxxxx にはバージョン番号が入ります）。
-<pre>
-c:\src\onscripter_android\jni\application\onscripter-xxxxxxxx\ONScripter.h
-c:\src\onscripter_android\jni\application\onscripter-xxxxxxxx\ONScripter.cpp
-c:\src\onscripter_android\jni\application\onscripter-xxxxxxxx\...
-</pre>
-
-<li> <a href="http://ant.apache.org">Apache Ant</a> の Binary Distributions からバイナリ(例 apache-ant-1.10.2-bin.zip)をダウンロードして適当な場所に展開します。
-<pre>
-c:\src\apache-ant-1.10.2-bin\...
-</pre>
-</ol>
-
-<h4>アプリの作成</h4>
-
-<p>必要に応じて<a href="#distribution">ゲームデータの配布方法</a>・<a href="#customize">カスタマイズ</a>を参考に設定を行った上で、コマンドプロンプトを立ち上げ、以降の手順に従ってアプリを作成してください。実行ファイルのパスは環境に合わせて適宜変更してください。</p>
-
-<p>まず、Google Play Licesing package ライブラリの設定をします（最初に１度だけ実行します）。</p>
-<pre>
-&gt; cd c:\src\android-sdk\extras\google\market_licensing\library
-&gt; c:\src\android-sdk\tools\android.bat update project -p . --target android-28
-</pre>
-<p style="text-indent:0"><span style="color:red">注意:</span>先頭の &gt; はプロンプトなので入力しません。また、&gt; から（もしあれば次の &gt; まで）のコマンドは複数行に分けず１行で入力してください。以降も同じです。</p>
-
-<p>また、以下のようにして android.support.v4.provider.DocumentFile の Java バイトコードを含む classes.jar を aar ファイルから抽出してコピーします（最初に１度だけ実行します）。</p>
-
-<ol>
-  <li> c:\src\android-sdk\extras\android\m2repository\com\android\support\support-v4\24.1.1\support-v4-24.1.1.aar を c:\src にコピー
-  <li> ファイル名を c:\src\support-v4-24.1.1.zip に変更し、エクスプローラ等でダブルクリックして中身を展開
-  <li> classes.jar を classes_support.jar に名前を変更して c:\src\onscripter_android\libs にコピー
-</ol>
-</pre>
-
-<p>さらに、以下のようにして android.support.appcompat-v7v4.provider.DocumentFile の Java バイトコードを含む classes.jar を aar ファイルから抽出してコピーします（最初に１度だけ実行します）。</p>
-
-<ol>
-  <li> c:\src\android-sdk\extras\android\m2repository\com\android\support\appcompat-v7\24.1.1\appcompat-v7-24.1.1.aar を c:\src にコピー
-  <li> ファイル名を c:\src\appcompat-v7-24.1.1.zip に変更し、エクスプローラ等でダブルクリックして中身を展開
-  <li> classes.jar を classes_appcompat.jar に名前を変更して c:\src\onscripter_android\libs にコピー
-</ol>
-
-<p>さらに、以下のようにして org.apache.http.legacy.jar をコピーします（最初に１度だけ実行します）。</p>
-<ol>
-  <li> c:\src\android-sdk\platforms\android-28\optional\org.apache.http.legacy.jar を c:\src\android-sdk\extras\google\market_licensing\library\libs\ にコピー
-</ol>
-
-<h5>デバッグ版</h5>
-
-<pre>
-&gt; cd c:\src\onscripter_android
-&gt; ..\android-ndk-r16b\build\ndk-build.cmd
-&gt; ..\android-sdk\tools\android.bat update project -p . --library ..\android-sdk\extras\google\market_licensing\library
-&gt; ..\apache-ant-1.10.2\bin\ant clean
-&gt; ..\apache-ant-1.10.2\bin\ant debug
-</pre>
-<p style="text-indent:0"><span style="color:red">注意：</span>android.bat の --library の指定は絶対パスではなく相対パスにしてください。また、../ は１つ上のディレクトリを指します。</p>
-
-<p>成功すると、以下の場所に debug キーで署名されたアプリが作成されます。このアプリは実機にインストールして実行できますが、Google Play では公開できません。</p>
-
-<pre>
-onscripter_android\bin\ONScripter-debug.apk
-</pre>
-
-
-<h5>リリース版（Google Play で公開する場合）</h5>
-
-<pre>
-&gt; cd c:\src\onscripter_android
-&gt; ..\android-ndk-r16b\build\ndk-build.cmd
-&gt; ..\android-sdk\tools\android.bat update project -p . --library ..\android-sdk\extras\google\market_licensing\library
-&gt; ..\apache-ant-1.10.2\bin\ant clean
-&gt; ..\apache-ant-1.10.2\bin\ant release
-</pre>
-<p style="text-indent:0"><span style="color:red">注意：</span>android.bat の --library の指定は絶対パスではなく相対パスにしてください。</p>
-
-<p>成功すると、以下の場所に署名がされていないアプリが作成されます。</p>
-
-<pre>
-onscripter_android\bin\ONScripter-release-unsigned.apk
-</pre>
-
-<p>次に電子署名を行います。</p>
-
-<p>まず、以下のコマンドを実行して証明書（鍵）release.keystore を作成します（コマンドは２行に分けず１行で入力してください）。releasename は鍵の別名で、自由に付けてください。この作業は電子署名の度に行わずに、事前に１度だけ行います。毎回行うと電子署名が変更されてしまい、アプリの更新インストールができなくなります。</p>
-
-<pre>
-&gt; &quot;c:\Program Files\Java\jdk1.8.0_162\bin\keytool.exe&quot; -genkey -v -keystore release.keystore -alias releasename -keyalg RSA -validity 10000
-</pre>
-
-<p>いくつか質問に答える必要があるので、<a href="http://phpjavascriptroom.com/?t=mobile&amp;p=android_keystore#a_keystore">keytoolコマンドで署名ファイルの作成</a>などを参考に入力してください。生成された証明書（鍵） release.keystore は消さないように注意してください。</p>
-
-<p>次に、以下のコマンドを実行してアプリに電子署名をします。</p>
-
-<pre>
-&gt; &quot;c:\Program Files\Java\jdk1.8.0_162\bin\jarsigner.exe&quot; -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore release.keystore bin/ONScripter-release-unsigned.apk releasename
-</pre>
-
-<p>最後に、zipalign で以下のようにアプリを最適化します。</p>
-
-<pre>
-&gt; ..\android-sdk\build-tools\28.0.2\zipalign.exe -f -v 4 bin/ONScripter-release-unsigned.apk bin/ONScripter-release-signed.apk
-</pre>
-
-<p>これで、Google Play から公開可能なアプリ bin/ONScripter-release-signed.apk が完成しました。</p>
-
-</div>
--->
           <!--
 <div class="sub-content">
 <h3 id="develop-linux">Linux でのアプリの作成方法</h3>

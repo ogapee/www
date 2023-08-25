@@ -20,7 +20,7 @@
       Since: Feb. 6, 2002<br />
       <!--Last updated: Mar. 21, 2016 (BTS has been restored.)<br>-->
       <!--Last updated: Jan. 14, 2020 (ONScripter on Windows updated.)<br>-->
-      Last updated: Aug. 24, 2023 (Source package updated.)<br />
+      Last updated: Aug. 25, 2023 (Source package updated.)<br />
       <!--Last updated: Jan. 3, 2022 (Added <a href="/cgi-bin/kagemai/guest.cgi?id=364&project=onscripter&action=view_report">Haiku</a> to supported platforms.)<br>-->
       <!--Last updated: Jun. 29, 2014 (PNaCl Binary package updated.)<br>-->
       <!--Last updated: Jul. 12, 2009 (Experimental source updated.)<br>-->
@@ -104,11 +104,11 @@
             <table>
               <tr>
                 <td>Latest release</td>
-                <td><a href="onscripter-20230824.tar.gz">onscripter-20230824.tar.gz</a></td>
+                <td><a href="onscripter-20230825.tar.gz">onscripter-20230825.tar.gz</a></td>
               </tr>
               <tr>
                 <td>Previous release</td>
-                <td><a href="onscripter-20220816.tar.gz">onscripter-20220816.tar.gz</a></td>
+                <td><a href="onscripter-20230824.tar.gz">onscripter-20230824.tar.gz</a></td>
                 <!--  <li> <a href="onscripter-exp-20090712.tar.gz">onscripter-exp-20090712.tar.gz</a>(Experimental)-->
               </tr>
             </table>
