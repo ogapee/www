@@ -335,7 +335,7 @@
           <h2 id="misc">Miscellaneous</h2>
 
           <div class="sub-content">
-            <h3 id="keyboard-shortcut"> Keyboard shortcut </h3>
+            <h3 id="keyboard-shortcut">Keyboard shortcut</h3>
 
             <p>All operations including mouse operations can be performed by keyboard short-cuts, though the shortcut keys defined in the script have higher priority.</p>
 
@@ -562,7 +562,7 @@
 
 
           <div class="sub-content">
-            <h3 id="registry"> Reading from the registry </h3>
+            <h3 id="registry">Reading from the registry</h3>
 
             <p>getreg command reads data from the registry of Windows. ONScripter emulates this command by reading from registry.txt (text file) that describes the data.</p>
 
@@ -590,10 +590,9 @@ The third argument of getreg command = string to be compared (including quotatio
 
 
           <div class="sub-content">
-            <h3 id="dll"> Loading DLL </h3>
+            <h3 id="dll">Loading DLL</h3>
 
-            <p>exec_dll command executes DLL (Dynamic Link
-              Library) that is built to run on Windows. ONScripter emulates this command by reading from dll.txt (text file) which describes the relationship between the name of a DLL and its return value. So, DLL is not executed and the return value is fixed.</p>
+            <p>exec_dll command executes DLL (Dynamic Link Library) that is built to run on Windows. ONScripter emulates this command by reading from dll.txt (text file) which describes the relationship between the name of a DLL and its return value. So, DLL is not executed and the return value is fixed.</p>
 
             <p>The format of dll.txt is as follows. Letters are case-sensitive. Be careful not to have extra space. If you use Kanji characters, use Shift JIS code set.</p>
 
@@ -621,7 +620,7 @@ ret = 2
 
 
           <div class="sub-content">
-            <h3 id="edit-mode"> Online modification of volume and variables </h3>
+            <h3 id="edit-mode">Online modification of volume and variables</h3>
 
             <p>This is a temporary function and might be modified or removed in the future.</p>
 
@@ -643,7 +642,7 @@ ret = 2
 
 
           <div class="sub-content">
-            <h3 id="truetype-font"> Displaying Kanji characters using TrueType font </h3>
+            <h3 id="truetype-font">Displaying Kanji characters using TrueType font</h3>
 
             <p>Japanese TrueType font is required to display Kanji characters. For example, msgothic.ttc under c:\Windows\Fonts in Windows 7, or freely available TrueType fonts shown below can be used.</p>
 
@@ -669,7 +668,7 @@ ret = 2
 
 
           <div class="sub-content">
-            <h3 id="cd-audio-mapping"> Using sound files instead of CD audio </h3>
+            <h3 id="cd-audio-mapping">Using sound files instead of CD audio</h3>
 
             <p>Create a directory named &quot;cd&quot; in the directory where scripts and archives are placed, and put sound files as follows.<br>
               cd/track01.xxx<br>
@@ -690,29 +689,30 @@ ret = 2
 
 
           <div class="sub-content">
-            <h3 id="midi"> Playing MIDI </h3>
+            <h3 id="midi">Playing MIDI</h3>
 
             <p>MIDI is played by SDL_mixer. When playing MIDI, a temporary file &quot;tmp.mus&quot; is created because SDL_mixer can only load MIDI data from a file.</p>
 
             <dl>
-              <dt> Playing MIDI using a software sound module on Unix (tested on Linux and Zaurus) (default)
-              <dd> Playing MIDI using timidity, a software sound module incorporated in SDL_mixer. In this case, you need to download a set of sound patches <a href="http://www.libsdl.org/projects/SDL_mixer/timidity/timidity.tar.gz">timidity.tar.gz</a> and expand them under, for example, /usr/local/lib/.
-              <dt> Playing MIDI on Windows
-              <dd> You need to download a set of sound patches <a href="http://www.libsdl.org/projects/SDL_mixer/timidity/timidity.tar.gz">timidity.tar.gz</a> and expand them under c:\.
-              <dt> Playing MIDI using a hardware sound module on Unix (tested on Linux)
-              <dd> playmidi 等の外部音源を使用できる MIDI player をインストールし、環境変数 MUSIC_CMD を設定してください。（例 MUSIC_CMD=/usr/bin/playmidi）<br>
-                当方では、シリアル接続で外部音源を繋ぎ、MUSIC_CMD に '/usr/bin/midiplay -q -o /dev/ttyS0' を設定して動作確認をしています。<br>
-                <a href="http://sourceforge.net/projects/playmidi/">playmidi</a>は、カーネルで認識される MIDI ポートに対してしか演奏できませんが、<a href="http://member.nifty.ne.jp/Breeze/softwares/unix/midiplay+.html">midiplay</a>はシリアルに直接出せます。<br>
-                <a href="http://crystal.apana.org.au/ghansper/MidiAxis.html">シリアルポートをMIDIポートにする patch</a>を使えば、playmidi でもシリアル接続音源を使えそうですが、未確認です。
+              <dt>Playing MIDI using a software sound module on Unix (tested on Linux and Zaurus) (default)</dt>
+              <dd>Playing MIDI using timidity, a software sound module incorporated in SDL_mixer. In this case, you need to download a set of sound patches <a href="http://www.libsdl.org/projects/SDL_mixer/timidity/timidity.tar.gz">timidity.tar.gz</a> and expand them under, for example, /usr/local/lib/.</dd>
+              <dt>Playing MIDI on Windows</dt>
+              <dd>You need to download a set of sound patches <a href="http://www.libsdl.org/projects/SDL_mixer/timidity/timidity.tar.gz">timidity.tar.gz</a> and expand them under c:\.</dd>
+              <dt>Playing MIDI using a hardware sound module on Unix (tested on Linux)</dt>
+              <dd>Please install a MIDI player that can use an external sound source such as playmidi and set the environment variable MUSIC_CMD. (e.g. MUSIC_CMD=/usr/bin/playmidi)<br />
+                We have confirmed that it works by connecting an external sound source via serial connection and setting '/usr/bin/midiplay -q -o /dev/ttyS0' in MUSIC_CMD. <br />
+                <a href="http://sourceforge.net/projects/playmidi/">playmidi</a> can only play to MIDI ports recognized by the kernel, but <a href="http://member.nifty.ne.jp/Breeze/softwares/unix/midiplay+.html">midiplay</a> can play directly to the serial port. <br />
+                If you use <a href="http://crystal.apana.org.au/ghansper/MidiAxis.html">the patch</a> that turns serial ports into MIDI ports, you may be able to use serial-connected sound sources with playmidi as well, but this has not been tested.
+              </dd>
             </dl>
 
           </div> <!-- sub-content -->
 
 
           <div class="sub-content">
-            <h3 id="archive-compression"> Compression of archives </h3>
+            <h3 id="archive-compression">Compression of archives</h3>
 
-            <p>The screen size of Linux Zaurus (320x240) or PSP (360x270) is smaller than the size expected in the script. By resizing the images in the archives beforehand, you can keep the size of the archives small and use the storage efficiently. Images with SPB format are stored in BMP format unless the -e option is specified. </p>
+            <p>The screen size of Linux Zaurus (320x240) or PSP (360x270) is smaller than the size expected in the script. By resizing the images in the archives beforehand, you can keep the size of the archives small and use the storage efficiently. Images with SPB format are stored in BMP format unless the -e option is specified.</p>
 
             <h4>Usage</h4>
 
@@ -723,7 +723,7 @@ nsaconv [-e] [-ns2] [-ns3] src_screen_width dst_screen_width src_NSA_filename ds
 
             <p>src_screen_width can be 640 or 800.</p>
 
-            <p>dst_screen_width can be any width such as 176(iPod), 320(QVGA), 360(PSP), 384(PSP), 640(VGA). </p>
+            <p>dst_screen_width can be any width such as 176(iPod), 320(QVGA), 360(PSP), 384(PSP), 640(VGA).</p>
 
             <h4>Examples</h4>
 
@@ -758,7 +758,7 @@ nsaconv [-e] [-ns2] [-ns3] src_screen_width dst_screen_width src_NSA_filename ds
 
             <p>The option -q sets the quality of jpeg compression ranging from 0 to 100. A small value indicates low quality but a small file size. The default value is 75.</p>
 
-            <p>The option --disable-rescale is required when <a href="#archive-compression">a rescaled archive</a> is used.<br>
+            <p>The option --disable-rescale is required when <a href="#archive-compression">a rescaled archive</a> is used.</p>
 
             <p>You can enjoy a game in 320x240 resolution on Linux if ONScripter is compiled with -DPDA.</p>
 
@@ -766,14 +766,14 @@ nsaconv [-e] [-ns2] [-ns3] src_screen_width dst_screen_width src_NSA_filename ds
 
 
           <div class="sub-content">
-            <h3 id="mp3-on-windows"> Problem of chattering MP3 music on Windows platform </h3>
+            <h3 id="mp3-on-windows">Problem of chattering MP3 music on Windows platform</h3>
 
             <p>Some MP3 files are played with muddled sound when ONScripter is linked with pre-built SMPEG binaries on Windows. It is due to an optimization problem when compiling SMPEG with MSVC and can be solved by suppressing some of MSVC's global optimization, as shown below, and compiling it yourself.</p>
 
-            <p>File to be modified: audio/mpeglayer3.cpp</br>
+            <p>File to be modified: audio/mpeglayer3.cpp<br />
               Add the following #pragma specification before and after the function layer3reorderandantialias.</p>
 
-            <PRE>
+            <pre>
 #pragma optimize( "g", off )
 void MPEGaudio::layer3reorderandantialias(int ch,int gr,
                                           REAL  in[SBLIMIT][SSLIMIT],
@@ -781,13 +781,13 @@ void MPEGaudio::layer3reorderandantialias(int ch,int gr,
   ......
 }
 #pragma optimize( "g", on )
-</PRE>
+</pre>
 
           </div> <!-- sub-content -->
 
 
           <div class="sub-content">
-            <h3 id="enable-1byte"> How to write an English novel </h3>
+            <h3 id="enable-1byte">How to write an English novel</h3>
 
             <p>This feature is an extension of ONScripter based on a request from Chend (chendo[at]gmail.com). He has contributed significantly to ONScripter by proposing specifications and sending patches.</p>
 
@@ -800,7 +800,7 @@ void MPEGaudio::layer3reorderandantialias(int ch,int gr,
 
             <p>An example script is written below.</p>
 
-            <PRE>
+            <pre>
 *define 
 clickstr `.?"`, 2 
 savename `Save the scene`, `Load the scene`, "Memory "
@@ -830,12 +830,12 @@ return
 *nothing
 `You didn't do anything.
 return
-</PRE>
+            </pre>
 
           </div> <!-- sub-content -->
 
           <div class="sub-content">
-            <h3 id="memo"> Memo </h3>
+            <h3 id="memo">Memo</h3>
 
             <h4>event_mode</h4>
             <p>The values in the table below are used exclusively.</p>
