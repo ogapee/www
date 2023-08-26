@@ -14,33 +14,29 @@
   <div id="body">
 
     <div id="header">
-      <H1>ONScripter on Windows</H1>
+      <h1>ONScripter on Windows</h1>
 
-      Since: Dec. 2, 2018<br>
+      Since: Dec. 2, 2018<br />
       <!--Last updated: Nov. 5, 2017 ENABLE_1BYTE_CHAR と FORCE_1BYTE_CHAR を有効にした英語ゲーム用アプリを更新<br>-->
-      Last updated: Jan. 14, 2020 関連ライブラリを更新<br>
+      Last updated: Aug. 25, 2023 関連ライブラリを更新<br>
       <!--Last updated: Mar. 21, 2018 アプリを更新<br>-->
-      <!--Last updated: Oct. 25, 2016 <A href="#sdk">SDK</a> を更新<br>-->
+      <!--Last updated: Oct. 25, 2016 <a href="#sdk">SDK</a> を更新<br>-->
       <!--Last updated: Aug. 17, 2014 Google Play でアプリを公開<br>-->
       <!--Last updated: Jun. 22, 2014 Windows でのアプリの作成方法 更新<br>-->
       <!--Last updated: Aug. 12, 2013 使用作品例更新<br>-->
-      更新内容は<A HREF="../onscripter_devel.2020.html">ONScripter 開発日誌</A>を参照<br>
+      更新内容は<a href="../onscripter_devel.2023.html">ONScripter 開発日誌</a>を参照<br>
     </div> <!-- header -->
 
     <div id="toc-container">
-
       <h3>目次</h3>
-
       <div id="toc">
-
         <ul>
-          <li> <A HREF="#introduction">はじめに</A>
-          <li> <A HREF="#library">関連ライブラリのビルド</A>
-          <li> <A HREF="#build">ONScripter のビルド</A>
-          <li> <A HREF="#run">ONScripter の実行</A>
-          <li> <a href="../onscripter.html">戻る</a>
+          <li><a href="#introduction">はじめに</a></li>
+          <li><a href="#library">関連ライブラリのビルド</a></li>
+          <li><a href="#build">ONScripter のビルド</a></li>
+          <li><a href="#run">ONScripter の実行</a></li>
+          <li><a href="../onscripter.html">戻る</a></li>
         </ul>
-
       </div> <!-- toc -->
     </div> <!-- toc-container -->
 
@@ -51,7 +47,7 @@
         <div class="content">
           <h2 id="introduction">はじめに</h2>
 
-          <p> Windows 上で Visual Studio を利用して ONScripter の 64bit 版をビルドする方法について説明します。Visual Studio 2017, 2019 で動作確認をしていますが、他のバージョンの Visual Studio でもビルドできると思います。</p>
+          <p> Windows 上で Visual Studio を利用して ONScripter の 64bit 版をビルドする方法について説明します。Visual Studio 2019 で動作確認をしていますが、他のバージョンの Visual Studio でもビルドできると思います。</p>
 
         </div> <!-- content -->
 
@@ -59,40 +55,53 @@
         <div class="content">
           <h2 id="library">関連ライブラリのビルド</h2>
 
-          <p>必要な関連ライブラリをまとめた以下のファイルをダウンロードして適当な場所に展開してください。</p>
+          <p>必要な関連ライブラリをまとめた以下のファイルをダウンロードして適当な場所（たとえば c:\src 以下）に展開してください。Git の内容をクローンしても構いません。</p>
 
-          <ul>
-            <li> <a href="onscripter_win-20200114.zip">onscripter_win-20200114.zip</a>
-          </ul>
+          <table>
+            <tr>
+              <th style="width:6em">リリース日</th>
+              <th>関連ライブラリ</th>
+            </tr>
+            <tr>
+              <td>最新版</td>
+              <td><a href="https://github.com/ogapee/onscripter_win">https://github.com/ogapee/onscripter_win</a>
+            </tr>
+            <tr>
+              <td>20230825</td>
+              <td><a href="onscripter_win-20230825.zip">onscripter_win-20230825.zip</a><br />
+                PlatformToolset を v142 (Visual Studio 2019) に変更しました。</p>
+            </tr>
+          </table>
 
           <p>以下のライブラリが含まれています。</p>
 
           <ul>
-            <li> <a href="https://www.libsdl.org/download-1.2.php">SDL 1.2.15</a>
-            <li> <a href="https://www.libsdl.org/projects/SDL_image/release-1.2.html">SDL_image 1.2.12</a>
-            <li> <a href="https://www.libsdl.org/projects/SDL_mixer/release-1.2.html">SDL_mixer 1.2.12</a>
-            <li> <a href="https://www.libsdl.org/projects/SDL_ttf/release-1.2.html">SDL_ttf 2.0.11</a>
-            <li> <a href="https://packages.debian.org/source/sid/video/smpeg">smpeg-debian-0.4.5+cvs20030824-8</a>
-            <li> <a href="https://web.archive.org/web/20180624184806/http://www.bzip.org/downloads.html">bzip2 1.0.6</a>
-            <li> <a href="https://www.lua.org/ftp/">Lua 5.1.5</a>
-            <li> <a href="https://download.savannah.gnu.org/releases/freetype/">freetype 2.10.1</a>
-            <li> <a href="http://www.ijg.org/">libjpeg 9c</a>
-            <li> <a href="https://sourceforge.net/projects/libpng/files/">libpng 1.6.37</a>
-            <li> <a href="https://sourceforge.net/projects/libpng/files/">zlib 1.2.11</a>
-            <li> <a href="https://xiph.org/downloads/">libogg 1.3.4</a>
-            <li> <a href="https://xiph.org/downloads/">libvorbis 1.3.6</a>
+            <li><a href="https://www.libsdl.org/download-1.2.php">SDL 1.2.15</a></li>
+            <li><a href="https://www.libsdl.org/projects/SDL_image/release-1.2.html">SDL_image 1.2.12</a></li>
+            <li><a href="https://www.libsdl.org/projects/SDL_mixer/release-1.2.html">SDL_mixer 1.2.12</a></li>
+            <li><a href="https://www.libsdl.org/projects/SDL_ttf/release-1.2.html">SDL_ttf 2.0.11</a></li>
+            <li><a href="https://packages.debian.org/source/sid/video/smpeg">smpeg-debian-0.4.5+cvs20030824-8</a></li>
+            <li><a href="https://web.archive.org/web/20180624184806/http://www.bzip.org/downloads.html">bzip2 1.0.6</a></li>
+            <li><a href="https://www.lua.org/ftp/">Lua 5.1.5</a></li>
+            <li><a href="https://download.savannah.gnu.org/releases/freetype/">freetype 2.10.1</a></li>
+            <li><a href="http://www.ijg.org/">libjpeg 9c</a></li>
+            <li><a href="https://sourceforge.net/projects/libpng/files/">libpng 1.6.37</a></li>
+            <li><a href="https://sourceforge.net/projects/libpng/files/">zlib 1.2.11</a></li>
+            <li><a href="https://xiph.org/downloads/">libogg 1.3.4</a></li>
+            <li><a href="https://xiph.org/downloads/">libvorbis 1.3.6</a></li>
           </ul>
 
-          <p>Visual Studio で onscripter_win\ONScripter_win.sln を開き、構成を Release、ソリューションを x64 に変更し、「ビルド」→「ソリューションのビルド」を選択してビルドしてください。上記のライブラリが静的リンクライブラリとしてビルドされます。</p>
+          <p>Visual Studio で c:\src\onscripter_win-xxxxxxxx\ONScripter_win.sln を開き、構成を Release、ソリューションを x64 に変更し、「ビルド」→「ソリューションのビルド」を選択してビルドしてください（xxxxxxxx にはバージョン番号が入ります）。上記のライブラリが静的リンクライブラリとしてビルドされます。</p>
 
-          <p>ソースファイルの変更箇所は以下のとおりです。</p>
+          <p>ライブラリの元のソースファイルから以下の箇所を変更しています。</p>
 
           <ul>
-            <li> onscripter_win\SDL_ttf-2.0.11\SDL_ttf.c の1750行目を以下の赤字のように修正しました。
+            <li>onscripter_win-xxxxxxxx\SDL_ttf-2.0.11\SDL_ttf.c の1750行目を以下の赤字のように修正しました。
               <pre>
     for ( row = 0; row &lt; glyph-><span style="color: red;">pixmap</span>.rows; ++row ) {
 </pre>
-            <li> libjpeg の memory manager は jmemnobs.c を使用しました。
+            </li>
+            <li>libjpeg の memory manager は jmemnobs.c を使用しました。</li>
           </ul>
 
           <!--
@@ -101,7 +110,7 @@
 <h3>SDL-1.2.5</h3>
 
 <ol>
-  <li> <a href="https://www.libsdl.org/download-1.2.php">SDL version 1.2.15 (historic)</a> から <a href="SDL-devel-1.2.15-VC.zip">SDL-devel-1.2.15-VC.zip</a> をダウンロードして、c:\src 以下に展開します。
+  <li><a href="https://www.libsdl.org/download-1.2.php">SDL version 1.2.15 (historic)</a> から <a href="SDL-devel-1.2.15-VC.zip">SDL-devel-1.2.15-VC.zip</a> をダウンロードして、c:\src 以下に展開します。
 
   <li> 以下のファイルを c:\src\lib 以下にコピーします。
     <ul>
@@ -112,7 +121,7 @@
 <h3>SDL_image-1.2.12</h3>
 
 <ol>
-  <li> <a href="https://www.libsdl.org/projects/SDL_image/release-1.2.html">SDL_image 1.2</a> から <a href="SDL_image-devel-1.2.12-VC.zip">SDL_image-devel-1.2.12-VC.zip</a> をダウンロードして、c:\src 以下に展開します。
+  <li><a href="https://www.libsdl.org/projects/SDL_image/release-1.2.html">SDL_image 1.2</a> から <a href="SDL_image-devel-1.2.12-VC.zip">SDL_image-devel-1.2.12-VC.zip</a> をダウンロードして、c:\src 以下に展開します。
 
   <li> 以下のファイルを c:\src\lib 以下にコピーします。
     <ul>
@@ -128,7 +137,7 @@
 <h3>SDL_mixer-1.2.12</h3>
 
 <ol>
-  <li> <a href="https://www.libsdl.org/projects/SDL_mixer/release-1.2.html">SDL_mixer 1.2</a> から <a href="SDL_mixer-devel-1.2.12-VC.zip">SDL_mixer-devel-1.2.12-VC.zip</a> をダウンロードして、c:\src 以下に展開します。
+  <li><a href="https://www.libsdl.org/projects/SDL_mixer/release-1.2.html">SDL_mixer 1.2</a> から <a href="SDL_mixer-devel-1.2.12-VC.zip">SDL_mixer-devel-1.2.12-VC.zip</a> をダウンロードして、c:\src 以下に展開します。
 
   <li> 以下のファイルを c:\src\lib 以下にコピーします。なお、ここにある smpeg.dll は libstdc++-6.dll に依存していて使えないため、コピーせずに別途作成します。
     <ul>
@@ -144,7 +153,7 @@
 <h3>SDL_ttf-1.2.12</h3>
 
 <ol>
-  <li> <a href="https://www.libsdl.org/projects/SDL_ttf/release-1.2.html">SDL_ttf 2.0</a> から <a href="SDL_ttf-2.0.11.zip">SDL_ttf-2.0.11.zip</a> をダウンロードして、c:\src 以下に展開します。
+  <li><a href="https://www.libsdl.org/projects/SDL_ttf/release-1.2.html">SDL_ttf 2.0</a> から <a href="SDL_ttf-2.0.11.zip">SDL_ttf-2.0.11.zip</a> をダウンロードして、c:\src 以下に展開します。
 
   <li> c:\src\SDL_ttf-2.0.11\SDL_ttf.c の1750行目を以下の赤字のように修正します。
 <pre>
@@ -177,7 +186,7 @@ C:\src\SDL-1.2.15\lib\x64
 <h3>smpeg-0.4.5</h3>
 
 <ol>
-  <li> <a href="https://packages.debian.org/source/sid/video/smpeg">Debian Sid smpeg (0.4.5+cvs20030824-8)</a> から <a href="smpeg_0.4.5+cvs20030824.orig.tar.gz">smpeg_0.4.5+cvs20030824.orig.tar.gz</a> をダウンロードして、c:\src 以下に展開します。
+  <li><a href="https://packages.debian.org/source/sid/video/smpeg">Debian Sid smpeg (0.4.5+cvs20030824-8)</a> から <a href="smpeg_0.4.5+cvs20030824.orig.tar.gz">smpeg_0.4.5+cvs20030824.orig.tar.gz</a> をダウンロードして、c:\src 以下に展開します。
 
   <li> c:\src\smpeg-0.4.5+cvs20030824.orig\VisualC.zip を同じ場所に展開します。
 
@@ -208,7 +217,7 @@ C:\src\SDL-1.2.15\lib\x64
 <h3>Lua-5.1.5</h3>
 
 <ol>
-  <li> <a href="https://www.lua.org/ftp/">Lua Download Area</a> から <a href="lua-5.1.5.tar.gz">lua-5.1.5.tar.gz</a> をダウンロードして、c:\src 以下に展開します。Lua 5.2.x 以降とは互換性がないので、Lua 5.1.x を使用してください。
+  <li><a href="https://www.lua.org/ftp/">Lua Download Area</a> から <a href="lua-5.1.5.tar.gz">lua-5.1.5.tar.gz</a> をダウンロードして、c:\src 以下に展開します。Lua 5.2.x 以降とは互換性がないので、Lua 5.1.x を使用してください。
 
   <li> Visual Studio 2017 の x64 Native Tools コマンドプロンプトを起動し、以下のコマンドを実行します。
 <pre>
@@ -243,17 +252,19 @@ lib /OUT:lua5.1.5-static.lib *.obj
 
         <div class="content">
           <h2 id="build">ONScripter のビルド</h2>
-
           <ol>
-            <li> <a href="../onscripter.html">ONScripter のページ</a>から最新の ONScripter をダウンロードして、上の関連ライブラリを展開した onscripter_win の下に展開します。
+            <li><a href="../onscripter.html">ONScripter のページ</a>から最新の ONScripter をダウンロードして、上の関連ライブラリを展開した onscripter_win-xxxxxxxx の下に展開します。<br />
+              Windows 10 バージョン 1803 以降では、コマンドプロンプトを起動して以下のように入力すれば展開できます（yyyyyyyy にはバージョン番号が入ります）。</li>
+            <pre>
+cd c:\src\onscripter_win-xxxxxxxx
+tar -xzf onscripter-yyyyyyyy.tar.gz
+</pre>
+            <li>Visual Studio で c:\src\onscripter_win-xxxxxxxx\onscripter-yyyyyyyy\ONScripter.sln を開きます。</li>
 
-            <li> Visual Studio で onscripter_win\onscripter-xxxxxxxx\ONScripter.sln を開きます（xxxxxxxx にはバージョン番号が入ります）。
+            <li>構成を Release、ソリューションを x64 に変更します。</li>
 
-            <li> 構成を Release、ソリューションを x64 に変更します。
-
-            <li> 「ビルド」→「ソリューションのビルド」を選択してビルドします。
+            <li>「ビルド」→「ソリューションのビルド」を選択してビルドします。</li>
           </ol>
-
         </div>
 
         <div class="content">
@@ -264,8 +275,9 @@ lib /OUT:lua5.1.5-static.lib *.obj
           <p>Visual Studio の IDE から実行するには、以下のようにしてください。</p>
 
           <ol>
-            <li> 「デバッグ」→「ONScripter のプロパティ」→「構成プロパティ」→「デバッグ」→「コマンド引数」に -r オプションでゲームデータの場所を指定してください。必要に応じて他のオプションも設定してください。
-            <li> 「デバッグ」→「デバッグの開始」で ONScripter を実行します。
+            <li> 「デバッグ」→「ONScripter のプロパティ」→「構成プロパティ」→「デバッグ」→「コマンド引数」に -r オプションでゲームデータの場所を指定してください。必要に応じて他のオプションも設定してください。</li>
+
+            <li> 「デバッグ」→「デバッグの開始」で ONScripter を実行します。</li>
           </ol>
 
           <h3>実行ファイルを直接実行する場合</h3>
@@ -273,7 +285,7 @@ lib /OUT:lua5.1.5-static.lib *.obj
           <p>実行ファイルは以下の場所に生成されます。適切にオプションを指定して実行してください。</p>
 
           <pre>
-onscripter_win\onscripter-xxxxxxxx\x64\Release\ONScripter.exe
+c:\src\onscripter_win-xxxxxxxx\onscripter-yyyyyyyy\x64\Release\ONScripter.exe
 </pre>
         </div>
 
@@ -282,7 +294,7 @@ onscripter_win\onscripter-xxxxxxxx\x64\Release\ONScripter.exe
     </div> <!-- main-container -->
 
     <div id="footer">
-      Copyright (c) 1998-2020 Studio O.G.A. All rights reserved.
+      Copyright (c) 1998-2023 Studio O.G.A. All rights reserved.
     </div> <!-- footer -->
 
   </div> <!-- body -->
