@@ -1,13 +1,13 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html lang="en">
 
-<HEAD>
-  <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <META http-equiv="Content-Style-Type" content="text/css">
-  <META name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-  <TITLE>ONScripter page</TITLE>
-  <LINK rel="stylesheet" type="text/css" href="/ogapee.css">
-</HEAD>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <title>ONScripter page</title>
+  <link rel="stylesheet" type="text/css" href="/ogapee.css">
+</head>
 
 <body>
 
@@ -123,8 +123,8 @@
                 <th>Distributor</th>
               </tr>
               <tr>
-                <td rowspan=2>Android (2.0 and later)</td>
-                <td><a href="https://play.google.com/store/apps/details?id=jp.ogapee.onscripter.release">ONScripter</A> in Google Play</td>
+                <td rowspan="2">Android (2.0 and later)</td>
+                <td><a href="https://play.google.com/store/apps/details?id=jp.ogapee.onscripter.release">ONScripter</a> in Google Play</td>
               </tr>
               <tr>
                 <td><a href="android/">ONScripter on Android</a></td>
@@ -135,7 +135,7 @@
               </tr>
 
               <tr>
-                <td rowspan=3>Linux</td>
+                <td rowspan="3">Linux</td>
                 <td class="span">Debian Official <a href="http://packages.debian.org/sid/onscripter">Unstable (sid)</a></td>
               </tr>
               <tr>
@@ -146,7 +146,7 @@
               </tr>
 
               <tr>
-                <td rowspan=2>MacOSX</td>
+                <td rowspan="2">MacOSX</td>
                 <td class="span"><a href="https://github.com/Homebrew/homebrew-core/blob/master/Formula/o/onscripter.rb">Homebrew</a></td>
               </tr>
               <tr>
@@ -154,7 +154,7 @@
               </tr>
 
               <tr>
-                <td rowspan=1>Windows</td>
+                <td rowspan="1">Windows</td>
                 <td class="span"><a href="win/">ONScripter on Windows</a></td>
               </tr>
 
@@ -200,7 +200,7 @@
               </tr>
 
               <tr>
-                <td rowspan=2>FreeBSD</td>
+                <td rowspan="2">FreeBSD</td>
                 <td class="span"><a href="http://www.freshports.org/devel/onscripter">Official FreeBSD package</a></td>
               </tr>
               <tr>
@@ -213,7 +213,7 @@
               </tr>
 
               <tr>
-                <td colspan=2>Let me know if you have others</td>
+                <td colspan="2">Let me know if you have others</td>
               </tr>
             </table>
           </div> <!-- sub-content -->
@@ -237,11 +237,11 @@
             <h3 id="feature">Features</h3>
 
             <ol>
-              <li> You can load and save save files that are compatible with the latest NScripter (2011/12/15). Please see <a href="#save">How to play on different platforms at the same time</a>.
-              <li> All operations can be done from the keyboard. Of course, you can also use the mouse.
-              <li> You can change CD Audio playback to music file (MP3, Ogg) playback.
-              <li> It supports multiple platforms, including Windows, Linux, MacOS X, MacOS 9, <a href="android/">Android</a>(1.6 or later), iPhone, iPad, PSP, <a href="zaurus/index.html">Zaurus</a> (SL-5500, SL-A300, SL-B500, SL-C700), FreeBSD, <a href="/cgi-bin/kagemai/guest.cgi?id=381&project=onscripter&action=view_report">OpenBSD</a>, <a href="/cgi-bin/kagemai/guest.cgi?id=364&project=onscripter&action=view_report">Haiku</a>, Solaris(on SPARC), Tru64 UNIX, OS/2Warp, iPod, PocketPC, Playstation3, Wii, GP2X, NetWalker and Dreamcast. It should also work on other platforms as well if <a href="#environment">Requirements</a> are satisfied.
-              <li> Since we have not implemented all the commands and specifications, some games may behave strangely. If this happens, please report it to the bug-tracking system above.
+              <li> You can load and save save files that are compatible with the latest NScripter (2011/12/15). Please see <a href="#save">How to play on different platforms at the same time</a>.</li>
+              <li> All operations can be done from the keyboard. Of course, you can also use the mouse.</li>
+              <li> You can change CD Audio playback to music file (MP3, Ogg) playback.</li>
+              <li> It supports multiple platforms, including Windows, Linux, MacOS X, MacOS 9, <a href="android/">Android</a>(1.6 or later), iPhone, iPad, PSP, <a href="zaurus/index.html">Zaurus</a> (SL-5500, SL-A300, SL-B500, SL-C700), FreeBSD, <a href="/cgi-bin/kagemai/guest.cgi?id=381&project=onscripter&action=view_report">OpenBSD</a>, <a href="/cgi-bin/kagemai/guest.cgi?id=364&project=onscripter&action=view_report">Haiku</a>, Solaris(on SPARC), Tru64 UNIX, OS/2Warp, iPod, PocketPC, Playstation3, Wii, GP2X, NetWalker and Dreamcast. It should also work on other platforms as well if <a href="#environment">Requirements</a> are satisfied.</li>
+              <li> Since we have not implemented all the commands and specifications, some games may behave strangely. If this happens, please report it to the bug-tracking system above.</li>
             </ol>
 
           </div> <!-- sub-content -->
@@ -259,33 +259,34 @@
 
             <h4>Required</h4>
             <ul>
-              <li> C++ programming language
+              <li>C++ programming language
                 <ul>
-                  <li> g++ 10.2.1 (Linux)
-                  <li> Visual Studio 2019 C++ (Windows)
+                  <li>g++ 10.2.1 (Linux)</li>
+                  <li>Visual Studio 2019 C++ (Windows)</li>
                 </ul>
-              <li> Japanese TTF file based on Unicode renamed as &quot;default.ttf&quot;
-              <li> libjpeg-6b (<a href="http://www.ijg.org/">Independent JPEG Group</a>)
-              <li> bzip2-1.0.5 (<a href="http://sources.redhat.com/bzip2/">bzip2</a>)
-              <li> SDL-1.2.14, SDL_image-1.2.10, SDL_mixer-1.2.8, SDL_ttf-2.0.9 (<a href="http://www.libsdl.org">Simple Directmedia Layer</a>)
-              <li> FreeType 2.3.11 (<a href="http://freetype.sourceforge.net/">the Free Type Project</a>)
+              </li>
+              <li>Japanese TTF file based on Unicode renamed as &quot;default.ttf&quot;</li>
+              <li>libjpeg-6b (<a href="http://www.ijg.org/">Independent JPEG Group</a>)</li>
+              <li>bzip2-1.0.5 (<a href="http://sources.redhat.com/bzip2/">bzip2</a>)</li>
+              <li>SDL-1.2.14, SDL_image-1.2.10, SDL_mixer-1.2.8, SDL_ttf-2.0.9 (<a href="http://www.libsdl.org">Simple Directmedia Layer</a>)</li>
+              <li>FreeType 2.3.11 (<a href="http://freetype.sourceforge.net/">the Free Type Project</a>)</li>
             </ul>
 
             <h4>Recommended</h4>
             <ul>
-              <li> SMPEG-0.4.5<br>
-                SMPEG is required to play MPEG1 movie files. Either SMPEG or MAD is required to play MP3 music files.
-              <li> ogg-1.2.0, vorbis-1.3.1 (<a href="http://www.xiph.org/">The Ogg Vorbis CODEC Project</a>)<br>
-                Ogg Vorbis is required to play Ogg Vorbis music files. It is enabled by default in Makefile.Linux and Makefile.ArmLinux that are included in the source package. Tremor Vorbis can be used instead that decodes music using integer arithmetics only.
+              <li>SMPEG-0.4.5<br>
+                SMPEG is required to play MPEG1 movie files. Either SMPEG or MAD is required to play MP3 music files.</li>
+              <li>ogg-1.2.0, vorbis-1.3.1 (<a href="http://www.xiph.org/">The Ogg Vorbis CODEC Project</a>)<br>
+                Ogg Vorbis is required to play Ogg Vorbis music files. It is enabled by default in Makefile.Linux and Makefile.ArmLinux that are included in the source package. Tremor Vorbis can be used instead that decodes music using integer arithmetics only.</li>
             </ul>
 
             <h4>Optional</h4>
             <ul>
-              <li> mad-0.15.1b (<a href="http://www.mars.org/home/rob/proj/mpeg/">MAD: Mpeg Audio Decoder</a>)<br />
-                MAD is an MP3 decoding library that uses only integer arithmetics. This is essential if you want to play MP3 music files on Android or Zaurus. To use MAD, SDL_mixer library must be built with MAD enabled instead of SMPEG.
+              <li>mad-0.15.1b (<a href="http://www.mars.org/home/rob/proj/mpeg/">MAD: Mpeg Audio Decoder</a>)<br />
+                MAD is an MP3 decoding library that uses only integer arithmetics. This is essential if you want to play MP3 music files on Android or Zaurus. To use MAD, SDL_mixer library must be built with MAD enabled instead of SMPEG.</li>
 
-              <li> avifile-0.7.48 (<a href="http://avifile.sourceforge.net/">avifile</a>)<br>
-                Avifile is necessary if you want to play AVI files with avi command. It is enabled when USE_AVIFILE is defined and AVIWrapper.o is linked.
+              <li>avifile-0.7.48 (<a href="http://avifile.sourceforge.net/">avifile</a>)<br>
+                Avifile is necessary if you want to play AVI files with avi command. It is enabled when USE_AVIFILE is defined and AVIWrapper.o is linked.</li>
             </ul>
 
             <p>ONScripter has been tested on Linux (Debian Buster), <a href="android/">Android</a> (Sony (8.0)), <a href="ios/">iOS</a> (iPad2), and sometimes on Windows.</p>
@@ -319,13 +320,13 @@
           <h2 id="todo">ToDo</h2>
 
           <ol>
-            <li> (<span style="color:red">High</span>) Lua support
-            <li> (<span style="color:#ff8800">Middle</span>) Apply &quot;windoweffect&quot; when &quot;windowerase&quot; is performed on mouse right click
-            <li> (<span style="color:#ff8800">Middle</span>) Store the image obtained by &quot;bgcopy&quot; when storing save files
-            <li> (<span style="color:#ff8800">Middle</span>) Deal with the case where the shadow of characters is overlapped with other characters
-            <li> (<span style="color:#00ff00">Low</span>) &quot;english&quot; command support to handle an English script
-            <li> (<span style="color:#00ff00">Low</span>) Verify &quot;existspbtn&quot; which is implemented as &quot;spbtn&quot;
-            <li> (<span style="color:#00ff00">Low</span>) Clean up of code
+            <li>(<span style="color:red">High</span>) Lua support</li>
+            <li>(<span style="color:#ff8800">Middle</span>) Apply &quot;windoweffect&quot; when &quot;windowerase&quot; is performed on mouse right click</li>
+            <li>(<span style="color:#ff8800">Middle</span>) Store the image obtained by &quot;bgcopy&quot; when storing save files</li>
+            <li>(<span style="color:#ff8800">Middle</span>) Deal with the case where the shadow of characters is overlapped with other characters</li>
+            <li>(<span style="color:#00ff00">Low</span>) &quot;english&quot; command support to handle an English script</li>
+            <li>(<span style="color:#00ff00">Low</span>) Verify &quot;existspbtn&quot; which is implemented as &quot;spbtn&quot;</li>
+            <li>(<span style="color:#00ff00">Low</span>) Clean up of code</li>
           </ol>
 
         </div> <!-- content -->
@@ -531,31 +532,31 @@
             <h4>From ONScripter to ONScripter</h4>
 
             <dl>
-              <dt>Simply copy all the above-mentioned modified files including save*.dat.
-              <dd>ONScripter_dir/* → ONScripter_dir/*
+              <dt>Simply copy all the above-mentioned modified files including save*.dat.</dt>
+              <dd>ONScripter_dir/* → ONScripter_dir/*</dd>
             </dl>
 
             <h4>From NScripter to ONScripter</h4>
 
             <dl>
-              <dt>Simply copy all the above-mentioned modified files including save*.dat.
-              <dd>NScripter_dir/* → ONScripter_dir/*
+              <dt>Simply copy all the above-mentioned modified files including save*.dat.</dt>
+              <dd>NScripter_dir/* → ONScripter_dir/*</dd>
             </dl>
 
             <h4>From ONScripter to NScripter</h4>
 
             <dl>
-              <dt>Copy all the above-mentioned modified files excluding save*.dat.
-              <dd>ONScripter_dir/* -&gt; NScripter_dir/*
-              <dt>Copy save files under &quot;sav&quot; directory
-              <dd>ONScripter_dir/sav/save*.dat -&gt; NScripter_dir/save*.dat
+              <dt>Copy all the above-mentioned modified files excluding save*.dat.</dt>
+              <dd>ONScripter_dir/* -&gt; NScripter_dir/*</dd>
+              <dt>Copy save files under &quot;sav&quot; directory</dt>
+              <dd>ONScripter_dir/sav/save*.dat -&gt; NScripter_dir/save*.dat</dd>
             </dl>
 
             <h4>Notice</h4>
             <ul>
-              <li>Save files generated from the latest NScripter (nscr.exe released in 2011/12/15) are supported. <span style="color:red;">ONScripter doesn't load save files generated from older versions of NScripter.</span>
-              <li>Compatibility between the latest NScripter and ONScripter is not guaranteed, but there has been no problem as far as I know.
-              <li>Use the above-mentioned latest NScripter from the beginning if you use both ONScripter and NScripter. In that case, be sure to make &quot;sav&quot; directory in advance.
+              <li>Save files generated from the latest NScripter (nscr.exe released in 2011/12/15) are supported. <span style="color:red;">ONScripter doesn't load save files generated from older versions of NScripter.</span></li>
+              <li>Compatibility between the latest NScripter and ONScripter is not guaranteed, but there has been no problem as far as I know.</li>
+              <li>Use the above-mentioned latest NScripter from the beginning if you use both ONScripter and NScripter. In that case, be sure to make &quot;sav&quot; directory in advance.</li>
             </ul>
 
           </div> <!-- sub-content -->
@@ -647,22 +648,22 @@ ret = 2
             <p>Japanese TrueType font is required to display Kanji characters. For example, msgothic.ttc under c:\Windows\Fonts in Windows 7, or freely available TrueType fonts shown below can be used.</p>
 
             <dl>
-              <dt> <a href="http://jikasei.me/font/genjyuu/">Genjyuu gothic</a>
-              <dd> It is a round gothic style font derived from <a href="http://ja.wikipedia.org/wiki/Source_Han_Sans">Gennokaku gothic</a>. Among them, I recommend GenJyuuGothicX-Monospace-Bold.ttf because it is bold, beautiful, and easy to read.
+              <dt><a href="http://jikasei.me/font/genjyuu/">Genjyuu gothic</a></dt>
+              <dd>It is a round gothic style font derived from <a href="http://ja.wikipedia.org/wiki/Source_Han_Sans">Gennokaku gothic</a>. Among them, I recommend GenJyuuGothicX-Monospace-Bold.ttf because it is bold, beautiful, and easy to read.</dd>
 
-              <dt> <a href="http://mix-mplus-ipa.osdn.jp/">M+ and IPA compositional font</a>
-              <dd> Re-distributable fonts based on M+ font and IPA font. Among them, I recommend Migu-2M-bold.ttf because it is bold, beautiful, and easy to read.
+              <dt><a href="http://mix-mplus-ipa.osdn.jp/">M+ and IPA compositional font</a></dt>
+              <dd>Re-distributable fonts based on M+ font and IPA font. Among them, I recommend Migu-2M-bold.ttf because it is bold, beautiful, and easy to read.</dd>
 
-              <dt> <a href="http://ossipedia.ipa.go.jp/ipafont/index.html">IPA font</a>
-              <dd> Re-distributable Gothic and Mincho font.
+              <dt><a href="http://ossipedia.ipa.go.jp/ipafont/index.html">IPA font</a></dt>
+              <dd>Re-distributable Gothic and Mincho font.</dd>
 
-              <dt> <a href="http://mikachan-font.com/">Mika-chan font</a>
-              <dd> Handwritten font.
+              <dt><a href="http://mikachan-font.com/">Mika-chan font</a></dt>
+              <dd>Handwritten font.</dd>
             </dl>
 
-            <p>Because SDL_ttf renders Kanji characters badly when TTF_STYLE_BOLD is enabled, ONScripter just ignores "bold" settings. If you use a small device like a smartphone, it is better to use a bold TrueType font such as Migu-2M-bold.ttf mentioned above and HG Gothic E (HGRGE.TTC).
+            <p>Because SDL_ttf renders Kanji characters badly when TTF_STYLE_BOLD is enabled, ONScripter just ignores "bold" settings. If you use a small device like a smartphone, it is better to use a bold TrueType font such as Migu-2M-bold.ttf mentioned above and HG Gothic E (HGRGE.TTC).</p>
 
-            <p>TrueType font file should be renamed to <STRONG>default.ttf</STRONG> and be placed in the same directory where a script file is placed before launching ONScripter. </p>
+            <p>TrueType font file should be renamed to <strong>default.ttf</strong> and be placed in the same directory where a script file is placed before launching ONScripter. </p>
 
           </div> <!-- sub-content -->
 
