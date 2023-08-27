@@ -14,10 +14,10 @@
   <div id="body">
 
     <div id="header">
-      <H1>SDL on Zaurus のページ</H1>
+      <h1>SDL on Zaurus のページ</h1>
 
-      Since: May. 20, 2002<br>
-      Last updated: Feb. 4, 2012 (パッケージ更新、更新内容は<A HREF="../onscripter_devel.2012.html">ONScripter 開発日誌</A>)<br>
+      Since: May. 20, 2002<br />
+      Last updated: Feb. 4, 2012 (パッケージ更新、更新内容は<a href="../onscripter_devel.2012.html">ONScripter 開発日誌</a>)<br>
     </div> <!-- header -->
 
     <div id="toc-container">
@@ -25,23 +25,22 @@
       <h3>目次</h3>
 
       <div id="toc">
-
         <ul>
-          <li> <A HREF="#introduction">はじめに</A>
-          <li> <A HREF="#Package">ipk パッケージ</A>
+          <li><a href="#introduction">はじめに</a></li>
+          <li><a href="#Package">ipk パッケージ</a>
             <ul>
-              <li> <a href="#package-onscripter">ONScripter 本体</a>
-              <li> <a href="#package-onscripter-lib">ONScripter 関連ライブラリ</a>
-              <li> <a href="#package-timidity-patch">timidity patch</a>
+              <li><a href="#package-onscripter">ONScripter 本体</a></li>
+              <li><a href="#package-onscripter-lib">ONScripter 関連ライブラリ</a></li>
+              <li><a href="#package-timidity-patch">timidity patch</a></li>
             </ul>
-          <li> <A HREF="#link">リンク</A>
-          <li> <A HREF="sl-devel.html">SL-5500, SL-C700 開発環境のセットアップ</A>
-          <li> <A HREF="sl-first.html">初期の試行錯誤の記録(SL-5500)</A>(obsolete)
-          <li> <A HREF="#Qtopia">ONScripter を Qtopia 環境で動作させるための作業</A>
-          <li> <A HREF="#impression">感想</A>
-          <li> <a href="../index.html">戻る</a>
+          </li>
+          <li><a href="#link">リンク</a></li>
+          <li><a href="sl-devel.html">SL-5500, SL-C700 開発環境のセットアップ</a></li>
+          <li><a href="sl-first.html">初期の試行錯誤の記録(SL-5500)</a>(obsolete)</li>
+          <li><a href="#Qtopia">ONScripter を Qtopia 環境で動作させるための作業</a></li>
+          <li><a href="#impression">感想</a></li>
+          <li><a href="../index.html">戻る</a></li>
         </ul>
-
       </div> <!-- toc -->
     </div> <!-- toc-container -->
 
@@ -52,15 +51,10 @@
         <div class="content">
           <h2 id="introduction">はじめに</h2>
 
-          <p> Linux が走っている<A HREF="http://ezaurus.com/"> Zaurus
-              (SL-5500, SL-A300, SL-B500, SL-C700, SL-C750, SL-C760)</a>上で<A HREF="http://www.libsdl.org/">SDL</A>を使い、その上で ONScripter を動
-            作させようという試みです。文市（あやち）さんの<A HREF="http://www.ayati.com/KOMONO/a300.htm">Linux Zaurus 日本語版
-              SL-A300</A>に、SL-A300 で動作している様子が掲載されています。</p>
+          <p>Linux が走っている<a href="http://ezaurus.com/"> Zaurus
+              (SL-5500, SL-A300, SL-B500, SL-C700, SL-C750, SL-C760)</a>上で<a href="http://www.libsdl.org/">SDL</a>を使い、その上で ONScripter を動作させようという試みです。文市（あやち）さんの<a href="http://www.ayati.com/KOMONO/a300.htm">Linux Zaurus 日本語版 SL-A300</a>に、SL-A300 で動作している様子が掲載されています。</p>
 
-          <p> 現在、mpeg ムービー再生、CD-Audio 演奏以外の<A HREF="../onscripter.html">ONScripter</A>の全ての機能が動作します。ペン
-            とボタン（もしくはキーボード）を併用しての入力となります。具体的な機能
-            及び実行方法については、<A HREF="../onscripter.html">ONScripter のペー
-              ジ</A>を参照してください。</p>
+          <p>現在、mpeg ムービー再生、CD-Audio 演奏以外の<a href="../onscripter.html">ONScripter</a>の全ての機能が動作します。ペンとボタン（もしくはキーボード）を併用しての入力となります。具体的な機能及び実行方法については、<a href="../onscripter.html">ONScripter のページ</a>を参照してください。</p>
 
         </div> <!-- content -->
 
@@ -74,66 +68,48 @@
             <h3 id="package-onscripter">ONScripter 本体</h3>
 
             <ul>
-              <li> <A HREF="http://onscripter.sourceforge.jp/zaurus/onscripter_20120204_arm.ipk">onscripter_20120204_arm.ipk</A>
-              <li> <A HREF="http://onscripter.sourceforge.jp/zaurus/onscripter_20110226_arm.ipk">onscripter_20110226_arm.ipk</A>
+              <li><a href="http://onscripter.sourceforge.jp/zaurus/onscripter_20120204_arm.ipk">onscripter_20120204_arm.ipk</a></li>
+              <li><a href="http://onscripter.sourceforge.jp/zaurus/onscripter_20110226_arm.ipk">onscripter_20110226_arm.ipk</a>
                 <ul>
-                  <li> onscripter-lib_20110106以降と組み合わせて使って下さい
+                  <li>onscripter-lib_20110106以降と組み合わせて使って下さい
                 </ul>
-              <li> 旧バージョン：<A HREF="http://onscripter.sourceforge.jp/zaurus/onscripter_20100530a_arm.ipk">onscripter_20100530a_arm.ipk</A>
+              </li>
+              <li>旧バージョン：<a href="http://onscripter.sourceforge.jp/zaurus/onscripter_20100530a_arm.ipk">onscripter_20100530a_arm.ipk</a>
                 <ul>
-                  <li> onscripter-lib_20070821以降と組み合わせて使って下さい
+                  <li>onscripter-lib_20070821以降と組み合わせて使って下さい
                 </ul>
-              <li> 旧バージョン：<A HREF="http://onscripter.sourceforge.jp/zaurus/onscripter_20070206_arm.ipk">onscripter_20070206_arm.ipk</A>
+              </li>
+              <li>旧バージョン：<a href="http://onscripter.sourceforge.jp/zaurus/onscripter_20070206_arm.ipk">onscripter_20070206_arm.ipk</a>
                 <ul>
-                  <li> onscripter-lib_20030629以降と組み合わせて使って下さい
+                  <li>onscripter-lib_20030629以降と組み合わせて使って下さい
                 </ul>
-              <li> 旧バージョン：<A HREF="http://onscripter.sourceforge.jp/zaurus/onscripter_beta-20030616_arm.ipk">onscripter_beta-20030616_arm.ipk</A>
+              </li>
+              <li>旧バージョン：<a href="http://onscripter.sourceforge.jp/zaurus/onscripter_beta-20030616_arm.ipk">onscripter_beta-20030616_arm.ipk</a>
                 <ul>
-                  <li> onscripter-lib_1.0.5と組み合わせて使って下さい
+                  <li>onscripter-lib_1.0.5と組み合わせて使って下さい
                 </ul>
+              </li>
             </ul>
 
-            <p>こちらは、<A HREF="../onscripter_devel.2009_1.html">ONScripter の開
-                発</A>に合わせて更新されていきます。</p>
+            <p>こちらは、<a href="../onscripter_devel.2009_1.html">ONScripter の開発</a>に合わせて更新されていきます。</p>
 
             <p>
-              <font color=red>注意</font>おそらく swap memory 必須です。<A HREF="#Qtopia">Qtopia 環境で動作するための作業</A>にある手順にしたがっ
-              て swap を作ってから起動しないと、まずハングします。Main memory に余裕
-              がある ROM を使っていれば別ですが。また、SL-5500やSL-A300では、FAT ファ
-              イルシステム上に swap を作るとハングするという現象が<A HREF="http://pcweb.mycom.co.jp/special/2002/linuxzaurus/06.html">報告
-              </A>されています。この場合、例えば SD カード等に swap を作る場合には、
-              ext2 ファイルシステムでフォーマットし直した上で swap を生成してくださ
-              い。
+              <font color=red>注意</font>おそらく swap memory 必須です。<a href="#Qtopia">Qtopia 環境で動作するための作業</a>にある手順にしたがって swap を作ってから起動しないと、まずハングします。Main memory に余裕がある ROM を使っていれば別ですが。また、SL-5500やSL-A300では、FAT ファイルシステム上に swap を作るとハングするという現象が<a href="http://pcweb.mycom.co.jp/special/2002/linuxzaurus/06.html">報告</a>されています。この場合、例えば SD カード等に swap を作る場合には、ext2 ファイルシステムでフォーマットし直した上で swap を生成してください。
             </p>
 
-            <p>ONScripter実行中にHomeボタンでQtopiaに戻れます。この状態では、
-              ONScripterはバックグラウンドで実行されています。ONScripter に戻るには、
-              タスクバーのアイコンをクリックしてください。<s>ONScripter-Resumeのアイ
-                コンをクリックするか、もしくはterminalから以下のコマンドを実行してくだ
-                さい。</s></p>
+            <p>ONScripter実行中にHomeボタンでQtopiaに戻れます。この状態では、ONScripterはバックグラウンドで実行されています。ONScripter に戻るには、タスクバーのアイコンをクリックしてください。<s>ONScripter-Resumeのアイコンをクリックするか、もしくはterminalから以下のコマンドを実行してください。</s></p>
             <pre>
 qcop QPE/Application/onscripter "raise()"
 </pre>
-            <p><s>なおVGAで起動している場合には、このようにしても戻ろうとしても失敗す
-                ることが多いです。ハングした場合には、Homeボタンでいったん戻して上記の
-                操作を繰り返してください。</s></p>
+            <p><s>なおVGAで起動している場合には、このようにしても戻ろうとしても失敗することが多いです。ハングした場合には、Homeボタンでいったん戻して上記の操作を繰り返してください。</s></p>
 
-            <p>同梱されている sarconv, nsaconv でアーカイブを縮小することができ
-              ます。縮小したアーカイブを使う場合は、-s のついたアイコンを使ってくだ
-              さい。</p>
+            <p>同梱されている sarconv, nsaconv でアーカイブを縮小することができます。縮小したアーカイブを使う場合は、-s のついたアイコンを使ってください。</p>
 
-            <p>CD-Audio の代わりに MP3 ファイルを使う場合は、44.1KHz もしくは
-              22.05KHz でサンプルされたものを用意してください。</p>
+            <p>CD-Audio の代わりに MP3 ファイルを使う場合は、44.1KHz もしくは22.05KHz でサンプルされたものを用意してください。</p>
 
-            <p>当方では SL-5500,SL-C700 で動作確認をしており、また SL-A300,
-              SL-B500 での動作報告もいただいております。</p>
+            <p>当方では SL-5500,SL-C700 で動作確認をしており、また SL-A300,SL-B500 での動作報告もいただいております。</p>
 
-            <p>SL-C700の場合、-s付のアイコンは、3200x240の圧縮されたアーカイブ用で
-              す。-sの付かないアイコンは、640x480表示用になります。SL-5500,SL-A300に
-              ついては従来通りですが、画面が従来と180度回転しています。これはSL-C700
-              の320x240モードと整合性を取るためです。SL-C700の320x240モードは、A300
-              互換モードとなるため、従来の表示法のままでは画面が180度逆に表示されて
-              しまいます。</p>
+            <p>SL-C700の場合、-s付のアイコンは、3200x240の圧縮されたアーカイブ用です。-sの付かないアイコンは、640x480表示用になります。SL-5500,SL-A300については従来通りですが、画面が従来と180度回転しています。これはSL-C700の320x240モードと整合性を取るためです。SL-C700の320x240モードは、A300互換モードとなるため、従来の表示法のままでは画面が180度逆に表示されてしまいます。</p>
 
           </div> <!-- sub-content -->
 
@@ -142,32 +118,26 @@ qcop QPE/Application/onscripter "raise()"
             <h3 id="package-onscripter-lib">ONScripter 関連ライブラリ</h3>
 
             <ul>
-              <li> <A HREF="http://onscripter.sourceforge.jp/zaurus/onscripter-lib_20110106_arm.ipk"> onscripter-lib_20110106_arm.ipk</A>
-              <li> 旧バージョン：<A HREF="http://onscripter.sourceforge.jp/zaurus/onscripter-lib_20070821_arm.ipk"> onscripter-lib_20070821_arm.ipk</A>
-              <li> 旧バージョン：<A HREF="http://onscripter.sourceforge.jp/zaurus/onscripter-lib_20031201_arm.ipk"> onscripter-lib_20031201_arm.ipk</A>
-              <li> 旧バージョン：<A HREF="http://onscripter.sourceforge.jp/zaurus/onscripter-lib_1.0.5_arm.ipk"> onscripter-lib_1.0.5_arm.ipk</A>
+              <li><a href="http://onscripter.sourceforge.jp/zaurus/onscripter-lib_20110106_arm.ipk"> onscripter-lib_20110106_arm.ipk</a></li>
+              <li>旧バージョン：<a href="http://onscripter.sourceforge.jp/zaurus/onscripter-lib_20070821_arm.ipk"> onscripter-lib_20070821_arm.ipk</a></li>
+              <li>旧バージョン：<a href="http://onscripter.sourceforge.jp/zaurus/onscripter-lib_20031201_arm.ipk"> onscripter-lib_20031201_arm.ipk</a></li>
+              <li>旧バージョン：<a href="http://onscripter.sourceforge.jp/zaurus/onscripter-lib_1.0.5_arm.ipk"> onscripter-lib_1.0.5_arm.ipk</a></li>
             </ul>
 
-            <p>ONScripter を実行する上で必要な SDL 関連のライブラリです。面倒なの
-              で、必要なライブラリ（下記）を１つにまとめました。本来は個々のライブラ
-              リ毎にパッケージを作るべきですし、そのように作られたパッケージとバッティ
-              ングする可能性がありますが、あくまで非公式パッケージなので入れる人はそ
-              の辺を分かった上で入れてください。</p>
+            <p>ONScripter を実行する上で必要な SDL 関連のライブラリです。面倒なので、必要なライブラリ（下記）を１つにまとめました。本来は個々のライブラリ毎にパッケージを作るべきですし、そのように作られたパッケージとバッティングする可能性がありますが、あくまで非公式パッケージなので入れる人はその辺を分かった上で入れてください。</p>
 
             <ul>
-              <li> libSDL-1.2.so(1.2.5)
-              <li> libSDL_image-1.2.so(1.2.10),
-              <li> libSDL_mixer-1.2.so(1.2.11)
-              <li> libSDL_ttf-2.0.so(2.0.9),
-              <li> libfreetype.so(2.1.10)
-              <li> libvorbisidec.so(1.0.2)
-              <li> libz.so(1.2.3)
-              <li> libpng.so(1.4.5)
+              <li>libSDL-1.2.so (1.2.5)</li>
+              <li>libSDL_image-1.2.so (1.2.10)</li>
+              <li>libSDL_mixer-1.2.so (1.2.11)</li>
+              <li>libSDL_ttf-2.0.so (2.0.9)</li>
+              <li>libfreetype.so (2.1.10)</li>
+              <li>libvorbisidec.so (1.0.2)</li>
+              <li>libz.so (1.2.3)</li>
+              <li>libpng.so (1.4.5)</li>
             </ul>
 
-            <p>また、現在の制限として本体メモリか ext2 等の symlink が効く場所に入
-              れてください。まあ何も考えずにいれてもまず問題ないと思いますが、お約束
-              として無保証です。こちらは、めったに更新されないはずです。</p>
+            <p>また、現在の制限として本体メモリか ext2 等の symlink が効く場所に入れてください。まあ何も考えずにいれてもまず問題ないと思いますが、お約束として無保証です。こちらは、めったに更新されないはずです。</p>
 
           </div> <!-- sub-content -->
 
@@ -176,17 +146,12 @@ qcop QPE/Application/onscripter "raise()"
             <h3 id="package-timidity-patch">timidity patch</h3>
 
             <ul>
-              <li> <A HREF="http://onscripter.sourceforge.jp/zaurus/timidity-patch_1.0.1-sd_arm.ipk">timidity-patch_1.0.1-sd_arm.ipk</A><br>
+              <li><a href="http://onscripter.sourceforge.jp/zaurus/timidity-patch_1.0.1-sd_arm.ipk">timidity-patch_1.0.1-sd_arm.ipk</a></li>
             </ul>
 
-            <p>「ひとかた」のような MIDI を使用したゲームで MIDI を聞きたい場合に
-              入れてください。MIDIの音色データ<A HREF="http://www.libsdl.org/projects/SDL_mixer/timidity/timidity.tar.gz">timidity.tar.gz</A>
-              をパッケージ化したものです。15MB 程あります。</p>
+            <p>「ひとかた」のような MIDI を使用したゲームで MIDI を聞きたい場合に入れてください。MIDIの音色データ<a href="http://www.libsdl.org/projects/SDL_mixer/timidity/timidity.tar.gz">timidity.tar.gz</a>をパッケージ化したものです。15MB 程あります。</p>
 
-            <p>なお、GUI からインストールするパッケージにしようとすると、メモリ不
-              足で失敗する可能性が大なので、SD カードに余裕があるとし、コマンドライ
-              ンから SD カードにインストールする場合にのみ対応とさせていただきます。
-            </p>
+            <p>なお、GUI からインストールするパッケージにしようとすると、メモリ不足で失敗する可能性が大なので、SD カードに余裕があるとし、コマンドラインから SD カードにインストールする場合にのみ対応とさせていただきます。</p>
 
             <p>インストール</p>
             <pre>
@@ -207,26 +172,26 @@ qcop QPE/Application/onscripter "raise()"
 
           <p>お世話になっているページ、よく利用させていただいているページへのリンクです。</p>
 
-          <DL>
-            <DT> ○<A HREF="http://www.areanine.gr.jp/~nyano/"> りなざうテクノウ </A>
-            <DD> SL Zaurus に関するソフトのバージョンアップ情報・技術情報などが日々更新されており、たいへん役に立ちます。
-            <DT> ○<A HREF="http://www.ayati.com/KOMONO/a300ons.htm"> ONScripter でしゃべる まじかる☆ひよりん </A>
-            <DD> 文市（あやち）さんのサイトです。SL-A300 で ONScripter が動いているのを初めて見ました
-            <DT> ○できる「月姫」<A HREF="http://club.h14m.org/kenji/diary/?200309a#200309025">#1</A> <A HREF="http://club.h14m.org/kenji/diary/?200309a#200309033">#2</A> <A HREF="http://club.h14m.org/kenji/diary/?200309a#200309055">#3</A> <A HREF="http://club.h14m.org/kenji/diary/?200309a#200309062">#4</A>
-            <DD> Kenji さんのサイト A Way Out にて、SL-C760 に標記ゲームを導入した時の作業記録が掲載されています。ONScripter を初めて導入される方は参考にしてください。
-            <DT> ○<A HREF="http://www.newbreedsoftware.com/zaurus-faq/">The Unofficial Zaurus FAQ </A>
-            <DD> SL-5500 での TIPS や FAQ。Swap memory や、リモートでアプリケーションを実行する tips は SL-A300 でも必須です。
-            <DT> ○<A HREF="http://emmie.koka-in.org/~kensyu/zaurus/diary/20021110.html"> SDL と ONScripter </A>
-            <DD> 神木さんの日記です。SDL と kernel の関係を hack され、ONScripter の最適化の話が掲載されています。
-            <DT> ○<A HREF="http://sourceforge.jp/projects/zaurus-ja/">zaurus-ja</A>
-            <DD> Linux 塔載Zaurusで日本語アプリケーションの利用可能な環境を整備することを目標としているプロジェクトです。成果物を利用させていただいております。ここのメーリングリストも重要な情報源です。
-            <DT> ○<A HREF="http://pc.2ch.net/test/read.cgi/linux/1059223604/l50">【Linux】ザウルス開発系スレッド-3【SL】</A>
-            <DD> 情報源です。
-            <DT> ○<A HREF="http://www3.cnet.ne.jp/poex"> りなざうまにあっくす </A>
-            <DD> Poex さんの LinuxZaurus ユーザ向け情報サイトです。
-            <DT> ○<A HREF="http://support.ezaurus.com/"> ザウルスサポートステーション </A>
-            <DD> Zaurus の公式な資料・ツールはこちらからどうぞ。
-          </DL>
+          <dl>
+            <dt>○<a href="http://www.areanine.gr.jp/~nyano/"> りなざうテクノウ </a></dt>
+            <dd>SL Zaurus に関するソフトのバージョンアップ情報・技術情報などが日々更新されており、たいへん役に立ちます。</dd>
+            <dt>○<a href="http://www.ayati.com/KOMONO/a300ons.htm"> ONScripter でしゃべる まじかる☆ひよりん </a></dt>
+            <dd>文市（あやち）さんのサイトです。SL-A300 で ONScripter が動いているのを初めて見ました</dd>
+            <dt>○できる「月姫」<a href="http://club.h14m.org/kenji/diary/?200309a#200309025">#1</a> <a href="http://club.h14m.org/kenji/diary/?200309a#200309033">#2</a> <a href="http://club.h14m.org/kenji/diary/?200309a#200309055">#3</a> <a href="http://club.h14m.org/kenji/diary/?200309a#200309062">#4</a></dt>
+            <dd>Kenji さんのサイト A Way Out にて、SL-C760 に標記ゲームを導入した時の作業記録が掲載されています。ONScripter を初めて導入される方は参考にしてください。</dd>
+            <dt>○<a href="http://www.newbreedsoftware.com/zaurus-faq/">The Unofficial Zaurus FAQ </a></dt>
+            <dd>SL-5500 での TIPS や FAQ。Swap memory や、リモートでアプリケーションを実行する tips は SL-A300 でも必須です。</dd>
+            <dt>○<a href="http://emmie.koka-in.org/~kensyu/zaurus/diary/20021110.html"> SDL と ONScripter </a></dt>
+            <dd>神木さんの日記です。SDL と kernel の関係を hack され、ONScripter の最適化の話が掲載されています。</dd>
+            <dt>○<a href="http://sourceforge.jp/projects/zaurus-ja/">zaurus-ja</a></dt>
+            <dd>Linux 塔載Zaurusで日本語アプリケーションの利用可能な環境を整備することを目標としているプロジェクトです。成果物を利用させていただいております。ここのメーリングリストも重要な情報源です。</dd>
+            <dt>○<a href="http://pc.2ch.net/test/read.cgi/linux/1059223604/l50">【Linux】ザウルス開発系スレッド-3【SL】</a></dt>
+            <dd>情報源です。</dd>
+            <dt>○<a href="http://www3.cnet.ne.jp/poex"> りなざうまにあっくす </a></dt>
+            <dd>Poex さんの LinuxZaurus ユーザ向け情報サイトです。</dd>
+            <dt>○<a href="http://support.ezaurus.com/"> ザウルスサポートステーション </a></dt>
+            <dd>Zaurus の公式な資料・ツールはこちらからどうぞ。</dd>
+          </dl>
 
         </div> <!-- content -->
 
@@ -239,41 +204,28 @@ qcop QPE/Application/onscripter "raise()"
 
             色々試行錯誤しましたが、要点は下の通りです。</p>
 
-          <OL>
-            <LI> アイコン設定ファイルの [Desktop Entry] の Exec にて引数が渡せな
-              いので、別の shell script を呼ぶようにし、その中で --root オプションを
-              付けて onscripter を呼ぶ。
-            <LI> ONScripter 側で Qt 環境でのコンパイルに対応し、また無効なオプショ
-              ンを無視するようにする。
-          </OL>
+          <ol>
+            <li>アイコン設定ファイルの [Desktop Entry] の Exec にて引数が渡せないので、別の shell script を呼ぶようにし、その中で --root オプションを付けて onscripter を呼ぶ。</li>
+            <li>ONScripter 側で Qt 環境でのコンパイルに対応し、また無効なオプションを無視するようにする。</li>
+          </ol>
 
-          <P>問題点として、実行中にメモリが足りなくなると、「メモリ不足」という
-            警告ウィンドウが出ようとするが、どうやらこれと ONScripter とでデッドロッ
-            クを起こしてハングするようです。SDL on Qtopia と Qtopia の相性の問題で
-            すね。現状では、大抵のゲームはしばらく進むとハングします。</P>
+          <p>問題点として、実行中にメモリが足りなくなると、「メモリ不足」という警告ウィンドウが出ようとするが、どうやらこれと ONScripter とでデッドロックを起こしてハングするようです。SDL on Qtopia と Qtopia の相性の問題ですね。現状では、大抵のゲームはしばらく進むとハングします。</p>
 
-          <P>ペンでクリックしてもクリック音がしない場合はハングしていますので、
-            リモートログインしてプロセスを殺すか、もしくはザウルスを再起動してくだ
-            さい。</P>
+          <p>ペンでクリックしてもクリック音がしない場合はハングしていますので、リモートログインしてプロセスを殺すか、もしくはザウルスを再起動してください。</p>
 
-          <P>FB console から起動するようにコンパイルして、コンソールログインした
-            状態で起動すれば問題なく動くのですが……。</p>
+          <p>FB console から起動するようにコンパイルして、コンソールログインした状態で起動すれば問題なく動くのですが……。</p>
 
           <h4>20020421</h4>
-          <p>＊<A HREF="http://www.newbreedsoftware.com/zaurus-faq/sections/expansion_slots_and_cards.php3">Unofficial
-              Sharp Zaurus SL-5500 FAQ</A>の 12. # Can I use a CF or SD card as memory, instead of file storage space?
-            にあるように swapfile を作ればよいことが判明しました。<br>
+          <p>＊<a href="http://www.newbreedsoftware.com/zaurus-faq/sections/expansion_slots_and_cards.php3">Unofficial Sharp Zaurus SL-5500 FAQ</a>の 12. # Can I use a CF or SD card as memory, instead of file storage space?にあるように swapfile を作ればよいことが判明しました。</p>
 
-            terminal を開いて、</P>
+          <p>terminal を開いて、
           <pre>
 &gt; dd if=/dev/zero of=/mnt/card/SwapFile bs=512 count=65536
 &gt; mkswap /mnt/card/SwapFile
 &gt; swapon /mnt/card/SwapFile
 </pre>
 
-          で、32MB のスワップができます。ゲームにもよりますが、SL-5500 の場合
-          16MB 以上はあったほうがよいです。32MB あれば多分安心です。これでハング
-          することが無くなりました。<br>
+          で、32MB のスワップができます。ゲームにもよりますが、SL-5500 の場合16MB 以上はあったほうがよいです。32MB あれば多分安心です。これでハングすることが無くなりました。</p>
 
           <p>
             <s>なぜか、上下の矢印ボタンが効かない。途中まではちゃんと scancode が
@@ -281,40 +233,20 @@ qcop QPE/Application/onscripter "raise()"
             </s>SDLにパッチを当てて解決。
           </p>
 
-          <p>
-            <s>
-              ハングを無くすには、(1)下記(*)の通りにして余計な常駐アプリケーションを
-              消す、(2)最初から画像を１／４のしたアーカイブを使用する、(3)ONScripter
-              の使用メモリ量を減らす、(4) ROM を作り直しメモリ量を増やす、などの対策
-              が考えられます。(1) はもちろんですが、瞬間最大風速が閾値を越えるとメモ
-              リ不足警告が出るようですので (2)も結構有効そうです。そのうちコンバータ
-              を書きます。本当は (3) を頑張るべきですが、結構厳しいです。困ったもの
-              です。
-            </s>
+          <p><s>ハングを無くすには、(1)下記(*)の通りにして余計な常駐アプリケーションを消す、(2)最初から画像を１／４のしたアーカイブを使用する、(3)ONScripterの使用メモリ量を減らす、(4) ROM を作り直しメモリ量を増やす、などの対策が考えられます。(1) はもちろんですが、瞬間最大風速が閾値を越えるとメモリ不足警告が出るようですので (2)も結構有効そうです。そのうちコンバータを書きます。本当は (3) を頑張るべきですが、結構厳しいです。困ったものです。</s></p>
+
+          <p>＊<a href="http://www.newbreedsoftware.com/zaurus-faq/sections/system.php3">Unofficial Sharp Zaurus SL-5500 FAQ</a>の 11. Why do I keep running out of memory? にあるように、Applications の 'Address Book', 'Calendar' と 'Todo List' のアイコンをペンでタッチしたまましばらく待ち、表れるオプション画面で "Fast load" を無効にすると、全体の消費メモリが減って ONScripter の動作が若干快適になります。</p>
+
+          <p>また、アイコンをクリックして ONScripter 起動するため、起動時にゲームファイルのある場所を指定することができません。上記のパッケージでは、/mnt/card/nscr もしくは /mnt/cf/nscr をゲームファイルのある場所と設定したスクリプトをインストールするようになっています。<br />
+
+            /mnt/card/nscr は、SD カードのルートの nscr ディレクトリを指します。<br />
+
+            /mnt/cf/nscr は、CF カードのルートの nscr ディレクトリを指します。<br />
           </p>
 
-          <p>＊<A HREF="http://www.newbreedsoftware.com/zaurus-faq/sections/system.php3">Unofficial
-              Sharp Zaurus SL-5500 FAQ</A>の 11. Why do I keep running out of
-            memory? にあるように、Applications の 'Address Book', 'Calendar' と
-            'Todo List' のアイコンをペンでタッチしたまましばらく待ち、表れるオプショ
-            ン画面で "Fast load" を無効にすると、全体の消費メモリが減って
-            ONScripter の動作が若干快適になります。</p>
+          <p>複数のゲームを持ち運ぶ場合は、複数のカードを用意して取り替えるか、自分でスクリプトを追加・修正してください。<br />
 
-          <p>また、アイコンをクリックして ONScripter 起動するため、起動時にゲー
-            ムファイルのある場所を指定することができません。上記のパッケージでは、
-            /mnt/card/nscr もしくは /mnt/cf/nscr をゲームファイルのある場所と設定
-            したスクリプトをインストールするようになっています。<br>
-
-            /mnt/card/nscr は、SD カードのルートの nscr ディレクトリを指します。<br>
-
-            /mnt/cf/nscr は、CF カードのルートの nscr ディレクトリを指します。<br>
-          </p>
-
-          <p>
-            複数のゲームを持ち運ぶ場合は、複数のカードを用意して取り替えるか、自分
-            でスクリプトを追加・修正してください。<br>
-
-            追加・修正する場合のテンプレートは、下のファイルです。<br>
+            追加・修正する場合のテンプレートは、下のファイルです。<br />
           </p>
 
           <p class="noindent">
@@ -324,7 +256,7 @@ qcop QPE/Application/onscripter "raise()"
             /opt/QtPalmtop/apps/Games/onscripter-cf.desktop<br>
             /opt/QtPalmtop/bin/onscripter-cf<br>
 
-            QVGA ザウルス上でQVGA表示で無圧縮アーカイブを使う場合。<br>
+            QVGA ザウルス上でQVGA表示で無圧縮アーカイブを使う場合。<br />
             VGA ザウルス上でVGA表示で無圧縮アーカイブを使う場合。
           </p>
 
@@ -335,9 +267,8 @@ qcop QPE/Application/onscripter "raise()"
             /opt/QtPalmtop/apps/Games/onscripter-cf-s.desktop<br>
             /opt/QtPalmtop/bin/onscripter-cf-s<br>
 
-            QVGA ザウルス上でQVGA表示で圧縮アーカイブを使う場合。<br>
-            VGA ザウルス上でQVGA表示で圧縮アーカイブを使う場合。要するに、800x600
-            もしくは640x480のアーカイブを 320x240 にしている場合。
+            QVGA ザウルス上でQVGA表示で圧縮アーカイブを使う場合。<br />
+            VGA ザウルス上でQVGA表示で圧縮アーカイブを使う場合。要するに、800x600 もしくは640x480のアーカイブを 320x240 にしている場合。
           </p>
 
           <p class="noindent">
@@ -347,17 +278,16 @@ qcop QPE/Application/onscripter "raise()"
             /opt/QtPalmtop/apps/Games/onscripter-cf-vga-s.desktop<br>
             /opt/QtPalmtop/bin/onscripter-cf-vga-s<br>
 
-            VGA ザウルス上でVGA表示で圧縮アーカイブを使う場合。要するに、800x600
-            のアーカイブを 640x480 にしている場合。
+            VGA ザウルス上でVGA表示で圧縮アーカイブを使う場合。要するに、800x600 のアーカイブを 640x480 にしている場合。
           </p>
 
           <p>
-            追加・修正例<br>
-            ゲームが Game2 という名前で、ゲームのデータが /mnt/card/game2 にあるものとをします。<br>
-            <br>
+            追加・修正例<br />
+            ゲームが Game2 という名前で、ゲームのデータが /mnt/card/game2 にあるものとをします。<br />
+            <br />
             /opt/QtPalmtop/apps/Games/game2-sd-s.desktop:<br>
             最低限、Exec 項を下記のシェルスクリプト名に修正。
-          </P>
+          </p>
 
           <pre>
 [Desktop Entry]
@@ -370,8 +300,8 @@ CanFastload=0
 </pre>
 
           <p class="noindent">
-            /opt/QtPalmtop/bin/game2-sd-s:<br>
-            --root オプションで、ゲームデータのある場所を設定。<br>
+            /opt/QtPalmtop/bin/game2-sd-s:<br />
+            --root オプションで、ゲームデータのある場所を設定。<br />
           </p>
 
           <pre>
@@ -380,19 +310,15 @@ CanFastload=0
 onscripter --root /mnt/card/game2 --force-button-shortcut --disable-rescale $1
 </pre>
 
-          <P>実行パーミッションをつけることをお忘れなく。<br>
+          <p>実行パーミッションをつけることをお忘れなく。<br>
             Qtopia を再起動すると、ゲームタブにアイコンが追加されています。</p>
 
-          <p>
-            <s>なお、SL-5500 でしか確認していませんので、SL-A300 で動くかどうかは分か
-              りません。</s>
-          </p>
+          <p><s>なお、SL-5500 でしか確認していませんので、SL-A300 で動くかどうかは分かりません。</s></p>
 
 
           <h4>20021121</h4>
 
-          <p><A HREF="http://digit.que.ne.jp/visit/index.cgi?UnofficialSharpZaurusSL%2D5500FAQ%2FNetworking#i35">
-              ザウルスのアプリケーションをリモートで使えますか？</A>によると、</P>
+          <p><a href="http://digit.que.ne.jp/visit/index.cgi?UnofficialSharpZaurusSL%2D5500FAQ%2FNetworking#i35">ザウルスのアプリケーションをリモートで使えますか？</a>によると、</p>
           <pre>
 リモート接続（telnetまたはssh経由で)している間は、ザウルス上のプログラ
 ムを実行（し、ザウルス上で表示）できますが、先に環境変数"LOGNAME"を設
@@ -400,13 +326,11 @@ onscripter --root /mnt/card/game2 --force-button-shortcut --disable-rescale $1
 
  export LOGNAME=unknown
 </pre>
-          <p class="noindent">
-            らしいです。</p>
+          <p class="noindent">らしいです。</p>
 
-          <P>知りませんでした。これでデバッグがずいぶん楽になります。<br>
+          <p>知りませんでした。これでデバッグがずいぶん楽になります。<br>
 
-            <A HREF="http://www.newbreedsoftware.com/zaurus-faq/">The Unofficial
-              Zaurus FAQ </A>にあったのですね。これは一度全部読まないといけないな。
+            <a href="http://www.newbreedsoftware.com/zaurus-faq/">The Unofficial Zaurus FAQ </a>にあったのですね。これは一度全部読まないといけないな。
           </p>
 
         </div> <!-- content -->
@@ -415,15 +339,9 @@ onscripter --root /mnt/card/game2 --force-button-shortcut --disable-rescale $1
         <div class="content">
           <h2 id="impression">感想</h2>
 
-          <p>非常に開発しやすい PDA です。普通にクロスコンパイルするだけで大抵のものは入ってしまいます。<A HREF="http://sourceforge.net/project/showfiles.php?group_id=39939">Project:
-              Zaurus Open Source Development</A>に x11zaurus なんてのもあるみたいですし。</p>
+          <p>非常に開発しやすい PDA です。普通にクロスコンパイルするだけで大抵のものは入ってしまいます。<a href="http://sourceforge.net/project/showfiles.php?group_id=39939">Project: Zaurus Open Source Development</a>に x11zaurus なんてのもあるみたいですし。</p>
 
-          <p>ただし現状では、日本語表示は頑張ればできるものの、日本語入力ができ
-            ません。プログラマのおもちゃであり、日本語 PDA としては全くお勧めでき
-            ないと思います。ただ、有志により<A HREF="http://pc.2ch.net/test/read.cgi/mobile/1020324591/">日本語IMの開
-              発</A>がかなり進んでいるようですし、アプリケーションも急速に充実してい
-            きそうなので、Linux 環境で簡単に開発が可能な日本語 PDA として近い将来
-            素晴らしい製品になることを期待しています。</p>
+          <p>ただし現状では、日本語表示は頑張ればできるものの、日本語入力ができません。プログラマのおもちゃであり、日本語 PDA としては全くお勧めできないと思います。ただ、有志により<a href="http://pc.2ch.net/test/read.cgi/mobile/1020324591/">日本語IMの開発</a>がかなり進んでいるようですし、アプリケーションも急速に充実していきそうなので、Linux 環境で簡単に開発が可能な日本語 PDA として近い将来素晴らしい製品になることを期待しています。</p>
 
           <p>もっとメモリを……。</p>
 
@@ -433,30 +351,13 @@ onscripter --root /mnt/card/game2 --force-button-shortcut --disable-rescale $1
           <p>大晦日になって、ようやく懸案のSL-C700で入力を受け付けなくなる不具合を解消できました。SDLへのパッチという形で対処しています。これで気持良く年を越せます。というか、越せました（これを書いているのは既に2003年）。</p>
 
           <h3>2003年1月26日</h3>
-          <P>-e 付き 640x480 にしてギリギリ512MBのCFに収まるゲームをやってみまし
-            た。swap を 64MB とって、なんとか正常に動きました。ただし、メモリー不
-            足というウィンドウが頻繁に出ます。無視できますが。free で見ると、used
-            が瞬間最大風速 Mem: 29604, Swap: 57684, Total 87288 までいきます。この
-            ゲームは特に同時使用画像量が多いと思うのですが、一般にVGA だとデータ量
-            も半端ではないので、使われていない画像データを一時的に解放する機構を実
-            装しないときついかも。画面は非常に綺麗なんですけどねぇ。</P>
+          <p>-e 付き 640x480 にしてギリギリ512MBのCFに収まるゲームをやってみました。swap を 64MB とって、なんとか正常に動きました。ただし、メモリー不足というウィンドウが頻繁に出ます。無視できますが。free で見ると、used が瞬間最大風速 Mem: 29604, Swap: 57684, Total 87288 までいきます。このゲームは特に同時使用画像量が多いと思うのですが、一般にVGA だとデータ量も半端ではないので、使われていない画像データを一時的に解放する機構を実装しないときついかも。画面は非常に綺麗なんですけどねぇ。</p>
 
-          <P>640x480→640x480 の場合は、onscripter-cf, onscripter-sdのアイコンを
-            使ってください。800x600→640x480の場合は、対応するアイコンを作ってない
-            ので、コンソールから onscripter --root /mnt/cf/nscr
-            --force-button-shortcut --disable-rescale とやってください。そのうちに、
-            launcher を作ります。</P>
+          <p>640x480→640x480 の場合は、onscripter-cf, onscripter-sdのアイコンを使ってください。800x600→640x480の場合は、対応するアイコンを作ってないので、コンソールから onscripter --root /mnt/cf/nscr --force-button-shortcut --disable-rescale とやってください。そのうちに、launcher を作ります。</p>
 
           <h3>2003年6月22日</h3>
 
-          <P>SDL ライブラリを、阿川さんのものをベースにすることにしました。です
-            が、ONScripter を動かすと色々不具合が出たので、修正パッチを書きました。
-            また、SL-5500 で検証するため、久々に電源を入れ、 ROM 3.1 を試しました。
-            確かに、SL-B500 風になります。試行錯誤しましたが、最終的には
-            SL-5500(QVGA), SL-C700(QVGA, VGA)どちらでも ONScripter が問題なく動き
-            ます。ただし、SL-A300 等ではおかしくなっているかもしれません。その場合
-            は報告を下さい。しかし、QVGA だと SL-5500 の方が SL-C700 より綺麗だ。
-          </P>
+          <p>SDL ライブラリを、阿川さんのものをベースにすることにしました。ですが、ONScripter を動かすと色々不具合が出たので、修正パッチを書きました。また、SL-5500 で検証するため、久々に電源を入れ、 ROM 3.1 を試しました。確かに、SL-B500 風になります。試行錯誤しましたが、最終的にはSL-5500(QVGA), SL-C700(QVGA, VGA)どちらでも ONScripter が問題なく動きます。ただし、SL-A300 等ではおかしくなっているかもしれません。その場合は報告を下さい。しかし、QVGA だと SL-5500 の方が SL-C700 より綺麗だ。</p>
 
         </div> <!-- content -->
 
