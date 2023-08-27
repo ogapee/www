@@ -215,8 +215,9 @@ img {
 }
 
 #main .content p {
-    margin: 0px;
+    margin: 5px;
     padding: 5px;
+    text-align: justify;
 }
 
 #main .content h2 {
@@ -240,6 +241,11 @@ img {
 #main .content h4 {
     margin: 5px;
     text-decoration: underline;
+}
+
+#main .content li {
+    margin-right: 5px;
+    padding-right: 5px;
 }
 
 .content dl {
@@ -289,6 +295,11 @@ img {
 #diary .diary-day h4 {
     margin: 5px;
     text-decoration: underline;
+}
+
+#diary .diary-day p {
+    padding: 5px;
+    text-align: justify;
 }
 
 /* -------------------- */
@@ -347,6 +358,7 @@ pre {
     color: black;
     background: #f5f5f5;
     text-indent: 0;
+    text-align: left;
     border-width: 1pt 1pt 1pt 1pt;
     border-color: #888888;
     border-style: solid;
