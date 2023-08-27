@@ -1,13 +1,13 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html lang="ja">
 
-<HEAD>
-  <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <META http-equiv="Content-Style-Type" content="text/css">
-  <META name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-  <TITLE>ONScripter のページ</TITLE>
-  <LINK rel="stylesheet" type="text/css" href="/ogapee.css">
-</HEAD>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <title>ONScripter のページ</title>
+  <link rel="stylesheet" type="text/css" href="/ogapee.css">
+</head>
 
 <body>
 
@@ -52,9 +52,9 @@
           </li>
           <li> <a href="#howto">実行方法</a>
             <ul>
-              <li><a href="#environment">動作環境</a>
-              <li><a href="#compile">コンパイル</a>
-              <li><a href="#run">実行</a>
+              <li><a href="#environment">動作環境</a></li>
+              <li><a href="#compile">コンパイル</a></li>
+              <li><a href="#run">実行</a></li>
             </ul>
           </li>
           <li><a href="#todo">TODO</a></li>
@@ -88,7 +88,7 @@
         <div class="content">
           <h2 id="INTRODUCTION">はじめに</h2>
 
-          <p>ONScripter (オーエヌスクリプター)は <a href="http://www.nscripter.com/">NScripter</a> (<a href="http://ja.wikipedia.org/wiki/NScripter">解説</a>) 用に作られたスクリプトを独自に解釈して実行するプログラムです。全く同じゲームデータを使って、Windows, Android, iOS などの上でゲームを実行することができます。
+          <p>ONScripter (オーエヌスクリプター)は <a href="http://www.nscripter.com/">NScripter</a> (<a href="http://ja.wikipedia.org/wiki/NScripter">解説</a>) 用に作られたスクリプトを独自に解釈して実行するプログラムです。全く同じゲームデータを使って、Windows, Android, iOS などの上でゲームを実行することができます。</p>
 
           <p>動作報告・バグ報告・機能追加要望・パッチは随時受け付けますので[<a href="/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=top">バグトラッキングシステム</a>]までお願いします。報告の際はオプション欄の中央のチェックボックスを外してから送信してください。「○○ゲームの××場面がなんかおかしい」という程度でも結構ですのでお気軽にどうぞ。ページの一番下に記載のあるメールアドレスまで直接送っていただいても構いません。</p>
 
@@ -125,8 +125,8 @@
                 <th>パッケージ配布サイト</th>
               </tr>
               <tr>
-                <td rowspan=2>Android (2.0 and later)</td>
-                <td><a href="https://play.google.com/store/apps/details?id=jp.ogapee.onscripter.release">ONScripter</A> in Google Play</td>
+                <td rowspan="2">Android (2.0 and later)</td>
+                <td><a href="https://play.google.com/store/apps/details?id=jp.ogapee.onscripter.release">ONScripter</a> in Google Play</td>
               </tr>
               <tr>
                 <td><a href="android/">ONScripter on Android のページ</a><br>　自作ノベルゲームアプリの作成にも利用できます</td>
@@ -137,7 +137,7 @@
               </tr>
 
               <tr>
-                <td rowspan=3>Linux</td>
+                <td rowspan="3">Linux</td>
                 <td class="span">Debian 公式 <a href="http://packages.debian.org/sid/onscripter">Unstable (sid)</a></td>
               </tr>
               <tr>
@@ -148,7 +148,7 @@
               </tr>
 
               <tr>
-                <td rowspan=2>MacOSX</td>
+                <td rowspan="2">MacOSX</td>
                 <td class="span"><a href="https://github.com/Homebrew/homebrew-core/blob/master/Formula/o/onscripter.rb">Homebrew</a></td>
               </tr>
               <tr>
@@ -156,7 +156,7 @@
               </tr>
 
               <tr>
-                <td rowspan=1>Windows</td>
+                <td rowspan="1">Windows</td>
                 <td class="span"><a href="win/">ONScripter on Windows のページ</a></td>
               </tr>
 
@@ -202,7 +202,7 @@
               </tr>
 
               <tr>
-                <td rowspan=2>FreeBSD</td>
+                <td rowspan="2">FreeBSD</td>
                 <td class="span"><a href="http://www.freshports.org/devel/onscripter">Official FreeBSD package</a></td>
               </tr>
               <tr>
@@ -215,7 +215,7 @@
               </tr>
 
               <tr>
-                <td colspan=2>その他募集中</td>
+                <td colspan="2">その他募集中</td>
               </tr>
             </table>
           </div> <!-- sub-content -->
@@ -240,11 +240,11 @@
             <h3 id="feature">特長</h3>
 
             <ol>
-              <li> 現時点(2011/12/15)で最新の NScripter と互換性のあるセーブファイルを入出力することもできます。<a href="#save">異なるプラットフォーム上で同時に遊ぶ方法</a>を参照してください。
-              <li> 全ての操作をキーボードから行うことができます。もちろんマウスも使えます。
-              <li> CD Audio の再生を音楽ファイル(MP3, Ogg)の再生に変更することができます。
-              <li> マルチプラットフォームに対応しており、Windows, Linux, MacOS X, MacOS 9, <a href="android/">Android</a>(1.6 以上), iPhone, iPad, PSP, <a href="zaurus/index.html">Zaurus</a>(SL-5500,SL-A300,SL-B500,SL-C700), FreeBSD, <a href="/cgi-bin/kagemai/guest.cgi?id=381&project=onscripter&action=view_report">OpenBSD</a>, <a href="/cgi-bin/kagemai/guest.cgi?id=364&project=onscripter&action=view_report">Haiku</a>, Solaris(on SPARC), Tru64 UNIX, OS/2Warp, iPod, PocketPC, Playstation3, Wii, GP2X, NetWalker, Dreamcast での動作が確認されています。それ以外のプラットフォームでも、<a href="#environment">動作環境</a>が準備できれば動作するはずです。<br>
-              <li> 全ての命令・仕様を実装していないため、ゲームによっては挙動がおかしくなります。その場合は上記バグトラッキングシステムまで御報告下さい。
+              <li>現時点(2011/12/15)で最新の NScripter と互換性のあるセーブファイルを入出力することもできます。<a href="#save">異なるプラットフォーム上で同時に遊ぶ方法</a>を参照してください。</li>
+              <li>全ての操作をキーボードから行うことができます。もちろんマウスも使えます。</li>
+              <li>CD Audio の再生を音楽ファイル(MP3, Ogg)の再生に変更することができます。</li>
+              <li>マルチプラットフォームに対応しており、Windows, Linux, MacOS X, MacOS 9, <a href="android/">Android</a>(1.6 以上), iPhone, iPad, PSP, <a href="zaurus/index.html">Zaurus</a>(SL-5500,SL-A300,SL-B500,SL-C700), FreeBSD, <a href="/cgi-bin/kagemai/guest.cgi?id=381&project=onscripter&action=view_report">OpenBSD</a>, <a href="/cgi-bin/kagemai/guest.cgi?id=364&project=onscripter&action=view_report">Haiku</a>, Solaris(on SPARC), Tru64 UNIX, OS/2Warp, iPod, PocketPC, Playstation3, Wii, GP2X, NetWalker, Dreamcast での動作が確認されています。それ以外のプラットフォームでも、<a href="#environment">動作環境</a>が準備できれば動作するはずです。</li>
+              <li>全ての命令・仕様を実装していないため、ゲームによっては挙動がおかしくなります。その場合は上記バグトラッキングシステムまで御報告下さい。</li>
             </ol>
 
           </div> <!-- sub-content -->
@@ -261,33 +261,34 @@
 
             <h4>必須</h4>
             <ul>
-              <li> C++ 処理系
+              <li>C++ 処理系
                 <ul>
-                  <li> g++ 10.2.1 (Linux)
-                  <li> Visual Studio 2019 C++ (Windows)
+                  <li>g++ 10.2.1 (Linux)</li>
+                  <li>Visual Studio 2019 C++ (Windows)</li>
                 </ul>
-              <li> Unicode で指定された日本語 TTF フォント(ファイル名は default.ttf に)
-              <li> libjpeg-6b (<a href="http://www.ijg.org/">Independent JPEG Group</a>)
-              <li> bzip2-1.0.5 (<a href="http://sources.redhat.com/bzip2/">bzip2</a>)
-              <li> SDL-1.2.14, SDL_image-1.2.10, SDL_mixer-1.2.8, SDL_ttf-2.0.9 (<a href="http://www.libsdl.org">Simple Directmedia Layer</a>)
-              <li> FreeType 2.3.11 (<a href="http://freetype.sourceforge.net/">the Free Type Project</a>)
+              </li>
+              <li>Unicode で指定された日本語 TTF フォント(ファイル名は default.ttf に)</li>
+              <li>libjpeg-6b (<a href="http://www.ijg.org/">Independent JPEG Group</a>)</li>
+              <li>bzip2-1.0.5 (<a href="http://sources.redhat.com/bzip2/">bzip2</a>)</li>
+              <li>SDL-1.2.14, SDL_image-1.2.10, SDL_mixer-1.2.8, SDL_ttf-2.0.9 (<a href="http://www.libsdl.org">Simple Directmedia Layer</a>)</li>
+              <li>FreeType 2.3.11 (<a href="http://freetype.sourceforge.net/">the Free Type Project</a>)</li>
             </ul>
 
             <h4>推奨</h4>
             <ul>
-              <li> SMPEG-0.4.6<br>
-                MPEG1 形式の音楽ファイルを再生する場合には入れてください。MP3 を演奏するには SMPEG か MAD のいずれかが必要です。
-              <li> ogg-1.2.0, vorbis-1.3.1 (<a href="http://www.xiph.org/">The Ogg Vorbis CODEC Project</a>)<br>
-                Ogg Vorbis 形式の音楽ファイルを再生する場合には入れてください。同梱の Makefile.Linux, Makefile.ArmLinux ではデフォルトで使用するようになっています。整数演算のみを使用した Tremor vorbis を代わりに使うこともできます。
+              <li>SMPEG-0.4.6<br>
+                MPEG1 形式の音楽ファイルを再生する場合には入れてください。MP3 を演奏するには SMPEG か MAD のいずれかが必要です。</li>
+              <li>ogg-1.2.0, vorbis-1.3.1 (<a href="http://www.xiph.org/">The Ogg Vorbis CODEC Project</a>)<br>
+                Ogg Vorbis 形式の音楽ファイルを再生する場合には入れてください。同梱の Makefile.Linux, Makefile.ArmLinux ではデフォルトで使用するようになっています。整数演算のみを使用した Tremor vorbis を代わりに使うこともできます。</li>
             </ul>
 
             <h4>必要に応じて導入</h4>
             <ul>
               <li> mad-0.15.1b (<a href="http://www.mars.org/home/rob/proj/mpeg/">MAD: Mpeg Audio Decoder</a>)<br>
-                整数演算のみを使用した MP3 再生ライブラリです。Android や Zaurus で MP3 を再生する場合には必須です。MAD を使用するためには、SMPEG の代わりに MAD を有効にしてコンパイルした SDL_mixer を使用してください。
+                整数演算のみを使用した MP3 再生ライブラリです。Android や Zaurus で MP3 を再生する場合には必須です。MAD を使用するためには、SMPEG の代わりに MAD を有効にしてコンパイルした SDL_mixer を使用してください。</li>
 
               <li> avifile-0.7.48 (<a href="http://avifile.sourceforge.net/">avifile</a>)<br>
-                avi 命令を使ってムービーを再生する場合には入れてください。Linux で動作確認をしています。USE_AVIFILE を定義し AVIWrapper.o をリンクしてコンパイルすると使用されます。
+                avi 命令を使ってムービーを再生する場合には入れてください。Linux で動作確認をしています。USE_AVIFILE を定義し AVIWrapper.o をリンクしてコンパイルすると使用されます。</li>
             </ul>
 
             <p>当方では Linux (Debian Buster), <a href="android/">Android</a> (Sony (8.0)), <a href="ios/">iOS</a> (iPad2), (時々 Windows) で動作確認をしています。</p>
@@ -320,15 +321,15 @@
         <div class="content">
           <h2 id="todo">TODO</h2>
 
-          <OL>
-            <li> (<span style="color:red">高</span>)Lua 対応
-            <li> (<span style="color:#ff8800">中</span>)右クリックからの windowerase を実行する時に windoweffect の効果を反映させる。
-            <li> (<span style="color:#ff8800">中</span>)bgcopy で取得した画像をセーブ時にファイルに保存するようにする。
-            <li> (<span style="color:#ff8800">中</span>)文字の影が既に描画されている文字にかぶった場合に対処する。
-            <li> (<span style="color:#00ff00">低</span>)正式な英語モード(english 命令)への移行。
-            <li> (<span style="color:#00ff00">低</span>)existspbtn を spbtn として実装しているが、それでよいのかを検証する。
-            <li> (<span style="color:#00ff00">低</span>)コードの clean up。
-          </OL>
+          <ol>
+            <li>(<span style="color:red">高</span>)Lua 対応</li>
+            <li>(<span style="color:#ff8800">中</span>)右クリックからの windowerase を実行する時に windoweffect の効果を反映させる。</li>
+            <li>(<span style="color:#ff8800">中</span>)bgcopy で取得した画像をセーブ時にファイルに保存するようにする。</li>
+            <li>(<span style="color:#ff8800">中</span>)文字の影が既に描画されている文字にかぶった場合に対処する。</li>
+            <li>(<span style="color:#00ff00">低</span>)正式な英語モード(english 命令)への移行。</li>
+            <li>(<span style="color:#00ff00">低</span>)existspbtn を spbtn として実装しているが、それでよいのかを検証する。</li>
+            <li>(<span style="color:#00ff00">低</span>)コードの clean up。</li>
+          </ol>
 
         </div> <!-- content -->
 
@@ -535,31 +536,31 @@
             <h4>ONScripter から ONScripter へデータを移動</h4>
 
             <dl>
-              <dt>上記の書き出しファイルを全てそのままコピーしてください。
-              <dd>ONScripter_dir/* → ONScripter_dir/*
+              <dt>上記の書き出しファイルを全てそのままコピーしてください。</dt>
+              <dd>ONScripter_dir/* → ONScripter_dir/*</dd>
             </dl>
 
             <h4>NScripter から ONScripter へデータを移動</h4>
 
             <dl>
-              <dt>上記の書き出しファイルを全て（save*.datを含む）そのままコピーしてください。
-              <dd>NScripter_dir/* → ONScripter_dir/*
+              <dt>上記の書き出しファイルを全て（save*.datを含む）そのままコピーしてください。</dt>
+              <dd>NScripter_dir/* → ONScripter_dir/*</dd>
             </dl>
 
             <h4>ONScripter から NScripter へデータを移動</h4>
 
             <dl>
-              <dt>save*.dat を除く上記の書き出しファイルを全てそのままコピーしてください。
-              <dd>ONScripter_dir/* → NScripter_dir/*
-              <dt>save*.dat については sav ディレクトリ以下に生成されたファイルをコピーしてください。
-              <dd>ONScripter_dir/sav/save*.dat → NScripter_dir/save*.dat
+              <dt>save*.dat を除く上記の書き出しファイルを全てそのままコピーしてください。</dt>
+              <dd>ONScripter_dir/* → NScripter_dir/*</dd>
+              <dt>save*.dat については sav ディレクトリ以下に生成されたファイルをコピーしてください。</dt>
+              <dd>ONScripter_dir/sav/save*.dat → NScripter_dir/save*.dat</dd>
             </dl>
 
             <h4>注意点</h4>
             <ul>
-              <li> NScripter は、現時点(2011/12/15)で配布されている最新の nscr.exe を使用してください。<span style="color:red">古い NScripter が出力するセーブファイルを ONScripter で読み込むことはできません。</span>
-              <li> 最新の NScripter と ONScripter のデータ互換性は保証しませんが、私が試した限りは問題は生じておりません。
-              <li> ONScripter と NScripter を併用される方は、Windows 上では最初から上記の最新の nscr.exe を使用してください。その場合、あらかじめ sav というディレクトリを作成しておいてください。
+              <li> NScripter は、現時点(2011/12/15)で配布されている最新の nscr.exe を使用してください。<span style="color:red">古い NScripter が出力するセーブファイルを ONScripter で読み込むことはできません。</span></li>
+              <li> 最新の NScripter と ONScripter のデータ互換性は保証しませんが、私が試した限りは問題は生じておりません。</li>
+              <li> ONScripter と NScripter を併用される方は、Windows 上では最初から上記の最新の nscr.exe を使用してください。その場合、あらかじめ sav というディレクトリを作成しておいてください。</li>
             </ul>
 
           </div> <!-- sub-content -->
@@ -649,25 +650,25 @@ ret = 2
           <div class="sub-content">
             <h3 id="truetype-font">TrueType font による文字表示</h3>
 
-            <p> 文字を表示するためには、等幅の TrueType font を用意する必要があります。例えば Windows 7 には c:\Windows\Fonts の下に msgothic.ttc (ＭＳゴシック)があり、またフリーで手にはいるフォントには以下のものがあります。<br>
+            <p> 文字を表示するためには、等幅の TrueType font を用意する必要があります。例えば Windows 7 には c:\Windows\Fonts の下に msgothic.ttc (ＭＳゴシック)があり、またフリーで手にはいるフォントには以下のものがあります。</p>
 
             <dl>
-              <dt> <a href="http://jikasei.me/font/genjyuu/">源柔ゴシック</a>
-              <dd> <a href="http://ja.wikipedia.org/wiki/Source_Han_Sans">源ノ角ゴシック</a>を TrueType 形式に変換し、角を丸める加工を行い丸ゴシック風にした派生フォントです。特に GenJyuuGothicX-Monospace-Bold.ttf がきれいな太字で見やすくお勧めです。
+              <dt><a href="http://jikasei.me/font/genjyuu/">源柔ゴシック</a></dt>
+              <dd><a href="http://ja.wikipedia.org/wiki/Source_Han_Sans">源ノ角ゴシック</a>を TrueType 形式に変換し、角を丸める加工を行い丸ゴシック風にした派生フォントです。特に GenJyuuGothicX-Monospace-Bold.ttf がきれいな太字で見やすくお勧めです。</dd>
 
-              <dt> <a href="http://mix-mplus-ipa.osdn.jp/">M+とIPAの合成フォント</a>
-              <dd> M+ フォントと IPA フォントを元にした再配布可能なフォントです。特に Migu-2M-bold.ttf がきれいな太字で見やすくお勧めです。
+              <dt><a href="http://mix-mplus-ipa.osdn.jp/">M+とIPAの合成フォント</a></dt>
+              <dd>M+ フォントと IPA フォントを元にした再配布可能なフォントです。特に Migu-2M-bold.ttf がきれいな太字で見やすくお勧めです。</dd>
 
-              <dt> <a href="http://ossipedia.ipa.go.jp/ipafont/index.html">IPAフォント</a>
-              <dd> 再配布可能なゴシックと明朝のフォントです。
+              <dt><a href="http://ossipedia.ipa.go.jp/ipafont/index.html">IPAフォント</a></dt>
+              <dd>再配布可能なゴシックと明朝のフォントです。</dd>
 
-              <dt> <a href="http://mikachan-font.com/">みかちゃんフォント</a>
-              <dd> 手書き風のフォントです。
+              <dt><a href="http://mikachan-font.com/">みかちゃんフォント</a></dt>
+              <dd>手書き風のフォントです。</dd>
             </dl>
 
             <p> SDL_ttf の太字表示機能を使うと日本語の表示が汚くなってしまうため、ONScripter では太字指定を無視しています。そのため、特にスマートフォンなど画面が小さい機器では、上の Migu-2M-bold.ttf や HGゴシックE (HGRGE.TTC) など最初から太字のフォントを使用するとよいと思います。</p>
 
-            <p> ONScripter を起動する前に、使用する TrueType font ファイルを、<STRONG>default.ttf</STRONG> という名前にしてゲームのスクリプトがある場所のコピーしておいてください。</p>
+            <p> ONScripter を起動する前に、使用する TrueType font ファイルを、<strong>default.ttf</strong> という名前にしてゲームのスクリプトがある場所のコピーしておいてください。</p>
 
           </div> <!-- sub-content -->
 
@@ -697,16 +698,16 @@ ret = 2
               この時、現在のディレクトリに tmp.mus という一時ファイルを作ります。美しくないですが、SDL_mixer の MIDI 読み込み部がファイルからの読み込みしかサポートしていないためやむをえません。</p>
 
             <dl>
-              <dt> Unix系(動作確認は Linux と Zaurus)でソフトウェア音源で演奏する場合（デフォルト）。
-              <dd> SDL_mixer に取り込まれている timidity を使用してソフトウェア音源で演奏します。この場合、MIDIの音色データ<a href="http://www.libsdl.org/projects/SDL_mixer/timidity/timidity.tar.gz">timidity.tar.gz</a>をダウンロードして /usr/local/lib/ 以下に展開してください。
-              <dt> Windows の場合。
-              <dd> <a href="http://www.libsdl.org/projects/SDL_mixer/timidity/timidity.tar.gz">timidity.tar.gz</a>をダウンロードして c:\ 以下に展開してください。
-                これをしなくても MIDI が鳴ったと思っていたのですが、こうしないと落ちるようです。
-              <dt> Unix系(動作確認は Linux)で外部 MIDI 音源を利用して演奏する場合。
-              <dd> playmidi 等の外部音源を使用できる MIDI player をインストールし、環境変数 MUSIC_CMD を設定してください。（例 MUSIC_CMD=/usr/bin/playmidi）<br>
-                当方では、シリアル接続で外部音源を繋ぎ、MUSIC_CMD に '/usr/bin/midiplay -q -o /dev/ttyS0' を設定して動作確認をしています。<br>
+              <dt>Unix系(動作確認は Linux と Zaurus)でソフトウェア音源で演奏する場合（デフォルト）。</dt>
+              <dd>SDL_mixer に取り込まれている timidity を使用してソフトウェア音源で演奏します。この場合、MIDIの音色データ<a href="http://www.libsdl.org/projects/SDL_mixer/timidity/timidity.tar.gz">timidity.tar.gz</a>をダウンロードして /usr/local/lib/ 以下に展開してください。</dd>
+              <dt>Windows の場合。</dt>
+              <dd><a href="http://www.libsdl.org/projects/SDL_mixer/timidity/timidity.tar.gz">timidity.tar.gz</a>をダウンロードして c:\ 以下に展開してください。これをしなくても MIDI が鳴ったと思っていたのですが、こうしないと落ちるようです。</dd>
+              <dt>Unix系(動作確認は Linux)で外部 MIDI 音源を利用して演奏する場合。</dt>
+              <dd>playmidi 等の外部音源を使用できる MIDI player をインストールし、環境変数 MUSIC_CMD を設定してください。（例 MUSIC_CMD=/usr/bin/playmidi）<br />
+                当方では、シリアル接続で外部音源を繋ぎ、MUSIC_CMD に '/usr/bin/midiplay -q -o /dev/ttyS0' を設定して動作確認をしています。<br />
                 <a href="http://sourceforge.net/projects/playmidi/">playmidi</a>は、カーネルで認識される MIDI ポートに対してしか演奏できませんが、<a href="http://member.nifty.ne.jp/Breeze/softwares/unix/midiplay+.html">midiplay</a>はシリアルに直接出せます。<br>
                 <a href="http://crystal.apana.org.au/ghansper/MidiAxis.html">シリアルポートをMIDIポートにする patch</a>を使えば、playmidi でもシリアル接続音源を使えそうですが、未確認です。
+              </dd>
             </dl>
 
           </div> <!-- sub-content -->
@@ -777,7 +778,7 @@ ret = 2
             <p>修正するファイル: audio/mpeglayer3.cpp<br />
               関数 layer3reorderandantialias の前後に、下のように #pragma 指定を追加する。</p>
 
-            <PRE>
+            <pre>
 #pragma optimize( "g", off )
 void MPEGaudio::layer3reorderandantialias(int ch,int gr,
                                           REAL  in[SBLIMIT][SSLIMIT],
@@ -785,7 +786,7 @@ void MPEGaudio::layer3reorderandantialias(int ch,int gr,
   ......
 }
 #pragma optimize( "g", on )
-</PRE>
+</pre>
 
           </div> <!-- sub-content -->
 
@@ -803,7 +804,7 @@ void MPEGaudio::layer3reorderandantialias(int ch,int gr,
 
             <p>以下にスクリプト例を書きます。</p>
 
-            <PRE>
+            <pre>
 *define 
 clickstr `.?"`, 2 
 savename `Save the scene`, `Load the scene`, "Memory "
@@ -833,7 +834,7 @@ return
 *nothing
 `You didn't do anything.
 return
-</PRE>
+</pre>
 
           </div> <!-- sub-content -->
 

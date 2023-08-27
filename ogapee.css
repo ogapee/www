@@ -1,6 +1,6 @@
 /* 
  * CSS resource file for ONScripter web page
- *  Copyright (c) 2001-2022 Ogapee. All rights reserved.
+ *  Copyright (c) 2001-2023 Ogapee. All rights reserved.
  *  ogapee@aqua.dti2.ne.jp
  */
 
@@ -232,6 +232,7 @@ img {
 
 #main .content h3 {
     margin: 5px;
+    margin-top: 10px;
     padding: 0px;
     padding-left: 10px;
     border-left: solid 5px #0000aa;
