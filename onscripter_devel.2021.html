@@ -1,13 +1,13 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<HTML lang="ja">
+<html lang="ja">
 
-<HEAD>
-  <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <META http-equiv="Content-Style-Type" content="text/css">
-  <META name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-  <TITLE>ONScripter 開発日誌</TITLE>
-  <LINK rel="stylesheet" type="text/css" href="/ogapee.css">
-</HEAD>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <title>ONScripter 開発日誌</title>
+  <link rel="stylesheet" type="text/css" href="/ogapee.css">
+</head>
 
 <body>
 
@@ -127,8 +127,8 @@ is_running = YES;
 --- onscripter_ios-old/SDL/src/video/uikit/SDL_uikitopengles.m     2012-10-28 18:08:43.000000000 +0900
 +++ onscripter_ios-new/SDL/src/video/uikit/SDL_uikitopengles.m     2021-08-15 16:15:49.617991796 +0900
 @@ -132,7 +132,8 @@
-[view->viewcontroller setView:view];
-[view->viewcontroller retain];
+[view-&gt;viewcontroller setView:view];
+[view-&gt;viewcontroller retain];
 }
 -    [uiwindow addSubview: view];
 +    // removed by Ogapee to enable screen orientation control (2021.8.15)
