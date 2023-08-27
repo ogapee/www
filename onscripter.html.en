@@ -139,15 +139,15 @@
                 <td class="span">Debian Official <a href="http://packages.debian.org/sid/onscripter">Unstable (sid)</a></td>
               </tr>
               <tr>
-                <td class="span">Debian Official <a href="http://packages.debian.org/bookworm/onscripter">Testing (bookworm)</a></td>
+                <td class="span">Debian Official <a href="http://packages.debian.org/trixie/onscripter">Testing (trixie)</a></td>
               </tr>
               <tr>
-                <td class="span">Debian Official <a href="http://packages.debian.org/bullseye/onscripter">Stable (bullseye)</a></td>
+                <td class="span">Debian Official <a href="http://packages.debian.org/bookworm/onscripter">Stable (bookworm)</a></td>
               </tr>
 
               <tr>
                 <td rowspan=2>MacOSX</td>
-                <td class="span"><a href="https://github.com/Homebrew/homebrew-core/tree/master/Formula/onscripter.rb">Homebrew</a></td>
+                <td class="span"><a href="https://github.com/Homebrew/homebrew-core/blob/master/Formula/o/onscripter.rb">Homebrew</a></td>
               </tr>
               <tr>
                 <td><a href="http://tmkk.pv.land.to/onscripter/">ONScripter Launcher and Binary for Mac OS X</a></td>
