@@ -16,11 +16,11 @@
     <div id="header">
       <h1>ONScripter page</h1>
 
-      I have little time to maintain ONScripter recently and might not respond to requests immediately.<br />
-      Since: Feb. 6, 2002<br />
+      I have little time to maintain ONScripter recently and might not respond to requests immediately.<br>
+      Since: Feb. 6, 2002<br>
       <!--Last updated: Mar. 21, 2016 (BTS has been restored.)<br>-->
       <!--Last updated: Jan. 14, 2020 (ONScripter on Windows updated.)<br>-->
-      Last updated: Aug. 25, 2023 (Source package updated.)<br />
+      Last updated: Aug. 25, 2023 (Source package updated.)<br>
       <!--Last updated: Jan. 3, 2022 (Added <a href="/cgi-bin/kagemai/guest.cgi?id=364&project=onscripter&action=view_report">Haiku</a> to supported platforms.)<br>-->
       <!--Last updated: Jun. 29, 2014 (PNaCl Binary package updated.)<br>-->
       <!--Last updated: Jul. 12, 2009 (Experimental source updated.)<br>-->
@@ -282,7 +282,7 @@
 
             <h4>Optional</h4>
             <ul>
-              <li>mad-0.15.1b (<a href="http://www.mars.org/home/rob/proj/mpeg/">MAD: Mpeg Audio Decoder</a>)<br />
+              <li>mad-0.15.1b (<a href="http://www.mars.org/home/rob/proj/mpeg/">MAD: Mpeg Audio Decoder</a>)<br>
                 MAD is an MP3 decoding library that uses only integer arithmetics. This is essential if you want to play MP3 music files on Android or Zaurus. To use MAD, SDL_mixer library must be built with MAD enabled instead of SMPEG.</li>
 
               <li>avifile-0.7.48 (<a href="http://avifile.sourceforge.net/">avifile</a>)<br>
@@ -700,9 +700,9 @@ ret = 2
               <dt>Playing MIDI on Windows</dt>
               <dd>You need to download a set of sound patches <a href="http://www.libsdl.org/projects/SDL_mixer/timidity/timidity.tar.gz">timidity.tar.gz</a> and expand them under c:\.</dd>
               <dt>Playing MIDI using a hardware sound module on Unix (tested on Linux)</dt>
-              <dd>Please install a MIDI player that can use an external sound source such as playmidi and set the environment variable MUSIC_CMD. (e.g. MUSIC_CMD=/usr/bin/playmidi)<br />
-                We have confirmed that it works by connecting an external sound source via serial connection and setting '/usr/bin/midiplay -q -o /dev/ttyS0' in MUSIC_CMD. <br />
-                <a href="http://sourceforge.net/projects/playmidi/">playmidi</a> can only play to MIDI ports recognized by the kernel, but <a href="http://member.nifty.ne.jp/Breeze/softwares/unix/midiplay+.html">midiplay</a> can play directly to the serial port. <br />
+              <dd>Please install a MIDI player that can use an external sound source such as playmidi and set the environment variable MUSIC_CMD. (e.g. MUSIC_CMD=/usr/bin/playmidi)<br>
+                We have confirmed that it works by connecting an external sound source via serial connection and setting '/usr/bin/midiplay -q -o /dev/ttyS0' in MUSIC_CMD. <br>
+                <a href="http://sourceforge.net/projects/playmidi/">playmidi</a> can only play to MIDI ports recognized by the kernel, but <a href="http://member.nifty.ne.jp/Breeze/softwares/unix/midiplay+.html">midiplay</a> can play directly to the serial port. <br>
                 If you use <a href="http://crystal.apana.org.au/ghansper/MidiAxis.html">the patch</a> that turns serial ports into MIDI ports, you may be able to use serial-connected sound sources with playmidi as well, but this has not been tested.
               </dd>
             </dl>
@@ -771,7 +771,7 @@ nsaconv [-e] [-ns2] [-ns3] src_screen_width dst_screen_width src_NSA_filename ds
 
             <p>Some MP3 files are played with muddled sound when ONScripter is linked with pre-built SMPEG binaries on Windows. It is due to an optimization problem when compiling SMPEG with MSVC and can be solved by suppressing some of MSVC's global optimization, as shown below, and compiling it yourself.</p>
 
-            <p>File to be modified: audio/mpeglayer3.cpp<br />
+            <p>File to be modified: audio/mpeglayer3.cpp<br>
               Add the following #pragma specification before and after the function layer3reorderandantialias.</p>
 
             <pre>

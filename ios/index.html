@@ -1,13 +1,13 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html lang="ja">
 
-<HEAD>
-  <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <META http-equiv="Content-Style-Type" content="text/css">
-  <META name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-  <TITLE>ONScripter on iOS</TITLE>
-  <LINK rel="stylesheet" type="text/css" href="/ogapee.css">
-</HEAD>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <title>ONScripter on iOS</title>
+  <link rel="stylesheet" type="text/css" href="/ogapee.css">
+</head>
 
 <body>
 
@@ -27,8 +27,8 @@
       <h3>目次</h3>
       <div id="toc">
         <ul>
-          <li><a href="#introduction">はじめに</A></li>
-          <li><a href="#develop">アプリの開発方法</A>
+          <li><a href="#introduction">はじめに</a></li>
+          <li><a href="#develop">アプリの開発方法</a>
             <ul>
               <li><a href="#flow">開発の流れ</a></li>
               <li><a href="#environment">開発環境の構築</a>
@@ -48,7 +48,7 @@
               </li>
               <li><a href="#application">アプリの申請</a></li>
               <li><a href="#gamedata">zip 内のゲームデータの配置方法</a></li>
-              <li><a href="#run">実行方法</A></li>
+              <li><a href="#run">実行方法</a></li>
               <li><a href="#limitation">制限・注意事項</a></li>
               <li><a href="#misc">その他</a>
                 <ul>
@@ -85,25 +85,25 @@
 
           <table>
             <tr>
-              <th colspan=2>
+              <th colspan="2">
                 <a href="http://itunes.apple.com/jp/app/id576770215?mt=8">NOeSIS02 -羽化-</a>
               </th>
             </tr>
             <tr>
-              <th><a href="noesis02_20121117a_small.png"><img src="noesis02_20121117a_small.png" alt="NOeSIS02" width=256></a></th>
-              <th><a href="noesis02_20121117b_small.png"><img src="noesis02_20121117b_small.png" alt="NOeSIS02" width=256></a></th>
+              <th><a href="noesis02_20121117a_small.png"><img src="noesis02_20121117a_small.png" alt="NOeSIS02" width="256"></a></th>
+              <th><a href="noesis02_20121117b_small.png"><img src="noesis02_20121117b_small.png" alt="NOeSIS02" width="256"></a></th>
             </tr>
           </table>
 
           <table>
             <tr>
-              <th colspan=2>
+              <th colspan="2">
                 <a href="http://itunes.apple.com/jp/app/id504897191?mt=8">NOeSIS -嘘を吐いた記憶の物語-</a>
               </th>
             </tr>
             <tr>
-              <th><a href="noesis01_20120310a_small.png"><img src="noesis01_20120310a_small.png" alt="NOeSIS01" width=256></a></th>
-              <th><a href="noesis01_20120310b_small.png"><img src="noesis01_20120310b_small.png" alt="NOeSIS01" width=256></a></th>
+              <th><a href="noesis01_20120310a_small.png"><img src="noesis01_20120310a_small.png" alt="NOeSIS01" width="256"></a></th>
+              <th><a href="noesis01_20120310b_small.png"><img src="noesis01_20120310b_small.png" alt="NOeSIS01" width="256"></a></th>
             </tr>
           </table>
 
@@ -117,36 +117,36 @@
             <h3 id="flow">開発の流れ</h3>
 
             <ol>
-
               <li><b>製作</b><br>
                 <a href="http://www.nscripter.com/">NScripter</a> (2011/12/15)(<a href="http://ja.wikipedia.org/wiki/NScripter">解説</a>)を使用して Windows PC でゲームを製作します。<a href="http://tmkk.pv.land.to/onscripter/">ONScripter Launcher and Binary for Mac OS X</a> を使って MacOSX 上で製作することも可能です（この場合 Windows PC は必要ありません）。以下の入門講座が参考になると思います。
                 <ul>
-                  <li><a href="http://sorejyadamedarou.sakura.ne.jp/o_show/nscripter/index.htm">NScripter研究</a>
-                  <li><a href="http://ryuji.s1.xrea.com/nscr/nscr.html">NScripter講座</a>
-                  <li><a href="http://www42.atwiki.jp/ironmaiden/pages/17.html">NScripter使い方講座</a> (サンプルスクリプトあり)
+                  <li><a href="http://sorejyadamedarou.sakura.ne.jp/o_show/nscripter/index.htm">NScripter研究</a></li>
+                  <li><a href="http://ryuji.s1.xrea.com/nscr/nscr.html">NScripter講座</a></li>
+                  <li><a href="http://www42.atwiki.jp/ironmaiden/pages/17.html">NScripter使い方講座</a> (サンプルスクリプトあり)</li>
                   <li><a href="http://senzogawa.s90.xrea.com/reference/NScrAPI.html">NScripter API Reference</a> (使用可能な命令の一覧、ただし以下の命令はサポートしていません)
                     <ul>
-                      <li> 開発支援
-                      <li> 外部コマンド実行
-                      <li> CSVファイル操作
-                      <li> テキストボタン
+                      <li>開発支援</li>
+                      <li>外部コマンド実行</li>
+                      <li>CSVファイル操作</li>
+                      <li>テキストボタン</li>
                     </ul>
+                  </li>
                 </ul>
+              </li>
 
               <li><b>アプリの作成</b><br>
                 <a href="#environment">開発環境の構築</a>と<a href="#build">アプリの作成</a>を参考にして Xcode でアプリを作成します。実機で動作確認をする場合は、iPhone/iPad を USB で Mac に接続します。
+              </li>
 
               <li><b>ゲームデータの動作確認（ゲームデータを内蔵する場合）</b><br>
                 ゲームデータが完成したら、<a href="#contents">ゲームデータの内蔵方法</a>を参考にしてゲームデータを Xcode のリソースにドラッグし、HAVE_CONTENTS を定義してアプリを作成します。アプリを実行すると、初回にリソースから Library/Caches/ONS フォルダにゲームデータをコピーし、その後にゲームを開始します。<br>
-                Xcode からアプリを実行している場合は、Xcode の Windows → Devices から Installed Apps の ONScripter を選択し、Download Container でアプリのファイル一式を Mac 側にコピーし、Finder で中身を編集してから、Replace Container で端末に書き戻しても構いません。
+                Xcode からアプリを実行している場合は、Xcode の Windows → Devices から Installed Apps の ONScripter を選択し、Download Container でアプリのファイル一式を Mac 側にコピーし、Finder で中身を編集してから、Replace Container で端末に書き戻しても構いません。</li>
 
               <li><b>ダウンロードの動作確認（ゲームデータを初回にダウンロードする場合）</b><br>
-                ゲームデータが完成したら、zip ファイルに圧縮して自身で用意した WEB サーバ上に置きます。次に、その場所を ZIP_URL に設定してアプリを作成します。アプリを実行すると、ZIP_URL で指定した場所から zip をダウンロードし、ゲームデータを Library/Caches/ONS フォルダに展開してから実行します。正しくダウンロードしてゲームが開始されることを確認します。
+                ゲームデータが完成したら、zip ファイルに圧縮して自身で用意した WEB サーバ上に置きます。次に、その場所を ZIP_URL に設定してアプリを作成します。アプリを実行すると、ZIP_URL で指定した場所から zip をダウンロードし、ゲームデータを Library/Caches/ONS フォルダに展開してから実行します。正しくダウンロードしてゲームが開始されることを確認します。</li>
 
-              <li><b>公開</b> App Store でアプリを公開します。（要審査）
-
+              <li><b>公開</b> App Store でアプリを公開します。（要審査）</li>
             </ol>
-
           </div>
 
           <div class="sub-content">
@@ -159,14 +159,16 @@
             <ol>
               <li> Command Line Tools のインストール
                 <ul>
-                  <li> Xcode 5.1.1 以降では、Xcode を起動し、メニューバーの「Xcode」→「Open Developer Tool」→「More Developer Tools」を選択してください。そうすると、Downloads for Apple Developers web site に接続するので、サインインして、お使いの Xcode 用の Command Line Tools をダウンロードしてインストールしてください。
+                  <li> Xcode 5.1.1 以降では、Xcode を起動し、メニューバーの「Xcode」→「Open Developer Tool」→「More Developer Tools」を選択してください。そうすると、Downloads for Apple Developers web site に接続するので、サインインして、お使いの Xcode 用の Command Line Tools をダウンロードしてインストールしてください。</li>
                   <li> うまく行かない場合は、ターミナルから以下のコマンドを実行し、現れたダイアログでインストールを選択してもインストールできます。
                     <pre>
 $ xcode-select --install
 </pre>
-                    <p style="text-indent:0"><span style="color:red">注意：</span>先頭の $ はプロンプトなので入力しません。</p>
-                  <li> Xcode 5.1.1 未満では、Xcode を起動し、メニューバーの「Xcode」→「Preferences」→「Downloads」の Components のうち Command line Tools の横の「Install」ボタンを押してインストールしてください。
+                  </li>
+                  <p style="text-indent:0"><span style="color:red">注意：</span>先頭の $ はプロンプトなので入力しません。</p>
+                  <li> Xcode 5.1.1 未満では、Xcode を起動し、メニューバーの「Xcode」→「Preferences」→「Downloads」の Components のうち Command line Tools の横の「Install」ボタンを押してインストールしてください。</li>
                 </ul>
+              </li>
               <li> <a href="http://www.macports.org/install.php">Mac Ports</a> の「Quickstart」の中の macOS Ventura v13 をクリックし、MacPorts のインストーラをダウンロードしてインストールします。次に、ターミナルから以下のコマンドを入力してビルドに必要なツールをインストールします。関連ツールもインストールするため、終了するまで時間がかかります。
                 <pre>
 $ sudo port install automake
@@ -175,6 +177,7 @@ $ sudo port install libtool
 $ sudo port install pkgconfig
 </pre>
                 <p style="text-indent:0"><span style="color:red">注意：</span>先頭の $ はプロンプトなので入力しません。</p>
+              </li>
             </ol>
 
             <h4 id="SDK">SDK の導入</h4>
@@ -190,13 +193,13 @@ $ sudo port install pkgconfig
               </tr>
               <tr>
                 <td>20230407</td>
-                <td><a href="onscripter_ios-20230407.tar.gz">onscripter_ios-20230407.tar.gz</a> 最新版<br />
+                <td><a href="onscripter_ios-20230407.tar.gz">onscripter_ios-20230407.tar.gz</a> 最新版<br>
                   　　Xcode 14.3 + iOS 11.0-16.4.1 用<br>
                   　　Apple シリコンを搭載した Mac でビルドできるようにしました。</td>
               </tr>
               <tr>
                 <td>20220831</td>
-                <td><a href="onscripter_ios-20220831.tar.gz">onscripter_ios-20220831.tar.gz</a><br />
+                <td><a href="onscripter_ios-20220831.tar.gz">onscripter_ios-20220831.tar.gz</a><br>
                   　　Xcode 13.4.1 + iOS 9.0-15.6.1 用<br>
                   　　TestFlightで内部テストができることを確認しました。</td>
               </tr>
@@ -213,7 +216,7 @@ $ sudo port install pkgconfig
             </table>
 
             <ol>
-              <li>ファインダーを起動し、メニューバーから「移動」→「ホーム」を選択してホームディレクトリに移動します。次に、src という名前のフォルダを作成し、上から最新の SDK (onscripter_ios-*.tar.gz)をダウンロードして src フォルダの中に展開します。
+              <li>ファインダーを起動し、メニューバーから「移動」→「ホーム」を選択してホームディレクトリに移動します。次に、src という名前のフォルダを作成し、上から最新の SDK (onscripter_ios-*.tar.gz)をダウンロードして src フォルダの中に展開します。</li>
 
               <li>macOS の「アプリケーション」-&gt;「ユーティリティ」-&gt;「ターミナル.app」を起動し、以下のコマンドを実行します。
 
@@ -226,10 +229,10 @@ $ source dev_iPhoneSimulator.sh
 $ make clean
 $ make
 </pre>
-                <p style="text-indent:0"><span style="color:red">注意：</span>先頭の $ はプロンプトなので入力しません。また、初回の make clean はエラーで終了しますが、そのまま make に進んでください。</p>
+                <span style="color:red">注意：</span>先頭の $ はプロンプトなので入力しません。また、初回の make clean はエラーで終了しますが、そのまま make に進んでください。<br>
 
-                <p>これによって、以下のライブラリが実機用とシミュレータ用にそれぞれ作成されます。</p>
-
+                これによって、以下のライブラリが実機用とシミュレータ用にそれぞれ作成されます。<br>
+              </li>
             </ol>
 
           </div> <!-- sub-content -->
@@ -245,7 +248,7 @@ onscripter_ios/ONScripter.xcworkspace
 </pre>
 
             <div class="figure">
-              <p><img src="Xcode_20171230_fig1.png" alt="Fig.1" border=1><br>
+              <p><img src="Xcode_20171230_fig1.png" alt="Fig.1" border="1"><br>
                 図１：ONScripter のソースコードの導入</p>
             </div>
 
@@ -311,7 +314,7 @@ onscripter_main.cpp
                 <td><span style="color:red">ONScripter</span></td>
               </tr>
               <tr>
-                <td rowspan=12>Preprocessor Macros</td>
+                <td rowspan="12">Preprocessor Macros</td>
                 <td>IOS</td>
               </tr>
               <tr>
@@ -356,7 +359,7 @@ onscripter_main.cpp
             <p>ゲームデータを内蔵する場合は HAVE_CONTENTS を定義してください。この場合、ZIP_URL は指定しません。</p>
 
             <div class="figure">
-              <p><img src="Xcode_20171230_fig2.png" alt="Fig.2" border=1><br>
+              <p><img src="Xcode_20171230_fig2.png" alt="Fig.2" border="1"><br>
                 図２：ゲームデータの内蔵</p>
             </div>
 
@@ -406,7 +409,7 @@ onscripter_main.cpp
 
             <p>Xcode で &quot;Signing for &quot;ONScripter&quot; requires a development team. Select a development team in the Signing &amp; Capabilities editor.&quot; というエラーが出る場合には、<a href="#config">プロジェクトの設定</a>の Signing &amp; Capabilities の Signing 項で、Automatically manage signing のチェックを一度外してから再度チェックを入れ、続いてその直下の Team を設定してください。</p>
 
-            <p>Apple シリコンを搭載した Mac でシミュレータ向けにビルドする場合は、Build Settings -> Architectures -> Excluded Architectures の Debug と Release に Any iOS Simulator SDK の項目を追加して arm64 を設定してから、シミュレータ向けにビルドしてください。</p>
+            <p>Apple シリコンを搭載した Mac でシミュレータ向けにビルドする場合は、Build Settings -&gt; Architectures -&gt; Excluded Architectures の Debug と Release に Any iOS Simulator SDK の項目を追加して arm64 を設定してから、シミュレータ向けにビルドしてください。</p>
 
           </div> <!-- sub-content -->
 
@@ -418,10 +421,10 @@ onscripter_main.cpp
             <p>Xcode から App Store にアプリを登録するには以下のようにします。</p>
 
             <ol>
-              <li> メニューバーの「Product」-&gt;「Archive」を実行して申請用にアプリを作成します。
-              <li> 成功するとArchives一覧が表示されるので、今回作成したアーカイブが選択されていることを確認して「Distribute App」をクリックします。
-              <li> ダイアログがいくつか表示されますが、すべてデフォルトのまま「Next」を押します。
-              <li> 最後に Review ONScripter.ipa content: のダイアログが表示されるので、「Upload」を押します。
+              <li>メニューバーの「Product」-&gt;「Archive」を実行して申請用にアプリを作成します。</li>
+              <li>成功するとArchives一覧が表示されるので、今回作成したアーカイブが選択されていることを確認して「Distribute App」をクリックします。</li>
+              <li>ダイアログがいくつか表示されますが、すべてデフォルトのまま「Next」を押します。</li>
+              <li>最後に Review ONScripter.ipa content: のダイアログが表示されるので、「Upload」を押します。</li>
             </ol>
 
             <p> 正常にアップロードされると、App "ONScripter" successfully uploaded. と表示されます。</p>
@@ -432,19 +435,19 @@ onscripter_main.cpp
             <p>公開前に TestFlight によって内部テストを行う方法について説明します。</p>
 
             <ol>
-              <li><a href="http://appstoreconnect.apple.com/">App Store Connect</a>にログインして、マイAppからアップロードしたアプリを選択します。
-              <li>「TestFlight」をクリックしてから「内部テスト」の横の+をクリックします。新規内部グループを作成して、テスター（たとえば自分自身）を追加します。
-              <li>「ビルド」-&gt;「iOS」をクリックし、アップロードしたアプリのステータスが「コンプライアンスがありません」に変わったら、「管理」をクリックし、輸出コンプライアンス情報で「上記のアルゴリズムのどれでもない」を選択して、「内部テストを開始」をクリックします。
-              <li>アプリのステータスが「提出準備完了」に変わったら、上で作成した内部テストのグループをグループに追加します。
-              <li>テスターは、iPhoneもしくは iPad にApp StoreからTestFlightアプリをインストールしておきます。テスターにメールが送られてくるので、メール本文にあるTestFlightのURLにアクセスし、表示された招待コードをTestFlightアプリで入力すると、作成したアプリをインストールして実行できるようになります。
-              <li>作成したアプリを一度インストールすると、以降のアップデートはTestFlightアプリの中から実行できます。
+              <li><a href="http://appstoreconnect.apple.com/">App Store Connect</a>にログインして、マイAppからアップロードしたアプリを選択します。</li>
+              <li>「TestFlight」をクリックしてから「内部テスト」の横の+をクリックします。新規内部グループを作成して、テスター（たとえば自分自身）を追加します。</li>
+              <li>「ビルド」-&gt;「iOS」をクリックし、アップロードしたアプリのステータスが「コンプライアンスがありません」に変わったら、「管理」をクリックし、輸出コンプライアンス情報で「上記のアルゴリズムのどれでもない」を選択して、「内部テストを開始」をクリックします。</li>
+              <li>アプリのステータスが「提出準備完了」に変わったら、上で作成した内部テストのグループをグループに追加します。</li>
+              <li>テスターは、iPhoneもしくは iPad にApp StoreからTestFlightアプリをインストールしておきます。テスターにメールが送られてくるので、メール本文にあるTestFlightのURLにアクセスし、表示された招待コードをTestFlightアプリで入力すると、作成したアプリをインストールして実行できるようになります。</li>
+              <li>作成したアプリを一度インストールすると、以降のアップデートはTestFlightアプリの中から実行できます。</li>
             </ol>
 
             <h4>アプリの公開</h4>
 
             <ol>
-              <li><a href="http://appstoreconnect.apple.com/">App Store Connect</a>のマイAppからアップロードしたアプリを選択します。
-              <li>「App Store」をクリックして、必要な項目を記入してから「審査用に追加」を押します。以降の手順は未確認です。
+              <li><a href="http://appstoreconnect.apple.com/">App Store Connect</a>のマイAppからアップロードしたアプリを選択します。</li>
+              <li>「App Store」をクリックして、必要な項目を記入してから「審査用に追加」を押します。以降の手順は未確認です。</li>
             </ol>
 
           </div>
@@ -463,9 +466,9 @@ default.ttf   (自分で用意するフォントファイル)
 </pre>
 
             <ul>
-              <li>ゲームの構成ファイル(arc.nsa など) は解像度変更などはせずに元のファイル（サブフォルダを含む）をそのままコピーしてください。
+              <li>ゲームの構成ファイル(arc.nsa など) は解像度変更などはせずに元のファイル（サブフォルダを含む）をそのままコピーしてください。</li>
               <li><a href="../onscripter.html#truetype-font">TrueType font による文字表示</a>を参考に<span style="color:red">フォントファイルを default.ttf という名前で同じ場所に置いてください。</span><br>
-                例えば<a href="http://mix-mplus-ipa.sourceforge.jp/">M+とIPAの合成フォント</a>の Migu 2M の太字 (Migu-2M-bold.ttf) が、きれいな太字で見やすくお勧めです。
+                例えば<a href="http://mix-mplus-ipa.sourceforge.jp/">M+とIPAの合成フォント</a>の Migu 2M の太字 (Migu-2M-bold.ttf) が、きれいな太字で見やすくお勧めです。</li>
             </ul>
 
           </div> <!-- sub-content -->
@@ -502,11 +505,11 @@ default.ttf   (自分で用意するフォントファイル)
           <div class="sub-content">
             <h3 id="limitation">制限・注意事項</h3>
             <ul>
-              <li> ディスプレイの解像度に合うようにゲーム画面の解像度が自動調整されます。色深度は 32bit です。
-              <li> 電源ボタンもしくはホームボタンを押すと処理を中断して他のアプリを実行できるようになります。アイコンをタップするとゲームを再開します。
-              <li> 動画ファイルの再生は MPEG1, H.264, MPEG4 フォーマットに対応しています。
-              <li> 使用する音楽のサンプリング周波数は 22.05KHz か 44.1KHz のどちらかにしてください（混在可）。MP3, Ogg Vorbis, WAV をサポートしています。48 KHz などの音源は正常に再生されないので、<a href="http://www.vector.co.jp/soft/dl/winnt/art/se445019.html">えこでこツール</a>などを使って 44.1 KHz に変換してください。
-              <li> 画像は BMP, JPEG, PNG, GIF をサポートしています。
+              <li> ディスプレイの解像度に合うようにゲーム画面の解像度が自動調整されます。色深度は 32bit です。</li>
+              <li> 電源ボタンもしくはホームボタンを押すと処理を中断して他のアプリを実行できるようになります。アイコンをタップするとゲームを再開します。</li>
+              <li> 動画ファイルの再生は MPEG1, H.264, MPEG4 フォーマットに対応しています。</li>
+              <li> 使用する音楽のサンプリング周波数は 22.05KHz か 44.1KHz のどちらかにしてください（混在可）。MP3, Ogg Vorbis, WAV をサポートしています。48 KHz などの音源は正常に再生されないので、<a href="http://www.vector.co.jp/soft/dl/winnt/art/se445019.html">えこでこツール</a>などを使って 44.1 KHz に変換してください。</li>
+              <li> 画像は BMP, JPEG, PNG, GIF をサポートしています。</li>
             </ul>
 
           </div> <!-- sub-content -->
@@ -519,9 +522,9 @@ default.ttf   (自分で用意するフォントファイル)
             <h4 id="SDL">SDL</h4>
 
             <ul>
-              <li> Retina display に対応するために、「<a href="http://bugzilla.libsdl.org/show_bug.cgi?id=1394">Bug 1394 - Fixes for SDL's handling of "Retina" display on iOS devices</a>」のパッチをあてています。
-              <li> iOS 6.0 に対応するため、src/video/uikit 以下を、2012/10/29 時点のリポジトリ上の SDL のものと差し替えています。
-              <li> Xcode 6.1.1 に対応するために、以下のように修正しています。
+              <li>Retina display に対応するために、「<a href="http://bugzilla.libsdl.org/show_bug.cgi?id=1394">Bug 1394 - Fixes for SDL's handling of "Retina" display on iOS devices</a>」のパッチをあてています。</li>
+              <li>iOS 6.0 に対応するため、src/video/uikit 以下を、2012/10/29 時点のリポジトリ上の SDL のものと差し替えています。</li>
+              <li>Xcode 6.1.1 に対応するために、以下のように修正しています。
                 <pre>
 --- SDL-old/src/video/uikit/SDL_uikitappdelegate.m    2012-10-30 01:05:43.000000000 +0900
 +++ SDL-new/src/video/uikit/SDL_uikitappdelegate.m   2015-01-11 17:12:36.000000000 +0900
@@ -534,29 +537,32 @@ default.ttf   (自分で用意するフォントファイル)
  static char **forward_argv;
  static int exit_status;
 </pre>
+              </li>
             </ul>
 
 
             <h4 id="SDL_image">SDL_image</h4>
 
             <ul>
-              <li>IMG_bmp.c, IMG_gif.c, IMG_jpg.c, IMG_png.c の Target Membership にチェックを入れて使用されるようにしています。
-              <li>iOS 9.3.3 で読み込んだ画像が乱れる場合があるので、SDL_image 2.0 を参考に、IMG_ImageIO.m の CGColorSpaceCreateCalibrateRGB を CGColorSpaceCreateDeviceRGB に変更しました。
+              <li>IMG_bmp.c, IMG_gif.c, IMG_jpg.c, IMG_png.c の Target Membership にチェックを入れて使用されるようにしています。</li>
+              <li>iOS 9.3.3 で読み込んだ画像が乱れる場合があるので、SDL_image 2.0 を参考に、IMG_ImageIO.m の CGColorSpaceCreateCalibrateRGB を CGColorSpaceCreateDeviceRGB に変更しました。</li>
             </ul>
 
 
             <h4 id="SDL_mixer">SDL_mixer</h4>
 
             <ul>
-              <li> music_mad.c, music_mad.h の Target Membership にチェックを入れて使用されるようにしています。
-              <li> Build Settings の Preprocessor Macros に以下の定数を追加しています。
+              <li>music_mad.c, music_mad.h の Target Membership にチェックを入れて使用されるようにしています。</li>
+              <li>Build Settings の Preprocessor Macros に以下の定数を追加しています。
                 <pre>
 MP3_MAD_MUSIC
 </pre>
+              </li>
               <li>Build Settings の Header Search Paths に以下のパスを追加しています。
                 <pre>
 $(SRCROOT)/../../Release-iphoneos/include
 </pre>
+              </li>
             </ul>
 
 
@@ -577,43 +583,48 @@ $(SRCROOT)/../../Release-iphoneos/include
                 src += glyph-&gt;pixmap.pitch;
                 dst += textbuf-&gt;pitch;
 </pre>
+              </li>
               <li>Build Settings の Header Search Paths に以下のパスを追加しています。
                 <pre>
 $(SRCROOT)/../../Release-iphoneos/include
 $(SRCROOT)/../../Release-iphoneos/include/freetype2
 </pre>
+              </li>
             </ul>
 
 
             <h4 id="misc_library">その他のライブラリ</h4>
 
             <ul>
-              <li> libfreetype.a (<a href="http://www.freetype.org/">the Free Type Project</A> の freetype-2.4.8)
-              <li> libmad.a (<a href="http://www.mars.org/home/rob/proj/mpeg/">MAD: MPEG Audio Decoder</A> の libmad-0.15.1b)<br>
+              <li> libfreetype.a (<a href="http://www.freetype.org/">the Free Type Project</a> の freetype-2.4.8)</li>
+              <li> libmad.a (<a href="http://www.mars.org/home/rob/proj/mpeg/">MAD: MPEG Audio Decoder</a> の libmad-0.15.1b)<br>
                 ただし、以下のパッチが適用されています。
                 <ul>
-                  <li> Debian の <a href="http://packages.debian.org/ja/jessie/amd64/libmad0">libmad0 パッケージ</a> から入手できる <a href="libmad_0.15.1b-8.diff">libmad_0.15.1b-8.diff</a>
-                  <li> 上のパッチによって生成される debian/patch/libmad.thumb.diff
-                  <li> 上のパッチによって生成される debian/patch/Provide-Thumb-2-alternative-code-for-MAD_F_MLN.diff
-                  <li> <a href="libmad_0.15.1b-configure.diff">libmad_0.15.1b-configure.diff</a> (configure の修正)
-                  <li> <a href="libmad_0.15.1b-arm64.diff">libmad_0.15.1b-arm64.diff</a> (configure, fixed.h の修正)
+                  <li>Debian の <a href="http://packages.debian.org/ja/jessie/amd64/libmad0">libmad0 パッケージ</a> から入手できる <a href="libmad_0.15.1b-8.diff">libmad_0.15.1b-8.diff</a></li>
+                  <li>上のパッチによって生成される debian/patch/libmad.thumb.diff</li>
+                  <li>上のパッチによって生成される debian/patch/Provide-Thumb-2-alternative-code-for-MAD_F_MLN.diff</li>
+                  <li><a href="libmad_0.15.1b-configure.diff">libmad_0.15.1b-configure.diff</a> (configure の修正)</li>
+                  <li><a href="libmad_0.15.1b-arm64.diff">libmad_0.15.1b-arm64.diff</a> (configure, fixed.h の修正)</li>
                 </ul>
-              <li> libogg.a (<a href="http://www.xiph.org/downloads/">www.xiph.org/downloads</a> の libogg-1.3.1.tar.gz)
-              <li> libvorbisidec.a (<a href="http://ftp.de.debian.org/debian/pool/main/libv/libvorbisidec/">libvorbisidec</a> の libvorbisidec_1.0.2+svn18153)<br>
+              </li>
+              <li>libogg.a (<a href="http://www.xiph.org/downloads/">www.xiph.org/downloads</a> の libogg-1.3.1.tar.gz)</li>
+              <li>libvorbisidec.a (<a href="http://ftp.de.debian.org/debian/pool/main/libv/libvorbisidec/">libvorbisidec</a> の libvorbisidec_1.0.2+svn18153)<br>
                 ただし、以下のパッチが適用されています。
                 <ul>
-                  <li> <a href="https://github.com/kivy/kivy-ios/blob/master/src/tremor-configure.patch">tremor-configure.patch</a> から入手できる <a href="tremor-configure.patch">tremor-configure.patch</a>
-                  <li> <a href="http://git.yoctoproject.org/cgit.cgi/poky/plain/meta/recipes-multimedia/tremor/tremor-20120314/tremor-arm-thumb2.patch">[PATCH] tremor: add IT instructions for arm thumb2 tune flags.</a> から入手できる <a href="tremor-arm-thumb2.diff">tremor-arm-thumb2.diff</a>
-                  <li> <a href="libvorbisidec-1.0.2+svn18153-arm64.diff">libvorbisidec-1.0.2+svn18153-arm64.diff</a> (asm_arm.h の修正)
+                  <li><a href="https://github.com/kivy/kivy-ios/blob/master/src/tremor-configure.patch">tremor-configure.patch</a> から入手できる <a href="tremor-configure.patch">tremor-configure.patch</a></li>
+                  <li><a href="http://git.yoctoproject.org/cgit.cgi/poky/plain/meta/recipes-multimedia/tremor/tremor-20120314/tremor-arm-thumb2.patch">[PATCH] tremor: add IT instructions for arm thumb2 tune flags.</a> から入手できる <a href="tremor-arm-thumb2.diff">tremor-arm-thumb2.diff</a></li>
+                  <li><a href="libvorbisidec-1.0.2+svn18153-arm64.diff">libvorbisidec-1.0.2+svn18153-arm64.diff</a> (asm_arm.h の修正)</li>
                 </ul>
-              <li> liblua.a (<a href="http://www.lua.org/ftp/">Lua Download area</a> の lua-5.1.5.tar.gz)<br>
+              </li>
+              <li>liblua.a (<a href="http://www.lua.org/ftp/">Lua Download area</a> の lua-5.1.5.tar.gz)<br>
                 ただし、以下の修正を施すパッチ <a href="lua-5.1.5.diff">lua-5.1.5.diff</a> が適用されています。
                 <ul>
-                  <li> io_open で書き込み用ファイルのオープンに失敗しときに stdout を返すように修正
-                  <li> os_execute で system 関数の代わりに常に 0 を返すように修正
+                  <li>io_open で書き込み用ファイルのオープンに失敗しときに stdout を返すように修正</li>
+                  <li>os_execute で system 関数の代わりに常に 0 を返すように修正</li>
                 </ul>
-              <li> libsmpeg.a (<a href="http://packages.debian.org/wheezy/libsmpeg-dev">Debian パッケージ: libsmpeg-dev</a> の smpeg-0.4.5+cvs20030824-1.9)<br>
-                ただし、YUV Overlay による出力は無効にしてあります。
+              </li>
+              <li>libsmpeg.a (<a href="http://packages.debian.org/wheezy/libsmpeg-dev">Debian パッケージ: libsmpeg-dev</a> の smpeg-0.4.5+cvs20030824-1.9)<br>
+                ただし、YUV Overlay による出力は無効にしてあります。</li>
             </ul>
 
 

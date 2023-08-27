@@ -676,13 +676,13 @@ ret = 2
           <div class="sub-content">
             <h3 id="cd-audio-mapping">CD audio 演奏の振り替え</h3>
 
-            <p>ゲームのスクリプトがある場所に cd というディレクトリを作成し、そこに以下の名前で音楽ファイルを置きます。<br />
-              cd/track01.xxx<br />
-              cd/track02.xxx<br />
-              cd/track03.xxx<br />
-              ...<br />
-              cd/track14.xxx<br />
-              ...<br />
+            <p>ゲームのスクリプトがある場所に cd というディレクトリを作成し、そこに以下の名前で音楽ファイルを置きます。<br>
+              cd/track01.xxx<br>
+              cd/track02.xxx<br>
+              cd/track03.xxx<br>
+              ...<br>
+              cd/track14.xxx<br>
+              ...<br>
               音楽ファイルのフォーマットは mp3, ogg, wav 形式に対応しています。上のxxxは、使用するフォーマットに合わせて変更してください。</p>
 
             <p>スクリプト中の CD audio の１曲目を演奏する命令は、
@@ -694,7 +694,7 @@ ret = 2
           <div class="sub-content">
             <h3 id="midi">MIDI 演奏機能</h3>
 
-            <p>MIDI は SDL_mixer の機能を使って演奏します。<br />
+            <p>MIDI は SDL_mixer の機能を使って演奏します。<br>
               この時、現在のディレクトリに tmp.mus という一時ファイルを作ります。美しくないですが、SDL_mixer の MIDI 読み込み部がファイルからの読み込みしかサポートしていないためやむをえません。</p>
 
             <dl>
@@ -703,8 +703,8 @@ ret = 2
               <dt>Windows の場合。</dt>
               <dd><a href="http://www.libsdl.org/projects/SDL_mixer/timidity/timidity.tar.gz">timidity.tar.gz</a>をダウンロードして c:\ 以下に展開してください。これをしなくても MIDI が鳴ったと思っていたのですが、こうしないと落ちるようです。</dd>
               <dt>Unix系(動作確認は Linux)で外部 MIDI 音源を利用して演奏する場合。</dt>
-              <dd>playmidi 等の外部音源を使用できる MIDI player をインストールし、環境変数 MUSIC_CMD を設定してください。（例 MUSIC_CMD=/usr/bin/playmidi）<br />
-                当方では、シリアル接続で外部音源を繋ぎ、MUSIC_CMD に '/usr/bin/midiplay -q -o /dev/ttyS0' を設定して動作確認をしています。<br />
+              <dd>playmidi 等の外部音源を使用できる MIDI player をインストールし、環境変数 MUSIC_CMD を設定してください。（例 MUSIC_CMD=/usr/bin/playmidi）<br>
+                当方では、シリアル接続で外部音源を繋ぎ、MUSIC_CMD に '/usr/bin/midiplay -q -o /dev/ttyS0' を設定して動作確認をしています。<br>
                 <a href="http://sourceforge.net/projects/playmidi/">playmidi</a>は、カーネルで認識される MIDI ポートに対してしか演奏できませんが、<a href="http://member.nifty.ne.jp/Breeze/softwares/unix/midiplay+.html">midiplay</a>はシリアルに直接出せます。<br>
                 <a href="http://crystal.apana.org.au/ghansper/MidiAxis.html">シリアルポートをMIDIポートにする patch</a>を使えば、playmidi でもシリアル接続音源を使えそうですが、未確認です。
               </dd>
@@ -763,7 +763,7 @@ ret = 2
 
             <p>-q オプションで jpeg で圧縮する際の品質（０～１００）を指定することができます。小さい値を指定すると、品質が悪くなりますが、圧縮後のサイズが小さくなります。デフォルトとは７５です。</p>
 
-            <p>サイズを小さくしたアーカイブを使うときは、onscripter に --disable-rescale オプションを指定してください。<br />
+            <p>サイズを小さくしたアーカイブを使うときは、onscripter に --disable-rescale オプションを指定してください。<br>
               なお、Linux 等でも、-DPDA をつけてコンパイルすることにより、320x240 画面でゲームを実行することができます。</p>
 
           </div> <!-- sub-content -->
@@ -775,7 +775,7 @@ ret = 2
             <p>Windows でコンパイル済の SMPEG のバイナリを持ってくると、MP3 によっては音がぶつぶつとぎれて演奏されます。これは、SMPEG を MSVC でコンパイルする時の最適化の問題で、下記の通りに MSVC の global optimization を一部抑制する指定をし、自分でコンパイルすることで解決できます。</p>
 
 
-            <p>修正するファイル: audio/mpeglayer3.cpp<br />
+            <p>修正するファイル: audio/mpeglayer3.cpp<br>
               関数 layer3reorderandantialias の前後に、下のように #pragma 指定を追加する。</p>
 
             <pre>

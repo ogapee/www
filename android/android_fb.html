@@ -1,13 +1,13 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html lang="ja">
 
-<HEAD>
-  <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <META http-equiv="Content-Style-Type" content="text/css">
-  <META name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-  <TITLE> フレームバッファに直接アクセスする ONScripter on Android </TITLE>
-  <LINK rel="stylesheet" type="text/css" href="/ogapee.css">
-</HEAD>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <title> フレームバッファに直接アクセスする ONScripter on Android </title>
+  <link rel="stylesheet" type="text/css" href="/ogapee.css">
+</head>
 
 <body>
 
@@ -89,18 +89,18 @@ HREF="../onscripter.html">ONScripter のページ</a>を参照してください
 
           <ul>
             <li><a href="http://ogapee.at.infoseek.co.jp/android/onscripter_20100530_android">onscripter_20100530_android</a>
-              [ミラー <a href="http://onscripter.sourceforge.jp/android/onscripter_20100530_android"> onscripter_20100530_android</a>]
+              [ミラー <a href="http://onscripter.sourceforge.jp/android/onscripter_20100530_android"> onscripter_20100530_android</a>]</li>
           </ul>
 
           <p>制限・注意事項</p>
           <ul>
-            <li> root 権限が必要です。
-            <li> ESC キー（＝マウス右クリック）はホームボタンで代用しています。
-            <li> 音は鳴りません。/dev/eac がオーディオデバイスのようですが、SDL から使う方法が分かりません。動画再生も無効にしてあります。
-            <li> Emulator 上のマウスカーソルが実マウスカーソルに追従しません。キーボードショートカットでカーソルを移動してください。
-            <li> コンパイル時に -DPDA と -DPDA_AUTOSIZE を指定しています。解像度は画面いっぱいに自動調整されます。
-            <li> Emulator + SDL では実マウスが左クリックくらいしか効かないので、<a href="../onscripter.html#keyboard-shortcut">キーボードショートカット</a>を駆使してください。
-            <li> キーボードショートカットがスクリプトから無効にされないように、<a href="../onscripter.html#option">起動オプション</a>で --force-button-shortcut を指定した方がいいかもしれません。
+            <li>root 権限が必要です。</li>
+            <li>ESC キー（＝マウス右クリック）はホームボタンで代用しています。</li>
+            <li>音は鳴りません。/dev/eac がオーディオデバイスのようですが、SDL から使う方法が分かりません。動画再生も無効にしてあります。</li>
+            <li>Emulator 上のマウスカーソルが実マウスカーソルに追従しません。キーボードショートカットでカーソルを移動してください。</li>
+            <li>コンパイル時に -DPDA と -DPDA_AUTOSIZE を指定しています。解像度は画面いっぱいに自動調整されます。</li>
+            <li>Emulator + SDL では実マウスが左クリックくらいしか効かないので、<a href="../onscripter.html#keyboard-shortcut">キーボードショートカット</a>を駆使してください。</li>
+            <li>キーボードショートカットがスクリプトから無効にされないように、<a href="../onscripter.html#option">起動オプション</a>で --force-button-shortcut を指定した方がいいかもしれません。</li>
           </ul>
 
           <!--<p>CD-Audio の代わりに MP3 ファイルを使う場合は、44.1KHz もしくは 
@@ -175,9 +175,9 @@ echo "Altered environment for Android Development ARM"
             <p><a href="http://www.libsdl.org/">SDL本家</a>より SDL-1.2.14.tar.gz
               をダウンロード。</p>
 
-            <P>SDL-1.2.14/src/video/fbcon/SDL_fbvideo.c の中で、
+            <p>SDL-1.2.14/src/video/fbcon/SDL_fbvideo.c の中で、
               &quot;/dev/fb0&quot; を &quot;/dev/graphics/fb0&quot; に２個所置換しま
-              す。
+              す。</p>
 
             <pre>
 &gt; configure \
