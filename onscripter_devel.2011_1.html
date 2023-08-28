@@ -1,20 +1,19 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<HTML lang="ja">
+<html lang="ja">
 
-<HEAD>
-  <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <META http-equiv="Content-Style-Type" content="text/css">
-  <META name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-  <TITLE> ONScripter 開発日誌 </TITLE>
-  <LINK rel="stylesheet" type="text/css" href="/ogapee.css">
-</HEAD>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <title>ONScripter 開発日誌</title>
+  <link rel="stylesheet" type="text/css" href="/ogapee.css">
+</head>
 
 <body>
-
   <div id="body">
 
     <div id="header">
-      <H1>ONScripter 開発日誌</H1>
+      <h1>ONScripter 開発日誌</h1>
 
       Since: Feb. 6, 2002<br>
       Last updated: Dec. 26, 2011
@@ -25,33 +24,35 @@
       <h3>過去の開発日誌</h3>
 
       <div id="toc">
-
         <ul>
-          <li> <A HREF="onscripter_devel.2010_1.html"> 2010年</A>
-          <li> <A HREF="onscripter_devel.2009_1.html"> 2009年</A>
-          <li> <A HREF="onscripter_devel.2008_1.html"> 2008年</A>
-          <li> <A HREF="onscripter_devel.2007_1.html"> 2007年</A>
-          <li> <A HREF="onscripter_devel.2006_1.html"> 2006年</A>
-          <li> <A HREF="onscripter_devel.2005_1.html"> 2005年</A>
-          <li> <A HREF="onscripter_devel.2004_1.html"> 2004年</A>
-          <li> 2003年
+          <li><a href="onscripter_devel.2010_1.html">2010年</a></li>
+          <li><a href="onscripter_devel.2009_1.html">2009年</a></li>
+          <li><a href="onscripter_devel.2008_1.html">2008年</a></li>
+          <li><a href="onscripter_devel.2007_1.html">2007年</a></li>
+          <li><a href="onscripter_devel.2006_1.html">2006年</a></li>
+          <li><a href="onscripter_devel.2005_1.html">2005年</a></li>
+          <li><a href="onscripter_devel.2004_1.html">2004年</a></li>
+          <li>2003年
             <ul>
-              <li> <A HREF="onscripter_devel.2003_4.html">10月～12月</A>
-              <li> <A HREF="onscripter_devel.2003_3.html"> 7月～ 9月</A>
-              <li> <A HREF="onscripter_devel.2003_2.html"> 4月～ 6月</A>
-              <li> <A HREF="onscripter_devel.2003_1.html"> 1月～ 3月</A>
+              <li><a href="onscripter_devel.2003_4.html">10月～12月</a></li>
+              <li><a href="onscripter_devel.2003_3.html"> 7月～ 9月</a></li>
+              <li><a href="onscripter_devel.2003_2.html"> 4月～ 6月</a></li>
+              <li><a href="onscripter_devel.2003_1.html"> 1月～ 3月</a></li>
             </ul>
-          <li> 2002年
+          </li>
+          <li>2002年
             <ul>
-              <li> <A HREF="onscripter_devel.2002_4.html">10月～12月</A>
-              <li> <A HREF="onscripter_devel.2002_3.html"> 7月～ 9月</A>
-              <li> <A HREF="onscripter_devel.2002_2.html"> 4月～ 6月</A>
-              <li> <A HREF="onscripter_devel.2002_1.html"> 1月～ 3月</A>
+              <li><a href="onscripter_devel.2002_4.html">10月～12月</a></li>
+              <li><a href="onscripter_devel.2002_3.html"> 7月～ 9月</a></li>
+              <li><a href="onscripter_devel.2002_2.html"> 4月～ 6月</a></li>
+              <li><a href="onscripter_devel.2002_1.html"> 1月～ 3月</a></li>
             </ul>
-          <li> 2001年
+          </li>
+          <li>2001年
             <ul>
-              <li> <A HREF="onscripter_devel.2001.html">12月</A>
+              <li><a href="onscripter_devel.2001.html">12月</a></li>
             </ul>
+          </li>
         </ul>
       </div> <!-- toc -->
     </div> <!-- toc-container -->
@@ -68,7 +69,6 @@
           <p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=222">解像度について</a>」を元に、スクリプト先頭の ;$ による設定を読み込む部分のバグを修正しました。</p>
 
           <p>strsph 命令を実装しました。</p>
-
         </div>
 
         <div class="diary-day">
@@ -77,21 +77,18 @@
           <p>スクリプト先頭の ;$ による設定に対応しました。これにより任意の解像度を設定できるようになったため、--wide オプションは廃止しました。</p>
 
           <p>Android 版でも任意の解像度を設定できます。Android 版の場合は、スクリプトで指定された任意の解像度が、アスペクト比を保ったままデバイスの実画面を最大限使って表示されるように ONScripter 側で自動的に拡大・縮小されます。ボタンは、もし余白（右側か下側）があればそこに表示されます。</p>
-
         </div>
 
         <div class="diary-day">
           <h3>12月22日</h3>
 
           <p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=221">Regression: English mode not working after 20111218</a>」を元に、20111218 に修正ミスがあり、ENABLE_1BYTE_CHAR を指定したときに、英語モードで表示がおかしくなるバグを修正しました。</p>
-
         </div>
 
         <div class="diary-day">
           <h3>12月19日</h3>
 
           <p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=219">strsp・logsp2についてと要望</a>」を元に、20111218 に修正ミスがあり、主に文字列スプライトで、偶数番目に半角スペースが来てその直後に文字列が終了する場合に表示がおかしくなるバグが生じており、これを修正しました。</p>
-
         </div>
 
         <div class="diary-day">
@@ -100,28 +97,24 @@
           <p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=219">strsp・logsp2についてと要望</a>」を元に、strsp, logsp, logsp2 命令の表示位置がずれるバグを修正しました。また、getcursorpos2, kinsoku 命令を実装しました。</p>
 
           <p>先頭が半角文字であっても、常に 2byte ずつ文字を描画するように変更しました。</p>
-
         </div>
 
         <div class="diary-day">
           <h3>12月17日</h3>
 
           <p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=215">saveoffのロード</a>」を元に、saveoff 命令を実行したときに実行状態をメモリに保存し、savegame 命令か右クリックメニューからの保存でそれをファイルに出力するようにしました。saveon の状態では、本来は全命令の先頭で実行状態を保存しなければいけないようですが、この場合実行速度がかなり遅くなってしまうのであえてやりません。今回ご報告いただいた場合を含め、たいていの場合には今回の修正で同じ挙動になると思います。もし不具合があればご連絡下さい。</p>
-
         </div>
 
         <div class="diary-day">
           <h3>11月10日</h3>
 
           <p>MP3 形式の音楽をループなしで再生し、フェードアウトを有効にして停止しようとするときに、フェードアウト中に音楽の最後まで到達すると処理が無限ループに陥ってしまうバグを修正しました。</p>
-
         </div>
 
         <div class="diary-day">
           <h3>11月2日</h3>
 
           <p>Android 版において、ボタン表示の有無および画面の表示位置の情報を保存するようにしました。アプリを終了してから再び実行したときに設定が引き継がれます。</p>
-
         </div>
 
         <div class="diary-day">
@@ -130,14 +123,12 @@
           <p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=214">exbtn_dについて</a>」を元に、btnwait を実行した直後に exbtn_d の指定が反映されないことがあるバグを修正しました。</p>
 
           <p>エミュレータ上での確認ですが、Android 4.0 でも問題なく動作しています。</p>
-
         </div>
 
         <div class="diary-day">
           <h3>10月22日</h3>
 
           <p>フェードアウトを有効にした状態で Ogg Vorbis 形式の音楽を停止し、直後に音楽を再生したときに、新たに再生した音楽がすぐに停止してしまうことがあるバグを修正しました。</p>
-
         </div>
 
         <div class="diary-day">
@@ -146,21 +137,18 @@
           <p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=213">「海洋レストラン☆海猫亭」動作中の操作にて</a>」を元に、trap 命令が stop の状態でクリックもしくはスペース・リターンキーが押されたときに、resume 後に指定されたラベルにジャンプされないバグを修正しました。</p>
 
           <p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=212">bgmfadein/fadeoutについて</a>」を元に、mp3fadeout, bgmfadeout でフェードアウト時間を変更したときに、現在フェードアウト中の音楽は影響を受けないようにしました。</p>
-
         </div>
 
         <div class="diary-day">
           <h3>10月11日</h3>
 
           <p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=212">bgmfadein/fadeoutについて</a>」を元に、Ogg Vorbis 形式の音楽ファイルを再生するときのフェードイン・フェードアウトは、フェード開始後終了を待たずに次の命令に進むようにしました。本家では、Ogg Vorbis 形式の場合は終了を待たず、MP3 形式の場合は終了を待つようになっているため、これにならいました。20111010 では MP3 形式でしかチェックしていなかったため、常に終了を待つようになっていました。</p>
-
         </div>
 
         <div class="diary-day">
           <h3>10月10日</h3>
 
           <p>[Backport] <a href="http://unclemion.com/onscripter/">ONScripter-EN</a>を参考に mp3fadein, mp3fadeout, bgmfadein, bgmfadeout を実装しました。</p>
-
         </div>
 
         <div class="diary-day">
@@ -169,14 +157,12 @@
           <p>文字列スプライトで、ルビが有効な時にルビ一行分小さく画像を確保していたバグを修正しました。</p>
 
           <p>automode 実行時に画面効果が瞬間表示になってしまうバグを修正しました。</p>
-
         </div>
 
         <div class="diary-day">
           <h3>10月8日</h3>
 
           <p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=193">ムーンライトバスケットが動かない</a>」と「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=209">「ムーンライトバスケット」操作不可</a>」に関連して、新画像ボタン用の bclear, bcursor, bdef, bdown, bexec, bsp, btime, btrans を実装しました。</p>
-
         </div>
 
         <div class="diary-day">
@@ -185,7 +171,6 @@
           <p>追加機能要望「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=204">ns2アーカイブへの対応</a>」に関連して、ns2 アーカイブの読み込みルーチンのバグを修正しました。また、もし ns2 アーカイブが存在する場合は必ず読み込むようにしました。</p>
 
           <p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=210">「海洋レストラン☆海猫亭」動作不可</a>」を元に、文字列スプライトの指定が正しく解釈されない場合があったため修正しました。</p>
-
         </div>
 
         <div class="diary-day">
@@ -218,7 +203,6 @@ undefined method `to_time' for #&lt;DateTime: 10604607289/4320,0,2299161&gt;
  module Kagemai  
    module BaseDBIStore3
 </pre>
-
         </div>
 
         <div class="diary-day">
@@ -227,7 +211,6 @@ undefined method `to_time' for #&lt;DateTime: 10604607289/4320,0,2299161&gt;
           <p>Uncle Mion さんより、大文字と小文字が区別されないファイルシステムでは ONScripter.cpp と onscripter.cpp が同時に存在できないというご指摘をいただいたので、onscripter.cpp を onscripter_main.cpp に変更しました。</p>
 
           <p>追加機能要望「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=208">IS01での動画再生</a>」を元に、Android 版において動画ファイルを再生する際に動画ファイルが存在するか調べ、存在しない場合には動画再生アプリを呼び出さないようにしました。</p>
-
         </div>
 
         <div class="diary-day">
@@ -238,7 +221,6 @@ undefined method `to_time' for #&lt;DateTime: 10604607289/4320,0,2299161&gt;
           <p>セーブファイルをロード中にクリックもしくはタップを連打すると、読み込み中にイベントキューがあふれてしまい、必要なイベントを追加できずにフリーズしてしまうことがありました。対症療法ですが、ロード後にキューにたまったイベントを消去するようにしました。</p>
 
           <p>HTC Desire の OS を 2.3.3 にアップデートしました。てっきり OTA で配布されるものと思っていましたが、<a href="http://htcdev.com/">HTCDev</a>の Kernel Source Code からプログラムをダウンロードして実行する必要がありました。2.2 と比べて ONScripter の動作が体感できるくらい速くなりました。</p>
-
         </div>
 
         <div class="diary-day">
@@ -251,7 +233,6 @@ undefined method `to_time' for #&lt;DateTime: 10604607289/4320,0,2299161&gt;
           <p>yesnobox を解釈するようにしました。ただし、常にイエスであるとみなして変数に 1 をセットします。</p>
 
           <p>[Backport] 追加機能要望「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=204">ns2アーカイブへの対応</a>」を実現するため、<a href="http://unclemion.com/onscripter/">ONScripter-EN</a>を参考に ns2 アーカイブの読み込みに対応しました。</p>
-
         </div>
 
         <div class="diary-day">
@@ -260,7 +241,6 @@ undefined method `to_time' for #&lt;DateTime: 10604607289/4320,0,2299161&gt;
           <p>btndown 1 の時に、マウスボタンを押した瞬間のみボタン押下処理をするのではなく、押したままマウスを動かした場合でも押下処理をするようにしました。本家では、マウスボタンを押した状態ではマウスを動かさなくともイベントが連続して発生し押下処理をするようですが、これへの対応は保留にします。これを使うと、ドラッグして画面をスクロールするインターフェースが作成できます。</p>
 
           <p>strsp でルビが表示されるようにしました。</p>
-
         </div>
 
         <div class="diary-day">
@@ -290,7 +270,6 @@ undefined method `to_time' for #&lt;DateTime: 10604607289/4320,0,2299161&gt;
             }
         }
 </pre>
-
         </div>
 
         <div class="diary-day">
@@ -338,7 +317,6 @@ kagemai/project/onscripter/cache/cache.pstore
 </pre>
 
           <p>allsphide で立ち絵も消すようにしました。</p>
-
         </div>
 
         <div class="diary-day">
@@ -347,7 +325,6 @@ kagemai/project/onscripter/cache/cache.pstore
           <p>mp3(bgm) 使用時に、ある種の WAVE ファイルは Mix_LoadMUS_RW() を使ったストリーミング再生に失敗するので、失敗したときには Mix_LoadWAV_RW() によって一度全部メモリ上に読み込んでから再生するようにしました。この場合再生されるまで若干待たされますが、再生されないよりはましだと思います。</p>
 
           <p>本家との互換性向上のため細かい個所を修正しました。</p>
-
         </div>
 
         <div class="diary-day">
@@ -361,11 +338,9 @@ E/AndroidRuntime(  294): Uncaught handler: thread main exiting due to uncaught e
 E/AndroidRuntime(  294): java.lang.RuntimeException: mBaselineAlignedChildIndex of LinearLayout set to an index that is out of bounds.
 </pre>
 
-          <p style="text-indent:0">
-            調べたところ、Android 1.6 で LinearLayout を子要素なしで表示すると上の例外を出して落ちてしまうようです。そこで、ダミーの非表示ボタンを子要素として追加するようにしました。これで Android 1.6 でも遊べるようになったと思います。</p>
+          <p style="text-indent:0">調べたところ、Android 1.6 で LinearLayout を子要素なしで表示すると上の例外を出して落ちてしまうようです。そこで、ダミーの非表示ボタンを子要素として追加するようにしました。これで Android 1.6 でも遊べるようになったと思います。</p>
 
           <p>また、Android 版のバージョンが 20110828 となっていましたが、20110827 の間違いでした。今回の更新でファイル名は 20110827-1 になります。</p>
-
         </div>
 
         <div class="diary-day">
@@ -374,13 +349,14 @@ E/AndroidRuntime(  294): java.lang.RuntimeException: mBaselineAlignedChildIndex 
           <p>Android 版において、電源ボタンを押した後に正しく復帰するようにしました。１年前からの懸案がようやく解決しました。修正点は以下のとおりです。</p>
 
           <ol>
-            <li> 電源ボタンが押されると、通常は画面の向きが変更されるため、Activity を再構築するために onDestroy() が呼ばれますが、以下のようにしてこれを回避しました。<br>この方法は<a href="http://sonscripter.com">Sonscripter</a>の開発者の方に教えていただいたのですが、これで終了することは無くなったものの、復帰後に画面の描画が更新されなくなるという問題がありました。ちなみに、この状態から HOME ボタンで処理をバックグラウンドに移し、アイコンをタップして復帰すると正常に戻ります。<br>
+            <li>電源ボタンが押されると、通常は画面の向きが変更されるため、Activity を再構築するために onDestroy() が呼ばれますが、以下のようにしてこれを回避しました。<br>この方法は<a href="http://sonscripter.com">Sonscripter</a>の開発者の方に教えていただいたのですが、これで終了することは無くなったものの、復帰後に画面の描画が更新されなくなるという問題がありました。ちなみに、この状態から HOME ボタンで処理をバックグラウンドに移し、アイコンをタップして復帰すると正常に戻ります。<br>
               onscripter_android/AndroidManifest.xml:
               <pre>
 android:configChanges=&quot;orientation|keyboardHidden&quot;
 </pre>
+            </li>
 
-            <li> HOME ボタンを押して復帰すると、onPause() → onStop() → onStart() → onResume() が呼ばれ、その過程でサーフェスが破棄・生成されます。しかし、電源ボタンを押した場合は onPause() → onResume() が呼ばれるためサーフェスが古いままになっていました。そこで、onPause() と onResume() で GLSurfaceView_SDL のサーフェスを明示的に破棄・生成するようにしました。<br>
+            <li>HOME ボタンを押して復帰すると、onPause() → onStop() → onStart() → onResume() が呼ばれ、その過程でサーフェスが破棄・生成されます。しかし、電源ボタンを押した場合は onPause() → onResume() が呼ばれるためサーフェスが古いままになっていました。そこで、onPause() と onResume() で GLSurfaceView_SDL のサーフェスを明示的に破棄・生成するようにしました。<br>
               こんなことをしてよいのか分かりませんが、手元では問題なく動いています。<br>
               onscripter_android/src/Video.java:
               <pre>
@@ -399,14 +375,15 @@ android:configChanges=&quot;orientation|keyboardHidden&quot;
 		surfaceChanged(this.getHolder(), 0, mRenderer.mWidth, mRenderer.mHeight);
 	}
 </pre>
+            </li>
 
-            <li> wake lock を生成するときになぜか PowerManager.ON_AFTER_RELEASE を指定していたため、電源ボタンを押すと onPause() の直後に onRelease() が呼ばれていました。そのため、画面がオフにならず、また音楽も再生され続けていました。以下のように wake lock を作成することによって、電源ボタンを押すと画面がオフになりかつ音楽の音量が０になるようになりました。なお、もう一度電源ボタンを押すと正しくゲームに復帰します。<br>
+            <li>wake lock を生成するときになぜか PowerManager.ON_AFTER_RELEASE を指定していたため、電源ボタンを押すと onPause() の直後に onRelease() が呼ばれていました。そのため、画面がオフにならず、また音楽も再生され続けていました。以下のように wake lock を作成することによって、電源ボタンを押すと画面がオフになりかつ音楽の音量が０になるようになりました。なお、もう一度電源ボタンを押すと正しくゲームに復帰します。<br>
               onscripter_android/src/ONScripter.java:
               <pre>
 	wakeLock = pm.newWakeLock(PowerManager.SCREEN_DIM_WAKE_LOCK, "ONScripter");
 </pre>
+            </li>
           </ol>
-
         </div>
 
         <div class="diary-day">
@@ -417,14 +394,12 @@ android:configChanges=&quot;orientation|keyboardHidden&quot;
           <p>Android 版の専用アプリを作成する場合に、今まではゲームデータを初回にダウンロードする必要がありましたが、<a href="android/#customize">ゲームデータを内蔵したアプリ</a>も作成できるようにしました。assets フォルダにゲームの構成ファイルを配置してアプリを作成し、インストール後の初回起動時に SD カードにコピーします。</p>
 
           <p>ところで、Android 2.2 以前では、assets フォルダにある 1MB 以上のファイルを圧縮して apk に含める、プログラムから読み込む際に失敗してしまいます。これを回避するには、ant の設定ファイル (main_rules.xml) の中で &lt;nocompress /&gt; を有効にします。こうすると、assets フォルダ内のファイルを圧縮しないで apk が作成され、大きなファイルでも問題なく読み込んでコピーすることができるようになります。</p>
-
         </div>
 
         <div class="diary-day">
           <h3>8月25日</h3>
 
           <p>Android 版において、ボタンとメニューの日本語表示に対応しました。日本語環境では日本語に、その他の環境では英語表示になります。また、<a href="android/#button">ボタン</a>と<a href="android/#menu">メニュー</a>の内容を変更し、「上」「下」ボタンで前後の選択ボタンに移動できるようにしました。画面が小さくてボタンが押しづらい場合に利用してください。</p>
-
         </div>
 
         <div class="diary-day">
@@ -442,7 +417,6 @@ LOCAL_CFLAGS := $(LOCAL_C_INCLUDES:%=-I%) \
 	-DSDL_CURDIR_PATH=\"$(SDL_CURDIR_PATH)\" \
 	-DSDL_TRACKBALL_KEYUP_DELAY=$(SDL_TRACKBALL_KEYUP_DELAY)
 </pre>
-
         </div>
 
         <div class="diary-day">
@@ -451,21 +425,18 @@ LOCAL_CFLAGS := $(LOCAL_C_INCLUDES:%=-I%) \
           <p>transbtn を実行して btnwait でボタンをクリックした際に、候補となるボタンが複数ある場合はその場所で最も透過度が低い（不透明な）ボタンを選択するようにしました。</p>
 
           <p>btntime で 0 を指定したときに、btnwait で待ち時間が 0 にならないバグを修正しました。</p>
-
         </div>
 
         <div class="diary-day">
           <h3>8月17日</h3>
 
           <p>Android 版において、MENU ボタンを押すと<a href="android/#menu">メニュー</a>が出るようにしました。これに伴い、右クリックを MENU ボタンで代用する機能と BACK ボタンを押しながら MENU ボタンを押すと終了する機能は無くなりました。</p>
-
         </div>
 
         <div class="diary-day">
           <h3>8月16日</h3>
 
           <p>Android 版において、初回にダウンロードするゲームデータ(zip ファイル)の暗号化に対応しました。暗号方式は <a href="http://www.winzip.com/">WinZip</a> の 256-bit AES のみをサポートしています。パスワードはパッケージ(apk)に埋め込みます。暗号化手順については<a href="android/#customize">ゲームデータの初回ダウンロード機能</a>を参照してください。これで有料アプリケーションを開発しやすくなったと思います。</p>
-
         </div>
 
         <div class="diary-day">
@@ -484,7 +455,6 @@ LOCAL_CFLAGS := $(LOCAL_C_INCLUDES:%=-I%) \
           <p>ひしゃまるさんからのバグ報告を元に、スプライトの大きさが意図せず変更されてしまうことがあるバグを修正しました。</p>
 
           <p>ひしゃまるさんからのバグ報告を元に、グラフィックファイル指定において&quot;&gt;幅,高さ,#色&quot;で長方形を設定したときに、16bpp モードでは色が正しく設定されないバグを修正しました。</p>
-
         </div>
 
         <div class="diary-day">
@@ -502,26 +472,25 @@ LOCAL_CFLAGS := $(LOCAL_C_INCLUDES:%=-I%) \
           <p>Android 版の<a href="android/#customize">ゲームデータの初回ダウンロード機能</a>を改善しました。</p>
 
           <ol>
-            <li> zip 内のディレクトリが展開されないバグを修正しました。
-            <li> BufferedInputStream, BufferedOutputStream を介してファイルの読み書きをするようにしました。ディスクのアクセス速度が遅い場合でも、データを貯めて一度に読み書きするのでゲームデータの展開速度が多少速くなっていると思います。
-            <li> read/write の間に以下のウェイトを入れることによってプログレスバーの更新頻度を上げ、止まっているように見えることがないようにしました。
+            <li>zip 内のディレクトリが展開されないバグを修正しました。</li>
+            <li>BufferedInputStream, BufferedOutputStream を介してファイルの読み書きをするようにしました。ディスクのアクセス速度が遅い場合でも、データを貯めて一度に読み書きするのでゲームデータの展開速度が多少速くなっていると思います。</li>
+            <li>read/write の間に以下のウェイトを入れることによってプログレスバーの更新頻度を上げ、止まっているように見えることがないようにしました。
               <pre>
 try{
     Thread.sleep(1);
 } catch (InterruptedException e){
 }
 </pre>
+            </li>
           </ol>
 
           <p> フォルダに .nomedia というファイルを置くと、そのフォルダより下の階層にある画像や音楽ファイルはギャラリーや音楽プレイヤーの検索対象外になるようです。</p>
-
         </div>
 
         <div class="diary-day">
           <h3>8月7日</h3>
 
           <p><a href="http://cutlass.qee.jp">cutlass さん</a>製作のゲーム<a href="https://market.android.com/details?id=jp.cutlass.noesis">NOeSIS 体験版</a>がアンドロイドマーケットで公開されました。<a href="android/">ONScripter on Android</a>をゲームエンジンに使っていただいています。今回、ダウンロード機能の追加などで協力させていただきました。おもしろいのでぜひ遊んでください。</p>
-
         </div>
 
         <div class="diary-day">
@@ -538,14 +507,12 @@ request.addHeader("Range", "bytes="+downloaded+"-"+totalLen);
 </pre>
           <p style="text-indent:0">
             によって、（可能なら）タイムアウトした時点からダウンロードを再開するようにしました。また、上の変更に伴い、ダウンロードと展開を同時に行っていたのを、まず zip ファイルをダウンロードし、ダウンロード後に展開するように変更しました。</p>
-
         </div>
 
         <div class="diary-day">
           <h3>8月1日</h3>
 
           <p>Android 版において、<a href="android/#customize">ゲームデータの初回ダウンロード機能</a>を実装しました。この機能を使ってパッケージを作成し、ゲームの構成ファイルを単一の zip ファイルにまとめてウェブサーバ上に置いておくと、初回のみインターネット経由でダウンロードして端末に展開します。</p>
-
         </div>
 
         <div class="diary-day">
@@ -554,7 +521,6 @@ request.addHeader("Range", "bytes="+downloaded+"-"+totalLen);
           <p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=201">お絵かき戦争で落ちる</a>」を元に、getcselstr で、定義されていない選択肢の文字列を取得しようとすると終了してしまうバグを修正しました。定義されていない場合は空文字列を設定するようにしました。</p>
 
           <p>１年前からの懸案ですが、Android 版を実行中に電源ボタンを押すと onPause() -&gt; onStop() -&gt; onDestroy() が呼ばれ、もう一度電源ボタンを押すと onCreate() -&gt; onStart() -&gt; onResume() が呼ばれてゲーム選択画面から再開してしまいます。一方、HOME ボタンを押すと onPause() -&gt; onStop() まで呼ばれ、バックグラウンドで実行を続けます。バックグラウンドから復帰をすると、onRestart() -&gt; onStart() -&gt; onResume() が呼ばれて続行します。電源ボタンを押したときも同じようにしたいのですが、どうしたらよいか分かりません。Winamp は電源ボタンを押しても再生し続けるので、技術的にはできそうですが…。</p>
-
         </div>
 
         <div class="diary-day">
@@ -563,7 +529,6 @@ request.addHeader("Range", "bytes="+downloaded+"-"+totalLen);
           <p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=197">恋するトナカイで勝手にページ送りされる</a>」を元に、texthide 状態でも文字描画直後は文字が表示されるようにしました。根本的には、スクリプト側で texthide 状態のまま textshow をせず進行しているところに問題があり、そのため本家を使っても右クリックメニューから戻ると文章が復帰しません。また、この修正に伴い不必要な描画を削減しているので、全体的な描画速度も向上していると思います。もしかしたら、別の個所で表示がおかしくなっているかもしれないため、その場合はご報告下さい。</p>
 
           <p>Android 版をコンパイルしようとしたら、デバッグキーの有効期限が切れていました。Android 版の開発を始めてからちょうど１年が経過したことになります。~/.android/debug.keystore を削除して再コンパイルしたところ、自動的に新しいデバッグキーが作成されました。デバッグキーが変わったため、パッケージのアップデートはできません。古い ONScripter はいったんアンインストールしてから、新しい ONScripter をインストールしてください。</p>
-
         </div>
 
         <div class="diary-day">
@@ -602,7 +567,6 @@ request.addHeader("Range", "bytes="+downloaded+"-"+totalLen);
 
 []$ gunzip -c mysql_onscripter.dump.gz | mysql -u onscripter -p -h mysql?.sourceforge.jp
 </pre>
-
         </div>
 
         <div class="diary-day">
@@ -613,7 +577,6 @@ request.addHeader("Range", "bytes="+downloaded+"-"+totalLen);
 
           <p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=196">
               人工女神がボタン操作で落ちる</a>」を元に、prnum において、数値ラベル番号が0～99の範囲を超えている場合に、処理を中断（ゲームは続行）するようにしました。なお prnum は、本家のマニュアルを見ると ver 2.93 以降で非推奨になっています。</p>
-
         </div>
 
         <div class="diary-day">
@@ -629,7 +592,6 @@ request.addHeader("Range", "bytes="+downloaded+"-"+totalLen);
               レミュオールの錬金術師で落ちる</a>」を元に、SDL のイベントが立て続けに発生すると、キューに入った ONS_BREAK_EVENT が正しく処理されないバグを修正しました。</p>
 
           <p>ソースを少し修正し、Android 版バイナリも更新しました。ファイル名は同一です。</p>
-
         </div>
 
         <div class="diary-day">
@@ -640,7 +602,6 @@ request.addHeader("Range", "bytes="+downloaded+"-"+totalLen);
           <p>今のところ VPlayer は快適です。ただし、独立した動画プレーヤーであるため、ONScripter の画面（左寄せ）からシームレスに動画画面（中央寄せ）に移行できない点が難点ですが。</p>
 
           <p>VPlayer Advanced という動画プレーヤー(VPlayer とは無関係)が出ていたので試してみましたが、ONScripter から使う場合には、同じ動画を再生しようとすると最初からではなく前回中断したところから再生される、画面がスクリーンいっぱいに拡大されるため HTC Desire では横に延びてしまう、といった不具合がありました。</p>
-
         </div>
 
         <div class="diary-day">
@@ -649,7 +610,6 @@ request.addHeader("Range", "bytes="+downloaded+"-"+totalLen);
           <p>Android 版の外部動画プレーヤーとして RockPlayer Lite を使用していましたが、同じ動画を再生しようとすると最初からではなく前回中断したところから再生される、たまにプレーヤーが起動されないことがある、たまに ONScripter の onDestroy() が呼ばれ終了してしまうことがある、など色々不具合がありました。代わりに VPlayer を使ってみたところ、今のところ上記の問題は発生せず快適に使用できています。</p>
 
           <p>Android 版をコンパイルする時の<a href="android/#customize">カスタマイズ</a>について記載しました。</p>
-
         </div>
 
         <div class="diary-day">
@@ -673,7 +633,6 @@ public void playVideo(char[] filename){
     }
 }
 </pre>
-
         </div>
 
         <div class="diary-day">
@@ -682,14 +641,12 @@ public void playVideo(char[] filename){
           <p>Android 版において、Widget を使用して画面の右側（もしくは下側）に表示されるボタンを描画するようにしました。これまでは ONScripter 内で文字だけを使ってボタンを描画していたため、見た目がずいぶんよくなったと思います。ONScripter のソースの変更はありません。ボタン描画のコードは次回のリリースで削除します。</p>
 
           <p>Android 版で movie などから動画(MPEG-1)を再生できるようにしたいのですが、よい方法を思いつきません。SMPEG はコンパイルは簡単にできましたが、そのままでは画面がそもそも描画されず、また音声は再生されるものの遅延がひどくて実用になりません。MPEG-4 に変換することを前提に VideoView で再生しようとしましたが、GLSurfaceView.Renderer.onDrawFrame() -&gt; ONScripter (Native C++) -&gt; Handler -&gt; VideoView という経路では再生できませんでした。困りました。</p>
-
         </div>
 
         <div class="diary-day">
           <h3>2月26日<span style="color:red">重大なバグ修正</span></h3>
 
           <p>Android 版でゲームをしていたところ、以前から認識はしていたのですがあまりに頻繁に落ちるので、原因を探ってみました。__android_log_print() を使っていわゆる printf デバッグをした結果、ONScripterLabel::stopBGM() 内に Android 版に限らずセグメンテーションフォルトを引き起こす可能性のあるバグを見つけたため修正しました。音楽再生を開始するタイミングでよく落ちていた問題はこれが原因だと思います。修正後に某ゲームを最初から最後までスキップで流してみましたが一度も落ちませんでした。これでかなり安定したと思います。</p>
-
         </div>
 
         <div class="diary-day">
@@ -700,14 +657,12 @@ public void playVideo(char[] filename){
           <p>lsp2 系の命令において、X拡大率とY拡大率の積が負の場合に画像が表示されないバグを修正しました。</p>
 
           <p>transbtn を実装しました。transbtn 使用時にキーボードショートカットによってボタンの選択ができるように、マウスカーソルによるボタンの選択状態を判定する際に、ボタンの矩形領域の一番左上の１画素は常に可視であるとして処理しています。</p>
-
         </div>
 
         <div class="diary-day">
           <h3>1月29日</h3>
 
           <p>Android 版において、Home キーを押して処理をバックグラウンドに移したときに、音量が０になるようにしました。</p>
-
         </div>
 
         <div class="diary-day">
@@ -716,7 +671,6 @@ public void playVideo(char[] filename){
           <p>画像ファイルや音楽ファイルを読み込む際に new(std::nothrow) を使い、NULL が返ってきた場合には読み込みを中止して続行するようにしました。突然落ちることが少なくなるかもしれません。</p>
 
           <p>コードを整理しました。</p>
-
         </div>
 
         <div class="diary-day">
@@ -727,7 +681,6 @@ public void playVideo(char[] filename){
           <p>入力待ちをクリックで飛ばしたときに、瞬間表示がテキスト終端で止まらないバグを修正しました。</p>
 
           <p>コードを整理しました。</p>
-
         </div>
 
         <div class="diary-day">
@@ -739,7 +692,6 @@ public void playVideo(char[] filename){
           <p>[Backport] <a href="http://onscripter.unclemion.com/">ONScripter-EN</a>を参考に lsp2add, lsph2add, lsp2sub, lsph2sub を実装しました。</p>
 
           <p>!w, wait がクリックで飛ばせるようになっていたため修正しました。もしかしたら、他のクリック待ち判定に悪影響が出ているかもしれません。</p>
-
         </div>
 
         <div class="diary-day">
@@ -750,7 +702,6 @@ public void playVideo(char[] filename){
             画面上部に disable rescale の有無を指定するチェックボックスを配置しま
             した。チェックをすると、アーカイブ内の画像の大きさを画面に合わせて自動
             的に調整する機能が無効になります。</p>
-
         </div>
 
         <div class="diary-day">
@@ -760,7 +711,6 @@ public void playVideo(char[] filename){
               Zaurus で透過 PNG の表示がおかしい。</a>」に関連して、Zaurus 版の関連
             ライブラリパッケージ(20110105)に Ogg Vorbis 形式の音楽ファイルが再生さ
             れない問題があったため修正しました。</p>
-
         </div>
 
         <div class="diary-day">
@@ -769,7 +719,6 @@ public void playVideo(char[] filename){
           <p>アルファ値のない 24bit PNG を透過形式 a (アルファブレンド)で読み込む場合に、画像の右半分をマスク画像とするのではなく、本家と同じく画像全体を表示するようにしました。「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=175">onscripterでの画像表示</a>」や「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=180">Zaurus での透過 PNG の表示がおかしい。</a>」や「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=184">αブレンドのpng</a>」が関連するバグ報告です。</p>
 
           <p>Zaurus 版のライブラリパッケージ(20101229)の作成方法が間違っており、PNG 画像を読み込むことができなかったため、作り直しました。</p>
-
         </div>
 
       </div> <!-- diary -->
@@ -781,7 +730,6 @@ public void playVideo(char[] filename){
     </div> <!-- footer -->
 
   </div> <!-- body -->
-
 </body>
 
 </html>
