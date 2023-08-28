@@ -1,20 +1,20 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<HTML lang="ja">
+<html lang="ja">
 
-<HEAD>
-  <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <META http-equiv="Content-Style-Type" content="text/css">
-  <META name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-  <TITLE> ONScripter 開発日誌 </TITLE>
-  <LINK rel="stylesheet" type="text/css" href="/ogapee.css">
-</HEAD>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <title>ONScripter 開発日誌</title>
+  <link rel="stylesheet" type="text/css" href="/ogapee.css">
+</head>
 
 <body>
 
   <div id="body">
 
     <div id="header">
-      <H1>ONScripter 開発日誌</H1>
+      <h1>ONScripter 開発日誌</h1>
 
       Since: Feb. 6, 2002<br>
       Last updated: Aug. 26, 2007
@@ -25,29 +25,31 @@
       <h3>過去の開発日誌</h3>
 
       <div id="toc">
-
         <ul>
-          <li> <A HREF="onscripter_devel.2006_1.html"> 2006年</A>
-          <li> <A HREF="onscripter_devel.2005_1.html"> 2005年</A>
-          <li> <A HREF="onscripter_devel.2004_1.html"> 2004年</A>
-          <li> 2003年
+          <li><a href="onscripter_devel.2006_1.html">2006年</a></li>
+          <li><a href="onscripter_devel.2005_1.html">2005年</a></li>
+          <li><a href="onscripter_devel.2004_1.html">2004年</a></li>
+          <li>2003年
             <ul>
-              <li> <A HREF="onscripter_devel.2003_4.html">10月～12月</A>
-              <li> <A HREF="onscripter_devel.2003_3.html"> 7月～ 9月</A>
-              <li> <A HREF="onscripter_devel.2003_2.html"> 4月～ 6月</A>
-              <li> <A HREF="onscripter_devel.2003_1.html"> 1月～ 3月</A>
+              <li><a href="onscripter_devel.2003_4.html">10月～12月</a></li>
+              <li><a href="onscripter_devel.2003_3.html"> 7月～ 9月</a></li>
+              <li><a href="onscripter_devel.2003_2.html"> 4月～ 6月</a></li>
+              <li><a href="onscripter_devel.2003_1.html"> 1月～ 3月</a></li>
             </ul>
-          <li> 2002年
+          </li>
+          <li>2002年
             <ul>
-              <li> <A HREF="onscripter_devel.2002_4.html">10月～12月</A>
-              <li> <A HREF="onscripter_devel.2002_3.html"> 7月～ 9月</A>
-              <li> <A HREF="onscripter_devel.2002_2.html"> 4月～ 6月</A>
-              <li> <A HREF="onscripter_devel.2002_1.html"> 1月～ 3月</A>
+              <li><a href="onscripter_devel.2002_4.html">10月～12月</a></li>
+              <li><a href="onscripter_devel.2002_3.html"> 7月～ 9月</a></li>
+              <li><a href="onscripter_devel.2002_2.html"> 4月～ 6月</a></li>
+              <li><a href="onscripter_devel.2002_1.html"> 1月～ 3月</a></li>
             </ul>
-          <li> 2001年
+          </li>
+          <li>2001年
             <ul>
-              <li> <A HREF="onscripter_devel.2001.html">12月</A>
+              <li><a href="onscripter_devel.2001.html">12月</a></li>
             </ul>
+          </li>
         </ul>
       </div> <!-- toc -->
     </div> <!-- toc-container -->
@@ -61,193 +63,97 @@
         <div class="diary-day">
           <h3>8月26日</h3>
 
-          <p>すとーむさんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=116">reset
-              load 命令</a>」の追記を元に、CD audio の振り替え演奏で OGG ファイルを
-            使用する際に、ループ演奏ができなくなったバグ（20070823 で発生）を修正
-            しました。</p>
+          <p>すとーむさんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=116">reset load 命令</a>」の追記を元に、CD audio の振り替え演奏で OGG ファイルを使用する際に、ループ演奏ができなくなったバグ（20070823 で発生）を修正しました。</p>
 
-          <p>すとーむさんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=118">
-              スクリーンショット</a>」を元に、PDA を定義してコンパイルし、かつ
-            --disable-rescale を指定して ONScripter を実行した場合に、解像度が変換
-            されずにスクリーンショットの画像ファイルが保存されるバグを修正しました。
-          </p>
+          <p>すとーむさんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=118">スクリーンショット</a>」を元に、PDA を定義してコンパイルし、かつ --disable-rescale を指定して ONScripter を実行した場合に、解像度が変換されずにスクリーンショットの画像ファイルが保存されるバグを修正しました。</p>
 
-          <p>lsp2, lsph2, csp2, msp2, amsp2, allsp2resume, allsp2hide 命令を実装
-            しました。</p>
+          <p>lsp2, lsph2, csp2, msp2, amsp2, allsp2resume, allsp2hide 命令を実装しました。</p>
 
           <h4>20070826a</h4>
 
           <p>拡張スプライトの表示順が間違っていたバグを修正しました。</p>
-
         </div>
 
         <div class="diary-day">
           <h3>8月23日</h3>
 
-          <p>すとーむさんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=116">reset
-              load 命令</a>」を元に、systemcall reset, systemcall load, reset,
-            definereset, loadgame, definereset 命令の際に、dwave で再生中の音楽が
-            停止しないバグを修正しました。以前のバージョンの本家では停止しないよう
-            になっていたはずで、ONScripter でもわざとそうしていたのですが、いつの
-            まにか本家では停止するようになったようです。</p>
+          <p>すとーむさんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=116">reset load 命令</a>」を元に、systemcall reset, systemcall load, reset, definereset, loadgame, definereset 命令の際に、dwave で再生中の音楽が停止しないバグを修正しました。以前のバージョンの本家では停止しないようになっていたはずで、ONScripter でもわざとそうしていたのですが、いつのまにか本家では停止するようになったようです。</p>
 
-          <p>20070822 で、textgosub 使用中に１ページ表示（o キー）が機能しなくなっ
-            ていたため、修正しました。</p>
+          <p>20070822 で、textgosub 使用中に1ページ表示（o キー）が機能しなくなっていたため、修正しました。</p>
 
-          <p>し～くるさんのパッチを取り入れ、streaming OGG と MP3 のループ再生に
-            おいて、繰り返しの度にファイルを読み込むのではなく、メモリ中のデータを
-            再利用するようにしました。</p>
-
+          <p>し～くるさんのパッチを取り入れ、streaming OGG と MP3 のループ再生において、繰り返しの度にファイルを読み込むのではなく、メモリ中のデータを再利用するようにしました。</p>
         </div>
 
         <div class="diary-day">
           <h3>8月22日</h3>
 
-          <p>tmkkさんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=114">
-              textgosubを使用している時のスクリプト解釈誤り</a>」を参考に、textgosub
-            が指定されているときに、表示文を正しく解釈されないことがあるバグを修正
-            しました。textgosub のラベルに飛ぶ際には、clickstr_state を設定しない
-            ようにしましたが、副作用があるかしれません。</p>
+          <p>tmkkさんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=114">textgosubを使用している時のスクリプト解釈誤り</a>」を参考に、textgosub が指定されているときに、表示文を正しく解釈されないことがあるバグを修正しました。textgosub のラベルに飛ぶ際には、clickstr_state を設定しないようにしましたが、副作用があるかしれません。</p>
 
-          <p>sa_chi_ho さんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=115">
-              『drawbg2』の不具合？</a>」を元に、AnimationInfo::blendOnSurface2() に
-            おいて、アフィン変換行列の逆行列を整数演算で求める際にオーバーフローを
-            起こして正しく計算できない場合があるバグを修正しました。精度を若干犠牲
-            にしています。</p>
+          <p>sa_chi_ho さんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=115">『drawbg2』の不具合？</a>」を元に、AnimationInfo::blendOnSurface2() において、アフィン変換行列の逆行列を整数演算で求める際にオーバーフローを起こして正しく計算できない場合があるバグを修正しました。精度を若干犠牲にしています。</p>
 
-          <p>return 命令で、スクリプトの書き方によっては機能しないことがあるバグ
-            を修正しました。</p>
-
+          <p>return 命令で、スクリプトの書き方によっては機能しないことがあるバグを修正しました。</p>
         </div>
 
         <div class="diary-day">
           <h3>8月21日</h3>
 
-          <p>３月に開発マシンのＨＤＤが飛んでしまい、それ以来忙しいこともあって
-            ONScripter から遠ざかっていたのですが、色々パッチも溜まっているようで
-            すので久々に更新しました。</p>
+          <p>３月に開発マシンのＨＤＤが飛んでしまい、それ以来忙しいこともあって ONScripter から遠ざかっていたのですが、色々パッチも溜まっているようですので久々に更新しました。</p>
 
-          <p>まず、zaurus 用の開発環境を作り直しました。面倒かなと思っていたので
-            すが、<a href="zaurus/sl-devel.html">SDL on Zaurus (SL-5500, SL-A300,
-              SL-C700) 開発環境 </a>が我ながら非常にまとまっており、作業はかなり楽で
-            した。ついでにライブラリのマイナーバージョンアップデート＋一部パッチの
-            作り直し＋SDL_image の PNG への対応などを行いました。libqte-2.3.2 に
-            static link されている PNG library を SDL_image から使う方法が分からず、
-            結局 libz.so と libpng12.so を onscripter-lib に含めてしまいました。
-          </p>
+          <p>まず、zaurus 用の開発環境を作り直しました。面倒かなと思っていたのですが、<a href="zaurus/sl-devel.html">SDL on Zaurus (SL-5500, SL-A300, SL-C700) 開発環境 </a>が我ながら非常にまとまっており、作業はかなり楽でした。ついでにライブラリのマイナーバージョンアップデート＋一部パッチの作り直し＋SDL_image の PNG への対応などを行いました。libqte-2.3.2 に static link されている PNG library を SDL_image から使う方法が分からず、結局 libz.so と libpng12.so を onscripter-lib に含めてしまいました。</p>
 
-          <p>tmkkさんからのパッチを参考に、dwavestop と chvol 命令において、54
-            以上のチャンネル番号が指定されたときに落ちることがあるバグを修正しまし
-            た。</p>
+          <p>tmkkさんからのパッチを参考に、dwavestop と chvol 命令において、54以上のチャンネル番号が指定されたときに落ちることがあるバグを修正しました。</p>
 
-          <p>tmkkさんからのパッチを取り入れ、MacOSX 環境において、
-            CoreFoundation(iconv) で変換できない ShiftJIS 文字列のファイル名を指定
-            したときに落ちる問題を修正しました。</p>
+          <p>tmkkさんからのパッチを取り入れ、MacOSX 環境において、CoreFoundation(iconv) で変換できない ShiftJIS 文字列のファイル名を指定したときに落ちる問題を修正しました。</p>
 
-          <p>rerofumiさんのパッチを取り入れ、Playstation3 のパッドに対応しました。
-            ただし、当方では動作未確認です。</p>
+          <p>rerofumiさんのパッチを取り入れ、Playstation3 のパッドに対応しました。ただし、当方では動作未確認です。</p>
 
-          <p>haeleth さんのパッチを取り入れ、メジャーバージョンが１の古い形式の
-            セーブファイルを読み込む際に、縦書きモードでテキストバッファの文字数の
-            計算が間違っていたバグを修正しました。</p>
+          <p>haeleth さんのパッチを取り入れ、メジャーバージョンが１の古い形式のセーブファイルを読み込む際に、縦書きモードでテキストバッファの文字数の計算が間違っていたバグを修正しました。</p>
 
-          <p>haeleth さんのパッチを取り入れ、getparam コマンドにおいて、呼び出し
-            元の文字変数の変数番号を取得する s% 表記を正しく解釈できないバグを修正
-            しました。単純ミスで f% を想定していました。</p>
+          <p>haeleth さんのパッチを取り入れ、getparam コマンドにおいて、呼び出し元の文字変数の変数番号を取得する s% 表記を正しく解釈できないバグを修正しました。単純ミスで f% を想定していました。</p>
 
-          <p>haeleth さんのパッチを取り入れ、--help の出力のスペルミスを修正しま
-            した。</p>
+          <p>haeleth さんのパッチを取り入れ、--help の出力のスペルミスを修正しました。</p>
 
-          <p>スクリプト最上段の ;value コマンドで、;value と数字の間に空白がある
-            場合にコマンドが無視される問題を解決しました。</p>
+          <p>スクリプト最上段の ;value コマンドで、;value と数字の間に空白がある場合にコマンドが無視される問題を解決しました。</p>
 
           <h4>20070821a</h4>
 
-          <p>アーカイブのインデックス作成の際に、１ファイルあたり 272 bytes 使用
-            していたのですが、アーカイブの中のファイル数が多いとメモリ使用量がばか
-            にならないようです。ファイル名に固定で 256 bytes 割り当てていたことが
-            主要因だったので、インデックスを２回スキャンして、１回目でファイル名に
-            必要な総メモリ量を計算し、メモリをまとめて確保した後に、２回目でファイ
-            ル名を格納する方式に変更しました。搭載メモリ量の少ない Zaurus や PSP
-            では、ゲームによっては大きな効果があるかもしれません。</p>
-
+          <p>アーカイブのインデックス作成の際に、１ファイルあたり 272 bytes 使用していたのですが、アーカイブの中のファイル数が多いとメモリ使用量がばかにならないようです。ファイル名に固定で 256 bytes 割り当てていたことが主要因だったので、インデックスを２回スキャンして、１回目でファイル名に必要な総メモリ量を計算し、メモリをまとめて確保した後に、２回目でファイル名を格納する方式に変更しました。搭載メモリ量の少ない Zaurus や PSPでは、ゲームによっては大きな効果があるかもしれません。</p>
         </div>
 
         <div class="diary-day">
           <h3>2月6日</h3>
 
-          <p>すとーむさんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=107">for
-              文のバグ</a>」を元に、for %0=1 to 0 など本来ループの中を１回も実行しな
-            い場合でも、必ず１回はループの中を実行していたバグを修正しました。</p>
-
+          <p>すとーむさんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=107">for 文のバグ</a>」を元に、for %0=1 to 0 など本来ループの中を１回も実行しない場合でも、必ず１回はループの中を実行していたバグを修正しました。</p>
         </div>
 
         <div class="diary-day">
           <h3>2月5日</h3>
 
-          <p>当ＷＥＢページを開設してから早５年が過ぎました。当初は短期間の現実
-            逃避プロジェクトだったのですが、おかげさまで予想外に色々な環境で使って
-            いただき、ありがたいことに今でも多くの方に使用していただいております。
-            最近ではあまりONScripterに時間を割くことができず、特に本家の新コマンド
-            に追従できていませんが、ぼちぼち続けて行こうとは思っています。</p>
+          <p>当WEBページを開設してから早5年が過ぎました。当初は短期間の現実逃避プロジェクトだったのですが、おかげさまで予想外に色々な環境で使っていただき、ありがたいことに今でも多くの方に使用していただいております。最近ではあまりONScripterに時間を割くことができず、特に本家の新コマンドに追従できていませんが、ぼちぼち続けて行こうとは思っています。</p>
 
-          <p>すとーむさんからのパッチ「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=104">
-              for PSP のパッチ</a>」ですが、こちらで手を入れた部分にまだ単純な誤りが
-            あり、修正しました。この部分については、当方ではコンパイルしてチェック
-            することが難しいため、気をつけてはいるのですがたまにこういったミスをし
-            てしまいます。ご容赦ください。</p>
+          <p>すとーむさんからのパッチ「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=104">for PSP のパッチ</a>」ですが、こちらで手を入れた部分にまだ単純な誤りがあり、修正しました。この部分については、当方ではコンパイルしてチェックすることが難しいため、気をつけてはいるのですがたまにこういったミスをしてしまいます。ご容赦ください。</p>
 
-          <p>すとーむさんからのご要望「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=106">
-              透過ＰＮＧ</a>」への対応として、20070203ではタグの透過形式を c (コピー)
-            としたのですが、その後すとーむさんより<a href="http://www.geocities.jp/v_2357/program">nscrpng.spi</a>との互換
-            性の問題もあり透過形式を a(アルファブレンド)にしてほしいとのご要望があっ
-            たため、そのように変更しました。透過形式を a にすると、透過ＰＮＧのよ
-            うにアルファチャンネルを持っている場合にはそれを使い、持っていない場合
-            には画像の右半分をアルファ値として使用します。たしかにこちらの方が分か
-            りやすい気がします。し～くるさんの元々のパッチも実はそうなっていました。
-          </p>
-
+          <p>すとーむさんからのご要望「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=106">透過ＰＮＧ</a>」への対応として、20070203ではタグの透過形式を c (コピー)としたのですが、その後すとーむさんより<a href="http://www.geocities.jp/v_2357/program">nscrpng.spi</a>との互換性の問題もあり透過形式を a(アルファブレンド)にしてほしいとのご要望があったため、そのように変更しました。透過形式を a にすると、透過ＰＮＧのようにアルファチャンネルを持っている場合にはそれを使い、持っていない場合には画像の右半分をアルファ値として使用します。たしかにこちらの方が分かりやすい気がします。し～くるさんの元々のパッチも実はそうなっていました。</p>
         </div>
 
         <div class="diary-day">
           <h3>2月3日</h3>
 
-          <p>すとーむさんからのパッチ「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=104">
-              for PSP のパッチ</a>」に手を入れた上で反映させ 20070202 をリリースしま
-            したが、こちらで手を入れた部分に間違いがありました。申し訳ありません。
-            すとーむさんからのご指摘を元に、その個所はいただいた元々のパッチをほぼ
-            そのまま取り入れさせていただきました。</p>
+          <p>すとーむさんからのパッチ「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=104">for PSP のパッチ</a>」に手を入れた上で反映させ 20070202 をリリースしましたが、こちらで手を入れた部分に間違いがありました。申し訳ありません。すとーむさんからのご指摘を元に、その個所はいただいた元々のパッチをほぼそのまま取り入れさせていただきました。</p>
 
-          <p>すとーむさんからのご要望「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=106">
-              透過ＰＮＧ</a>」を元に、以前し～くるさんが作成された透過ＰＮＧパッチを
-            参考にして、フルカラーの透過ＰＮＧに対応しました。ただし、パレットカラー
-            のＰＮＧの透過色には未対応です。また、タグの透過形式は c(コピー)を指定
-            してください。a(アルファブレンド)は画像の右半分に白黒でアルファ値を指
-            定することになっているので、透過ＰＮＧの場合でもアルファチャンネルを無
-            視して右半分の画像をアルファ値に使用します。</p>
-
+          <p>すとーむさんからのご要望「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=106">透過ＰＮＧ</a>」を元に、以前し～くるさんが作成された透過ＰＮＧパッチを参考にして、フルカラーの透過ＰＮＧに対応しました。ただし、パレットカラーのＰＮＧの透過色には未対応です。また、タグの透過形式は c(コピー)を指定してください。a(アルファブレンド)は画像の右半分に白黒でアルファ値を指定することになっているので、透過ＰＮＧの場合でもアルファチャンネルを無視して右半分の画像をアルファ値に使用します。</p>
         </div>
 
         <div class="diary-day">
           <h3>2月2日</h3>
 
-          <p>すとーむさんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=101">
-              命令文のバグ報告２</a>」を参考に、ラベルを正常に読み込めないバグを修正
-            しました。内部的には、ラベルを ScriptHandler::readStr() で読むように変
-            更しました。</p>
+          <p>すとーむさんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=101">命令文のバグ報告２</a>」を参考に、ラベルを正常に読み込めないバグを修正しました。内部的には、ラベルを ScriptHandler::readStr() で読むように変更しました。</p>
 
-          <p>すとーむさんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=101">
-              命令文のバグ報告２</a>」を参考に、print コマンドでマスク画像を指定する場合に、２回目以降にマスク画像が反映されないバグを修正しました。</p>
+          <p>すとーむさんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=101">命令文のバグ報告２</a>」を参考に、print コマンドでマスク画像を指定する場合に、２回目以降にマスク画像が反映されないバグを修正しました。</p>
 
-          <p>すとーむさんからのパッチ「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=104">
-              for PSP のパッチ</a>」を参考に、PSP でスリープモードから復帰するときに
-            テキストが消えてしまうバグを修正しました。その他にも HOME ボタンでゲー
-            ムを終了するときに必要な関数が足りないバグを修正しました。ただし、当方
-            では未確認です。</p>
+          <p>すとーむさんからのパッチ「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=104">for PSP のパッチ</a>」を参考に、PSP でスリープモードから復帰するときにテキストが消えてしまうバグを修正しました。その他にも HOME ボタンでゲームを終了するときに必要な関数が足りないバグを修正しました。ただし、当方では未確認です。</p>
 
-          <p>hiyuhさんからのパッチ「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=105">
-              mixing size_t and ogg_int64_t</a>」を取り入れ、64bit Linux 環境でコンパイル刷る際に warning が出る問題に対処しました。</p>
-
+          <p>hiyuhさんからのパッチ「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=105">mixing size_t and ogg_int64_t</a>」を取り入れ、64bit Linux 環境でコンパイル刷る際に warning が出る問題に対処しました。</p>
         </div>
 
       </div> <!-- diary -->
@@ -259,7 +165,6 @@
     </div> <!-- footer -->
 
   </div> <!-- body -->
-
 </body>
 
 </html>
