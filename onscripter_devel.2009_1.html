@@ -1,20 +1,19 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<HTML lang="ja">
+<html lang="ja">
 
-<HEAD>
-  <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <META http-equiv="Content-Style-Type" content="text/css">
-  <META name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-  <TITLE> ONScripter 開発日誌 </TITLE>
-  <LINK rel="stylesheet" type="text/css" href="/ogapee.css">
-</HEAD>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <title>ONScripter 開発日誌</title>
+  <link rel="stylesheet" type="text/css" href="/ogapee.css">
+</head>
 
 <body>
-
   <div id="body">
 
     <div id="header">
-      <H1>ONScripter 開発日誌</H1>
+      <h1>ONScripter 開発日誌</h1>
 
       Since: Feb. 6, 2002<br>
       Last updated: Nov. 15, 2009
@@ -25,31 +24,33 @@
       <h3>過去の開発日誌</h3>
 
       <div id="toc">
-
         <ul>
-          <li> <A HREF="onscripter_devel.2008_1.html"> 2008年</A>
-          <li> <A HREF="onscripter_devel.2007_1.html"> 2007年</A>
-          <li> <A HREF="onscripter_devel.2006_1.html"> 2006年</A>
-          <li> <A HREF="onscripter_devel.2005_1.html"> 2005年</A>
-          <li> <A HREF="onscripter_devel.2004_1.html"> 2004年</A>
-          <li> 2003年
+          <li><a href="onscripter_devel.2008_1.html">2008年</a></li>
+          <li><a href="onscripter_devel.2007_1.html">2007年</a></li>
+          <li><a href="onscripter_devel.2006_1.html">2006年</a></li>
+          <li><a href="onscripter_devel.2005_1.html">2005年</a></li>
+          <li><a href="onscripter_devel.2004_1.html">2004年</a></li>
+          <li>2003年
             <ul>
-              <li> <A HREF="onscripter_devel.2003_4.html">10月～12月</A>
-              <li> <A HREF="onscripter_devel.2003_3.html"> 7月～ 9月</A>
-              <li> <A HREF="onscripter_devel.2003_2.html"> 4月～ 6月</A>
-              <li> <A HREF="onscripter_devel.2003_1.html"> 1月～ 3月</A>
+              <li><a href="onscripter_devel.2003_4.html">10月～12月</a></li>
+              <li><a href="onscripter_devel.2003_3.html"> 7月～ 9月</a></li>
+              <li><a href="onscripter_devel.2003_2.html"> 4月～ 6月</a></li>
+              <li><a href="onscripter_devel.2003_1.html"> 1月～ 3月</a></li>
             </ul>
-          <li> 2002年
+          </li>
+          <li>2002年
             <ul>
-              <li> <A HREF="onscripter_devel.2002_4.html">10月～12月</A>
-              <li> <A HREF="onscripter_devel.2002_3.html"> 7月～ 9月</A>
-              <li> <A HREF="onscripter_devel.2002_2.html"> 4月～ 6月</A>
-              <li> <A HREF="onscripter_devel.2002_1.html"> 1月～ 3月</A>
+              <li><a href="onscripter_devel.2002_4.html">10月～12月</a></li>
+              <li><a href="onscripter_devel.2002_3.html"> 7月～ 9月</a></li>
+              <li><a href="onscripter_devel.2002_2.html"> 4月～ 6月</a></li>
+              <li><a href="onscripter_devel.2002_1.html"> 1月～ 3月</a></li>
             </ul>
-          <li> 2001年
+          </li>
+          <li>2001年
             <ul>
-              <li> <A HREF="onscripter_devel.2001.html">12月</A>
+              <li><a href="onscripter_devel.2001.html">12月</a></li>
             </ul>
+          </li>
         </ul>
       </div> <!-- toc -->
     </div> <!-- toc-container -->
@@ -63,116 +64,70 @@
         <div class="diary-day">
           <h3>11月15日</h3>
 
-          <p>バグトラッキングシステム移行以来、今のところ４件スパム投稿がありま
-            した。これらは手動で削除しましたが、今後もこの程度で済んでくれればうれ
-            しいです。</p>
+          <p>バグトラッキングシステム移行以来、今のところ４件スパム投稿がありました。これらは手動で削除しましたが、今後もこの程度で済んでくれればうれしいです。</p>
 
-          <p>秋月かたねさんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=149">
-              動画再生の中断で次のメッセージに進めてしまうことがある</a>」を元に、
-            mpegplay および avi により動画を再生する際に、これまではキーダ
-            ウンもしくはマウスボタンダウンを検出すると動作再生を終了していたのです
-            が、キーアップもしくはマウスボタンアップを検出すると動画再生を終了する
-            ように変更しました。</p>
+          <p>秋月かたねさんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=149">動画再生の中断で次のメッセージに進めてしまうことがある</a>」を元に、mpegplay および avi により動画を再生する際に、これまではキーダウンもしくはマウスボタンダウンを検出すると動作再生を終了していたのですが、キーアップもしくはマウスボタンアップを検出すると動画再生を終了するように変更しました。</p>
 
-          <p>秋月かたねさんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=150">
-              動画再生中断後、動画の画像が残ってしまう</a>」を元に、mpegplay による動画再生後に、画面の再描画を行い動画の画像を消すようにしました。
-            なお、avi の場合は本家でも画像が残ってしまうので、ONScripter
-            でもそのままです。</p>
+          <p>秋月かたねさんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=150">動画再生中断後、動画の画像が残ってしまう</a>」を元に、mpegplay による動画再生後に、画面の再描画を行い動画の画像を消すようにしました。なお、avi の場合は本家でも画像が残ってしまうので、ONScripterでもそのままです。</p>
 
           <p>nodaguchiさんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=151">dwave系のバグ</a>」を元に、アンダーバー(_)が先頭についた命令を処理する際、処理関数内で複数の命令を判別して処理している場合に、命令名が正しく判別されず処理ができないバグを修正しました。</p>
-
         </div>
 
         <div class="diary-day">
           <h3>10月18日</h3>
 
-          <p>バグトラッキングシステムを<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=top">
-              影舞 on onscripter.sourceforge.jp</a>に移行しました。今後はこちらをお
-            使い下さい。</p>
+          <p>バグトラッキングシステムを<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=top">影舞 on onscripter.sourceforge.jp</a>に移行しました。今後はこちらをお使い下さい。</p>
 
-          <p><a href="http://www.daifukuya.com/kagemai/">影舞</a>はスパム対策が
-            ほとんどなされておらず、今まできさらさんに運用していただいていた影舞で
-            はスパム投稿が１日に１００通以上も蓄積されてしまう状態でした。これ以上
-            ご迷惑をおかけするわけにもいかないため、<a href="http://unfuddle.com/">unfuddle</a>や<a href="http://www.assembla.com/">assembla</a>など外部の無料ホスティング
-            サービスを試してみたりしたのですが、少なくとも無料の範囲内では使えない
-            と判断しました。最終的に、使い勝手や移行のしやすさなどから、<a href="http://sourceforge.jp/">sourceforge.jp</a>上に<a href="http://onscripter.sourceforge.jp/">ONScripter</a>プロジェクトを
-            作成して、そこで影舞を運用することにしました。</p>
+          <p><a href="http://www.daifukuya.com/kagemai/">影舞</a>はスパム対策がほとんどなされておらず、今まできさらさんに運用していただいていた影舞ではスパム投稿が１日に１００通以上も蓄積されてしまう状態でした。これ以上ご迷惑をおかけするわけにもいかないため、<a href="http://unfuddle.com/">unfuddle</a>や<a href="http://www.assembla.com/">assembla</a>など外部の無料ホスティングサービスを試してみたりしたのですが、少なくとも無料の範囲内では使えないと判断しました。最終的に、使い勝手や移行のしやすさなどから、<a href="http://sourceforge.jp/">sourceforge.jp</a>上に<a href="http://onscripter.sourceforge.jp/">ONScripter</a>プロジェクトを作成して、そこで影舞を運用することにしました。</p>
 
-          <p>適宜影舞のコードに手を入れ、スパム対策を行うつもりです。現時点では、
-            新規報告やリプライを行う際に、オプション欄の中央のチェックボックスを外
-            してから送信しないと無効投稿と見なすようにしています。これでうまく行か
-            ない場合には、ホームページで公開する決まった文字列の入力を求めるなど、
-            なにかしら対策を取っていきます。外部のスパムフィルタが（簡単に）利用で
-            きればいいのですが……。影舞付属の CAPTCHA は、関連ライブラリが無いと
-            いうエラーが出て使えませんでした。</p>
+          <p>適宜影舞のコードに手を入れ、スパム対策を行うつもりです。現時点では、新規報告やリプライを行う際に、オプション欄の中央のチェックボックスを外してから送信しないと無効投稿と見なすようにしています。これでうまく行かない場合には、ホームページで公開する決まった文字列の入力を求めるなど、なにかしら対策を取っていきます。外部のスパムフィルタが（簡単に）利用できればいいのですが……。影舞付属の CAPTCHA は、関連ライブラリが無いというエラーが出て使えませんでした。</p>
 
-          <p>ついでに、ONScripter のミラーページも、容量制限の厳しかった<A HREF="http://www.angelfire.com/space/ogapee/onscripter.html">
-              angelfire </A> から <a href="http://onscripter.sourceforge.jp/">sourceforge.jp</a>に移行しま
-            した。</p>
+          <p>ついでに、ONScripter のミラーページも、容量制限の厳しかった<a href="http://www.angelfire.com/space/ogapee/onscripter.html">angelfire </a> から <a href="http://onscripter.sourceforge.jp/">sourceforge.jp</a>に移行しました。</p>
 
         </div>
 
         <div class="diary-day">
           <h3>10月11日</h3>
 
-          <p>秋月かたねさんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=148">
-              --disable-rescaleが有効にならない</a>」を元に、画像読み込み関数におい
-            て、読み込み元がアーカイブか否かを正しく判定していなかったバグを修正し
-            ました。このバグは、exp-20090506 以降で発生していました。</p>
+          <p>秋月かたねさんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=148">--disable-rescaleが有効にならない</a>」を元に、画像読み込み関数において、読み込み元がアーカイブか否かを正しく判定していなかったバグを修正しました。このバグは、exp-20090506 以降で発生していました。</p>
 
         </div>
 
         <div class="diary-day">
           <h3>9月21日</h3>
 
-          <p>nk_0901さんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=146">
-              拡張スプライトで拡大率がマイナス値の場合の動作について</a>」を元に、拡
-            張スプライト表示領域のバウンディングボックスの計算方法が間違っていたバ
-            グを修正しました。</p>
+          <p>nk_0901さんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=146">拡張スプライトで拡大率がマイナス値の場合の動作について</a>」を元に、拡張スプライト表示領域のバウンディングボックスの計算方法が間違っていたバグを修正しました。</p>
 
         </div>
 
         <div class="diary-day">
           <h3>8月22日</h3>
 
-          <p>表示文のログを logsp を使用して表示する場合などに、行末における禁則
-            処理が不完全であったバグを修正しました。</p>
+          <p>表示文のログを logsp を使用して表示する場合などに、行末における禁則処理が不完全であったバグを修正しました。</p>
 
           <p>コンパイラの warning を取るためコードを微修正しました。</p>
 
           <p>Lua 実装が中途半端ですがいったんリリースします。</p>
-
         </div>
 
         <div class="diary-day">
           <h3>7月12日</h3>
 
-          <p>Paul さんからのパッチを元に、行が半角スペースで終わっている場合に正
-            しく終端処理がされないバグを修正しました。</p>
+          <p>Paul さんからのパッチを元に、行が半角スペースで終わっている場合に正しく終端処理がされないバグを修正しました。</p>
 
-          <p>宮川さんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=143">
-              ONScripter開発版がコンパイルできない on ubuntu</a>」を元に、いただいた
-            パッチを適用し、最新の libavifile-0.7-47 で ONScripter がコンパイルで
-            きない問題を修正しました。</p>
-
+          <p>宮川さんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=143">ONScripter開発版がコンパイルできない on ubuntu</a>」を元に、いただいたパッチを適用し、最新の libavifile-0.7-47 で ONScripter がコンパイルできない問題を修正しました。</p>
         </div>
 
         <div class="diary-day">
           <h3>6月14日</h3>
 
-          <p>Lua の text 関連 callback を実装するために、テキスト処理回りを変更
-            しています。これまでは、textgosub の処理をする場合に、
-            ScriptHandler::readToken() はクリック待ち文字までのテキストを返してい
-            ましたが、行末までのテキストを返すようにしました。また、改行文字をテキ
-            ストに含めないようにしました。</p>
-
+          <p>Lua の text 関連 callback を実装するために、テキスト処理回りを変更しています。これまでは、textgosub の処理をする場合に、ScriptHandler::readToken() はクリック待ち文字までのテキストを返していましたが、行末までのテキストを返すようにしました。また、改行文字をテキストに含めないようにしました。</p>
         </div>
 
         <div class="diary-day">
           <h3>6月13日</h3>
 
           <p>Paul さんからのバグ報告を元に、文字列で２バイト目の半角スペースが表示されないバグを修正しました。</p>
-
         </div>
 
         <div class="diary-day">
@@ -181,19 +136,16 @@
           <p>lrclick, getsavestr を実装しました。</p>
 
           <p>NSSetIntValue, NSSetStrValue, NSGetIntValue, NSGetStrValue, NSGoto, NSGosub, NSReturn を実装しました。</p>
-
         </div>
 
         <div class="diary-day">
           <h3>5月9日</h3>
 
-          <p>NSPopInt, NSPopIntRef, NSPopStr, NSPopStrRef, NSPopLabel, NSPopID,
-            NSPopComma, NSCheckComma を実装しました。</p>
+          <p>NSPopInt, NSPopIntRef, NSPopStr, NSPopStrRef, NSPopLabel, NSPopID, NSPopComma, NSCheckComma を実装しました。</p>
 
           <h4>exp-20090509a</h4>
 
           <p>実行方法変更に伴い発生した細かいバグを取りました。</p>
-
         </div>
 
         <div class="diary-day">
@@ -202,7 +154,6 @@
           <p>実験版として、スクリプトの実行方法を、最上位のイベントループに全ての処理をぶら下げる方式から、命令実行中もしくは実行後に必要ならイベントループを実行する方式に完全に移行しました。また、文字描画中の Lua アニメーションにも対応しました。</p>
 
           <p>NSLuaAnimationInterval を実装しました。</p>
-
         </div>
 
         <div class="diary-day">
@@ -210,30 +161,16 @@
 
           <p>lsp の塗り潰し長方形に対応しました。</p>
 
-          <p>実験版として Lua に一部対応し、luacall animation, luasub, NSExec,
-            NSLuaAnimationMode を実装しました。不完全ですが、本家のサンプルの一部
-            が動きます。ただし、クリック待ちのアニメーションには対応していますが、
-            文字描画中のアニメーションには未対応です。また、今のところ動作確認は
-            Linux + Lua5.1 のみです。</p>
+          <p>実験版として Lua に一部対応し、luacall animation, luasub, NSExec, NSLuaAnimationMode を実装しました。不完全ですが、本家のサンプルの一部が動きます。ただし、クリック待ちのアニメーションには対応していますが、文字描画中のアニメーションには未対応です。また、今のところ動作確認は Linux + Lua5.1 のみです。</p>
 
-          <p>Lua 対応にともない、スクリプトの実行方法を、最上位のイベントループ
-            に全ての処理をぶら下げる方式から、命令実行中もしくは実行後に必要な
-            らイベントループを実行する方式に変更しています（まだ一部のみ）。こちら
-            の方式の方が単純で、画面効果ルーチンなどはかなりすっきりしました。</p>
-
+          <p>Lua 対応にともない、スクリプトの実行方法を、最上位のイベントループに全ての処理をぶら下げる方式から、命令実行中もしくは実行後に必要ならイベントループを実行する方式に変更しています（まだ一部のみ）。こちらの方式の方が単純で、画面効果ルーチンなどはかなりすっきりしました。</p>
         </div>
 
         <div class="diary-day">
           <h3>3月31日</h3>
 
-          <p>chris_sさんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=142">
-              複数の条件が絡むif文の扱い</a>」を元に、if文で複数の条件式が＆で連結さ
-            れている場合に、先頭から順に評価していき条件式が成立しない時点で残りは
-            評価せずに終了するのが正しいところを、誤って全ての条件式を評価していた
-            バグを修正しました。評価するだけでif文の結果自体は正しかったのですが、
-            評価した条件式が不正な形をしていると強制終了してしまうことがありました。
+          <p>chris_sさんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=142">複数の条件が絡むif文の扱い</a>」を元に、if文で複数の条件式が＆で連結されている場合に、先頭から順に評価していき条件式が成立しない時点で残りは評価せずに終了するのが正しいところを、誤って全ての条件式を評価していたバグを修正しました。評価するだけでif文の結果自体は正しかったのですが、評価した条件式が不正な形をしていると強制終了してしまうことがありました。
           </p>
-
         </div>
 
         <div class="diary-day">
@@ -242,52 +179,31 @@
           <p>本家との互換性を保つため、ONS のセーブファイルのバージョンを上げま
             した。過去のセーブファイルももちろん問題なく読み込めます。</p>
 
-          <p>chris_sさんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=141">
-              intlimit指定時の挙動</a>」を元に、intlimitで指定した値の範囲外の数値を
-            代入する際のバグを修正しました。intlimitで指定した最小値もしくは最大値
-            に合わせるのが正しい挙動ですが、値を変更しないようになっていました。
+          <p>chris_sさんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=141">intlimit指定時の挙動</a>」を元に、intlimitで指定した値の範囲外の数値を代入する際のバグを修正しました。intlimitで指定した最小値もしくは最大値に合わせるのが正しい挙動ですが、値を変更しないようになっていました。
           </p>
 
-          <p>herbas さんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=140">
-              拡張スプライトの拡大率・回転角がセーブされない場合がある</a>」を元に、
-            保存は問題なかったのですが、読み込みの際に拡大率と回転角が正しく反映さ
-            れないバグを修正しました。</p>
+          <p>herbas さんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=140">拡張スプライトの拡大率・回転角がセーブされない場合がある</a>」を元に、保存は問題なかったのですが、読み込みの際に拡大率と回転角が正しく反映されないバグを修正しました。</p>
 
-          <p>herbas さんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=139">strsp
-              の縦文字数</a>」を元に、strspで縦文字数が１行多く表示されるバグを修正
-            しました。</p>
+          <p>herbas さんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=139">strspの縦文字数</a>」を元に、strspで縦文字数が１行多く表示されるバグを修正しました。</p>
 
-          <p>shinshin3 さんからのご提案「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=136">
-              EXTERNAL_MIDI_PROGRAM削除の提案</a>」を元に、MacOSX 用の、外部プログラ
-            ムによる MIDI 演奏補助のためのコードを削除しました。</p>
+          <p>shinshin3 さんからのご提案「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=136">EXTERNAL_MIDI_PROGRAM削除の提案</a>」を元に、MacOSX 用の、外部プログラムによる MIDI 演奏補助のためのコードを削除しました。</p>
           <ul>
-            <li>現在の MacOSX 版 SDL_mixer では MIDI 演奏ができる
-            <li>昔の ONScripter ランチャーは更新終了している
+            <li>現在の MacOSX 版 SDL_mixer では MIDI 演奏ができる</li>
+            <li>昔の ONScripter ランチャーは更新終了している</li>
           </ul>
           <p style="text-indent:0">ということだそうです。</p>
-
         </div>
 
         <div class="diary-day">
           <h3>1月16日</h3>
 
-          <p>本家の整数変数および文字変数の最大数は 4096 までであり、この範囲外
-            へのアクセスは、他の変数を上書きしてしまうか、もしくはセグメンテーショ
-            ンフォルトを引き起こすことになると思っているのですが、まれに範囲外の変
-            数を使用しているスクリプトがあります。ONScripter では、これまでは範囲
-            外へのアクセスを 4097 番目の共通変数に強制的に振り替えていました（不完
-            全でしたが）。今回、範囲外の変数が使用された場合には、その変数を線形リ
-            ストに追加することで、範囲外の変数も通常の変数と同様に使用できるように
-            しました。なお、gloval.sav に保存されるのは従来通り 4096 番目までです。
-          </p>
-
+          <p>本家の整数変数および文字変数の最大数は 4096 までであり、この範囲外へのアクセスは、他の変数を上書きしてしまうか、もしくはセグメンテーションフォルトを引き起こすことになると思っているのですが、まれに範囲外の変数を使用しているスクリプトがあります。ONScripter では、これまでは範囲外へのアクセスを 4097 番目の共通変数に強制的に振り替えていました（不完全でしたが）。今回、範囲外の変数が使用された場合には、その変数を線形リストに追加することで、範囲外の変数も通常の変数と同様に使用できるようにしました。なお、gloval.sav に保存されるのは従来通り 4096 番目までです。</p>
         </div>
 
         <div class="diary-day">
           <h3>1月4日</h3>
 
           <p>movie を実装しました。ただし、pos, async, stop には未対応です。また、SMPEG が使用できない環境では動作しません。</p>
-
         </div>
 
         <div class="diary-day">
@@ -296,7 +212,6 @@
           <p>haelethさんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=109">getparamなどに些細な修正</a>」を元に、いただいたパッチを適用し、reset 後に selectcolor で設定した色が初期化されてしまうバグと、textoff の後に texton をせずに reset を実行した場合に文字が消えることがあるバグを修正しました。</p>
 
           <p>ONScripterLabel::loadImage 内で用いる中間バッファを毎回生成／消去するのではなく、平均データ量のバッファを永続的に持つようにし、その量より大きいデータを読む場合にのみ生成／消去するようにしました。</p>
-
         </div>
 
       </div> <!-- diary -->
@@ -308,7 +223,6 @@
     </div> <!-- footer -->
 
   </div> <!-- body -->
-
 </body>
 
 </html>
