@@ -1,20 +1,20 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<HTML lang="ja">
+<html lang="ja">
 
-<HEAD>
-  <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <META http-equiv="Content-Style-Type" content="text/css">
-  <META name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-  <TITLE> ONScripter 開発日誌 </TITLE>
-  <LINK rel="stylesheet" type="text/css" href="/ogapee.css">
-</HEAD>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <title>ONScripter 開発日誌</title>
+  <link rel="stylesheet" type="text/css" href="/ogapee.css">
+</head>
 
 <body>
 
   <div id="body">
 
     <div id="header">
-      <H1>ONScripter 開発日誌</H1>
+      <h1>ONScripter 開発日誌</h1>
 
       Since: Feb. 6, 2002<br>
       Last updated: Mar. 31, 2002
@@ -25,12 +25,12 @@
       <h3>過去の開発日誌</h3>
 
       <div id="toc">
-
         <ul>
-          <li> 2001年
+          <li>2001年
             <ul>
-              <li> <A HREF="onscripter_devel.2001.html">12月</A>
+              <li><a href="onscripter_devel.2001.html">12月</a></li>
             </ul>
+          </li>
         </ul>
       </div> <!-- toc -->
     </div> <!-- toc-container -->
@@ -51,13 +51,10 @@
 
           <p>コードの clean up。</p>
 
-
           <h4>20020331a</h4>
 
           <p>大量にメモリリークしていたのを改善。</p>
-
         </div>
-
 
         <div class="diary-day">
           <h3>3月30日 <span style="color:red">セーブファイルの互換性が無くなりました</span></h3>
@@ -68,101 +65,70 @@
 
           <p>その他 bug fix。</p>
 
-          <p>ショートカットキーの space が押された場合、マウスカーソルの下にボタ
-            ンがあってもボタン外を押したことにする。</p>
+          <p>ショートカットキーの space が押された場合、マウスカーソルの下にボタンがあってもボタン外を押したことにする。</p>
 
-          <p>セーブファイルに text の表示／非表示を示すフラグを格納する。以前のセーブ
-            ファイルは次のようにして移行してください。末尾に 1byte (0x01) 追加する
-            だけです。</p>
+          <p>セーブファイルに text の表示／非表示を示すフラグを格納する。以前のセーブファイルは次のようにして移行してください。末尾に 1byte (0x01) 追加するだけです。</p>
 
-          <PRE>
+          <pre>
 echo -n '\001' &gt;&gt; save1.dat
-</PRE>
+</pre>
 
         </div>
 
         <div class="diary-day">
           <h3>3月27日</h3>
 
-          <p>sdl-fan-jp の Iguchi さんのパッチを取り入れ、MacOS X で CD-ROM を使
-            わないようにするためのコードを修正。MacOS X で正常にコンパイルできるか
-            どうか未検証だが、こちらの方がずっと綺麗。MacOS X での動作報告お願いし
-            ます。</p>
-
+          <p>sdl-fan-jp の Iguchi さんのパッチを取り入れ、MacOS X で CD-ROM を使わないようにするためのコードを修正。MacOS X で正常にコンパイルできるかどうか未検証だが、こちらの方がずっと綺麗。MacOS X での動作報告お願いします。</p>
         </div>
 
         <div class="diary-day">
           <h3>3月26日</h3>
 
-          <p>Takano さん adas さんから MacOS X 上での初動作報告をいただきました。
-            いただいた Makefile.MacOSX を追加。</p>
+          <p>Takano さん adas さんから MacOS X 上での初動作報告をいただきました。いただいた Makefile.MacOSX を追加。</p>
 
-          <p>adas さんの御指摘により、SDL_image を使って画像を読み込む際、必要ラ
-            イブラリ(libjpeg 等)未インストールのために読み込めず落ちる現象に対処。
-          </p>
-
+          <p>adas さんの御指摘により、SDL_image を使って画像を読み込む際、必要ライブラリ(libjpeg 等)未インストールのために読み込めず落ちる現象に対処。</p>
         </div>
 
         <div class="diary-day">
           <h3>3月25日</h3>
 
-          <p>textgosub, textbtnwait, getcursor, texec, ispage を仮実装。
-            textgosub は一見正常に機能しているように見えるかもしれませんが、
-            saveon, saveoff が未実装であるため textgosub 内からの save, load は正
-            常には行えません（一応 save, load はできます）。他にも色々おかしいとこ
-            ろがあるので、あくまで試験的なリリースだと思ってください。なお、
-            textgosub を使用しないゲームについては 20020321a 同様に動作するはずで
-            す。</p>
+          <p>textgosub, textbtnwait, getcursor, texec, ispage を仮実装。textgosub は一見正常に機能しているように見えるかもしれませんが、saveon, saveoff が未実装であるため textgosub 内からの save, load は正常には行えません（一応 save, load はできます）。他にも色々おかしいところがあるので、あくまで試験的なリリースだと思ってください。なお、textgosub を使用しないゲームについては 20020321a 同様に動作するはずです。</p>
 
           <p>len を実装。</p>
 
-          <H4>20020325a</H4>
+          <h4>20020325a</h4>
 
-          <p>MacOS X で動作するように、コンパイル時に CD Audio 制御用の命令を
-            #ifdef でスキップできるようにする。</p>
-
+          <p>MacOS X で動作するように、コンパイル時に CD Audio 制御用の命令を #ifdef でスキップできるようにする。</p>
         </div>
 
         <div class="diary-day">
           <h3>3月21日</h3>
 
-          <p>αβεさんの報告された、select の選択肢が文字列変数の時に生じるバグ
-            の原因を一昨日直したつもりが、検証が不十分だったため直しきれていません
-            でした。αβεさんの patch を参考に再度修正。</p>
+          <p>αβεさんの報告された、select の選択肢が文字列変数の時に生じるバグの原因を一昨日直したつもりが、検証が不十分だったため直しきれていませんでした。αβεさんの patch を参考に再度修正。</p>
 
           <p>textoff, texton を実装。</p>
 
-          <p>αβεさんの御指摘により、表示文中に特殊命令以外のASCII文字を表示す
-            るようにする。</p>
+          <p>αβεさんの御指摘により、表示文中に特殊命令以外のASCII文字を表示するようにする。</p>
 
-          <H4>20020321a</H4>
+          <h4>20020321a</h4>
 
-          <p>効果 1 で wait を省いたら、busy loop になって入力を受け付けない状況
-            が発生したため、開始時に wait を入れるように戻す。</p>
+          <p>効果 1 で wait を省いたら、busy loop になって入力を受け付けない状況が発生したため、開始時に wait を入れるように戻す。</p>
 
           <p>ついでに textspeed を実装。</p>
-
         </div>
 
         <div class="diary-day">
           <h3>3月20日</h3>
 
-          <p>富田さんの patch を参考に、--edit オプション指定時に z キーで音量・
-            変数変更モードに入れるおまけ機能をつける。この機能は暫定的なものであり、
-            今後どうなるかは不明です。</p>
-
+          <p>富田さんの patch を参考に、--edit オプション指定時に z キーで音量・変数変更モードに入れるおまけ機能をつける。この機能は暫定的なものであり、今後どうなるかは不明です。</p>
         </div>
 
         <div class="diary-day">
           <h3>3月19日</h3>
 
-          <p>αβεさんの御指摘をヒントに、命令文中に &quot;&quot; で囲まれた
-            2bytes 文字があった場合に、以降をテキスト文として解釈し変数を decode
-            していたバグを取る。</p>
+          <p>αβεさんの御指摘をヒントに、命令文中に &quot;&quot; で囲まれた 2bytes 文字があった場合に、以降をテキスト文として解釈し変数を decode していたバグを取る。</p>
 
-          <p>富田さんの patch を取り入れ、CD Audio で BGM 演奏する際に、再生トラッ
-            ク番号がセーブされないバグを取る。</p>
-
+          <p>富田さんの patch を取り入れ、CD Audio で BGM 演奏する際に、再生トラック番号がセーブされないバグを取る。</p>
         </div>
 
         <div class="diary-day">
@@ -170,32 +136,27 @@ echo -n '\001' &gt;&gt; save1.dat
 
           <p>quakex, quakey, quake を実装。再現性に関して報告募集。</p>
 
-          <H4>20020318a</H4>
+          <h4>20020318a</h4>
 
-          <p>select が複数行にまたがるときに、先頭が * ではじまることは許されな
-            いようだ。TODO から削除。</p>
+          <p>select が複数行にまたがるときに、先頭が * ではじまることは許されないようだ。TODO から削除。</p>
 
           <p>select で &quot;&quot; を取り扱えるようにする。</p>
 
           <p>富田さんの patch を参考に getreg を実装。</p>
-
         </div>
 
         <div class="diary-day">
           <h3>3月17日</h3>
 
-          <p>erasetextwindow を実装。ただし、select や btnwait 時に文章と選択対
-            象が重なる場合に正しく表示できない。</p>
+          <p>erasetextwindow を実装。ただし、select や btnwait 時に文章と選択対象が重なる場合に正しく表示できない。</p>
 
-          <H4>20020317a</H4>
+          <h4>20020317a</h4>
 
           <p>効果の 15, 18 を実装。ただし遅い。</p>
 
           <p>命令直後に表示文があると最初の文字が欠けるバグを取る。</p>
 
-          <p>delayed effect が効いていなかったバグを取る。というか、link 構造に
-            する必要が全くなかった。仕様の勘違い。とほほ。</p>
-
+          <p>delayed effect が効いていなかったバグを取る。というか、link 構造にする必要が全くなかった。仕様の勘違い。とほほ。</p>
         </div>
 
         <div class="diary-day">
@@ -205,10 +166,7 @@ echo -n '\001' &gt;&gt; save1.dat
 
           <p>アーカイブからデフォルトカーソルを読み込めるようにする。</p>
 
-          <p>美しくないが文字列スプライトで文字列変数を使えるようにする。そのた
-            めに、readToken 系を、string_buffer のみではなく任意の char 配列から読
-            めるようにする。</p>
-
+          <p>美しくないが文字列スプライトで文字列変数を使えるようにする。そのために、readToken 系を、string_buffer のみではなく任意の char 配列から読めるようにする。</p>
         </div>
 
         <div class="diary-day">
@@ -216,19 +174,13 @@ echo -n '\001' &gt;&gt; save1.dat
 
           <p>起動時にコマンドラインオプションを取れるようにする。</p>
 
-          <p>富田さんの patch を参考に CD audio による演奏を選択できる機能を追加。
-            デフォルトでは mp3 ファイル演奏、--cdaudio オプションを付けて起動する
-            ことで CD audio 演奏になります。</p>
+          <p>富田さんの patch を参考に CD audio による演奏を選択できる機能を追加。デフォルトでは mp3 ファイル演奏、--cdaudio オプションを付けて起動することで CD audio 演奏になります。</p>
 
-          <p>αβεさんの patch を参考に、再生中の track に対する play 命令を無
-            視するようにする。ただし、これが妥当な動作かどうかは未検証。</p>
+          <p>αβεさんの patch を参考に、再生中の track に対する play 命令を無視するようにする。ただし、これが妥当な動作かどうかは未検証。</p>
 
-          <p>αβεさんの patch を参考に、
-            (&quot;&quot;)&quot;true&quot;&quot;false&quot;の(&quot;&quot;)部に変
-            数が使えないバグを取る。</p>
+          <p>αβεさんの patch を参考に、(&quot;&quot;)&quot;true&quot;&quot;false&quot;の(&quot;&quot;)部に変数が使えないバグを取る。</p>
 
           <p>回想時にボタンの位置がおかしいバグを取る。</p>
-
         </div>
 
         <div class="diary-day">
@@ -236,51 +188,41 @@ echo -n '\001' &gt;&gt; save1.dat
 
           <p>コードの clean up とバグ取り。</p>
 
-          <p>タグの読み取りで、アニメ指定の１コマの時間を解釈する個所を間違えてい
-            たバグを取る。</p>
+          <p>タグの読み取りで、アニメ指定の１コマの時間を解釈する個所を間違えていたバグを取る。</p>
 
-          <p>s コマンドで文字から絵を作るときに、描画時ではなく生成時にその幅と高
-            さを取得する。これで spbtn で使えるようになる。</p>
+          <p>s コマンドで文字から絵を作るときに、描画時ではなく生成時にその幅と高さを取得する。これで spbtn で使えるようになる。</p>
 
           <p>回想時に select 文の文字が表示されないようにする。</p>
 
-          <p>αβεさんの patch を取り入れ、nbz を解凍する際に無限ループに陥る場
-            合があるバグに対処する。</p>
-
+          <p>αβεさんの patch を取り入れ、nbz を解凍する際に無限ループに陥る場合があるバグに対処する。</p>
         </div>
 
         <div class="diary-day">
           <h3>3月9日</h3>
 
-          <p>αβεさんの patch を取り入れ、select 画面で禁則処理が行われるように
-            する。</p>
+          <p>αβεさんの patch を取り入れ、select 画面で禁則処理が行われるようにする。</p>
 
-          <p>select 待ちの時に、右クリックメニューから skip モードにすると
-            select が選択状態になるバグを取る。</p>
+          <p>select 待ちの時に、右クリックメニューから skip モードにすると select が選択状態になるバグを取る。</p>
 
           <p>某ゲームやっと終了。問題といえば quake が無いことくらい。</p>
-
         </div>
 
         <div class="diary-day">
           <h3>3月8日</h3>
 
           <p>(&quot;&quot;)&quot;true&quot;&quot;false&quot;を実装。</p>
-
         </div>
 
         <div class="diary-day">
           <h3>3月7日</h3>
 
-          <p>sar って「泡沫」で使われていた。しかし、仕様書には乗っていない。と
-            りあえず nsa と同じ扱いにする。というわけで、sar 復活。</p>
+          <p>sar って「泡沫」で使われていた。しかし、仕様書には乗っていない。とりあえず nsa と同じ扱いにする。というわけで、sar 復活。</p>
 
           <p>arc の引数に対応し、複数アーカイブを扱えるようにする。</p>
 
           <p>αβεさんの patch を取り入れ、caption を実装。</p>
 
           <p>ONScripter の返すバージョンを 1.96 にする。</p>
-
         </div>
 
         <div class="diary-day">
@@ -290,12 +232,9 @@ echo -n '\001' &gt;&gt; save1.dat
 
           <p>配列を 0 で初期化するようにする。</p>
 
-          <p>αβεさんの patch を取り入れ、setwindow で指定したウィンドウ画像の
-            αブレンディングがおかしいバグを取る。</p>
+          <p>αβεさんの patch を取り入れ、setwindow で指定したウィンドウ画像のαブレンディングがおかしいバグを取る。</p>
 
-          <p>αβεさんの御指摘により、rmode 0 にしても、右クリックに反応してし
-            まうバグを取る。roff を実装。</p>
-
+          <p>αβεさんの御指摘により、rmode 0 にしても、右クリックに反応してしまうバグを取る。roff を実装。</p>
         </div>
 
         <div class="diary-day">
@@ -303,16 +242,13 @@ echo -n '\001' &gt;&gt; save1.dat
 
           <p>exbtn, exbtn_d, spstr を実装。</p>
 
-          <p>αβεさんの御指摘により、右クリックメニューで選択肢以外をクリック
-            すると処理が止まるバグを取る。</p>
+          <p>αβεさんの御指摘により、右クリックメニューで選択肢以外をクリックすると処理が止まるバグを取る。</p>
 
-          <p>sar なんて命令ないんじゃない？なんでいれたんだろ？というわけで削除。
-          </p>
+          <p>sar なんて命令ないんじゃない？なんでいれたんだろ？というわけで削除。</p>
 
           <p>btnwait の時に、skip mode を off にするようにする。</p>
 
           <p>trap を実装。</p>
-
         </div>
 
         <div class="diary-day">
@@ -320,16 +256,13 @@ echo -n '\001' &gt;&gt; save1.dat
 
           <p>spbtn の取り扱いの高速化。</p>
 
-          <p>省略値かどうかを検出し一つのコマンドの区切りを正確に判断することで、
-            コマンドの区切りが':'で無い場合も取り扱えるようにする。</p>
-
+          <p>省略値かどうかを検出し一つのコマンドの区切りを正確に判断することで、コマンドの区切りが':'で無い場合も取り扱えるようにする。</p>
         </div>
 
         <div class="diary-day">
           <h3>3月3日</h3>
 
-          <p>グラフィックのタグ指定の透過形式指定に r を追加＋画像取り扱い周りの
-            バグ修正。</p>
+          <p>グラフィックのタグ指定の透過形式指定に r を追加＋画像取り扱い周りのバグ修正。</p>
 
           <p>btnwait で、テキストを消し描画用に画面を描き直す。</p>
 
@@ -339,55 +272,39 @@ echo -n '\001' &gt;&gt; save1.dat
 
           <p>voicevol, sevol, mp3vol を実装。</p>
 
-          <p>wave 演奏を SDL_Mixer の MIX_CHANNELS(=8) チャンネル分同時に鳴らせ
-            るようにし、wave コマンドは 1 番に、dwave の 0-7 はそのまま、8 以降は
-            7 番に割り付けるようにする。</p>
+          <p>wave 演奏を SDL_Mixer の MIX_CHANNELS(=8) チャンネル分同時に鳴らせるようにし、wave コマンドは 1 番に、dwave の 0-7 はそのまま、8 以降は 7 番に割り付けるようにする。</p>
 
-          <p>mp3 を演奏するときに、今までは SDL_sound で読み込み SDL_mixer で他
-            の音とミックスしていたのだが、これだとボリュームを変更できないという問
-            題があった。そこで、SMPEG を直接用いて読み込み SDL_mixer で合成し、
-            SMPEG_setvolume を直接使ってボリュームを変えるようにする。結果として、
-            SDL_sound が不必要になった。</p>
-
+          <p>mp3 を演奏するときに、今までは SDL_sound で読み込み SDL_mixer で他の音とミックスしていたのだが、これだとボリュームを変更できないという問題があった。そこで、SMPEG を直接用いて読み込み SDL_mixer で合成し、SMPEG_setvolume を直接使ってボリュームを変えるようにする。結果として、SDL_sound が不必要になった。</p>
         </div>
 
         <div class="diary-day">
           <h3>3月1日</h3>
 
-          <p>αβεさんの御指摘により、/コマンド（直後の改行無視）の扱いのバグを
-            取る。</p>
+          <p>αβεさんの御指摘により、/コマンド（直後の改行無視）の扱いのバグを取る。</p>
 
           <p>αβεさんの御指摘により、&quot;ー&quot;を禁則文字に追加。</p>
 
           <p>αβεさんの御要望により、selnum を実装。</p>
-
         </div>
 
         <div class="diary-day">
           <h3>2月28日</h3>
 
-          <p>btndef clear に対応。しかし、ONScripter では &quot;&quot; で囲まれ
-            た文字列と素の文字列を区別しないため、&quot;clear&quot; という名前の画
-            像を指定すると、btndef clear として認識されてしまう。しかし、どうやら
-            clear という名前の画像が指定されことはなさそうなので、まあいいか。</p>
+          <p>btndef clear に対応。しかし、ONScripter では &quot;&quot; で囲まれた文字列と素の文字列を区別しないため、&quot;clear&quot; という名前の画像を指定すると、btndef clear として認識されてしまう。しかし、どうやら clear という名前の画像が指定されことはなさそうなので、まあいいか。</p>
 
-          <p>skip でラベルをまたぐときに正しい位置に行かないバグを取る。よく今ま
-            で動いていたものだ。</p>
+          <p>skip でラベルをまたぐときに正しい位置に行かないバグを取る。よく今まで動いていたものだ。</p>
 
-          <p>連続する空白をスキップするコードが、最初の一つしかスキップしないよ
-            うになっていたバグを取る。</p>
+          <p>連続する空白をスキップするコードが、最初の一つしかスキップしないようになっていたバグを取る。</p>
 
-          <H4>20020228a</H4>
+          <h4>20020228a</h4>
 
           <p>blt を中間 surface を経由しないようにし高速化。</p>
 
-          <p>setwindow, menusetwindow の色味モードと画像ファイルモードにまともに
-            対応。</p>
+          <p>setwindow, menusetwindow の色味モードと画像ファイルモードにまともに対応。</p>
 
           <p>mov3 - mov10 を実装。</p>
 
           <p>デフォルトのテキストスピードをそれぞれ２倍に変更。</p>
-
         </div>
 
         <div class="diary-day">
@@ -397,25 +314,19 @@ echo -n '\001' &gt;&gt; save1.dat
 
           <p>αβεさんの御指摘により、readInt で省略値を読み込む際のバグを直す。</p>
 
-          <p>Nbz decode を実装。これにより、必要なライブラリに bzip2 が加わりま
-            した。</p>
+          <p>Nbz decode を実装。これにより、必要なライブラリに bzip2 が加わりました。</p>
 
-          <p>bg#000000, ... のように、# が前の token と隣接している場合にも取り
-            扱えるようにする。</p>
+          <p>bg#000000, ... のように、# が前の token と隣接している場合にも取り扱えるようにする。</p>
 
           <p>画像ファイルが存在しなくともゲームを続行するようにする。</p>
 
-          <H4>20020227a</H4>
+          <h4>20020227a</h4>
 
-          <p>skip mode もしくは１ページ表示で select 待ちに行き、そこで右クリッ
-            クメニューに行ってまた select 待ちに戻ってきたときに、カーソルが表示さ
-            れマウス操作が不可能になることがあるバグを直す。</p>
+          <p>skip mode もしくは１ページ表示で select 待ちに行き、そこで右クリックメニューに行ってまた select 待ちに戻ってきたときに、カーソルが表示されマウス操作が不可能になることがあるバグを直す。</p>
 
-          <H4>20020227b</H4>
+          <h4>20020227b</h4>
 
-          <p>本日３回目のアップ。上の変更にともない skip mode もしくは１ページ表
-            示でカーソル待ちの扱いがおかしくなったバグを取る。</p>
-
+          <p>本日３回目のアップ。上の変更にともない skip mode もしくは１ページ表示でカーソル待ちの扱いがおかしくなったバグを取る。</p>
         </div>
 
         <div class="diary-day">
@@ -423,12 +334,9 @@ echo -n '\001' &gt;&gt; save1.dat
 
           <p>ScriptParser の Script を解釈する部分を大幅に変更し、配列に対応。</p>
 
-          <p>げげげー。仕様書にはスプライトが 0-49 とあるのに、実際には 0-255 ら
-            しい。またセーブファイル変更だよ。この際、取り得る範囲もセーブファイルにい
-            れ、デフォルト値の変更に耐えられるようにする。</p>
+          <p>げげげー。仕様書にはスプライトが 0-49 とあるのに、実際には 0-255 らしい。またセーブファイル変更だよ。この際、取り得る範囲もセーブファイルにいれ、デフォルト値の変更に耐えられるようにする。</p>
 
-          <p>あと、回想も無限にできるようにした方がいいようだ。ここは将来直すとし
-            て、ついでに必要なパラメータをセーブファイルに追加しておく。</p>
+          <p>あと、回想も無限にできるようにした方がいいようだ。ここは将来直すとして、ついでに必要なパラメータをセーブファイルに追加しておく。</p>
 
           <p>btnwait2 を実装。</p>
 
@@ -436,13 +344,10 @@ echo -n '\001' &gt;&gt; save1.dat
 
           <p>800x600 モードを実装。</p>
 
-          <p>というわけで、言ったそばからまたセーブファイルの互換性がなくなりまし
-            た。2月24日バージョンのセーブファイルから移行する場合は次のようにしてくだ
-            さい。まず、2月26日バージョンのONScripterLabel::loadSaveFile( int no )
-            を次のように書き換えます。<BR>
+          <p>というわけで、言ったそばからまたセーブファイルの互換性がなくなりました。2月24日バージョンのセーブファイルから移行する場合は次のようにしてください。まず、2月26日バージョンのONScripterLabel::loadSaveFile( int no )を次のように書き換えます。<br>
             ・loadInt( fp, &amp;text_history_num ); をコメントアウト</p>
 
-          <PRE>
+          <pre>
     /* ---------------------------------------- */
     /* Load text history */
     //loadInt( fp, &amp;text_history_num );
@@ -452,13 +357,9 @@ echo -n '\001' &gt;&gt; save1.dat
     /* Load current sprites */
     //for ( i=0 ; i&lt;MAX_SPRITE_NUM ; i++ ){
     for ( i=0 ; i&lt;50 ; i++ ){
-</PRE>
+</pre>
 
-          <p>この状態でコンパイルしてゲームを起動し、移行するセーブファイルを一旦読
-            み込みすぐに保存します。セーブファイルの書き換えが終わった後に
-            ONScripterLabel::loadSaveFile( int no ) を元に戻し、以後はこれを使って
-            普通に遊べるようになります。</p>
-
+          <p>この状態でコンパイルしてゲームを起動し、移行するセーブファイルを一旦読み込みすぐに保存します。セーブファイルの書き換えが終わった後に ONScripterLabel::loadSaveFile( int no ) を元に戻し、以後はこれを使って普通に遊べるようになります。</p>
         </div>
 
         <div class="diary-day">
@@ -468,34 +369,19 @@ echo -n '\001' &gt;&gt; save1.dat
 
           <p>回想モードを実装。これで文章履歴が見られる。</p>
 
-          <p>マウスカーソルが最初にボタンの上にある場合に選択状態にならないバグを
-            直す。</p>
+          <p>マウスカーソルが最初にボタンの上にある場合に選択状態にならないバグを直す。</p>
 
           <p>selectcolor, menuselectcolor を実装。</p>
 
-          <p>monocro 修正。なおこれに伴い、セーブファイルの互換性がなくなっています。
-          </p>
+          <p>monocro 修正。なおこれに伴い、セーブファイルの互換性がなくなっています。</p>
 
-          <p>αβεさんの御指摘により、sprite の重ね合わせの順序が逆になっている
-            バグを直す。</p>
+          <p>αβεさんの御指摘により、sprite の重ね合わせの順序が逆になっているバグを直す。</p>
 
-          <p>αβεさんの御要望により、rmenu の状態をセーブファイルに入れる。これに
-            伴い、セーブファイルの互換性がなくなっています。</p>
+          <p>αβεさんの御要望により、rmenu の状態をセーブファイルに入れる。これに伴い、セーブファイルの互換性がなくなっています。</p>
 
           <p>αβεさんの御要望により、gettimer を実装。</p>
 
-          <p>セーブファイルの互換性がなくなることはなるべく避けるようにしていますが、
-            今回は以前のバージョンが作成した save?.dat は全て消してください。ただ
-            し、かなりゲームが進行していてデータを継続して使いたい方のために、セーブファイルを移行する裏技があります。旧バージョンを持っている人は、新バージョ
-            ンの関数 ONScripterLabel::loadSaveFile( int no ) を旧バージョンの関数
-            ONScripterLabel::loadSaveFile( int no ) で差し換え、コンパイルします。
-            この状態でゲームを起動し、移行するセーブファイルを一旦読み込みすぐに保存
-            します。この時、保存は新バージョンの形式でなされます。セーブファイルの書き
-            換えが終わった後に ONScripterLabel::loadSaveFile( int no ) を差し換え
-            ない真っ新の新バージョンをコンパイルし、これを使って普通に遊べるように
-            なります。ただし、この裏技は今回のバージョンアップではうまくいきますが、
-            常にうまくいくとはかぎりません。</p>
-
+          <p>セーブファイルの互換性がなくなることはなるべく避けるようにしていますが、今回は以前のバージョンが作成した save?.dat は全て消してください。ただし、かなりゲームが進行していてデータを継続して使いたい方のために、セーブファイルを移行する裏技があります。旧バージョンを持っている人は、新バージョンの関数 ONScripterLabel::loadSaveFile( int no ) を旧バージョンの関数 ONScripterLabel::loadSaveFile( int no ) で差し換え、コンパイルします。この状態でゲームを起動し、移行するセーブファイルを一旦読み込みすぐに保存します。この時、保存は新バージョンの形式でなされます。セーブファイルの書き換えが終わった後に ONScripterLabel::loadSaveFile( int no ) を差し換えない真っ新の新バージョンをコンパイルし、これを使って普通に遊べるようになります。ただし、この裏技は今回のバージョンアップではうまくいきますが、常にうまくいくとはかぎりません。</p>
         </div>
 
         <div class="diary-day">
@@ -506,7 +392,6 @@ echo -n '\001' &gt;&gt; save1.dat
           <p>select 命令でテキストが一行未満の時には、キーボードショートカットで選択肢を選ぶときに、マウスカーソルが行の中心ではなくテキストの中央にくるようにしました。</p>
 
           <p>0.txt, 1.txt の連番ファイルで、ファイル末尾が改行文字で無い場合に正常に読み込めなかったバグを修正しました。</p>
-
         </div>
 
         <div class="diary-day">
@@ -519,7 +404,6 @@ echo -n '\001' &gt;&gt; save1.dat
           <p>命令の返り値が RET_JUMP の時に、timer event で executeLabel に飛んでいたのを、goto で executeLabel の最初に戻るようにしました。これで余計な時間待ちが減ります。</p>
 
           <p>以上、雪を降らせるために努力をしてみましたが、スムーズに降りません。一カ所 timer event 待ちをしているところがあり、そこで引っ掛かっているのだと思いますが、すぐに回避策が思いつきません。保留にします。</p>
-
         </div>
 
         <div class="diary-day">
@@ -530,7 +414,6 @@ echo -n '\001' &gt;&gt; save1.dat
           <p>delay, transmode 命令を実装しました。</p>
 
           <p>マシンパワーによって画面効果の継続時間が異なっていため、画面効果命令で定められた時間内に終わるようにしました。CPU や描画速度に応じて、画面効果の描画間隔を調整するようにしました。</p>
-
         </div>
 
         <div class="diary-day">
@@ -543,28 +426,24 @@ echo -n '\001' &gt;&gt; save1.dat
           <p>某ゲームのために、アーカイブを検索する前に現在のディレクトリを検索するようにしました。</p>
 
           <p>保存ファイルを読み込むときに、ファイル名が書いてある場所以外をクリックすると固まるバグを修正しました。</p>
-
         </div>
 
         <div class="diary-day">
           <h3>2月13日</h3>
 
           <p>!d 命令を実装しました。</p>
-
         </div>
 
         <div class="diary-day">
           <h3>2月12日</h3>
 
           <p>今日 Windows で動かしてみたところ、スクリプトを読み込む段階で止まってしまいました。調べたら、なんと Windows と Linux で fread の戻り値の仕様が異なることが判明しました。今までよく Windows で動いていたと思いました。そういうわけで修正しました。</p>
-
         </div>
 
         <div class="diary-day">
           <h3>2月11日</h3>
 
           <p>profiler でメモリリークを調べました。２個所でリークしていたため、解放するようにしました。</p>
-
         </div>
 
         <div class="diary-day">
@@ -577,7 +456,6 @@ echo -n '\001' &gt;&gt; save1.dat
           <p>某サブシナリオを実行していたところ、画面のスクロールに必要だったため blt 命令を実装しました。ただし、拡大縮小には未対応です。</p>
 
           <p>げげげ、もしかして savegame 命令と loadgame 命令を実装しないとゲームが進まないのではないのかという気が非常にしています。そういうわけで、savegame, loadgame 命令を実装しました。今までの進行は…。</p>
-
         </div>
 
         <div class="diary-day">
@@ -590,7 +468,6 @@ echo -n '\001' &gt;&gt; save1.dat
           <p>スクロール画面効果を実装しました。</p>
 
           <p>date, time 命令を実装しました。</p>
-
         </div>
 
         <div class="diary-day">
@@ -605,7 +482,6 @@ echo -n '\001' &gt;&gt; save1.dat
           <p>コードの変更にともない、セーブファイルの背景画像保存回りを更新しました。以前のセーブファイルと互換性が無くなりました。</p>
 
           <p>vsp 命令を実装しました。これで「ひとかた」がほぼ動くようになりました。</p>
-
         </div>
 
         <div class="diary-day">
@@ -616,7 +492,6 @@ echo -n '\001' &gt;&gt; save1.dat
           <p>HG ゴシックと HG 丸ゴシックフォントでは、embedded bitmap がないため全ての font size で正常に表示されるようです。</p>
 
           <p>公開のために Web page を作り、ベータ版として公開しました。</p>
-
         </div>
 
         <div class="diary-day">
@@ -637,7 +512,6 @@ echo -n '\001' &gt;&gt; save1.dat
           <p>click, mul, div, mod 命令を実装しました。</p>
 
           <p>if 命令を強化しました。</p>
-
         </div>
 
         <div class="diary-day">
@@ -646,7 +520,6 @@ echo -n '\001' &gt;&gt; save1.dat
           <p>itoa, atoi 命令を実装しました。</p>
 
           <p>BaseReader から派生するクラスを大幅に変更し、arc1.nsa - arc9.nsa の複数アーカイブに対応させました。</p>
-
         </div>
 
         <div class="diary-day">
@@ -673,7 +546,6 @@ echo -n '\001' &gt;&gt; save1.dat
           <p>なんと reset 命令でグローバル変数を初期化していたバグを直しました。</p>
 
           <p>セーブファイルに文章履歴と setwindoweffect 命令のパラメータとその他の文章の状態とスプライト情報を含めるようにしました。</p>
-
         </div>
 
         <div class="diary-day">
@@ -686,7 +558,6 @@ echo -n '\001' &gt;&gt; save1.dat
           <p>画像展開回りが遅いです。キャッシュなどの導入を検討した方がいいかもしれません。</p>
 
           <p>オープニング途中で segmentation fault で落ちました。まだまだです。</p>
-
         </div>
 
         <div class="diary-day">
@@ -705,7 +576,6 @@ echo -n '\001' &gt;&gt; save1.dat
           <p>効果があるのかいまいち不明ですが、カーテンなどの画面効果を 16bit 間隔にしました。また、画面効果の処理時間間隔を 20msec から 10msec にしました。遅いマシンだとつらくなるかもしれません。</p>
 
           <p>SDL_mixer を入れ、wave, waveloop, wavestop 命令を実装しました。mixer のまともなマニュアルがないので苦労しましたが、mp3 と同時に演奏できています。素晴らしいです。</p>
-
         </div>
 
         <div class="diary-day">
@@ -716,7 +586,6 @@ echo -n '\001' &gt;&gt; save1.dat
           <p>lchk と labellog 命令を実装しました。NScrllog.dat の中身は同様に大文字です。</p>
 
           <p>これで某ゲームは一通り動くようになったかもしれません？</p>
-
         </div>
 
         <div class="diary-day">
@@ -725,21 +594,18 @@ echo -n '\001' &gt;&gt; save1.dat
           <p>humanz, lsp, lsph, csp 命令を実装しました。ようやくスプライトが実装されました。</p>
 
           <p>立ち絵とスプライトのオーバーラップ処理をまともにしました。</p>
-
         </div>
 
         <div class="diary-day">
           <h3>1月24日</h3>
 
           <p>filelog 命令を実装しました。BaseReader にアクセス状態を保存するフラグを入れました。notif 命令の実装が間違っていたのを訂正しました。これで、グラフィック一覧が正常に動くようになりました。ただし、本来は NScrflog.dat に格納される文字が大文字であるのに対し、今回の実装ではアーカイブの中の文字をそのまま使っています。</p>
-
         </div>
 
         <div class="diary-day">
           <h3>1月22日</h3>
 
           <p>readLine の時点でテキスト行か否かを判定し、同時に１次 parse をし、readInt と readStr で２次 parse をするように直しました。</p>
-
         </div>
 
         <div class="diary-day">
@@ -762,7 +628,6 @@ echo -n '\001' &gt;&gt; save1.dat
           <p>select 命令の後に enterNewPage を実行するようにしました。</p>
 
           <p>某ゲームのために getversion, jumpf, rnd, rnd2 命令を実装しました。</p>
-
         </div>
 
         <div class="diary-day">
@@ -771,7 +636,6 @@ echo -n '\001' &gt;&gt; save1.dat
           <p>NSA の lzss をさくっと実装しました。</p>
 
           <p>ショックというかショックじゃないというか…。SPB の SPI の逆アセを始めたところで、既に実装してソースを公開している人を発見しました。同じ時期に同じことをやっており結構かぶっています。</p>
-
         </div>
 
         <div class="diary-day">
@@ -780,7 +644,6 @@ echo -n '\001' &gt;&gt; save1.dat
           <p>play 命令もしくは playonce 命令が playstop 命令を挟まず連続した場合に、セグメンテーションフォルトを引き起こすバグを直しました。</p>
 
           <p>某ゲームでグッドとトゥルーに行けることを確認しました。</p>
-
         </div>
 
         <div class="diary-day">
@@ -793,7 +656,6 @@ echo -n '\001' &gt;&gt; save1.dat
           <p>SDL_sound を入れ、さくっと MP3 演奏を実装しました。play, playonce, playstop 命令を実装しました。ただし、MIDI は無視し、CD 演奏は対応する MP3 演奏に割り付けるようにしました。BGM があるといいです。</p>
 
           <p>Windows 用の Makefile を書き、Windows でコンパイルしてみました。思ったよりも表示がもたつきますが、問題なくコンパイルでき、文字・音楽・効果を含めて実行できました。ただ、機種依存の searchSaveFiles() は未実装です。</p>
-
         </div>
 
         <div class="diary-day">
@@ -804,7 +666,6 @@ echo -n '\001' &gt;&gt; save1.dat
           <p>JPEG 画像の読み込みを試し、また sjis2utf16 を書いて TTF を使った日本語描画を試しました。文字のアンチエイリアシングが素晴らしいです。フォントファイルを直接指定しなければいけないのが難点ですが。画面の bit 転送も Qt とくらべて速そうですし、alpha blend も未検証ですが速そうです。欠点と言えば、メニューバーを自前で実装しなければいけないことくらいですが、今はメニューバーをほとんど使っていないので構いません。実装自体も簡単そうです。</p>
 
           <p>というわけで、一日かけて移植しました。８割方移植が終了しました。GUI を外して、Blit 命令を置換するだけでほぼ済みました。enterTextDisplay と rmenu 周りが若干おかしいくらいです。</p>
-
         </div>
 
         <div class="diary-day">
@@ -813,28 +674,24 @@ echo -n '\001' &gt;&gt; save1.dat
           <p>ファイル名を QNScripter 系に統一し、copyright を入れ、ライセンスを GPL にしました。</p>
 
           <p>Makefile を Linux 用と Windows 用に分けました。Windows 用は書いただけで未試行です。</p>
-
         </div>
 
         <div class="diary-day">
           <h3>1月8日</h3>
 
           <p>文章履歴の保存を実装し、表示部分は完成しました。履歴のセーブはまだです。</p>
-
         </div>
 
         <div class="diary-day">
           <h3>1月7日</h3>
 
-          <p>テスト実行中のループで引っ掛かり先に進めなくなったので、dec 命令を実装しました。
-          </p>
+          <p>テスト実行中のループで引っ掛かり先に進めなくなったので、dec 命令を実装しました。</p>
 
           <p>テキストウィンドウがフェードインするときに画面効果が適用されるようにしました。</p>
 
           <p>文章履歴用のリングバッファを作りました。</p>
 
           <p>「ハーバー」で立ち絵の位置がおかしいので、underline 命令を実装し、立ち絵の下限の位置を underline に合わせるようにしました。</p>
-
         </div>
 
         <div class="diary-day">
@@ -843,14 +700,12 @@ echo -n '\001' &gt;&gt; save1.dat
           <p>locate 命令を実装しました。</p>
 
           <p>windoweffect 命令を実装し、テキストウィンドウがフェードアウトするときに画面効果が適用されるようにしました。フェードインの場合は未実装です。skip と one page をきちんと実装しました。テキスト表示中に画像が追加される場合に、既表示のテキストが消えてしまうバグを何とかしたいです。文章履歴保存を兼ねて、バッファリングしておいて最描画するのがよさそうです。</p>
-
         </div>
 
         <div class="diary-day">
           <h3>1月5日</h3>
 
-          <p>save, load 命令を実装しました。入れ子を含む現在の状態と変数と背景と立ち絵の情報が保存ができます。後はテキストとスプライトとカーソルの保存ができればよいのでしょうか？
-          </p>
+          <p>save, load 命令を実装しました。入れ子を含む現在の状態と変数と背景と立ち絵の情報が保存ができます。後はテキストとスプライトとカーソルの保存ができればよいのでしょうか？</p>
 
           <p>curtain 効果を実装しましたが、かなり遅いです。</p>
 
@@ -859,7 +714,6 @@ echo -n '\001' &gt;&gt; save1.dat
           <p>systemcall 命令を実装しました。</p>
 
           <p>selgosub 命令を実装しました。</p>
-
         </div>
 
         <div class="diary-day">
@@ -868,7 +722,6 @@ echo -n '\001' &gt;&gt; save1.dat
           <p>WAIT_BUTTON_MODE を追加し、btnwait 命令で右クリックメニューが無効になるようにしました。</p>
 
           <p>「ハーバーランドでつかまえて」（以下「ハーバー」）を動かすテストをしていて、bg 命令で小さな画像を読み込むときの問題を直している時に、偶然、占有メモリが増えていくバグの原因を発見しました。単なる delete のし忘れでしたが、qnscripter ではなく XFree 側のメモリが増えていくところが嫌らしいです。これで全くメモリリークがなくなりました。</p>
-
         </div>
 
       </div> <!-- diary -->
@@ -880,7 +733,6 @@ echo -n '\001' &gt;&gt; save1.dat
     </div> <!-- footer -->
 
   </div> <!-- body -->
+</body>
 
-</BODY>
-
-</HTML>
+</html>

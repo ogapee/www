@@ -1,16 +1,15 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<HTML lang="ja">
+<html lang="ja">
 
-<HEAD>
-  <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <META http-equiv="Content-Style-Type" content="text/css">
-  <META name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-  <TITLE> ONScripter 開発日誌 </TITLE>
-  <LINK rel="stylesheet" type="text/css" href="/ogapee.css">
-</HEAD>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <title>ONScripter 開発日誌</title>
+  <link rel="stylesheet" type="text/css" href="/ogapee.css">
+</head>
 
 <body>
-
   <div id="body">
 
     <div id="header">
@@ -42,56 +41,41 @@
 
           <p>右クリックメニューとセーブの表示部分を実装。</p>
 
-          <p>─と…が UTF8 に無い（？）もしくは Qt で変換できないため表示されな
-            いのを、drawLine で表示するようにした。</p>
+          <p>─と…が UTF8 に無い（？）もしくは Qt で変換できないため表示されないのを、drawLine で表示するようにした。</p>
 
-          <p>globalon を実装し、global.sav の globalon 時の読み込みと、終了時の書
-            出しを実装。</p>
+          <p>globalon を実装し、global.sav の globalon 時の読み込みと、終了時の書出しを実装。</p>
 
-          <p>選択肢以外待ちを行わないモードにして、長時間耐久試験。なぜか、
-            qnscripter は一切リークしていないのに、XFree86 の確保メモリが 3MB/s く
-            らいの速度で増えていっている。しばらくして、実メモリもスワップも全部食
-            い尽くしてしまったので、中断。原因不明。</p>
-
+          <p>選択肢以外待ちを行わないモードにして、長時間耐久試験。なぜか、qnscripter は一切リークしていないのに、XFree86 の確保メモリが 3MB/s くらいの速度で増えていっている。しばらくして、実メモリもスワップも全部食い尽くしてしまったので、中断。原因不明。</p>
         </div>
 
         <div class="diary-day">
           <h3>12月24日</h3>
 
-          <p>ld, cl の透過 a のみ実装。 alphaBlend を実装。これで、遅いもののク
-            ロスフェードが出来るようになり、立ち絵の透過読み込みにも対応。ついでに、
-            text window の色味を下げる処理も、QBrush を使う方法から alphaBlend に
-            変更。これで、ほぼ一通り最後まで動くのではないのだろうか。</p>
-
+          <p>ld, cl の透過 a のみ実装。 alphaBlend を実装。これで、遅いもののクロスフェードが出来るようになり、立ち絵の透過読み込みにも対応。ついでに、text window の色味を下げる処理も、QBrush を使う方法から alphaBlend に変更。これで、ほぼ一通り最後まで動くのではないのだろうか。</p>
         </div>
 
         <div class="diary-day">
           <h3>12月23日</h3>
 
           <p>select を全実装。マウス待ちは、btnwait と同じ機構。</p>
-
         </div>
 
         <div class="diary-day">
           <h3>12月19日</h3>
 
-          <p>途中で落ちるのは、内部で %4020 とかを変数に使っていたからだった。
-            1000 までじゃないの？？？10000 に拡張する。</p>
+          <p>途中で落ちるのは、内部で %4020 とかを変数に使っていたからだった。1000 までじゃないの？？？10000 に拡張する。</p>
 
           <p>cmp を実装。</p>
 
-          <p>woody only 環境で動かす。apt-get install libqt3-mt-dev として、
-            setenv QTDIR /usr/share/qt として、正常にコンパイル＆実行できた。</p>
+          <p>woody only 環境で動かす。apt-get install libqt3-mt-dev として、setenv QTDIR /usr/share/qt として、正常にコンパイル＆実行できた。</p>
 
           <p>skip で、label をまたぐ場合を考慮していなかったのを修正。</p>
-
         </div>
 
         <div class="diary-day">
           <h3>12月20日</h3>
 
           <p>select を半分実装（複数行を正しく解釈し、SelectLink を作るところまで）。</p>
-
         </div>
 
         <div class="diary-day">
@@ -99,27 +83,21 @@
 
           <p>effectblank を実装。</p>
 
-          <p>Shutter effect を実装。ピクセルの輝度を変化させない effect は、簡単
-            に実装できる。問題は、最もよく使われる cross fade をどうするか。</p>
-
+          <p>Shutter effect を実装。ピクセルの輝度を変化させない effect は、簡単に実装できる。問題は、最もよく使われる cross fade をどうするか。</p>
         </div>
 
         <div class="diary-day">
           <h3>12月17日</h3>
 
-          <p>gosub と return を実装。プロローグの、途中まで一応行くようになった。
-          </p>
+          <p>gosub と return を実装。プロローグの、途中まで一応行くようになった。</p>
 
-          <p>mov と br と '\\' を実装したら、オープニングの結構先まで進むように
-            なった。だが、文字表示の感覚がおかしい。スペースも変？</p>
+          <p>mov と br と '\\' を実装したら、オープニングの結構先まで進むようになった。だが、文字表示の感覚がおかしい。スペースも変？</p>
 
           <p>inc, skip, mov, goto を実装。その他、bug fix。</p>
 
           <p>タイトルを越え、その先のオープニングも OK。</p>
 
-          <p>setwindow を実装。これで、フォントの表示は大体良し。ただ、右端で切
-            れることがある。</p>
-
+          <p>setwindow を実装。これで、フォントの表示は大体良し。ただ、右端で切れることがある。</p>
         </div>
 
         <div class="diary-day">
@@ -127,63 +105,43 @@
 
           <p>文字表示実装。日本語もばっちり。textCommand を半分くらい実装。</p>
 
-          <p>if, notif 実装に伴い、string_buffer の途中からでもコマンド解釈でき
-            るようにし、また全てのコマンド実行を executeLabel から行うことにする。
-            これに結構時間を取られる。</p>
+          <p>if, notif 実装に伴い、string_buffer の途中からでもコマンド解釈できるようにし、また全てのコマンド実行を executeLabel から行うことにする。これに結構時間を取られる。</p>
 
           <p>ソースを印刷し、この時点でのバグを洗い出し。結構あった。</p>
 
-          <p>最初の画面が出るところまで行ったが。gosub を実装していないのでここ
-            まで。</p>
-
+          <p>最初の画面が出るところまで行ったが。gosub を実装していないのでここまで。</p>
         </div>
 
         <div class="diary-day">
           <h3>12月12日</h3>
 
-          <p>qpixmap に対して qpainter と bitBlt を使えば、画像表示も文字表示も
-            全て解決する。なんとこんな解があるとは。すげー Qt。で、直したら、劇的
-            とも言えるパフォーマンスアップ。何しろ前回 60msec と言っていたのが、
-            0msec。つまり Qt の event loop と cache 能力を最大限に使うにはこうしろ
-            ということらしい。素晴らしい。</p>
-
+          <p>qpixmap に対して qpainter と bitBlt を使えば、画像表示も文字表示も全て解決する。なんとこんな解があるとは。すげー Qt。で、直したら、劇的とも言えるパフォーマンスアップ。何しろ前回 60msec と言っていたのが、0msec。つまり Qt の event loop と cache 能力を最大限に使うにはこうしろということらしい。素晴らしい。</p>
         </div>
 
         <div class="diary-day">
           <h3>12月11日</h3>
 
-          <p>btnwait と reset を実装。後は、文字表示を入れれば bbndemo が完全に
-            動く。</p>
-
+          <p>btnwait と reset を実装。後は、文字表示を入れれば bbndemo が完全に動く。</p>
         </div>
 
         <div class="diary-day">
           <h3>12月10日</h3>
 
-          <p>表示用の画像データを独自の配列で持ち、部分 copy や画面効果などは全部
-            自前で実装し、最後に widget にコピーするようにする。何故か X11 の
-            waring もでなくなった。</p>
+          <p>表示用の画像データを独自の配列で持ち、部分 copy や画面効果などは全部自前で実装し、最後に widget にコピーするようにする。何故か X11 の waring もでなくなった。</p>
 
-          <p>無理やり setWFlags( WRepaintNoErase ) を設定して、再描画しないで
-            draw するようにしていたが、180msec くらいかかる。QLabel を継承して、独
-            自に QLabel を継承して class を作ったら、何故か 60msec くらいでかなり
-            スムーズになった。何故？</p>
+          <p>無理やり setWFlags( WRepaintNoErase ) を設定して、再描画しないで draw するようにしていたが、180msec くらいかかる。QLabel を継承して、独自に QLabel を継承して class を作ったら、何故か 60msec くらいでかなりスムーズになった。何故？</p>
 
           <p>高速化のため、画像データを ButtonLink に直接持たせる。</p>
-
         </div>
 
         <div class="diary-day">
           <h3>12月8日</h3>
 
-          <p>effect handler を一通り実装。DelayedEffectInfo で、即実行・遅延実行
-            に対応させる。</p>
+          <p>effect handler を一通り実装。DelayedEffectInfo で、即実行・遅延実行に対応させる。</p>
 
           <p>readStr で、alias を解決するようにする。</p>
 
-          <p>"effect", "arc", "bg", "btndef", "btn" を一応動作する程度に実装。機
-            能 (btn) を実装。ただ、Qt で画面の一部 windows に別の画像を張り付ける
-            方法が分からないため、表示はおかしい（全画面コピーになっている）。</p>
+          <p>"effect", "arc", "bg", "btndef", "btn" を一応動作する程度に実装。機能 (btn) を実装。ただ、Qt で画面の一部 windows に別の画像を張り付ける方法が分からないため、表示はおかしい（全画面コピーになっている）。</p>
 
           <p>さらにボタンの上を通過する度に、</p>
           <pre>
@@ -195,28 +153,18 @@ X Error: BadMatch (invalid parameter attributes) 8
           <p class="noindent">が出る。</p>
 
           <p>これで、NScripter の btndemo が半分動く。</p>
-
         </div>
 
         <div class="diary-day">
           <h3>12月7日</h3>
 
-          <p>ScriptParser を書き始める。メモリに script を全部読み込み、各ラベル
-            の index を作成し、一行づつ parse しながら、lookup table 形式でコマン
-            ドに対応する class method を dispatch する仕組みを書く。</p>
+          <p>ScriptParser を書き始める。メモリに script を全部読み込み、各ラベルの index を作成し、一行づつ parse しながら、lookup table 形式でコマンドに対応する class method を dispatch する仕組みを書く。</p>
 
-          <p>numaliasCommand と straliasCommand を先頭固定の link list として実
-            装。</p>
+          <p>numaliasCommand と straliasCommand を先頭固定の link list として実装。</p>
 
-          <p>QScripter_impl を ScriptParser から継承し、string_buffer などを共有
-            できるようにする。コマンドは、まず ScriptParser の parseLine で解析し、
-            解析できたらその内部で処理、解析できない場合（画面表示系）は
-            QScript_impl の parseLine で解析して処理するようにする。</p>
+          <p>QScripter_impl を ScriptParser から継承し、string_buffer などを共有できるようにする。コマンドは、まず ScriptParser の parseLine で解析し、解析できたらその内部で処理、解析できない場合（画面表示系）は QScript_impl の parseLine で解析して処理するようにする。</p>
 
-          <p>gosub に対応して、ラベルの状態を先端固定の link list で管理する。別
-            のラベルに移る時には、かならず event loop を経由するようにする予定。
-          </p>
-
+          <p>gosub に対応して、ラベルの状態を先端固定の link list で管理する。別のラベルに移る時には、かならず event loop を経由するようにする予定。</p>
         </div>
 
         <div class="diary-day">
@@ -224,17 +172,11 @@ X Error: BadMatch (invalid parameter attributes) 8
 
           <p>開発開始。</p>
 
-          <p>sar 形式のファイルを読み込む SarReader を書く。圧縮ファイルの中身を
-            見ていたら、フォーマットが分かってしまった。圧縮がかかっていなかったの
-            で簡単に復元できた。ついでに、サンプルアプリケーションで arc.sar の中
-            身を全部展開する sardec を書く。</p>
+          <p>sar 形式のファイルを読み込む SarReader を書く。圧縮ファイルの中身を見ていたら、フォーマットが分かってしまった。圧縮がかかっていなかったので簡単に復元できた。ついでに、サンプルアプリケーションで arc.sar の中身を全部展開する sardec を書く。</p>
 
-          <p>nscript.dat の暗号化方式も、web を探していたら分かってしまった。と
-            りあえずスクリプトを復元する。</p>
+          <p>nscript.dat の暗号化方式も、web を探していたら分かってしまった。とりあえずスクリプトを復元する。</p>
 
-          <p>Qt で GUI を作る。一応メニューバー等を付け、背景がロード・表示でき
-            ることを確認。MouseEvent と TimerEvent のハンドリングも書く。</p>
-
+          <p>Qt で GUI を作る。一応メニューバー等を付け、背景がロード・表示できることを確認。MouseEvent と TimerEvent のハンドリングも書く。</p>
         </div>
 
       </div> <!-- diary -->
@@ -246,7 +188,6 @@ X Error: BadMatch (invalid parameter attributes) 8
     </div> <!-- footer -->
 
   </div> <!-- body -->
-
 </body>
 
 </html>
