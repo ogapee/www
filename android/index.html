@@ -1,16 +1,14 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE html>
 <html lang="ja">
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
   <title>ONScripter on Android</title>
   <link rel="stylesheet" type="text/css" href="/ogapee.css">
 </head>
 
 <body>
-
   <div id="body">
 
     <div id="header">
@@ -273,7 +271,7 @@
             <p>図１のようなゲーム選択画面が表示されるので、ゲームデータがあるディレクトリに移動した後に、右下の選択ボタン（もしくは「…」へのアクセスを許可）を押してください。</p>
 
             <div class="figure">
-              <p><img src="select_directory_1.png" alt="Fig.1" border="1" style="width: 40%;"><br>
+              <p><img src="select_directory_1.png" alt="Fig.1" style="border: 1px solid; width: 40%;"><br>
                 図１：ゲームの選択（Android 5.0 以上）</p>
             </div>
 
@@ -281,7 +279,7 @@
             <p>図２のようなゲーム選択画面が表示されるので、ゲームデータがあるディレクトリに移動（選択）してください。..は親ディレクトリへの移動を表します。Render Font Outline にチェックを入れると、フォントの輪郭を描画するようになります。チェックを外すと通常の描画になります。</p>
 
             <div class="figure">
-              <p><img src="select_directory_2.png" alt="Fig.2" border="1" style="width: 80%;"><br>
+              <p><img src="select_directory_2.png" alt="Fig.2" style="border: 1px solid; width: 80%;"><br>
                 図２：ゲームの選択（Android 5.0 未満）</p>
             </div>
 
@@ -415,13 +413,14 @@
                   <li><a href="http://sorejyadamedarou.sakura.ne.jp/o_show/nscripter/index.htm">NScripter研究</a></li>
                   <li><a href="http://ryuji.s1.xrea.com/nscr/nscr.html">NScripter講座</a></li>
                   <li><a href="http://www42.atwiki.jp/ironmaiden/pages/17.html">NScripter使い方講座</a> (サンプルスクリプトあり)</li>
-                  <li><a href="http://senzogawa.s90.xrea.com/reference/NScrAPI.html">NScripter API Reference</a> (使用可能な命令の一覧、ただし以下の命令はサポートしていません)</li>
-                  <ul>
-                    <li>開発支援</li>
-                    <li>外部コマンド実行</li>
-                    <li>CSVファイル操作</li>
-                    <li>テキストボタン</li>
-                  </ul>
+                  <li><a href="http://senzogawa.s90.xrea.com/reference/NScrAPI.html">NScripter API Reference</a> (使用可能な命令の一覧、ただし以下の命令はサポートしていません)
+                    <ul>
+                      <li>開発支援</li>
+                      <li>外部コマンド実行</li>
+                      <li>CSVファイル操作</li>
+                      <li>テキストボタン</li>
+                    </ul>
+                  </li>
                 </ul>
               </li>
 
@@ -556,10 +555,11 @@ A problem occurred configuring project ':app'.
 </pre>
 
                 C:\src\onscripter_android-xxxxxxxx\local.properties を開いて以下の赤字の箇所を Windows のアカウント名に変更してください。
-              </li>
-              <pre>
+
+                <pre>
 sdk.dir=C\:\\Users\\<span style="color:red">username</span>\\AppData\\Local\\Android\\sdk
 </pre>
+              </li>
 
               <li> デフォルトでは 32bit ARM プロセッサ（armeabi-v7a）と 64bit ARM プロセッサ（arm64-v8a）用のアプリを作成します。32bit Intel プロセッサ用のアプリを作成する場合は以下の赤字の箇所を x86 に、64bit Intel プロセッサ用のアプリを作成する場合は以下の赤字の箇所を x86_64 に変更してください。<br>
 
@@ -886,26 +886,25 @@ package <span style="color:red">jp.ogapee.onscripter</span>;
 
             <li> Ctrl-F11, Ctrl-F12 でエミュレータの画面表示を縦横に切り替えられます。ONScripter on Android は横画面専用なので、エミュレータ使用時には切り替えてください。また、Alt-Enter でフルスクリーンモードの切り替えができます。</li>
 
-            <li> エミュレータの作成直後は、SD card 上のファイルを実行できないようなので、以下のようにマウントし直して実行可能にします。</li>
-
-            <pre>
+            <li> エミュレータの作成直後は、SD card 上のファイルを実行できないようなので、以下のようにマウントし直して実行可能にします。
+              <pre>
 mount -o remount /dev/block/vold/179:0 /mnt/sdcard
 </pre>
+            </li>
 
-            <li> Windows で SDK Setup.exe を立ち上げてパッケージを更新する際に&quot;Failed to fetch URL https://dl-ssl.google.com/android/repository/repository.xml&quot; とエラーが出る場合は、c:\Users\<span style="color:red;">username</span>\.android\androidtool.cfg で以下のように設定するとうまくいくかもしれません。</li>
-
-            <pre>
+            <li> Windows で SDK Setup.exe を立ち上げてパッケージを更新する際に&quot;Failed to fetch URL https://dl-ssl.google.com/android/repository/repository.xml&quot; とエラーが出る場合は、c:\Users\<span style="color:red;">username</span>\.android\androidtool.cfg で以下のように設定するとうまくいくかもしれません。
+              <pre>
 sdkman.force.http=true
 </pre>
+            </li>
 
-            <li> Linux (Debian) で android を立ち上げてパッケージを更新する際に &quot;Failed to fetch URL https://dl-ssl.google.com/android/repository/repository.xml&quot; とエラーが出る場合は、以下のようにするとうまくいくかもしれません。</li>
-
-            <pre>
+            <li> Linux (Debian) で android を立ち上げてパッケージを更新する際に &quot;Failed to fetch URL https://dl-ssl.google.com/android/repository/repository.xml&quot; とエラーが出る場合は、以下のようにするとうまくいくかもしれません。
+              <pre>
 echo "0" &gt; /proc/sys/net/ipv6/bindv6only
 </pre>
+            </li>
 
             <li> Android の JAVA のソースの入手法。
-
               <pre>
 &gt; git clone https://android.googlesource.com/platform/frameworks/base.git
 &gt; cd base
@@ -925,10 +924,9 @@ echo "0" &gt; /proc/sys/net/ipv6/bindv6only
 
     <div id="footer">
       Copyright (c) 1998-2023 Studio O.G.A. All rights reserved.
-    </div> <!-- footer -->
+    </div>
 
-  </div> <!-- body -->
-
+  </div>
 </body>
 
 </html>

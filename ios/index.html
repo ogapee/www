@@ -1,9 +1,8 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE html>
 <html lang="ja">
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
   <title>ONScripter on iOS</title>
   <link rel="stylesheet" type="text/css" href="/ogapee.css">
@@ -164,8 +163,9 @@
                     <pre>
 $ xcode-select --install
 </pre>
+                    <p style="text-indent:0"><span style="color:red">注意：</span>先頭の $ はプロンプトなので入力しません。</p>
                   </li>
-                  <p style="text-indent:0"><span style="color:red">注意：</span>先頭の $ はプロンプトなので入力しません。</p>
+
                   <li> Xcode 5.1.1 未満では、Xcode を起動し、メニューバーの「Xcode」→「Preferences」→「Downloads」の Components のうち Command line Tools の横の「Install」ボタンを押してインストールしてください。</li>
                 </ul>
               </li>
@@ -248,7 +248,7 @@ onscripter_ios/ONScripter.xcworkspace
 </pre>
 
             <div class="figure">
-              <p><img src="Xcode_20171230_fig1.png" alt="Fig.1" border="1"><br>
+              <p><img src="Xcode_20171230_fig1.png" alt="Fig.1" style="border: 1px solid;"><br>
                 図１：ONScripter のソースコードの導入</p>
             </div>
 
@@ -359,7 +359,7 @@ onscripter_main.cpp
             <p>ゲームデータを内蔵する場合は HAVE_CONTENTS を定義してください。この場合、ZIP_URL は指定しません。</p>
 
             <div class="figure">
-              <p><img src="Xcode_20171230_fig2.png" alt="Fig.2" border="1"><br>
+              <p><img src="Xcode_20171230_fig2.png" alt="Fig.2" style="border: 1px solid"><br>
                 図２：ゲームデータの内蔵</p>
             </div>
 
@@ -638,10 +638,9 @@ $(SRCROOT)/../../Release-iphoneos/include/freetype2
 
     <div id="footer">
       Copyright (c) 2012-2023 Studio O.G.A. All rights reserved.
-    </div> <!-- footer -->
+    </div>
 
-  </div> <!-- body -->
-
+  </div>
 </body>
 
 </html>
