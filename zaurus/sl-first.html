@@ -1,27 +1,23 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE html>
 <html lang="ja">
 
-<HEAD>
-  <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <META http-equiv="Content-Style-Type" content="text/css">
-  <META name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-  <TITLE> SDL on Zaurus (SL-5500) 初期 </TITLE>
-  <LINK rel="stylesheet" type="text/css" href="/ogapee.css">
-</HEAD>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <title>SDL on Zaurus (SL-5500) 初期</title>
+  <link rel="stylesheet" type="text/css" href="/ogapee.css">
+</head>
 
 <body>
-
   <div id="body">
 
     <div id="header">
-      <H1> SDL on Zaurus (SL-5500) 初期 </H1>
+      <h1>SDL on Zaurus (SL-5500) 初期</h1>
 
       初期の試行錯誤の記録です。<br>
       Since: Dec. 14, 2002<br>
       Last updated: Dec. 14, 2002<br>
-      [<A HREF="http://ogapee.at.infoseek.co.jp/zaurus/sl-first.html">メインサイ
-        ト</A>] [<A HREF="http://onscripter.sourceforge.jp/zaurus/sl-first.html">ミラーサイ
-        ト</A>]
+      [<a href="http://ogapee.at.infoseek.co.jp/zaurus/sl-first.html">メインサイト</a>] [<a href="http://onscripter.sourceforge.jp/zaurus/sl-first.html">ミラーサイト</a>]
     </div> <!-- header -->
 
     <div id="toc-container">
@@ -29,20 +25,21 @@
       <h3>目次</h3>
 
       <div id="toc">
-
         <ul>
-          <li> <A HREF="#sl-5500">SL-5500 のセットアップ</A>
+          <li><a href="#sl-5500">SL-5500 のセットアップ</a>
             <ul>
-              <li> <A HREF="#device">購入機器</A>
-              <li> <A HREF="#setup">セットアップ</A>
+              <li><a href="#device">購入機器</a></li>
+              <li><a href="#setup">セットアップ</a></li>
             </ul>
-          <li> <A HREF="#sdl">SDLの導入</A>
+          </li>
+          <li><a href="#sdl">SDLの導入</a>
             <ul>
-              <li> <A href="#sdl-1.2">SDL-1.2.4</A>
+              <li><a href="#sdl-1.2">SDL-1.2.4</a></li>
             </ul>
-          <li> <A HREF="#onscripter">ONScripterの導入</A>
-          <li> <A HREF="#Qtopia">Qtopia 環境で動作するための作業</A>
-          <li> <A HREF="index.html">戻る</A>
+          </li>
+          <li><a href="#onscripter">ONScripterの導入</a></li>
+          <li><a href="#Qtopia">Qtopia 環境で動作するための作業</a></li>
+          <li><a href="index.html">戻る</a></li>
         </ul>
 
       </div> <!-- toc -->
@@ -55,8 +52,7 @@
         <div class="content">
           <h2 id="sl-5500">SL-5500 のセットアップ</h2>
 
-          <p>なお、SL-5500 のセットアップについては<A HREF="http://www.geocities.co.jp/SiliconValley-Sunnyvale/3866/z/">Linux
-              Zaurus SL-5000D/SL-5500</A>にまとまっている情報を参考にしました。</p>
+          <p>なお、SL-5500 のセットアップについては<a href="http://www.geocities.co.jp/SiliconValley-Sunnyvale/3866/z/">Linux Zaurus SL-5000D/SL-5500</a>にまとまっている情報を参考にしました。</p>
 
           <div class="sub-content">
             <h3 id="device">購入機器</h3>
@@ -90,34 +86,19 @@
           <div class="sub-content">
             <h3 id="setup">セットアップ</h3>
 
-            <OL>
-              <li> Windows 2000 の環境に USB ドライバをインストールし、Zaurus と繋
-                いで terminal, file manager, OpenSSH 等を入れます。
-              <li> 起動時に / を押して run level 選択画面を出し、a を押して Linux
-                console が出るようにします。
-              <li> root で入り /etc/passwd を編集し、root のホームを書き込み可能な
-                ように /home/root にします。
-              <li> OpenSSH のインストール。ここで、最初実体のない SD card をインス
-                トール先に指定してはまりました。
-              <li> 初日は LAN アダプタがなかったので、<A HREF="http://www.ruault.com/Zaurus/ethernet-over-usb-howto.html">How
-                  to set up an Ethernet over USB connection between the Sharp Zaurus
-                  SL-5000D and a Linux machine.</A>を参考に、Linux 母艦へ USB-to-HOST で
-                ネットワーク接続してリモートログインしていたのですが、<s>こちらの環境
-                  ではすぐに接続が切れるので、やってられません。しかも接続が切れると
-                  Zaurus をリブートしないと復旧しません。</s> USB ドライバに、uhci-alt
-                ではなくuchi を使うことで解決しました。
-
+            <ol>
+              <li> Windows 2000 の環境に USB ドライバをインストールし、Zaurus と繋いで terminal, file manager, OpenSSH 等を入れます。</li>
+              <li> 起動時に / を押して run level 選択画面を出し、a を押して Linux console が出るようにします。</li>
+              <li> root で入り /etc/passwd を編集し、root のホームを書き込み可能なように /home/root にします。</li>
+              <li> OpenSSH のインストール。ここで、最初実体のない SD card をインストール先に指定してはまりました。</li>
+              <li> 初日は LAN アダプタがなかったので、<a href="http://www.ruault.com/Zaurus/ethernet-over-usb-howto.html">How to set up an Ethernet over USB connection between the Sharp Zaurus SL-5000D and a Linux machine.</a>を参考に、Linux 母艦へ USB-to-HOST でネットワーク接続してリモートログインしていたのですが、<s>こちらの環境ではすぐに接続が切れるので、やってられません。しかも接続が切れると Zaurus をリブートしないと復旧しません。</s> USB ドライバに、uhci-alt ではなくuchi を使うことで解決しました。
                 <pre>
 ifconfig usb0 192.168.129.200 netmask 255.255.255.255 up
 route add -host 192.168.129.201 usb0
 </pre>
+              </li>
 
-              <li> やってられないので、メルコの LPC-CF-CLT 購入しました。事前に動
-                作確認ができなかったのですが、動作確認情報のある Planex の 10T よりずっ
-                とコンパクトで携帯に便利なのでチャレンジ。しかし、購入した後差してみる
-                も認識しません。cardctl ident で manufucture ID を見て、以下のように設
-                定したら認識されました。
-
+              <li> やってられないので、メルコの LPC-CF-CLT 購入しました。事前に動作確認ができなかったのですが、動作確認情報のある Planex の 10T よりずっとコンパクトで携帯に便利なのでチャレンジ。しかし、購入した後差してみるも認識しません。cardctl ident で manufucture ID を見て、以下のように設定したら認識されました。
                 <pre>
 $ /sbin/cardctl ident
 Socket 0:
@@ -157,10 +138,11 @@ card "Buffalo LPC-CF-CLT Fast Ethernet"
     ;;
        
 </pre>
+              </li>
 
-              <li> また、便宜的に母艦のディレクトリを Zaurus から NFS mount し、SD card 代りに使います。
-              <li> ssh で入れるようにし、セットアップは終了。
-            </OL>
+              <li>また、便宜的に母艦のディレクトリを Zaurus から NFS mount し、SD card 代りに使います。</li>
+              <li>ssh で入れるようにし、セットアップは終了。</li>
+            </ol>
 
           </div> <!-- sub-content -->
 
@@ -170,18 +152,11 @@ card "Buffalo LPC-CF-CLT Fast Ethernet"
         <div class="content">
           <h2 id="sdl">SDLの導入</h2>
 
-          <p>libSDL_1.2-0.2_arm.ipkが<A HREF="http://www.eongames.com/downloads/feed/">ここ</A>にありますが、
-            SDL と SDL_mixer のみでかつ最新かどうかも分からないし、どうせ自分で移
-            植するつもりだったので、とりあえず無視します。</p>
+          <p>libSDL_1.2-0.2_arm.ipkが<a href="http://www.eongames.com/downloads/feed/">ここ</a>にありますが、SDL と SDL_mixer のみでかつ最新かどうかも分からないし、どうせ自分で移植するつもりだったので、とりあえず無視します。</p>
 
           <p>まず、移植して動きそうかの目処をつけます。<br>
-
-            cat ### &gt; /dev/fb0 で、frame buffer が使えることを確認。次に、サンプル
-            プログラムを cross compile し、pthread が使えることを確認。<br>
-
-            これで、少なくとも音以外はうまくいきそうな目処がつきました。で、SDL の
-            cross compile を開始します。<br>
-
+            cat ### &gt; /dev/fb0 で、frame buffer が使えることを確認。次に、サンプルプログラムを cross compile し、pthread が使えることを確認。<br>
+            これで、少なくとも音以外はうまくいきそうな目処がつきました。で、SDL の cross compile を開始します。<br>
             なお、作業は母艦上の NFS export されている場所で行いました。
           </p>
 
@@ -194,9 +169,7 @@ card "Buffalo LPC-CF-CLT Fast Ethernet"
           <div class="sub-content">
             <h3 id="sdl-1.2">SDL-1.2.4</h3>
 
-            <p>
-              <font color=blue>以下は、May. 20, 2002 の記録です。この時点では、SDL-1.2 で Qtopia 環境はサポートしていませんでした。</font>
-            </p>
+            <p><span style="color:blue;">以下は、May. 20, 2002 の記録です。この時点では、SDL-1.2 で Qtopia 環境はサポートしていませんでした。</span></p>
 
             <p>FB console で動かす場合</p>
 
@@ -210,8 +183,7 @@ card "Buffalo LPC-CF-CLT Fast Ethernet"
 &gt; make install
 </pre>
 
-            <p class="noindent">
-              で、SDL の適当なサンプルプログラムをリモートから Zaurus 上で実行。</p>
+            <p class="noindent">で、SDL の適当なサンプルプログラムをリモートから Zaurus 上で実行。</p>
 
             <pre>
 # ./test
@@ -243,13 +215,10 @@ Couldn't initialize SDL: Unable to open mouse
 Couldn't set 240x320x32 video mode: No video mode large enough for 240x320
 </pre>
 
-            <p>げげげ、240x320 は駄目だが 320x240 はいけるじゃん。しかし、サンプルプ
-              ログラムを試したら、fb が飛んで何も表示されなくなりました。<br>
-
+            <p>げげげ、240x320 は駄目だが 320x240 はいけるじゃん。しかし、サンプルプログラムを試したら、fb が飛んで何も表示されなくなりました。<br>
               ssh は繋がるので生きてはいるが、何も映りません。</p>
 
-            <p>SDL_ListModes( NULL, 0 ) と SDL_GetVideoInfo() で zaurus の画面周り
-              を調べると</p>
+            <p>SDL_ListModes( NULL, 0 ) と SDL_GetVideoInfo() で zaurus の画面周りを調べると</p>
 
             <pre>
 表示領域 0 0 320 240
@@ -258,19 +227,10 @@ RShift b GShift 5 BShift 0 AShift 0
 AMask f800 GMask 7e0 BMask 1f AMask 0
 </pre>
 
-            <p>というわけで、bpp を 16 にすれば飛ばなくなります。プログラム終了後
-              も、プロンプトに戻ることができます。<br>
-
-              しかし、一般ユーザで実行する場合 Zaurus を起動する度に root で chmod
-              a+rw /dev/fb0 しなければいけないのはうっとおしいです。<br>
-
-              というわけで、無事 SDL から画面表示はできるようになりました。標準では
-              ９０度半時計回りした状態が画面の定位置で、従ってパネルの左下が原点になっ
-              ています。結局、まったく移植に関する作業を行う必要がありませんでした。
-              <br>
-
-              ONScripter にわざわざ画面９０度回転を実装した私の努力は……。
-            </p>
+            <p>というわけで、bpp を 16 にすれば飛ばなくなります。プログラム終了後も、プロンプトに戻ることができます。<br>
+              しかし、一般ユーザで実行する場合 Zaurus を起動する度に root で chmod a+rw /dev/fb0 しなければいけないのはうっとおしいです。<br>
+              というわけで、無事 SDL から画面表示はできるようになりました。標準では９０度半時計回りした状態が画面の定位置で、従ってパネルの左下が原点になっています。結局、まったく移植に関する作業を行う必要がありませんでした。<br>
+              ONScripter にわざわざ画面９０度回転を実装した私の努力は……。</p>
 
           </div> <!-- sub-content -->
 
@@ -280,27 +240,17 @@ AMask f800 GMask 7e0 BMask 1f AMask 0
         <div class="content">
           <h2 id="onscripter">ONScripterの導入(SL-5500 編)</h2>
 
-          <p>Makefile.ARMLinux を作って、make。</P>
+          <p>Makefile.ARMLinux を作って、make。</p>
 
-          <P>zaurus 用に特に修正したことは、screen_surface の bpp を強制的に 16
-            にすることくらいです。他は Linux の挙動に準拠。</P>
+          <p>zaurus 用に特に修正したことは、screen_surface の bpp を強制的に 16 にすることくらいです。他は Linux の挙動に準拠。</p>
 
-          <P>で、起動。普通に起動されます。最初は、freetype 2.1.0 のせいで文字が
-            全て・になっていたのですが、freetype 2.0.9 を使えば問題ありません。画
-            面効果やカーソルアニメーションも問題無く実行されます。</P>
+          <p>で、起動。普通に起動されます。最初は、freetype 2.1.0 のせいで文字が全て・になっていたのですが、freetype 2.0.9 を使えば問題ありません。画面効果やカーソルアニメーションも問題無く実行されます。</p>
 
-          <P>ただし、SMPEG を利用した MP3 演奏は異様に遅く、CPU を占有する上音も
-            ぶつぶつで全然駄目です。Zaurus 付属の mpegplayer だと途切れず演奏され
-            るのですが、<s>特定 CPU にチューンされていない</s>浮動小数点演算を多用
-            する SMPEG には荷が重いようです。</P>
+          <p>ただし、SMPEG を利用した MP3 演奏は異様に遅く、CPU を占有する上音もぶつぶつで全然駄目です。Zaurus 付属の mpegplayer だと途切れず演奏されるのですが、<s>特定 CPU にチューンされていない</s>浮動小数点演算を多用する SMPEG には荷が重いようです。</p>
 
-          <P>
-            <font color=blue>(May 26. 2002)</font> MP3 デコーダを SMPEG から MAD
-            に差し換えるオプションを追加しました。整数演算で計算するため、これによっ
-            てまともな MP3 演奏を聞きながらゲームができます。
-          </p>
+          <p><span style="color:blue;">(May 26. 2002)</span> MP3 デコーダを SMPEG から MADに差し換えるオプションを追加しました。整数演算で計算するため、これによってまともな MP3 演奏を聞きながらゲームができます。</p>
 
-          <p>最後にコンソール用の mixer を導入。（Qtopia 環境の場合不要）</P>
+          <p>最後にコンソール用の mixer を導入。（Qtopia 環境の場合不要）</p>
 
           <pre>
 setmixer
@@ -313,50 +263,40 @@ CFLAGS= -O6 -fomit-frame-pointer -Wall -pipe
 &gt; make install
 </pre>
 
-          <P>ゲーム<A HREF="http://www.geocities.co.jp/Technopolis-Mars/7301/hit.html">「ひ
-              とかた」</A>で試しましたが、MIDI は特に途切れること無く鳴ります。と思っ
-            たら、同時発音数が多い個所は途切れますね。</P>
+          <p>ゲーム<a href="http://www.geocities.co.jp/Technopolis-Mars/7301/hit.html">「ひとかた」</a>で試しましたが、MIDI は特に途切れること無く鳴ります。と思ったら、同時発音数が多い個所は途切れますね。</p>
 
-          <P>また、某数種類のゲームで動作確認しましたが、（文字が小さくて読みづらい
-            とかはありますが）特に問題ありません。</p>
+          <p>また、某数種類のゲームで動作確認しましたが、（文字が小さくて読みづらいとかはありますが）特に問題ありません。</p>
         </div> <!-- content -->
 
 
         <div class="content">
-          <h2 id="Qtopia">Qtopia 環境で動作するための作業(SL-5500編)<font color=red>(Aug 15. 2002)</font>
+          <h2 id="Qtopia">Qtopia 環境で動作するための作業(SL-5500編)<span style="color:red;">(Aug 15. 2002)</span>
           </h2>
 
-          <p>というか、SL-5500 自体をもう２ヶ月くらい放っており、日本語環境にす
-            らしていなかったので、その辺から設定を始めます。</p>
+          <p>というか、SL-5500 自体をもう２ヶ月くらい放っており、日本語環境にすらしていなかったので、その辺から設定を始めます。</p>
 
-          <OL>
+          <ol>
             <li> ROM を 2.38 にアップデート。<br>
-              <A HREF="http://www.myzaurus.com/ROMupdate4.asp">http://www.myzaurus.com/ROMupdate4.asp</A>
-              から OSPACK をダウンロードし、CF のルートに置きます。そして、手順通り、
-              CF を zaurus に差し、c と d と full-reset を同時に押すと、LED が２つと
-              も点き、ROM のアップデートが開始されます。数分待ち LED が２つとも消え
-              ると終了ですが、なぜか fsck まわり（？）の warning が大量に出て止まり
-              ません。無視してもう一度 full-reset を押して再起動すると、問題なく立ち
-              上がりました。
+              <a href="http://www.myzaurus.com/ROMupdate4.asp">http://www.myzaurus.com/ROMupdate4.asp</a>から OSPACK をダウンロードし、CF のルートに置きます。そして、手順通り、CF を zaurus に差し、c と d と full-reset を同時に押すと、LED が２つとも点き、ROM のアップデートが開始されます。数分待ち LED が２つとも消えると終了ですが、なぜか fsck まわり（？）の warning が大量に出て止まりません。無視してもう一度 full-reset を押して再起動すると、問題なく立ち上がりました。
+            </li>
 
             <li> OpenSSH を入れる。<br>
               これがないと始まりません。ちなみに、環境を始めから設定し直しています。<br>
-              <A HREF="http://www.killefiz.de/zaurus/">Zaurus Software
-                Index</A> から、openssh-3.2.3p1-arm-linux-1.tar.gz をダウンロード。
-              root で入れるように、/etc/ssh/sshd_config で PermitRootLogin yes とします。
+              <a href="http://www.killefiz.de/zaurus/">Zaurus Software Index</a> から、openssh-3.2.3p1-arm-linux-1.tar.gz をダウンロード。root で入れるように、/etc/ssh/sshd_config で PermitRootLogin yes とします。
+            </li>
 
-            <li> <A HREF="http://www.sikigami.com/">アックス</A>から手書き入力の
+            <li> <a href="http://www.sikigami.com/">アックス</a>から手書き入力の
               ための 布目 for Qtopia をインストールします。<br>
               &gt; cd /mnt/card<br>
               &gt; tar zxf nunome-Qtopia-zaurus.tar.gz<br>
-              &gt; ./install-sd.sh
+              &gt; ./install-sd.sh</li>
 
-            <li> キーボード入力用の Input Method (anthy, imkit-anthy) 等<A HREF="http://sourceforge.jp/projects/zaurus-ja/">zaurus-ja</A>の成果物
+            <li> キーボード入力用の Input Method (anthy, imkit-anthy) 等<a href="http://sourceforge.jp/projects/zaurus-ja/">zaurus-ja</a>の成果物
               を色々入れます。<br>
               anthy_0.0.3114b-1sd_arm.ipk<br>
               imkit-anthy_0.3.4-1_arm.ipk<br>
-              libqte-ja_2.3.3-2sd_arm.ipk
-          </OL>
+              libqte-ja_2.3.3-2sd_arm.ipk</li>
+          </ol>
         </div> <!-- content -->
 
       </div> <!-- main -->
@@ -365,10 +305,9 @@ CFLAGS= -O6 -fomit-frame-pointer -Wall -pipe
 
     <div id="footer">
       Copyright (c) 1998-2006 Studio O.G.A. All rights reserved.
-    </div> <!-- footer -->
+    </div>
 
-  </div> <!-- body -->
-
+  </div>
 </body>
 
 </html>

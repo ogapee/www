@@ -1,20 +1,18 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE html>
 <html lang="ja">
 
-<HEAD>
-  <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <META http-equiv="Content-Style-Type" content="text/css">
-  <META name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-  <TITLE> SDL on Zaurus 開発環境 </TITLE>
-  <LINK rel="stylesheet" type="text/css" href="/ogapee.css">
-</HEAD>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <title>SDL on Zaurus 開発環境</title>
+  <link rel="stylesheet" type="text/css" href="/ogapee.css">
+</head>
 
 <body>
-
   <div id="body">
 
     <div id="header">
-      <H1> SDL on Zaurus 開発環境 </H1>
+      <h1>SDL on Zaurus 開発環境</h1>
 
       Since: Dec. 14, 2002<br>
       Last updated: Jan. 6, 2011 (SDL_image-1.2.10, SDL_mixer-1.2.11, libpng-1.4.5 に更新)<br>
@@ -27,23 +25,25 @@
       <div id="toc">
 
         <ul>
-          <li> <A HREF="#environment">開発環境の導入</A>
-          <li> <A HREF="#SDL">SDLの導入</A>
+          <li><a href="#environment">開発環境の導入</a></li>
+          <li><a href="#SDL">SDLの導入</a>
             <ul>
-              <li> <A HREF="#SDL-1.2.5">SDL-1.2.5</A>
-              <li> <A HREF="#libjpeg-6b">libjpeg 6b</A>
-              <li> <A HREF="#zlib-1.2.3">zlib-1.2.3</A>
-              <li> <A HREF="#libpng-1.4.5">libpng-1.4.5</A>
-              <li> <A HREF="#SDL_image-1.2.10">SDL_image-1.2.10</A>
-              <li> <A HREF="#SDL_mixer-1.2.11">SDL_mixer-1.2.11</A>
-              <li> <A HREF="#bzip2-1.0.4">bzip2-1.0.4</A>
-              <li> <A HREF="#freetype-2.1.10">freetype-2.1.10</A>
-              <li> <A HREF="#SDL_ttf-2.0.9">SDL_ttf-2.0.9</A>
-              <li> <A HREF="#mad-0.14.2b">mad-0.14.2b</A>
-              <li> <A HREF="#ivorbis">Tremor Vorbis I Stream 20020517: 1.0.2</A>
-                <font color=red>(updated in Sep. 2, 2003)</font>
+              <li><a href="#SDL-1.2.5">SDL-1.2.5</a></li>
+              <li><a href="#libjpeg-6b">libjpeg 6b</a></li>
+              <li><a href="#zlib-1.2.3">zlib-1.2.3</a></li>
+              <li><a href="#libpng-1.4.5">libpng-1.4.5</a></li>
+              <li><a href="#SDL_image-1.2.10">SDL_image-1.2.10</a></li>
+              <li><a href="#SDL_mixer-1.2.11">SDL_mixer-1.2.11</a></li>
+              <li><a href="#bzip2-1.0.4">bzip2-1.0.4</a></li>
+              <li><a href="#freetype-2.1.10">freetype-2.1.10</a></li>
+              <li><a href="#SDL_ttf-2.0.9">SDL_ttf-2.0.9</a></li>
+              <li><a href="#mad-0.14.2b">mad-0.14.2b</a></li>
+              <li><a href="#ivorbis">Tremor Vorbis I Stream 20020517: 1.0.2</a>
+                <span style="color:red;">(updated in Sep. 2, 2003)</span>
+              </li>
             </ul>
-          <li> <A HREF="index.html">戻る</A>
+          </li>
+          <li><a href="index.html">戻る</a></li>
         </ul>
 
       </div> <!-- toc -->
@@ -56,15 +56,15 @@
         <div class="content">
           <h2 id="environment">開発環境の導入</h2>
 
-          <p>Linux (Debian/sid)マシンに、<A HREF="http://more.sbc.co.jp/sl_j/sl_top.asp">ザウルス宝箱Pro</A>より、
+          <p>Linux (Debian/sid)マシンに、<a href="http://more.sbc.co.jp/sl_j/sl_top.asp">ザウルス宝箱Pro</a>より、
             下記のパッケージをダウンロードし、alienをかけてでインストール。</p>
 
           <ul>
-            <li> gcc-cross-sa1100-2.95.2-0.i386.rpm
-            <li> linux-headers-arm-sa1100-2.4.6-3.i386.rpm
-            <li> glibc-arm-2.2.2-0.i386.rpm
-            <li> qtopia-free-1.5.0-1.i386.rpm
-            <li> binutils-cross-arm-2.11.2-0.i386.rpm
+            <li>gcc-cross-sa1100-2.95.2-0.i386.rpm</li>
+            <li>linux-headers-arm-sa1100-2.4.6-3.i386.rpm</li>
+            <li>glibc-arm-2.2.2-0.i386.rpm</li>
+            <li>qtopia-free-1.5.0-1.i386.rpm</li>
+            <li>binutils-cross-arm-2.11.2-0.i386.rpm</li>
           </ul>
 
           <pre>
@@ -88,148 +88,82 @@ echo "Altered environment for Sharp Zaurus SL-5000D Development ARM"
           <div class="sub-content">
             <h3 id="SDL-1.2.5">SDL-1.2.5</h3>
 
-            <p><A HREF="http://www.libsdl.org/">SDL本家</A>より、SDL-1.2.5.tar.gzをダウンロード。</p>
+            <p><a href="http://www.libsdl.org/">SDL本家</a>より、SDL-1.2.5.tar.gzをダウンロード。</p>
 
             <h4 id="devel-20031201">20031201</h4>
             <h4 id="devel-20030830">20030830</h4>
             <h4 id="devel-20030816">20030816</h4>
 
-            <P>T-nagi さんより、SL-A300 においてカーソルキーと画面上でのカーソルの
-              動きが反対だという報告をいただきましたので、修正を施しました。<s>パッ
-                チは<A href="SDL-1.2.5-k5.diff">SDL-1.2.5-k5.diff</A>です。</s>パッチ
-              が間違っていました。パッチは<A href="SDL-1.2.5-k5.diff">SDL-1.2.5-k6.diff</A>です。阿川さんのパッ
-              チ<s><A href="http://www.self-core.org/~kaoru-k/pub/libsdl_1.2.5-slzaurus20030704_arm.diff">libsdl_1.2.5-slzaurus20030704_arm.diff</A></s><A href="libsdl_1.2.5-slzaurus20031201_arm.diff">libsdl_1.2.5-slzaurus20031201_arm.diff</A>
-              をあてた SDL-1.2.5 に対してあてます。内容は以下の1点です。
-              (2003.08.16)(2003.08.30 修正)(2003.12.1 阿川さんの新しいパッチに追従)</P>
+            <p>T-nagi さんより、SL-A300 においてカーソルキーと画面上でのカーソルの動きが反対だという報告をいただきましたので、修正を施しました。<s>パッチは<a href="SDL-1.2.5-k5.diff">SDL-1.2.5-k5.diff</a>です。</s>パッチが間違っていました。パッチは<a href="SDL-1.2.5-k5.diff">SDL-1.2.5-k6.diff</a>です。阿川さんのパッチ<s><a href="http://www.self-core.org/~kaoru-k/pub/libsdl_1.2.5-slzaurus20030704_arm.diff">libsdl_1.2.5-slzaurus20030704_arm.diff</a></s><a href="libsdl_1.2.5-slzaurus20031201_arm.diff">libsdl_1.2.5-slzaurus20031201_arm.diff</a>をあてた SDL-1.2.5 に対してあてます。内容は以下の1点です。(2003.08.16)(2003.08.30 修正)(2003.12.1 阿川さんの新しいパッチに追従)</p>
 
             <ul>
-
-              <li>機種が SL-A300 の場合に、sdlRotation = 3 を設定する。
-
+              <li>機種が SL-A300 の場合に、sdlRotation = 3 を設定する。</li>
             </ul>
 
 
             <h4 id="devel-20030704">20030704</h4>
 
-            <P>阿川さんにお送りしたパッチ<A href="SDL-1.2.5-k4.diff">SDL-1.2.5-k4.diff</A>のうち、音切れ解消のため
-              にバッファのサイズを増やす修正については、リアルタイム性の高いゲームで
-              は遅延が非常に大きくなる（１秒程）とのことで、環境変数
-              SDL_DSP_NFRAGMENTS が設定されいた場合に、その数をバッファ数とするとい
-              う形で阿川さんの方で修正していただきました。ONScripter 以外に SDL を使
-              用していなかったのでそこまで遅延が大きいとは思っておりませんでしたが、
-              確かにこの形の修正が良いと思います。</p>
+            <p>阿川さんにお送りしたパッチ<a href="SDL-1.2.5-k4.diff">SDL-1.2.5-k4.diff</a>のうち、音切れ解消のためにバッファのサイズを増やす修正については、リアルタイム性の高いゲームでは遅延が非常に大きくなる（1秒程）とのことで、環境変数 SDL_DSP_NFRAGMENTS が設定されいた場合に、その数をバッファ数とするという形で阿川さんの方で修正していただきました。ONScripter 以外に SDL を使用していなかったのでそこまで遅延が大きいとは思っておりませんでしたが、確かにこの形の修正が良いと思います。</p>
 
-            <p>もう一点の修正はそのまま取り込んでいただいたので、この阿川さんのパッチ
-              <A href="http://www.self-core.org/~kaoru-k/pub/libsdl_1.2.5-slzaurus20030704_arm.diff">libsdl_1.2.5-slzaurus20030704_arm.diff</A>
-              をあてたものに差し換えたものを、新たにライブラリパッケージとして公開し
-              ました。libSDL については、阿川さんの公開されているものと等価のはずで
-              す。
-            </p>
+            <p>もう一点の修正はそのまま取り込んでいただいたので、この阿川さんのパッチ<a href="http://www.self-core.org/~kaoru-k/pub/libsdl_1.2.5-slzaurus20030704_arm.diff">libsdl_1.2.5-slzaurus20030704_arm.diff</a>をあてたものに差し換えたものを、新たにライブラリパッケージとして公開しました。libSDL については、阿川さんの公開されているものと等価のはずです。</p>
 
 
             <h4>20030629</h4>
 
-            <P>以下は古い情報です。SDL-1.2.5 に関係する以下のパッチはあてる必要が
-              ありません。</P>
+            <p>以下は古い情報です。SDL-1.2.5 に関係する以下のパッチはあてる必要がありません。</p>
 
-            <P>SL-C750において、VGA,QVGAいずれにおいてもスタイラスの座標と画面の表
-              示が180度ずれる・MP3演奏において音切れが生じるという報告をいただいたた
-              め、修正パッチ<A href="SDL-1.2.5-k4.diff">SDL-1.2.5-k4.diff</A>を書き
-              ました。阿川さんのパッチ<A href="http://www.self-core.org/~kaoru-k/pub/libsdl_1.2.5-slzaurus20030623_arm.diff">libsdl_1.2.5-slzaurus20030623_arm.diff</A>
-              をあてた SDL-1.2.5 に対してあてます。内容は以下の2点です。</P>
+            <p>SL-C750において、VGA,QVGAいずれにおいてもスタイラスの座標と画面の表示が180度ずれる・MP3演奏において音切れが生じるという報告をいただいたため、修正パッチ<a href="SDL-1.2.5-k4.diff">SDL-1.2.5-k4.diff</a>を書きました。阿川さんのパッチ<a href="http://www.self-core.org/~kaoru-k/pub/libsdl_1.2.5-slzaurus20030623_arm.diff">libsdl_1.2.5-slzaurus20030623_arm.diff</a>をあてた SDL-1.2.5 に対してあてます。内容は以下の2点です。</p>
 
             <ul>
+              <li>機種が SL-C750, SL-C760 である場合に、VGA, QVGA で画面とスタイラス入力が 180 度ずれる問題を修正しました。(SDL_sysvideo.cc)</li>
 
-              <li>機種がSL-C750, SL-C760である場合に、VGA,QVGAで画面とスタイラス入力
-                が180度ずれる問題を修正しました。(SDL_sysvideo.cc)
-
-              <li>SL-C750 でも音切れが生じるということなので、SL-A300 でのみ有効になっ
-                ていた音切れ解消のためのバッファのサイズを増やす修正を、全ての機種にお
-                いて行うようにしました。(SDL_dspaudio.c)
-
+              <li>SL-C750 でも音切れが生じるということなので、SL-A300 でのみ有効になっていた音切れ解消のためのバッファのサイズを増やす修正を、全ての機種において行うようにしました。(SDL_dspaudio.c)</li>
             </ul>
 
 
             <h4>20030622</h4>
 
-            <P>以下の理由により、今後は阿川さんのパッチをベースにします。</P>
+            <p>以下の理由により、今後は阿川さんのパッチをベースにします。</p>
 
             <ul>
-              <li> 日本の Linux Zaurus においては、<A href="http://www.self-core.org/~kaoru-k/wiki/LibSdlOnLinuxZaurus.html">
-                  阿川さんがパッチを当てて公開されている SDL パッケージ</A>が、SDL とし
-                てほぼ標準となっており、これと互換性のない別の SDL パッケージを使うと
-                ユーザが不便。
+              <li> 日本の Linux Zaurus においては、<a href="http://www.self-core.org/~kaoru-k/wiki/LibSdlOnLinuxZaurus.html">阿川さんがパッチを当てて公開されている SDL パッケージ</a>が、SDL としてほぼ標準となっており、これと互換性のない別の SDL パッケージを使うとユーザが不便。</li>
 
-              <li> SL-C750, SL-C760 を買う予定がないので、サポートするのがたいへん。
+              <li> SL-C750, SL-C760 を買う予定がないので、サポートするのがたいへん。</li>
 
-              <li> 私の以前のパッチでの修正が全て取り入れられている。
+              <li> 私の以前のパッチでの修正が全て取り入れられている。</li>
             </ul>
 
-            <P>そこで、阿川さんの <A href="http://www.self-core.org/~kaoru-k/pub/libsdl_1.2.5-slzaurus20030622_arm.diff">libsdl_1.2.5-slzaurus20030622_arm.diff</A>
-              をもらってこちらで libSDL-1.2.so.0.0.5 を作成して試してみたのですが、
-              色々問題が発生したので修正パッチ<A href="SDL-1.2.5-k3.diff">SDL-1.2.5-k3.diff</A>を書きました。阿川さんの
-              パッチをあてた SDL-1.2.5 に対してあてます。パッチの内容は以下の４点で
-              す。</P>
+            <p>そこで、阿川さんの <a href="http://www.self-core.org/~kaoru-k/pub/libsdl_1.2.5-slzaurus20030622_arm.diff">libsdl_1.2.5-slzaurus20030622_arm.diff</a>をもらってこちらで libSDL-1.2.so.0.0.5 を作成して試してみたのですが、色々問題が発生したので修正パッチ<a href="SDL-1.2.5-k3.diff">SDL-1.2.5-k3.diff</a>を書きました。阿川さんのパッチをあてた SDL-1.2.5 に対してあてます。パッチの内容は以下の４点です。</p>
 
             <ul>
+              <li>SL-5500 に対応していないため対応させました。(SDL_sysvideo.cc)</li>
 
-              <li>SL-5500 に対応していないため対応させました。(SDL_sysvideo.cc)
+              <li>rotation_ が 2 の時の画像転送において 32bit aligned された画像（x, width が偶数）を仮定しており、そうではない画像が来たときに正常に転送されないため、32bit 転送の部分はそのままとし、境界部分を別途処理することで、正常転送されるようにしました。(SDL_QWin.cc)</li>
 
-              <li>rotation_ が 2 の時の画像転送において32bit aligned された画像
-                （x,width が偶数）を仮定しており、そうではない画像が来たときに正常に転
-                送されないため、32bit 転送の部分はそのままとし、境界部分を別途処理する
-                ことで、正常転送されるようにしました。(SDL_QWin.cc)
+              <li>マウスカーソルを warp させたときに発行される SDL_PrivateMouseMotion に与える座標を、アプリケーションの論理座標に修正しました。(SDL_sysmouse.cc)</li>
 
-              <li>マウスカーソルを warp させたときに発行される
-                SDL_PrivateMouseMotion に与える座標を、アプリケーションの論理座標に修
-                正しました。(SDL_sysmouse.cc)
-
-              <li>フレームバッファとアプリケーションが指定する画像の向きが異なるとき
-                に、マウス座標設定時にマージンの取り扱いがおかしかったため修正しました。
-                (SDL_QWin.cc)
-
+              <li>フレームバッファとアプリケーションが指定する画像の向きが異なるときに、マウス座標設定時にマージンの取り扱いがおかしかったため修正しました。(SDL_QWin.cc)</li>
             </ul>
 
 
             <h4>以下は古いパッチです</h4>
 
-            <P>上記の阿川さんのパッチに取り込まれているため、現在は直接当てる必要
-              はありません。</P>
+            <p>上記の阿川さんのパッチに取り込まれているため、現在は直接当てる必要はありません。</p>
 
             <ul>
-              <li><A HREF="http://emmie.koka-in.org/~kensyu/zaurus/diary/20021110.html"> 神
-                  木さん</A>の patch を当てました。SL-A300 で音切れが解消されるようです。
+              <li><a href="http://emmie.koka-in.org/~kensyu/zaurus/diary/20021110.html">神木さん</a>の patch を当てました。SL-A300 で音切れが解消されるようです。</li>
 
-              <li>Qtopia で動かす場合 OK ボタンがなぜか割り当てられていないので、
-                SDL-1.2.5/src/video/qtopia/SDL_QWin.cc に patch をあてました。
+              <li>Qtopia で動かす場合 OK ボタンがなぜか割り当てられていないので、SDL-1.2.5/src/video/qtopia/SDL_QWin.cc に patch をあてました。</li>
 
-              <li> SDL_WarpMouse が SDL_MouseMotionEvent を発生させないので、
-                SDL-1.2.5/src/video/qtopia/SDL_sysmouse.cc にこれを発生させる patch を
-                あてました。これで、選択肢やボタン待ちの時に十字キーの上下を押すと、カー
-                ソルが移動するようになります。
+              <li> SDL_WarpMouse が SDL_MouseMotionEvent を発生させないので、SDL-1.2.5/src/video/qtopia/SDL_sysmouse.cc にこれを発生させる patch をあてました。これで、選択肢やボタン待ちの時に十字キーの上下を押すと、カーソルが移動するようになります。</li>
 
-              <li>
-                <font color=blue>(Jan. 2, 2003)</font>SDL on Qtopiaでは、
-                QDirectPainterを使用してFrame Buffer Driver のロックを行い、frame
-                buffer に直接描画していますが、ロックを解除するときに
-                (SDL_QWin::unlockScreen()) QDirectPainter::end() を呼んでから delete す
-                ると、正常にロックを解除できなくなることがあるようです。一旦不完全にロッ
-                クを解除すると、Frame Buffer Driverからイベントをもらえなくなり、
-                QAapplicationにイベントが来なくなります。<br>
-
-                このとき、イベントは消えるのではなくFrame Buffer Driverのキューにたま
-                り続け、強制終了するなどしてアプリケーションがいなくなると、ロックが解
-                放され、イベントの受取りアプリケーションが変わり、そちらにイベントが流
-                し込まれます。ただし、コードをきちんと奥まで追っていないため、上の記述
-                の後半は推測です。<br>
-
-                QDirectPainterをdeleteする前にend()を呼ぶ必要はなさそうなので、これを
-                削除しました。
-
+              <li><span style="color:blue;">(Jan. 2, 2003)</span>SDL on Qtopiaでは、QDirectPainterを使用してFrame Buffer Driver のロックを行い、frame buffer に直接描画していますが、ロックを解除するときに(SDL_QWin::unlockScreen()) QDirectPainter::end() を呼んでから delete すると、正常にロックを解除できなくなることがあるようです。一旦不完全にロックを解除すると、Frame Buffer Driverからイベントをもらえなくなり、QAapplicationにイベントが来なくなります。<br>
+                このとき、イベントは消えるのではなくFrame Buffer Driverのキューにたまり続け、強制終了するなどしてアプリケーションがいなくなると、ロックが解放され、イベントの受取りアプリケーションが変わり、そちらにイベントが流し込まれます。ただし、コードをきちんと奥まで追っていないため、上の記述の後半は推測です。<br>
+                QDirectPainterをdeleteする前にend()を呼ぶ必要はなさそうなので、これを削除しました。</li>
             </ul>
 
             <del>
-              <p>上の４つの patch を合わせたものを、<A HREF="SDL-1.2.5-k2.diff">SDL-1.2.5-k2.diff</A>に置きます。</p>
+              <p>上の４つの patch を合わせたものを、<a href="SDL-1.2.5-k2.diff">SDL-1.2.5-k2.diff</a>に置きます。</p>
             </del>
 
             <pre>
@@ -250,7 +184,7 @@ echo "Altered environment for Sharp Zaurus SL-5000D Development ARM"
           <div class="sub-content">
             <h3 id="libjpeg-6b">libjpeg 6b</h3>
 
-            <p><A HREF="http://www.ijg.org/">Independent JPEG Group</A>より、jpegsrc.v6b.tar.gzをダウンロード。</p>
+            <p><a href="http://www.ijg.org/">Independent JPEG Group</a>より、jpegsrc.v6b.tar.gzをダウンロード。</p>
 
             <p>libtool がないと失敗するので、Debian のものを持ってきました。</p>
 
@@ -268,7 +202,7 @@ echo "Altered environment for Sharp Zaurus SL-5000D Development ARM"
           <div class="sub-content">
             <h3 id="zlib-1.2.3">zlib-1.2.3</h3>
 
-            <p><A HREF="http://www.zlib.net/">zlib</A>より、zlib-1.2.3.tar.gzをダウンロード。</p>
+            <p><a href="http://www.zlib.net/">zlib</a>より、zlib-1.2.3.tar.gzをダウンロード。</p>
 
             <pre>
 &gt; setenv LDSHARED "arm-linux-gcc -shared -Wl,-soname,libz.so.1"
@@ -283,7 +217,7 @@ echo "Altered environment for Sharp Zaurus SL-5000D Development ARM"
           <div class="sub-content">
             <h3 id="libpng-1.4.5">libpng-1.4.5</h3>
 
-            <p><A HREF="http://www.libpng.org/pub/png/libpng.html">libpng</A>より、lbipng-1.4.5.tar.gzをダウンロード。</p>
+            <p><a href="http://www.libpng.org/pub/png/libpng.html">libpng</a>より、lbipng-1.4.5.tar.gzをダウンロード。</p>
 
             <pre>
 &gt; configure --host=i386-linux --target=strongarm-linux
@@ -298,7 +232,7 @@ echo "Altered environment for Sharp Zaurus SL-5000D Development ARM"
           <div class="sub-content">
             <h3 id="SDL_image-1.2.10">SDL_image-1.2.10</h3>
 
-            <p><A HREF="http://www.libsdl.org/">SDL本家</A>より、SDL_image-1.2.10.tar.gzをダウンロード。</p>
+            <p><a href="http://www.libsdl.org/">SDL本家</a>より、SDL_image-1.2.10.tar.gzをダウンロード。</p>
 
             <pre>
 &gt; setenv PKG_CONFIG
@@ -324,13 +258,9 @@ CFLAGS = -g -O2 -I/opt/Embedix/tools/arm-linux/include/SDL -D_REENTRANT -Dmain=S
           <div class="sub-content">
             <h3 id="SDL_mixer-1.2.11">SDL_mixer-1.2.11</h3>
 
-            <p><A HREF="http://www.libsdl.org/">SDL本家</A>より、SDL_mixer-1.2.11.tar.gzをダウンロード。</p>
+            <p><a href="http://www.libsdl.org/">SDL本家</a>より、SDL_mixer-1.2.11.tar.gzをダウンロード。</p>
 
-            <p><A HREF="http://emmie.koka-in.org/~kensyu/zaurus/diary/20021110.html">神
-                木さん</A>の patch を当てました。SL-5500 では、ソフトウェア MIDI の演
-              奏で、基本的に音切れしなくなりました。上の神木さんのページからコピーし
-              たものを、<A HREF="SDL_mixer-1.2.6-k1.diff">SDL_mixer-1.2.6-k1.diff</A>に置きます。
-              （旧パッチ：<A HREF="SDL_mixer-1.2.4-k1.diff">SDL_mixer-1.2.4-k1.diff</A>）</p>
+            <p><a href="http://emmie.koka-in.org/~kensyu/zaurus/diary/20021110.html">神木さん</a>の patch を当てました。SL-5500 では、ソフトウェア MIDI の演奏で、基本的に音切れしなくなりました。上の神木さんのページからコピーしたものを、<a href="SDL_mixer-1.2.6-k1.diff">SDL_mixer-1.2.6-k1.diff</a>に置きます。（旧パッチ：<a href="SDL_mixer-1.2.4-k1.diff">SDL_mixer-1.2.4-k1.diff</a>）</p>
 
             <pre>
 &gt; setenv PKG_CONFIG
@@ -368,7 +298,7 @@ extern void *SDL_LoadFunction(void *handle, const char *name);
           <div class="sub-content">
             <h3 id="bzip2-1.0.4">bzip2-1.0.4</h3>
 
-            <p><A HREF="http://sources.redhat.com/bzip2/">The bzip2 and libbzip2 official home page</A>より、bzip2-1.0.4-tar.gzをダウンロード。</p>
+            <p><a href="http://sources.redhat.com/bzip2/">The bzip2 and libbzip2 official home page</a>より、bzip2-1.0.4-tar.gzをダウンロード。</p>
 
             <p>Makefile: の下記の行を変更</p>
             <pre>
@@ -392,13 +322,9 @@ all: libbz2.a bzip2 bzip2recover
           <div class="sub-content">
             <h3 id="freetype-2.1.10">freetype-2.1.10</h3>
 
-            <p><A HREF="http://www.freetype.org/">the Free Type Project</A>より、freetype-2.1.10.tar.gzをダウンロード。</p>
+            <p><a href="http://www.freetype.org/">the Free Type Project</a>より、freetype-2.1.10.tar.gzをダウンロード。</p>
 
-            <p><A HREF="http://emmie.koka-in.org/~kensyu/zaurus/diary/20021110.html">神
-                木さん</A>の patch を当てました。Embedded bitmap を使ったフォントも使
-              えるということなのですが、当方ではこれをあてて msgothic を使っても改善
-              されませんでした。試した範囲では、以前と同じ。上の神木さんのパッチと同
-              等のものを、<A HREF="freetype-2.1.3-k1.diff">freetype-2.1.3-k1.diff</A>に置きます。</p>
+            <p><a href="http://emmie.koka-in.org/~kensyu/zaurus/diary/20021110.html">神木さん</a>の patch を当てました。Embedded bitmap を使ったフォントも使えるということなのですが、当方ではこれをあてて msgothic を使っても改善されませんでした。試した範囲では、以前と同じ。上の神木さんのパッチと同等のものを、<a href="freetype-2.1.3-k1.diff">freetype-2.1.3-k1.diff</a>に置きます。</p>
 
             <pre>
 &gt; configure --host=i386-linux --target=strongarm-linux
@@ -408,9 +334,7 @@ all: libbz2.a bzip2 bzip2recover
 &gt; make install
 </pre>
 
-            <p>make の途中で、freetype-2.3.5/objs/apinames を host compiler で作成
-              するはずが target compiler で作成してしまい失敗するので、ここだけ手動
-              で作成しました。</p>
+            <p>make の途中で、freetype-2.3.5/objs/apinames を host compiler で作成するはずが target compiler で作成してしまい失敗するので、ここだけ手動で作成しました。</p>
 
           </div> <!-- sub-content -->
 
@@ -418,7 +342,7 @@ all: libbz2.a bzip2 bzip2recover
           <div class="sub-content">
             <h3 id="SDL_ttf-2.0.9">SDL_ttf-2.0.9</h3>
 
-            <p><A HREF="http://www.libsdl.org/">SDL本家</A>より、SDL_ttf-2.0.9.tar.gzをダウンロード。</p>
+            <p><a href="http://www.libsdl.org/">SDL本家</a>より、SDL_ttf-2.0.9.tar.gzをダウンロード。</p>
 
             <pre>
 &gt; configure --host=i686-linux --target=arm-linux
@@ -433,19 +357,11 @@ all: libbz2.a bzip2 bzip2recover
           <div class="sub-content">
             <h3 id="mad-0.14.2b">mad-0.14.2b</h3>
 
-            <p><A HREF="http://www.mars.org/home/rob/proj/mpeg/">MAD: MPEG Audio Decoder</A>より、mad-0.14.2b.tar.gzをダウンロード。</p>
+            <p><a href="http://www.mars.org/home/rob/proj/mpeg/">MAD: MPEG Audio Decoder</a>より、mad-0.14.2b.tar.gzをダウンロード。</p>
 
-            <p>MADは整数計算のみでMP3をデコードするライブラリです。ARM系のCPUでは、
-              浮動小数点計算が非常に遅いため、ONScripterでは、SMPEGに差し替えこれで
-              MP3をデコードします。</p>
+            <p>MAD は整数計算のみでMP3をデコードするライブラリです。ARM 系の CPU では、浮動小数点計算が非常に遅いため、ONScripterでは、SMPEGに差し替えこれで MP3 をデコードします。</p>
 
-            <p>一部の MP3 が演奏できないので、MP3 の frame header の資料と MADのソー
-              スを付き合わせ、どこがおかしいのかを調べました。結果、frame header の
-              15,16bit 目の Emphasis が2の場合、MAD は不正なヘッダとして弾いています。
-              私が参考にした資料には、2 は reserved となっているため、MAD 的には正し
-              いことをしているようですが、なぜかこの MP3 は 2 になっているため、2 の
-              場合 0 (none) 扱いすることにして続行するパッチ<A HREF="mad-0.14.2b-k1.diff">mad-0.14.2b-k1.diff</A>をあて、演奏可能にな
-              りました。</p>
+            <p>一部の MP3 が演奏できないので、MP3 の frame header の資料と MADのソースを付き合わせ、どこがおかしいのかを調べました。結果、frame header の 15, 16 bit 目の Emphasis が2の場合、MAD は不正なヘッダとして弾いています。私が参考にした資料には、2 は reserved となっているため、MAD 的には正しいことをしているようですが、なぜかこの MP3 は 2 になっているため、2 の場合 0 (none) 扱いすることにして続行するパッチ<a href="mad-0.14.2b-k1.diff">mad-0.14.2b-k1.diff</a>をあて、演奏可能になりました。</p>
 
             <pre>
 &gt; configure --host=armv4-linux --prefix=/opt/Embedix/tools/arm-linux
@@ -460,10 +376,7 @@ all: libbz2.a bzip2 bzip2recover
           <div class="sub-content">
             <h3 id="ivorbis">Tremor Vorbis I Stream 20020517: 1.0.2</h3>
 
-            <p>整数演算のみのデコーダである, <A HREF="http://svn.xiph.org/trunk/Tremor/">the Ogg Vorbis 'Tremor'
-                integer playback codec</A>をダウンロード。configure.in の記述が一部お
-              かしいので、パッチ<A HREF="Tremor-K1.diff">Tremor-K1.diff</A>をあてま
-              す。</p>
+            <p>整数演算のみのデコーダである, <a href="http://svn.xiph.org/trunk/Tremor/">the Ogg Vorbis 'Tremor' integer playback codec</a>をダウンロード。configure.in の記述が一部おかしいので、パッチ<a href="Tremor-K1.diff">Tremor-K1.diff</a>をあてます。</p>
 
             <pre>
 &gt; wget -r -l1 http://svn.xiph.org/trunk/Tremor/
@@ -484,10 +397,9 @@ all: libbz2.a bzip2 bzip2recover
 
     <div id="footer">
       Copyright (c) 1998-2011 Studio O.G.A. All rights reserved.
-    </div> <!-- footer -->
+    </div>
 
-  </div> <!-- body -->
-
+  </div>
 </body>
 
 </html>
