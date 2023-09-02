@@ -11,7 +11,7 @@
 <body>
   <div id="body">
 
-    <div id="header">
+    <header>
       <h1>ONScripter page</h1>
 
       I have little time to maintain ONScripter recently and might not respond to requests immediately.<br>
@@ -23,7 +23,7 @@
       <!--Last updated: Jun. 29, 2014 (PNaCl Binary package updated.)<br>-->
       <!--Last updated: Jul. 12, 2009 (Experimental source updated.)<br>-->
       <!--Last updated: Apr. 4, 2023 (Derived projects added.)<br>-->
-    </div> <!-- header -->
+    </header>
 
     <nav>
       <h3>Table of contents</h3>
@@ -946,11 +946,10 @@ return
       </div> <!-- main -->
     </div> <!-- main-container -->
 
-
-    <div id="footer">
+    <footer>
       E-mail: <i>ogapee@yahoo.kp at aqua.dti2.ne.jp</i> (please remove yahoo.kp at)<br>
-      Copyright (c) 1998-2023 Studio O.G.A. All rights reserved.
-    </div>
+      Copyright (C) 1998-2023 Studio O.G.A. All rights reserved.
+    </footer>
 
   </div>
 </body>

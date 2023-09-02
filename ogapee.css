@@ -95,7 +95,8 @@ img {
     }
 }
 
-#header {
+#header,
+header {
     text-align: left;
     margin: 5px;
     padding: 5px;
@@ -112,20 +113,24 @@ img {
 
 
 /*#header a {background-color: #ddffdd; }*/
-#header a:link {
+#header a:link,
+header a:link {
     color: #4444ff;
 }
 
-#header a:visited {
+#header a:visited,
+header a:visited {
     color: #ff4444;
 }
 
-#header a:active {
+#header a:active,
+header a:active {
     color: #cc8888;
     text-decoration: underline;
 }
 
-#header a:hover {
+#header a:hover,
+header a:hover {
     background-color: #ff8844;
 }
 
@@ -375,7 +380,8 @@ pre {
 /* -------------------- */
 /* footer */
 
-#footer {
+#footer,
+footer {
     clear: both;
     text-align: center;
     margin: 5px;
@@ -397,7 +403,9 @@ div.figure p {
 }
 
 @media screen and (max-width: 767px) {
-    #header {
+
+    #header,
+    header {
         background-size: 32px;
     }
 

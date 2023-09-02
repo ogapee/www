@@ -11,7 +11,7 @@
 <body>
   <div id="body">
 
-    <div id="header">
+    <header>
       <h1>ONScripter のページ</h1>
 
       最近あまり時間がとれないため更新が非常に遅くなることがありますがご了承下さい。<br>
@@ -23,7 +23,7 @@
       <!--Last updated: Jun. 29, 2014 (PNaCl バイナリパッケージ追加)<br>-->
       <!--Last updated: Jul. 12, 2009 (Experimental ソース更新)<br>-->
       <!--Last updated: Apr. 4, 2023 (派生プロジェクトを追加)<br>-->
-    </div> <!-- header -->
+    </header>
 
     <nav>
       <h3>目次</h3>
@@ -946,11 +946,10 @@ return
       </div> <!-- main -->
     </div> <!-- main-container -->
 
-
-    <div id="footer">
+    <footer>
       メール宛先 <i>ogapee@yahoo.kp at aqua.dti2.ne.jp</i> （yahoo.kp at は除いてください）<br>
-      Copyright (c) 1998-2023 Studio O.G.A. All rights reserved.
-    </div>
+      Copyright (C) 1998-2023 Studio O.G.A. All rights reserved.
+    </footer>
 
   </div>
 </body>
