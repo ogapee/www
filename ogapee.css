@@ -191,7 +191,7 @@ nav h3 {
 
 /* -------------------- */
 /* main page */
-#main-container {
+main {
     margin-left: 180px;
     position: static;
     background-color: white;
@@ -201,26 +201,19 @@ nav h3 {
     text-align: left;
 }
 
-#main h2 {
-    margin: 0px;
-    padding: 5px;
-    /*border: solid 1px #0000ff;*/
-    font-family: sans-serif;
-}
-
-#main .content {
+#main section {
     margin: 0px 0px 20px;
     padding: 0px;
     /*border-bottom: solid 1px black;*/
 }
 
-#main .content p {
+#main section p {
     margin: 5px;
     padding: 5px;
     text-align: justify;
 }
 
-#main .content h2 {
+#main section h2 {
     margin: 5px;
     padding: 15px 30px;
     font-weight: bold;
@@ -230,7 +223,7 @@ nav h3 {
     background-color: #f5f5ff;
 }
 
-#main .content h3 {
+#main section h3 {
     margin: 5px;
     margin-top: 10px;
     padding: 0px;
@@ -239,22 +232,22 @@ nav h3 {
     border-bottom: dotted 1px gray;
 }
 
-#main .content h4 {
+#main section h4 {
     margin: 5px;
     text-decoration: underline;
 }
 
-#main .content li {
+#main section li {
     margin-right: 5px;
     padding-right: 5px;
 }
 
-.content dl {
+#main section dl {
     margin: 0px;
     padding: 0px 5px 0px 10px;
 }
 
-.sub-content {
+#main .sub-content {
     margin: 5pt;
     padding: 0px;
     /*border-top: dashed 1px gray;*/
@@ -262,10 +255,6 @@ nav h3 {
 
 /* -------------------- */
 /* diary page */
-#diary-container {
-    margin-left: 180px;
-}
-
 #diary {
     text-align: left;
 }
@@ -430,11 +419,7 @@ div.figure p {
         border: solid 1px #888;
     }
 
-    #main-container {
-        margin-left: 0;
-    }
-
-    #diary-container {
+    main {
         margin-left: 0;
     }
 

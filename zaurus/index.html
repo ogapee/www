@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SDL on Zaurus (SL-シリーズ)のページ</title>
   <link rel="stylesheet" href="/ogapee.css">
 </head>
@@ -41,11 +41,10 @@
       </div>
     </nav>
 
-
-    <div id="main-container">
+    <main>
       <div id="main">
 
-        <div class="content">
+        <section>
           <h2 id="introduction">はじめに</h2>
 
           <p>Linux が走っている<a href="http://ezaurus.com/"> Zaurus
@@ -53,10 +52,9 @@
 
           <p>現在、mpeg ムービー再生、CD-Audio 演奏以外の<a href="../onscripter.html">ONScripter</a>の全ての機能が動作します。ペンとボタン（もしくはキーボード）を併用しての入力となります。具体的な機能及び実行方法については、<a href="../onscripter.html">ONScripter のページ</a>を参照してください。</p>
 
-        </div> <!-- content -->
+        </section>
 
-
-        <div class="content">
+        <section>
           <h2 id="Package">ipk パッケージ</h2>
 
           <p>３種類のパッケージがあります。</p>
@@ -110,7 +108,6 @@ qcop QPE/Application/onscripter "raise()"
 
           </div> <!-- sub-content -->
 
-
           <div class="sub-content">
             <h3 id="package-onscripter-lib">ONScripter 関連ライブラリ</h3>
 
@@ -138,7 +135,6 @@ qcop QPE/Application/onscripter "raise()"
 
           </div> <!-- sub-content -->
 
-
           <div class="sub-content">
             <h3 id="package-timidity-patch">timidity patch</h3>
 
@@ -161,10 +157,9 @@ qcop QPE/Application/onscripter "raise()"
 </pre>
 
           </div> <!-- sub-content -->
-        </div> <!-- content -->
+        </section>
 
-
-        <div class="content">
+        <section>
           <h2 id="link">リンク</h2>
 
           <p>お世話になっているページ、よく利用させていただいているページへのリンクです。</p>
@@ -190,10 +185,9 @@ qcop QPE/Application/onscripter "raise()"
             <dd>Zaurus の公式な資料・ツールはこちらからどうぞ。</dd>
           </dl>
 
-        </div> <!-- content -->
+        </section>
 
-
-        <div class="content">
+        <section>
           <h2 id="Qtopia">ONScripter を Qtopia 環境で動作させるための作業<span style="color:red;">(Aug 15. 2002)</span></h2>
 
           <p>次に、ONScripter を Qtopia 上で動くようにします。<br>
@@ -329,10 +323,9 @@ onscripter --root /mnt/card/game2 --force-button-shortcut --disable-rescale $1
             <a href="http://www.newbreedsoftware.com/zaurus-faq/">The Unofficial Zaurus FAQ </a>にあったのですね。これは一度全部読まないといけないな。
           </p>
 
-        </div> <!-- content -->
+        </section>
 
-
-        <div class="content">
+        <section>
           <h2 id="impression">感想</h2>
 
           <p>非常に開発しやすい PDA です。普通にクロスコンパイルするだけで大抵のものは入ってしまいます。<a href="http://sourceforge.net/project/showfiles.php?group_id=39939">Project: Zaurus Open Source Development</a>に x11zaurus なんてのもあるみたいですし。</p>
@@ -355,10 +348,10 @@ onscripter --root /mnt/card/game2 --force-button-shortcut --disable-rescale $1
 
           <p>SDL ライブラリを、阿川さんのものをベースにすることにしました。ですが、ONScripter を動かすと色々不具合が出たので、修正パッチを書きました。また、SL-5500 で検証するため、久々に電源を入れ、 ROM 3.1 を試しました。確かに、SL-B500 風になります。試行錯誤しましたが、最終的にはSL-5500(QVGA), SL-C700(QVGA, VGA)どちらでも ONScripter が問題なく動きます。ただし、SL-A300 等ではおかしくなっているかもしれません。その場合は報告を下さい。しかし、QVGA だと SL-5500 の方が SL-C700 より綺麗だ。</p>
 
-        </div> <!-- content -->
+        </section>
 
-      </div> <!-- main -->
-    </div> <!-- main-container -->
+      </div>
+    </main>
 
     <footer>
       Copyright (C) 1998-2012 Studio O.G.A. All rights reserved.

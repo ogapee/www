@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SDL on Zaurus 開発環境</title>
   <link rel="stylesheet" href="/ogapee.css">
 </head>
@@ -46,11 +46,10 @@
       </div>
     </nav>
 
-
-    <div id="main-container">
+    <main>
       <div id="main">
 
-        <div class="content">
+        <section>
           <h2 id="environment">開発環境の導入</h2>
 
           <p>Linux (Debian/sid)マシンに、<a href="http://more.sbc.co.jp/sl_j/sl_top.asp">ザウルス宝箱Pro</a>より、
@@ -76,10 +75,9 @@ setenv CC arm-linux-gcc
 setenv CXX arm-linux-g++
 echo "Altered environment for Sharp Zaurus SL-5000D Development ARM"
 </pre>
-        </div> <!-- content -->
+        </section>
 
-
-        <div class="content">
+        <section>
           <h2 id="SDL">SDLの導入</h2>
 
           <div class="sub-content">
@@ -177,7 +175,6 @@ echo "Altered environment for Sharp Zaurus SL-5000D Development ARM"
 </pre>
           </div> <!-- sub-content -->
 
-
           <div class="sub-content">
             <h3 id="libjpeg-6b">libjpeg 6b</h3>
 
@@ -195,7 +192,6 @@ echo "Altered environment for Sharp Zaurus SL-5000D Development ARM"
 </pre>
           </div> <!-- sub-content -->
 
-
           <div class="sub-content">
             <h3 id="zlib-1.2.3">zlib-1.2.3</h3>
 
@@ -210,7 +206,6 @@ echo "Altered environment for Sharp Zaurus SL-5000D Development ARM"
 </pre>
           </div> <!-- sub-content -->
 
-
           <div class="sub-content">
             <h3 id="libpng-1.4.5">libpng-1.4.5</h3>
 
@@ -224,7 +219,6 @@ echo "Altered environment for Sharp Zaurus SL-5000D Development ARM"
 &gt; make install
 </pre>
           </div> <!-- sub-content -->
-
 
           <div class="sub-content">
             <h3 id="SDL_image-1.2.10">SDL_image-1.2.10</h3>
@@ -250,7 +244,6 @@ CFLAGS = -g -O2 -I/opt/Embedix/tools/arm-linux/include/SDL -D_REENTRANT -Dmain=S
 &gt; make install
 </pre>
           </div> <!-- sub-content -->
-
 
           <div class="sub-content">
             <h3 id="SDL_mixer-1.2.11">SDL_mixer-1.2.11</h3>
@@ -291,7 +284,6 @@ extern void *SDL_LoadFunction(void *handle, const char *name);
 </pre>
           </div> <!-- sub-content -->
 
-
           <div class="sub-content">
             <h3 id="bzip2-1.0.4">bzip2-1.0.4</h3>
 
@@ -315,7 +307,6 @@ all: libbz2.a bzip2 bzip2recover
 </pre>
           </div> <!-- sub-content -->
 
-
           <div class="sub-content">
             <h3 id="freetype-2.1.10">freetype-2.1.10</h3>
 
@@ -334,7 +325,6 @@ all: libbz2.a bzip2 bzip2recover
             <p>make の途中で、freetype-2.3.5/objs/apinames を host compiler で作成するはずが target compiler で作成してしまい失敗するので、ここだけ手動で作成しました。</p>
 
           </div> <!-- sub-content -->
-
 
           <div class="sub-content">
             <h3 id="SDL_ttf-2.0.9">SDL_ttf-2.0.9</h3>
@@ -369,7 +359,6 @@ all: libbz2.a bzip2 bzip2recover
 </pre>
           </div> <!-- sub-content -->
 
-
           <div class="sub-content">
             <h3 id="ivorbis">Tremor Vorbis I Stream 20020517: 1.0.2</h3>
 
@@ -386,10 +375,10 @@ all: libbz2.a bzip2 bzip2recover
 </pre>
           </div> <!-- sub-content -->
 
-        </div> <!-- content -->
+        </section>
 
-      </div> <!-- main -->
-    </div> <!-- main-container -->
+      </div>
+    </main>
 
     <footer>
       Copyright (C) 1998-2011 Studio O.G.A. All rights reserved.

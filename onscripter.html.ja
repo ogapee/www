@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ONScripter のページ</title>
   <link rel="stylesheet" href="/ogapee.css">
 </head>
@@ -74,17 +74,15 @@
       </div>
     </nav>
 
-
-    <div id="main-container">
+    <main>
       <div id="main">
 
-        <div class="content">
+        <section>
           <h2 id="INTRODUCTION">はじめに</h2>
 
           <p>ONScripter (オーエヌスクリプター)は <a href="http://www.nscripter.com/">NScripter</a> (<a href="http://ja.wikipedia.org/wiki/NScripter">解説</a>) 用に作られたスクリプトを独自に解釈して実行するプログラムです。全く同じゲームデータを使って、Windows, Android, iOS などの上でゲームを実行することができます。</p>
 
           <p>動作報告・バグ報告・機能追加要望・パッチは随時受け付けますので[<a href="/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=top">バグトラッキングシステム</a>]までお願いします。報告の際はオプション欄の中央のチェックボックスを外してから送信してください。「○○ゲームの××場面がなんかおかしい」という程度でも結構ですのでお気軽にどうぞ。ページの一番下に記載のあるメールアドレスまで直接送っていただいても構いません。</p>
-
 
           <div class="sub-content">
             <h3 id="source">ソースファイル</h3>
@@ -241,11 +239,9 @@
             </ol>
 
           </div> <!-- sub-content -->
+        </section>
 
-        </div> <!-- content -->
-
-
-        <div class="content">
+        <section>
           <h2 id="howto">実行方法</h2>
 
           <div class="sub-content">
@@ -309,9 +305,9 @@
             <p><span style="color:red">[必須]</span>最後に、ONScripter を実行してください。同じディレクトリにある nscript.dat とアーカイブを自動的に探し、ゲームが開始されます。なお ONScripter は、同じディレクトリにセーブデータやファイルログ等の状態ファイルを保存するため、このディレクトリには write permission を出しておいてください。</p>
 
           </div> <!-- sub-content -->
-        </div> <!-- content -->
+        </section>
 
-        <div class="content">
+        <section>
           <h2 id="todo">TODO</h2>
 
           <ol>
@@ -323,11 +319,9 @@
             <li>(<span style="color:#00ff00">低</span>)existspbtn を spbtn として実装しているが、それでよいのかを検証する。</li>
             <li>(<span style="color:#00ff00">低</span>)コードの clean up。</li>
           </ol>
+        </section>
 
-        </div> <!-- content -->
-
-
-        <div class="content">
+        <section>
           <h2 id="misc">雑多なこと</h2>
 
           <div class="sub-content">
@@ -402,7 +396,6 @@
 
           </div> <!-- sub-content -->
 
-
           <div class="sub-content">
             <h3 id="option">起動オプション</h3>
 
@@ -474,7 +467,6 @@
             </table>
 
           </div> <!-- sub-content -->
-
 
           <div class="sub-content">
             <h3 id="save">異なるプラットフォーム上で同時に遊ぶ方法</h3>
@@ -558,7 +550,6 @@
 
           </div> <!-- sub-content -->
 
-
           <div class="sub-content">
             <h3 id="registry">レジストリ読み込み</h3>
 
@@ -586,7 +577,6 @@ getreg の３番目の引数 = 比較対象文字列（前後の""は必要で�
 
 
           </div> <!-- sub-content -->
-
 
           <div class="sub-content">
             <h3 id="dll">DLL 読み込み</h3>
@@ -617,7 +607,6 @@ ret = 2
 
           </div> <!-- sub-content -->
 
-
           <div class="sub-content">
             <h3 id="edit-mode">音量及び変数編集モード</h3>
 
@@ -638,7 +627,6 @@ ret = 2
             <p>値変更サブモードでは、0 から 9 までの数字と -, BackSpace, Esc, Enter キーが使えます。- キーは、対象が数字変数でかつ数字が0の時のみ有効になります。既に数字が入力されている場合には、一旦 BackSpace で数字を全部消してから - キーを押してください。</p>
 
           </div> <!-- sub-content -->
-
 
           <div class="sub-content">
             <h3 id="truetype-font">TrueType font による文字表示</h3>
@@ -683,7 +671,6 @@ ret = 2
 
           </div> <!-- sub-content -->
 
-
           <div class="sub-content">
             <h3 id="midi">MIDI 演奏機能</h3>
 
@@ -704,7 +691,6 @@ ret = 2
             </dl>
 
           </div> <!-- sub-content -->
-
 
           <div class="sub-content">
             <h3 id="archive-compression">アーカイブ圧縮</h3>
@@ -761,7 +747,6 @@ ret = 2
 
           </div> <!-- sub-content -->
 
-
           <div class="sub-content">
             <h3 id="mp3-on-windows">Windows 上で MP3 の音がぶつぶつとぎれる問題</h3>
 
@@ -782,7 +767,6 @@ void MPEGaudio::layer3reorderandantialias(int ch,int gr,
 </pre>
 
           </div> <!-- sub-content -->
-
 
           <div class="sub-content">
             <h3 id="enable-1byte">英語ノベル作成(Obsolete)</h3>
@@ -941,10 +925,10 @@ return
 
           </div> <!-- content-sub -->
 
-        </div> <!-- content -->
+        </section>
 
-      </div> <!-- main -->
-    </div> <!-- main-container -->
+      </div>
+    </main>
 
     <footer>
       メール宛先 <i>ogapee@yahoo.kp at aqua.dti2.ne.jp</i> （yahoo.kp at は除いてください）<br>

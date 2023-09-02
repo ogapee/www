@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ONScripter 開発日誌</title>
   <link rel="stylesheet" href="/ogapee.css">
 </head>
@@ -67,8 +67,7 @@
       </div>
     </nav>
 
-
-    <div id="diary-container">
+    <main>
       <div id="diary">
 
         <h2>2023年</h2>
@@ -76,7 +75,7 @@
         <article>
           <h3>9月2日</h3>
 
-          <p>HTML を HTML4 から HTML5 に変更しました。</p>
+          <p>HTML を HTML4 から HTML Living Standard (HTML5) に変更しました。</p>
         </article>
 
         <article>
@@ -123,8 +122,8 @@
           <p>しばらく前から、Android 版アプリで一部のファイルの読み込みに失敗する問題がありましたが、ONScripter.java の findFile 関数で大文字と小文字を区別してファイル名を照合しており、スクリプト内のファイル名とファイルシステムのファイル名に大文字・小文字の違いがある場合にファイルが存在しないと判定されていたことが原因でした。<a href="android/#sdk">Android 版 SDK</a> を更新し、String.equalsIgnoreCase を使って判定するようにして解決しました。リリース前にいくつかのゲームで動作確認をするのですが、それらのゲームではこの問題が発生しなかったため気づきませんでした。</p>
         </article>
 
-      </div> <!-- diary -->
-    </div> <!-- diary-container -->
+      </div>
+    </main>
 
     <footer>
       Copyright (C) 1998-2023 Studio O.G.A. All rights reserved.

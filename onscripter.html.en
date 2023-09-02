@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ONScripter page</title>
   <link rel="stylesheet" href="/ogapee.css">
 </head>
@@ -74,11 +74,10 @@
       </div>
     </nav>
 
-
-    <div id="main-container">
+    <main>
       <div id="main">
 
-        <div class="content">
+        <section>
           <h2 id="INTRODUCTION">Introduction</h2>
 
           <p>ONScripter (O-N-Scripter) is a program that interprets and executes scripts written for <a href="http://www.nscripter.com/">NScripter</a> (<a href="http://en.wikipedia.org/wiki/NScripter">Details</a>) in its own way. It can run games on Windows, Android, iOS, etc. using the exact same game data.</p>
@@ -240,11 +239,9 @@
             </ol>
 
           </div> <!-- sub-content -->
+        </section>
 
-        </div> <!-- content -->
-
-
-        <div class="content">
+        <section>
           <h2 id="howto">How to run</h2>
 
           <div class="sub-content">
@@ -309,9 +306,9 @@
             <p><span style="color:red">[Required]</span> Run ONScripter. It reads from nscript.dat and archives in the same directory, and the game will start. Since ONScripter outputs save files and status files in the same directory, please be sure that the directory is writable.</p>
 
           </div> <!-- sub-content -->
-        </div> <!-- content -->
+        </section>
 
-        <div class="content">
+        <section>
           <h2 id="todo">ToDo</h2>
 
           <ol>
@@ -323,11 +320,9 @@
             <li>(<span style="color:#00ff00">Low</span>) Verify &quot;existspbtn&quot; which is implemented as &quot;spbtn&quot;</li>
             <li>(<span style="color:#00ff00">Low</span>) Clean up of code</li>
           </ol>
+        </section>
 
-        </div> <!-- content -->
-
-
-        <div class="content">
+        <section>
           <h2 id="misc">Miscellaneous</h2>
 
           <div class="sub-content">
@@ -400,7 +395,6 @@
 
           </div> <!-- sub-content -->
 
-
           <div class="sub-content">
             <h3 id="option">Command line options</h3>
 
@@ -472,7 +466,6 @@
             </table>
 
           </div> <!-- sub-content -->
-
 
           <div class="sub-content">
             <h3 id="save">How to play on different platforms at the same time</h3>
@@ -556,7 +549,6 @@
 
           </div> <!-- sub-content -->
 
-
           <div class="sub-content">
             <h3 id="registry">Reading from the registry</h3>
 
@@ -583,7 +575,6 @@ The third argument of getreg command = string to be compared (including quotatio
             <p>You can share a registry file among games if ONScripter is launched with --registry option. Without --registry option, it looks for registry.txt in the current directory.</p>
 
           </div> <!-- sub-content -->
-
 
           <div class="sub-content">
             <h3 id="dll">Loading DLL</h3>
@@ -614,7 +605,6 @@ ret = 2
 
           </div> <!-- sub-content -->
 
-
           <div class="sub-content">
             <h3 id="edit-mode">Online modification of volume and variables</h3>
 
@@ -635,7 +625,6 @@ ret = 2
             <p>You can use the '0' to '9', '-', BackSpace, Esc, and Enter keys when you change numeric variables. The '-' key is accepted when you are editing a numeric variable and the value is 0. If the value is other than 0, you need to clear the value by pressing the BackSpace key and then pressing the '-' key. </p>
 
           </div> <!-- sub-content -->
-
 
           <div class="sub-content">
             <h3 id="truetype-font">Displaying Kanji characters using TrueType font</h3>
@@ -662,7 +651,6 @@ ret = 2
 
           </div> <!-- sub-content -->
 
-
           <div class="sub-content">
             <h3 id="cd-audio-mapping">Using sound files instead of CD audio</h3>
 
@@ -683,7 +671,6 @@ ret = 2
 
           </div> <!-- sub-content -->
 
-
           <div class="sub-content">
             <h3 id="midi">Playing MIDI</h3>
 
@@ -703,7 +690,6 @@ ret = 2
             </dl>
 
           </div> <!-- sub-content -->
-
 
           <div class="sub-content">
             <h3 id="archive-compression">Compression of archives</h3>
@@ -760,7 +746,6 @@ nsaconv [-e] [-ns2] [-ns3] src_screen_width dst_screen_width src_NSA_filename ds
 
           </div> <!-- sub-content -->
 
-
           <div class="sub-content">
             <h3 id="mp3-on-windows">Problem of chattering MP3 music on Windows platform</h3>
 
@@ -780,7 +765,6 @@ void MPEGaudio::layer3reorderandantialias(int ch,int gr,
 </pre>
 
           </div> <!-- sub-content -->
-
 
           <div class="sub-content">
             <h3 id="enable-1byte">How to write an English novel</h3>
@@ -941,10 +925,10 @@ return
 
           </div> <!-- sub-content -->
 
-        </div> <!-- content -->
+        </section>
 
-      </div> <!-- main -->
-    </div> <!-- main-container -->
+      </div>
+    </main>
 
     <footer>
       E-mail: <i>ogapee@yahoo.kp at aqua.dti2.ne.jp</i> (please remove yahoo.kp at)<br>

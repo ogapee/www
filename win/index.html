@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ONScripter on Windows</title>
   <link rel="stylesheet" href="/ogapee.css">
 </head>
@@ -39,19 +39,17 @@
       </div>
     </nav>
 
-
-    <div id="main-container">
+    <main>
       <div id="main">
 
-        <div class="content">
+        <section>
           <h2 id="introduction">はじめに</h2>
 
           <p> Windows 上で Visual Studio を利用して ONScripter の 64bit 版をビルドする方法について説明します。Visual Studio 2019 で動作確認をしていますが、他のバージョンの Visual Studio でもビルドできると思います。</p>
 
-        </div> <!-- content -->
+        </section>
 
-
-        <div class="content">
+        <section>
           <h2 id="library">関連ライブラリのビルド</h2>
 
           <p>必要な関連ライブラリをまとめた以下のファイルをダウンロードして適当な場所（たとえば c:\src 以下）に展開してください。Git の内容をクローンしても構いません。</p>
@@ -247,9 +245,9 @@ lib /OUT:lua5.1.5-static.lib *.obj
 </ol>
 -->
 
-        </div>
+        </section>
 
-        <div class="content">
+        <section>
           <h2 id="build">ONScripter のビルド</h2>
           <ol>
             <li><a href="../onscripter.html">ONScripter のページ</a>から最新の ONScripter をダウンロードして、上の関連ライブラリを展開した onscripter_win-xxxxxxxx の下に展開します。<br>
@@ -265,9 +263,9 @@ tar -xzf onscripter-yyyyyyyy.tar.gz
 
             <li>「ビルド」→「ソリューションのビルド」を選択してビルドします。</li>
           </ol>
-        </div>
+        </section>
 
-        <div class="content">
+        <section>
           <h2 id="run">ONScripter の実行</h2>
 
           <h3>Visual Studio の IDE から実行する場合</h3>
@@ -287,11 +285,10 @@ tar -xzf onscripter-yyyyyyyy.tar.gz
           <pre>
 c:\src\onscripter_win-xxxxxxxx\onscripter-yyyyyyyy\x64\Release\ONScripter.exe
 </pre>
-        </div>
+        </section>
 
-
-      </div> <!-- main -->
-    </div> <!-- main-container -->
+      </div>
+    </main>
 
     <footer>
       Copyright (C) 1998-2023 Studio O.G.A. All rights reserved.

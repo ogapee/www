@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ONScripter 開発日誌</title>
   <link rel="stylesheet" href="/ogapee.css">
 </head>
@@ -32,7 +32,7 @@
       </div>
     </nav>
 
-    <div id="diary-container">
+    <main>
       <div id="diary">
 
         <h2>2002年1月～3月</h2>
@@ -724,8 +724,8 @@ echo -n '\001' &gt;&gt; save1.dat
           <p>「ハーバーランドでつかまえて」（以下「ハーバー」）を動かすテストをしていて、bg 命令で小さな画像を読み込むときの問題を直している時に、偶然、占有メモリが増えていくバグの原因を発見しました。単なる delete のし忘れでしたが、qnscripter ではなく XFree 側のメモリが増えていくところが嫌らしいです。これで全くメモリリークがなくなりました。</p>
         </article>
 
-      </div> <!-- diary -->
-    </div> <!-- diary-container -->
+      </div>
+    </main>
 
     <footer>
       Copyright (C) 1998-2006 Studio O.G.A. All rights reserved.

@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ONScripter 開発日誌</title>
   <link rel="stylesheet" href="/ogapee.css">
 </head>
@@ -64,8 +64,7 @@
       </div>
     </nav>
 
-
-    <div id="diary-container">
+    <main>
       <div id="diary">
 
         <h2>2020年</h2>
@@ -216,8 +215,8 @@ LOCAL_CFLAGS := -D_FORTIFY_SOURCE=0
           <p>バグ報告「<a href="/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=365">Windowsでのコンパイルの問題</a>」を元に、<a href="win">ONScripter on Windows</a> の関連ライブラリのソースを更新し、libpng と zlib をビルドする際に「警告をエラーとして扱う」を「いいえ」に設定(/WX- オプションを指定）するようにしました。</p>
         </article>
 
-      </div> <!-- diary -->
-    </div> <!-- diary-container -->
+      </div>
+    </main>
 
     <footer>
       Copyright (C) 1998-2020 Studio O.G.A. All rights reserved.

@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>フレームバッファに直接アクセスする ONScripter on Android</title>
   <link rel="stylesheet" href="/ogapee.css">
 </head>
@@ -48,10 +48,10 @@
     </nav>
 
 
-    <div id="main-container">
+    <main>
       <div id="main">
 
-        <div class="content">
+        <section>
           <h2 id="introduction">はじめに</h2>
 
           <p> 特に理由が無い限り、このページのバイナリではなく <a href="android.html"> ONScripter on Android のページ </a>のバイナリを使
@@ -75,10 +75,9 @@
 HREF="../onscripter.html">ONScripter のページ</a>を参照してください。
 </p>-->
 
-        </div> <!-- content -->
+        </section>
 
-
-        <div class="content">
+        <section>
           <h2 id="Package">バイナリパッケージ</h2>
 
           <ul>
@@ -100,10 +99,9 @@ HREF="../onscripter.html">ONScripter のページ</a>を参照してください
           <!--<p>CD-Audio の代わりに MP3 ファイルを使う場合は、44.1KHz もしくは 
 22.05KHz でサンプルされたものを用意してください。</p>-->
 
-        </div> <!-- content -->
+        </section>
 
-
-        <div class="content">
+        <section>
           <h2 id="Run">実行方法</h2>
 
           <p>/sdcard にゲームのファイル一式(nscript.dat, arc.nsa, default.ttf な
@@ -114,9 +112,9 @@ HREF="../onscripter.html">ONScripter のページ</a>を参照してください
 &gt; adb shell /sdcard/onscripter_android -r /sdcard
 </pre>
 
-        </div> <!-- content -->
+        </section>
 
-        <div class="content">
+        <section>
           <h2 id="environment">開発環境の導入</h2>
 
           <p>ここでは当方の環境(Linux Debian/squeeze)における開発環境の導入方法
@@ -143,7 +141,6 @@ HREF="../onscripter.html">ONScripter のページ</a>を参照してください
 
           </div> <!-- sub-content -->
 
-
           <div class="sub-content">
             <h3 id="environmentvariable">環境変数</h3>
 
@@ -161,7 +158,6 @@ setenv CFLAGS -I/opt/Sourcery_G++_Lite/arm-none-linux-gnueabi/include
 echo "Altered environment for Android Development ARM"
 </pre>
           </div> <!-- sub-content -->
-
 
           <div class="sub-content">
             <h3 id="SDL-1.2.14">SDL-1.2.14</h3>
@@ -218,7 +214,6 @@ echo "Altered environment for Android Development ARM"
 </pre>
           </div> <!-- sub-content -->
 
-
           <div class="sub-content">
             <h3 id="libjpeg-8b">libjpeg 8b</h3>
 
@@ -235,7 +230,6 @@ echo "Altered environment for Android Development ARM"
 &gt; sudo make install
 </pre>
           </div> <!-- sub-content -->
-
 
           <div class="sub-content">
             <h3 id="zlib-1.2.5">zlib-1.2.5</h3>
@@ -256,7 +250,6 @@ echo "Altered environment for Android Development ARM"
 </pre>
           </div> <!-- sub-content -->
 
-
           <div class="sub-content">
             <h3 id="libpng-1.2.43">libpng-1.2.43</h3>
 
@@ -274,7 +267,6 @@ echo "Altered environment for Android Development ARM"
 </pre>
           </div> <!-- sub-content -->
 
-
           <div class="sub-content">
             <h3 id="SDL_image-1.2.10">SDL_image-1.2.10</h3>
 
@@ -291,7 +283,6 @@ echo "Altered environment for Android Development ARM"
 &gt; sudo make install
 </pre>
           </div> <!-- sub-content -->
-
 
           <div class="sub-content">
             <h3 id="SDL_mixer-1.2.11">SDL_mixer-1.2.11</h3>
@@ -314,7 +305,6 @@ echo "Altered environment for Android Development ARM"
 &gt; sudo make install-hdrs
 </pre>
           </div> <!-- sub-content -->
-
 
           <div class="sub-content">
             <h3 id="bzip2-1.0.5">bzip2-1.0.5</h3>
@@ -339,7 +329,6 @@ all: libbz2.a bzip2 bzip2recover
 </pre>
           </div> <!-- sub-content -->
 
-
           <div class="sub-content">
             <h3 id="freetype-2.3.12">freetype-2.3.12</h3>
 
@@ -356,7 +345,6 @@ all: libbz2.a bzip2 bzip2recover
 &gt; sudo make install
 </pre>
           </div> <!-- sub-content -->
-
 
           <div class="sub-content">
             <h3 id="SDL_ttf-2.0.9">SDL_ttf-2.0.9</h3>
@@ -375,7 +363,6 @@ all: libbz2.a bzip2 bzip2recover
 &gt; sudo make install
 </pre>
           </div> <!-- sub-content -->
-
 
           <div class="sub-content">
             <h3 id="mad-0.15.1b">mad-0.15.1b</h3>
@@ -429,7 +416,6 @@ integer playback codec</a>をダウンロード。configure.in の記述が一�
 </pre>
 </div> -->
 
-
           <div class="sub-content">
             <h3 id="onscripter">ONScripter</h3>
 
@@ -443,11 +429,10 @@ integer playback codec</a>をダウンロード。configure.in の記述が一�
 </pre>
           </div> <!-- sub-content -->
 
-        </div> <!-- content -->
-
+        </section>
 
       </div> <!-- main -->
-    </div> <!-- main-container -->
+    </main>
 
     <footer>
       Copyright (C) 1998-2010 Studio O.G.A. All rights reserved.

@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SDL on Zaurus (SL-5500) 初期</title>
   <link rel="stylesheet" href="/ogapee.css">
 </head>
@@ -43,11 +43,10 @@
       </div>
     </nav>
 
-
-    <div id="main-container">
+    <main>
       <div id="main">
 
-        <div class="content">
+        <section>
           <h2 id="sl-5500">SL-5500 のセットアップ</h2>
 
           <p>なお、SL-5500 のセットアップについては<a href="http://www.geocities.co.jp/SiliconValley-Sunnyvale/3866/z/">Linux Zaurus SL-5000D/SL-5500</a>にまとまっている情報を参考にしました。</p>
@@ -79,7 +78,6 @@
             </table>
 
           </div> <!-- sub-content -->
-
 
           <div class="sub-content">
             <h3 id="setup">セットアップ</h3>
@@ -144,10 +142,9 @@ card "Buffalo LPC-CF-CLT Fast Ethernet"
 
           </div> <!-- sub-content -->
 
-        </div> <!-- content -->
+        </section>
 
-
-        <div class="content">
+        <section>
           <h2 id="sdl">SDLの導入</h2>
 
           <p>libSDL_1.2-0.2_arm.ipkが<a href="http://www.eongames.com/downloads/feed/">ここ</a>にありますが、SDL と SDL_mixer のみでかつ最新かどうかも分からないし、どうせ自分で移植するつもりだったので、とりあえず無視します。</p>
@@ -232,10 +229,9 @@ AMask f800 GMask 7e0 BMask 1f AMask 0
 
           </div> <!-- sub-content -->
 
-        </div> <!-- content -->
+        </section>
 
-
-        <div class="content">
+        <section>
           <h2 id="onscripter">ONScripterの導入(SL-5500 編)</h2>
 
           <p>Makefile.ARMLinux を作って、make。</p>
@@ -264,10 +260,9 @@ CFLAGS= -O6 -fomit-frame-pointer -Wall -pipe
           <p>ゲーム<a href="http://www.geocities.co.jp/Technopolis-Mars/7301/hit.html">「ひとかた」</a>で試しましたが、MIDI は特に途切れること無く鳴ります。と思ったら、同時発音数が多い個所は途切れますね。</p>
 
           <p>また、某数種類のゲームで動作確認しましたが、（文字が小さくて読みづらいとかはありますが）特に問題ありません。</p>
-        </div> <!-- content -->
+        </section>
 
-
-        <div class="content">
+        <section>
           <h2 id="Qtopia">Qtopia 環境で動作するための作業(SL-5500編)<span style="color:red;">(Aug 15. 2002)</span>
           </h2>
 
@@ -295,10 +290,10 @@ CFLAGS= -O6 -fomit-frame-pointer -Wall -pipe
               imkit-anthy_0.3.4-1_arm.ipk<br>
               libqte-ja_2.3.3-2sd_arm.ipk</li>
           </ol>
-        </div> <!-- content -->
+        </section>
 
-      </div> <!-- main -->
-    </div> <!-- main-container -->
+      </div>
+    </main>
 
     <footer>
       Copyright (C) 1998-2006 Studio O.G.A. All rights reserved.

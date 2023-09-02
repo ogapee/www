@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ONScripter on iOS</title>
   <link rel="stylesheet" href="/ogapee.css">
 </head>
@@ -65,11 +65,10 @@
       </div>
     </nav>
 
-
-    <div id="main-container">
+    <main>
       <div id="main">
 
-        <div class="content">
+        <section>
           <h2 id="introduction">はじめに</h2>
 
           <p> iPhone や iPad など <a href="http://www.apple.com/jp/ios/">iOS</a> 上で動作するノベルゲームエンジン ONScripter on iOS を使ったアプリの作成方法について説明します。</p>
@@ -106,10 +105,9 @@
             </tr>
           </table>
 
-        </div> <!-- content -->
+        </section>
 
-
-        <div class="content">
+        <section>
           <h2 id="develop">アプリの開発方法</h2>
 
           <div class="sub-content">
@@ -236,7 +234,6 @@ $ make
             </ol>
 
           </div> <!-- sub-content -->
-
 
           <div class="sub-content">
             <h3 id="build">アプリの作成</h3>
@@ -452,7 +449,6 @@ onscripter_main.cpp
 
           </div>
 
-
           <div class="sub-content">
             <h3 id="gamedata">zip 内のゲームデータの配置方法</h3>
 
@@ -472,7 +468,6 @@ default.ttf   (自分で用意するフォントファイル)
             </ul>
 
           </div> <!-- sub-content -->
-
 
           <div class="sub-content">
             <h3 id="run">実行方法</h3>
@@ -627,14 +622,12 @@ $(SRCROOT)/../../Release-iphoneos/include/freetype2
                 ただし、YUV Overlay による出力は無効にしてあります。</li>
             </ul>
 
-
           </div> <!-- sub-content -->
 
-        </div> <!-- content -->
+        </section>
 
-
-      </div> <!-- main -->
-    </div> <!-- main-container -->
+      </div>
+    </main>
 
     <footer>
       Copyright (C) 2012-2023 Studio O.G.A. All rights reserved.
