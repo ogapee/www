@@ -2,24 +2,23 @@
 <html lang="ja">
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
   <title>ONScripter 開発日誌</title>
-  <link rel="stylesheet" type="text/css" href="/ogapee.css">
+  <link rel="stylesheet" href="/ogapee.css">
 </head>
 
 <body>
   <div id="body">
 
-    <div id="header">
+    <header>
       <h1>ONScripter 開発日誌</h1>
 
       Since: Feb. 6, 2002<br>
       Last updated: Dec. 31, 2003
-    </div> <!-- header -->
+    </header>
 
-    <div id="toc-container">
-
+    <nav>
       <h3>過去の開発日誌</h3>
 
       <div id="toc">
@@ -45,30 +44,29 @@
             </ul>
           </li>
         </ul>
-      </div> <!-- toc -->
-    </div> <!-- toc-container -->
-
+      </div>
+    </nav>
 
     <div id="diary-container">
       <div id="diary">
 
         <h2>2003年10月～12月</h2>
 
-        <div class="diary-day">
+        <article>
           <h3>12月31日</h3>
 
           <p>現在表示されているテキスト文字をアルファ付き画像として保存し、効果の後の再描画にそれを使うようにしました。これで、文字色やルビが正しく復帰するようになりました。</p>
 
           <p>名前が紛らわしいので、画像のみを picture_surface に、アルファつき文字画面を text_surface に、両者を合成した最終画面を accumultation_surface に変更しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>12月1日</h3>
 
           <p>SL-C860 に対応した阿川さんのパッチに追従し、<a href="zaurus/index.html#Package">Zaurus 用の SDL library </a>を<a href="zaurus/sl-devel.html#devel-20031201">更新</a>しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>11月29日<span style="color:red">セーブファイルのバージョンアップ</span></h3>
 
           <p>rubyon, rubyoff を実装しました。ただし、画面の再描画が生じると、ルビが消えてしまいます。これは、以前からある、部分的に文字の色を変更した後に画面の再描画が生じると文字の色が全部同じになってしまう問題と同じ原因です。原因は分かっていますが、ちょっとどうしたらよいか思案中です。</p>
@@ -90,9 +88,9 @@
           <p>MACOSX もしくは MACOS9 が定義されている場合に ctrl キー押下を無視する仕様を廃止して元に戻しました。この辺りの挙動は検証できないので、おかしかったらご報告下さい。</p>
 
           <p>SL-7x0 上の onscripter-cf-s, onscripter-sd-s で 「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=41">qvga モードに切り替わらない</a>」を修正しました。どうやら、複数のアイコンが同じ実行ファイルを共有している場合に、解像度情報を /home/zaurus/Settings/display.conf で実行ファイル毎に管理しているため、QVGA,VGA を使い分けることができないようです。アイコン毎に固有の実行ファイル（スクリプト）を用意することで解決しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>11月3日</h3>
 
           <p>ロード時に、gosub のネスト情報の一部を初期化していないバグを修正しました。テキスト文が一行ずれることがありました。</p>
@@ -102,17 +100,17 @@
           <p>ONScripter では、ctrl キー押下時に強制スキップ状態になりますが、Mac では ctrl + マウスクリックでマウス右クリック相当になるようなので、MACOSX もしくは MACOS9 が定義されている場合には ctrl キー押下を無視するようにしました。</p>
 
           <p>某所にあった MacOS9 用のパッチを一部取り入れました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>10月5日</h3>
 
           <p>textgosub 使用時には、スキップモードにおいても textgosub で指定されたラベルに飛ぶようにしました。</p>
 
           <p>humanorder を実装しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>10月3日</h3>
 
           <p>shadowTextDisplay 内では dirty_rect に追加しないようにしました。refreshSurface の最後で dirty_rect に追加しました。アニメーションが正しく描画されないバグを修正しました。</p>
@@ -132,15 +130,14 @@
           <p>btnwait 時に、ある条件で過去のボタン定義を消去していなかったバグを修正しました。</p>
 
           <p>Makefile.Win で、nsaconv, sarconv を生成するようにし、また OggVorbis を標準で使うようにしました。</p>
-        </div>
+        </article>
 
       </div> <!-- diary -->
     </div> <!-- diary-container -->
 
-
-    <div id="footer">
-      Copyright (c) 1998-2006 Studio O.G.A. All rights reserved.
-    </div>
+    <footer>
+      Copyright (C) 1998-2006 Studio O.G.A. All rights reserved.
+    </footer>
 
   </div>
 </body>

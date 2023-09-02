@@ -2,25 +2,23 @@
 <html lang="ja">
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
   <title>ONScripter 開発日誌</title>
-  <link rel="stylesheet" type="text/css" href="/ogapee.css">
+  <link rel="stylesheet" href="/ogapee.css">
 </head>
 
 <body>
-
   <div id="body">
 
-    <div id="header">
+    <header>
       <h1>ONScripter 開発日誌</h1>
 
       Since: Feb. 6, 2002<br>
       Last updated: Mar. 23, 2003
-    </div> <!-- header -->
+    </header>
 
-    <div id="toc-container">
-
+    <nav>
       <h3>過去の開発日誌</h3>
 
       <div id="toc">
@@ -39,16 +37,15 @@
             </ul>
           </li>
         </ul>
-      </div> <!-- toc -->
-    </div> <!-- toc-container -->
-
+      </div>
+    </nav>
 
     <div id="diary-container">
       <div id="diary">
 
         <h2>2003年1月～3月</h2>
 
-        <div class="diary-day">
+        <article>
           <h3>3月23日</h3>
 
           <p>αβεさんの patch を取り入れ、 arc でアーカイブファイルが見つからなくても処理を継続するように修正しました。</p>
@@ -66,9 +63,9 @@
           <h4>20030323a</h4>
 
           <p>そ～かむさんの patch に関連して、私が誤った修正をしてしまった箇所を直しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>3月16日</h3>
 
           <p>効果番号15番が正常に描画されなくなっていたバグを修正しました。</p>
@@ -78,41 +75,41 @@
           <p>文字のクリッピングに関するバグを修正しました。</p>
 
           <p>PDA および blt 用の画像の解像度変更ルーチンを、3x3 平滑化フィルタ＋ bi-linear 補間に変更しました。さらに、コンバータとルーチンを共通化しました。これでかなり綺麗に縮むようになりました。PDA でアーカイブを圧縮している人は、今回のコンバータで圧縮し直すことをお勧めします。ただし、補間をしている関係上、アルファ付き画像の縁が線として見えたり、特定色で抜いているカーソル画像の特定色境界が見えたりしますが、これはトレードオフなので我慢してください。デスクトップマシンでも、-DPDA 付きでコンパイルすることで、効果を試すことができます。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>3月6日</h3>
 
           <p>s1100089さんからのバグ報告をもとに、goto の引数が文字列変数（$で始まる）の場合、正しく扱えていなかったバグを修正しました。parser を変更したときにエンバグしたようです。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>3月2日</h3>
 
           <p>s1100089さんからのバグ報告をもとに、行のそれ以前に2byte文字（テキスト）が無い状態で@が現れたときに改行していたバグを取りました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>3月1日</h3>
 
           <p>だいぶ遅くなりましたが、beroさんに報告していただいたバグを修正しました。また、<a href="http://sdl-dc.sourceforge.net/onscripter-dc.html">ONScripter for Dreamcast</a>へのリンクを追加しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>2月22日</h3>
 
           <p>beroさんにDreamcastでの動作報告をいただきました。同時に報告していただいたバグについては、近日中に修正したものをリリースいたします。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>2月10日</h3>
 
           <p>かつをのえぼしさんに、ONScripter の<a href="http://tokyo.cool.ne.jp/eboshi/onscripter.html">Windows バイナリ</a>を公開していただきました。本来 Windows 上では製品付属のNScripterを使用すればよいのですが、ONScripter とNScripterとではセーブファイルに互換性が無いため、例えば外では PDA（SLシリーズのザウルス）、家では
             Windows でやりたいという方にはお勧めです。</p>
-        </div>
+        </article>
 
 
-        <div class="diary-day">
+        <article>
           <h3>2月8日</h3>
 
           <p>ADPCM の wave ファイルを bgm, mp3 で演奏できるように修正しました。</p>
@@ -122,18 +119,18 @@
           <p>命令後の@や\の取り扱いや、#（色指定）のみの行の取り扱いの不具合を修正しました。</p>
 
           <p>試しにとった<a href="http://galileo.spaceports.com/~ogapee/onscripter.html">http://galileo.spaceports.com/~ogapee/onscripter.html</a>が、なぜかαβεさんに補足されています。しかし、ここはさしあたり更新しません。現行のスペースが使えなくなった場合にバックアップとして使用します。</p>
-        </div>
+        </article>
 
 
-        <div class="diary-day">
+        <article>
           <h3>2月6日</h3>
 
           <p>ページ公開から一周年です。</p>
 
           <p>かつらさんに <a href="http://homepage.mac.com/anmira/onscripter/">ONScripter for MacOS X</a> を公開していただきました。Mac OS X ユーザの方でONScripterのコンパイルに苦労されている方は是非お試し下さい。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>2月4日<span style="color:red">20030128～20030202 を使っている人は、要差し換え。セーブファイルが壊れています。</span></h3>
 
           <p>かつらさんからのバグ報告を元に、20030128以降でセーブファイルが正常に作成されない不具合を修正しました。たいへん申し訳ありませんが、20030128 および 20030202 で作成したセーブファイルは破棄して下さい。</p>
@@ -145,26 +142,26 @@
           <p>mask 指定の不具合を修正しました。</p>
 
           <p>アーカイブ圧縮時に、左上もしくは右上のピクセルを透過色に指定している画像の場合に、補間の影響によって透過色が正しく反映されない場合があったため、補間方法を従来の bi-linear に戻しました。</p>
-        </div>
+        </article>
 
 
-        <div class="diary-day">
+        <article>
           <h3>2月2日</h3>
 
           <p>nsaconv, sarconv の画像解像度変更ルーチンにおいて、メモリを正しく確保していないバグを修正しました。</p>
 
           <p>A.Bさんからの報告を元に、(条件ファイル名)"TRUE文字列""FALSE文字列"の解釈におけるバグを修正しました。</p>
-        </div>
+        </article>
 
 
-        <div class="diary-day">
+        <article>
           <h3>1月28日</h3>
 
           <p>αβεさんの patch を参考に、lsp で mask や string 指定を解釈する際のバグを取りました。プログラムが終了してしまう重大なバグなので、20030126 を使っている人は必ず更新してください。</p>
-        </div>
+        </article>
 
 
-        <div class="diary-day">
+        <article>
           <h3>1月26日</h3>
 
           <p>αβεさんの patch を取り入れ、ファイル直接読み込み(DirectReader)時に ファイルが見付からなければ、ファイル名を大小文字区別せずに検索して読み込むよう修正しました。(Win32 以外) (注: ディレクトリ名を区別しないようにはなってません。 その辺にも対応するとしたら、 もっとまともな実装方法にする必要があります)</p>
@@ -197,21 +194,21 @@ onscripter --root /mnt/cf/nscr --force-button-shortcut --disable-rescale
 </pre>
 
           <p><a href="http://free.prohosting.com/">free.prohosting.com</a>は一回限りだという支払いをしないとアカウントを抹消される可能性が濃厚なので、<a href="http://www.tripod.co.jp/">tripod.co.jp</a>に移転しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>1月21日</h3>
 
           <p>藤田さんが ONScripter の Free BSD Ports を公開してくださったので、リンクを張りました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>1月6日</h3>
 
           <p>sarconv, nsaconv の解像度変更を、2x2近傍バイリニア補間から4x4近傍重み付きバイリニア補間に変更しました。少しはきれいになったでしょうか？</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>1月2日</h3>
 
           <p>Zaurus で入力を受け付けなくなる現象ですが、Frame Buffer Driver のロックに関するSDL on Qtopiaの不具合が原因でした。SL-C700以外ではこの不具合はでないようなので、VGAとQVGAの切り替えに関する部分と干渉していたのだと思います。</p>
@@ -278,15 +275,14 @@ ONScripterLabel::flush()
           <p>文字列スプライトの描画で一文字ずつ flush していたのを、文字列全体で一回 flush するように変更しました。</p>
 
           <p>いつのまにか SL-5500 で Home が効くようになっていてびっくりしました。</p>
-        </div>
+        </article>
 
       </div> <!-- diary -->
     </div> <!-- diary-container -->
 
-
-    <div id="footer">
-      Copyright (c) 1998-2006 Studio O.G.A. All rights reserved.
-    </div>
+    <footer>
+      Copyright (C) 1998-2006 Studio O.G.A. All rights reserved.
+    </footer>
 
   </div>
 </body>

@@ -2,24 +2,23 @@
 <html lang="ja">
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
   <title>ONScripter 開発日誌</title>
-  <link rel="stylesheet" type="text/css" href="/ogapee.css">
+  <link rel="stylesheet" href="/ogapee.css">
 </head>
 
 <body>
   <div id="body">
 
-    <div id="header">
+    <header>
       <h1>ONScripter 開発日誌</h1>
 
       Since: Feb. 6, 2002<br>
       Last updated: Dec. 23, 2013
-    </div> <!-- header -->
+    </header>
 
-    <div id="toc-container">
-
+    <nav>
       <h3>過去の開発日誌</h3>
 
       <div id="toc">
@@ -55,8 +54,8 @@
             </ul>
           </li>
         </ul>
-      </div> <!-- toc -->
-    </div> <!-- toc-container -->
+      </div>
+    </nav>
 
 
     <div id="diary-container">
@@ -64,15 +63,15 @@
 
         <h2>2013年</h2>
 
-        <div class="diary-day">
+        <article>
           <h3>12月23日</h3>
 
           <p>佐野さんからいただいたパッチを適用し、-DPDA_AUTOSIZE もしくは -DPDA_WIDTH を指定してコンパイルしたときにダイアログの文字が正しく描画されないバグを修正しました。また、-DBPP16 を指定してコンパイルしたときに、ダイアログの文字が正しく描画されないバグを修正しました。</p>
 
           <p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=307">savedir命令について</a>」を元に、savedir を指定して envdata に反映されていても、起動直後はデフォルトの場所からファイルを読み込んでいたバグを修正しました。なお、savedir の情報は envdata に記録されますが、一度 envdata に記録されると後でスクリプトの savedir の情報を変更しても envdata は修正されません。さらに、スクリプトの savedir の情報よりも envdata の情報の方が優先されます。従って、開発中などにスクリプトの savedir を変更した場合は、envdata を削除してから実行してください。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>11月3日<span style="color:red">セーブデータを手動で移動する必要がある場合があります</span></h3>
 
           <p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=302">iOS 7に関する改善要望</a>」を元に、<a href="ios/">iOS 版</a>で、MAGIC_FILE を更新したときに内蔵ゲームデータのファイルが正しく上書き更新されるように修正しました。ユーザが作成したセーブデータなどは消されずに残ります。</p>
@@ -82,23 +81,23 @@
           <p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=302">iOS 7に関する改善要望</a>」を元に、<a href="ios/">iOS 版</a>でセーブデータを Library/Caches/ONS/ の下ではなく、Documents/ONS/ の下に保存するように変更しました。これで、Caches フォルダが消去されてもセーブデータは残るはずです。</p>
 
           <p>savedir 命令を実装しました。この命令を使用したゲームを実行していた場合には、セーブデータの保存場所が変わるので、事前にスクリプトの savedir 命令の引数で指定された場所に手動でセーブデータ(save*.dat, gloval.sav, kidoku.dat, NScrflog.dat, NScrllog.dat)を移動してください。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>11月2日</h3>
 
           <p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=302">iOS 7に関する改善要望</a>」を元に、<a href="ios/">iOS 版</a>で Xcode 5.0 + iOS 7 に対応しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>9月29日</h3>
 
           <p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=301">LUA 5.2でのAPI変更対応</a>」を元に、いただいたパッチを適用し、Lua 5.2 以降でコンパイルできない問題を修正しました。</p>
 
           <p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=303">apkが作成されない</a>」を元に、最新の SDK (r22.2.1), NDK (r9) に基づいた apk の作成法について補足しました。Android SDK Manager で、Android SDK Platform-tools と Android SDK Build-tools がインストールされていることを確認してください。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>8月12日</h3>
 
           <p><a href="http://www.amazon.co.jp/dp/4061388711">NOeSIS -嘘を吐いた記憶の物語-</a>に続いて<a href="http://hoshimi12.com">キミはキメラ</a>についても小説化の話が進んでいるようで楽しみです。</p>
@@ -106,35 +105,35 @@
           <p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=299">各種コマンド／形式の対応について</a>」を元に、savescreenshot, savescreenshot2 命令において任意のファイル名を指定できるようにしました。本家では、これらの命令ではファイル名（拡張子）をどのように指定しても BMP 形式で画像が保存されます。ONScripter では、これまでは混乱をまねかないようにファイル名の拡張子が bmp のときのみ BMP 形式で画像を保存していましたが、今回からは本家にならって指定されたファイル名で（例え *.jpg であっても） BMP 形式で保存するようにしました。</p>
 
           <p><a href="ios/">iOS 版</a>で動画再生に対応しました。ただし、MPMoviePlayerViewController を使って再生しているため、再生できるフォーマットは H.264, MPEG4 に限られます。スクリプトからは movie 命令で動画ファイルを指定してください。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>4月11日</h3>
 
           <p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=292">スキップされない</a>」を元に、スキップ状態のときに bexec 命令が&quot;SKIP&quot;を返さないバグを修正しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>3月17日</h3>
 
           <p>回想用テキストバッファの文字数が標準文字数より多い場合に、セーブファイルの読み込みに失敗するバグを修正しました。20130223 で発生したバグでした。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>3月16日</h3>
 
           <p>文字列スプライトに対して spstr 命令が機能しないバグを修正しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>2月23日</h3>
 
           <p>game 命令において、デフォルトカーソルを設定した後にカーソルをリセットしてしまい、デフォルトカーソルが読み込まれなかったバグを修正しました。</p>
 
           <p>ルビを多用した場合などに、表示された文字が回想用のテキストバッファに納まらなくなり、その分が回想で表示されないことがあるバグを修正しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>2月16日</h3>
 
           <p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=288">NSLuaの動作不良</a>」を元に、luacall reset を実装しました。</p>
@@ -144,15 +143,15 @@
           <p>Lua を有効にしている場合に、definereset 命令の最後で system.lua を読み込むようにしました。</p>
 
           <p>スプライトの透過度に 0 ～ 255 以外の値が指定された場合に、0xff との論理積を透過度として使用するようにしました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>2月3日</h3>
 
           <p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=287">iOS版のビルドに失敗する</a>」を元に、iOS 版の SDK において dev_iPhoneSimulator.sh のコンパイラのファイル名が間違っていたバグを修正しました。また、SDK を更新して最新の Xcode 4.6 + iOS 6.1 に対応しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>2月2日</h3>
 
           <p> checkkey 命令を実装しました。</p>
@@ -194,27 +193,27 @@
  
      cmp      r1, #0
 </pre>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>1月20日</h3>
 
           <p>タイマが2つ以上同時に作動し、アニメーションの周期が速くなることがあるバグを修正しました。20130112 で発生したバグでした。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>1月19日</h3>
 
           <p>xddd1 さんからのバグ報告を元に、definereset 命令でグローバル変数が古い内容で上書きされてしまうバグと、reset 命令でテキストが消去されないバグを修正しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>1月18日</h3>
 
           <p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=285">文字列スプライトの取得サイズ</a>」を元に、文字列スプライトの縦幅が正しく取得されないバグを修正しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>1月12日</h3>
 
           <p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=276">NSLuaの動作</a>」を元に、本体の処理と Lua の処理が干渉してしまいご指摘の通り正しく処理されない場合があったため、イベントループ周りの処理を修正しました。おそらく解決しているのではないかと思います。</p>
@@ -230,15 +229,14 @@
   char old = ls-&gt;decpoint;
   ls-&gt;decpoint = '.'; /*(cv ? cv-&gt;decimal_point[0] : '.');*/
 </pre>
-        </div>
+        </article>
 
       </div> <!-- diary -->
     </div> <!-- diary-container -->
 
-
-    <div id="footer">
-      Copyright (c) 1998-2013 Studio O.G.A. All rights reserved.
-    </div>
+    <footer>
+      Copyright (C) 1998-2013 Studio O.G.A. All rights reserved.
+    </footer>
 
   </div>
 </body>

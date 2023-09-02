@@ -2,24 +2,23 @@
 <html lang="ja">
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
   <title>ONScripter 開発日誌</title>
-  <link rel="stylesheet" type="text/css" href="/ogapee.css">
+  <link rel="stylesheet" href="/ogapee.css">
 </head>
 
 <body>
   <div id="body">
 
-    <div id="header">
+    <header>
       <h1>ONScripter 開発日誌</h1>
 
       Since: Feb. 6, 2002<br>
       Last updated: Aug. 20, 2015
-    </div> <!-- header -->
+    </header>
 
-    <div id="toc-container">
-
+    <nav>
       <h3>過去の開発日誌</h3>
 
       <div id="toc">
@@ -57,8 +56,8 @@
             </ul>
           </li>
         </ul>
-      </div> <!-- toc -->
-    </div> <!-- toc-container -->
+      </div>
+    </nav>
 
 
     <div id="diary-container">
@@ -66,19 +65,19 @@
 
         <h2>2015年</h2>
 
-        <div class="diary-day">
+        <article>
           <h3>8月20日</h3>
 
           <p>最近、Android 版でオートモードが利かないということを聞いたので調べてみました。昔の本家では、automode もしくは mode_ext 命令が実行されるとメニューにオートモードが追加されていました。そのため、ONScripter では、automode もしくは mode_ext 命令が実行された状態で a キーを押した時に、オートモードに入るようになっていました。Android 版では、アプリのメニューのオートモードボタンを押すと a キーが押されたというイベントが発生するようになっています。ところが、少なくとも８年以上前から、本家では最初からメニューにオートモードが表示されるようになっているようです。そこで、a キーが押されたら必ずオートモードに入るように修正しました。これで、Android 版のオートモードボタンも常に利くようになると思います。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>8月11日</h3>
 
           <p>lsp 命令などのグラフィックファイル指定で、ファイル名の代わりに&quot;:c;&gt;幅,高さ,#色&quot;を指定することで長方形の画像ファイルを生成することができますが、この幅と高さに小数点以下の値を持つ数値を指定しても解釈されるようにしました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>8月10日</h3>
 
           <p>バグ報告「<a href="/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=336">split命令で落ちます</a>」を元に、いただいたパッチを参考にして、split 命令で切り出された文字列が256バイト以上の場合にセグメンテーションフォルトを引き起こして落ちるバグを修正しました。</p>
@@ -142,15 +141,15 @@
 ...
 			int len = bis.read(buf);
 </pre>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>2月8日</h3>
 
           <p>textgosub 設定時に、直後の強制クリックを無視する _ の直後に clickstr 命令で設定した文字があった場合に、その文字以降の文章が二重に描画されるバグを修正しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>2月7日</h3>
 
           <p>バグ報告「<a href="/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=315">checkkey・bgmfadeout・bsp・delayの反応と設定のグローバル化</a>」および「<a href="/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=335">文章の末尾に不要な数字が表示される</a>」を元に、スキップもしくは Ctrl キーを押して文章を読み飛ばしている時に、delay 命令において引数が読まれないバグを修正しました。20150102 で発生していました。</p>
@@ -160,9 +159,9 @@
           <p>textcolor 命令を実装しました。</p>
 
           <p>textgosub 設定時に、同一行に clickstr 命令で設定した文字が複数存在する場合に、１つ目の文字以降の文章が表示されないバグを修正しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>1月12日</h3>
 
           <p>2015年2月1日以降に App Store に登録するアプリは、iOS 8 SDK を使用して 64bit コードをサポートしている必要があります。64bit コードのアーキテクチャ（ARMv8-A) と 32bit コードのアーキテクチャ (ARMv7) は全く異なるため、32bit 用に記述されたインラインアセンブリコードを 64bit 用にビルドすることはできません。そのため、<a href="ios/#SDK">iOS 版 SDK</a>に以下の修正を施しました。</p>
@@ -247,9 +246,9 @@ IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
 </pre>
             </li>
           </ul>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>1月2日</h3>
 
           <p>バグ報告「<a href="/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=315">checkkey・bgmfadeout・bsp・delayの反応と設定のグローバル化</a>」を元に、bgmfadeout 命令でフェードアウトの設定を行い、bgmstop 命令で音楽がフェードアウト中に、saveon 命令などによってセーブデータが作成されてそこからゲームを再開したときに、音楽が再生されてしまうバグを修正しました。</p>
@@ -259,9 +258,9 @@ IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
           <p>同じバグ報告を元に、スキップ実行時もしくは CTRL キーを押した状態で、delay 命令で待ちが発生していたバグを修正しました。</p>
 
           <p>同じバグ報告を元に、envdata に保存された kidokumode 命令による設定が、次回起動時に kidokuskip 命令で上書きされて反映されないバグを修正しました。setwindow2, textspeed 命令の設定につきましては、設定が保存されることはないように思いますが、勘違いをしているようでしたらご指摘下さい。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>1月1日</h3>
 
           <p>Google Play で公開したアプリの総インストール数が４ヶ月間で 5000 を超えました。</p>
@@ -285,16 +284,14 @@ IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
           <p>バグ報告「<a href="/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=333">gameコマンドで落ちます</a>」を元に、ラベルごとの先頭アドレスを管理する変数で、先頭の空白を含まないアドレスを格納するように修正しました。</p>
 
           <p>バグ報告「<a href="/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=315">checkkey・bgmfadeout・bsp・delayの反応と設定のグローバル化</a>」を元に、bsp 命令の３番目の引数（マウスを押したときの処理）に対応しました。</p>
-        </div>
+        </article>
 
       </div> <!-- diary -->
     </div> <!-- diary-container -->
 
-
-    <div id="footer">
-      Copyright (c) 1998-2015 Studio O.G.A. All rights reserved.
-    </div>
-
+    <footer>
+      Copyright (C) 1998-2015 Studio O.G.A. All rights reserved.
+    </footer>
   </div>
 </body>
 

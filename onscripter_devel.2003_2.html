@@ -2,25 +2,23 @@
 <html lang="ja">
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
   <title>ONScripter 開発日誌</title>
-  <link rel="stylesheet" type="text/css" href="/ogapee.css">
+  <link rel="stylesheet" href="/ogapee.css">
 </head>
 
 <body>
-
   <div id="body">
 
-    <div id="header">
+    <header>
       <h1>ONScripter 開発日誌</h1>
 
       Since: Feb. 6, 2002<br>
       Last updated: Jun. 30, 2003
-    </div> <!-- header -->
+    </header>
 
-    <div id="toc-container">
-
+    <nav>
       <h3>過去の開発日誌</h3>
 
       <div id="toc">
@@ -44,22 +42,21 @@
             </ul>
           </li>
         </ul>
-      </div> <!-- toc -->
-    </div> <!-- toc-container -->
-
+      </div>
+    </nav>
 
     <div id="diary-container">
       <div id="diary">
 
         <h2>2003年4月～6月</h2>
 
-        <div class="diary-day">
+        <article>
           <h3>6月30日</h3>
 
           <p>sarconv, nsaconv で、縮小された画像の四隅のピクセル値が縮小前の四隅の値を保つように修正しました。透過指定がうまく反映されない場合があったためです。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>6月29日</h3>
 
           <p>αβεさんの patch を取り入れ、date が返す年数の桁数を修正しました（西暦４桁から西暦下２桁に）。</p>
@@ -71,9 +68,9 @@
           <h4>20030629a</h4>
 
           <p>そ～かむさんからのバグ報告を元に、sarconv, nsaconv を big endian のマシンで実行したときに、short, long の値を正しく書き込んでいなかったバグを修正しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>6月22日</h3>
 
           <p>下記の理由から、ONScripter の Zaurus 版を阿川さんの SDL へのパッチをベースにした SDL 上で動くようにしました。私が以前に公開していたライブラリでは正常に動かなくなります。</p>
@@ -103,9 +100,9 @@ ONScripterLabel.cpp: 236行目に
     mouse_rotation_mode = MOUSE_ROTATION_NONE;
 を追加
 </pre>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>6月16日</h3>
 
           <p>影付き文字の描画の際に、二重に flush していたバグを修正しました。</p>
@@ -115,9 +112,9 @@ ONScripterLabel.cpp: 236行目に
           <p>スプライトボタン生成時に、ButtonLink に surface を格納せずに、実体を sprite_info に持たせるようにしました。同じボタンの生成を頻繁に行うゲームでは、毎回生成せずに済むので高速になります。</p>
 
           <p>その他、effect の前後処理を高速化しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>6月14日</h3>
 
           <p>exbtn で既に解放されたスプライトを描画しようとして落ちる場合があるバグを修正しました。</p>
@@ -127,30 +124,30 @@ ONScripterLabel.cpp: 236行目に
           <p>文字スプライトボタンの描画を高速化しました。</p>
 
           <p>その他、冗長に flush していた箇所を最適化しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>6月1日<span style="color:red">20030528～20030531 を使っている人は要差し換え</span></h3>
 
           <p>ファイル名等の文字列を格納する変数に対する操作関数に関して、20030528 以降でエンバグしていたため修正しました。結構重大なバグでした。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>5月31日</h3>
 
           <p>以前から気になっていた windowback で text が背後に表示されないバグを修正しました。副次的効果として、アニメーションカーソルがテキストと重なっていた場合に、テキストがクリップされていた（透過表示にならない）バグも修正されました。
           </p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>5月28日</h3>
 
           <p>alphaBlend 処理中に、確保した領域外に書き込む可能性があるバグを修正しました。</p>
 
           <p>NULL が設定された文字変数により segmentation fault が引き起こされることがあるバグを修正しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>5月27日</h3>
 
           <p>SDL_ttf で TTF を使う場合には、異なる文字サイズごとに TTF_OpenFont を実行する必要があります。この Open された font を一括管理して、文章表示用 font や文字列スプライト等で共有するように修正しました。</p>
@@ -158,9 +155,9 @@ ONScripterLabel.cpp: 236行目に
           <p>cell で有効セル数を越えてセル番号を指定した場合に、有効な最大セル番号を設定するように修正しました。</p>
 
           <p>SDL_ACTIVEEVENT 発生時の flush で、dirty_rect の情報が消されていたバグを修正しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>5月25日</h3>
 
           <p>cell で指定したセル番号が有効であるのかどうかをチェックするようにしました。</p>
@@ -170,15 +167,15 @@ ONScripterLabel.cpp: 236行目に
           <p>セーブファイルの内部的な取り扱いを修正しました。セーブファイル数の上限を撤廃しました。</p>
 
           <p>ボタン選択時のスプライトボタンの表示を高速化しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>5月19日</h3>
 
           <p>再描画する必要のある箇所のみ frame buffer に書き込む(flush)ようにして、表示の高速化を図りました。また、ofscpy 後の effect における挙動も正常になったはずです。描画回りを結構いじったため、とりあえず experimental 版として置いておきます。試してくださる方は、以前と挙動が異なる場合にはご報告下さい。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>5月10日</h3>
 
           <p>Blackbrd さんからのバグ報告を元に、画像の解像度変更処理において、確保したメモリ領域が不十分で segmentation fault を起こす場合に対処しました。</p>
@@ -196,9 +193,9 @@ ONScripterLabel.cpp: 236行目に
           <p>必要メモリ量を削減するために、background_surface を廃止しました。</p>
 
           <p>他にも色々いじっていたのですが、時間がかかりそうなので一旦ロールバックしてリリースしました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>4月9日</h3>
 
           <p>αβεさんの patch を取り入れ、input を仮実装しました。常にデフォルト値を入れます。</p>
@@ -222,15 +219,14 @@ ONScripterLabel.cpp: 236行目に
           <h4>20030409a</h4>
 
           <p>αβεさんの patch を取り入れ、sarconv, nsaconv で、width=1 あるいは height=1 の画像を変換しようとすると SEGV が発生することがある問題を修正しました。</p>
-        </div>
+        </article>
 
       </div> <!-- diary -->
     </div> <!-- diary-container -->
 
-
-    <div id="footer">
-      Copyright (c) 1998-2006 Studio O.G.A. All rights reserved.
-    </div>
+    <footer>
+      Copyright (C) 1998-2006 Studio O.G.A. All rights reserved.
+    </footer>
 
   </div>
 </body>

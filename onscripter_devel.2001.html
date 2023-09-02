@@ -2,38 +2,36 @@
 <html lang="ja">
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
   <title>ONScripter 開発日誌</title>
-  <link rel="stylesheet" type="text/css" href="/ogapee.css">
+  <link rel="stylesheet" href="/ogapee.css">
 </head>
 
 <body>
   <div id="body">
 
-    <div id="header">
+    <header>
       <h1>ONScripter 開発日誌</h1>
 
       Since: Feb. 6, 2002<br>
       Last updated: Mar. 21, 2002
-    </div> <!-- header -->
+    </header>
 
-    <div id="toc-container">
-
+    <nav>
       <h3>過去の開発日誌</h3>
 
       <div id="toc">
 
       </div> <!-- toc -->
-    </div> <!-- toc-container -->
-
+    </nav>
 
     <div id="diary-container">
       <div id="diary">
 
         <h2>2001年12月</h2>
 
-        <div class="diary-day">
+        <article>
           <h3>12月30日</h3>
 
           <p>savename, savenumber, rmenu, menusetwindow を実装しました。</p>
@@ -45,21 +43,21 @@
           <p>globalon を実装し、global.sav の globalon 時の読み込みと、終了時の書出しを実装しました。</p>
 
           <p>選択肢以外待ちを行わないモードにして、長時間耐久試験をしました。なぜか、qnscripter は一切リークしていないのに、XFree86 の確保メモリが 3MB/s くらいの速度で増えていきます。しばらくして、実メモリもスワップも全部食い尽くしてしまったので、中断しました。原因不明です。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>12月24日</h3>
 
           <p>ld, cl の透過 a のみ実装。 alphaBlend を実装しました。これで、遅いもののクロスフェードが出来るようになり、立ち絵の透過読み込みにも対応しました。ついでに、text window の色味を下げる処理も、QBrush を使う方法から alphaBlend に変更しました。これで、ほぼ一通り最後まで動くのではないでしょうか。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>12月23日</h3>
 
           <p>select を全実装しました。マウス待ちは、btnwait と同じ機構です。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>12月19日</h3>
 
           <p>途中で落ちるのは、内部で %4020 とかを変数に使っていたからでした。最大変数番号は 1000 までだと思っていましたが 10000 に拡張しました。</p>
@@ -69,23 +67,23 @@
           <p>woody only 環境で動かしました。apt-get install libqt3-mt-dev として、setenv QTDIR /usr/share/qt として、正常にコンパイル＆実行できました。</p>
 
           <p>skip で、label をまたぐ場合を考慮していなかった問題を修正しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>12月20日</h3>
 
           <p>select を半分実装しました（複数行を正しく解釈し、SelectLink を作るところまで）。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>12月18日</h3>
 
           <p>effectblank を実装しました。</p>
 
           <p>Shutter effect を実装しました。ピクセルの輝度を変化させない effect は、簡単に実装できます。問題は、最もよく使われる cross fade をどうするかです。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>12月17日</h3>
 
           <p>gosub と return を実装しました。プロローグの、途中まで一応行くようになりました。</p>
@@ -97,9 +95,9 @@
           <p>タイトルを越え、その先のオープニングも OK になりました。</p>
 
           <p>setwindow を実装しました。これで、フォントの表示は大体よくなりました。ただ、右端で切れることがあります。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>12月16日</h3>
 
           <p>文字表示を実装しました。日本語もばっちりです。textCommand を半分くらい実装しました。</p>
@@ -109,21 +107,21 @@
           <p>ソースを印刷し、この時点でのバグを洗い出し。結構あった。</p>
 
           <p>最初の画面が出るところまで行きました。gosub を実装していないのでここまでです。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>12月12日</h3>
 
           <p>qpixmap に対して qpainter と bitBlt を使えば、画像表示も文字表示も全て解決しました。なんとこんな解があるとは思いませんでした。すごいです Qt。直したところ、劇的とも言えるパフォーマンスアップです。何しろ前回 60msec と言っていましたが、0msec になりました。つまり Qt の event loop と cache 能力を最大限に使うにはこうするということのようです。素晴らしいです。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>12月11日</h3>
 
           <p>btnwait と reset を実装しました。後は、文字表示を入れれば bbndemo が完全に動きます。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>12月10日</h3>
 
           <p>表示用の画像データを独自の配列で持ち、部分 copy や画面効果などは全部自前で実装し、最後に widget にコピーするようにしました。何故か X11 の waring もでなくなりました。</p>
@@ -131,9 +129,9 @@
           <p>無理やり setWFlags( WRepaintNoErase ) を設定して、再描画しないで draw するようにしていましたが、180msec くらいかかります。QLabel を継承して、独自に QLabel を継承して class を作ったら、何故か 60msec くらいでかなりスムーズになりました。何故でしょうか？</p>
 
           <p>高速化のため、画像データを ButtonLink に直接持たせることにしました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>12月8日</h3>
 
           <p>effect handler を一通り実装しました。DelayedEffectInfo で、即実行・遅延実行に対応させます。</p>
@@ -151,9 +149,9 @@ X Error: BadMatch (invalid parameter attributes) 8
 </pre>
 
           <p>これで、NScripter の btndemo が半分動きます。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>12月7日</h3>
 
           <p>ScriptParser を書き始めました。メモリに script を全部読み込み、各ラベルの index を作成し、一行づつ parse しながら、lookup table 形式でコマンドに対応する class method を dispatch する仕組みを書きました。</p>
@@ -163,9 +161,9 @@ X Error: BadMatch (invalid parameter attributes) 8
           <p>QScripter_impl を ScriptParser から継承し、string_buffer などを共有できるようにしました。コマンドは、まず ScriptParser の parseLine で解析し、解析できたらその内部で処理を行い、解析できない場合（画面表示系）は QScript_impl の parseLine で解析して処理するようにしました。</p>
 
           <p>gosub に対応して、ラベルの状態を先端固定の link list で管理するようにしました。別のラベルに移る時には、かならず event loop を経由するようにする予定です。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>12月5日</h3>
 
           <p>開発を開始しました。</p>
@@ -175,15 +173,14 @@ X Error: BadMatch (invalid parameter attributes) 8
           <p>nscript.dat の暗号化方式も、web を探していたら分かってしまいました。とりあえずスクリプトを復元しました。</p>
 
           <p>Qt で GUI を作りました。一応メニューバー等を付け、背景がロード・表示できることを確認しました。MouseEvent と TimerEvent のハンドリングも書きました。</p>
-        </div>
+        </article>
 
       </div> <!-- diary -->
     </div> <!-- diary-container -->
 
-
-    <div id="footer">
-      Copyright (c) 1998-2006 Studio O.G.A. All rights reserved.
-    </div>
+    <footer>
+      Copyright (C) 1998-2006 Studio O.G.A. All rights reserved.
+    </footer>
 
   </div>
 </body>

@@ -2,24 +2,23 @@
 <html lang="ja">
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
   <title>ONScripter 開発日誌</title>
-  <link rel="stylesheet" type="text/css" href="/ogapee.css">
+  <link rel="stylesheet" href="/ogapee.css">
 </head>
 
 <body>
   <div id="body">
 
-    <div id="header">
+    <header>
       <h1>ONScripter 開発日誌</h1>
 
       Since: Feb. 6, 2002<br>
       Last updated: Nov. 29, 2004
-    </div> <!-- header -->
+    </header>
 
-    <div id="toc-container">
-
+    <nav>
       <h3>過去の開発日誌</h3>
 
       <div id="toc">
@@ -46,16 +45,15 @@
             </ul>
           </li>
         </ul>
-      </div> <!-- toc -->
-    </div> <!-- toc-container -->
-
+      </div>
+    </nav>
 
     <div id="diary-container">
       <div id="diary">
 
         <h2>2004年</h2>
 
-        <div class="diary-day">
+        <article>
           <h3>11月29日</h3>
 
           <p>αβεさんの patch を取り入れ、getcselstr, cellcheckspbtn, bgmvol 命令を追加しました。</p>
@@ -63,9 +61,9 @@
           <p>αβεさんの patch を取り入れ、systemcall に automode を追加しました。いつもありがとうございます。</p>
 
           <p>本家の変更に伴い、*customsel に飛んだ時点で自動的に skipoff されないようにしました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>11月03日</h3>
 
           <p>一部のコンパイラでコンパイル時にエラーになったので、修正しました。</p>
@@ -75,9 +73,9 @@
           <p>ついでに、非明示的なキャストなどで warning が出る箇所を修正しました。</p>
 
           <p>20041025 であからさまな問題のなかった人は、アップデートする必要はありません。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>10月25日</h3>
 
           <p>pretextgosub, gettag, indent, linepage2, checkpage を実装しました。</p>
@@ -89,9 +87,9 @@
           <p>ルビの情報をセーブファイルに格納するように修正しました。また、回想画面でルビの情報を表示できるように修正しました。</p>
 
           <p>変更点が多くバグが混入している可能性があるので、挙動が以前と違っている場合には遠慮無くご報告下さい。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>9月27日</h3>
 
           <p>いただいた「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=47">ひぐらしのなく頃に：BGM一部再生せず</a>」を参考に、アーカイブではなくファイルシステムから直接ファイルを読み込む際に、ルートパスから２階層以下にファイルがある場合、大文字小文字の違いを吸収できず読み込めない場合があるバグを修正しました。
@@ -100,9 +98,9 @@
           <p>右クリックメニューのデフォルトのフォントサイズを変更しました。なにげに、最初のリリースから存在するバグでした。</p>
 
           <p>20040925a で発生した、ENABLE_1BYTE_CHAR 指定時に１行の半角表示数が奇数の際に無限ループに陥るバグを修正しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>9月25日</h3>
 
           <p>blt で、引数が負の場合に対応しました。</p>
@@ -112,9 +110,9 @@
           <h4>20040925a</h4>
 
           <p>ENABLE_1BYTE_CHAR 有効時に、連続して _ で 1byte の clickstr 文字を回避する場合に、文字間にスペースが入ってしまうバグを修正しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>9月18日</h3>
 
           <p>for ループのネストの情報をセーブファイルに入れていなかったバグを修正しました。</p>
@@ -126,23 +124,23 @@
           <h4>20040918a</h4>
 
           <p>一部のコンパイラでエラーになったので、修正しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>9月15日</h3>
 
           <p>そ～かむさんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=46">MacOSX 上で、Ogg Vorbis 使用のゲームでは、声が砂あらしに</a>」を元に、Mac などの big endian の機種で Ogg Vorbis 使用時に、正しく wav 形式に変換されず再生音がノイズのようになっていたバグを修正しました。このバグは Ogg Vorbis に対応した1年前から存在していたので、今まで ONScripteron Mac では Ogg Vorbis 再生不可でした。</p>
 
           <p>スクリプトの読み込み手順を変更しました。まず、0.txt, 00.txt を探し、見つかった場合には、0.txt, 00.txt, 1.txt, 01.txt ... 99.txt の順に全探索します。ただし、?.txt がある場合には、0?.txt は見にいきません。0.txt, 00.txt が無い場合には、nscript.dat 等の暗号化されたファイルを探しにいきます。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>9月13日</h3>
 
           <p>某ゲームのロゴ画面の描画があまりに遅かったので、追ってみました。つまるところ、20040419 で drawbg2 等に対応したときに、描画の前処理のルーチンを共通化したため、スケーリングや回転を含まない通常描画の際に不必要なオーバーヘッドができていたのですが、それが予想以上に大きかったようです。通常描画の前処理のルーチンを分け、一概には言えませんが、描画に関しては２～３倍速くなりました。というか、元に戻りました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>9月11日</h3>
 
           <p>lr_trap を実装しました。</p>
@@ -150,25 +148,25 @@
           <p>セーブファイル中の BGM 演奏状態に関するバグを修正しました。</p>
 
           <p><a href="onscripter.html#save">異なるプラットフォーム上で同時に遊ぶ方法</a>について補足しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>9月10日</h3>
 
           <p>半角カタカナの表示に対応しました。</p>
 
           <p>textgosub 使用時に、行末で改行していなかったバグを修正しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>9月9日</h3>
 
           <p>さっそくエンバグです。goto や gosub 命令で、文字変数を引数に取れなくなっていたバグを修正しました。</p>
 
           <p>コンパイル時に ENABLE_1BYTE_CHAR を定義した場合の挙動を改善しました。clickstr, select などが正常に機能するようになりました。<a href="onscripter.html#enable_1byte">サンプルスクリプト</a>を参照してください。ちなみに、ENABLE_1BYTE_CHAR は ` の取り扱いだけを変更します。私の知る限り既存のゲームでは半角の ` は使われていないので、ENABLE_1BYTE_CHAR を定義した状態でも既存のゲームは正常に実行できます。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>9月2日</h3>
 
           <p>select や btnwait 等で選択待ちの時に、アニメーションが有効になるように修正しました。</p>
@@ -184,9 +182,9 @@
           <p>何度目かの parser を含むコア部分の大幅書き換えを行いました。全体にかなり手を入れたため、エンバグしている可能性がありますので、今まで動いていたゲームの挙動がおかしくなった場合にはお知らせください。</p>
 
           <p>コンパイル時に ENABLE_1BYTE_CHAR を指定することで、`(back quote) 以降行末もしくは別の ` までを、1byte 文字で記述されたテキスト文とみなして表示するようにします。半角スペースが表示として有効になりますが、テキスト内の色・時間指定、変数表示は無効になります。テキスト途中で色を変える場合は、/ で行を分けるなどしてください。要は、英語ノベル用のための拡張で、これは ONScripter 独自の拡張です。将来本家で ` に何か機能を割り振った場合には、削除もしくは別の文字に変更されます。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>6月14日</h3>
 
           <p>そ～かむさんからのバグ報告を元に、USE_OPENGL 使用時に PFNGLBLENDCOLOREXTPROC が定義されていない場合に、定義するように変更。なお、PFNGLBLENDCOLOREXTPROC ではなく、PFNGLBLENDCOLORPROC を使用することにしました。</p>
@@ -198,27 +196,27 @@
           <p>GL_REPLACE の代わりに GL_MODULATE を使うことで、ピクセル単位のアルファブレンディングとスプライト単位のアルファブレンディングの両立を実現。drawsp, drawsp2, tal, amsp, msp などで、これまでアルファ値の再計算と画像の再読み込みをしていた部分が省略され高速化されました。</p>
 
           <p>数式の最初が数値変数で、かつその前に - があった場合に、マイナスとして正しく扱われなかったバグを修正。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>6月9日</h3>
 
           <p>きさらさんより、20040608 版の Mac OS X 上での動作報告をいただきました。OpenGL を無効・有効にした時に、いずれも問題なく動作するそうです。一安心。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>6月8日</h3>
 
           <p>20040606 以降に、big endian のマシンで明らかにおかしくなりそうなコードがあったので、修正しました。ただし検証できないので未確認です。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>6月7日</h3>
 
           <p>USE_OPENGL 使用時に、glBlendColor が定義されていない場合に SDL_GL_GetProcAddress で関数へのポインタを取得するように変更。これで、大抵の環境で少なくともコンパイルは通るようになると思います。glBlendColor が実装されていない場合は、関数へのポインタの取得に失敗し、そこでプログラムは終了します。なお、Zaurus 版パッケージでは OpenGL は使用しないので、こちらの更新はありません。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>6月6日</h3>
 
           <p>OpenGL のために、画像読み込み時に、アルファ値を計算し SDL_Surfaceの各ピクセルに格納することにする。副次的効果として、アルファ付き画像(a指定)の必要メモリ量が半分になるので、全体の使用メモリ量も結構減っていると思います。また、内部用全画面画像バッファを２枚削除したので、使用メモリ量がさらに減っています。</p>
@@ -240,15 +238,15 @@
           </ul>
 
           <p>効果１８番などビデオカード内で演算できる目処が立っていない機能がいくつかあり、それらはメインメモリ上で合成した後に glTexSubImage2D で転送することにします。OpenGL を使わない場合とどの程度異なるのかを調べるために、640x480の画面で実際に計測してみたところ，私の環境では効果１８番では 27:40 (fps)で素よりは速いがそれほど変わらないという結果になりました。これは画像生成と転送を合わせた時間です。ちなみに、ビデオカード内で演算ができる glBlendColor を使ったアルファブレンディング（効果１０番）だと 52:702 (fps)で素に比べて爆速という結果になりました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>5月16日</h3>
 
           <p>uniuni-z さんからのバグ報告を元に、PDA が定義されアーカイブ中の画像の解像度変更をしているときに、btn 命令で btndef で指定された画像が正しく設定されなかったバグを修正。20040417 以降でバグが発生していました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>5月3日</h3>
 
           <p>セーブファイル読み込み後に、btndef で指定されたボタン画像ファイルを設定していなかったバグを修正。</p>
@@ -268,9 +266,9 @@
           <p>bgm, bgmonce, mp3, mp3loop, mp3save 命令で MIDI ファイルを演奏可能にする。</p>
 
           <p>rmenu で end に対応。またこれまで、rmenu reset は&quot;終了します。よろしいですか？&quot;と表示していましたが、これは rmenu end の時の表示とし、rmenu reset の際は&quot;リセットします。よろしいですか？&quot;と表示するように変更しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>4月19日</h3>
 
           <p>drawclear, drawfill, drawbg, drawbg2, drawsp, drawsp2, drawtext, draw を実装。浮動小数点プロセッサが無い機種を考慮し、回転を含め画像変換は整数演算でやっています。ハードウェアアクセラレーションは使っていないので、速さには期待しないでください。</p>
@@ -278,9 +276,9 @@
           <p>mask 画像等の読み込みの際に、directory 付きのファイル名を parse できるようにする。stralias や文字変数でも指定できるようにしようとして中断していましたが、そもそも本家では対応していないのであっさりあきらめました。</p>
 
           <p>描画更新領域管理に関するバグを修正。実画面外を指定したときに、描画更新領域が不正になる場合がありました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>4月17日</h3>
 
           <p>縦書きモード and/or ルビに関する修正多数。使用する分にはだいたい問題ないと思います。縦書きは単に横書き用の文字を縦に並べているだけで、句読点や括弧は個別に位置・回転を調整しています。括弧はもっと位置を本文側に詰めなければならないのですが、そのうちに対処します。縦書きをもっと自然に扱う方法はないものでしょうか。</p>
@@ -296,21 +294,21 @@
           <p>spbtn, exbtn 命令でボタン定義をした後に、登録したスプライト番号に新たに画像を読み込むとそれが反映されないバグを修正（エンバグ）。</p>
 
           <p>いつの間にやら相当バグが累積していました。これまでに、やむをえず内部仕様の大幅な変更を何度か繰り返しているため、昔は動いていたのに今になって正常に動かなくなっているものが他にも結構あると思います。気づいた方は、フィードバックをよろしくお願いします。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>4月2日</h3>
 
           <p>hiromizu さんからのバグ報告を元に、』が禁則文字として扱われていなかったバグを修正。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>2月25日</h3>
 
           <p>spbtn, exbtn でボタンを設定した後に csp でスプライト自体が消去された場合に、btnwait で不具合が生じる（落ちる）バグを修正。csp 時に、ボタンリストから削除するようにしました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>1月19日</h3>
 
           <p>αβεさんからのパッチを取り入れ bgmstop 命令を追加しました。</p>
@@ -324,21 +322,20 @@
           <p>αβεさんからのパッチを取り入れ playMP3 で WMA ファイルを指定した場合にエラーにならないためセグメンテーションフォルトが発生する現象をアドホックに回避しました。 → とりあえず AVIWrapper を拡張して対応する方向で? → うーん、どうしたものか。</p>
 
           <p>Copyright を更新しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>1月5日</h3>
 
           <p>btnwait 命令で、ボタン押下後常にボタン定義をクリアしていたバグを修正しました。戻値が１以上の時のみクリアするように修正しました。ボタン選択画面でうっかり右クリックするとボタンが選択できなくなることがありましたが、これが解決されています。</p>
-        </div>
+        </article>
 
       </div> <!-- diary -->
     </div> <!-- diary-container -->
 
-
-    <div id="footer">
-      Copyright (c) 1998-2006 Studio O.G.A. All rights reserved.
-    </div>
+    <footer>
+      Copyright (C) 1998-2006 Studio O.G.A. All rights reserved.
+    </footer>
 
   </div>
 </body>

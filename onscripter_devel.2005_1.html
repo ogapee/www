@@ -2,24 +2,23 @@
 <html lang="ja">
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
   <title>ONScripter 開発日誌</title>
-  <link rel="stylesheet" type="text/css" href="/ogapee.css">
+  <link rel="stylesheet" href="/ogapee.css">
 </head>
 
 <body>
   <div id="body">
 
-    <div id="header">
+    <header>
       <h1>ONScripter 開発日誌</h1>
 
       Since: Feb. 6, 2002<br>
       Last updated: Dec. 30, 2005
-    </div> <!-- header -->
+    </header>
 
-    <div id="toc-container">
-
+    <nav>
       <h3>過去の開発日誌</h3>
 
       <div id="toc">
@@ -47,22 +46,21 @@
             </ul>
           </li>
         </ul>
-      </div> <!-- toc -->
-    </div> <!-- toc-container -->
-
+      </div>
+    </nav>
 
     <div id="diary-container">
       <div id="diary">
 
         <h2>2005年</h2>
 
-        <div class="diary-day">
+        <article>
           <h3>12月30日</h3>
 
           <p>数値変数と文字変数で、インデックスの指定が範囲外のときの処理を入れました。現在インデックスは 0 から 4095 まで取れますが、ONScripter ではこの範囲外を指定すると、共通の一時変数へのアクセスに置き換え続行する仕様にします。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>12月9日</h3>
 
           <p>zZzさんからのバグ報告を元に、テキスト表示の際に奇数個の半角数字の後に空白・改行があると文字化けすることがあるバグを修正しました。</p>
@@ -80,9 +78,9 @@
           <p>縦書きのときは、本家では setwindow の「縦の文字数」×「縦の文字数」が文字表示領域になり、clickstr のクリック待ちと改ページの区別も「縦の文字数」を基準に決めているようです。これもバグだと思いますが、現状のゲームはこの仕様の元に作成されているので、ONScripter もこれにならいます。</p>
 
           <p>これまでバグって機能していなかった縦書き時の select 系コマンドに対応しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>11月15日</h3>
 
           <p>ScriptHandler::readToken() において、想定外の文字が現在バッファの先頭に来たときに、スクリプトが不正にスキップされることがあるバグを修正しました。昔は無かったのですが、パーサを書き換えたときにエンバグしたようです。</p>
@@ -90,37 +88,37 @@
           <p><a href="http://d.hatena.ne.jp/nyanonon/20051108">にゃののん日記</a>によると、プログラム本体をアイコン登録すれば、Homeキーでホーム画面に戻った後も、タスクバーのアイコンからゲームに復帰できるとあります。さっそく試してみましたところ、VGA でしかやっていませんが、うまくいっているようです。素晴らしい。ONScripter の配布パッケージに取り入れさせていただきます。また、ONScripter-Resume は削除しました。</p>
 
           <p>上の事情もあり、Zaurus 用パッケージのためにアイコンを作りました。今までは碁のアイコンを流用していましたが、最近の Zaurus には入っていないようです。私の Zaurus にはあるのですが、なぜかタスクバーには出てきません。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>11月2日</h3>
 
           <p>画面効果のモザイクイン・アウトに関してバグ修正を行いました。onscripter-20051101 での修正ミスです。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>11月1日</h3>
 
           <p>し～くるさんからの「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=69">PSP 用のパッチ</a>」を適用し、PSP 用の Makefile やキーバインドを追加しました。</p>
 
           <p>画面効果のモザイクイン・アウトにおいて、解像度によってはセグメンテーションフォルトを起こすバグを修正しました。そもそもモザイクの描画の仕方が間違っていたので、そちらも修正しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>10月13日</h3>
 
           <p>BPP16 を定義してコンパイルしたときに、奇数幅の画像を正常に扱えないことがあるバグを修正しました。SDL_Surface で画像バッファの幅が 4byte に align されているのを忘れていました。</p>
 
           <p>bar コマンド後の再描画領域が不正になることがあるバグを修正しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>10月11日</h3>
 
           <p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=48">歌月十夜</a>」を元に、selnum コマンドにおいて、行をカウントする変数が正しく更新されないバグを修正しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>10月10日</h3>
 
           <p>し～くるさんからの修正「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=68">save_data_lenの初期化ミス？</a>」を取り入れ、save_data_len が初期化されていないため ScriptParser::allocFileIOBuf 内の memcpy の挙動がおかしくなることがあるバグを修正しました。PSP 上で動作したそうです。</p>
@@ -128,17 +126,17 @@
           <h4>20051010a</h4>
 
           <p>erasetextwindow で 0 が指定されたときに、既にテキストが描画されているときのみ、画面効果に入ってもテキストの表示を継続するようにしました。これまでは、画面効果に入ると強制的にテキストを表示するようにしており、結果として意図しないテキスト枠が表示されることがありました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>10月8日</h3>
 
           <p>仕様として、デフォルト(saveon 有効時)では改ページする度に(厳密には少し違いますが)セーブデータのスナップショットをとっているのですが、これまではこれを tmpfile で生成したファイルに格納していました。今回、スナップショットをメモリ上に保存するように変更し、またセーブデータの実際の読み書きも、メモリ上で全体を構築し fread, fwrite で一度に読み書きするようにしました。ディスクアクセスの遅い環境では結構有効だと思います。もしかしたら、セーブデータの読み書きに関してエンバグしている可能性があるので、何か気づいた方は御報告下さい。</p>
 
           <p>また、セーブファイル以外で読み書きを行うデータファイルについても、同様に一気に読み書きするように変更しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>10月4日</h3>
 
           <p>今まで、fgetc もどうせ内部でバッファリングされているんだろうから、fread と読み込み速度はたいして変わらないだろうと思い込んでいたのですが、実装にもよるのでしょうが、比較してみたら相当差があることが分かりました。ScriptHandler::readScriptSub の処理時間を比較してみましたが、某ゲーム（nscript.dat が 5M 程度）で、fputc 版１秒、fread版(自前で 4K バッファリング) 0.04 秒でした。何がネックになっているのかしりませんが、ディスクアクセスが遅い環境だとかなり影響がありそうです。というわけで、fread で実装したものに更新しました。</p>
@@ -146,15 +144,15 @@
           <p>ついでに、アーカイブ読み込みルーチンも一部バッファリングするようにしました。</p>
 
           <p>memprof で見てみたら、ScriptHandler::ArrayVariable をコピーするときと ScriptParser::loadStr で非常にわずかですがメモリークしていたので修正しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>10月1日</h3>
 
           <p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=67">ルビの問題</a>」を元に、文章がルビ付きの文字から始まっている場合に正常に描画されないバグを修正しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>9月23日</h3>
 
           <p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=66">レミュオールの錬金術師で商品が減らない</a>」を元に、bar コマンドで現在値に負の数が指定されたときに、unsigned でキャストされ異常な値となり、その結果環境によっては落ちるバグを修正しました。</p>
@@ -162,15 +160,15 @@
           <h4>20050923a</h4>
 
           <p>データ読み込み時に、bar と prnum の初期化処理が不完全で落ちることがあるバグを修正しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>9月16日</h3>
 
           <p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=66">レミュオールの錬金術師で商品が減らない</a>」で nyo さんからいただいたパッチを元に、puttext コマンドが '/' で終わる際に、不必要な改行が入るバグを修正しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>9月13日</h3>
 
           <p>さっそく BPP16 を定義していたときに落ちるバグを発見し、修正しました。単なる型の書き換え漏れです。Zaurus 用パッケージをお使いの方は必ず更新してください。</p>
@@ -178,9 +176,9 @@
           <h4>20050913a</h4>
 
           <p>cselbtn コマンドで、csel で設定されていない番号が渡されたときに、無視して続行するようにしました。これまでは強制終了していました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>9月12日</h3>
 
           <p>BPP16 を定義してコンパイルした場合に、内部画像を RGB 16bpp, alpha 8bpp で管理するようにし、最終出力も 16bpp となるようにしました。BPP16 を定義しない場合は、これまで通り RGBA 32bpp で管理します。これにともない、画像処理関係を大幅に変更しました。エンバグして表示がおかしくなっているかもしれませんので、お気づきの方はご報告下さい。</p>
@@ -197,9 +195,9 @@
           <p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=66">レミュオールの錬金術師で商品が減らない</a>」を元に、MIDI ファイルの演奏を停止する際に、ループ演奏の有無を示す状態変数を誤って設定してしまうことがあるバグを修正しました。</p>
 
           <p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=66">レミュオールの錬金術師で商品が減らない</a>」を元に、表示文の '/' の後の改行で、スクリプトの行カウンタが正しく増加しないバグを修正しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>8月24日</h3>
 
           <p>tmkkさんからいただいたパッチを参考に、UTF8 ファイルシステム上の日本語ファイル名の読み込みに対応しました。Linux では、デフォルトでは EUC を想定し、UTF8_FILESYSTEM を定義してコンパイルすると UTF8 を想定します。MacOS X では、Makefile.MacOSXのデフォルトで UTF8_FILESYSTEM を定義しており、UTF8 を想定しています。</p>
@@ -207,9 +205,9 @@
           <p>OpenGL 関連のコードを削除しました。</p>
 
           <p>今後ですが、Zaurus では framebuffer のフォーマットに合わせて内部画像を RGB 16bpp, alpha 8bpp で管理し、使用メモリ量の低減と描画の高速化を図ろうと思います。今までは RGBA 32bpp で管理していたので、結構効果があると思います。９月中には実装する予定です。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>8月19日</h3>
 
           <p>Zaurus で使用していて、右クリックからのロード・セーブの表示が遅いので、TTF_RenderGlyph_Blended の結果を単純な LRU で３０文字分キャッシュすることにしました。なぜ３０文字かというと、これだけあればセーブ・ロード画面の文字がたいていの場合全部キャッシュに入りそうだからであまり深い意味はありません。体感速度は上がっています。というか、私のは素の SL-C700 なのですが、VGA だと画面描画が遅くて遊ぶ気がしません。リリース前のテストに使っているだけです。カーネルを入れ替えたり新しい機種にすれば快適になるのでしょうか。</p>
@@ -217,9 +215,9 @@
           <p>drawsp2, drawbg2 で使用する拡大縮小回転付きのアルファブレンディング処理から、無駄な部分を省きました。下の布石です。</p>
 
           <p>これまで、高速化のための試みとして OpenGL をバックエンドにした実装を試してきましたが、非OpenGL版との互換性を保つことに限界を感じてきました。実装上の問題（バグ）以外のあからさまな問題は、nega, mono が効かないことと1つのテクスチャメモリに乗らない大きな画像が扱えないことですが、他にも、多くの画面効果が高速化の恩恵を被れない、OpenGL 側の出力がダブルバッファリングされていることやビデオチップ内でレイヤー合成をするのかメインメモリ上でレイヤー合成をするのかの違いから意図したとおりの描画が難しい等々問題があります。このうちいくつかは、画像分割や GLSL で fragment shader を書くなどすれば解決しますが、OpenGL を使用するメリットが低下したり、なるべく多くの環境で使用してもらいたいという主旨から外れてしまいます。本当は STL も使いたいのですが、同じ理由で敢えて使っていません。さすがに C で書く気はしませんが。そういうわけで、OpenGL 関連のコードは現状 ifdef で完全に分離されていますが、可読性やメンテの問題もあり、特に要望がなければ次回のリリースから OpenGL 関連コードを削除します。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>8月18日</h3>
 
           <p>bgcopy, getspsize コマンドを実装しました。ただし、bgcopy は画像の保存に未対応です。</p>
@@ -229,15 +227,15 @@
           <p>btnwait 時に、スプライトのアニメーションが機能しないバグを修正しました。</p>
 
           <p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=65">2byte ファイル名</a>」を元に、アーカイブからではなくファイルシステムから直接ファイルを読み込む際に、LINUX が定義されている場合ファイル名を SJIS から EUC に変換するようにしました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>7月19日</h3>
 
           <p>ボタン選択時に、あるボタンからフォーカスが外れたら、別のボタンに連続してフォーカスが移る場合にも常に exbtn_d の中身を実行するようにしました。また、exbtn の P 指定でセルの番号を指定しない場合には、セル番号を0にするようにしました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>7月17日</h3>
 
           <p>if コマンドの fchk, lchk で、"*label" 形式の引数を扱えなかったバグを修正しました。</p>
@@ -255,9 +253,9 @@
           <p>puttext コマンドによるテキスト描画の際は、ゲーム状態を保存しないようにしました。</p>
 
           <p>*start 直後で必ずゲーム状態を保存するようにしました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>7月16日</h3>
 
           <p>exbtn コマンドの M 指定(移動)の際に、非表示だったスプライトが表示状態にならないバグを修正しました。</p>
@@ -269,21 +267,21 @@
           <p>pretextgosub の飛び先に行く前にゲーム状態を保存していたのを、pretextgosub の飛び先から帰ってきてテキスト描画に入る前に保存するようにしました。</p>
 
           <p>OpenGL 使用時に、文字の描画等が乱れるバグを修正しました。ただし、無条件でトップに描画されない不具合があります。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>7月1日</h3>
 
           <p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=62">ひぐらし を nsaconv 時の途中停止</a>」を元に、nsaconv, sarconv において、Windows bitmap フォーマットの1画素あたりの bit 数が8の場合（パレットカラー）の縮小に対応しました。ただし、bit 数が1と4の場合には未対応です。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>6月29日</h3>
 
           <p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=63">文字表示領域の背景位置がずれる</a>」を元に、setwindow の状態をセーブデータから復元する際に、背景画像ファイル名が NULL でない場合に無条件でそれを設定していたバグを修正しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>6月16日</h3>
 
           <p>Seung Park さんからいただいたパッチを参考に、X11 以外の環境で SDL_WM_ToggleFullScreen, SDL_WM_ToggleFullScreen が機能しない問題で、代替コードを入れました。これで、Windows や MacOSX の環境でも起動後に画面モードの切り替えが出来るようになりました。</p>
@@ -291,21 +289,21 @@
           <p>Seung Park さんの修正を採り入れ、SDL_QUIT イベントを補足し endCommand を実行するように修正しました。</p>
 
           <p>OpenGL を有効にし SMPEG を使用して MPEG1 動画を再生する際に、これまではビデオサーフェスを毎回 SDL_SWSURFACE に切り替えていたのですが、OpenGL サーフェスのまま再生するように修正しました。動画の再生前後で画面を切り替えが発生し見苦しい問題と、Win32 環境でフルスクリーンで動画を再生した後にマウスが復帰しない問題を解決しました。なお、SDL-1.2.6, SDL-1.2.7 には Overlay の初期化コードにバグがあり、落ちます。最新の SDL をお使い下さい。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>6月2日</h3>
 
           <p>バグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=61">紅刻の唄 第壱話で無限ループ</a>」を元に、おそらくだいぶ前から if 文中の lchk 命令が機能しなくなっていたバグを修正しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>5月24日</h3>
 
           <p>Zaurus 用パッケージでは、キーボードでマウス操作を代行できるように --force-button-shortcut オプションを指定して起動するようになっているのですが、いつの頃からかこのオプションが機能していませんでした。まともに操作できなかったゲームが多数あったと思われます。機能するように修正しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>5月23日</h3>
 
           <p>monocro の効果が発生するレイヤや humanz の初期値を修正しました。「レイヤ描画順」を<a href="onscripter.html#memo">開発メモ</a>にまとめました。</p>
@@ -313,9 +311,9 @@
           <p>SDL surface の RGBA の並びを、TTF_RenderGlyph_Blended が返すものとそろえ、文字描画を高速化しました。その他、alphaBlend の loop 内の高速化等で、systemcall load の描画が 4% 程(Linux Desktop)速くなりました。</p>
 
           <p>文字は、描画時には他のレイヤを無視して必ずトップに書くように修正しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>5月20日</h3>
 
           <p>し～くるさんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=59">フルスクリーンモードについて</a>」を元に、SDL_WM_ToggleFullScreen() が実装されていない環境(X11 以外)で --fullscreen を指定して起動したときに、フルクリーンモードになるように SDL_SetVideoMode に SDL_FULLSCREEN を渡すようにしました。また、ウィンドウモードで起動する --window オプションを追加しました。</p>
@@ -327,17 +325,17 @@
           <h4>20050520a</h4>
 
           <p>上の回想画面から復帰するときに落ちる問題で、別の問題とのからみを考え修正箇所を変えました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>5月14日</h3>
 
           <p>もう beta 版ということもないだろうと思い、バージョン表記から beta を取ることにしました。今後、通常のリリースは onscripter-20050514.tar.gz (バージョン 20050514)、実験版のリリースは onscripter-exp-20050514.tar.gz (バージョン exp-20050514)という表記にします。ソースのディレクトリにもバージョン番号を付けるようにしましたので、バイナリパッケージを作成されている方はご注意ください。</p>
 
           <p>なお実験版とは、大きな修正の結果エンバグしている可能性が高い場合や、要望によって私が試すことの出来ない環境での動作変更を行った場合にリリースし、私や他の人が十分にテストをした上で問題がなければ通常版に取り込まれます。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>5月7日<span style="color:red">20050504 を使っている人は、要差し換え。セーブデータが正しく書き込まれていません。</span></h3>
 
           <p>20050504 では、スクリプトの現在行の計算を間違えており、現在の状態が正しくセーブデータに保存されません。20050507 以降に差し換えてください。</p>
@@ -351,9 +349,9 @@
           <p>画面効果 16, 17 のモザイクで、解像度によってはセグメンテーションフォルトを引き起こすバグを修正しました。</p>
 
           <p>起動時に、コンソールに常にバージョン番号を表示するようにしました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>5月4日</h3>
 
           <p>zenkakko 命令使用時に、[]でくくられた箇所が gettag で取得されるように修正しました。また、pretextgosub に関する挙動の細かいバグを修正しました。</p>
@@ -363,17 +361,17 @@
           <p>今までは puttext の引数を強引にテキスト扱いにしていたのですが、pretextgosub 内でうまく機能するように通常のコマンドと同様に扱うように修正しました。</p>
 
           <p>logsp コマンドで、ログ用スプライト画像の横幅を対象ログの全文字数分確保していたバグを修正しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>5月2日</h3>
 
           <p>テキスト用の制御命令でその行が終了するときに、次のテキスト行の先頭で pretextgosub が効かないバグを修正しました。</p>
 
           <p>画像解像度変更ルーチンの平滑化の部分を高速化しました。getscreenshot 命令や実行時の解像度変更処理・アーカイブ中の画像解像度を変更するプログラムが高速になります。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>4月29日</h3>
 
           <p>mp3 系で再生された wav フォーマットの音が、stop 命令で消音されないバグを修正しました。</p>
@@ -389,9 +387,9 @@
           <p>btndef 時に、exbtn_d の内容が消されていなかったバグを修正しました。</p>
 
           <p>textclear 後に、行の解釈がおかしくなるバグを修正しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>3月8日</h3>
 
           <p>前からおかしいと思っていたのですが、特に小さな文字で輪郭にエッジのようなものが出て汚く描画されていたバグを修正しました。文字描画の際に、アルファ値を二重に掛けていたせいでした。</p>
@@ -403,9 +401,9 @@
           <p>tattsuu さんにご指摘いただき、以前 Linux Zaurus への機種依存部分を吸収するために組み込んだマウスの座標変換回りのコードを削除しました。20030622 以降で機種依存部分の処理を SDL ライブラリ側でやってもらうことにしたため、現在では使われていませんでした。このあたりの経緯については、20030622 の開発日誌を参照してください。</p>
 
           <p>にゃののんさんからのバグ報告に基づき、音楽再生のチャンネル管理のバグを修正しました。今回調べて分かったのは、stop 命令は、play 系, wave 系, mp3 系には効果がありますが、loopbgm, dwave 系には効果がありません。また、dwave 系は、save, load, reset によって消音されることはありません。このあたりを曖昧に処理していたため、鳴るべき音が消されてしまうことがありました。ちなみに、いつも<a href="http://www.areanine.gr.jp/~nyano/">りなざうテクノウ</a>を拝見しております。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>2月18日</h3>
 
           <p>スクリプト中で配列変数の要素をさらに配列変数で指定している時に、参照された配列の値を格納する構造体が、親子の配列変数から同時に上書きされてしまい、正しい値の取得ができなかったバグを修正しました。</p>
@@ -413,9 +411,9 @@
           <p>ファイルが存在しない場合の表示色指定が反映されないバグ、デフォルトの文字色が間違っていたバグ、右クリックメニューの表示色が間違っていたバグを修正しました。</p>
 
           <p>今までこの機能に気付かなかったのが自分でも不思議ですが、SDL_ttf の TTF_SetFontStyle 関数を使うと太字(bold)表示に対応できます。しかし、今まで使用していたフォントが、太字になったらかなり見ずらくなってしまいました。この太字の機能は、フォントファイルの情報とは無関係に SDL_ttf が独自に実現しているせいか、特に大きなサイズのフォントでつぶれが目立ちます。そのため、実装はしましたが無効にしてあります。試したい方は、ONScripterLabel::drawGlyph 関数中の #if 0 を外してください。また、なぜか太字にすると、embedded bitmap を含む TrueType font において、embedded bitmap を使用するサイズで文字を描画しようとすると落ちるようになりました。太字にしなければ落ちませんが、標準の SDL_ttf では embedded bitmap を正しく描画できないので、そもそもユーザの方がこういったフォントを使用しているとは考えられず実害はないと思います。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>2月14日</h3>
 
           <p>tokuhirom さんからのパッチを参考に、CD-ROM ドライブが複数ある場合に、使用するドライブを指定するオプション --cdnumber を追加しました。</p>
@@ -425,15 +423,15 @@
           <p>tokuhirom さんからのパッチを取り入れ、キーボードショートカットにおいて、カーソルの上下移動を k と j キーでできるようにしました。vi のキーバインドです。</p>
 
           <p>tattsuu さんからのバグ報告を元に、ogg vorbis ファイルを wave フォーマットに復号するときに、ヘッダの「サンプルあたりのビット数」の指定が間違っていたバグを修正しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>1月31日</h3>
 
           <p>ld, tal, humanorder コマンドにおいて、位置指定が不正な場合でも落ちない仕様に対応しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>1月30日</h3>
 
           <p>tmkkさんからの patch を取り入れ、MacOS X 上の SDL-1.2.8 環境において、SDL_WM_SetCaption関数に仕様変更があったため、引数に UTF-8 の文字列を渡すように修正しました。この環境に該当する方は、コンパイル時にリンカオプション -liconv を指定してください。</p>
@@ -443,15 +441,15 @@
           <p>FORCE_1BYTE_CHAR 設定時に、文の最後の単語に対してワードラップが機能していなかったバグを修正しました。</p>
 
           <p>効果描画時に、クリッピング処理を間違えていたため、画像の一部が効果中描画されないことがあるバグを修正しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>1月27日</h3>
 
           <p>ScriptParser::loadStr( FILE *fp, char **str ) でファイルから文字列を読み込む際に、途中で EOF になると無限ループに陥るバグを修正しました。対象ファイルが古いプログラムからの生成物で情報が足りない場合に起こるようですが、続行するようにしました。また、この関数内で毎回一時バッファを確保していたので、バッファをクラス変数に持たせるようにしました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>1月26日</h3>
 
           <p>画像ファイルのタグ指定の読み込み部分を強化しました。アニメ指定が不正な場合に、その部分は読み飛ばしてファイル自体は読み込むようにしました。</p>
@@ -461,15 +459,15 @@
           <p>セーブファイル読み込み後に、非テキストモードで再開するように修正しました。読み込み後に、間違ってテキストウィンドウが表示されることがあるバグへの対処です。</p>
 
           <p>chendoさんの patch を参考に、FORCE_1BYTE_CHAR 設定時に、ワードラップされるようにしました。つまり、単語の途中で行をまたぐ場合に、その単語の前で改行されるようになります。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>1月15日</h3>
 
           <p>コンパイル時にENABLE_1BYTE_CHARが指定され、かつスクリプト中で`(backquote)を使用し 1byte 文字列であることを指定している場合に、文字数が奇数個であると直後に半角スペースが挿入されることがある状態を修正しました。英語ノベルを作ろうという人以外には影響の無い修正のはずですが、文字描画処理をかなり変更したので、副作用でエンバグしている可能性もあります。なにか問題がありましたらご報告ください。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>1月11日</h3>
 
           <p>chendo さんからのバグ報告に基づき、セーブデータ読み込み時に wave ファイルが鳴りっぱなしになる場合があるバグを修正。</p>
@@ -477,15 +475,14 @@
           <p>for ループ中の break から次の next までに現われるコマンドや変数を読み飛ばす際に、変数を評価していたバグを修正。例えば mov ?1[%1], 1 というコマンドを読み飛ばす際に、?1[%1]という変数を評価すると、本来このコマンドが実行されないことを想定して %1 に配列の範囲外の値が入っていた場合にエラーになります。オープニングロゴが重い某ゲームで落ちることがありました。</p>
 
           <p>Hayashi さんより、Tru64 UNIX 5.1B(pk4), Compaq C++ V6.5-042 におけるコンパイルエラーと対処法を報告していただき、修正しました。</p>
-        </div>
+        </article>
 
       </div> <!-- diary -->
     </div> <!-- diary-container -->
 
-
-    <div id="footer">
-      Copyright (c) 1998-2006 Studio O.G.A. All rights reserved.
-    </div>
+    <footer>
+      Copyright (C) 1998-2006 Studio O.G.A. All rights reserved.
+    </footer>
 
   </div>
 </body>

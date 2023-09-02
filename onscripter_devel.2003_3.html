@@ -2,24 +2,23 @@
 <html lang="ja">
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
   <title>ONScripter 開発日誌</title>
-  <link rel="stylesheet" type="text/css" href="/ogapee.css">
+  <link rel="stylesheet" href="/ogapee.css">
 </head>
 
 <body>
   <div id="body">
 
-    <div id="header">
+    <header>
       <h1>ONScripter 開発日誌</h1>
 
       Since: Feb. 6, 2002<br>
       Last updated: Sep. 28, 2003
-    </div> <!-- header -->
+    </header>
 
-    <div id="toc-container">
-
+    <nav>
       <h3>過去の開発日誌</h3>
 
       <div id="toc">
@@ -44,16 +43,15 @@
             </ul>
           </li>
         </ul>
-      </div> <!-- toc -->
-    </div> <!-- toc-container -->
-
+      </div>
+    </nav>
 
     <div id="diary-container">
       <div id="diary">
 
         <h2>2003年7月～9月</h2>
 
-        <div class="diary-day">
+        <article>
           <h3>9月28日</h3>
 
           <p>ns3 を実装しました。nsaconv, nsadec にも -ns3 オプションを追加しました。</p>
@@ -63,9 +61,9 @@
           <p>解像度変換ルーチンの平滑化の幅を圧縮比によって可変にし、単純平均を取ることにしました。</p>
 
           <p>Ogg Vorbis を使用しない場合にコンパイルが通らないバグを修正しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>9月2日</h3>
 
           <p><a href="http://www.tripod.co.jp/">tripod</a>と<a href="http://isweb.www.infoseek.co.jp/">isweb</a>とのサービス統合に伴い、メインページの URL が<a href="http://ogapee.at.infoseek.co.jp/onscripter.html">http://ogapee.at.infoseek.co.jp/onscripter.html</a>に変更になります。旧ページも１２月までは新ページにフォワードされるそうですが、リンクを張られている方は変更をお願いします。</p>
@@ -81,15 +79,15 @@
           <p>exbtn の移動指定(M)に対応しました。</p>
 
           <p>ザウルスパッケージで、VGA 表示で圧縮アーカイブを使う場合のアイコンを追加しました。詳しくは<a href="zaurus/index.html#Qtopia">ONScripter を Qtopia 環境で動作させるための作業</a>を参照してください。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>8月30日</h3>
 
           <p>以前公開したザウルス用 library パッケージ onscripter-lib_20030816_arm.ipk, onscripter-lib_20030829_arm.ipk ともに、20030704 時点の SDL をパッケージングしていました。さらに、T-nagi さんから御報告のあった A300 での不具合に対する修正も間違っていました。今回の onscripter-lib_20030830_arm.ipk で、T-nagi さんから不具合が修正されたという御報告を頂いているので、今度こそ直っているはずです。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>8月29日</h3>
 
           <p>スプライトの描画の際に、指定されたセル番号が最大セル数内に収まるようにクリップされていなかったバグを修正しました。</p>
@@ -107,9 +105,9 @@
           <p>gettext で改行を含めないように修正しました。</p>
 
           <p>ザウルス用ライブラリの onscripter-lib_20030816_arm.ipk で SL-A300 の不具合に対処したつもりでいたのですが、どうやら改善されていなかったようです。というわけで更新しました。ただし未検証です。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>8月24日</h3>
 
           <p>mousePressEvent か keyPressEvent が来たときに、automode 中なら automode を終了するように変更しました。</p>
@@ -119,9 +117,9 @@
           <h4>20030824a</h4>
 
           <p>ボタン構造体のリンクリストの順序を反転したため、ショートカットキーでのボタン移動順も反転してしまったバグを修正しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>8月23日</h3>
 
           <p>αβεさんからのバグ報告を元に、movl で配列変数に正常に値を格納できないバグを修正しました。</p>
@@ -133,9 +131,9 @@
           <p>mode_ext, automode, automode_time, menu_automode, isskip を実装しました。</p>
 
           <p>btntime2 を正規に実装しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>8月19日</h3>
 
           <p>AVIWrapper があまりにもひどかったので修正しました。だいぶ再生がましになりましたが、たまに Segmentation fault で落ちることがあります（特に MPEG1 の再生）。</p>
@@ -147,9 +145,9 @@
           <p>value 宣言に対応しました。value 宣言付きのゲームスクリプトに関して、これより前のバージョンの ONScripter で保存したファイルは、これ以後の ONScripter では正常に読み込めませんのでご注意下さい。その場合は、ONScripter が書き出したファイルを全部消去してください。もっとも、現時点では value 宣言付きのゲームはほとんどないと思います。</p>
 
           <p>define 節に飛ぶ前にラベルファイルを読み込むように修正しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>8月16日</h3>
 
           <p>T-nagi さんより、SL-A300 においてカーソルキーと画面上でのカーソルの動きが反対だという報告をいただきましたので、<a href="zaurus/index.html#Package">Zaurus 用の SDL library </a>を<a href="zaurus/sl-devel.html#devel-20030816">修正</a>しました。</p>
@@ -157,9 +155,9 @@
           <p>上記のライブラリパッケージを生成するためのスクリプトをよく見たら、なんと古い SDL_mixer, SDL_image, SDL_ttf をパッケージングするようになっていました。というわけで、最新のライブラリを入れるように修正しました。</p>
 
           <p><s>Avifile for Linux on ARM をなんとかクロスコンパイルし、<a href="http://wind.prohosting.com/ogapee/zaurus/libavifile-0.7_0.7-0.7.38_arm.ipk">libavifile-0.7_0.7-0.7.38_arm.ipk</a> を作成しました。で、ONScripter を試そうと思ったら、AVIWrapper は YUV Overlay を使用するように作ったので、Zaurus 上では表示されませんでした……。YUV Overlay が使えない場合は、普通に描画するようにそのうち修正するかもしれません。結局、上のパッケージは動作確認していないので、そもそも動くのか、どの程度の性能が出るのかは全く不明です。</s>YUV Overlay は、hardware acceleration が対応していない場合でも動作するようです。表示されないのは、ARM 用の Codec が全くないのが原因のようです。というわけで、avifile を使って Zaurus 上で再生するのはあきらめました。他の方法として単純に思いつくのは、MPlayer を子プロセスで起動して再生することですが、これではどうも面白くないのでどうしたものか思案中です。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>8月15日</h3>
 
           <p>スプライトのセル数が１個の場合でも、spbtn, exbtn においてマウスがボタンと重なったときに２個目のセルを前提に処理をしていたバグを修正しました。exbtn において描画がおかしくなる場合がありました。</p>
@@ -170,15 +168,15 @@
 
           <p><a href="http://avifile.sourceforge.net/">avifile</a> library を利用して avi を実装しました。avifile-0.7-0.7.38 で動作確認しております。avifile library が利用できない環境にいる方は、Makefile.Linux を見て、USE_AVIFILE を定義せず、かつ AVIWrapper.o をリンクしないようにしてコンパイルしてください。avifile に関しては、Web を探してもサンプルプログラムが見つからず、SDL から動画が流せるようになるまで手間取りました。単純な wrapper class である AVIWrapper を作り、ONScripter から利用するとともに、これを使った単純な player (simple_aviplay)を同梱しました。SDL 上で非常に簡単に avi を再生できるので、参考にしてください。zaurus でも動くかと思いましたが、そもそも avifile の configure が cross compile 環境だとすんなり通らないので、こちらはとりあえず保留します。Linux with X 上では、画像と音が同期して正常に表示されるものの、avifile 謹製の aviplay と比較して若干カクカクするので、AVIWrapper にはまだ最適化の余地がありそうです。
           </p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>8月11日</h3>
 
           <p>exec_dll, getret, splitstring を暫定実装しました。dll を実行するわけではなく、用意した dll.txt に記述してある固定値を読み込みセットします。registry.txt と同じ要領です。使用例は <a href="onscripter.html#dll">ここ</a>を参照してください。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>8月10日</h3>
 
           <p>ラベルと同じ行に命令もしくはコメントがあった場合に、そのラベルが指す区間の下から一番目と２番目の行が解釈されないバグを修正しました。</p>
@@ -194,9 +192,9 @@
           <p>Filelog の取り扱いに関して、アーカイブ情報に含める昔の方式と独立に ScirptHandler に持たせる現在の方式とがごっちゃになっており挙動がおかしかったバグを修正しました。</p>
 
           <p>btnwait の初期状態で既にカーソルがボタン上にあるときに、ボタンが正しく表示されないバグを修正しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>8月7日<span style="color:red">セーブファイルのバージョンアップ</span></h3>
 
           <p>セーブファイルのバージョンを上げました。この ONScripter で生成したセーブファイルは以前のバージョンの ONScripter では読み込めません。逆はできます。</p>
@@ -224,23 +222,22 @@
           <p>回想時のマウスホイール操作に対応しました。</p>
 
           <p>その他内部状態に関する修正が多数あります。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>7月4日</h3>
 
           <p>sarconv, nsaconv で、縮小された画像の四隅のピクセル値が、縮小前の四隅の値を保つように修正しました。透過指定がうまく反映されない場合がありました。</p>
 
           <p>阿川さんにお送りしたパッチを一部修正の上取り込んでいただいたので、それに基づいて<a href="zaurus/sl-devel.html#devel-20030704"> zaurus 版のライブラリパッケージを更新</a>しました。その修正に合わせて、zaurus 版の ONScripter を起動するときに、SDL_DSP_NFRAGMENTS を 18 に設定するように修正しました。</p>
-        </div>
+        </article>
 
       </div> <!-- diary -->
     </div> <!-- diary-container -->
 
-
-    <div id="footer">
-      Copyright (c) 1998-2006 Studio O.G.A. All rights reserved.
-    </div>
+    <footer>
+      Copyright (C) 1998-2006 Studio O.G.A. All rights reserved.
+    </footer>
 
   </div>
 </body>

@@ -11,15 +11,14 @@
 <body>
   <div id="body">
 
-    <div id="header">
+    <header>
       <h1>ONScripter 開発日誌</h1>
 
       Since: Feb. 6, 2002<br>
       Last updated: Nov. 23, 2008
-    </div> <!-- header -->
+    </header>
 
-    <div id="toc-container">
-
+    <nav>
       <h3>過去の開発日誌</h3>
 
       <div id="toc">
@@ -50,48 +49,47 @@
             </ul>
           </li>
         </ul>
-      </div> <!-- toc -->
-    </div> <!-- toc-container -->
-
+      </div>
+    </nav>
 
     <div id="diary-container">
       <div id="diary">
 
         <h2>2008年</h2>
 
-        <div class="diary-day">
+        <article>
           <h3>11月23日</h3>
 
           <p>Herbasさんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=134">splitの切り出す対象文字列の特定の文字処理</a>」を元に、split 命令で指定した区切り文字が２バイト文字（漢字）の後半のバイトと一致した場合に、正常に切り出すことができないバグを修正しました。</p>
 
           <p>Herbasさんからメールでいただいたバグ報告を元に、saveon 状態で pretext gosub 使用時に、pretext gosub に飛ぶ前にセーブされないバグを修正しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>10月25日</h3>
 
           <p>Komatsuさんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=133">[全般]テキストに変な禁則処理が適用される</a>」を元に、バックログや右クリックメニューからの復帰の際に正しく禁則処理が行われないバグを修正しました。ONScripterLabel::restoreTextBuffer() 内の単純ミスでした。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>10月13日</h3>
 
           <p>すとーむさんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=131">bg_infoの大きさ</a>」を元に、背景に指定した画像の大きさがスクリーンの大きさよりも大きい場合に正しく処理できないバグを修正しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>8月31日</h3>
 
           <p>すとーむさんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=129">拡張スプライト番号</a>」を元に、拡張スプライトの０番が描画されないバグを修正しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>8月24日</h3>
 
           <p>本家では、exbtn_d は exbtn 命令が同時に１つ以上使われないとその効果が表れないようです。そのように修正しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>8月23日</h3>
 
           <p>すとーむさんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=89">命令のバグ報告</a>」を元に、クリックやスペースキーでテキストを飛ばした際に、クリック待ちの後もテキストを飛ばす状態が継続してしまうバグを修正しました。</p>
@@ -103,9 +101,9 @@
           <h4>20080823a</h4>
 
           <p>背景画像保持スプライト(bg_info)の大きさが、背景に指定された画像の大きさになっていたバグを修正しました。画面の大きさと等しくするのが正しいようです。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>8月17日</h3>
 
           <p>前回の更新からだいぶ時間があいてしまい、その間バグ報告をいただいた方にはたいへん申し訳ありませんでした。作業環境が大きく変わってしまったこともあり十分テストできておりませんが、実験版としてソースのみ更新します。なお、画面描画周りを大幅に修正したため、今まで正常に動いていた個所がおかしくなっている可能性があります。何かお気づきの点がありましたら、バグトラッキングシステムまでご報告ください。</p>
@@ -125,58 +123,58 @@
           <h4>20080817b</h4>
 
           <p>すとーむさんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=127">for Win で最新の SDL 用のパッチ</a>」を元に、最新の SDL ではキャプション表示に UTF8 文字列を要求するため、Windows 環境において文字列を UTF8に変換してからキャプション表示関数に渡す処理を追加しました。Makefile.Win で必要な定数を設定してください。なお Linux や MacOSX 環境での UTF8 変換には既に対応済です。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>1月21日</h3>
 
           <p>ひとつもりさんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=122">タグ中にある特定の文字が正常に認識されません</a>」を元に、pretextgosub で使用するタグを読み取る際、タグ中の2バイト文字（漢字）の2バイト目がタグ終端' ]'と同じ値である場合に、正しく読み取ることができないバグを修正しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>1月15日</h3>
 
           <p>bgm 命令で ogg のストリーミング演奏をしている途中に dwave 命令等で ogg の復号をすると、ストリーミング演奏の情報を納めた構造体が破壊されるバグを修正しました。20080111, 20080112 での修正における単純な実装ミスでした。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>1月12日</h3>
 
           <p>ルビを表示する際に、その行でそれまでに表示された文字数とルビが指定された文字列の文字数の和が１行に表示可能な文字数を超えた場合に、ルビが指定された文字列を表示する前に改行が入らないバグを修正しました。</p>
 
           <p>20080111 での修正が中途半端で、ボリュームの設定が正しく反映されないことがあるバグを修正しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>1月11日</h3>
 
           <p>すとーむさんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=89">命令のバグ報告</a>」を元に、bgm 命令で ogg を再生する際に、ボリューム変更が反映されないバグを修正しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>1月10日</h3>
 
           <p>し～くるさんからのパッチを取り入れ、GP2X, iPhone, WinCE 用の変更と Makefile を反映させました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>1月7日</h3>
 
           <p>すとーむさんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=101">命令文のバグ報告２</a>」を元に、texton, textoff 命令実行時に windoweffect で指定した効果が描画されないバグを修正しました。</p>
 
           <p>windowchip 命令を実装しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>1月6日</h3>
 
           <p>すとーむさんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=119">拡張スプライトで</a>」を元に、ONScripterLabel クラスのサイズが大きくなり、PSP では main 関数の中でスタック上に確保しようとする時点で落ちてしまうようになったので、ONScripterLabel::sprite_info, ONScripterLabel::sprite2_info を動的に確保するようにしました。また、lsp2 コマンドにおいて、与えられた座標を中心座標ではなく左上座標として描画していたバグを修正しました。</p>
 
           <p>vsp2 命令を実装しました。</p>
-        </div>
+        </article>
 
 
-        <div class="diary-day">
+        <article>
           <h3>1月5日</h3>
 
           <p>henrich さんからのバグ報告「<a href="http://onscripter.sourceforge.jp/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=120">AVIWrapper.h:54: error: 'CImage' has not been declared</a>」を元に、avifile ライブラリで使用する型や関数にネームスペース(avm::)を追加するパッチを当てました。当方の環境(Debian etch, libavifile-0.7.dev (1:0.7.44.20051021-2.2))では当てても当てなくてもコンパイルできますが、Debian Unstable 環境で最新の libavifile を使用するとビルドできなかったそうです。</p>
@@ -192,15 +190,14 @@
           <p> TextBuffer クラスを、tag の情報を含んだ Page クラスに変更しました。</p>
 
           <p> maxkaisoupage を指定した際に、回想用のバッファ page_list の数が1つ少なくなるバグを修正しました。</p>
-        </div>
+        </article>
 
       </div> <!-- diary -->
     </div> <!-- diary-container -->
 
-
-    <div id="footer">
-      Copyright (c) 1998-2008 Studio O.G.A. All rights reserved.
-    </div>
+    <footer>
+      Copyright (C) 1998-2008 Studio O.G.A. All rights reserved.
+    </footer>
 
   </div>
 </body>

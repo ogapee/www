@@ -2,24 +2,23 @@
 <html lang="ja">
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
   <title>ONScripter 開発日誌</title>
-  <link rel="stylesheet" type="text/css" href="/ogapee.css">
+  <link rel="stylesheet" href="/ogapee.css">
 </head>
 
 <body>
   <div id="body">
 
-    <div id="header">
+    <header>
       <h1>ONScripter 開発日誌</h1>
 
       Since: Feb. 6, 2002<br>
       Last updated: Jun. 27, 2002
-    </div> <!-- header -->
+    </header>
 
-    <div id="toc-container">
-
+    <nav>
       <h3>過去の開発日誌</h3>
 
       <div id="toc">
@@ -35,16 +34,15 @@
             </ul>
           </li>
         </ul>
-      </div> <!-- toc -->
-    </div> <!-- toc-container -->
-
+      </div>
+    </nav>
 
     <div id="diary-container">
       <div id="diary">
 
         <h2>2002年4月～6月</h2>
 
-        <div class="diary-day">
+        <article>
           <h3>6月27日</h3>
 
           <p>αβεさんの patch を取り入れ、game 命令で intlimit 命令の効果を無効にしているバグを修正しました。</p>
@@ -52,10 +50,9 @@
           <p>αβεさんの patch を取り入れ、erasetextwindow 命令の状態をセーブファイルに保存するように修正しました。</p>
 
           <p>コードを clean up しました。</p>
-        </div>
+        </article>
 
-
-        <div class="diary-day">
+        <article>
           <h3>6月23日<span style="color:red">20020616～20020621 を使っている方は要差し換え</span></h3>
 
           <p>未来のバージョンのセーブファイルを読み込まないようにしました。</p>
@@ -65,9 +62,9 @@
           <h4>20020623a</h4>
 
           <p>バグフィクスのバグをとりました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>6月21日</h3>
 
           <p>ONScripter のテストを兼ねて、Zaurus で某ゲームをエンディングまでプレイしました。QVGA で絵がつぶれていること以外特に問題はありませんが、解像度変更ルーチンは工夫するべきです。</p>
@@ -77,17 +74,17 @@
           <p>以前使われていたスプライト番号に別のスプライトを読み込んだときに、変数が正しく初期化されないバグをとりました。</p>
 
           <p>カーソル待ちのときだけではなくタイマー待ちのときにも立ち絵・スプライトのアニメーションが行われるようにしました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>6月18日</h3>
 
           <p>中身が一行しかないラベルを越えて wait なしで次のラベルに移ったときに、次のラベルの一番目の行が読み込まれず前のラベルの行が使われるバグをとりました。ラベルをまたいだときに line_cache を無効にしていないバグでした。</p>
 
           <p>allspresume, allsphide 命令が呼ばれたときに、その場で画面に効果が反映されないように挙動を変更しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>6月17日</h3>
 
           <p>ラベル情報のセーブに関するバグをとりました。</p>
@@ -95,9 +92,9 @@
           <h4>20020617a</h4>
 
           <p>バグフィクスのバグをとりました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>6月16日</h3>
 
           <p>昨日は嘘を書いてしまいました。define ラベルに入る前にすべての変数を初期化して gloval.sav があれば読み込み、start ラベルに移るときにローカル変数をすべて初期化する、というのがオリジナルの正しい挙動のようです。検証スクリプトでローカル変数を使っていたので勘違いしてしまいました。失礼しました。というわけで、同様の動作をするように修正しました。</p>
@@ -107,15 +104,15 @@
           <p>textgosub 命令を使用しかつ skip をしていないときに、@ の後で必ず改行していたバグをとりました。</p>
 
           <p>savetime 命令を使ったときに、セーブ可能なデータ数がカスタマイズしない場合の上限（デフォルト 9）になっていたバグをとりました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>6月15日</h3>
 
           <p>Marv さんのバグ報告に基づくαβεさんの patch を参考に、グローバル変数が格納されている global.sav ファイルを、start ラベルに移る直前の game 命令で読み込むようにしました。前は globalon 命令で読み込んでいました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>6月11日</h3>
 
           <p>Marv さんより FreeBSD での動作報告をいただきました。コンパイルの際は Makefile.Linux を使ってください。</p>
@@ -125,9 +122,9 @@
           <p>blt 命令の拡大縮小に対応したつもりです。あまり検証していません。</p>
 
           <p>--root を指定したときに MIDI が演奏されないバグをとりました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>6月5日 <span style="color:red">開発をはじめて半年が経過</span></h3>
 
           <p>ONScripter の開発をはじめて半年が経ちました。当初は、現実逃避の一環として、某ゲームを Linux 上で楽しむための２週間限定プロジェクトのつもりだったのですが、始めてみれば２週間ではとても終わらず、一通り動かすのに一月程かかってしまいました（過去の開発日誌参照）。</p>
@@ -143,9 +140,9 @@
           <p>まだ当面は開発を続けていきますので、今後もよろしくお願いします。</p>
 
           <p>btndown, isdown, getmousepos 命令を実装しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>6月4日</h3>
 
           <p>hachikun さんのバグ報告に基づくαβεさんの patch を参考に、monocro 命令の効果が反映されないバグをとりました。monocro 命令の効果は、以下のいずれかが生じたときに反映されるのがオリジナルの挙動であり、文字描画だけでは反映されないようです。</p>
@@ -154,23 +151,23 @@
             <li>次の改ページ</li>
           </ul>
 
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>5月31日</h3>
 
           <p>800x600 の QVGA 化に対応しました。</p>
 
           <p>SDL_SoftStretch を使っていたら何故か落ちるので、画面の解像度を変更するルーチンを自前で実装しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>5月30日</h3>
 
           <p>起動オプションの --root でゲームファイル（アーカイブ）のある場所を指定できるように変更しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>5月29日</h3>
 
           <p>αβεさんの patch を取り入れ、click 後に event_mode を解除し忘れているバグを修正しました。</p>
@@ -184,36 +181,36 @@
           <h4>20020529a</h4>
 
           <p>--arc 指定時にセーブファイルの一覧を正しく取得できないバグを取りました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>5月26日</h3>
 
           <p>Zaurus (SL-5500) のために、MP3 デコードエンジンとして MAD も選択で
             きるようにしました。<a href="http://www.bsd-dk.dk/~elrond/audio/madlld/">MPEG Audio Decoder Low-Level Demonstration</a>を参考に、SDL_RWops に対応し SMPEG のインターフェースに準拠した wrapper を書き、MP3_MAD を定義すれば MAD に差し換えて使われるようにしました。もちろん、Zaurus 以外のプラットホームでも使えます。その場合は Makefile.ARMLinux を参考に Makefile を書き換えてください。</p>
 
           <p>実装上の制限として、周波数変換を行わないので MP3 の周波数とデバイスの周波数が異なると音がおかしくなります。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>5月21日</h3>
 
           <p>Koske さんからのバグ報告を参考に、変数編集モードか否かの状態を表す変数を初期化していなかったバグを取りました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>5月20日 <span style="color:red">Zaurus に対応</span></h3>
 
           <p><a href="zaurus/index.html">Zaurus (SL-5500) に対応しました</a>。SDL を移植し、CD-Audio 演奏を除く ONScripter の全ての機能が動作します。ソースは全く共通です。素晴らしいです。セーブファイルも共通ですので、デスクトップでゲームをして続きを Zaurus でやるなんてこともできます。ただ、Zaurus (SL-5500) を買おうという粋狂な人は、現時点ではほとんどいないと思いますが。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>5月17日</h3>
 
           <p>setwindow 命令の window の縦横の幅を save?.dat に格納する際に、おかしな値を格納していたバグをとりました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>5月16日</h3>
 
           <p>MP3 演奏開始時にチャタリングすることがあるバグを直しました。</p>
@@ -229,43 +226,43 @@
           <p>アニメーション用に画像メモリを２倍余計に確保していた仕様をやめました。</p>
 
           <p>コードを clean up しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>5月9日</h3>
 
           <p>lookbacksp 命令を実装しました。</p>
 
           <p>erasetextwindow 命令の取り扱いを修正しました。おそらく正しい挙動ではないと思いますが、仕様がわからないのでなんとも言えません。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>5月6日</h3>
 
           <p>SPB を解凍するときに、確保した領域を越えて値を格納し、後で segmentation fault を誘発することがあったバグを取りました。</p>
 
           <p>tablegoto, savetime 命令を実装しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>5月2日</h3>
 
           <p>αβεさんの patch を参考に、bar, barclear, prnum, prnumclear 命令を実装しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>5月1日</h3>
 
           <p>αβεさんの patch を一部取り入れ、sar アーカイブ中の spb ファイルを取り扱えるようにしました。ただし未検証です。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>4月25日</h3>
 
           <p>セーブファイルを読み込むときに、セーブファイルの無いスロットを選択するとハングアップするバグを取りました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>4月24日</h3>
 
           <p>セーブファイルに Magic number と Version を導入しました。beta 版の間は、これで互換性を保ちつつセーブファイルの構成を変えていきます。もはやそんなに修正することはないと思いますが。</p>
@@ -275,9 +272,9 @@
           <p>αβεさんの patch を取り入れ、表示文中の ASCII 英字大文字が小文字になるのを抑制するようにしました。</p>
 
           <p>αβεさんの patch にあった repaint 命令を仮実装しました。ただ、仕様書やこちらで確認した範囲では、少なくともスプライトを消すのはおかしいと思うのですが。いまいち挙動がよく分からない命令なので、挙動がおかしい場合には再現するサンプルスクリプトをお願いします。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>4月20日</h3>
 
           <p>αβεさんの patch を一部取り入れ、mode_saya 命令を暫定実装しました。文字ウィンドウが消えているときにスプライトの 0 から 9 を消します。しかし、オリジナルで右クリックメニューでウィンドウを消す時以外にこの効果が現れる例が見つかりません。</p>
@@ -285,9 +282,9 @@
           <p>画像読み込み時の m 指定に対応しました。</p>
 
           <p>カーソル位置を絶対値で指定する場合に、絶対値であることを正しく扱っていなかったバグを取りました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>4月15日</h3>
 
           <p>開発環境を SDL-1.2.4, SDL_image-1.2.2, SDL_mixer-1.2.3, SDL_ttf-2.0.5 に移行しました。</p>
@@ -295,9 +292,9 @@
           <p>SDL_mixer に playmidi が取り込まれているようですが、当方では動作未確認です。</p>
 
           <p>αβεさんの patch を参考に複合ボタンの挙動を変更しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>4月14日</h3>
 
           <p>sprite の透明度をサポートしました。</p>
@@ -313,9 +310,9 @@
           <p>menu_full, menu_window 命令を実装。また、ショートカットキー f で fullscreen mode と window mode を切り替えられます。ただし、Linux の X のみで動作を確認しています。Windows では変化なしでした。MacOS X では動くかもしれません。</p>
 
           <p>久々に Windows で動作確認をしたら、MIDI 演奏で SDL が落ちるようになっていました。timidity.tar.gz を展開したら鳴るようになりました。おかしいです。以前はこれをやらなくても鳴ったと思ったのですが。MacOS X 上の MIDI 演奏で落ちる件もこれが関係するかもしれません。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>4月13日</h3>
 
           <p>quakex と quakey 命令で、描画速度が遅くとも最低１周期に４回は描画するようにしました。</p>
@@ -327,9 +324,9 @@
           <h4>20020413a</h4>
 
           <p>上記の修正の結果 quake 時に無限ループに陥ることがあるバグを取りました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>4月11日</h3>
 
           <p>αβεさんの patch を取り入れ defaultspeed 命令を実装しました。</p>
@@ -337,17 +334,17 @@
           <p>αβεさんの patch を取り入れ btndef 命令の読み込み画像を tag 対応にしました。</p>
 
           <p>ONScripter の返すバージョンを 1.98 にしました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>4月10日</h3>
 
           <p>resotreTextBuffer で連続する半角文字が正しく復元されないバグを直しました。</p>
 
           <p>Linux の Frame Buffer Console で試したら問題なく動作しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>4月9日</h3>
 
           <p>富田さんの御指摘に基づき、drawString 内での半角スペースの取り扱いに関するバグを直しました。</p>
@@ -361,9 +358,9 @@
           <p>csel 系の命令の選択肢表示時のセーブに対応しました。</p>
 
           <p>その他 bug fix、改善が多数あります。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>4月7日</h3>
 
           <p>富田さんの御指摘に基づき、画面効果を処理した後にスクリプトの行読み込みキャッシュを無効にしていなかったバグを修正しました。</p>
@@ -381,9 +378,9 @@
           <p>allsphide, allspresume 命令を実装しました。</p>
 
           <p>その他 bug fix が多数あります。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>4月6日</h3>
 
           <p>一行の中で、一文字毎もしくは一命令毎に readLine していたのを一回にしました。</p>
@@ -391,35 +388,34 @@
           <p>textgosub 命令時に、\@ の直後の同じ行に命令文があると、テキスト文としてデコードされたものを命令文として解釈しようとして破綻するバグを直しました。ただし、同じ行で最初に変数を設定しその後テキストとして使用すると、設定が正確にテキストに反映されません。textgosub 命令を設定しないとスクリプトエラーになるようなこんなトリッキーなことをするゲームが存在しないことを願います。</p>
 
           <p>αβεさんの patch を一部取り入れ、skipoff 命令を実装しました。patch のその他の部分については今回は保留とさせてください。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>4月5日</h3>
 
           <p>外部音源で MIDI を演奏する際に、曲の切り替え時やループ時に正常に鳴らないバグを取りました。富田さんの元の patch では大丈夫だったのですが、私が意図に気付かず別の理由で削っていました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>4月4日</h3>
 
           <p>富田さんの patch を取り入れ、MIDI 演奏機能を追加しました。素晴らしいです。今まで BGM が鳴らなかったゲームで BGM が鳴るようになるとかなり感じが違います。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>4月3日</h3>
 
           <p>αβεさんの patch を取り入れ、csel, cselbtn, cselgoto, getcselnum, selectbtnwait 命令を実装しました。的確な patch をいつもありがとうございます。ただし、αβεさんも指摘されていますが、csel 命令の選択肢が出ているときにセーブすると次回ロード時に落ちます。他の場所でセーブすれば大丈夫です。原因は分かっていますが、どう対処したものか検討中です…。</p>
 
           <p>テキスト文中に英数字が来た場合に、命令ではなくテキストとして解釈するように修正しました。</p>
-        </div>
+        </article>
 
       </div> <!-- diary -->
     </div> <!-- diary-container -->
 
-
-    <div id="footer">
-      Copyright (c) 1998-2006 Studio O.G.A. All rights reserved.
-    </div>
+    <footer>
+      Copyright (C) 1998-2006 Studio O.G.A. All rights reserved.
+    </footer>
 
   </div>
 </body>

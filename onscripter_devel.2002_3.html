@@ -2,24 +2,23 @@
 <html lang="ja">
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
   <title>ONScripter 開発日誌</title>
-  <link rel="stylesheet" type="text/css" href="/ogapee.css">
+  <link rel="stylesheet" href="/ogapee.css">
 </head>
 
 <body>
   <div id="body">
 
-    <div id="header">
+    <header>
       <h1>ONScripter 開発日誌</h1>
 
       Since: Feb. 6, 2002<br>
       Last updated: Sep. 22, 2002
-    </div> <!-- header -->
+    </header>
 
-    <div id="toc-container">
-
+    <nav>
       <h3>過去の開発日誌</h3>
 
       <div id="toc">
@@ -36,16 +35,15 @@
             </ul>
           </li>
         </ul>
-      </div> <!-- toc -->
-    </div> <!-- toc-container -->
-
+      </div>
+    </nav>
 
     <div id="diary-container">
       <div id="diary">
 
         <h2>2002年7月～9月</h2>
 
-        <div class="diary-day">
+        <article>
           <h3>9月22日</h3>
 
           <p>αβεさんの patch を取り入れ bgm, bgmonce 命令を実装しました。</p>
@@ -57,17 +55,17 @@
           <p>αβεさんの patch を取り入れ、savegame 命令でセーブ位置が 1 token 前（savegame の引数）にずれていたバグを直しました。</p>
 
           <p>なんと、MAD に周波数を半分にしてデコードするオプションがありました。MP3 は 44.1KHz で用意し、デバイスを 22.05 KHz で開いてこのオプションを使えば、音切れが解消される可能性大です。というわけで、Zaurus 環境では 22.05KHz をデフォルトとします。パッケージを更新しました。なお、bitrate は 64Kbps 等に落としても構いません。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>9月19日</h3>
 
           <p>SL-A300 で MP3 が途切れるという症状が二人以上で出ているようなので、どうやら arm-linux-gcc で libmad を作る際に、StrongARM (SL-5500) には最適化されているが、XScale (SL-A300)には最適化されていないコードを吐いているようです。効果があるのかどうか分かりませんが、libmad を作る際により一層の最適化をするようにしてコンパイルしました。ザウルスのパッケージのみ更新しました。</p>
 
           <p><a href="http://www.google.com/">Google</a>で onscripter を検索したときのヒット数が１００を越えました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>9月15日</h3>
 
           <p>αβεさんの patch を取り入れ、SDL_DEBUG=1 でテストしているときにエラーメッセージを出さないように、SDL_BlitSurface の前に、ButtonLink::no_selected_surface の NULL チェックをいれました。</p>
@@ -81,15 +79,15 @@
           <p>アーカイブコンバータで、変換する必要のないファイルを無意味に展開していたのを抑制しました。</p>
 
           <p>アーカイブコンバータで、解像度をバイリニア変換で変更するように修正しました。800x600 を縮めるときにましになります。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>9月14日</h3>
 
           <p>SMPEG では演奏できるが MAD では演奏できない MP3 ファイルがありましたが、MP3 の frame header の資料と MAD のソースを付き合わせ原因を究明しました。Emphasis が 2(resereved) に設定されていると、MAD は無効な frame として弾いてしまうのが原因でした。0(none) として処理を続行するように変更することで直りました。更新はザウルスのパッケージのみです。これで、BGM が MP3、音声 が WAV なゲームでも音切れなく楽しめます（SL-5500 で確認）。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>9月12日</h3>
 
           <p>tateyoko 命令を実装しました。</p>
@@ -101,17 +99,17 @@
           <p>Intel(R) C++ Compiler 6.0 on Linux でコンパイルし、正常動作することを確認しました。</p>
 
           <p>SMPEG では演奏できるが MAD では演奏できない MP3 ファイルがあります。どうしたものでしょうか。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>9月11日</h3>
 
           <p>アーカイブコンバート関連で色々不具合があったので修正しました。</p>
 
           <p>それに関連して、SPB 圧縮の画像データを解凍するときに、PPM ではなく本来の BMP で戻すようにしました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>9月10日</h3>
 
           <p>Zaurus の 512M の CF に納まらないゲームをするために、archive 中の jpeg と bmp の大きさを半分にするコンバータを書きました。数種類のゲームで確認しています。コンバータの使い方は、<a href="onscripter.html#archive-compression">アーカイブ圧縮について</a>を参照してください。</p>
@@ -119,15 +117,15 @@
           <p>PDA を設定してコンパイルし、コンバート済アーカイブを使用する場合のために、--disable-rescale オプションを追加しました。</p>
 
           <p>しかし、アーカイブの中で音声ファイルの比重の高いゲームは厳しいです……。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>9月9日</h3>
 
           <p>kni さんから SL-A300 での動作報告をいただきました。以前のパッケージでは、画面表示が９０度回転するという不具合があり、それに対処する修正を行いこちらは正常に動いているようです。昔 SL-5500 を買う直前に導入し、SL-5500 では要らないことが分かって速攻でリリース版から消してしまった「表示・入力系９０度回転機能」をほぼそのまま復活させました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>9月6日</h3>
 
           <p>effectcut 命令を実装しました。</p>
@@ -145,9 +143,9 @@
           <p>ONScripter が途中で落ちたときにも save??.dat と global.sav その他との同期がとれるように、save??.dat を保存するときに毎回 global.sav その他を保存するようにしました。</p>
 
           <p>コードを clean up しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>8月24日</h3>
 
           <p>mayfifth さんからのバグ報告を元に、テキスト選択画面でセーブをすると落ちるバグをとりました。最近該当するゲームをしていなかったので、全然気づきませんでした。</p>
@@ -167,9 +165,9 @@
           <p>αβεさんの patch を取り入れ、TTF_RenderGlyph_Blended() の返り値が NULL の場合に落ちるバグに対処しました。</p>
 
           <p>パーサを修正し、「bg black,1mov $1,"あいうえお"」「bg black,1あいうえお」に対処しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>8月21日</h3>
 
           <p><a href="http://pc3.2ch.net/test/read.cgi/mobile/1020324591/899">【LINUX】ザウルス国内はいつ？【SL5000】</a>によると、SL-A300 でも SL-5500 と同様 swap が使えるようです。</p>
@@ -177,9 +175,9 @@
           <p>昨日ザウルスで swap 16MB にして某ゲームを遊んでいたところ、１時間位して途中で凍りました。ゲームによると思いますが、32MB くらい取っておいたほうが安心かもしれません。</p>
 
           <p>うんすいさんに Solaris9 on SPARC での動作報告をいただきました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>8月19日</h3>
 
           <p>Zaurus (SL-5500) で swap memory を作ることでメモリ不足が解消されることを発見しました。これで Qtopia 上で固まることがなくなりました。というわけで、価値のなくなった FB console 用のパッケージは公開を中止しました。しかし、<a href="http://more.sbc.co.jp/sl_j/faq/a300_faq.htm">SL-A300に関するFAQのページ</a>には、<br>
@@ -190,23 +188,23 @@
           <p>Zaurus で便利なように、ショートカットキーとして、よく使う s と o キーを左矢印と右矢印に割り付けました。</p>
 
           <p>フォントの取り扱いを若干変更しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>8月18日</h3>
 
           <p>SMPEG では、一部の MP3 ファイルを演奏できず、その場合演奏開始時にハングします。48KHz 系が駄目？MAD なら問題ないので、SMPEG はやめて MAD を標準採用するべきでしょうか。しかし、（あまりやる気はありませんが）将来的には SMPEG を使って MPEG の動画再生も実装したいところなので、どうしたものでしょうか。</p>
 
           <p>FB console on SL-5500 で動かすと、Qtopia 環境で動かすのに比べて必要メモリ量が 10MB も少なくて済みます。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>8月17日</h3>
 
           <p>Zaurus (SL-5500) 用の FB コンソールで動作するバイナリパッケージを公開しました。こちらは問題なく動作しますが、Zaurus 起動時にコンソールに降りる必要があるため、おそらくキーボードのない SL-A300 では動かすことができないと思います。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>8月16日</h3>
 
           <p>SL-5500 で Qtopia 上から実行しようと試行錯誤していますが、途中までは実行できるものの、メモリが少ない旨の警告ウィンドウが出ようとすると ONScripter がハングしてしまいます。使用メモリ量が大きくなるとダメです。-qws オプションを付けて Qtopia と並列に実行すれば、Qtopia のメモリ不足の警告ウィンドウが出ても無視して続行できるので、メモリは足りているが警告ウィンドウとデッドロック状態になってハングしているようです。しかしちょっと対策を思いつきません。ハングしたらリモートログインして kill するしかないので現状では実用になりません。ちなみに、Qtopia を立ち上げない状態で console から立ち上げれば問題なく動作します。</p>
@@ -218,25 +216,25 @@
           <p>SL-5500 用で、無意味に smpeg にリンクしていたのでやめ、無駄を省いて SDL_mixer を作り直しました。</p>
 
           <p>Zaurus (SL-5500, SL-A300) の Qtopia 環境で動作するバイナリパッケージを公開しました。ただし、上記の通り現状ではメモリ不足ですぐハングするので、試験的なリリースだと思ってください。<a href="zaurus/index.html">SDL on Zaurus (SL-5500) のページ</a>からダウンロードできます。ただし、SL-A300 では未検証なので、試してみた方は動作報告をお願いします。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>8月2日</h3>
 
           <p>vortex さんからのバグ報告を元に、puttext 命令の引数を再 parse すると表示がおかしくなることがあるバグや、puttext 命令が改行扱いにならないバグを修正しました。しかし、puttext 命令まわりはまだまだおかしいです。取り扱い方を根本的に変えないとだめかもしれません。</p>
 
           <p>コードを clean up しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>7月28日</h3>
 
           <p>blackbrd さんからのバグ報告を元に、セーブファイルに gosub 命令の入れ子構造を正しく格納していなかったバグをとりました。</p>
 
           <p>kidokuskip, kidokumode 命令を実装しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>7月27日</h3>
 
           <p>20020723 の大幅改良の際に、予想以上にエンバグしていました。experimental と注意書を書いておくべきでした。ですが、そろそろ安定してきたと思います。</p>
@@ -250,17 +248,17 @@
           <p>select 命令の２行目以降で、文字変数をテキスト文として解釈するバグを直しました。</p>
 
           <p>空行をテキスト行として扱わないようにしました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>7月26日</h3>
 
           <p>αβεさんの patch を取り入れ、autoclick 命令時にカーソルが消えないバグを修正しました。</p>
 
           <p>autoclick 命令の引数が０より大きい時に、クリック待ちの時のクリックが無効になるようにしました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>7月25日</h3>
 
           <p>αβεさんの patch を参考に sentence_font 再初期化時の修正ミスを直しました。</p>
@@ -280,17 +278,17 @@
           <h4>20020725b</h4>
 
           <p>セーブファイル読み込み後の挙動が正常でない部分を調整しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>7月24日</h3>
 
           <p>マスク画像読み込みに関するバグ修正しました。</p>
 
           <p>単語切り出しのバグ修正しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>7月23日</h3>
 
           <p>αβεさんの patch を取り入れ、立ち絵が消えるタイミングで透過度を 255 に戻す処理を追加しました。</p>
@@ -316,23 +314,23 @@
           <p>単語切り出しのバグをとりました。</p>
 
           <p>ちなみに本 beta 版以降で、以前の古いセーブファイルを読み込んだときに、運が悪いと若干位置ずれすることがあります。これは、保存した場所が表示文の行でかつその中で変数を使用している場合に起こります。この部分の互換性を厳密に保つのは大変なので、もうしわけないのですがそうなったら運が悪かった思ってあきらめてください。ゲームの進行に影響することはまずないと思います。本 beta 版以降で保存したものについては大丈夫です。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>7月21日</h3>
 
           <p>αβεさんの patch を取り入れ、tal 命令を再実装しました。20020712 では検証を怠ったため、いただいた patch を改悪して取り込んでしまいました。失礼しました。</p>
 
           <p>スクリプトの読み込み＆解釈部分を大幅に書き直し中です。進捗８割くらいです。ようやく、某ゲームは一通り遊べそうです。ただし、save と load はまだです。というか、セーブファイルの内容の変更に伴い互換性を持たせる部分が手付かずです。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>7月20日</h3>
 
           <p>スクリプトの読み込み＆解釈部分を大幅に書き直し中です。進捗５割くらいです。ようやく、某ゲームのタイトル画面まではいくようになりました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>7月12日</h3>
 
           <p>島本さんからのバグ報告を元に、nsa アーカイブ中に nbz 圧縮されたファイルがあったときに復号されないバグをとりました。島本さん、いろいろと情報提供ありがとうございました。</p>
@@ -344,9 +342,9 @@
           <p>αβεさんの patch を参考に savefileexit 命令を実装しました。ただし未検証です。</p>
 
           <p>最近はあまり検証せずブィルターと化しているので、おかしなところはどんどん突っ込んでください。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>7月7日</h3>
 
           <p>αβεさんの patch を取り入れ (not)if 命令の条件式を文字列比較に対応しました。</p>
@@ -358,9 +356,9 @@
           <p>αβεさんの patch を取り入れ、dwave, dwaveloop 命令時に無条件で DEFAULT_WAVE_CHANNEL(ch=1) の音を停止していたバグを修正しました。</p>
 
           <p>αβεさんの patch を取り入れ、filelog 命令が sar, nsa 命令よりも前にあると前回の filelog を維持できなかったバグを修正しました。 </p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>7月6日</h3>
 
           <p>αβεさんの patch を取り入れ nega 命令を実装しました。</p>
@@ -374,23 +372,22 @@
           <p>exbtn 命令で cell の番号を指定したときに表示されないことがあるバグをとりました。</p>
 
           <p>repaint 命令、もしくは mouse がスプライトボタンの上を移動したときに、テキストモードでなくともテキストウィンドウを描画していたバグをとりました。ひとかたや某ゲームの音楽鑑賞画面で挙動がおかしかったのが直っています。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>7月2日</h3>
 
           <p>αβεさんの patch を取り入れ clickvoice, selectvoice, menuselectvoice 命令を実装しました。αβεさんも私もオリジナルの実装を確認していないため、本来のものと動作が異なるかもしれません。menuselectvoice 命令の 5 番目の音(できない操作をしたときの警告)は、未だ用法が不明なので保留となっています。</p>
 
           <p>コードを clean up しました。</p>
-        </div>
+        </article>
 
       </div> <!-- diary -->
     </div> <!-- diary-container -->
 
-
-    <div id="footer">
-      Copyright (c) 1998-2006 Studio O.G.A. All rights reserved.
-    </div>
+    <footer>
+      Copyright (C) 1998-2006 Studio O.G.A. All rights reserved.
+    </footer>
 
   </div>
 </body>
