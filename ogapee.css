@@ -95,7 +95,6 @@ img {
     }
 }
 
-#header,
 header {
     text-align: left;
     margin: 5px;
@@ -113,30 +112,25 @@ header {
 
 
 /*#header a {background-color: #ddffdd; }*/
-#header a:link,
 header a:link {
     color: #4444ff;
 }
 
-#header a:visited,
 header a:visited {
     color: #ff4444;
 }
 
-#header a:active,
 header a:active {
     color: #cc8888;
     text-decoration: underline;
 }
 
-#header a:hover,
 header a:hover {
     background-color: #ff8844;
 }
 
 /* -------------------- */
 /* toc */
-#toc-container,
 nav {
     float: left;
     width: 180px;
@@ -148,7 +142,6 @@ nav {
     background-color: white;
 }
 
-#toc-container h3,
 nav h3 {
     margin: 5px;
     padding: 0px;
@@ -284,7 +277,6 @@ nav h3 {
     /*border: solid 1px #0000ff;*/
 }
 
-#diary .diary-day,
 #diary article {
     margin: 5px;
     margin-bottom: 25px;
@@ -292,7 +284,6 @@ nav h3 {
     /*border-top: dashed 1px gray;*/
 }
 
-#diary .diary-day h3,
 #diary article h3 {
     display: block;
     margin: 5px;
@@ -302,13 +293,11 @@ nav h3 {
     border-bottom: dashed 1px gray;
 }
 
-#diary .diary-day h4,
 #diary article h4 {
     margin: 5px;
     text-decoration: underline;
 }
 
-#diary .diary-day p,
 #diary article p {
     padding: 5px;
     text-align: justify;
@@ -380,7 +369,6 @@ pre {
 /* -------------------- */
 /* footer */
 
-#footer,
 footer {
     clear: both;
     text-align: center;
@@ -404,7 +392,6 @@ div.figure p {
 
 @media screen and (max-width: 767px) {
 
-    #header,
     header {
         background-size: 32px;
     }
@@ -427,7 +414,6 @@ div.figure p {
         font-size: 16px;
     }
 
-    #toc-container,
     nav {
         float: none;
     }
@@ -437,7 +423,6 @@ div.figure p {
         position: absolute;
     }
 
-    #toc-container:hover #toc,
     nav:hover #toc {
         display: block;
         position: absolute;
