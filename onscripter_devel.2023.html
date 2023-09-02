@@ -2,10 +2,10 @@
 <html lang="ja">
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
   <title>ONScripter 開発日誌</title>
-  <link rel="stylesheet" type="text/css" href="/ogapee.css">
+  <link rel="stylesheet" href="/ogapee.css">
 </head>
 
 <body>
@@ -18,8 +18,7 @@
       Last updated: Aug. 25, 2023
     </div> <!-- header -->
 
-    <div id="toc-container">
-
+    <nav>
       <h3>過去の開発日誌</h3>
 
       <div id="toc">
@@ -65,8 +64,8 @@
             </ul>
           </li>
         </ul>
-      </div> <!-- toc -->
-    </div> <!-- toc-container -->
+      </div>
+    </nav>
 
 
     <div id="diary-container">
@@ -74,15 +73,15 @@
 
         <h2>2023年</h2>
 
-        <div class="diary-day">
+        <article>
           <h3>8月25日</h3>
 
           <p>ONScripter::alphaBlend と AnimationInfo::setupImageAlpha のマスク画像へのアクセスに関するバグを修正しました。</p>
 
           <p><a href="win">ONScripter on Windows</a> の関連ライブラリのソースを更新し、PlatformToolset を v142 (Visual Studio 2019) に変更しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>8月24日</h3>
 
           <p>みかんはっさくさんからのバグ報告に基づき、effect 命令の 15, 18 番でマスク画像を指定したときに、画像の右半分をアルファチャンネルとして読み込んでしまうバグを修正しました。このバグは以前からありましたが、今回アプリが落ちることによって表面化しました。</p>
@@ -90,33 +89,33 @@
           <p>ソースファイルや SDK を <a href="https://github.com/ogapee">https://github.com/ogapee</a> で公開することにしました。また、ソースファイルを .clang-format を使用して整形することにしました。</p>
 
           <p><a href="android/#sdk">Android 版 SDK</a> を更新し、compileSdk と targetSdk を 34 にしました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>8月18日</h3>
 
           <p>HTML の文字コードを EUC-JP から UTF-8 に変更しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>4月7日</h3>
 
           <p><a href="ios/#sdk">iOS 版 SDK</a> を更新し、Apple シリコンを搭載した Mac の Ventura v13 でビルドできるようにしました。libmad-0.15.1b 付属の config.sub と config.guess が古く Apple シリコンに対応していなかったため、最新の <a href="https://git.savannah.gnu.org/cgit/config.git/plain/config.sub">config.sub</a> と <a href="https://git.savannah.gnu.org/cgit/config.git/plain/config.guess">config.guess</a> に差し替えました。USE_SELECTOR を使用したゲームの選択は、XCode からアプリを実行してインストールした場合でないと活用できないようです。TestFlight によって内部テストでは、ゲームデータをインターネットからダウンロードすることはできました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>3月23日</h3>
 
           <p><a href="android/#sdk">Android 版 SDK</a> を更新し、compileSdk と targetSdk を 33 にしました。Android 13 (API 33)以降では、ActivityCompat.requestPermissions で WRITE_EXTERNAL_STORAGE を要求すると常に false を返すようになったようなので、Android 13 以降ではこの処理を飛ばすようにしました。NDK は 24.0.8215888、Android Gradle Plugin は 7.2.2、Gradle は 7.4 を使用しています。</p>
 
           <p>Android 版アプリで起動時にゲームを選択して実行する場合、ファイルを開くときにディレクトリの有無をキャッシュし、ディレクトリが存在しない場合には ONScripter.java の findFile 関数を呼ばないことによってファイルの読み込みを高速化しました。findFile で使用している ContentResolver.query は、ファイル名のフィルタを指定する第3,4引数が無視されるようです。そのため、これまではアーカイブ内にあるファイルを読み込む際に、アーカイブ外にはファイルが存在しないことを確認するために、ディレクトリ内の全ファイルを一つずつ照合していたため、時間がかかっていました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>1月3日</h3>
 
           <p>しばらく前から、Android 版アプリで一部のファイルの読み込みに失敗する問題がありましたが、ONScripter.java の findFile 関数で大文字と小文字を区別してファイル名を照合しており、スクリプト内のファイル名とファイルシステムのファイル名に大文字・小文字の違いがある場合にファイルが存在しないと判定されていたことが原因でした。<a href="android/#sdk">Android 版 SDK</a> を更新し、String.equalsIgnoreCase を使って判定するようにして解決しました。リリース前にいくつかのゲームで動作確認をするのですが、それらのゲームではこの問題が発生しなかったため気づきませんでした。</p>
-        </div>
+        </article>
 
       </div> <!-- diary -->
     </div> <!-- diary-container -->

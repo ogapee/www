@@ -2,10 +2,10 @@
 <html lang="ja">
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
   <title>ONScripter 開発日誌</title>
-  <link rel="stylesheet" type="text/css" href="/ogapee.css">
+  <link rel="stylesheet" href="/ogapee.css">
 </head>
 
 <body>
@@ -18,8 +18,7 @@
       Last updated: Dec. 30, 2017
     </div> <!-- header -->
 
-    <div id="toc-container">
-
+    <nav>
       <h3>過去の開発日誌</h3>
 
       <div id="toc">
@@ -59,8 +58,8 @@
             </ul>
           </li>
         </ul>
-      </div> <!-- toc -->
-    </div> <!-- toc-container -->
+      </div>
+    </nav>
 
 
     <div id="diary-container">
@@ -68,21 +67,19 @@
 
         <h2>2017年</h2>
 
-        <div class="diary-day">
+        <article>
           <h3>12月30日</h3>
 
           <p><a href="ios/#SDK">iOS 版 SDK</a> を更新し、SDL, SDL_image, SDL_mixer, SDL_ttf, ONScripter のプロジェクトを一つのワークスペースで管理するようにして、一度のビルドでアプリを作成できるようにしました。</p>
+        </article>
 
-        </div>
-
-        <div class="diary-day">
+        <article>
           <h3>11月7日</h3>
 
           <p>ファイル名は変わっていませんが、<a href="ios/#SDK">iOS 版 SDK</a> onscripter_ios_Xcode9.1.tar.gz を更新しました。iOS ネイティブの動画再生方法を、MPMoviePlayerViewController から AVPlayerViewController と AVPlayer の組み合わせに変更しました。ただし、iOS ネイティブの動画再生では MPEG1 がサポートされていないため、これが使われることはほぼないと思います。ちなみに、iOS 版の ONScripter では、MPEG1 の動画は SMPEG を利用して再生します。</p>
+        </article>
 
-        </div>
-
-        <div class="diary-day">
+        <article>
           <h3>11月5日</h3>
 
           <p>以前に手元の iPad Air 2 を iOS 11 にアップデートしたところ、インストール済みの ONScripter が起動時に終了するようになったため、ONScripter をビルドし直すことにしました。まず、Mac の OS を macOS 10.13 High Sierra にアップデートし、また、Xcode を 9.1 にアップデートしました。しかし、ONScripter をビルドすると、最後に以下のエラーメッセージが出ます。</p>
@@ -94,22 +91,21 @@
           <p>バグ報告「<a href="/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=361">iOS版が起動直後に終了してしまう</a>」を元に、HAVE_CONTENTSを定義してアプリにゲームデータを内蔵した場合に、ゲームデータのファイルが /Library/Caches/ONS 以下に正しくコピーされないバグを修正しました。コピー先のディレクトリ /Library/Caches/ONS が存在しないときに NSFileManager の copyItemAtPath でファイルをコピーしようとして失敗していたことが原因でした。onscripter_ios_Xcode8.0.tar.gz で、ファイルをコピーするときにプログレスバーを表示するように変更した際に発生したバグでした。<a href="ios/#SDK">iOS 版 SDK</a>を更新しました。</p>
 
           <p>onscripter_ios_Xcode9.1.tar.gz と onscripter-20170814.tar.gz の組み合わせで、iPad Air 2 (iOS 11.1) と iPhone X シミュレータ (iOS 11.1)で動作することを確認しました。</p>
+        </article>
 
-        </div>
-
-        <div class="diary-day">
+        <article>
           <h3>8月16日</h3>
 
           <p>Android アプリで、メニューの「フォントの輪郭の表示・非表示の切り替え」が正しく機能していなかったため修正しました。表示・非表示の切り替えは次回起動時に反映されます。<a href="android/#sdk">Android 版 SDK</a>が更新されています。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>8月14日</h3>
 
           <p>ひさびさに ONScripter の Android アプリをビルドしようとしたところ、Google の Android SDK の仕様が変更されており今までの方法ではビルドできなくなっていたため<a href="android/#sdk">Android 版 SDK</a>を更新し、<a href="android/#develop-win">Windows でのアプリの作成方法</a>と<a href="android/#develop-linux">Linux でのアプリの作成方法</a>を修正しました。現時点で、Windows 10 x64 および Linux x86_64 (Debian/Jessie) においてデバッグ版とリリース版のアプリが作成できることを確認しています。</p>
 
           <p>Android で書き込み用にファイルを開く際の処理を微修正しました。</p>
-        </div>
+        </article>
 
       </div> <!-- diary -->
     </div> <!-- diary-container -->

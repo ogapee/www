@@ -2,10 +2,10 @@
 <html lang="ja">
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-  <title> ONScripter 開発日誌 </title>
-  <link rel="stylesheet" type="text/css" href="/ogapee.css">
+  <title>ONScripter 開発日誌</title>
+  <link rel="stylesheet" href="/ogapee.css">
 </head>
 
 <body>
@@ -18,8 +18,7 @@
       Last updated: Nov. 2, 2016
     </div> <!-- header -->
 
-    <div id="toc-container">
-
+    <nav>
       <h3>過去の開発日誌</h3>
 
       <div id="toc">
@@ -58,8 +57,8 @@
             </ul>
           </li>
         </ul>
-      </div> <!-- toc -->
-    </div> <!-- toc-container -->
+      </div>
+    </nav>
 
 
     <div id="diary-container">
@@ -67,23 +66,21 @@
 
         <h2>2016年</h2>
 
-        <div class="diary-day">
+        <article>
           <h3>11月2日</h3>
 
           <p>NSOggVolume, NSOggFade 命令で、音量の範囲が正しくは最大が0で最小が-10000のところを、最大が100で最小が0と解釈していたバグを修正しました。</p>
+        </article>
 
-        </div>
-
-        <div class="diary-day">
+        <article>
           <h3>10月25日</h3>
 
           <p>バグ報告「<a href="/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=357">btn命令における不具合</a>」を元に、blt 命令において、７・８番目の引数に負の値を指定すると画像が描画されないバグを修正しました。</p>
 
           <p>待ち時間が０の場合にイベントのチェックのみでアニメーション処理をしていなかったバグを修正しました。</p>
+        </article>
 
-        </div>
-
-        <div class="diary-day">
+        <article>
           <h3>10月16日</h3>
 
           <p><a href="ios/#SDK">iOS 版 SDK</a>を更新し、Info.plist に以下の情報を追加しました。</p>
@@ -94,35 +91,31 @@
 </pre>
 
           <p>20150810 で DataDownloader.java に加えた zip ファイルの展開処理の高速化に関する修正がなぜか消えていたので、<a href="android/#sdk">Android 版 SDK</a>を更新して修正を再度適用しました。</p>
+        </article>
 
-        </div>
-
-        <div class="diary-day">
+        <article>
           <h3>10月10日</h3>
 
           <p>getlogtext 命令にバッファーオーバーランを引き起こすバグがあったため修正しました。</p>
+        </article>
 
-        </div>
-
-        <div class="diary-day">
+        <article>
           <h3>10月9日</h3>
 
           <p>Android 版において、ボタンを画面の上下左右からフリックによって引き出す際のフリックの速さの閾値を 2500[pixel/s] から 500[pixel/s] に下げ、より少ない動きで引き出されるようにしました。また、見た目に違和感があったため、左クリックボタンを左（上）側に、右クリックボタンを右（下）側に配置しました。この変更に伴い <a href="android/#sdk">Android 版 SDK</a>も更新しました。</p>
 
           <p>本体を更新し、Android 版の上ホイールボタンと下ホイールボタンが押されたときに、それぞれ bexec 命令で&quot;WHEELUP&quot;と&quot;WHEELDOWN&quot;が返るようにしました。</p>
+        </article>
 
-        </div>
-
-        <div class="diary-day">
+        <article>
           <h3>10月8日</h3>
 
           <p>Android 版において、Immersive モードでナビゲーションバーを非表示にできる場合は常に非表示となるようにし、デバイスの画面全体をゲーム画面として利用するようにしました。この変更に伴い<a href="android/#sdk">Android 版 SDK</a>も更新しました。</p>
 
           <p>追加機能の要望「<a href="/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=355">Android版においてソフトウェアボタンの位置を変えられないか</a>」を元に、ボタンを画面の上下左右からフリックによって引き出す方式に変更し、ゲーム画面に重ねて表示するようにしました。ボタンの透過度はメニューから設定できるようになっています。これによって、ゲームの解像度によってはボタンがつぶれて表示されしまう問題も解消されています。</p>
+        </article>
 
-        </div>
-
-        <div class="diary-day">
+        <article>
           <h3>10月5日</h3>
 
           <p>iOS 版の SMPEG で再生終了時に落ちることがあったため、20160920 で<a href="ios/#SDK">iOS 版 SDK</a>を更新しましたが、この修正を<a href="android/#sdk">Android 版 SDK</a> に反映させていなかったため、反映させて更新しました。修正内容は以下のとおりです。</p>
@@ -144,26 +137,23 @@
 </pre>
 
           <p><a href="ios/#SDK">iOS 版 SDK</a>を更新し、ゲームデータをダウンロードする際とアプリに内蔵されたゲームデータをコピーする際のプログレスバーの進捗を表す数字を等幅フォントに変更しました。SDKのファイル名は変わっていませんが更新されています。</p>
+        </article>
 
-        </div>
-
-        <div class="diary-day">
+        <article>
           <h3>10月4日</h3>
 
           <p>NSEnd 命令を実装しました。</p>
 
           <p>スプライトおよび Lua のアニメーションの表示タイミングを、指定された表示間隔を積分する方式から、現在時刻を基準にする方式に変更しました。従来よりもアニメーションがきびきび動くようになると思います。</p>
+        </article>
 
-        </div>
-
-        <div class="diary-day">
+        <article>
           <h3>10月3日</h3>
 
           <p>バグ報告「<a href="/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=354">IOS版をインストール中である画面の実装希望（プログレスバーなど）</a>」を元に、<a href="ios/#SDK">iOS 版 SDK</a>を更新し、iOS 8 以降で、ゲームデータをダウンロードする際とアプリに内蔵されたゲームデータをコピーする際にプログレスバーが表示されるようにしました。ゲームデータをダウンロードする際には、以前からプログレスバーが表示されるようになっていたのですが、表示に使用していた UIActionSheet と UIAlertView が iOS 8 以降で非推奨となり、最新の OS では表示されなくなってしまったため、UIAlertController を使って書き換えました。また、手元の端末は全て iOS 9 以降で古い API の挙動をテストすることができないため、SDK は iOS 8 以降のみをサポートすることにします。</p>
+        </article>
 
-        </div>
-
-        <div class="diary-day">
+        <article>
           <h3>9月28日</h3>
 
           <p>バグ報告「<a href="/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=356">Android 4.2で起動しない</a>」に関して、リリース版を旧来の方法で署名していたため、リリース版をAndriod 4.2 にインストールすると失敗することが分かりました。Android 4.4.2 以降では問題なくインストールできていたため気づきませんでした。以下のように、署名の仕方を変更したところ、リリース版を Android 4.2 にインストールすることができるようになりました。</p>
@@ -171,17 +161,15 @@
           <pre>
 &gt; jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore release.keystore bin/ONScripter-release-unsigned.apk releasename
 </pre>
+        </article>
 
-        </div>
-
-        <div class="diary-day">
+        <article>
           <h3>9月27日</h3>
 
           <p>バグ報告「<a href="/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=356">Android 4.2で起動しない</a>」を元に、Android 用 SDK の ONScripter.java 内で、SMPEG ライブラリを明示的に読み込むように指定していなかったバグを修正しました。Android 4.4 以降では、明示的に指定していない場合でも自動的に読み込まれていたため気づきませんでした。<a href="android/#sdk">Android 版 SDK</a>を更新しました。</p>
+        </article>
 
-        </div>
-
-        <div class="diary-day">
+        <article>
           <h3>9月25日</h3>
 
           <p>レイヤーを使った MPEG1 動画の再生において、動画を再生中に別の動画に切り替えると、黒画面が一瞬表示される場合があるバグを修正しました。20160923 の修正が不完全でした。</p>
@@ -193,24 +181,21 @@
           <p>音声が遅れていた理由は、ONScripter が音声デバイスのサンプリング周波数を 44.1KHz に設定しているのに対して、その動画の音声のサンプリング周波数が 48KHz だったからでした。そこで、動画の再生を開始するときに、動画の音声ストリームのサンプリング周波数と一致するように音声デバイスを設定し直すことで解決しました。その結果、SMPEG ライブラリを使って遅延なく MPEG1 動画を再生できるようになりました。しかし、動画の前に再生されていた音声が終了してしまうという別の問題が発生しています。なお、スクリプト実行時は、複数の音源をミックスして出力するので、デバイスのサンプリング周波数を 44.1KHz か 22.05Hz に統一しています。また、レイヤーを使った MPEG1 動画の再生では音声ストリームは無視しています。</p>
 
           <p>日付は変わっていませんが、<a href="http://i-funbox.com/">i-FunBox</a>の 4.0 Preview が更新され、iOS 10 に対応していました。</p>
+        </article>
 
-        </div>
-
-        <div class="diary-day">
+        <article>
           <h3>9月24日</h3>
 
           <p>ここしばらく Android 4.4.2 の端末でしか検証していなかったのですが、Android 5.1.1 の端末で試したところ Lua の io_open に追加した tmpfile が NULL を返すことが分かりました。そのため、stdout を返すように<a href="android/#sdk">Android 版 SDK</a> を修正しました。</p>
+        </article>
 
-        </div>
-
-        <div class="diary-day">
+        <article>
           <h3>9月23日</h3>
 
           <p>レイヤーを使った MPEG1 動画の再生において、再生開始時に直前に再生された動画の画像が一瞬表示される場合があるバグを修正しました。</p>
+        </article>
 
-        </div>
-
-        <div class="diary-day">
+        <article>
           <h3>9月22日</h3>
 
           <p>NSDSp2 命令において、指定された転送元の範囲が画像よりも大きい場合に表示がおかしくなるバグを修正しました。</p>
@@ -220,28 +205,25 @@
           <p>movie 命令において、音声ストリームがない MPEG1 動画を再生しようとすると落ちるバグを修正しました。</p>
 
           <p>最近はもっぱら iPad Air 2 でゲームの実行とデバッグをしていますが、iOS 10.0.1 にアップグレードしたところ <a href="http://i-funbox.com/">i-FunBox</a> でファイル転送ができなくなってしまいました。しかし、Xcode の Windows → Devices から Installed Apps の ONScripter を選択し、Download Container でアプリのファイル一式を Mac 側にコピーし、Finder で中身を編集してから、Replace Container で端末に書き戻すことによって、少し面倒ですが同じようにファイル転送をすることができます。</p>
+        </article>
 
-        </div>
-
-        <div class="diary-day">
+        <article>
           <h3>9月21日</h3>
 
           <p>NSExec 命令にバッファーオーバーフローを引き起こすバグがあったため修正しました。</p>
 
           <p>waittimer 命令などの時間待ち命令において、実際の経過時間を正確に反映するようにしました。これによって、layermessage による動画再生とスクリプトのタイミングがずれる問題も解消されています。</p>
+        </article>
 
-        </div>
-
-        <div class="diary-day">
+        <article>
           <h3>9月20日</h3>
 
           <p>iOS 版において、SMPEG を利用した動画再生に対応しました。ただし、iPad 2 Air では処理が追いつかず、画像のみの場合でも動画のみの場合でも２～３割程度再生速度が低下します。ないよりはまし程度に思ってください。また、iOS 版の SMPEG で再生終了時に落ちることがあったため、<a href="ios/#SDK">iOS 版 SDK</a>を更新して対策を施しました。</p>
 
           <p>NSOggFade 命令を暫定的に実装しました。フェード処理は行わず、closeflag の状態に応じて、すぐに音量を変更するか、もしくは演奏を終了します。</p>
+        </article>
 
-        </div>
-
-        <div class="diary-day">
+        <article>
           <h3>9月12日</h3>
 
           <p>setlayer, layermessage 命令を実装しました。ただし、layermessage は <a href="http://www.wintercrows.com/product/wcmpg.html">wcmpg.dll</a> によるレイヤーでの動画再生のうち一部の機能（open,play,pause,stop,setloop）にのみ対応しています。wcmpg.dll の機能は SMPEG を利用して実装しています。動画再生とスクリプトのタイミングがずれる場合がありますが、これは今後修正する予定です。</p>
@@ -249,10 +231,9 @@
           <p><a href="android/#sdk">Android 版 SDK</a>と<a href="ios/#SDK">iOS 版 SDK</a>に SMPEG を導入しました。ただし、SMPEG は MPEG1 動画の復号にのみ利用し、YUV Overlay による出力機能は無効にしています。Android 版での通常の動画再生は、今までどおり外部の動画再生アプリを使用して実行します。</p>
 
           <p>savedir 命令で、指定されたディレクトリが存在しない場合は設定しないようにしました。</p>
+        </article>
 
-        </div>
-
-        <div class="diary-day">
+        <article>
           <h3>9月10日</h3>
 
           <p><a href="ios/#SDK">iOS 版 SDK</a>にLuaを導入しました。本家のバージョンは5.1のようですので、Luaのバージョンは<a href="android/#sdk">Android 版 SDK</a>と同様に5.1.5にしました。また、Lua で書き込み用のファイルのオープンに失敗し場合に tmpfile() で生成されたディスクリプタを返すようにしました。</p>
@@ -260,10 +241,9 @@
           <p><a href="android/#sdk">Android 版 SDK</a>を更新して、Lua で書き込み用のファイルのオープンに失敗し場合に tmpfile() で生成されたディスクリプタを返すようにしました。</p>
 
           <p>--render-font-outline オプションを有効にして文字の輪郭を描画する場合に、文字の色が暗い（輝度が0x80未満）場合には白で輪郭を描画するようにしました。</p>
+        </article>
 
-        </div>
-
-        <div class="diary-day">
+        <article>
           <h3>9月9日</h3>
 
           <p>getlogtext 命令を実装しました。</p>
@@ -271,10 +251,9 @@
           <p>NSDCall, NSDDLL 命令を実装しました。ただし、NSDDLL 命令は deffontd.dll にのみ内部で対応しています。</p>
 
           <p>UTF8 から SJIS への変換ルーチンを実装し、nsutf の nsutf_to_ansi を内部で実装しました。</p>
+        </article>
 
-        </div>
-
-        <div class="diary-day">
+        <article>
           <h3>9月7日</h3>
 
           <p>NSCALL_text, NSCALL_load に対応しました。</p>
@@ -294,38 +273,33 @@
           <p>nsutf, dpshadow の Lua モジュールを ONScripter 内部で登録するようにしました。ただし、nsutf_from_ansi 以外は空実装です。</p>
 
           <p><a href="android/#sdk">Android 版 SDK</a>を更新して、Lua で書き込み用のファイルのオープンに失敗し場合に stdout を返すようにしました。外部SDカードにアクセスした場合への対策です。</p>
+        </article>
 
-        </div>
-
-        <div class="diary-day">
+        <article>
           <h3>8月14日</h3>
 
           <p>バグ報告「<a href="/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=352">ゲーム選択画面について</a>」を元に、20160726 以降の<a href="android/#sdk">Android 版 SDK</a>を使うと Android 5.0 以降ではゲーム選択画面で Render Font Outline の設定ができなくなってしまったため、メニューからフォントの輪郭の表示・非表示を切り替えられるように SDK を更新しました。ただし、設定は次回に起動した時に反映されます。</p>
+        </article>
 
-        </div>
-
-        <div class="diary-day">
+        <article>
           <h3>8月3日</h3>
 
           <p>バグ報告「<a href="/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=350">IOS版でゲーム起動後に強制終了</a>」を元に、20160726で発生した textgosub 命令に関するバグを修正しました。ScriptHandler::getWait() が、wait_script が NULL の場合に、従来と同じ挙動となるように next_script を返すようにしました。</p>
+        </article>
 
-        </div>
-
-        <div class="diary-day">
+        <article>
           <h3>7月30日</h3>
 
           <p><a href="android/">Android 版</a>で、Android 6 の某端末で起動時に落ちるという報告を受けました。<a href="http://stackoverflow.com/questions/34021039/action-open-document-not-working-on-miui/34045627">この記事</a>によると、どうやら OPEN_DOCUMENT_TREE を扱う Intent が見つからない場合があるようなので、例外処理を追加して<a href="android/#sdk">Android 版 SDK</a>を更新しました。</p>
+        </article>
 
-        </div>
-
-        <div class="diary-day">
+        <article>
           <h3>7月29日</h3>
 
           <p><a href="android/">Android 版</a>で、ボタンが非表示の場合に、Immersive mode を利用してナビゲーションバーも非表示となるようにしました。<a href="android/#sdk">Android 版 SDK</a>も更新しました。</p>
+        </article>
 
-        </div>
-
-        <div class="diary-day">
+        <article>
           <h3>7月28日</h3>
 
           <p>20160726 で発生した savescreenshot 命令のファイル名の生成に関するバグを修正しました。</p>
@@ -337,17 +311,15 @@
             <li>Xcode の Build Settings → Build Options → Enable Bitcode を Yes から No に変更</li>
             <li>SDL_image/IMG_ImageIO.m の CGColorSpaceCreateCalibrateRGB 関数を CGColorSpaceCreateDeviceRGB 関数に変更</li>
           </ul>
+        </article>
 
-        </div>
-
-        <div class="diary-day">
+        <article>
           <h3>7月27日</h3>
 
           <p><a href="android/">Android 版</a>の 20160726 に primary の SD カードが存在しない場合に落ちるバグを修正しました。<a href="android/#sdk">Android 版 SDK</a>も更新しました。</p>
+        </article>
 
-        </div>
-
-        <div class="diary-day">
+        <article>
           <h3>7月26日</h3>
 
           <p>バグ報告「<a href="/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=347">STRING_BUFFER_LENGTH の値を大きく</a>」を元に、STRING_BUFFER_LENGTH の値を 2048 から 4096 に変更しました。</p>
@@ -362,19 +334,17 @@
 APP_ABI := armeabi
 APP_PLATFORM := android-15
 </pre>
+        </article>
 
-        </div>
-
-        <div class="diary-day">
+        <article>
           <h3>4月7日</h3>
 
           <p>バグ報告「<a href="/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=345">nextcsel命令のダミー実装</a>」を元に、nextcsel 命令を実装しました。</p>
 
           <p>バグ報告「<a href="/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=346">終了後の画面が元にもどらない</a>」を元に、exit 実行時に SDL_Quit が呼ばれるように修正しました。</p>
+        </article>
 
-        </div>
-
-        <div class="diary-day">
+        <article>
           <h3>3月27日</h3>
 
           <p>バグ報告「<a href="/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=342">Lua5.3で動作しない（ソースの書き換えにより動作）</a>」を元に、luaL_checkint 関数を luaL_checkinteger 関数に置き換えました。</p>
@@ -384,10 +354,9 @@ APP_PLATFORM := android-15
           <p>バグ報告「<a href="/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=344">改ページ(\)で文字切り出し処理のバグ？</a>」を元に、いただいたパッチを参考に、textgosub 使用時に、改ページ(\)のクリックウェイト以降の文章が処理されないバグを修正しました。</p>
 
           <p>texec 命令の中で saveon 命令を実行するようにしました。</p>
+        </article>
 
-        </div>
-
-        <div class="diary-day">
+        <article>
           <h3>3月21日</h3>
 
           <p>ONScripter をホストしている<a href="https://osdn.jp/">OSDN</a>で、３月８日にOSなどのアップグレードが行われました（<a href="https://osdn.jp/projects/sourceforge/news/25239">詳細</a>）。このことに伴い、デフォルトのRubyのバージョンが2.1.5に変更されたことが原因で、BTS として使用している影舞から MySQL のデータベースに接続できなくなり、BTS が使用できなくなっていました。そこで、以下のようにして解決しました。</p>
@@ -403,8 +372,7 @@ APP_PLATFORM := android-15
             </li>
             <li>生成された mysql.so を kagemai_root/lib にコピーしました。</li>
           </ol>
-
-        </div>
+        </article>
 
       </div> <!-- diary -->
     </div> <!-- diary-container -->

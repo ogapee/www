@@ -2,10 +2,10 @@
 <html lang="ja">
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
   <title>ONScripter のページ</title>
-  <link rel="stylesheet" type="text/css" href="/ogapee.css">
+  <link rel="stylesheet" href="/ogapee.css">
 </head>
 
 <body>
@@ -25,12 +25,10 @@
       <!--Last updated: Apr. 4, 2023 (派生プロジェクトを追加)<br>-->
     </div> <!-- header -->
 
-    <div id="toc-container">
-
+    <nav>
       <h3>目次</h3>
 
       <div id="toc">
-
         <ul>
           <li><a href="#INTRODUCTION">はじめに</a>
             <ul>
@@ -73,9 +71,8 @@
           </li>
           <li><a href="index.html">戻る</a></li>
         </ul>
-
-      </div> <!-- toc -->
-    </div> <!-- toc-container -->
+      </div>
+    </nav>
 
 
     <div id="main-container">

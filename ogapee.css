@@ -131,7 +131,8 @@ img {
 
 /* -------------------- */
 /* toc */
-#toc-container {
+#toc-container,
+nav {
     float: left;
     width: 180px;
 }
@@ -142,7 +143,8 @@ img {
     background-color: white;
 }
 
-#toc-container h3 {
+#toc-container h3,
+nav h3 {
     margin: 5px;
     padding: 0px;
     text-align: center;
@@ -277,14 +279,16 @@ img {
     /*border: solid 1px #0000ff;*/
 }
 
-#diary .diary-day {
+#diary .diary-day,
+#diary article {
     margin: 5px;
     margin-bottom: 25px;
     padding: 0px;
     /*border-top: dashed 1px gray;*/
 }
 
-#diary .diary-day h3 {
+#diary .diary-day h3,
+#diary article h3 {
     display: block;
     margin: 5px;
     padding: 0px;
@@ -293,12 +297,14 @@ img {
     border-bottom: dashed 1px gray;
 }
 
-#diary .diary-day h4 {
+#diary .diary-day h4,
+#diary article h4 {
     margin: 5px;
     text-decoration: underline;
 }
 
-#diary .diary-day p {
+#diary .diary-day p,
+#diary article p {
     padding: 5px;
     text-align: justify;
 }
@@ -413,7 +419,8 @@ div.figure p {
         font-size: 16px;
     }
 
-    #toc-container {
+    #toc-container,
+    nav {
         float: none;
     }
 
@@ -422,7 +429,8 @@ div.figure p {
         position: absolute;
     }
 
-    #toc-container:hover #toc {
+    #toc-container:hover #toc,
+    nav:hover #toc {
         display: block;
         position: absolute;
         z-index: 1;

@@ -2,10 +2,10 @@
 <html lang="ja">
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
   <title>ONScripter 開発日誌</title>
-  <link rel="stylesheet" type="text/css" href="/ogapee.css">
+  <link rel="stylesheet" href="/ogapee.css">
 </head>
 
 <body>
@@ -18,8 +18,7 @@
       Last updated: Aug. 19, 2021
     </div> <!-- header -->
 
-    <div id="toc-container">
-
+    <nav>
       <h3>過去の開発日誌</h3>
 
       <div id="toc">
@@ -63,8 +62,8 @@
             </ul>
           </li>
         </ul>
-      </div> <!-- toc -->
-    </div> <!-- toc-container -->
+      </div>
+    </nav>
 
 
     <div id="diary-container">
@@ -72,7 +71,7 @@
 
         <h2>2021年</h2>
 
-        <div class="diary-day">
+        <article>
           <h3>8月19日</h3>
 
           <p>iOS 14 の iPad Air 2 で動画を再生すると、画面の回転方向を正確に取得することができず（0 (unknown)が返る）、さらに誤って回転方向に UIInterfaceOrientationLandscapeLeft を設定してしまうバグがあったため、以下のように修正しました。<a href="ios/#SDK">iOS 版 SDK</a>を差し替えて更新しました。</p>
@@ -95,9 +94,9 @@ uiwindow.rootViewController = self;
 player = [[AVPlayerViewController alloc] init];
 player.showsPlaybackControls = false;
 </pre>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>8月15日</h3>
 
           <p>ひさびさに Mac で ONScripter をビルドして動作確認をしました。まず、Mac を macOS Big Sur 11.5.1, Xcode 12.5.1 にアップデートし、<a href="ios/#SDK">iOS 版 SDK</a>と最新のONScripterを使用してビルドしたところ、iPad Air 2（iOS 14.7.1）の実機および Xcode 12.5.1 のシミュレータ（iPhone 12 Pro Max - iOS 14.5）で特に問題なく動作しました。</p>
@@ -137,7 +136,7 @@ if (uiwindow.rootViewController == nil) {
 </pre>
 
           <p>また、IPHONEOS_DEPLOYMENT_TARGET を 8.0 から 9.0 に変更しました。これらの変更を反映させて<a href="ios/#SDK">iOS 版 SDK</a> を更新しました。</p>
-        </div>
+        </article>
 
       </div> <!-- diary -->
     </div> <!-- diary-container -->

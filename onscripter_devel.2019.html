@@ -2,10 +2,10 @@
 <html lang="ja">
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
   <title>ONScripter 開発日誌</title>
-  <link rel="stylesheet" type="text/css" href="/ogapee.css">
+  <link rel="stylesheet" href="/ogapee.css">
 </head>
 
 <body>
@@ -18,8 +18,7 @@
       Last updated: Dec. 30, 2019
     </div> <!-- header -->
 
-    <div id="toc-container">
-
+    <nav>
       <h3>過去の開発日誌</h3>
 
       <div id="toc">
@@ -61,8 +60,8 @@
             </ul>
           </li>
         </ul>
-      </div> <!-- toc -->
-    </div> <!-- toc-container -->
+      </div>
+    </nav>
 
 
     <div id="diary-container">
@@ -70,7 +69,7 @@
 
         <h2>2019年</h2>
 
-        <div class="diary-day">
+        <article>
           <h3>12月30日</h3>
 
           <p>バグ報告「<a href="/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=365">Windowsでのコンパイルの問題</a>」を元に、<a href="win">ONScripter on Windows</a> をビルドするために必要な関連ライブラリのソースをまとめて、Visual Studio で一発でビルドできるようにしたパッケージを用意しました。</p>
@@ -78,54 +77,47 @@
           <p>これまでは、<a href="https://www.libsdl.org/download-1.2.php">SDL 1.2.15</a> などからダウンロードできるビルド済みの DLL をリンクして実行するように手順を説明していました。この場合、fopen などの stdio 関連の命令を実行しようとすると、ビルド済みの SDL の DLL では c:\Windows\system32\msvcrt.dll にある関数を使用し、Visual Studio 2017 でビルドした ONScripter 本体では c:\Windows\system32\api-ms-win-crt-stdio-l1-1-0.dll にある関数を使用するのですが、両者の間で FILE 構造体を共有するとファイルの入出力が正常に実行されない問題が発生していました。ONScripter 内に両者で FILE 構造体を共有している箇所はほぼないのですが、バグ報告にあった savescreenshot 命令では共有していたため問題が発生していました。そこで、関連ライブラリを含めてすべてソースからビルドし、静的リンクによって実行ファイルを生成するようにしました。</p>
 
           <p>これにともない ONScripter 本体の ONScripter.vcxproj も変更する必要があったため、ONScripter.vcxproj のみを変更した onscripter-20191116.tar.gz をアップロードし直しました。</p>
+        </article>
 
-        </div>
-
-        <div class="diary-day">
+        <article>
           <h3>11月16日</h3>
 
           <p>PONScripter の独自拡張である patch ディレクトリからのアーカイブの読み込みに対応しました。</p>
+        </article>
 
-        </div>
-
-        <div class="diary-day">
+        <article>
           <h3>10月22日</h3>
 
           <p>PONScripter の独自拡張であるスプライトのタグの b （2倍拡大を抑制）と f （画像左右反転）に対応しました。2倍拡大は、古いゲームの低解像度の画像と最新の高解像度の画像を混在させるために導入されたようです。PONScripter では、ビルド時に2倍拡大の有無を決定して設定を実行ファイルに埋め込み、2倍拡大が設定されている場合は、タグ b が指定されていない画像や文字を2倍に拡大して表示するようです。ONScripter では、ゲームの画面横幅が 640 でタグ b が指定されているときに画像を半分に縮小することで対応しました。</p>
+        </article>
 
-        </div>
-
-        <div class="diary-day">
+        <article>
           <h3>9月22日</h3>
 
           <p>文字コードが UTF-8 の場合に、ルビが正しく描画されないバグを修正しました。</p>
+        </article>
 
-        </div>
-
-        <div class="diary-day">
+        <article>
           <h3>9月21日</h3>
 
           <p>文字コードが UTF-8 の場合に、PONScripter の独自拡張である文章のタグの一部（~i~と~b~）に対応しました。それ以外のタグは読み飛ばします。</p>
+        </article>
 
-        </div>
-
-        <div class="diary-day">
+        <article>
           <h3>9月19日</h3>
 
           <p>Visual Studio 用の設定ファイル ONScripter.vcxproj に ONScripter_effect_cascade.cpp を追加するのを忘れていたため、追加して 20190917 のソースを更新しました。</p>
+        </article>
 
-        </div>
-
-        <div class="diary-day">
+        <article>
           <h3>9月17日</h3>
 
           <p><a href="https://github.com/chronotrig/ponscripter-fork-wh/tree/wh-dev">PONScripter</a> の cascade.dll のエミュレーションコードを修正して取り入れ、cascade.dll による画面効果を実装しました。</p>
 
           <p>フォントのサイズとピッチの合計が負の場合は設定値を無視するようにしました。</p>
+        </article>
 
-        </div>
-
-        <div class="diary-day">
+        <article>
           <h3>9月12日</h3>
 
           <p>文字コードが UTF-8 でスクリプトに日本語文章と英語文章が両方含まれている場合に正しく扱えるようにしました。ただし、PONScripter では日本語文章と英語文章の両方をセーブデータに保存しているようですが、ONScripter では実際に表示された文章のみを保存します。</p>
@@ -133,10 +125,9 @@
           <p>文字コードが UTF-8 の場合に、プロポーショナルフォントとして文字を描画するようにしました。英語の文章が読みやすくなりました。</p>
 
           <p>showlangjp, showlangen 命令を実装しました。</p>
+        </article>
 
-        </div>
-
-        <div class="diary-day">
+        <article>
           <h3>9月11日</h3>
 
           <p>UTF-8で書かれたスクリプト pscript.dat の読み込みに対応しました。これにともない、<a href="android/#sdk">Android 版 SDK</a> と <a href="ios/#SDK">iOS 版 SDK</a> も更新しました。なお、NScripter と <a href="https://github.com/chronotrig/ponscripter-fork-wh/tree/wh-dev">PONScripter</a> では一部の命令の挙動に互換性がないため、スクリプトの文字コードによって命令の挙動を変えています。</p>
@@ -152,10 +143,9 @@
           <p>文字コードが UTF-8 でアルファチャンネル付きの PNG 画像を読み込んだ場合に、透過モードを TRANS_ALPHA に設定するようにしました。</p>
 
           <p>これまで Android 版では、MPEG1 動画を外部アプリを使用して再生していましたが、SMPEG を使って ONScripter 側で再生するようにしました。</p>
+        </article>
 
-        </div>
-
-        <div class="diary-day">
+        <article>
           <h3>8月19日</h3>
 
           <p>Android 版の開発を開始したときは Android 1.6 で動作していたのですが、最近はまったく動作確認をしていませんでした。そこで、あらためて Android 1.6 のエミュレータで動作確認をすることにしました。Android 1.6 は armeabi (ARM v5) なので、Android Studio は対応していません。そこで、<a href="android/#develop-linux">Linux でのアプリの作成方法</a>にしたがい、古いツールを使用して armeabi 用のアプリをビルドしたところ、Android 1.6 のエミュレータを起動して、アプリをインストールすることはできました。しかし、Android 1.6 では、インスタンス化されたクラス内に実体のない関数があると、それが実際には呼び出されない関数であっても VerifyError が発生して終了してしまいます。自身のプログラムについては、（実行環境の API のバージョンを判定して）呼び出さない関数を別の class に分離することで対応できるようですが、サポートライブラリの中などの関数については対応できないため、Android 1.6 への対応は断念しました。</p>
@@ -165,10 +155,9 @@
           <p>2019年8月以降にリリースするアプリはターゲットを Android 9.0 (API 28) 以上にする必要があることや、ARM のアーキテクチャや Android API の判定が不十分でビルド時や実行時に失敗する場合があったため、<a href="android/#sdk">Android 版 SDK</a> を修正しました。</p>
 
           <p>Android 版では、fopen と mkdir が errno に EACCES を返したときのみ JAVA 側の対応命令を呼び出すようにしました。</p>
+        </article>
 
-        </div>
-
-        <div class="diary-day">
+        <article>
           <h3>5月27日</h3>
 
           <p>動画背景などに使われるレイヤーを使った MPEG1 動画の再生中に画面効果（アルファブレンドなど）を使って画像を切り替えると、これまでは、デスティネーション画像には動画の内容が逐次反映されていたのですが、ソース画像には動画の内容が反映されていなかったため、画面効果の前半で動画が止まっているように見えていました。今回、ソース画像にも動画の内容を逐次反映させるようにし、動画がより滑らかに再生されるようにしました。</p>
@@ -176,8 +165,7 @@
           <p>画像合成のコアルーチンを全体的に見直し、SUBBLEND_PIXEL と BLEND_TEXT_ALPHA を高速化しました。</p>
 
           <p>16bit画面モード（BPP16 を有効にしてビルド）のときに動画背景が描画されないバグを修正しました。</p>
-
-        </div>
+        </article>
 
       </div> <!-- diary -->
     </div> <!-- diary-container -->

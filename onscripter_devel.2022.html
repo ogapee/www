@@ -2,10 +2,10 @@
 <html lang="ja">
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
   <title>ONScripter 開発日誌</title>
-  <link rel="stylesheet" type="text/css" href="/ogapee.css">
+  <link rel="stylesheet" href="/ogapee.css">
 </head>
 
 <body>
@@ -18,8 +18,7 @@
       Last updated: Aug. 31, 2022
     </div> <!-- header -->
 
-    <div id="toc-container">
-
+    <nav>
       <h3>過去の開発日誌</h3>
 
       <div id="toc">
@@ -64,8 +63,8 @@
             </ul>
           </li>
         </ul>
-      </div> <!-- toc -->
-    </div> <!-- toc-container -->
+      </div>
+    </nav>
 
 
     <div id="diary-container">
@@ -73,13 +72,13 @@
 
         <h2>2022年</h2>
 
-        <div class="diary-day">
+        <article>
           <h3>8月31日</h3>
 
           <p>App Store ConnectのTestFlightで内部テストを行うことができるように<a href="ios/#SDK">iOS 版 SDK</a>を更新しました。手順については<a href="ios/#application">アプリの申請</a>を参照してください。ゲームデータを内蔵したアプリを作成し、手元のiPad ProにTestFlightアプリ経由でインストールして問題なく動作することを確認しました。そのままApp Store Connectから審査を経て一般に公開することもできると思いますが、未確認です。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>8月16日</h3>
 
           <p>バグ報告「<a href="/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=383">一度終了するとアプリが開かなくなる</a>」を元に、ゲームデータをアプリに同梱すると、アプリをインストールした後に2回目以降は起動に失敗するバグを修正しました。</p>
@@ -87,9 +86,9 @@
           <p><a href="android/#distribution">ゲームデータの配布方法</a>を修正し、Play Asset Delivery (PAD) の install-time Asset Pack に対応して、最大1GBまでのゲームデータをアプリに同梱できるようにしました。また、これ以外のゲームデータの配布方法は廃止しました。</p>
 
           <p>バグ報告「<a href="/cgi-bin/kagemai/guest.cgi?project=onscripter&amp;action=view_report&amp;id=383">一度終了するとアプリが開かなくなる</a>」を元に、bexec命令のバグを修正しました。マニュアルには、引数が1個の文字列変数、もしくは第1引数が文字列変数で第2引数が数値変数の例しか載っていなかったため、bexec命令はこの2パターンにのみ対応していると思っていたのですが、文字列変数と数値変数の任意の組み合わせに対応しているようです。3個以上の引数にも対応しているようですが、実装がたいへんなので、ONScripterでは2個までの引数に対応します。もし3個以上の引数がある既存のゲームが存在する場合は、ご報告いただければ対応を検討します。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>7月21日</h3>
 
           <p><a href="android/#sdk">Android 版 SDK</a> を更新して、Android Gradle Plugin Version を 4.2.2 から 7.0.4 に変更しました。これ以上高くすると、最初に Android Studio を起動したときに以下のようなエラーが出てしまいます。</p>
@@ -98,9 +97,9 @@
 </pre>
 
           <p>そして、この状態で File → Project Structure から Gradle Version を設定しようとしてもなぜか反映されません。また、7.0.4 は compileSDK = 31 までしかテストされていないようなので、compileSDK と targetSDK をどちらも 31 にしました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>7月18日</h3>
 
           <p>Android 11 (API 30)における挙動をエミュレータで試そうとしたところ、以下のエラーが出て arm64 のエミュレータが起動しませんでした。x86_64 のエミュレータは問題なく起動します。</p>
@@ -122,15 +121,15 @@ APANIC("Avd's CPU Architecture '%s' is not supported by the QEMU2 emulator on x8
 }
 #endif
 </pre>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>7月6日</h3>
 
           <p><a href="privacy_policy.html">プライバシーポリシーのページ</a>を作成しました。また、<a href="android/#sdk">Android 版 SDK</a> を更新して、アプリ内のメニューのプライバシーポリシーから Intent を使ってこのページを参照できるようにしました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>7月5日</h3>
 
           <p>macOS Monterey で動作確認をしました。実機向けは問題なくビルドと実行ができましたが、シミュレータ向けにビルドしようとすると以下のエラーが出たので、dev_iPhoneSimulator.sh の SDK_CFLAGS から -arch i686 を削除し、また HOST を x86_64-apple-darwin に変更したところ、問題なくビルドと実行ができるようになりました。<a href="ios/#SDK">iOS 版 SDK</a>を更新しました。</p>
@@ -138,29 +137,29 @@ APANIC("Avd's CPU Architecture '%s' is not supported by the QEMU2 emulator on x8
           <pre>
 ld: unknown/unsupported architecture name for: -arch i686
 </pre>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>1月23日</h3>
 
           <p><a href="android/#sdk">Android 版 SDK</a> を更新して、<a href="android/#distribution">ゲームデータの配布方法</a>のうち「パターン２：アプリに内蔵する方法」でアプリのアセットにゲームデータを配置した場合に、インストール時にゲームデータを展開せず、実行中はアセットから直接ファイルを読み込むようにしました。AssetManager.openFd は、アセットをまとめた単一ファイルの記述子を返すため、これを指定したファイルの記述子とみなしてネイティブコードに渡すと正常に動作しなくなります。今まではインストール時にアセットのファイルをすべて展開して、実行時にはそれらを読み込んでいたのですが、ディスク領域が2倍必要になるので無駄でした。今回 Android 版では、fseek, ftell, fgetc, fgets, fread, fopen をラップして、アセットファイルにおける指定したファイルの開始位置を考慮して正常に動作するようにしました。この変更のために本体のソースコードも修正しました。</p>
 
           <p>今回から Google Play では APK ではなく App Bundle 形式でアプリを公開することにしました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>1月18日</h3>
 
           <p><a href="android/#sdk">Android 版 SDK</a> を更新して、<a href="android/#distribution">ゲームデータの配布方法</a>のうち「パターン２：アプリに内蔵する方法」に対応しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>1月15日</h3>
 
           <p>ONScripter::flushDirect において、画面の更新領域の横幅と縦幅の一方が正で他方が0だと Android 版で落ちるバグを修正しました。</p>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>1月10日</h3>
 
           <p>Android 版 20220104 が Android 11 で動作しないとのご報告をいただきました。調べたところ、Android 11 以降では AndroidManifest.xml の android:requestLegacyExternalStorage=&quot;true&quot; が無視されるようになっているようで、アプリ固有の領域以外は File API を使ってアクセスできなくなったようです。</p>
@@ -176,14 +175,13 @@ ld: unknown/unsupported architecture name for: -arch i686
 Vulkan = off
 GLDirectMem = on
 </pre>
-        </div>
+        </article>
 
-        <div class="diary-day">
+        <article>
           <h3>1月4日</h3>
 
           <p>最新の Android Studio と Android SDK の環境で Android 版をビルドできるようにしました。従来の Import module による方法では Google Play Licensing Library を組み込むことができなくなっていましたが、組み込み方を変更して対応し、Android 10 の端末で動作することを確認しました。<a href="android/#sdk">Android 版 SDK</a> と Android 版アプリを更新しました。</p>
-
-        </div>
+        </article>
       </div> <!-- diary -->
     </div> <!-- diary-container -->
 
