@@ -366,17 +366,10 @@ footer {
     border-top: solid 1px #888;
 }
 
-div.figure {
-    /*float: right;*/
-    width: 80%;
-    border: thin silver solid;
-    margin: 0.2em;
-    padding: 0.2em;
-}
-
-div.figure p {
+figure {
     text-align: center;
-    text-indent: 0;
+    margin: 0.5em;
+    padding: 0.5em;
 }
 
 @media screen and (max-width: 767px) {

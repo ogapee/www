@@ -244,10 +244,10 @@ $ make
 onscripter_ios/ONScripter.xcworkspace
 </pre>
 
-            <div class="figure">
-              <p><img src="Xcode_20171230_fig1.png" alt="Fig.1" style="border: 1px solid;"><br>
-                図１：ONScripter のソースコードの導入</p>
-            </div>
+            <figure>
+              <img src="Xcode_20171230_fig1.png" alt="Fig.1" style="border: 1px solid;">
+              <figcaption>図１：ONScripter のソースコードの導入</figcaption>
+            </figure>
 
             <p>図1の上部に示すように、対象を「ONScripter」に変更します。実機用に作成する場合は、その右をAny iOS Device (図1では Generic iOS Device になっています、端末が接続されている場合は端末名に設定しても構いません) に、シミュレータ用に作成する場合は iOS Simulators の中のいずれか（iPhone 14 Pro Max など）に変更します。</p>
 
@@ -355,10 +355,10 @@ onscripter_main.cpp
 
             <p>ゲームデータを内蔵する場合は HAVE_CONTENTS を定義してください。この場合、ZIP_URL は指定しません。</p>
 
-            <div class="figure">
-              <p><img src="Xcode_20171230_fig2.png" alt="Fig.2" style="border: 1px solid"><br>
-                図２：ゲームデータの内蔵</p>
-            </div>
+            <figure>
+              <img src="Xcode_20171230_fig2.png" alt="Fig.2" style="border: 1px solid">
+              <figcaption>図２：ゲームデータの内蔵</figcaption>
+            </figure>
 
             <p>HAVE_CONTENTS を定義した場合のゲームデータの内蔵方法について説明します。まず、ゲームデータをまとめたフォルダの名前を ONS にします。次に、ファインダーで ONS フォルダを Xcode の Resources にドラッグします。このときに、ダイアログが表示されるので、必ず Create folder references for any added folders にチェックを入れてください。こうすることで、図２の例に示すようにフォルダの階層構造を保ったまま Resources にコピーすることができます。</p>
 
