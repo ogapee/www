@@ -16,14 +16,14 @@
 
       Since: May 30, 2010<br>
       <!--Last updated: Nov. 5, 2017 ENABLE_1BYTE_CHAR と FORCE_1BYTE_CHAR を有効にした英語ゲーム用アプリを更新<br>-->
-      Last updated: Aug. 25, 2023 アプリを更新<br>
+      Last updated: Sep. 6, 2024 アプリを更新<br>
       <!--Last updated: Jul. 5, 2020 パターン１：Google Play からダウンロードする方法を修正<br>-->
       <!--Last updated: Aug. 24, 2023 <a href="#sdk">SDK</a> とアプリを更新<br>-->
       <!--Last updated: Jan. 18, 2022 <a href="#sdk">SDK</a> を更新<br>-->
       <!--Last updated: Aug. 17, 2014 Google Play でアプリを公開<br>-->
       <!--Last updated: Jun. 14, 2020 Android Studio でのアプリの作成方法 更新<br>-->
       <!--Last updated: Aug. 12, 2013 使用作品例更新<br>-->
-      更新内容は<a href="../onscripter_devel.2023.html">ONScripter 開発日誌</a>を参照<br>
+      更新内容は<a href="../onscripter_devel.2024.html">ONScripter 開発日誌</a>を参照<br>
     </header>
 
     <nav>
@@ -76,10 +76,10 @@
             </tr>
             <tr>
               <td rowspan="4">日本語</td>
-              <td><a href="https://play.google.com/store/apps/details?id=jp.ogapee.onscripter.release">ONScripter</a> 20230825 in Google Play</td>
+              <td><a href="https://play.google.com/store/apps/details?id=jp.ogapee.onscripter.release">ONScripter</a> 20240906 in Google Play</td>
             </tr>
             <tr>
-              <td><a href="ONScripter-20230825-debug.apk">ONScripter-20230825-debug.apk</a> （非推奨）</td>
+              <td><a href="ONScripter-20240906-release.apk">ONScripter-20240906-release.apk</a> （非推奨）</td>
             </tr>
             <tr>
               <td><a href="ONScripter-20190819-armeabi-debug.apk">ONScripter-20190819-armeabi-debug.apk</a> （Android 2.0 以降で動作可、非推奨）</td>
@@ -438,32 +438,32 @@
 
             <ol>
               <li>Android Studio のインストール
-                <p><a href="https://developer.android.com/studio/index.html?hl=ja">Android Studio</a> からインストーラ（現時点での最新版は Electric Eel 2022.3.1 Patch 2）をダウンロードしてインストールします。</p>
+                <p><a href="https://developer.android.com/studio/index.html?hl=ja">Android Studio</a> からインストーラ（現時点での最新版は Koala Feature Drop 2024.1.2）をダウンロードしてインストールします。</p>
               </li>
               <li>SDK のインストール
                 <p>Android Studio から SDK Manager を起動し、以下のパッケージをインストールします。末尾のバージョンは現時点でのバージョンです。</p>
                 <ul>
                   <li>SDK Platforms
                     <ul>
-                      <li>Android API 34</li>
+                      <li>Android API 35</li>
                     </ul>
                   </li>
                   <li>SDK Tools
                     <ul>
-                      <li>Android SDK Build Tools 34.0.0</li>
-                      <li>NDK (Side by side) 24.0.8215888</li>
-                      <li>Android SDK Platform-Tools 34.0.4</li>
+                      <li>Android SDK Build Tools 35.0.0</li>
+                      <li>NDK (Side by side) 25.2.9519653</li>
+                      <li>Android SDK Platform-Tools 35.0.2</li>
                     </ul>
                   </li>
                 </ul>
                 <p>File -&gt; Project Structure から確認できる Gradle 関連のバージョンは以下のとおりです。</p>
                 <ul>
-                  <li>Android Gradle Plugin Version 7.2.2</li>
-                  <li>Gradle Version 7.5.1</li>
+                  <li>Android Gradle Plugin Version 8.6.0</li>
+                  <li>Gradle Version 8.10</li>
                 </ul>
               </li>
 
-              <li> <a href="#sdk">ライブラリと周辺プログラム一式 (SDK)</a>から onscripter_android-xxxxxxxx.zip をダウンロードして c:\src\ に展開します（xxxxxxxx にはバージョン番号が入ります）。
+              <li> <a href="https://github.com/ogapee/onscripter_android/releases">https://github.com/ogapee/onscripter_android/releases</a> から最新の onscripter_android-xxxxxxxx.zip をダウンロードして c:\src\ に展開します（xxxxxxxx にはバージョン番号が入ります）。
                 <pre>
 c:\src\onscripter_android-xxxxxxxx\...
 </pre>
@@ -601,7 +601,7 @@ c:\src\onscripter_android-xxxxxxxx\app\release\app-release.aab
           <div class="sub-content">
             <h3 id="sdk">ライブラリと周辺プログラム一式 (SDK)</h3>
 
-            <p>ONScripter on Android のアプリを作成するために必要な ONScripter 本体以外のプログラム一式です。Android Studio を使う場合は onscripter_android-xxxxxxxx.zip をダウンロードしてください。</p>
+            <p>ONScripter on Android のアプリを作成するために必要な ONScripter 本体以外のプログラム一式です。<a href="https://github.com/ogapee/onscripter_android/releases">https://github.com/ogapee/onscripter_android/releases</a> から最新の onscripter_android-xxxxxxxx.zip をダウンロードしてください（xxxxxxxx にはバージョン番号が入ります）。</p>
 
             <table>
               <tr>
@@ -610,7 +610,7 @@ c:\src\onscripter_android-xxxxxxxx\app\release\app-release.aab
               </tr>
               <tr>
                 <td>最新版</td>
-                <td><a href="https://github.com/ogapee/onscripter_android">https://github.com/ogapee/onscripter_android</a></td>
+                <td><a href="https://github.com/ogapee/onscripter_android/releases">https://github.com/ogapee/onscripter_android/releases</a></td>
               </tr>
               <tr>
                 <td>20230824</td>
@@ -915,7 +915,7 @@ echo "0" &gt; /proc/sys/net/ipv6/bindv6only
     </main>
 
     <footer>
-      Copyright (C) 1998-2023 Studio O.G.A. All rights reserved.
+      Copyright (C) 1998-2024 Studio O.G.A. All rights reserved.
     </footer>
 
   </div>
