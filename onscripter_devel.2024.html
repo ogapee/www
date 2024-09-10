@@ -15,7 +15,7 @@
       <h1>ONScripter 開発日誌</h1>
 
       Since: Feb. 6, 2002<br>
-      Last updated: Sep. 6, 2024
+      Last updated: Sep. 10, 2024
     </header>
 
     <nav>
@@ -72,6 +72,18 @@
       <div id="diary">
 
         <h2>2024年</h2>
+
+        <article>
+          <h3>9月10日</h3>
+
+          <p><a href="android/#ios">iOS 版 SDK</a> を更新し、macOS Sonoma 14.6.1 の Xcode 15.4 でビルドして実行できるようにしました。Xcode 15.3 以降では incompatible function pointer types に関するエラーが発生するようになったため、該当箇所を以下のように修正してエラーを抑制しました。</p>
+          <pre>
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wincompatible-pointer-types"
+// error code
+#pragma clang diagnostic pop
+</pre>
+        </article>
 
         <article>
           <h3>9月6日</h3>
