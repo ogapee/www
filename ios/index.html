@@ -16,7 +16,7 @@
 
       Since: Jan. 11, 2012<br>
       <!--Last updated: Aug. 15, 2021 macOS Big Sur 11.5.1 + Xcode 12.5.1 + iOS 14.7.1 で動作確認<br>-->
-      Last updated: Apr. 7, 2023 SDK を更新<br>
+      Last updated: Sep. 10, 2024 SDK を更新<br>
       <!--Last updated: Oct. 16, 2016 <a href="#application">アプリの申請</a>を更新<br>-->
       更新内容は<a href="../onscripter_devel.2023.html">ONScripter 開発日誌</a>を参照<br>
     </header>
@@ -75,7 +75,7 @@
 
           <p>App Store で公開可能（要審査）な有償・無償のノベルゲームアプリを作成することができます。ゲームデータはアプリに内蔵できますが、アプリのインストール後に別途ダウンロードすることもできます(配布用Webサーバを別途用意)。</p>
 
-          <p> ここで説明する方法は macOS Ventura 13.5.1 以降で Xcode 14.3 （統合開発環境）以降を使っていることを想定していますが、古いバージョンでも動作すると思います。iPad Pro（iOS 16.6）の実機、および Xcode 14.3 のシミュレータ（iPhone 14 Pro Max）で正常に動作することを確認しています。</p>
+          <p> ここで説明する方法は macOS Sonoma 14.6.1 以降で Xcode 15.4 （統合開発環境）以降を使っていることを想定していますが、古いバージョンでも動作すると思います。iPad Pro（iOS 16.6）の実機、および Xcode 15.4 のシミュレータ（iPhone 15 Pro Max）で正常に動作することを確認しています。</p>
 
           <p>使用にあたって私に連絡する必要はありません。また、使用者に対して私から何か要求することもありません。自由に使ってください。</p>
 
@@ -167,7 +167,7 @@ $ xcode-select --install
                   <li> Xcode 5.1.1 未満では、Xcode を起動し、メニューバーの「Xcode」→「Preferences」→「Downloads」の Components のうち Command line Tools の横の「Install」ボタンを押してインストールしてください。</li>
                 </ul>
               </li>
-              <li> <a href="http://www.macports.org/install.php">Mac Ports</a> の「Quickstart」の中の macOS Ventura v13 をクリックし、MacPorts のインストーラをダウンロードしてインストールします。次に、ターミナルから以下のコマンドを入力してビルドに必要なツールをインストールします。関連ツールもインストールするため、終了するまで時間がかかります。
+              <li> <a href="http://www.macports.org/install.php">Mac Ports</a> の「Quickstart」の中の macOS Sonoma v14 をクリックし、MacPorts のインストーラをダウンロードしてインストールします。次に、ターミナルから以下のコマンドを入力してビルドに必要なツールをインストールします。関連ツールもインストールするため、終了するまで時間がかかります。
                 <pre>
 $ sudo port install automake
 $ sudo port install autoconf
@@ -187,7 +187,7 @@ $ sudo port install pkgconfig
               </tr>
               <tr>
                 <td>最新版</td>
-                <td><a href="https://github.com/ogapee/onscripter_ios">https://github.com/ogapee/onscripter_ios</a></td>
+                <td><a href="https://github.com/ogapee/onscripter_ios/releases">https://github.com/ogapee/onscripter_ios/releases</a></td>
               </tr>
               <tr>
                 <td>20230407</td>
@@ -249,7 +249,7 @@ onscripter_ios/ONScripter.xcworkspace
               <figcaption>図１：ONScripter のソースコードの導入</figcaption>
             </figure>
 
-            <p>図1の上部に示すように、対象を「ONScripter」に変更します。実機用に作成する場合は、その右をAny iOS Device (図1では Generic iOS Device になっています、端末が接続されている場合は端末名に設定しても構いません) に、シミュレータ用に作成する場合は iOS Simulators の中のいずれか（iPhone 14 Pro Max など）に変更します。</p>
+            <p>図1の上部に示すように、対象を「ONScripter」に変更します。実機用に作成する場合は、その右をAny iOS Device (arm64)(図1では Generic iOS Device になっています、端末が接続されている場合は端末名に設定しても構いません) に、シミュレータ用に作成する場合は iOS Simulators の中のいずれか（iPhone 15 Pro Max など）に変更します。</p>
 
             <h4 id="sources">最新の ONScripter の導入</h4>
 
@@ -406,7 +406,7 @@ onscripter_main.cpp
 
             <p>Xcode で &quot;Signing for &quot;ONScripter&quot; requires a development team. Select a development team in the Signing &amp; Capabilities editor.&quot; というエラーが出る場合には、<a href="#config">プロジェクトの設定</a>の Signing &amp; Capabilities の Signing 項で、Automatically manage signing のチェックを一度外してから再度チェックを入れ、続いてその直下の Team を設定してください。</p>
 
-            <p>Apple シリコンを搭載した Mac でシミュレータ向けにビルドする場合は、Build Settings &rarr; Architectures &rarr; Excluded Architectures の Debug と Release に Any iOS Simulator SDK の項目を追加して arm64 を設定してから、シミュレータ向けにビルドしてください。</p>
+            <p>Apple シリコンを搭載した Mac でシミュレータ向けにビルドする場合は、ONScripter, SDL, SDL_ttf, SDL_mixer, SDL_image の Build Settings &rarr; Architectures &rarr; Excluded Architectures に arm64 を設定してから、シミュレータ向けにビルドしてください。</p>
 
           </div> <!-- sub-content -->
 
@@ -420,23 +420,20 @@ onscripter_main.cpp
             <ol>
               <li>メニューバーの「Product」&rarr;「Archive」を実行して申請用にアプリを作成します。</li>
               <li>成功するとArchives一覧が表示されるので、今回作成したアーカイブが選択されていることを確認して「Distribute App」をクリックします。</li>
-              <li>ダイアログがいくつか表示されますが、すべてデフォルトのまま「Next」を押します。</li>
-              <li>最後に Review ONScripter.ipa content: のダイアログが表示されるので、「Upload」を押します。</li>
+              <li>App Store Connect が選択された状態で「Distribute」を押します。</li>
+              <li>正常にアップロードされると、ONScripter 1.0 uploaded と表示されるので、「Done」を押します。</li>
             </ol>
-
-            <p> 正常にアップロードされると、App "ONScripter" successfully uploaded. と表示されます。</p>
-
 
             <h4>アプリのテスト</h4>
 
             <p>公開前に TestFlight によって内部テストを行う方法について説明します。</p>
 
             <ol>
-              <li><a href="http://appstoreconnect.apple.com/">App Store Connect</a>にログインして、マイAppからアップロードしたアプリを選択します。</li>
+              <li><a href="http://appstoreconnect.apple.com/">App Store Connect</a>にログインして、アプリからアップロードしたアプリを選択します。</li>
               <li>「TestFlight」をクリックしてから「内部テスト」の横の+をクリックします。新規内部グループを作成して、テスター（たとえば自分自身）を追加します。</li>
-              <li>「ビルド」&rarr;「iOS」をクリックし、アップロードしたアプリのステータスが「コンプライアンスがありません」に変わったら、「管理」をクリックし、輸出コンプライアンス情報で「上記のアルゴリズムのどれでもない」を選択して、「内部テストを開始」をクリックします。</li>
+              <li>「iOSビルド」のアップロードしたアプリのステータスが「コンプライアンスがありません」に変わったら、「管理」をクリックし、輸出コンプライアンス情報で「上記のアルゴリズムのどれでもない」を選択します。</li>
               <li>アプリのステータスが「提出準備完了」に変わったら、上で作成した内部テストのグループをグループに追加します。</li>
-              <li>テスターは、iPhoneもしくは iPad にApp StoreからTestFlightアプリをインストールしておきます。テスターにメールが送られてくるので、メール本文にあるTestFlightのURLにアクセスし、表示された招待コードをTestFlightアプリで入力すると、作成したアプリをインストールして実行できるようになります。</li>
+              <li>テスターは、iPhoneもしくは iPad にApp StoreからTestFlightアプリをインストールしておきます。テスターにメールが送られてくるので、メール本文にあるTestFlightのURLにアクセスし、表示されたページの「Accept the invitation in TestFlight.」をクリックします。TestFlightアプリが起動して、作成したアプリをインストールして実行できるようになります。</li>
               <li>作成したアプリを一度インストールすると、以降のアップデートはTestFlightアプリの中から実行できます。</li>
             </ol>
 
@@ -630,7 +627,7 @@ $(SRCROOT)/../../Release-iphoneos/include/freetype2
     </main>
 
     <footer>
-      Copyright (C) 2012-2023 Studio O.G.A. All rights reserved.
+      Copyright (C) 2012-2024 Studio O.G.A. All rights reserved.
     </footer>
 
   </div>
